@@ -5,4 +5,6 @@ Built using Python 3.12.3
 ## Run
 
 1. Set environment variable `API_KEY` to your Wargaming API key
-2. Run `python script.py`
+2. Initialize Python virtual environment `python -m venv venv` (optional)
+3. Install dependencies `pip install -r requirements.txt`
+4. Run script `python script.py`
