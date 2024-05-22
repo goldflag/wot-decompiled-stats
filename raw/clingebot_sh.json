@@ -1,0 +1,828 @@
+{
+    "xmlns:xmlref": "http://bwt/xmlref",
+    "crew": {
+        "commander": "gunner\n\t\t\tradioman\n\t\t\tloader\n\t\t\tdriver"
+    },
+    "supplySlots": [
+        8.0,
+        8.0,
+        8.0
+    ],
+    "speedLimits": {
+        "forward": 120,
+        "backward": 120
+    },
+    "invisibility": {
+        "moving": 0.196,
+        "still": 0.196,
+        "camouflageBonus": 0.03,
+        "firePenalty": 0.294
+    },
+    "optDevsOverrides": {
+        "camouflageNet": {
+            "invisibilityBonus": [
+                0.1,
+                0.125
+            ]
+        },
+        "additionalInvisibilityDevice": {
+            "invisibilityBonus": [
+                0.06,
+                0.08
+            ]
+        },
+        "trophyBasicAdditionalInvisibilityDevice": {
+            "invisibilityBonus": 0.06
+        },
+        "trophyUpgradedAdditionalInvisibilityDevice": {
+            "invisibilityBonus": 0.09
+        }
+    },
+    "repairCost": 2.0,
+    "crewXpFactor": 1.5,
+    "camouflage": {
+        "priceFactor": 0.2
+    },
+    "hull": {
+        "armor": {
+            "armor_1": 10,
+            "armor_2": 10,
+            "armor_3": 10,
+            "armor_4": 10,
+            "armor_5": 10,
+            "armor_6": 10,
+            "armor_7": 10,
+            "armor_8": 0,
+            "armor_9": 10,
+            "armor_10": 10,
+            "armor_11": 10,
+            "armor_12": 10
+        },
+        "primaryArmor": [
+            "armor_1",
+            "armor_3",
+            "armor_4"
+        ],
+        "weight": 2000,
+        "maxHealth": 250,
+        "ammoBayHealth": {
+            "maxHealth": 700,
+            "maxRegenHealth": 600,
+            "repairCost": 1.0
+        },
+        "models": {
+            "undamaged": "vehicles/chinese/Ch00_ClingeBot_SH/normal/lod0/Hull.model",
+            "destroyed": "vehicles/chinese/Ch00_ClingeBot_SH/crash/lod0/Hull.model",
+            "exploded": "vehicles/chinese/Ch00_ClingeBot_SH/crash/lod0/Hull.model"
+        },
+        "swinging": {
+            "lodDist": "FAR",
+            "pitchParams": [
+                0.34,
+                38.0,
+                0.36,
+                1.0,
+                0.05,
+                0.34
+            ],
+            "rollParams": [
+                1.0,
+                0.34,
+                38.0,
+                0.36,
+                1.0,
+                0.06,
+                0.4
+            ],
+            "sensitivityToImpulse": 0.94
+        },
+        "exhaust": {
+            "pixie": "gas_small",
+            "nodes": "HP_Track_Exhaus_1"
+        },
+        "turretPositions": {
+            "turret": [
+                0.0,
+                0.380313,
+                -0.017706
+            ]
+        },
+        "hitTester": {
+            "collisionModelServer": "vehicles/chinese/Ch00_ClingeBot_SH/collision/Hull.model",
+            "collisionModelClient": "vehicles/chinese/Ch00_ClingeBot_SH/collision_client/Hull.model"
+        },
+        "customizationSlots": {
+            "slot": {
+                "slotType": "camouflage",
+                "slotId": 12000,
+                "anchorPosition": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "anchorDirection": [
+                    -0.0,
+                    1.0,
+                    0.0
+                ]
+            }
+        },
+        "customization": {
+            "customizableVehicleAreas": {
+                "paint": "HULL",
+                "camouflage": "HULL"
+            }
+        },
+        "camouflage": {
+            "density": [
+                0.0,
+                0.0
+            ],
+            "aoTextureSize": [
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "chassis": {
+        "Chassis_Ch00_ClingeBot_SH": {
+            "userString": "#china_vehicles:Chassis_Ch00_ClingeBot_SH",
+            "tags": [],
+            "level": 1,
+            "price": 0,
+            "notInShop": "true",
+            "armor": {
+                "leftTrack": 10,
+                "rightTrack": 10
+            },
+            "weight": 1000,
+            "maxLoad": 7000,
+            "terrainResistance": [
+                1.1,
+                1.3,
+                2.5
+            ],
+            "brakeForce": 6000,
+            "rotationIsAroundCenter": "true",
+            "rotationSpeed": 75,
+            "shotDispersionFactors": {
+                "vehicleMovement": 0.1,
+                "vehicleRotation": 0.1
+            },
+            "bulkHealthFactor": 3.0,
+            "maxHealth": 300,
+            "maxRegenHealth": 250,
+            "repairCost": 5.0,
+            "models": {
+                "undamaged": "vehicles/chinese/Ch00_ClingeBot_SH/normal/lod0/Chassis.model",
+                "destroyed": "vehicles/chinese/Ch00_ClingeBot_SH/crash/lod0/Chassis.model",
+                "exploded": "vehicles/chinese/Ch00_ClingeBot_SH/crash/lod0/Chassis.model"
+            },
+            "traces": {
+                "lodDist": "MEDIUM",
+                "bufferPrefs": "mediumTank",
+                "textureSet": "ussr_01",
+                "size": [
+                    0.5,
+                    0.3
+                ]
+            },
+            "tracks": {
+                "lodDist": "MEDIUM_TRACK",
+                "trackPair": {
+                    "trackPairIdx": 0,
+                    "leftMaterial": "track_mat_L_skinned",
+                    "rightMaterial": "track_mat_R_skinned",
+                    "textureScale": -1.1,
+                    "trackDebris": {
+                        "isLeft": "false",
+                        "destructionEffect": null,
+                        "physicalParams": {
+                            "renderModelOffset": -0.021476,
+                            "interpolationsCount": 1,
+                            "lengthwiseSpringLength": 0.078562,
+                            "widthwiseSpringLength": 0.17883,
+                            "hingeJointStiffness": 1724.079468,
+                            "torsionStiffnessStep": 7,
+                            "wheelGroups": {
+                                "wheelGroup": {
+                                    "wheelName": "WD_R0",
+                                    "groupRadius": 0.303031,
+                                    "groupInnerOffset": -0.21799,
+                                    "groupOuterOffset": 0.11799
+                                }
+                            },
+                            "hullCollider": {
+                                "boxCollider": {
+                                    "row0": [
+                                        2.30111,
+                                        0.0,
+                                        0.0
+                                    ],
+                                    "row1": [
+                                        0.0,
+                                        0.3,
+                                        0.0
+                                    ],
+                                    "row2": [
+                                        0.0,
+                                        0.0,
+                                        0.553639
+                                    ],
+                                    "row3": [
+                                        0.0,
+                                        0.416916,
+                                        -0.429009
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "AODecals": {
+                "decal": {
+                    "transform": {
+                        "row0": [
+                            2.43048,
+                            0.0,
+                            0.0
+                        ],
+                        "row1": [
+                            0.0,
+                            1.34202,
+                            0.0
+                        ],
+                        "row2": [
+                            0.0,
+                            0.0,
+                            3.65285
+                        ],
+                        "row3": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    }
+                }
+            },
+            "wheels": {
+                "lodDist": "MEDIUM",
+                "wheel": {
+                    "isLeft": "false",
+                    "isLeading": "true",
+                    "name": "WD_R3",
+                    "radius": 0.32004,
+                    "syncAngle": 16.363636
+                },
+                "group": {
+                    "isLeft": "false",
+                    "template": "W_R",
+                    "radius": 0.151882,
+                    "startIndex": 0,
+                    "count": 4
+                }
+            },
+            "drivingWheels": [
+                "WD_L0",
+                "WD_L3"
+            ],
+            "effects": {
+                "lodDist": "MEDIUM",
+                "mud": "smallTankMud"
+            },
+            "wwsoundPC": "treads_type_pc",
+            "wwsoundNPC": "trds_med_npc",
+            "hullPosition": [
+                0.0,
+                0.986122,
+                0.0
+            ],
+            "customizationSlots": {
+                "slot": {
+                    "slotType": "style",
+                    "slotId": 29000,
+                    "anchorPosition": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "anchorDirection": [
+                        -0.0,
+                        1.0,
+                        0.0
+                    ]
+                }
+            },
+            "customization": {
+                "customizableVehicleAreas": {
+                    "paint": "CHASSIS",
+                    "camouflage": null
+                }
+            },
+            "hitTester": {
+                "collisionModelServer": "vehicles/chinese/Ch00_ClingeBot_SH/collision/Chassis.model",
+                "collisionModelClient": "vehicles/chinese/Ch00_ClingeBot_SH/collision_client/Chassis.model"
+            },
+            "topRightCarryingPoint": [
+                0.900023,
+                0.885492
+            ],
+            "maxClimbAngle": 25,
+            "navmeshGirth": 6.0,
+            "trackNodes": {
+                "enable": "true",
+                "linkBones": "false",
+                "maxAmplitude": 0.05,
+                "maxOffset": 0.05,
+                "gravity": -9.8,
+                "elasticity": 1300.0,
+                "damping": 2.0,
+                "node": {
+                    "isLeft": "false",
+                    "name": "Track_VT_R2",
+                    "forwardElastK": 1.7,
+                    "backwardElastK": 0.75,
+                    "offset": -0.062
+                }
+            },
+            "trackThickness": -0.0034,
+            "groundNodes": {
+                "group": {
+                    "template": "Track_R",
+                    "startIndex": 0,
+                    "count": 4,
+                    "isLeft": "false",
+                    "minOffset": -0.04,
+                    "maxOffset": 0.04
+                }
+            },
+            "splineDesc": {
+                "trackPair": {
+                    "trackPairIdx": 0,
+                    "segmentModelLeft": "vehicles/chinese/Ch00_ClingeBot_SH/track/segment.model",
+                    "segmentModelRight": "vehicles/chinese/Ch00_ClingeBot_SH/track/segment.model",
+                    "left": "vehicles/chinese/Ch00_ClingeBot_SH/track/left.track",
+                    "right": "vehicles/chinese/Ch00_ClingeBot_SH/track/right.track",
+                    "segmentLength": 0.08,
+                    "segmentOffset": 0.026,
+                    "atlas": {
+                        "UTiles": 1,
+                        "VTiles": 1
+                    }
+                },
+                "lodDist": "SPLINE_TRACK"
+            },
+            "physicalTracks": {
+                "left": {
+                    "trackPairIdx": 0,
+                    "segmentsCount": 98,
+                    "segmentsOuterThickness": 0.050051,
+                    "segmentsInnerThickness": 0.007099,
+                    "segmentsPlaneOffset": -0.9,
+                    "mainSegment": {
+                        "model": "vehicles/chinese/Ch00_ClingeBot_SH/track/segment.model",
+                        "length": 0.082261
+                    },
+                    "springsLength": {
+                        "backwardMovement": {
+                            "back": 0.08,
+                            "top": 0.076,
+                            "front": 0.075837,
+                            "bottom": 0.02565
+                        },
+                        "forwardMovement": {
+                            "back": 0.07,
+                            "top": 0.07,
+                            "front": 0.08,
+                            "bottom": 0.03163
+                        }
+                    },
+                    "bottomWheels": {
+                        "wheel": "WD_L0"
+                    },
+                    "snapWheels": {
+                        "topFront": {
+                            "wheelName": "WD_L0",
+                            "basePos": [
+                                1.379556,
+                                0.801053
+                            ],
+                            "shiftVec": [
+                                0.296815,
+                                0.089895
+                            ],
+                            "jointIdx": 15
+                        },
+                        "topBack": {
+                            "wheelName": "WD_L3",
+                            "basePos": [
+                                -1.394286,
+                                0.526475
+                            ],
+                            "shiftVec": [
+                                -0.318518,
+                                0.057755
+                            ],
+                            "jointIdx": 61
+                        },
+                        "bottomBack": {
+                            "wheelName": "W_L3",
+                            "basePos": [
+                                -0.876277,
+                                0.209032
+                            ],
+                            "shiftVec": [
+                                0.006707,
+                                -0.158981
+                            ],
+                            "jointIdx": 75
+                        },
+                        "bottomFront": {
+                            "wheelName": "W_L0",
+                            "basePos": [
+                                0.877187,
+                                0.209032
+                            ],
+                            "shiftVec": [
+                                0.049053,
+                                -0.151224
+                            ],
+                            "jointIdx": 0
+                        }
+                    },
+                    "radiusOverrides": {
+                        "wheel": {
+                            "name": "WD_L0",
+                            "radius": 0.309693
+                        }
+                    },
+                    "teethSyncs": {
+                        "syncWithMainModel": "true",
+                        "segmentSyncPivotOffset": 0,
+                        "sync": {
+                            "name": "WD_L0",
+                            "startAngle": 0.135446,
+                            "teethCount": 22
+                        }
+                    },
+                    "collisionHull": {
+                        "bottom": null,
+                        "top": null
+                    }
+                },
+                "right": {
+                    "trackPairIdx": 0,
+                    "segmentsCount": 98,
+                    "segmentsOuterThickness": 0.050051,
+                    "segmentsInnerThickness": 0.007099,
+                    "segmentsPlaneOffset": 0.9,
+                    "mainSegment": {
+                        "model": "vehicles/chinese/Ch00_ClingeBot_SH/track/segment.model",
+                        "length": 0.082257
+                    },
+                    "springsLength": {
+                        "backwardMovement": {
+                            "back": 0.08,
+                            "top": 0.076,
+                            "front": 0.075837,
+                            "bottom": 0.02565
+                        },
+                        "forwardMovement": {
+                            "back": 0.07,
+                            "top": 0.07,
+                            "front": 0.08,
+                            "bottom": 0.03163
+                        }
+                    },
+                    "bottomWheels": {
+                        "wheel": "WD_R0"
+                    },
+                    "snapWheels": {
+                        "topFront": {
+                            "wheelName": "WD_R0",
+                            "basePos": [
+                                1.379556,
+                                0.801053
+                            ],
+                            "shiftVec": [
+                                0.296815,
+                                0.089895
+                            ],
+                            "jointIdx": 15
+                        },
+                        "topBack": {
+                            "wheelName": "WD_R3",
+                            "basePos": [
+                                -1.394286,
+                                0.526475
+                            ],
+                            "shiftVec": [
+                                -0.318518,
+                                0.057755
+                            ],
+                            "jointIdx": 61
+                        },
+                        "bottomBack": {
+                            "wheelName": "W_R3",
+                            "basePos": [
+                                -0.876277,
+                                0.209032
+                            ],
+                            "shiftVec": [
+                                0.006707,
+                                -0.158981
+                            ],
+                            "jointIdx": 75
+                        },
+                        "bottomFront": {
+                            "wheelName": "W_R0",
+                            "basePos": [
+                                0.877187,
+                                0.209032
+                            ],
+                            "shiftVec": [
+                                0.049053,
+                                -0.151224
+                            ],
+                            "jointIdx": 0
+                        }
+                    },
+                    "radiusOverrides": {
+                        "wheel": {
+                            "name": "WD_R0",
+                            "radius": 0.309693
+                        }
+                    },
+                    "teethSyncs": {
+                        "syncWithMainModel": "true",
+                        "segmentSyncPivotOffset": 0,
+                        "sync": {
+                            "name": "WD_R0",
+                            "startAngle": 0.13545,
+                            "teethCount": 22
+                        }
+                    },
+                    "collisionHull": {
+                        "bottom": null,
+                        "top": null
+                    }
+                }
+            },
+            "repairTime": 5.71428585
+        }
+    },
+    "turrets0": {
+        "Turret_1_Ch00_ClingeBot_SH": {
+            "userString": "#china_vehicles:Turret_1_Ch00_ClingeBot_SH",
+            "tags": [
+                "cannotDetach"
+            ],
+            "level": 1,
+            "price": 0,
+            "notInShop": "true",
+            "armor": {
+                "armor_1": 10,
+                "armor_2": 10,
+                "armor_3": 10,
+                "armor_4": 10,
+                "armor_5": 10,
+                "armor_6": 10,
+                "armor_7": 10,
+                "armor_8": 0,
+                "armor_9": 10,
+                "armor_10": 10,
+                "armor_11": 10
+            },
+            "primaryArmor": [
+                "armor_1",
+                "armor_3",
+                "armor_4"
+            ],
+            "weight": 600,
+            "maxHealth": 250,
+            "rotationSpeed": 60,
+            "turretRotatorHealth": {
+                "maxHealth": 500,
+                "maxRegenHealth": 250,
+                "repairCost": 1.0
+            },
+            "circularVisionRadius": 270,
+            "surveyingDeviceHealth": {
+                "maxHealth": 400,
+                "maxRegenHealth": 190,
+                "repairCost": 1.0
+            },
+            "guns": {
+                "Gun_Ch00_ClingeBot_SH": {
+                    "maxAmmo": 74,
+                    "armor": {
+                        "armor_1": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_2": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_3": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_4": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_5": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_7": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_8": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "gun": {
+                            "chanceToHitByProjectile": 0,
+                            "chanceToHitByExplosion": 0
+                        }
+                    },
+                    "pitchLimits": {
+                        "minPitch": [
+                            0.0,
+                            -20.0,
+                            1.0,
+                            -20.0
+                        ],
+                        "maxPitch": [
+                            0.0,
+                            5.0,
+                            1.0,
+                            5.0
+                        ]
+                    },
+                    "reloadTime": 2.2,
+                    "aimingTime": 1.2,
+                    "invisibilityFactorAtShot": 0.1,
+                    "shotDispersionRadius": 0.2,
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.05,
+                        "afterShot": 3.0,
+                        "whileGunDamaged": 2.0
+                    },
+                    "customizationSlots": {
+                        "slot": {
+                            "slotType": "camouflage",
+                            "slotId": 42000,
+                            "anchorPosition": [
+                                0.0,
+                                0.0,
+                                -0.0
+                            ],
+                            "anchorDirection": [
+                                -0.0,
+                                1.0,
+                                0.0
+                            ],
+                            "applyTo": 4096
+                        }
+                    },
+                    "customization": {
+                        "customizableVehicleAreas": {
+                            "paint": [
+                                "GUN",
+                                "GUN_2"
+                            ],
+                            "camouflage": "GUN"
+                        }
+                    },
+                    "models": {
+                        "undamaged": "vehicles/chinese/Ch00_ClingeBot_SH/normal/lod0/Gun_01.model",
+                        "destroyed": "vehicles/chinese/Ch00_ClingeBot_SH/crash/lod0/Gun_01.model",
+                        "exploded": "vehicles/chinese/Ch00_ClingeBot_SH/crash/lod0/Gun_01.model"
+                    },
+                    "hitTester": {
+                        "collisionModelServer": "vehicles/chinese/Ch00_ClingeBot_SH/collision/Gun_01.model",
+                        "collisionModelClient": "vehicles/chinese/Ch00_ClingeBot_SH/collision_client/Gun_01.model"
+                    },
+                    "edgeByVisualModel": "false",
+                    "camouflage": {
+                        "density": [
+                            0.0,
+                            0.0
+                        ],
+                        "aoTextureSize": [
+                            0.0,
+                            0.0
+                        ]
+                    }
+                }
+            },
+            "models": {
+                "undamaged": "vehicles/chinese/Ch00_ClingeBot_SH/normal/lod0/Turret_01.model",
+                "destroyed": "vehicles/chinese/Ch00_ClingeBot_SH/crash/lod0/Turret_01.model",
+                "exploded": "vehicles/chinese/Ch00_ClingeBot_SH/crash/lod0/Turret_01.model"
+            },
+            "hitTester": {
+                "collisionModelServer": "vehicles/chinese/Ch00_ClingeBot_SH/collision/Turret_01.model",
+                "collisionModelClient": "vehicles/chinese/Ch00_ClingeBot_SH/collision_client/Turret_01.model"
+            },
+            "gunPosition": [
+                0.008,
+                0.30215,
+                0.320405
+            ],
+            "customizationSlots": {
+                "slot": {
+                    "slotType": "camouflage",
+                    "slotId": 32000,
+                    "anchorPosition": [
+                        -0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "anchorDirection": [
+                        -0.0,
+                        1.0,
+                        0.0
+                    ]
+                }
+            },
+            "customization": {
+                "customizableVehicleAreas": {
+                    "paint": "TURRET",
+                    "camouflage": "TURRET"
+                }
+            },
+            "wwturretRotatorSoundManual": "tur_mech_trav",
+            "physicsShape": [
+                1.039,
+                -0.035,
+                1.061,
+                0.087,
+                1.0,
+                0.0,
+                0.5,
+                0.5,
+                0.5,
+                0.5,
+                0.139,
+                0.5,
+                0.189,
+                1.0,
+                0.0
+            ],
+            "camouflage": {
+                "density": [
+                    0.0,
+                    0.0
+                ],
+                "aoTextureSize": [
+                    0.0,
+                    0.0
+                ]
+            }
+        }
+    },
+    "engines": {
+        "Ch00_ClingeBot_SH_Engine": "shared"
+    },
+    "fuelTanks": {
+        "Large_SH": "shared"
+    },
+    "radios": {
+        "Ch00_ClingeBot_SH_Radio": "shared"
+    },
+    "clientAdjustmentFactors": null,
+    "physics": {
+        "detailed": {
+            "engines": {
+                "Ch00_ClingeBot_SH_Engine": {
+                    "smplEnginePower": 300,
+                    "smplFwMaxSpeed": 120
+                }
+            },
+            "chassis": {
+                "Chassis_Ch00_ClingeBot_SH": {
+                    "grounds": {
+                        "soft": {
+                            "rollingFriction": 0.20125
+                        },
+                        "medium": {
+                            "rollingFriction": 0.10465
+                        },
+                        "firm": {
+                            "rollingFriction": 0.08855
+                        }
+                    },
+                    "axleCount": 5
+                }
+            }
+        }
+    },
+    "effects": {
+        "collision": null,
+        "damagedStateGroup": "small"
+    },
+    "emblems": {
+        "default": 15501,
+        "lodDist": "MEDIUM",
+        "alpha": 1
+    }
+}

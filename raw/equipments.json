@@ -1,0 +1,697 @@
+{
+    "handExtinguishers": {
+        "id": 0,
+        "userString": "#artefacts:handExtinguishers/name",
+        "description": "#artefacts:handExtinguishers/descr",
+        "shortDescriptionSpecial": "#artefacts:handExtinguishers/short_special",
+        "longDescriptionSpecial": "#artefacts:handExtinguishers/long_special",
+        "icon": "handExtinguishers",
+        "price": 3000,
+        "tags": [
+            "extinguisher"
+        ],
+        "script": {
+            "cooldownSeconds": 90,
+            "reuseCount": -1.0
+        },
+        "tooltipSection": "equipment"
+    },
+    "autoExtinguishers": {
+        "id": 1,
+        "userString": "#artefacts:autoExtinguishers/name",
+        "description": "#artefacts:autoExtinguishers/descr",
+        "shortDescriptionSpecial": "#artefacts:autoExtinguishers/short_special",
+        "longDescriptionSpecial": "#artefacts:autoExtinguishers/long_special",
+        "icon": "autoExtinguishers",
+        "price": 20000,
+        "improved": "true",
+        "tags": [
+            "extinguisher",
+            "premium_equipment"
+        ],
+        "script": {
+            "fireStartingChanceFactor": 0.9,
+            "autoactivate": "true",
+            "cooldownSeconds": 90,
+            "reuseCount": -1.0
+        },
+        "kpi": {
+            "mul": {
+                "name": "vehicleFireChance",
+                "value": 0.9
+            }
+        },
+        "tooltipSection": "equipment"
+    },
+    "smallMedkit": {
+        "id": 2,
+        "userString": "#artefacts:smallMedkit/name",
+        "description": "#artefacts:smallMedkit/descr",
+        "shortDescriptionSpecial": "#artefacts:smallMedkit/short_special",
+        "longDescriptionSpecial": "#artefacts:smallMedkit/long_special",
+        "icon": "smallMedkit",
+        "price": 3000,
+        "tags": [
+            "medkit"
+        ],
+        "script": {
+            "repairAll": "false",
+            "bonusValue": 0,
+            "stunResistanceEffect": 0.0,
+            "stunResistanceDuration": 0.0,
+            "cooldownSeconds": 90,
+            "reuseCount": -1.0
+        },
+        "tooltipSection": "equipment"
+    },
+    "largeMedkit": {
+        "id": 3,
+        "userString": "#artefacts:largeMedkit/name",
+        "description": "#artefacts:largeMedkit/descr",
+        "shortDescriptionSpecial": "#artefacts:largeMedkit/short_special",
+        "longDescriptionSpecial": "#artefacts:largeMedkit/long_special",
+        "icon": "largeMedkit",
+        "price": 20000,
+        "improved": "true",
+        "tags": [
+            "medkit",
+            "premium_equipment"
+        ],
+        "script": {
+            "repairAll": "true",
+            "bonusValue": 0.3,
+            "stunResistanceEffect": 0.0,
+            "stunResistanceDuration": 0.05,
+            "cooldownSeconds": 90,
+            "reuseCount": -1.0
+        },
+        "kpi": {
+            "mul": {
+                "name": "crewStunDuration",
+                "value": 0.95
+            }
+        },
+        "tooltipSection": "equipment"
+    },
+    "smallRepairkit": {
+        "id": 4,
+        "userString": "#artefacts:smallRepairkit/name",
+        "description": "#artefacts:smallRepairkit/descr",
+        "shortDescriptionSpecial": "#artefacts:smallRepairkit/short_special",
+        "longDescriptionSpecial": "#artefacts:smallRepairkit/long_special",
+        "icon": "smallRepairkit",
+        "price": 3000,
+        "tags": [
+            "repairkit"
+        ],
+        "script": {
+            "repairAll": "false",
+            "bonusValue": 0,
+            "cooldownSeconds": 90,
+            "reuseCount": -1.0
+        },
+        "tooltipSection": "equipment"
+    },
+    "largeRepairkit": {
+        "id": 5,
+        "userString": "#artefacts:largeRepairkit/name",
+        "description": "#artefacts:largeRepairkit/descr",
+        "shortDescriptionSpecial": "#artefacts:largeRepairkit/short_special",
+        "longDescriptionSpecial": "#artefacts:largeRepairkit/long_special",
+        "icon": "largeRepairkit",
+        "price": 20000,
+        "improved": "true",
+        "tags": [
+            "repairkit",
+            "premium_equipment"
+        ],
+        "vehicleFilter": {
+            "exclude": {
+                "vehicle": {
+                    "tags": [
+                        "builtinRepairkit_user"
+                    ]
+                }
+            }
+        },
+        "script": {
+            "repairAll": "true",
+            "bonusValue": 0.1,
+            "cooldownSeconds": 90,
+            "reuseCount": -1.0
+        },
+        "kpi": {
+            "mul": {
+                "name": "vehicleRepairSpeed",
+                "value": 1.1
+            }
+        },
+        "tooltipSection": "equipment"
+    },
+    "lendLeaseOil": {
+        "id": 6,
+        "userString": "#artefacts:lendLeaseOil/name",
+        "description": "#artefacts:lendLeaseOil/descr",
+        "shortDescriptionSpecial": "#artefacts:lendLeaseOil/short_special",
+        "longDescriptionSpecial": "#artefacts:lendLeaseOil/long_special",
+        "icon": "lendLeaseOil",
+        "price": 5000,
+        "tags": [
+            "fuel"
+        ],
+        "incompatibleTags": {
+            "installed": "fuel"
+        },
+        "vehicleFilter": {
+            "include": {
+                "nations": "ussr"
+            }
+        },
+        "script": {
+            "enginePowerFactor": 1.05,
+            "turretRotationSpeedFactor": 1.0
+        },
+        "kpi": {
+            "mul": {
+                "name": "vehicleEnginePower",
+                "value": 1.05
+            }
+        },
+        "tooltipSection": "equipment"
+    },
+    "gasoline100": {
+        "id": 7,
+        "userString": "#artefacts:gasoline100/name",
+        "description": "#artefacts:gasoline100/descr",
+        "shortDescriptionSpecial": "#artefacts:gasoline100/short_special",
+        "longDescriptionSpecial": "#artefacts:gasoline100/long_special",
+        "icon": "gasoline100",
+        "price": 5000,
+        "tags": [
+            "fuel"
+        ],
+        "incompatibleTags": {
+            "installed": "fuel"
+        },
+        "vehicleFilter": {
+            "include": {
+                "nations": [
+                    "usa",
+                    "germany",
+                    "france",
+                    "uk",
+                    "czech",
+                    "sweden",
+                    "poland",
+                    "italy"
+                ],
+                "componentFilters": {
+                    "engine": {
+                        "tags": [
+                            "gasoline"
+                        ]
+                    }
+                }
+            }
+        },
+        "script": {
+            "enginePowerFactor": 1.05,
+            "turretRotationSpeedFactor": 1.05
+        },
+        "kpi": {
+            "mul": {
+                "name": "vehicleTurretRotationSpeed",
+                "value": 1.05
+            }
+        },
+        "tooltipSection": "equipment"
+    },
+    "gasoline105": {
+        "id": 8,
+        "userString": "#artefacts:gasoline105/name",
+        "description": "#artefacts:gasoline105/descr",
+        "shortDescriptionSpecial": "#artefacts:gasoline105/short_special",
+        "longDescriptionSpecial": "#artefacts:gasoline105/long_special",
+        "icon": "gasoline105",
+        "price": 20000,
+        "improved": "true",
+        "tags": [
+            "fuel",
+            "premium_equipment"
+        ],
+        "incompatibleTags": {
+            "installed": "fuel"
+        },
+        "vehicleFilter": {
+            "include": {
+                "nations": [
+                    "usa",
+                    "germany",
+                    "france",
+                    "uk",
+                    "czech",
+                    "sweden",
+                    "poland",
+                    "italy"
+                ],
+                "componentFilters": {
+                    "engine": {
+                        "tags": [
+                            "gasoline"
+                        ]
+                    }
+                }
+            }
+        },
+        "script": {
+            "enginePowerFactor": 1.1,
+            "turretRotationSpeedFactor": 1.1
+        },
+        "kpi": {
+            "mul": {
+                "name": "vehicleTurretRotationSpeed",
+                "value": 1.1
+            }
+        },
+        "tooltipSection": "equipment"
+    },
+    "chocolate": {
+        "id": 9,
+        "userString": "#artefacts:chocolate/name",
+        "description": "#artefacts:chocolate/descr",
+        "shortDescriptionSpecial": "#artefacts:chocolate/short_special",
+        "longDescriptionSpecial": "#artefacts:chocolate/long_special",
+        "icon": "chocolate",
+        "price": 20000,
+        "improved": "true",
+        "tags": [
+            "stimulator",
+            "premium_equipment"
+        ],
+        "vehicleFilter": {
+            "include": {
+                "nations": "germany"
+            }
+        },
+        "script": {
+            "crewLevelIncrease": 10
+        },
+        "kpi": {
+            "mul": {
+                "name": "crewLevel",
+                "value": 1.1
+            }
+        },
+        "tooltipSection": "crew_mastery"
+    },
+    "cocacola": {
+        "id": 100,
+        "userString": "#artefacts:cocacola/name",
+        "description": "#artefacts:cocacola/descr",
+        "shortDescriptionSpecial": "#artefacts:cocacola/short_special",
+        "longDescriptionSpecial": "#artefacts:cocacola/long_special",
+        "icon": "cocacola",
+        "price": 20000,
+        "improved": "true",
+        "tags": [
+            "stimulator",
+            "premium_equipment"
+        ],
+        "vehicleFilter": {
+            "include": {
+                "nations": "usa"
+            }
+        },
+        "script": {
+            "crewLevelIncrease": 10
+        },
+        "kpi": {
+            "mul": {
+                "name": "crewLevel",
+                "value": 1.1
+            }
+        },
+        "tooltipSection": "crew_mastery"
+    },
+    "ration": {
+        "id": 11,
+        "userString": "#artefacts:ration/name",
+        "description": "#artefacts:ration/descr",
+        "shortDescriptionSpecial": "#artefacts:ration/short_special",
+        "longDescriptionSpecial": "#artefacts:ration/long_special",
+        "icon": "ration",
+        "price": 20000,
+        "improved": "true",
+        "tags": [
+            "stimulator",
+            "premium_equipment"
+        ],
+        "vehicleFilter": {
+            "include": {
+                "nations": "ussr"
+            }
+        },
+        "script": {
+            "crewLevelIncrease": 10
+        },
+        "kpi": {
+            "mul": {
+                "name": "crewLevel",
+                "value": 1.1
+            }
+        },
+        "tooltipSection": "crew_mastery"
+    },
+    "removedRpmLimiter": {
+        "id": 12,
+        "userString": "#artefacts:removedRpmLimiter/name",
+        "description": "#artefacts:removedRpmLimiter/descr",
+        "shortDescriptionSpecial": "#artefacts:removedRpmLimiter/short_special",
+        "longDescriptionSpecial": "#artefacts:removedRpmLimiter/long_special",
+        "icon": "removedRpmLimiter",
+        "price": 3000,
+        "tags": [
+            "trigger"
+        ],
+        "vehicleFilter": {
+            "include": {
+                "nations": [
+                    "ussr",
+                    "china"
+                ]
+            }
+        },
+        "script": {
+            "enginePowerFactor": 1.1,
+            "engineHpLossPerSecond": 1.5
+        },
+        "kpi": {
+            "mul": {
+                "name": "vehicleEnginePower",
+                "value": 1.1
+            }
+        },
+        "tooltipSection": "equipment"
+    },
+    "hotCoffee": {
+        "id": 13,
+        "userString": "#artefacts:hotCoffee/name",
+        "description": "#artefacts:hotCoffee/descr",
+        "shortDescriptionSpecial": "#artefacts:hotCoffee/short_special",
+        "longDescriptionSpecial": "#artefacts:hotCoffee/long_special",
+        "icon": "hotCoffee",
+        "price": 20000,
+        "improved": "true",
+        "tags": [
+            "stimulator",
+            "premium_equipment"
+        ],
+        "vehicleFilter": {
+            "include": {
+                "nations": "france"
+            }
+        },
+        "script": {
+            "crewLevelIncrease": 10
+        },
+        "kpi": {
+            "mul": {
+                "name": "crewLevel",
+                "value": 1.1
+            }
+        },
+        "tooltipSection": "crew_mastery"
+    },
+    "afterburning": {
+        "id": 14,
+        "userString": "#artefacts:afterburning/name",
+        "description": "#artefacts:afterburning/descr",
+        "icon": "afterburning",
+        "price": 15000,
+        "notInShop": "true",
+        "tags": [
+            "notForSale",
+            "trigger"
+        ],
+        "soundNotification": "nitro_combat_reserve",
+        "vehicleFilter": {
+            "include": {
+                "nations": [
+                    "ussr",
+                    "germany"
+                ],
+                "vehicle": {
+                    "tags": [
+                        "afterburning_user"
+                    ]
+                }
+            }
+        },
+        "script": {
+            "deploySeconds": 10,
+            "consumeSeconds": 20,
+            "rechargeSeconds": 20,
+            "enginePowerFactor": 1.7,
+            "maxSpeedFactor": 2.0,
+            "cooldownSeconds": 3
+        },
+        "tooltipSection": "equipment"
+    },
+    "ration_china": {
+        "id": 15,
+        "userString": "#artefacts:ration_china/name",
+        "description": "#artefacts:ration_china/descr",
+        "shortDescriptionSpecial": "#artefacts:ration_china/short_special",
+        "longDescriptionSpecial": "#artefacts:ration_china/long_special",
+        "icon": "ration_china",
+        "price": 20000,
+        "improved": "true",
+        "tags": [
+            "stimulator",
+            "premium_equipment"
+        ],
+        "vehicleFilter": {
+            "include": {
+                "nations": "china"
+            }
+        },
+        "script": {
+            "crewLevelIncrease": 10
+        },
+        "kpi": {
+            "mul": {
+                "name": "crewLevel",
+                "value": 1.1
+            }
+        },
+        "tooltipSection": "crew_mastery"
+    },
+    "qualityOil": {
+        "id": 16,
+        "userString": "#artefacts:qualityOil/name",
+        "description": "#artefacts:qualityOil/descr",
+        "shortDescriptionSpecial": "#artefacts:qualityOil/short_special",
+        "longDescriptionSpecial": "#artefacts:qualityOil/long_special",
+        "icon": "qualityOil",
+        "price": 5000,
+        "tags": [
+            "fuel"
+        ],
+        "incompatibleTags": {
+            "installed": "fuel"
+        },
+        "vehicleFilter": {
+            "include": {
+                "nations": [
+                    "china",
+                    "japan"
+                ]
+            }
+        },
+        "script": {
+            "enginePowerFactor": 1.05,
+            "turretRotationSpeedFactor": 1.0
+        },
+        "kpi": {
+            "mul": {
+                "name": "vehicleEnginePower",
+                "value": 1.05
+            }
+        },
+        "tooltipSection": "equipment"
+    },
+    "ration_uk": {
+        "id": 17,
+        "userString": "#artefacts:ration_uk/name",
+        "description": "#artefacts:ration_uk/descr",
+        "shortDescriptionSpecial": "#artefacts:ration_uk/short_special",
+        "longDescriptionSpecial": "#artefacts:ration_uk/long_special",
+        "icon": "ration_uk",
+        "price": 20000,
+        "improved": "true",
+        "tags": [
+            "stimulator",
+            "premium_equipment"
+        ],
+        "vehicleFilter": {
+            "include": {
+                "nations": "uk"
+            }
+        },
+        "script": {
+            "crewLevelIncrease": 10
+        },
+        "kpi": {
+            "mul": {
+                "name": "crewLevel",
+                "value": 1.1
+            }
+        },
+        "tooltipSection": "crew_mastery"
+    },
+    "ration_japan": {
+        "id": 18,
+        "userString": "#artefacts:ration_japan/name",
+        "description": "#artefacts:ration_japan/descr",
+        "shortDescriptionSpecial": "#artefacts:ration_japan/short_special",
+        "longDescriptionSpecial": "#artefacts:ration_japan/long_special",
+        "icon": "ration_japan",
+        "price": 20000,
+        "improved": "true",
+        "tags": [
+            "stimulator",
+            "premium_equipment"
+        ],
+        "vehicleFilter": {
+            "include": {
+                "nations": "japan"
+            }
+        },
+        "script": {
+            "crewLevelIncrease": 10
+        },
+        "kpi": {
+            "mul": {
+                "name": "crewLevel",
+                "value": 1.1
+            }
+        },
+        "tooltipSection": "crew_mastery"
+    },
+    "ration_czech": {
+        "id": 61,
+        "userString": "#artefacts:ration_czech/name",
+        "description": "#artefacts:ration_czech/descr",
+        "shortDescriptionSpecial": "#artefacts:ration_czech/short_special",
+        "longDescriptionSpecial": "#artefacts:ration_czech/long_special",
+        "icon": "ration_czech",
+        "price": 20000,
+        "improved": "true",
+        "tags": [
+            "stimulator",
+            "premium_equipment"
+        ],
+        "vehicleFilter": {
+            "include": {
+                "nations": "czech"
+            }
+        },
+        "script": {
+            "crewLevelIncrease": 10
+        },
+        "kpi": {
+            "mul": {
+                "name": "crewLevel",
+                "value": 1.1
+            }
+        },
+        "tooltipSection": "crew_mastery"
+    },
+    "ration_sweden": {
+        "id": 62,
+        "userString": "#artefacts:ration_sweden/name",
+        "description": "#artefacts:ration_sweden/descr",
+        "shortDescriptionSpecial": "#artefacts:ration_sweden/short_special",
+        "longDescriptionSpecial": "#artefacts:ration_sweden/long_special",
+        "icon": "ration_sweden",
+        "price": 20000,
+        "improved": "true",
+        "tags": [
+            "stimulator",
+            "premium_equipment"
+        ],
+        "vehicleFilter": {
+            "include": {
+                "nations": "sweden"
+            }
+        },
+        "script": {
+            "crewLevelIncrease": 10
+        },
+        "kpi": {
+            "mul": {
+                "name": "crewLevel",
+                "value": 1.1
+            }
+        },
+        "tooltipSection": "crew_mastery"
+    },
+    "ration_poland": {
+        "id": 63,
+        "userString": "#artefacts:ration_poland/name",
+        "description": "#artefacts:ration_poland/descr",
+        "shortDescriptionSpecial": "#artefacts:ration_poland/short_special",
+        "longDescriptionSpecial": "#artefacts:ration_poland/long_special",
+        "icon": "ration_poland",
+        "price": 20000,
+        "improved": "true",
+        "tags": [
+            "stimulator",
+            "premium_equipment"
+        ],
+        "vehicleFilter": {
+            "include": {
+                "nations": "poland"
+            }
+        },
+        "script": {
+            "crewLevelIncrease": 10
+        },
+        "kpi": {
+            "mul": {
+                "name": "crewLevel",
+                "value": 1.1
+            }
+        },
+        "tooltipSection": "crew_mastery"
+    },
+    "ration_italy": {
+        "id": 64,
+        "userString": "#artefacts:ration_italy/name",
+        "description": "#artefacts:ration_italy/descr",
+        "shortDescriptionSpecial": "#artefacts:ration_italy/short_special",
+        "longDescriptionSpecial": "#artefacts:ration_italy/long_special",
+        "icon": "ration_italy",
+        "price": 20000,
+        "improved": "true",
+        "tags": [
+            "stimulator",
+            "premium_equipment"
+        ],
+        "vehicleFilter": {
+            "include": {
+                "nations": "italy"
+            }
+        },
+        "script": {
+            "crewLevelIncrease": 10
+        },
+        "kpi": {
+            "mul": {
+                "name": "crewLevel",
+                "value": 1.1
+            }
+        },
+        "tooltipSection": "crew_mastery"
+    }
+}
