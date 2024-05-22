@@ -86,9 +86,6 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                 with open(raw_output_path, 'w') as json_file:
                     json.dump(json_data, json_file, indent=4)
 
-
-
-
     tanks_of_each_nation = {
         'usa': [],
         'china': [],
