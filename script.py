@@ -144,6 +144,49 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
         with open(os.path.join("raw", most_similar_name + ".json")) as f:
             data = json.load(f)
 
+
+            turrets_arr = []
+            turrets = data.get('turrets0', {})
+            for turret, info in turrets.items():
+                guns_arr = []
+                guns = info.get('guns', {})
+                for gun, gun_info in guns.items():
+                    guns_arr.append({
+                        'name': gun,
+                        'max_ammo': gun_info.get('maxAmmo'),
+                        'aim_time': gun_info.get('aimingTime'),
+                        'accuracy': gun_info.get('shotDispersionRadius'),
+                        'reload_time': gun_info.get('reloadTime'),
+                        'dispersion': {
+                            'turret_rotation': gun_info.get('shotDispersionFactors', {}).get('turretRotation'),
+                            'after_shot': gun_info.get('shotDispersionFactors', {}).get('afterShot'),
+                            'while_damaged': gun_info.get('shotDispersionFactors', {}).get('whileGunDamaged'),
+                        },
+                        # 'hull_position': info.get('hullPosition'),
+                    })
+
+                turrets_arr.append({
+                    'name': turret,
+                    'traverse': info.get('rotationSpeed'),
+                    'guns': guns_arr,
+                    'gun_position': info.get('gunPosition'),
+                })
+
+
+
+
+            chassis_arr = []
+            chassis = data.get('chassis', {})
+            for chassis_name, chassis_info in chassis.items():
+                chassis_arr.append({
+                    'name': chassis_name,
+                    'max_load': chassis_info.get('maxLoad'),
+                    'terrain_resistance': chassis_info.get('terrainResistance'),
+                    'rotation_speed': chassis_info.get('rotationSpeed'),
+                    'repair_time': chassis_info.get('repairTime'),
+                    'hull_position': chassis_info.get('hullPosition'),
+                })
+
             useful_data = {
                 'name': v.get('name'),
                 'short_name': v.get('short_name'),
@@ -162,6 +205,9 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                         "camo_bonus": data.get('invisibility', {}).get('camouflageBonus'),
                         "fire_penalty": data.get('invisibility', {}).get('firePenalty'),
                     },
+                    'turrets': turrets_arr,
+                    'turret_position': data.get('hull', {}).get('turretPositions', {}).get('turret'),
+                    'chassis': chassis_arr,
                 }
             }
 
