@@ -144,7 +144,6 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
         with open(os.path.join("raw", most_similar_name + ".json")) as f:
             data = json.load(f)
 
-
             turrets_arr = []
             turrets = data.get('turrets0', {})
             for turret, info in turrets.items():
@@ -162,7 +161,6 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                             'after_shot': gun_info.get('shotDispersionFactors', {}).get('afterShot'),
                             'while_damaged': gun_info.get('shotDispersionFactors', {}).get('whileGunDamaged'),
                         },
-                        # 'hull_position': info.get('hullPosition'),
                     })
 
                 turrets_arr.append({
@@ -171,9 +169,6 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                     'guns': guns_arr,
                     'gun_position': info.get('gunPosition'),
                 })
-
-
-
 
             chassis_arr = []
             chassis = data.get('chassis', {})

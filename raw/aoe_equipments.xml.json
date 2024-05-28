@@ -1,0 +1,217 @@
+{
+    "arcade_artillery_aoe": {
+        "id": 9101,
+        "userString": "#artefacts:artillery/name",
+        "description": "#artefacts:artillery/descr",
+        "icon": "artillery",
+        "price": {
+            "gold": null
+        },
+        "notInShop": "true",
+        "tags": [
+            "notForSale",
+            "avatar",
+            "trigger"
+        ],
+        "type": "battleAbilities",
+        "script": {
+            "shortDescription": "#artefacts:artillery/shortDescr",
+            "longDescription": "#artefacts:artillery/longDescr",
+            "shortFilterAlert": null,
+            "longFilterAlert": null,
+            "tooltips": [
+                "cooldownTime",
+                "delay",
+                "areaRadius",
+                "shotsNumber",
+                "duration-artillery"
+            ],
+            "cooldownTime": 90,
+            "cooldownFactors": null,
+            "sharedCooldownTime": 0,
+            "consumeAmmo": "false",
+            "disableAllyDamage": "true",
+            "cooldownTimeRespawnFactor": 1,
+            "minApplyRadius": 20,
+            "maxApplyRadius": 300,
+            "arenaAimLimits": {
+                "insetRadius": 5,
+                "areaSwitch": "content/Interface/TargetPoint/circle_dot_cross.visual",
+                "areaColor": "0xFFFF0000"
+            },
+            "delay": 0,
+            "duration": 3.0,
+            "shotsNumber": 3,
+            "explodeDestructible": "false",
+            "areaRadius": 30,
+            "areaVisual": "content/Interface/TargetPoint/TargetPoint.visual",
+            "areaShow": "always",
+            "noOwner": "false",
+            "attackerType": "ARTILLERY_EQ",
+            "shotSoundPreDelay": 1,
+            "wwsoundShot": "eb_ability_artillery_firing",
+            "effects": {
+                "start": {
+                    "areaColor": "0x3FFFFF00"
+                },
+                "action": {
+                    "shotEffects": "epicArtilleryStrike",
+                    "offsetDeviation": 0,
+                    "repeatCount": 1,
+                    "repeatDelay": 0.3,
+                    "areaColor": "0x3FFFFF00"
+                }
+            },
+            "actions": {
+                "action": {
+                    "type": "DamageVehicle",
+                    "applyTo": "all",
+                    "args": {
+                        "damage": 100
+                    }
+                }
+            }
+        }
+    },
+    "arcade_bomber_aoe": {
+        "id": 9201,
+        "userString": "#artefacts:bomber/name",
+        "description": "#artefacts:bomber/descr",
+        "icon": "bomber",
+        "price": {
+            "gold": null
+        },
+        "notInShop": "true",
+        "tags": [
+            "notForSale",
+            "avatar",
+            "trigger"
+        ],
+        "type": "battleAbilities",
+        "script": {
+            "shortDescription": "#artefacts:bomber/shortDescr",
+            "longDescription": "#artefacts:bomber/longDescr",
+            "shortFilterAlert": null,
+            "longFilterAlert": null,
+            "tooltips": [
+                "cooldownTime",
+                "delay",
+                "areaLength_areaWidth-dropArea",
+                "bombsNumber",
+                "shellCompactDescr"
+            ],
+            "cooldownTime": 90,
+            "cooldownFactors": null,
+            "sharedCooldownTime": 0,
+            "consumeAmmo": "false",
+            "disableAllyDamage": "true",
+            "cooldownTimeRespawnFactor": 1,
+            "minApplyRadius": 20,
+            "maxApplyRadius": 300,
+            "arenaAimLimits": {
+                "insetRadius": 5,
+                "areaSwitch": "content/Interface/TargetPoint/circle_dot_cross.visual",
+                "areaColor": "0xFFFF0000"
+            },
+            "delay": 5.38,
+            "duration": 1.0,
+            "areaLength": 80,
+            "areaWidth": 32,
+            "shotsNumber": 40,
+            "explodeDestructible": "true",
+            "areaVisual": "content/Interface/TargetPoint/rectangle2.visual",
+            "noOwner": "false",
+            "attackerType": "BOMBER_EQ",
+            "lifetime": 16.48,
+            "shotEffect": "epicAirbombStrike",
+            "effects": {
+                "start": {
+                    "sequences": {
+                        "sequence": {
+                            "name": "particles/eff_sequence/aoe_airstrike_il2_01.seq"
+                        }
+                    }
+                },
+                "action": {
+                    "areaColor": "0x3FFFFF00"
+                }
+            },
+            "actions": {
+                "action": {
+                    "type": "DamageVehicle",
+                    "applyTo": "all",
+                    "args": {
+                        "damage": 75
+                    }
+                }
+            }
+        }
+    },
+    "artillery_deathzone_aoe": {
+        "id": 9301,
+        "userString": "#artefacts:artillery/name",
+        "description": "#artefacts:artillery/descr",
+        "icon": "artillery",
+        "price": {
+            "gold": null
+        },
+        "notInShop": "true",
+        "tags": [
+            "notForSale",
+            "avatar",
+            "trigger"
+        ],
+        "type": "battleAbilities",
+        "script": {
+            "shortDescription": "#artefacts:artillery/shortDescr",
+            "longDescription": "#artefacts:artillery/longDescr",
+            "shortFilterAlert": null,
+            "longFilterAlert": null,
+            "tooltips": [
+                "cooldownTime",
+                "delay",
+                "areaRadius",
+                "shotsNumber",
+                "duration-artillery"
+            ],
+            "cooldownTime": 90,
+            "cooldownFactors": null,
+            "sharedCooldownTime": 0,
+            "consumeAmmo": "false",
+            "disableAllyDamage": "true",
+            "cooldownTimeRespawnFactor": 1,
+            "delay": 4,
+            "duration": 3.0,
+            "shotsNumber": 4,
+            "explodeDestructible": "false",
+            "areaRadius": 10,
+            "areaVisual": "content/Interface/TargetPoint/TargetPoint.visual",
+            "areaShow": "always",
+            "noOwner": "false",
+            "attackerType": "DEATH_ZONE",
+            "shotSoundPreDelay": 1,
+            "wwsoundShot": "eb_ability_artillery_firing",
+            "effects": {
+                "start": {
+                    "areaColor": "0x3FFF0000"
+                },
+                "action": {
+                    "shotEffects": "epicArtilleryStrike",
+                    "offsetDeviation": 0,
+                    "repeatCount": 1,
+                    "repeatDelay": 0.3,
+                    "areaColor": "0x3FFFFF00"
+                }
+            },
+            "actions": {
+                "action": {
+                    "type": "DamageVehicle",
+                    "applyTo": "all",
+                    "args": {
+                        "damage": 100
+                    }
+                }
+            }
+        }
+    }
+}

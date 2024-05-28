@@ -1,0 +1,106 @@
+{
+    "poi_artillery_aoe": {
+        "id": 9401,
+        "userString": "#artefacts:poi_artillery_aoe/name",
+        "description": "#artefacts:poi_artillery_aoe/descr",
+        "icon": [
+            "poi_artillery",
+            "0",
+            "0"
+        ],
+        "price": {
+            "gold": null
+        },
+        "notInShop": "true",
+        "tags": [
+            "notForSale",
+            "avatar",
+            "trigger",
+            "poiEquipment"
+        ],
+        "type": "battleAbilities",
+        "code": "artillery",
+        "soundNotification": "comp_7_ability_ready",
+        "script": {
+            "shortDescription": "#artefacts:poi_artillery_aoe/shortDescr",
+            "longDescription": "#artefacts:poi_artillery_aoe/longDescr",
+            "shortFilterAlert": null,
+            "longFilterAlert": null,
+            "cooldownTime": 0,
+            "cooldownFactors": null,
+            "sharedCooldownTime": 0,
+            "consumeAmmo": "true",
+            "disableAllyDamage": "true",
+            "cooldownTimeRespawnFactor": 1,
+            "minApplyRadius": 20,
+            "maxApplyRadius": 300,
+            "requireAssists": "true",
+            "delay": 3,
+            "duration": 1.0,
+            "maxCount": 1,
+            "shotsNumber": 1,
+            "explodeDestructible": "true",
+            "areaRadius": 25,
+            "areaVisual": "content/Interface/TargetPoint/circle_shot_area.visual",
+            "areaUsedPrefab": "content/CGFPrefabs/Battle/Consumables/shot_area.prefab",
+            "areaVisibleToEnemies": "false",
+            "areaColor": "0xFF25FF25",
+            "areaShow": "before",
+            "noOwner": "false",
+            "attackerType": "ARTILLERY_EQ",
+            "shotSoundPreDelay": 1,
+            "wwsoundShot": "eb_ability_artillery_firing",
+            "effects": {
+                "action": {
+                    "shotEffects": "epicArtilleryStrike",
+                    "offsetDeviation": 30,
+                    "repeatCount": 15,
+                    "repeatDelay": 0,
+                    "repeatDelayDeviationPercent": 0
+                }
+            },
+            "actions": {
+                "action": {
+                    "type": "StunVehicleAndSendResults",
+                    "applyTo": "all",
+                    "args": {
+                        "shellCompactDescr": 88858,
+                        "sendAttackResults": "True",
+                        "ignoreStunResistanceDuration": "False"
+                    }
+                }
+            }
+        }
+    },
+    "poi_radar": {
+        "id": 9402,
+        "userString": "#artefacts:poi_radar/name",
+        "description": "#artefacts:poi_radar/descr",
+        "icon": [
+            "poi_radar",
+            "0",
+            "0"
+        ],
+        "price": 0,
+        "notInShop": "true",
+        "tags": [
+            "notForSale",
+            "poiEquipment"
+        ],
+        "type": "battleAbilities",
+        "soundNotification": "comp_7_ability_ready",
+        "script": {
+            "visualScript": {
+                "server": {
+                    "plan": "PointsOfInterest/abilities/radar_server"
+                }
+            },
+            "duration": {
+                "exports": [
+                    "vse",
+                    "tooltip"
+                ]
+            }
+        }
+    }
+}
