@@ -1,6 +1,7 @@
 import os
 import subprocess
 import shutil
+from multiprocessing import Pool
 
 def extract_7z(pkg_path, res_path):
     # Ensure the destination folder exists
@@ -28,6 +29,51 @@ def merge_directories(src_dirs, dst_dir):
                 dst_subdir = os.path.join(dst_dir, dir_name)
                 shutil.copytree(src_subdir, dst_subdir, dirs_exist_ok=True)
 
+merged_path = "D:\\Games\\World_of_Tanks_NA\\res\\packages\\merged"
+
+def convert_model(input_file):
+    folder_path = os.path.dirname(os.path.dirname(os.path.dirname(input_file)))
+    file_name = os.path.basename(input_file)
+    output_path = os.path.join(folder_path, f"{file_name.split('.')[0]}.obj")
+
+    command = [
+        "python",
+        ".\\wot-model-converter\\convert-primitive.py",
+        "-o",
+        output_path,
+        input_file
+    ]
+
+    try:
+        subprocess.run(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
+        print(f"Finished {output_path}")
+    except subprocess.CalledProcessError as e:
+        print(f"An error occurred while converting the model: {e}")
+        print(e.stderr)
+
+def convert_models():
+    # Collect all the input files
+    input_files = []
+    for folder_name in os.listdir(merged_path):
+        folder_path = os.path.join(merged_path, folder_name)
+        if os.path.isdir(folder_path):
+            input_path = os.path.join(folder_path, "normal", "lod0")
+            if os.path.exists(input_path):
+                for file_name in os.listdir(input_path):
+                    if file_name.endswith(".primitives_processed"):
+                        input_file = os.path.join(input_path, file_name)
+                        input_files.append(input_file)
+
+    # Create a multiprocessing pool
+    pool = Pool()
+
+    # Use the pool to convert the models concurrently
+    pool.map(convert_model, input_files)
+
+    # Close the pool
+    pool.close()
+    pool.join()
+
 def main():
     low_tiers = ["01", "02", "03", "04"]
     high_tiers = ["05", "06", "07", "08", "09", "10"]
@@ -50,10 +96,13 @@ def main():
         src_dirs.append(pkg1_res_path)
         src_dirs.append(pkg2_res_path)
     
-    dst_dir = "D:\\Games\\World_of_Tanks_NA\\res\\packages\\merged"
-    merge_directories(src_dirs, dst_dir)
-    print(f"Successfully merged directories into {dst_dir}")
+    merge_directories(src_dirs, merged_path)
 
+    print(f"Successfully merged directories into {merged_path}")
+
+    convert_models()
+
+    print("Finished converting models")
 
 if __name__ == '__main__':
     main()
