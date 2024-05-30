@@ -88,7 +88,6 @@ nation_to_id = {
     'italy': 10,
 }
 
-
 def process_xml_files(source_dir: str, vehicles: dict) -> None:
 
     tank_map = {}
@@ -125,6 +124,11 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
         print(tank_name, tank_id)
         if tank_id is None:
             continue
+
+        if tank_id not in vehicles:
+            print(f"Tank {tank_name} not found in WG API")
+            continue
+
         with open(os.path.join("raw", filename)) as f:
             data = json.load(f)
 
@@ -140,6 +144,9 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                         'aim_time': gun_info.get('aimingTime'),
                         'accuracy': gun_info.get('shotDispersionRadius'),
                         'reload_time': gun_info.get('reloadTime'),
+                        'arc': gun_info.get('turretYawLimits'),
+                        'elevation': -min(gun_info.get('pitchLimits', {}).get('minPitch')),
+                        'depression': max(gun_info.get('pitchLimits', {}).get('maxPitch')),
                         'dispersion': {
                             'turret_rotation': gun_info.get('shotDispersionFactors', {}).get('turretRotation'),
                             'after_shot': gun_info.get('shotDispersionFactors', {}).get('afterShot'),
@@ -150,8 +157,10 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                 turrets_arr.append({
                     'name': turret,
                     'traverse': info.get('rotationSpeed'),
+                    'view_range': info.get('circularVisionRadius'),
                     'guns': guns_arr,
                     'gun_position': info.get('gunPosition'),
+                    'hp': info.get('maxHealth') + data.get('hull', {}).get('maxHealth')
                 })
 
             chassis_arr = []
@@ -162,8 +171,11 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                     'max_load': chassis_info.get('maxLoad'),
                     'terrain_resistance': chassis_info.get('terrainResistance'),
                     'rotation_speed': chassis_info.get('rotationSpeed'),
+                    'rotates_in_place': chassis_info.get('rotationIsAroundCenter'),
                     'repair_time': chassis_info.get('repairTime'),
                     'hull_position': chassis_info.get('hullPosition'),
+                    'track_health': chassis_info.get('maxHealth'),
+                    'track_repaired_health': chassis_info.get('maxRegenHealth'),
                 })
 
 
@@ -193,6 +205,10 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                     'turrets': turrets_arr,
                     'turret_position': data.get('hull', {}).get('turretPositions', {}).get('turret'),
                     'chassis': chassis_arr,
+                    'hull': {
+                        'ammo_rack_health': data.get('hull', {}).get('ammoBayHealth'),
+                        'ammo_rack_health_repaired': data.get('hull', {}).get('ammoBayHealth', {}).get('maxRegenHealth'),
+                    }
                 }
             }
 
@@ -218,7 +234,7 @@ def fetch_wg_vehicle_data() -> dict:
         if data["status"] == "ok":
             modified_data = {}
             for tank_id, tank_info in data["data"].items():
-                modified_data[tank_id] = tank_info
+                modified_data[int(tank_id)] = tank_info
 
             return modified_data
         else:
