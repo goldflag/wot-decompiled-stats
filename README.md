@@ -24,7 +24,7 @@ Converts tank models into `.glb`. This script generates up to 70gb of files, so 
 1. Must be on Windows
 2. Install Blender 3.6.0 and `bpy` 3.6.0
 3. Add Blender to your system PATH environment variable (most likely `C:\Program Files\Blender Foundation\Blender 3.6`)
-4. Add Blender to your system PATH environment variable (most likely `C:\Program Files\Blender Foundation\Blender 3.6`)
+4. Set environment variable `WOT_PATH` to your WoT directory (most likely `C:\\Games\\World_of_Tanks_NA` or `C:\\Games\\World_of_Tanks_EU`)
 5. Initialize Python virtual environment `python -m venv venv` (optional)
 6. Install dependencies `pip install -r requirements.txt`
 7. Run script `python model_processor.py`

@@ -2,6 +2,7 @@ import os
 import subprocess
 import shutil
 import json
+from multiprocessing import Process, Queue, current_process
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -61,14 +62,57 @@ def extract_tank_model_pkgs():
     print(f"Successfully merged directories into {merged_path}")
 
 
-def convert_models():
+def convert_to_obj(input_file, output_obj_path):
+    command = [
+        "python",
+        ".\\wot-model-converter\\convert-primitive.py",
+        "-o",
+        output_obj_path,
+        input_file
+    ]
+    try:
+        subprocess.run(command, stdout=subprocess.DEVNULL, check=True)
+        # subprocess.run(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"An error occurred while converting {input_file} to .obj: {e}")
+        print(e.stderr)
 
+def convert_to_glb(output_obj_path, output_glb_path):
+    blender_command = [
+        "blender",
+        "--background",
+        "--python", "convert_obj_to_glb_with_textures.py",
+        "--", output_obj_path, output_glb_path
+    ]
+    try:
+        subprocess.run(blender_command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
+        # subprocess.run(blender_command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
+        # print(f"Converted {output_obj_path} to {output_glb_path}")
+    except subprocess.CalledProcessError as e:
+        print(f"An error occurred while converting {output_obj_path} to .glb: {e}")
+        print(e.stderr)
+
+def worker(task_queue):
+    counter = 0
+
+    while not task_queue.empty():
+        task = task_queue.get()
+        if task is None:
+            break
+
+        tank_name, file_name, input_file, output_obj_path, output_glb_path = task
+        convert_to_obj(input_file, output_obj_path)
+        convert_to_glb(output_obj_path, output_glb_path)
+        print(f"{counter} - {current_process().name} - Converted {file_name.split('.')[0]} on {tank_name}")
+        counter += 1
+
+def convert_models():
     file_path = "tank_map.json"
-    # tank map generated in xml_processor.py
+    
     with open(file_path, "r") as json_file:
         tank_map = json.load(json_file)
 
-    counter = 0
+    task_queue = Queue()
 
     # Iterate over each folder in the base path
     for tank_name in os.listdir(merged_path):
@@ -78,49 +122,48 @@ def convert_models():
         if os.path.isdir(folder_path):
             # Construct the paths for the input and output files
             input_path = os.path.join(folder_path, "normal", "lod0")
+            tracks_input_path = os.path.join(folder_path, "track")
             
             # Check if the "normal/lod0" folder exists
             if os.path.exists(input_path):
-                counter += 1
                 # Iterate over each ".primitives_processed" file in the "normal/lod0" folder
                 for file_name in os.listdir(input_path):
                     if file_name.endswith(".primitives_processed"):
-
                         # Construct the full input file path
                         input_file = os.path.join(input_path, file_name)
                         output_obj_path = os.path.join(folder_path, f"{file_name.split('.')[0]}.obj")
                         output_glb_path = os.path.join("useful", str(tank_map.get(tank_name, {}).get("id")), f"{file_name.split('.')[0]}.glb")
-                        # output_glb_path = os.path.join(folder_path, f"{file_name.split('.')[0]}.glb")
-
-                        # Run the command using subprocess to convert primitives to OBJ
-                        command = [
-                            "python",
-                            ".\\wot-model-converter\\convert-primitive.py",
-                            "-o",
-                            output_obj_path,
-                            input_file
-                        ]
-                        try:
-                            subprocess.run(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
-                            # print(f"Converted {input_file} to {output_obj_path}")
-                        except subprocess.CalledProcessError as e:
-                            print(f"An error occurred while converting the model to .obj: {e}")
-                            print(e.stderr)
-                            continue
                         
-                        # Convert OBJ to GLB with textures using Blender
-                        blender_command = [
-                            "blender",
-                            "--background",
-                            "--python", "convert_obj_to_glb_with_textures.py",
-                            "--", output_obj_path, output_glb_path
-                        ]
-                        try:
-                            subprocess.run(blender_command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
-                            print(f"{counter} - Converted {file_name.split('.')[0]} on {tank_name}")
-                        except subprocess.CalledProcessError as e:
-                            print(f"An error occurred while converting {output_obj_path} to .glb: {e}")
-                            print(e.stderr)
+                        task = (tank_name, file_name, input_file, output_obj_path, output_glb_path)
+                        task_queue.put(task)
+
+            # Check if the "track" folder exists
+            if os.path.exists(tracks_input_path):
+                for file_name in os.listdir(tracks_input_path):
+                    if file_name.endswith(".primitives_processed"):
+                        # Construct the full input file path
+                        input_file = os.path.join(tracks_input_path, file_name)
+                        output_obj_path = os.path.join(folder_path, f"{file_name.split('.')[0]}.obj")
+                        
+                        track_path = os.path.join("useful", str(tank_map.get(tank_name, {}).get("id")), "track")
+                        if not os.path.exists(track_path):
+                            os.makedirs(track_path)
+                        output_glb_path = os.path.join(track_path, f"{file_name.split('.')[0]}.glb")
+                        
+                        task = (tank_name, file_name, input_file, output_obj_path, output_glb_path)
+                        task_queue.put(task)
+    
+    # Start worker processes
+    num_workers = os.cpu_count()
+    processes = []
+    for _ in range(num_workers):
+        p = Process(target=worker, args=(task_queue,))
+        p.start()
+        processes.append(p)
+
+    # Wait for all worker processes to finish
+    for p in processes:
+        p.join()
 
 
 def main():
