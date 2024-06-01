@@ -7,6 +7,9 @@ import json
 import sys
 from difflib import SequenceMatcher
 import re
+from dotenv import load_dotenv
+load_dotenv()
+
 
 def xml_to_dict(element) -> Dict:
     if len(element) == 0:
@@ -252,7 +255,6 @@ def fetch_wg_vehicle_data() -> dict:
 
 
 def main() -> None:
-    # source_dir = 'WorldOfTanks-Decompiled/source/res/scripts/item_defs/vehicles'
     source_dir = 'wot-src/sources/res/scripts/item_defs/vehicles'
     vehicles = fetch_wg_vehicle_data()
     process_xml_files(source_dir, vehicles)

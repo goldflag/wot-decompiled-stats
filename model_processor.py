@@ -2,6 +2,8 @@ import os
 import subprocess
 import shutil
 import json
+from dotenv import load_dotenv
+load_dotenv()
 
 def extract_7z(pkg_path, res_path):
     # Ensure the destination folder exists
@@ -29,7 +31,8 @@ def merge_directories(src_dirs, dst_dir):
                 shutil.copytree(src_subdir, dst_subdir, dirs_exist_ok=True)
         print(f"Successfully merged {src_dir}")
 
-merged_path = "D:\\Games\\World_of_Tanks_NA\\res\\packages\\merged"
+wot_path = os.getenv('WOT_PATH', 'C:\\Games\\World_of_Tanks_NA')
+merged_path = f"{wot_path}\\res\\packages\\merged"
 
 def extract_tank_model_pkgs():
     low_tiers = ["01", "02", "03", "04"]
@@ -38,16 +41,16 @@ def extract_tank_model_pkgs():
     src_dirs = []
     
     for tier in low_tiers:
-        pkg_path = f"D:\\Games\\World_of_Tanks_NA\\res\\packages\\vehicles_level_{tier}.pkg"
-        pkg_res_path = f"D:\\Games\\World_of_Tanks_NA\\res\\packages\\{tier}"
+        pkg_path = f"{wot_path}\\res\\packages\\vehicles_level_{tier}.pkg"
+        pkg_res_path = f"{wot_path}\\res\\packages\\{tier}"
         extract_7z(pkg_path, pkg_res_path)
         src_dirs.append(pkg_res_path)
     
     for tier in high_tiers:
-        pkg1_path = f"D:\\Games\\World_of_Tanks_NA\\res\\packages\\vehicles_level_{tier}-part1.pkg"
-        pkg2_path = f"D:\\Games\\World_of_Tanks_NA\\res\\packages\\vehicles_level_{tier}-part2.pkg"
-        pkg1_res_path = f"D:\\Games\\World_of_Tanks_NA\\res\\packages\\{tier}-part1"
-        pkg2_res_path = f"D:\\Games\\World_of_Tanks_NA\\res\\packages\\{tier}-part2"
+        pkg1_path = f"{wot_path}\\res\\packages\\vehicles_level_{tier}-part1.pkg"
+        pkg2_path = f"{wot_path}\\res\\packages\\vehicles_level_{tier}-part2.pkg"
+        pkg1_res_path = f"{wot_path}\\res\\packages\\{tier}-part1"
+        pkg2_res_path = f"{wot_path}\\res\\packages\\{tier}-part2"
         extract_7z(pkg1_path, pkg1_res_path)
         extract_7z(pkg2_path, pkg2_res_path)
         src_dirs.append(pkg1_res_path)
