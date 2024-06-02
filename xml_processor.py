@@ -187,7 +187,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                 })
 
 
-            tank_api_data = vehicles.get(str(tank_id), {})
+            tank_api_data = vehicles.get(tank_id, {})
 
             if tank_api_data is None:
                 continue
