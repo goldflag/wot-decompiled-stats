@@ -135,7 +135,7 @@ def convert_models():
     task_queue = Queue()
 
     # Iterate over each folder in the base path
-    for tank_name in os.listdir(merged_path)[100:300]:
+    for tank_name in os.listdir(merged_path)[300:600]:
         folder_path = os.path.join(merged_path, tank_name)
         
         # Check if the item is a directory
