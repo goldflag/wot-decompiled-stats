@@ -38,6 +38,7 @@ merged_path = f"{wot_path}\\res\\packages\\merged"
 def extract_tank_model_pkgs():
     low_tiers = ["01", "02", "03", "04"]
     high_tiers = ["05", "06", "07", "08", "09", "10"]
+    shared_content = ["1", "2", "3"]
     
     src_dirs = []
     
@@ -56,11 +57,33 @@ def extract_tank_model_pkgs():
         extract_7z(pkg2_path, pkg2_res_path)
         src_dirs.append(pkg1_res_path)
         src_dirs.append(pkg2_res_path)
+
+    for shared in shared_content:
+        pkg_path = f"{wot_path}\\res\\packages\\shared_content-part{shared}.pkg"
+        pkg_res_path = f"{wot_path}\\res\\packages\\shared-content-part{shared}"
+        extract_7z(pkg_path, pkg_res_path)
+        src_dirs.append(pkg_res_path)
     
     print(f"Merging directories...")
     merge_directories(src_dirs, merged_path)
     print(f"Successfully merged directories into {merged_path}")
 
+def update_mtl_file(mtl_file_path, texture_base_path):
+    """Update the paths in the MTL file to be relative to the required directories."""
+    with open(mtl_file_path, 'r') as file:
+        lines = file.readlines()
+
+    with open(mtl_file_path, 'w') as file:
+        for line in lines:
+            if 'map_Kd' in line or 'map_norm' in line:
+                texture_file = os.path.basename(line.split()[1])
+                # Determine if the texture is related to tracks or other components
+                if 'track' in texture_file:
+                    new_texture_path = os.path.join("..", "tracks", texture_file)
+                else:
+                    new_texture_path = texture_file
+                line = f'{line.split()[0]} {new_texture_path.replace(os.sep, "/")}\n'
+            file.write(line)
 
 def convert_to_obj(input_file, output_obj_path):
     command = [
@@ -72,22 +95,24 @@ def convert_to_obj(input_file, output_obj_path):
     ]
     try:
         subprocess.run(command, stdout=subprocess.DEVNULL, check=True)
-        # subprocess.run(command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
     except subprocess.CalledProcessError as e:
         print(f"An error occurred while converting {input_file} to .obj: {e}")
         print(e.stderr)
 
-def convert_to_glb(output_obj_path, output_glb_path):
+def convert_to_glb(output_obj_path, output_glb_path, texture_base_path):
+    # Update the MTL file before conversion
+    mtl_file_path = output_obj_path.replace('.obj', '.mtl')
+    if os.path.exists(mtl_file_path):
+        update_mtl_file(mtl_file_path, texture_base_path)
+
     blender_command = [
         "blender",
         "--background",
         "--python", "convert_obj_to_glb_with_textures.py",
-        "--", output_obj_path, output_glb_path
+        "--", output_obj_path, output_glb_path, texture_base_path
     ]
     try:
         subprocess.run(blender_command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
-        # subprocess.run(blender_command, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
-        # print(f"Converted {output_obj_path} to {output_glb_path}")
     except subprocess.CalledProcessError as e:
         print(f"An error occurred while converting {output_obj_path} to .glb: {e}")
         print(e.stderr)
@@ -100,22 +125,20 @@ def worker(task_queue):
         if task is None:
             break
 
-        tank_name, file_name, input_file, output_obj_path, output_glb_path = task
+        tank_name, file_name, input_file, output_obj_path, output_glb_path, tracks_texture_path = task
         convert_to_obj(input_file, output_obj_path)
-        convert_to_glb(output_obj_path, output_glb_path)
+        convert_to_glb(output_obj_path, output_glb_path, tracks_texture_path)
         print(f"{counter} - {current_process().name} - Converted {file_name.split('.')[0]} on {tank_name}")
         counter += 1
 
 def convert_models():
-    file_path = "tank_map.json"
-    
-    with open(file_path, "r") as json_file:
+    with open("tank_map.json", "r") as json_file:
         tank_map = json.load(json_file)
 
     task_queue = Queue()
 
     # Iterate over each folder in the base path
-    for tank_name in os.listdir(merged_path):
+    for tank_name in os.listdir(merged_path)[0:100]:
         folder_path = os.path.join(merged_path, tank_name)
         
         # Check if the item is a directory
@@ -123,6 +146,7 @@ def convert_models():
             # Construct the paths for the input and output files
             input_path = os.path.join(folder_path, "normal", "lod0")
             tracks_input_path = os.path.join(folder_path, "track")
+            tracks_texture_path = os.path.join(folder_path, "..", "tracks")
             
             # Check if the "normal/lod0" folder exists
             if os.path.exists(input_path):
@@ -134,7 +158,7 @@ def convert_models():
                         output_obj_path = os.path.join(folder_path, f"{file_name.split('.')[0]}.obj")
                         output_glb_path = os.path.join("useful", str(tank_map.get(tank_name, {}).get("id")), f"{file_name.split('.')[0]}.glb")
                         
-                        task = (tank_name, file_name, input_file, output_obj_path, output_glb_path)
+                        task = (tank_name, file_name, input_file, output_obj_path, output_glb_path, folder_path)
                         task_queue.put(task)
 
             # Check if the "track" folder exists
@@ -150,7 +174,7 @@ def convert_models():
                             os.makedirs(track_path)
                         output_glb_path = os.path.join(track_path, f"{file_name.split('.')[0]}.glb")
                         
-                        task = (tank_name, file_name, input_file, output_obj_path, output_glb_path)
+                        task = (tank_name, file_name, input_file, output_obj_path, output_glb_path, tracks_texture_path)
                         task_queue.put(task)
     
     # Start worker processes

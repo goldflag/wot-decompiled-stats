@@ -15,9 +15,9 @@ def make_image_paths_absolute(mtl_dir):
                             image.filepath = abs_path
                         image.reload()
 
-def convert_obj_to_glb(obj_file, glb_file):
+def convert_obj_to_glb(obj_file, glb_file, texture_dir):
     """Convert an OBJ file to a GLB file with textures."""
-    input_dir = os.path.dirname(obj_file)
+    # input_dir = os.path.dirname(obj_file)
 
     # Clear existing data
     bpy.ops.wm.read_factory_settings(use_empty=True)
@@ -26,7 +26,7 @@ def convert_obj_to_glb(obj_file, glb_file):
     bpy.ops.import_scene.obj(filepath=obj_file)
 
     # Make texture paths absolute and pack them
-    make_image_paths_absolute(input_dir)
+    make_image_paths_absolute(texture_dir)
 
     # Pack all images into the GLB file
     for image in bpy.data.images:
@@ -42,6 +42,7 @@ def convert_obj_to_glb(obj_file, glb_file):
 # Get the input and output file paths from command line arguments
 obj_file = sys.argv[sys.argv.index("--") + 1]
 glb_file = sys.argv[sys.argv.index("--") + 2]
+texture_dir = sys.argv[sys.argv.index("--") + 3]
 
 # Convert OBJ to GLB
-convert_obj_to_glb(obj_file, glb_file)
+convert_obj_to_glb(obj_file, glb_file, texture_dir)
