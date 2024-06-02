@@ -134,10 +134,16 @@ def convert_models():
 
     task_queue = Queue()
 
+    valid_tank_names = []
+    for name in os.listdir(merged_path):
+        if tank_map.get(name, {}).get("id"):
+            valid_tank_names.append(name)
+
     # Iterate over each folder in the base path
-    for tank_name in os.listdir(merged_path)[600:1000]:
+    for tank_name in valid_tank_names[600:1000]:
         folder_path = os.path.join(merged_path, tank_name)
-        
+        tank_id = str(tank_map.get(tank_name, {}).get("id"))
+
         # Check if the item is a directory
         if os.path.isdir(folder_path):
             # Construct the paths for the input and output files
@@ -153,7 +159,7 @@ def convert_models():
                         # Construct the full input file path
                         input_file = os.path.join(input_path, file_name)
                         output_obj_path = os.path.join(folder_path, f"{file_name.split('.')[0]}.obj")
-                        output_glb_path = os.path.join("useful", str(tank_map.get(tank_name, {}).get("id")), f"{file_name.split('.')[0]}.glb")
+                        output_glb_path = os.path.join("useful", tank_id, f"{file_name.split('.')[0]}.glb")
                         
                         task = (tank_name, file_name, input_file, output_obj_path, output_glb_path, folder_path)
                         task_queue.put(task)
@@ -166,7 +172,7 @@ def convert_models():
                         input_file = os.path.join(tracks_input_path, file_name)
                         output_obj_path = os.path.join(folder_path, f"{file_name.split('.')[0]}.obj")
                         
-                        track_path = os.path.join("useful", str(tank_map.get(tank_name, {}).get("id")), "track")
+                        track_path = os.path.join("useful", tank_id, "track")
                         if not os.path.exists(track_path):
                             os.makedirs(track_path)
                         output_glb_path = os.path.join(track_path, f"{file_name.split('.')[0]}.glb")
