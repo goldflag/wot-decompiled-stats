@@ -68,7 +68,7 @@ def extract_tank_model_pkgs():
     merge_directories(src_dirs, merged_path)
     print(f"Successfully merged directories into {merged_path}")
 
-def update_mtl_file(mtl_file_path, texture_base_path):
+def update_mtl_file(mtl_file_path):
     """Update the paths in the MTL file to be relative to the required directories."""
     with open(mtl_file_path, 'r') as file:
         lines = file.readlines()
@@ -103,7 +103,7 @@ def convert_to_glb(output_obj_path, output_glb_path, texture_base_path):
     # Update the MTL file before conversion
     mtl_file_path = output_obj_path.replace('.obj', '.mtl')
     if os.path.exists(mtl_file_path):
-        update_mtl_file(mtl_file_path, texture_base_path)
+        update_mtl_file(mtl_file_path)
 
     blender_command = [
         "blender",
@@ -118,8 +118,6 @@ def convert_to_glb(output_obj_path, output_glb_path, texture_base_path):
         print(e.stderr)
 
 def worker(task_queue):
-    counter = 0
-
     while not task_queue.empty():
         task = task_queue.get()
         if task is None:
@@ -128,8 +126,7 @@ def worker(task_queue):
         tank_name, file_name, input_file, output_obj_path, output_glb_path, tracks_texture_path = task
         convert_to_obj(input_file, output_obj_path)
         convert_to_glb(output_obj_path, output_glb_path, tracks_texture_path)
-        print(f"{counter} - {current_process().name} - Converted {file_name.split('.')[0]} on {tank_name}")
-        counter += 1
+        print(f"{current_process().name} - Converted {file_name.split('.')[0]} on {tank_name}")
 
 def convert_models():
     with open("tank_map.json", "r") as json_file:
@@ -191,7 +188,7 @@ def convert_models():
 
 
 def main():
-    extract_tank_model_pkgs()
+    # extract_tank_model_pkgs()
     convert_models()
 
 if __name__ == '__main__':
