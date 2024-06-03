@@ -58,6 +58,12 @@ def extract_tank_model_pkgs():
         src_dirs.append(pkg1_res_path)
         src_dirs.append(pkg2_res_path)
 
+    # tier 8 tanks have a third pkg since there are so many of them
+    tier8_3rd_path = f"{wot_path}\\res\\packages\\vehicles_level_08-part3.pkg"
+    tier8_3rd_res_path = f"{wot_path}\\res\\packages\\08-part3"
+    extract_7z(tier8_3rd_path, tier8_3rd_res_path)
+    src_dirs.append(tier8_3rd_res_path)
+
     for shared in shared_content:
         pkg_path = f"{wot_path}\\res\\packages\\shared_content-part{shared}.pkg"
         pkg_res_path = f"{wot_path}\\res\\packages\\shared-content-part{shared}"
@@ -94,10 +100,12 @@ def convert_to_obj(input_file, output_obj_path):
         input_file
     ]
     try:
-        subprocess.run(command, stdout=subprocess.DEVNULL, check=True)
+        subprocess.run(command, check=True)
+        # subprocess.run(command, stdout=subprocess.DEVNULL, check=True)
     except subprocess.CalledProcessError as e:
         print(f"An error occurred while converting {input_file} to .obj: {e}")
         print(e.stderr)
+        print(e.stdout)
 
 def convert_to_glb(output_obj_path, output_glb_path, texture_base_path):
     # Update the MTL file before conversion
@@ -140,10 +148,9 @@ def convert_models():
             valid_tank_names.append(name)
 
     # Iterate over each folder in the base path
-    for tank_name in valid_tank_names[600:1000]:
+    for tank_name in valid_tank_names:
         folder_path = os.path.join(merged_path, tank_name)
         tank_id = str(tank_map.get(tank_name, {}).get("id"))
-
         # Check if the item is a directory
         if os.path.isdir(folder_path):
             # Construct the paths for the input and output files
@@ -194,7 +201,7 @@ def convert_models():
 
 
 def main():
-    # extract_tank_model_pkgs()
+    extract_tank_model_pkgs()
     convert_models()
 
 if __name__ == '__main__':
