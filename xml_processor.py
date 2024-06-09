@@ -192,6 +192,27 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
             if tank_api_data is None:
                 continue
 
+
+
+            crew_list = []
+            for primary, secondary in data['crew'].items():
+                if secondary is None:
+                    secondary_list = []
+                # sometimes the secondary roles are a list, sometimes they are a string (processed by xml_to_dict)
+                elif isinstance(secondary, list):
+                    secondary_list = secondary
+                else:
+                    # Split the secondary roles by whitespace and newlines, and filter out empty strings
+                    secondary_list = [role.strip() for role in secondary.split() if role.strip()]
+                
+                crew_member = {
+                    "primary": primary,
+                    "secondary": secondary_list
+                }
+                
+                crew_list.append(crew_member)
+            
+
             useful_data = {
                 'name': tank_api_data.get('name'),
                 'short_name': tank_api_data.get('short_name'),
@@ -199,6 +220,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                 'id': tank_api_data.get('tank_id'),
                 'tier': tank_api_data.get('tier'),
                 'type': tank_api_data.get('type'),
+                'crew': crew_list,
                 'stats': {
                     'speed_limit': {
                         'forward': data.get('speedLimits', {}).get('forward'),
