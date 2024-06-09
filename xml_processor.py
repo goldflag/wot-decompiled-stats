@@ -119,8 +119,15 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                             'tags': value.get('tags'),
                             'tier': value.get('level'),
                         }
+            if file in ['guns.xml', 'turrets.xml', 'chassis.xml', 'engines.xml', 'radios.xml', 'shells.xml', 'fuelTanks.xml']:
+                nation_from_path = root.split('/')[-1].split('\\')[-2]
 
+                raw_output_path = os.path.join("raw", nation_from_path, file[:-4] + '.json')
+                os.makedirs(os.path.dirname(raw_output_path), exist_ok=True)
 
+                with open(raw_output_path, 'w') as json_file:
+                    json.dump(json_data, json_file, indent=4)
+        
     file_path = "tank_map.json"
     with open(file_path, "w") as json_file:
         json.dump(tank_map, json_file)
