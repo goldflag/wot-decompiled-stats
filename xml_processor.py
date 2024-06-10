@@ -118,6 +118,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                             'price': value.get('price'),
                             'tags': value.get('tags'),
                             'tier': value.get('level'),
+                            'nation': nation_from_path
                         }
             if file in ['guns.xml', 'turrets.xml', 'chassis.xml', 'engines.xml', 'radios.xml', 'shells.xml', 'fuelTanks.xml']:
                 nation_from_path = root.split('/')[-1].split('\\')[-2]
@@ -136,6 +137,8 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
     for filename in os.listdir("raw"):
         tank_name = filename.split('.')[0]
         tank_id = tank_map.get(tank_name, {}).get('id')
+        tank_nation = tank_map.get(tank_name, {}).get('nation')
+
         print(tank_name, tank_id)
         if tank_id is None:
             continue
@@ -218,7 +221,15 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                 }
                 
                 crew_list.append(crew_member)
-            
+
+            engines_list = []
+            for engine_id, info in data['engines'].items():
+                with open(os.path.join("raw", tank_nation, "engines.json")) as f:
+                    engine_data = json.load(f)
+                    current_engine = engine_data['shared'].get(engine_id, {})
+                    # if info != "shared":
+                    #     current_engine.update({"xp": info.get("unlocks").get("engine").get("cost")})
+                    engines_list.append(current_engine)
 
             useful_data = {
                 'name': tank_api_data.get('name'),
@@ -242,6 +253,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                     'turrets': turrets_arr,
                     'turret_position': data.get('hull', {}).get('turretPositions', {}).get('turret'),
                     'chassis': chassis_arr,
+                    'engines': engines_list,
                     'hull': {
                         'ammo_rack_health': data.get('hull', {}).get('ammoBayHealth'),
                         'ammo_rack_health_repaired': data.get('hull', {}).get('ammoBayHealth', {}).get('maxRegenHealth'),
