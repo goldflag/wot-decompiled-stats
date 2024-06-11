@@ -211,9 +211,8 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                         with open(os.path.join("raw", tank_nation, "shells.json")) as f:
                             shells = json.load(f)
 
-                            for shell_id in gun_info.get('shots', {}).keys():
+                            for shell_id in current_gun.get('shots', {}).keys():
                                 current_shell = shells.get(shell_id, {})
-                                print(current_shell)
                                 current_gun["shots"][shell_id]["generic"] = current_shell
 
                             gun_entry["generic"] = current_gun
