@@ -7,8 +7,38 @@ import json
 import sys
 from difflib import SequenceMatcher
 import re
+import polib
 from dotenv import load_dotenv
 load_dotenv()
+
+def get_msgstr(nation: str, msgid: str) -> str | None:
+
+    # If the nation is 'uk', change it to 'gb' to match the .po file name
+    if nation == 'uk':
+        nation = 'gb'
+
+    path = os.path.join('wot-src', 'sources', 'res', 'text', 'lc_messages', f'{nation}_vehicles.po')
+    try:
+        # Load the .po file
+        po = polib.pofile(path)
+        
+        # Find the entry with the given msgid
+        entry = po.find(msgid)
+        
+        # If the entry is found, return the msgstr, otherwise return None
+        if entry:
+            return entry.msgstr
+        else:
+            return None
+    except FileNotFoundError:
+        print(f'Error: The file {path} was not found.')
+        return None
+    except IOError as e:
+        print(f'Error: There was a problem reading the file: {e}')
+        return None
+    except Exception as e:
+        print(f'An unexpected error occurred: {e}')
+        return None
 
 
 def xml_to_dict(element) -> Dict:
@@ -157,7 +187,8 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                 guns = info.get('guns', {})
                 for gun, gun_info in guns.items():
                     guns_arr.append({
-                        'name': gun,
+                        'name': get_msgstr(tank_nation, gun),
+                        'id': gun,
                         'max_ammo': gun_info.get('maxAmmo'),
                         'aim_time': gun_info.get('aimingTime'),
                         'accuracy': gun_info.get('shotDispersionRadius'),
@@ -173,7 +204,8 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                     })
 
                 turrets_arr.append({
-                    'name': turret,
+                    'name': get_msgstr(tank_nation, turret),
+                    'id': turret,
                     'traverse': info.get('rotationSpeed'),
                     'view_range': info.get('circularVisionRadius'),
                     'guns': guns_arr,
@@ -185,7 +217,8 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
             chassis = data.get('chassis', {})
             for chassis_name, chassis_info in chassis.items():
                 chassis_arr.append({
-                    'name': chassis_name,
+                    'name': get_msgstr(tank_nation, chassis_name),
+                    'id': chassis_name,
                     'max_load': chassis_info.get('maxLoad'),
                     'terrain_resistance': chassis_info.get('terrainResistance'),
                     'rotation_speed': chassis_info.get('rotationSpeed'),
@@ -201,8 +234,6 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
 
             if tank_api_data is None:
                 continue
-
-
 
             crew_list = []
             for primary, secondary in data['crew'].items():
@@ -227,15 +258,17 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                 with open(os.path.join("raw", tank_nation, "engines.json")) as f:
                     engine_data = json.load(f)
                     current_engine = engine_data['shared'].get(engine_id, {})
+                    current_engine["name"] = get_msgstr(tank_nation, engine_id)
                     # if info != "shared":
                     #     current_engine.update({"xp": info.get("unlocks").get("engine").get("cost")})
                     engines_list.append(current_engine)
 
             useful_data = {
                 'name': tank_api_data.get('name'),
+                'nation': tank_nation,
                 'short_name': tank_api_data.get('short_name'),
                 'xml_id': tank_name,
-                'id': tank_api_data.get('tank_id'),
+                'id': tank_id,
                 'tier': tank_api_data.get('tier'),
                 'type': tank_api_data.get('type'),
                 'crew': crew_list,
