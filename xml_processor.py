@@ -186,7 +186,8 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                 guns_arr = []
                 guns = info.get('guns', {})
                 for gun, gun_info in guns.items():
-                    guns_arr.append({
+
+                    gun_entry = {
                         'name': get_msgstr(tank_nation, gun),
                         'id': gun,
                         'max_ammo': gun_info.get('maxAmmo'),
@@ -201,7 +202,23 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                             'after_shot': gun_info.get('shotDispersionFactors', {}).get('afterShot'),
                             'while_damaged': gun_info.get('shotDispersionFactors', {}).get('whileGunDamaged'),
                         },
-                    })
+                    }
+                    with open(os.path.join("raw", tank_nation, "guns.json")) as f:
+                        gun_data = json.load(f)
+                        current_gun = gun_data['shared'].get(gun, {})
+                        current_gun["name"] = get_msgstr(tank_nation, gun)
+
+                        with open(os.path.join("raw", tank_nation, "shells.json")) as f:
+                            shells = json.load(f)
+
+                            for shell_id in gun_info.get('shots', {}).keys():
+                                current_shell = shells.get(shell_id, {})
+                                print(current_shell)
+                                current_gun["shots"][shell_id]["generic"] = current_shell
+
+                            gun_entry["generic"] = current_gun
+
+                    guns_arr.append(gun_entry)
 
                 turrets_arr.append({
                     'name': get_msgstr(tank_nation, turret),
@@ -263,6 +280,16 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                     #     current_engine.update({"xp": info.get("unlocks").get("engine").get("cost")})
                     engines_list.append(current_engine)
 
+            radios_list = []
+            for radio_id, info in data['radios'].items():
+                with open(os.path.join("raw", tank_nation, "radios.json")) as f:
+                    radio_data = json.load(f)
+                    current_radio = radio_data['shared'].get(radio_id, {})
+                    current_radio["name"] = get_msgstr(tank_nation, radio_id)
+                    # if info != "shared":
+                    #     current_radio.update({"xp": info.get("unlocks").get("engine").get("cost")})
+                    radios_list.append(current_radio)
+
             useful_data = {
                 'name': tank_api_data.get('name'),
                 'nation': tank_nation,
@@ -287,6 +314,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                     'turret_position': data.get('hull', {}).get('turretPositions', {}).get('turret'),
                     'chassis': chassis_arr,
                     'engines': engines_list,
+                    'radios': radios_list,
                     'hull': {
                         'ammo_rack_health': data.get('hull', {}).get('ammoBayHealth'),
                         'ammo_rack_health_repaired': data.get('hull', {}).get('ammoBayHealth', {}).get('maxRegenHealth'),
