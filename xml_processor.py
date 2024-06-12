@@ -251,6 +251,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                     'health': chassis_info.get('maxHealth'),
                     'repaired_health': chassis_info.get('maxRegenHealth'),
                     'level': chassis_info.get('level'),
+                    'armor': chassis_info.get('armor', {}).get('leftTrack')
                 })
 
 
@@ -327,8 +328,8 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                     'hull': {
                         'ammo_rack_health': hull.get('ammoBayHealth'),
                         'armor': [hull.get('armor')[hull.get('primaryArmor')[0]], hull.get('armor')[hull.get('primaryArmor')[1]], hull.get('armor')[hull.get('primaryArmor')[1]]] if hull.get('primaryArmor') != None else [],
-
-                    }
+                        'weight': hull.get('weight'),
+                    }   
                 }
             }
 
