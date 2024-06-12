@@ -45,6 +45,7 @@
                 "id": "Turret_1_G116_Turan_III_prot",
                 "traverse": 28,
                 "view_range": 330,
+                "level": 5,
                 "guns": [
                     {
                         "name": "75 mm 43 M. L/43",
@@ -64,140 +65,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#germany_vehicles:_75mm_43_M_L43",
-                            "tags": [],
-                            "level": 5,
-                            "price": 28000,
-                            "notInShop": "true",
-                            "impulse": 0.38,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.36,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium_mb",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 5,
+                        "weight": 500,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 770,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    113.0,
+                                    101.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35.0,
-                            "reloadTime": 4.04,
-                            "maxAmmo": 87,
-                            "aimingTime": 4.04,
-                            "weight": 500,
-                            "maxHealth": 120,
-                            "maxRegenHealth": 60,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.39,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_75mm_43_M_Pancelgranat": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 770,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        113.0,
-                                        101.0
-                                    ],
-                                    "generic": {
-                                        "id": 148,
-                                        "userString": "#germany_vehicles:_75mm_43_M_Pancelgranat",
-                                        "icon": "ap",
-                                        "price": 76,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 100
-                                        }
-                                    }
-                                },
-                                "_75mm_40_M_Kulonleges_Nemet_Pancelgranat": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 930,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        160.0,
-                                        131.0
-                                    ],
-                                    "generic": {
-                                        "id": 149,
-                                        "userString": "#germany_vehicles:_75mm_40_M_Kulonleges_Nemet_Pancelgranat",
-                                        "icon": "ap_cr_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumAPCR",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 100
-                                        }
-                                    }
-                                },
-                                "_75mm_43_M_Repeszgranat": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 550,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        38.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 150,
-                                        "userString": "#germany_vehicles:_75mm_43_M_Repeszgranat",
-                                        "icon": "he_modern",
-                                        "price": 60,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 75,
-                                        "explosionRadius": 1.06,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 175,
-                                            "devices": 100
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.06,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 90,
-                                                "devices": 50
-                                            }
-                                        }
-                                    }
+                                "id": 148,
+                                "userString": "#germany_vehicles:_75mm_43_M_Pancelgranat",
+                                "icon": "ap",
+                                "price": 76,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 100
                                 }
                             },
-                            "name": "75 mm 43 M. L/43"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 930,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    160.0,
+                                    131.0
+                                ],
+                                "id": 149,
+                                "userString": "#germany_vehicles:_75mm_40_M_Kulonleges_Nemet_Pancelgranat",
+                                "icon": "ap_cr_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumAPCR",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 100
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 550,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    38.0,
+                                    38.0
+                                ],
+                                "id": 150,
+                                "userString": "#germany_vehicles:_75mm_43_M_Repeszgranat",
+                                "icon": "he_modern",
+                                "price": 60,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 75,
+                                "explosionRadius": 1.06,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 175,
+                                    "devices": 100
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.06,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 90,
+                                        "devices": 50
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -237,7 +185,8 @@
                     0.0
                 ],
                 "track_health": 90,
-                "track_repaired_health": 70
+                "track_repaired_health": 70,
+                "level": 5
             }
         ],
         "engines": [

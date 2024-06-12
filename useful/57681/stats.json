@@ -43,6 +43,7 @@
                 "id": "Turret_1_GB96_Excalibur",
                 "traverse": 22,
                 "view_range": 360,
+                "level": 6,
                 "guns": [
                     {
                         "name": "76 mm 'Excalibur' Gun",
@@ -62,140 +63,87 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:_76mm_Excalibur_Gun",
-                            "tags": [],
-                            "level": 6,
-                            "price": 50000,
-                            "notInShop": "true",
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.36,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 6,
+                        "weight": 1000,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 910,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    165.0,
+                                    148.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 40.25,
-                            "reloadTime": 4,
-                            "maxAmmo": 75,
-                            "aimingTime": 2,
-                            "weight": 1000,
-                            "maxHealth": 120,
-                            "maxRegenHealth": 60,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_76mm_AP_EX1": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 910,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        165.0,
-                                        148.0
-                                    ],
-                                    "generic": {
-                                        "id": 135,
-                                        "userString": "#gb_vehicles:_76mm_AP_EX1",
-                                        "icon": "ap",
-                                        "price": 180,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 76,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 150,
-                                            "devices": 105
-                                        }
-                                    }
-                                },
-                                "_76mm_APDS_EX1": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1100,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        192.0,
-                                        178.0
-                                    ],
-                                    "generic": {
-                                        "id": 136,
-                                        "userString": "#gb_vehicles:_76mm_APDS_EX1",
-                                        "icon": "ap_cr_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 76,
-                                        "isTracer": "true",
-                                        "effects": "mediumAPCR",
-                                        "damage": {
-                                            "armor": 150,
-                                            "devices": 105
-                                        }
-                                    }
-                                },
-                                "_76mm_HESH_EX1": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 732,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        70.0,
-                                        70.0
-                                    ],
-                                    "generic": {
-                                        "id": 137,
-                                        "userString": "#gb_vehicles:_76mm_HESH_EX1",
-                                        "icon": "he_modern",
-                                        "price": 235,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 76,
-                                        "explosionRadius": 1.06,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 190,
-                                            "devices": 105
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.06,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 95,
-                                                "devices": 55
-                                            }
-                                        }
-                                    }
+                                "id": 135,
+                                "userString": "#gb_vehicles:_76mm_AP_EX1",
+                                "icon": "ap",
+                                "price": 180,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 76,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 150,
+                                    "devices": 105
                                 }
                             },
-                            "name": "76 mm 'Excalibur' Gun"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1100,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    192.0,
+                                    178.0
+                                ],
+                                "id": 136,
+                                "userString": "#gb_vehicles:_76mm_APDS_EX1",
+                                "icon": "ap_cr_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 76,
+                                "isTracer": "true",
+                                "effects": "mediumAPCR",
+                                "damage": {
+                                    "armor": 150,
+                                    "devices": 105
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 732,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    70.0,
+                                    70.0
+                                ],
+                                "id": 137,
+                                "userString": "#gb_vehicles:_76mm_HESH_EX1",
+                                "icon": "he_modern",
+                                "price": 235,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 76,
+                                "explosionRadius": 1.06,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 190,
+                                    "devices": 105
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.06,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 95,
+                                        "devices": 55
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -235,7 +183,8 @@
                     0.0
                 ],
                 "track_health": 120,
-                "track_repaired_health": 90
+                "track_repaired_health": 90,
+                "level": 6
             }
         ],
         "engines": [

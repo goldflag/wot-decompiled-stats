@@ -43,6 +43,7 @@
                 "id": "Turret_1_Ch08_Type97_Chi_Ha",
                 "traverse": 30,
                 "view_range": 310,
+                "level": 2,
                 "guns": [
                     {
                         "name": "57 mm Gun Type 97",
@@ -59,140 +60,88 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#china_vehicles:_57mm_Gun_Type_97",
-                            "tags": [],
-                            "level": 2,
-                            "price": 2000,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.04,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -12.0,
-                                    1.0,
-                                    -12.0
+                        "level": 2,
+                        "weight": 150,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 355,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    30.0,
+                                    25.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    6.0,
-                                    1.0,
-                                    6.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 2.28571428571429,
-                            "maxAmmo": 92,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 150,
-                            "maxHealth": 84,
-                            "maxRegenHealth": 42,
-                            "repairCost": 4,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.434285714285714,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_57mm_AP_Type_97": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 355,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        30.0,
-                                        25.0
-                                    ],
-                                    "generic": {
-                                        "id": 49,
-                                        "userString": "#china_vehicles:_57mm_AP_Type_97",
-                                        "icon": "ap",
-                                        "price": 16,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 57,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 75,
-                                            "devices": 76
-                                        }
-                                    }
-                                },
-                                "_57mm_HEAT_Type_97": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 355,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        55.0,
-                                        55.0
-                                    ],
-                                    "generic": {
-                                        "id": 50,
-                                        "userString": "#china_vehicles:_57mm_HEAT_Type_97",
-                                        "icon": "hc_premium",
-                                        "price": 1200,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 57,
-                                        "isTracer": "true",
-                                        "effects": "mediumHollowCharge",
-                                        "damage": {
-                                            "armor": 75,
-                                            "devices": 76
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_57mm_HE_Type_97": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 355,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        28.0,
-                                        28.0
-                                    ],
-                                    "generic": {
-                                        "id": 51,
-                                        "userString": "#china_vehicles:_57mm_HE_Type_97",
-                                        "icon": "he_modern",
-                                        "price": 20,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 57,
-                                        "explosionRadius": 0.66,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 95,
-                                            "devices": 76
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.66,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 50,
-                                                "devices": 40
-                                            }
-                                        }
-                                    }
+                                "id": 49,
+                                "userString": "#china_vehicles:_57mm_AP_Type_97",
+                                "icon": "ap",
+                                "price": 16,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 57,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 75,
+                                    "devices": 76
                                 }
                             },
-                            "name": "57 mm Gun Type 97"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 355,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    55.0,
+                                    55.0
+                                ],
+                                "id": 50,
+                                "userString": "#china_vehicles:_57mm_HEAT_Type_97",
+                                "icon": "hc_premium",
+                                "price": 1200,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 57,
+                                "isTracer": "true",
+                                "effects": "mediumHollowCharge",
+                                "damage": {
+                                    "armor": 75,
+                                    "devices": 76
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 355,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    28.0,
+                                    28.0
+                                ],
+                                "id": 51,
+                                "userString": "#china_vehicles:_57mm_HE_Type_97",
+                                "icon": "he_modern",
+                                "price": 20,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 57,
+                                "explosionRadius": 0.66,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 95,
+                                    "devices": 76
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.66,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 50,
+                                        "devices": 40
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "45 mm 20K",
@@ -209,139 +158,87 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#china_vehicles:_45mm_20K",
-                            "tags": [],
-                            "level": 2,
-                            "price": 2530,
-                            "impulse": 0.24,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.32,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 2,
+                        "weight": 313,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 757,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    51.0,
+                                    38.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 2.28571428571429,
-                            "maxAmmo": 84,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 313,
-                            "maxHealth": 68,
-                            "maxRegenHealth": 34,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.457142857142857,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_45mm_UBR-240A": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 757,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        51.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 40,
-                                        "userString": "#china_vehicles:_45mm_UBR-240A",
-                                        "icon": "ap",
-                                        "price": 14,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 45,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 47,
-                                            "devices": 61
-                                        }
-                                    }
-                                },
-                                "_45mm_UBR-240PA": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 946,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        88.0,
-                                        66.0
-                                    ],
-                                    "generic": {
-                                        "id": 41,
-                                        "userString": "#china_vehicles:_45mm_UBR-240PA",
-                                        "icon": "ap_cr_premium",
-                                        "price": 800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 45,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 47,
-                                            "devices": 61
-                                        }
-                                    }
-                                },
-                                "_45mm_UOF-240A": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 757,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        23.0,
-                                        23.0
-                                    ],
-                                    "generic": {
-                                        "id": 42,
-                                        "userString": "#china_vehicles:_45mm_UOF-240A",
-                                        "icon": "he_modern",
-                                        "price": 14,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 45,
-                                        "explosionRadius": 0.43,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 62,
-                                            "devices": 61
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.43,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 30,
-                                                "devices": 30
-                                            }
-                                        }
-                                    }
+                                "id": 40,
+                                "userString": "#china_vehicles:_45mm_UBR-240A",
+                                "icon": "ap",
+                                "price": 14,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 45,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 47,
+                                    "devices": 61
                                 }
                             },
-                            "name": "45 mm 20K"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 946,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    88.0,
+                                    66.0
+                                ],
+                                "id": 41,
+                                "userString": "#china_vehicles:_45mm_UBR-240PA",
+                                "icon": "ap_cr_premium",
+                                "price": 800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 45,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 47,
+                                    "devices": 61
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 757,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    23.0,
+                                    23.0
+                                ],
+                                "id": 42,
+                                "userString": "#china_vehicles:_45mm_UOF-240A",
+                                "icon": "he_modern",
+                                "price": 14,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 45,
+                                "explosionRadius": 0.43,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 62,
+                                    "devices": 61
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.43,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 30,
+                                        "devices": 30
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -361,6 +258,7 @@
                 "id": "Turret_2_Ch08_Type97_Chi_Ha",
                 "traverse": 30,
                 "view_range": 330,
+                "level": 3,
                 "guns": [
                     {
                         "name": "57 mm Gun Type 97",
@@ -377,140 +275,88 @@
                             "after_shot": null,
                             "while_damaged": null
                         },
-                        "generic": {
-                            "userString": "#china_vehicles:_57mm_Gun_Type_97",
-                            "tags": [],
-                            "level": 2,
-                            "price": 2000,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.04,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -12.0,
-                                    1.0,
-                                    -12.0
+                        "level": 2,
+                        "weight": 150,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 355,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    30.0,
+                                    25.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    6.0,
-                                    1.0,
-                                    6.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 2.28571428571429,
-                            "maxAmmo": 92,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 150,
-                            "maxHealth": 84,
-                            "maxRegenHealth": 42,
-                            "repairCost": 4,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.434285714285714,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_57mm_AP_Type_97": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 355,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        30.0,
-                                        25.0
-                                    ],
-                                    "generic": {
-                                        "id": 49,
-                                        "userString": "#china_vehicles:_57mm_AP_Type_97",
-                                        "icon": "ap",
-                                        "price": 16,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 57,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 75,
-                                            "devices": 76
-                                        }
-                                    }
-                                },
-                                "_57mm_HEAT_Type_97": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 355,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        55.0,
-                                        55.0
-                                    ],
-                                    "generic": {
-                                        "id": 50,
-                                        "userString": "#china_vehicles:_57mm_HEAT_Type_97",
-                                        "icon": "hc_premium",
-                                        "price": 1200,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 57,
-                                        "isTracer": "true",
-                                        "effects": "mediumHollowCharge",
-                                        "damage": {
-                                            "armor": 75,
-                                            "devices": 76
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_57mm_HE_Type_97": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 355,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        28.0,
-                                        28.0
-                                    ],
-                                    "generic": {
-                                        "id": 51,
-                                        "userString": "#china_vehicles:_57mm_HE_Type_97",
-                                        "icon": "he_modern",
-                                        "price": 20,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 57,
-                                        "explosionRadius": 0.66,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 95,
-                                            "devices": 76
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.66,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 50,
-                                                "devices": 40
-                                            }
-                                        }
-                                    }
+                                "id": 49,
+                                "userString": "#china_vehicles:_57mm_AP_Type_97",
+                                "icon": "ap",
+                                "price": 16,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 57,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 75,
+                                    "devices": 76
                                 }
                             },
-                            "name": "57 mm Gun Type 97"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 355,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    55.0,
+                                    55.0
+                                ],
+                                "id": 50,
+                                "userString": "#china_vehicles:_57mm_HEAT_Type_97",
+                                "icon": "hc_premium",
+                                "price": 1200,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 57,
+                                "isTracer": "true",
+                                "effects": "mediumHollowCharge",
+                                "damage": {
+                                    "armor": 75,
+                                    "devices": 76
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 355,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    28.0,
+                                    28.0
+                                ],
+                                "id": 51,
+                                "userString": "#china_vehicles:_57mm_HE_Type_97",
+                                "icon": "he_modern",
+                                "price": 20,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 57,
+                                "explosionRadius": 0.66,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 95,
+                                    "devices": 76
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.66,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 50,
+                                        "devices": 40
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "45 mm 20K",
@@ -527,139 +373,87 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#china_vehicles:_45mm_20K",
-                            "tags": [],
-                            "level": 2,
-                            "price": 2530,
-                            "impulse": 0.24,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.32,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 2,
+                        "weight": 313,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 757,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    51.0,
+                                    38.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 2.28571428571429,
-                            "maxAmmo": 84,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 313,
-                            "maxHealth": 68,
-                            "maxRegenHealth": 34,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.457142857142857,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_45mm_UBR-240A": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 757,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        51.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 40,
-                                        "userString": "#china_vehicles:_45mm_UBR-240A",
-                                        "icon": "ap",
-                                        "price": 14,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 45,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 47,
-                                            "devices": 61
-                                        }
-                                    }
-                                },
-                                "_45mm_UBR-240PA": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 946,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        88.0,
-                                        66.0
-                                    ],
-                                    "generic": {
-                                        "id": 41,
-                                        "userString": "#china_vehicles:_45mm_UBR-240PA",
-                                        "icon": "ap_cr_premium",
-                                        "price": 800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 45,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 47,
-                                            "devices": 61
-                                        }
-                                    }
-                                },
-                                "_45mm_UOF-240A": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 757,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        23.0,
-                                        23.0
-                                    ],
-                                    "generic": {
-                                        "id": 42,
-                                        "userString": "#china_vehicles:_45mm_UOF-240A",
-                                        "icon": "he_modern",
-                                        "price": 14,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 45,
-                                        "explosionRadius": 0.43,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 62,
-                                            "devices": 61
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.43,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 30,
-                                                "devices": 30
-                                            }
-                                        }
-                                    }
+                                "id": 40,
+                                "userString": "#china_vehicles:_45mm_UBR-240A",
+                                "icon": "ap",
+                                "price": 14,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 45,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 47,
+                                    "devices": 61
                                 }
                             },
-                            "name": "45 mm 20K"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 946,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    88.0,
+                                    66.0
+                                ],
+                                "id": 41,
+                                "userString": "#china_vehicles:_45mm_UBR-240PA",
+                                "icon": "ap_cr_premium",
+                                "price": 800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 45,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 47,
+                                    "devices": 61
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 757,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    23.0,
+                                    23.0
+                                ],
+                                "id": 42,
+                                "userString": "#china_vehicles:_45mm_UOF-240A",
+                                "icon": "he_modern",
+                                "price": 14,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 45,
+                                "explosionRadius": 0.43,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 62,
+                                    "devices": 61
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.43,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 30,
+                                        "devices": 30
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "47 mm Gun Type 1",
@@ -676,139 +470,87 @@
                             "after_shot": null,
                             "while_damaged": null
                         },
-                        "generic": {
-                            "userString": "#china_vehicles:_47mm_Gun_Type_1",
-                            "tags": [],
-                            "level": 4,
-                            "price": 21000,
-                            "impulse": 0.24,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.32,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 4,
+                        "weight": 411,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 810,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    81.0,
+                                    69.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 2.1,
-                            "maxAmmo": 84,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 411,
-                            "maxHealth": 76,
-                            "maxRegenHealth": 38,
-                            "repairCost": 1,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.42,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_47mm_APHE_Type1": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 810,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        81.0,
-                                        69.0
-                                    ],
-                                    "generic": {
-                                        "id": 52,
-                                        "userString": "#china_vehicles:_47mm_APHE_Type1",
-                                        "icon": "ap",
-                                        "price": 36,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 47,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 70,
-                                            "devices": 64
-                                        }
-                                    }
-                                },
-                                "_47mm_APCR_Type1": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 810,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        130.0,
-                                        110.0
-                                    ],
-                                    "generic": {
-                                        "id": 53,
-                                        "userString": "#china_vehicles:_47mm_APCR_Type1",
-                                        "icon": "ap_cr_premium",
-                                        "price": 1600,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 47,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 70,
-                                            "devices": 64
-                                        }
-                                    }
-                                },
-                                "_47mm_HE_Type1": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 810,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        25.0,
-                                        25.0
-                                    ],
-                                    "generic": {
-                                        "id": 54,
-                                        "userString": "#china_vehicles:_47mm_HE_Type1",
-                                        "icon": "he_modern",
-                                        "price": 19,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 47,
-                                        "explosionRadius": 0.47,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 90,
-                                            "devices": 64
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.47,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 45,
-                                                "devices": 30
-                                            }
-                                        }
-                                    }
+                                "id": 52,
+                                "userString": "#china_vehicles:_47mm_APHE_Type1",
+                                "icon": "ap",
+                                "price": 36,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 47,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 70,
+                                    "devices": 64
                                 }
                             },
-                            "name": "47 mm Gun Type 1"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 810,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    130.0,
+                                    110.0
+                                ],
+                                "id": 53,
+                                "userString": "#china_vehicles:_47mm_APCR_Type1",
+                                "icon": "ap_cr_premium",
+                                "price": 1600,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 47,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 70,
+                                    "devices": 64
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 810,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    25.0,
+                                    25.0
+                                ],
+                                "id": 54,
+                                "userString": "#china_vehicles:_47mm_HE_Type1",
+                                "icon": "he_modern",
+                                "price": 19,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 47,
+                                "explosionRadius": 0.47,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 90,
+                                    "devices": 64
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.47,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 45,
+                                        "devices": 30
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -848,7 +590,8 @@
                     0.0
                 ],
                 "track_health": 60,
-                "track_repaired_health": 45
+                "track_repaired_health": 45,
+                "level": 2
             },
             {
                 "name": "Type 97-Kai",
@@ -868,7 +611,8 @@
                     0.0
                 ],
                 "track_health": 70,
-                "track_repaired_health": 55
+                "track_repaired_health": 55,
+                "level": 3
             }
         ],
         "engines": [

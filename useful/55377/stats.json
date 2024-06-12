@@ -43,6 +43,7 @@
                 "id": "Turret_1_GB108_A46",
                 "traverse": 52,
                 "view_range": 370,
+                "level": 6,
                 "guns": [
                     {
                         "name": "OQF 77 mm HV Mk. I",
@@ -62,140 +63,87 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:OQF_77mm_HV_MK_I",
-                            "tags": [],
-                            "level": 6,
-                            "price": 67100,
-                            "notInShop": "true",
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.36,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium_mb",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -15.0,
-                                    1.0,
-                                    -15.0
+                        "level": 6,
+                        "weight": 775,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 785,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    105.0,
+                                    88.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 40.25,
-                            "reloadTime": 3.25714285714286,
-                            "maxAmmo": 75,
-                            "aimingTime": 1.71428571428571,
-                            "weight": 775,
-                            "maxHealth": 130,
-                            "maxRegenHealth": 65,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.388571428571429,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 3.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_77mm_APCBC_Mk8T_T": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 785,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        105.0,
-                                        88.0
-                                    ],
-                                    "generic": {
-                                        "id": 165,
-                                        "userString": "#gb_vehicles:_77mm_APCBC_Mk8T_T",
-                                        "icon": "ap",
-                                        "price": 95,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 76,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 105,
-                                            "devices": 105
-                                        }
-                                    }
-                                },
-                                "_77mm_APDS_T_Mk1": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 981,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        138.0,
-                                        102.0
-                                    ],
-                                    "generic": {
-                                        "id": 166,
-                                        "userString": "#gb_vehicles:_77mm_APDS_T_Mk1",
-                                        "icon": "ap_cr_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 76,
-                                        "isTracer": "true",
-                                        "effects": "mediumAPCR",
-                                        "damage": {
-                                            "armor": 105,
-                                            "devices": 105
-                                        }
-                                    }
-                                },
-                                "_77mm_HE_Mk1T_T": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 785,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        38.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 167,
-                                        "userString": "#gb_vehicles:_77mm_HE_Mk1T_T",
-                                        "icon": "he_modern",
-                                        "price": 60,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 76,
-                                        "explosionRadius": 1.06,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 150,
-                                            "devices": 105
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.06,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 75,
-                                                "devices": 55
-                                            }
-                                        }
-                                    }
+                                "id": 165,
+                                "userString": "#gb_vehicles:_77mm_APCBC_Mk8T_T",
+                                "icon": "ap",
+                                "price": 95,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 76,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 105,
+                                    "devices": 105
                                 }
                             },
-                            "name": "OQF 77 mm HV Mk. I"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 981,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    138.0,
+                                    102.0
+                                ],
+                                "id": 166,
+                                "userString": "#gb_vehicles:_77mm_APDS_T_Mk1",
+                                "icon": "ap_cr_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 76,
+                                "isTracer": "true",
+                                "effects": "mediumAPCR",
+                                "damage": {
+                                    "armor": 105,
+                                    "devices": 105
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 785,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    38.0,
+                                    38.0
+                                ],
+                                "id": 167,
+                                "userString": "#gb_vehicles:_77mm_HE_Mk1T_T",
+                                "icon": "he_modern",
+                                "price": 60,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 76,
+                                "explosionRadius": 1.06,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 150,
+                                    "devices": 105
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.06,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 75,
+                                        "devices": 55
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -235,7 +183,8 @@
                     0.0
                 ],
                 "track_health": 120,
-                "track_repaired_health": 90
+                "track_repaired_health": 90,
+                "level": 6
             }
         ],
         "engines": [

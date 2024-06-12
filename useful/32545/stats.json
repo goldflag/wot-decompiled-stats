@@ -43,6 +43,7 @@
                 "id": "Turret_1_A153_XM66F",
                 "traverse": 16,
                 "view_range": 380,
+                "level": 8,
                 "guns": [
                     {
                         "name": "120 mm Gun T123E6/66",
@@ -62,140 +63,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_120mm_Gun_T123E6_66",
-                            "tags": [],
-                            "level": 10,
-                            "price": 310000,
-                            "notInShop": "true",
-                            "impulse": 0.68,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_large_mb",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 10,
+                        "weight": 1930,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.9,
+                                "speed": 1067,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    232.0,
+                                    220.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    9.0,
-                                    1.0,
-                                    9.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 26.25,
-                            "reloadTime": 11,
-                            "maxAmmo": 22,
-                            "aimingTime": 2.6,
-                            "weight": 1930,
-                            "maxHealth": 210,
-                            "maxRegenHealth": 105,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_120mm_AP-T_XM66F": {
-                                    "defaultPortion": 0.9,
-                                    "speed": 1067,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        232.0,
-                                        220.0
-                                    ],
-                                    "generic": {
-                                        "id": 195,
-                                        "userString": "#usa_vehicles:_120mm_AP-T_XM66F",
-                                        "icon": "ap",
-                                        "price": 1160,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 400,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_120mm_APCR_XM66F": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1240,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        276.0,
-                                        245.0
-                                    ],
-                                    "generic": {
-                                        "id": 196,
-                                        "userString": "#usa_vehicles:_120mm_APCR_XM66F",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeAPCR",
-                                        "damage": {
-                                            "armor": 400,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_120mm_HE_XM66F": {
-                                    "defaultPortion": 0.1,
-                                    "speed": 980,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        60.0,
-                                        60.0
-                                    ],
-                                    "generic": {
-                                        "id": 197,
-                                        "userString": "#usa_vehicles:_120mm_HE_XM66F",
-                                        "icon": "he_modern",
-                                        "price": 925,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 120,
-                                        "explosionRadius": 2.42,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 515,
-                                            "devices": 165
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.42,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 260,
-                                                "devices": 85
-                                            }
-                                        }
-                                    }
+                                "id": 195,
+                                "userString": "#usa_vehicles:_120mm_AP-T_XM66F",
+                                "icon": "ap",
+                                "price": 1160,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 400,
+                                    "devices": 165
                                 }
                             },
-                            "name": "120 mm Gun T123E6/66"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1240,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    276.0,
+                                    245.0
+                                ],
+                                "id": 196,
+                                "userString": "#usa_vehicles:_120mm_APCR_XM66F",
+                                "icon": "ap_cr_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeAPCR",
+                                "damage": {
+                                    "armor": 400,
+                                    "devices": 165
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.1,
+                                "speed": 980,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    60.0,
+                                    60.0
+                                ],
+                                "id": 197,
+                                "userString": "#usa_vehicles:_120mm_HE_XM66F",
+                                "icon": "he_modern",
+                                "price": 925,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 120,
+                                "explosionRadius": 2.42,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 515,
+                                    "devices": 165
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.42,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 260,
+                                        "devices": 85
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -235,7 +183,8 @@
                     0.0
                 ],
                 "track_health": 200,
-                "track_repaired_health": 150
+                "track_repaired_health": 150,
+                "level": 8
             }
         ],
         "engines": [

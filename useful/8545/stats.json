@@ -43,6 +43,7 @@
                 "id": "Turret_1_J40_Type_71",
                 "traverse": 35,
                 "view_range": 400,
+                "level": 10,
                 "guns": [
                     {
                         "name": "120 mm Gun Type 71",
@@ -59,144 +60,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#japan_vehicles:_120mm_Type_71_Gun",
-                            "tags": [],
-                            "level": 10,
-                            "price": 320000,
-                            "notInShop": "true",
-                            "impulse": 0.68,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_large_mb",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 10,
+                        "weight": 3000,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.8,
+                                "speed": 1050,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    260.0,
+                                    240.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    9.0,
-                                    1.0,
-                                    9.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 26.25,
-                            "reloadTime": 9.9714285714286,
-                            "maxAmmo": 35,
-                            "aimingTime": 2.62857142857143,
-                            "weight": 3000,
-                            "maxHealth": 210,
-                            "maxRegenHealth": 105,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "dualAccuracy": {
-                                "afterShotDispersionRadius": 0.42,
-                                "coolingDelay": 12
-                            },
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_120mm_AP_Type_71": {
-                                    "defaultPortion": 0.8,
-                                    "speed": 1050,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        260.0,
-                                        240.0
-                                    ],
-                                    "generic": {
-                                        "id": 160,
-                                        "userString": "#japan_vehicles:_120mm_AP_Type_71",
-                                        "icon": "ap",
-                                        "price": 1140,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 400,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_120mm_APDS_Type_71": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1380,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        320.0,
-                                        300.0
-                                    ],
-                                    "generic": {
-                                        "id": 161,
-                                        "userString": "#japan_vehicles:_120mm_APDS_Type_71",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeAPCR",
-                                        "damage": {
-                                            "armor": 400,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_120mm_HE_Type_71": {
-                                    "defaultPortion": 0.2,
-                                    "speed": 1050,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        60.0,
-                                        60.0
-                                    ],
-                                    "generic": {
-                                        "id": 162,
-                                        "userString": "#japan_vehicles:_120mm_HE_Type_71",
-                                        "icon": "he_modern",
-                                        "price": 865,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 120,
-                                        "explosionRadius": 2.42,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 515,
-                                            "devices": 165
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.42,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 260,
-                                                "devices": 85
-                                            }
-                                        }
-                                    }
+                                "id": 160,
+                                "userString": "#japan_vehicles:_120mm_AP_Type_71",
+                                "icon": "ap",
+                                "price": 1140,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 400,
+                                    "devices": 165
                                 }
                             },
-                            "name": "120 mm Gun Type 71"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1380,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    320.0,
+                                    300.0
+                                ],
+                                "id": 161,
+                                "userString": "#japan_vehicles:_120mm_APDS_Type_71",
+                                "icon": "ap_cr_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeAPCR",
+                                "damage": {
+                                    "armor": 400,
+                                    "devices": 165
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.2,
+                                "speed": 1050,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    60.0,
+                                    60.0
+                                ],
+                                "id": 162,
+                                "userString": "#japan_vehicles:_120mm_HE_Type_71",
+                                "icon": "he_modern",
+                                "price": 865,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 120,
+                                "explosionRadius": 2.42,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 515,
+                                    "devices": 165
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.42,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 260,
+                                        "devices": 85
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -236,7 +180,8 @@
                     0.0
                 ],
                 "track_health": 250,
-                "track_repaired_health": 190
+                "track_repaired_health": 190,
+                "level": 10
             }
         ],
         "engines": [

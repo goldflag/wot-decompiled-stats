@@ -156,9 +156,11 @@ def get_turret_data(data, tank_nation: str):
 
                     for shell_id in current_gun.get('shots', {}).keys():
                         current_shell = shells.get(shell_id, {})
-                        current_gun["shots"][shell_id]["generic"] = current_shell
+                        current_gun["shots"][shell_id].update(current_shell)
 
-                    gun_entry["generic"] = current_gun
+                    gun_entry["level"] = current_gun["level"]
+                    gun_entry["weight"] = current_gun["weight"]
+                    gun_entry["shells"] = list(current_gun["shots"].values())
 
             guns_arr.append(gun_entry)
 
@@ -167,6 +169,7 @@ def get_turret_data(data, tank_nation: str):
             'id': turret,
             'traverse': info.get('rotationSpeed'),
             'view_range': info.get('circularVisionRadius'),
+            'level': info.get('level'),
             'guns': guns_arr,
             'gun_position': info.get('gunPosition'),
             'hp': info.get('maxHealth') + data.get('hull', {}).get('maxHealth'),
@@ -182,7 +185,6 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
             xml_path = os.path.join(root, file)
             json_data = xml_to_json(xml_path)
             if file.endswith('.xml') and '_' in file:
-                # tank_name = file.split('_', 1)[1][:-4].lower()
                 raw_output_path = os.path.join("raw", file + '.json')
                 os.makedirs(os.path.dirname(raw_output_path), exist_ok=True)
 
@@ -246,8 +248,9 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                     'rotates_in_place': chassis_info.get('rotationIsAroundCenter'),
                     'repair_time': chassis_info.get('repairTime'),
                     'hull_position': chassis_info.get('hullPosition'),
-                    'track_health': chassis_info.get('maxHealth'),
-                    'track_repaired_health': chassis_info.get('maxRegenHealth'),
+                    'health': chassis_info.get('maxHealth'),
+                    'repaired_health': chassis_info.get('maxRegenHealth'),
+                    'level': chassis_info.get('level'),
                 })
 
 
@@ -303,6 +306,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                 'id': tank_id,
                 'tier': tank_api_data.get('tier'),
                 'type': tank_api_data.get('type'),
+                'role': data.get('postProgressionTree'),
                 'crew': crew_list,
                 'stats': {
                     'speed_limit': {
@@ -322,7 +326,6 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                     'radios': radios_list,
                     'hull': {
                         'ammo_rack_health': hull.get('ammoBayHealth'),
-                        'ammo_rack_health_repaired': hull.get('ammoBayHealth', {}).get('maxRegenHealth'),
                         'armor': [hull.get('armor')[hull.get('primaryArmor')[0]], hull.get('armor')[hull.get('primaryArmor')[1]], hull.get('armor')[hull.get('primaryArmor')[1]]] if hull.get('primaryArmor') != None else [],
 
                     }

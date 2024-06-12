@@ -43,6 +43,7 @@
                 "id": "Turret_1_Bat_Chatillon155",
                 "traverse": 7,
                 "view_range": 280,
+                "level": 10,
                 "guns": [
                     {
                         "name": "Canon de 155 mm",
@@ -59,143 +60,91 @@
                             "after_shot": 6.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#france_vehicles:Canon_de_155mm",
-                            "tags": [],
-                            "level": 9,
-                            "price": 225000,
-                            "impulse": 0.68,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.6,
-                                "recoilEffect": "huge"
-                            },
-                            "effects": "shot_huge",
-                            "reloadEffect": "reload_automat_reloading_155_170",
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -45.0,
-                                    1.0,
-                                    -45.0
+                        "level": 9,
+                        "weight": 4352,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.5,
+                                "speed": 490,
+                                "gravity": 170,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    48.0,
+                                    48.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    4.0,
-                                    1.0,
-                                    4.0
-                                ]
-                            },
-                            "rotationSpeed": 22.75,
-                            "reloadTime": 17.8285714285714,
-                            "maxAmmo": 20,
-                            "aimingTime": 5.71428571428571,
-                            "weight": 4352,
-                            "maxHealth": 250,
-                            "maxRegenHealth": 125,
-                            "repairCost": 11,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.468571428571429,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.44,
-                                "afterShot": 6.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_155mm_OE_M101M4": {
-                                    "defaultPortion": 0.5,
-                                    "speed": 490,
-                                    "gravity": 170,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        48.0,
-                                        48.0
-                                    ],
-                                    "maxHeight": 442,
-                                    "generic": {
-                                        "id": 67,
-                                        "userString": "#france_vehicles:_155mm_OE_M101M4",
-                                        "icon": "he_spg_stun",
-                                        "price": 1120,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "caliber": 155,
-                                        "explosionRadius": 7.6,
-                                        "hasStun": "true",
-                                        "stunDuration": 27,
-                                        "guaranteedStunDuration": 0.45,
-                                        "damageDurationCoeff": 0.55,
-                                        "isTracer": "true",
-                                        "effects": "hugeSH",
-                                        "damage": {
-                                            "armor": 680,
-                                            "devices": 105
-                                        },
-                                        "deviceDamagePossibility": {
-                                            "protectFromIndirectHits": [
-                                                "internal",
-                                                "tankmen"
-                                            ]
-                                        }
-                                    }
+                                "maxHeight": 442,
+                                "id": 67,
+                                "userString": "#france_vehicles:_155mm_OE_M101M4",
+                                "icon": "he_spg_stun",
+                                "price": 1120,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "caliber": 155,
+                                "explosionRadius": 7.6,
+                                "hasStun": "true",
+                                "stunDuration": 27,
+                                "guaranteedStunDuration": 0.45,
+                                "damageDurationCoeff": 0.55,
+                                "isTracer": "true",
+                                "effects": "hugeSH",
+                                "damage": {
+                                    "armor": 680,
+                                    "devices": 105
                                 },
-                                "_155mm_OE_M101M6": {
-                                    "defaultPortion": 0.3,
-                                    "speed": 524,
-                                    "gravity": 170,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        60.0,
-                                        60.0
-                                    ],
-                                    "maxHeight": 506,
-                                    "generic": {
-                                        "id": 68,
-                                        "userString": "#france_vehicles:_155mm_OE_M101M6",
-                                        "icon": "he_spg",
-                                        "price": 1330,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "caliber": 155,
-                                        "explosionRadius": 4,
-                                        "isTracer": "true",
-                                        "effects": "hugeSF",
-                                        "damage": {
-                                            "armor": 830,
-                                            "devices": 105
-                                        }
-                                    }
-                                },
-                                "_155mm_AP_M112": {
-                                    "defaultPortion": 0.2,
-                                    "speed": 588,
-                                    "gravity": 170,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        310.0,
-                                        291.0
-                                    ],
-                                    "maxHeight": 636,
-                                    "generic": {
-                                        "id": 69,
-                                        "userString": "#france_vehicles:_155mm_AP_M112",
-                                        "icon": "ap",
-                                        "price": 1255,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 155,
-                                        "isTracer": "true",
-                                        "effects": "hugeSA",
-                                        "damage": {
-                                            "armor": 460,
-                                            "devices": 100
-                                        }
-                                    }
+                                "deviceDamagePossibility": {
+                                    "protectFromIndirectHits": [
+                                        "internal",
+                                        "tankmen"
+                                    ]
                                 }
                             },
-                            "name": "Canon de 155 mm"
-                        }
+                            {
+                                "defaultPortion": 0.3,
+                                "speed": 524,
+                                "gravity": 170,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    60.0,
+                                    60.0
+                                ],
+                                "maxHeight": 506,
+                                "id": 68,
+                                "userString": "#france_vehicles:_155mm_OE_M101M6",
+                                "icon": "he_spg",
+                                "price": 1330,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "caliber": 155,
+                                "explosionRadius": 4,
+                                "isTracer": "true",
+                                "effects": "hugeSF",
+                                "damage": {
+                                    "armor": 830,
+                                    "devices": 105
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.2,
+                                "speed": 588,
+                                "gravity": 170,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    310.0,
+                                    291.0
+                                ],
+                                "maxHeight": 636,
+                                "id": 69,
+                                "userString": "#france_vehicles:_155mm_AP_M112",
+                                "icon": "ap",
+                                "price": 1255,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 155,
+                                "isTracer": "true",
+                                "effects": "hugeSA",
+                                "damage": {
+                                    "armor": 460,
+                                    "devices": 100
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -231,7 +180,8 @@
                     0.0
                 ],
                 "track_health": 170,
-                "track_repaired_health": 130
+                "track_repaired_health": 130,
+                "level": 10
             }
         ],
         "engines": [

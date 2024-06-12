@@ -43,6 +43,7 @@
                 "id": "D37812",
                 "traverse": 40,
                 "view_range": 280,
+                "level": 2,
                 "guns": [
                     {
                         "name": "37 mm Gun M5",
@@ -59,139 +60,87 @@
                             "after_shot": 3.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_37mm_M-5",
-                            "tags": [],
-                            "level": 2,
-                            "price": 2000,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.28,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 2,
+                        "weight": 78,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 782,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    48.0,
+                                    36.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 2.51428571428571,
-                            "maxAmmo": 103,
-                            "aimingTime": 2.05714285714286,
-                            "weight": 78,
-                            "maxHealth": 60,
-                            "maxRegenHealth": 30,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.457142857142857,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_37mm_AP_M74": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 782,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        48.0,
-                                        36.0
-                                    ],
-                                    "generic": {
-                                        "id": 3,
-                                        "userString": "#usa_vehicles:_37mm_AP_M74",
-                                        "icon": "ap",
-                                        "price": 18,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 40,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_APC_M51": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 978,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        70.0,
-                                        61.0
-                                    ],
-                                    "generic": {
-                                        "id": 4,
-                                        "userString": "#usa_vehicles:_37mm_APC_M51",
-                                        "icon": "ap_cr_premium",
-                                        "price": 800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 40,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_HE_M63": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 782,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        19.0,
-                                        19.0
-                                    ],
-                                    "generic": {
-                                        "id": 5,
-                                        "userString": "#usa_vehicles:_37mm_HE_M63",
-                                        "icon": "he_modern",
-                                        "price": 10,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 37,
-                                        "explosionRadius": 0.31,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 50
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.31,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 25,
-                                                "devices": 25
-                                            }
-                                        }
-                                    }
+                                "id": 3,
+                                "userString": "#usa_vehicles:_37mm_AP_M74",
+                                "icon": "ap",
+                                "price": 18,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 40,
+                                    "devices": 50
                                 }
                             },
-                            "name": "37 mm Gun M5"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 978,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    70.0,
+                                    61.0
+                                ],
+                                "id": 4,
+                                "userString": "#usa_vehicles:_37mm_APC_M51",
+                                "icon": "ap_cr_premium",
+                                "price": 800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 40,
+                                    "devices": 50
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 782,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    19.0,
+                                    19.0
+                                ],
+                                "id": 5,
+                                "userString": "#usa_vehicles:_37mm_HE_M63",
+                                "icon": "he_modern",
+                                "price": 10,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 37,
+                                "explosionRadius": 0.31,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 50
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.31,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 25,
+                                        "devices": 25
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "20 mm Hispano-Suiza Birkigt Gun",
@@ -208,114 +157,55 @@
                             "after_shot": 1.3,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_20mm_Hispano_Suiza_Birgikt_gun",
-                            "shortUserString": "#usa_vehicles:_20mm_Hispano_Suiza_Birgikt_gun_short",
-                            "tags": [],
-                            "level": 2,
-                            "price": 2600,
-                            "impulse": 0.08,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.04,
-                                "recoilEffect": "auto"
-                            },
-                            "effects": "shot_auto",
-                            "reloadEffect": "reload12_25",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 2,
+                        "weight": 68,
+                        "shells": [
+                            {
+                                "defaultPortion": 1.0,
+                                "speed": 770,
+                                "gravity": 9.81,
+                                "maxDistance": 400,
+                                "piercingPower": [
+                                    30.0,
+                                    15.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 1.6,
-                            "maxAmmo": 760,
-                            "aimingTime": 1.71428571428571,
-                            "clip": {
-                                "count": 15,
-                                "rate": 600
-                            },
-                            "burst": {
-                                "count": 3,
-                                "rate": 600
-                            },
-                            "weight": 68,
-                            "maxHealth": 50,
-                            "maxRegenHealth": 25,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.502857142857143,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 1.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_20mm_AP": {
-                                    "defaultPortion": 1.0,
-                                    "speed": 770,
-                                    "gravity": 9.81,
-                                    "maxDistance": 400,
-                                    "piercingPower": [
-                                        30.0,
-                                        15.0
-                                    ],
-                                    "generic": {
-                                        "id": 1,
-                                        "userString": "#usa_vehicles:_20mm_AP",
-                                        "icon": "ap",
-                                        "price": 3,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 20,
-                                        "isTracer": "true",
-                                        "effects": "autoArmorPiercing",
-                                        "damage": {
-                                            "armor": 12,
-                                            "devices": 27
-                                        }
-                                    }
-                                },
-                                "_20mm_APCR": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 963,
-                                    "gravity": 9.81,
-                                    "maxDistance": 400,
-                                    "piercingPower": [
-                                        41.0,
-                                        15.0
-                                    ],
-                                    "generic": {
-                                        "id": 2,
-                                        "userString": "#usa_vehicles:_20mm_APCR",
-                                        "icon": "ap_cr_premium",
-                                        "price": 400,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 20,
-                                        "isTracer": "true",
-                                        "effects": "autoAPCR",
-                                        "damage": {
-                                            "armor": 12,
-                                            "devices": 27
-                                        }
-                                    }
+                                "id": 1,
+                                "userString": "#usa_vehicles:_20mm_AP",
+                                "icon": "ap",
+                                "price": 3,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 20,
+                                "isTracer": "true",
+                                "effects": "autoArmorPiercing",
+                                "damage": {
+                                    "armor": 12,
+                                    "devices": 27
                                 }
                             },
-                            "name": "20 mm Hispano-Suiza Birkigt Gun"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 963,
+                                "gravity": 9.81,
+                                "maxDistance": 400,
+                                "piercingPower": [
+                                    41.0,
+                                    15.0
+                                ],
+                                "id": 2,
+                                "userString": "#usa_vehicles:_20mm_APCR",
+                                "icon": "ap_cr_premium",
+                                "price": 400,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 20,
+                                "isTracer": "true",
+                                "effects": "autoAPCR",
+                                "damage": {
+                                    "armor": 12,
+                                    "devices": 27
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -335,6 +225,7 @@
                 "id": "D39273",
                 "traverse": 48,
                 "view_range": 330,
+                "level": 3,
                 "guns": [
                     {
                         "name": "37 mm Gun M5",
@@ -351,139 +242,87 @@
                             "after_shot": 3.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_37mm_M-5",
-                            "tags": [],
-                            "level": 2,
-                            "price": 2000,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.28,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 2,
+                        "weight": 78,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 782,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    48.0,
+                                    36.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 2.51428571428571,
-                            "maxAmmo": 103,
-                            "aimingTime": 2.05714285714286,
-                            "weight": 78,
-                            "maxHealth": 60,
-                            "maxRegenHealth": 30,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.457142857142857,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_37mm_AP_M74": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 782,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        48.0,
-                                        36.0
-                                    ],
-                                    "generic": {
-                                        "id": 3,
-                                        "userString": "#usa_vehicles:_37mm_AP_M74",
-                                        "icon": "ap",
-                                        "price": 18,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 40,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_APC_M51": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 978,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        70.0,
-                                        61.0
-                                    ],
-                                    "generic": {
-                                        "id": 4,
-                                        "userString": "#usa_vehicles:_37mm_APC_M51",
-                                        "icon": "ap_cr_premium",
-                                        "price": 800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 40,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_HE_M63": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 782,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        19.0,
-                                        19.0
-                                    ],
-                                    "generic": {
-                                        "id": 5,
-                                        "userString": "#usa_vehicles:_37mm_HE_M63",
-                                        "icon": "he_modern",
-                                        "price": 10,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 37,
-                                        "explosionRadius": 0.31,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 50
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.31,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 25,
-                                                "devices": 25
-                                            }
-                                        }
-                                    }
+                                "id": 3,
+                                "userString": "#usa_vehicles:_37mm_AP_M74",
+                                "icon": "ap",
+                                "price": 18,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 40,
+                                    "devices": 50
                                 }
                             },
-                            "name": "37 mm Gun M5"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 978,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    70.0,
+                                    61.0
+                                ],
+                                "id": 4,
+                                "userString": "#usa_vehicles:_37mm_APC_M51",
+                                "icon": "ap_cr_premium",
+                                "price": 800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 40,
+                                    "devices": 50
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 782,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    19.0,
+                                    19.0
+                                ],
+                                "id": 5,
+                                "userString": "#usa_vehicles:_37mm_HE_M63",
+                                "icon": "he_modern",
+                                "price": 10,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 37,
+                                "explosionRadius": 0.31,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 50
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.31,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 25,
+                                        "devices": 25
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "20 mm Hispano-Suiza Birkigt Gun",
@@ -500,114 +339,55 @@
                             "after_shot": 1.2,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_20mm_Hispano_Suiza_Birgikt_gun",
-                            "shortUserString": "#usa_vehicles:_20mm_Hispano_Suiza_Birgikt_gun_short",
-                            "tags": [],
-                            "level": 2,
-                            "price": 2600,
-                            "impulse": 0.08,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.04,
-                                "recoilEffect": "auto"
-                            },
-                            "effects": "shot_auto",
-                            "reloadEffect": "reload12_25",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 2,
+                        "weight": 68,
+                        "shells": [
+                            {
+                                "defaultPortion": 1.0,
+                                "speed": 770,
+                                "gravity": 9.81,
+                                "maxDistance": 400,
+                                "piercingPower": [
+                                    30.0,
+                                    15.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 1.6,
-                            "maxAmmo": 760,
-                            "aimingTime": 1.71428571428571,
-                            "clip": {
-                                "count": 15,
-                                "rate": 600
-                            },
-                            "burst": {
-                                "count": 3,
-                                "rate": 600
-                            },
-                            "weight": 68,
-                            "maxHealth": 50,
-                            "maxRegenHealth": 25,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.502857142857143,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 1.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_20mm_AP": {
-                                    "defaultPortion": 1.0,
-                                    "speed": 770,
-                                    "gravity": 9.81,
-                                    "maxDistance": 400,
-                                    "piercingPower": [
-                                        30.0,
-                                        15.0
-                                    ],
-                                    "generic": {
-                                        "id": 1,
-                                        "userString": "#usa_vehicles:_20mm_AP",
-                                        "icon": "ap",
-                                        "price": 3,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 20,
-                                        "isTracer": "true",
-                                        "effects": "autoArmorPiercing",
-                                        "damage": {
-                                            "armor": 12,
-                                            "devices": 27
-                                        }
-                                    }
-                                },
-                                "_20mm_APCR": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 963,
-                                    "gravity": 9.81,
-                                    "maxDistance": 400,
-                                    "piercingPower": [
-                                        41.0,
-                                        15.0
-                                    ],
-                                    "generic": {
-                                        "id": 2,
-                                        "userString": "#usa_vehicles:_20mm_APCR",
-                                        "icon": "ap_cr_premium",
-                                        "price": 400,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 20,
-                                        "isTracer": "true",
-                                        "effects": "autoAPCR",
-                                        "damage": {
-                                            "armor": 12,
-                                            "devices": 27
-                                        }
-                                    }
+                                "id": 1,
+                                "userString": "#usa_vehicles:_20mm_AP",
+                                "icon": "ap",
+                                "price": 3,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 20,
+                                "isTracer": "true",
+                                "effects": "autoArmorPiercing",
+                                "damage": {
+                                    "armor": 12,
+                                    "devices": 27
                                 }
                             },
-                            "name": "20 mm Hispano-Suiza Birkigt Gun"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 963,
+                                "gravity": 9.81,
+                                "maxDistance": 400,
+                                "piercingPower": [
+                                    41.0,
+                                    15.0
+                                ],
+                                "id": 2,
+                                "userString": "#usa_vehicles:_20mm_APCR",
+                                "icon": "ap_cr_premium",
+                                "price": 400,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 20,
+                                "isTracer": "true",
+                                "effects": "autoAPCR",
+                                "damage": {
+                                    "armor": 12,
+                                    "devices": 27
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "37 mm Gun M6",
@@ -624,139 +404,87 @@
                             "after_shot": 3.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_37mm_M-6_L53",
-                            "tags": [],
-                            "level": 3,
-                            "price": 8350,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.3,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 3,
+                        "weight": 82,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 792,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    56.0,
+                                    38.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 2.28571428571429,
-                            "maxAmmo": 103,
-                            "aimingTime": 1.71428571428571,
-                            "weight": 82,
-                            "maxHealth": 66,
-                            "maxRegenHealth": 33,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.422857142857143,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.1,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_37mm_AP_M74": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 792,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        56.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 3,
-                                        "userString": "#usa_vehicles:_37mm_AP_M74",
-                                        "icon": "ap",
-                                        "price": 18,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 40,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_APC_M51": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 990,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        78.0,
-                                        66.0
-                                    ],
-                                    "generic": {
-                                        "id": 4,
-                                        "userString": "#usa_vehicles:_37mm_APC_M51",
-                                        "icon": "ap_cr_premium",
-                                        "price": 800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 40,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_HE_M63": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 792,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        19.0,
-                                        19.0
-                                    ],
-                                    "generic": {
-                                        "id": 5,
-                                        "userString": "#usa_vehicles:_37mm_HE_M63",
-                                        "icon": "he_modern",
-                                        "price": 10,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 37,
-                                        "explosionRadius": 0.31,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 50
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.31,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 25,
-                                                "devices": 25
-                                            }
-                                        }
-                                    }
+                                "id": 3,
+                                "userString": "#usa_vehicles:_37mm_AP_M74",
+                                "icon": "ap",
+                                "price": 18,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 40,
+                                    "devices": 50
                                 }
                             },
-                            "name": "37 mm Gun M6"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 990,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    78.0,
+                                    66.0
+                                ],
+                                "id": 4,
+                                "userString": "#usa_vehicles:_37mm_APC_M51",
+                                "icon": "ap_cr_premium",
+                                "price": 800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 40,
+                                    "devices": 50
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 792,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    19.0,
+                                    19.0
+                                ],
+                                "id": 5,
+                                "userString": "#usa_vehicles:_37mm_HE_M63",
+                                "icon": "he_modern",
+                                "price": 10,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 37,
+                                "explosionRadius": 0.31,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 50
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.31,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 25,
+                                        "devices": 25
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -796,7 +524,8 @@
                     0.0
                 ],
                 "track_health": 60,
-                "track_repaired_health": 45
+                "track_repaired_health": 45,
+                "level": 2
             },
             {
                 "name": "Stuart E2",
@@ -816,7 +545,8 @@
                     0.0
                 ],
                 "track_health": 70,
-                "track_repaired_health": 55
+                "track_repaired_health": 55,
+                "level": 3
             }
         ],
         "engines": [

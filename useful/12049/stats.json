@@ -45,6 +45,7 @@
                 "id": "Turret_1_JagdPz_E100",
                 "traverse": 26,
                 "view_range": 390,
+                "level": 10,
                 "guns": [
                     {
                         "name": "17 cm Pak",
@@ -64,141 +65,88 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#germany_vehicles:_170mm_PaK_K72",
-                            "tags": [],
-                            "level": 10,
-                            "price": 365000,
-                            "notInShop": "true",
-                            "impulse": 0.56,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.4,
-                                "recoilEffect": "huge"
-                            },
-                            "effects": "shot_huge",
-                            "reloadEffect": "reload155_170",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -17.0,
-                                    1.0,
-                                    -17.0
+                        "level": 10,
+                        "weight": 7680,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.8,
+                                "speed": 925,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    299.0,
+                                    289.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    6.0,
-                                    1.0,
-                                    6.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 23.625,
-                            "reloadTime": 18.8571428571429,
-                            "maxAmmo": 30,
-                            "aimingTime": 2.85714285714286,
-                            "weight": 7680,
-                            "maxHealth": 250,
-                            "maxRegenHealth": 125,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.365714285714286,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.12,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_170mm_PaK_K72_PzGr43": {
-                                    "defaultPortion": 0.8,
-                                    "speed": 925,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        299.0,
-                                        289.0
-                                    ],
-                                    "generic": {
-                                        "id": 90,
-                                        "userString": "#germany_vehicles:_170mm_PaK_K72_PzGr43",
-                                        "icon": "ap",
-                                        "price": 2200,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 170,
-                                        "isTracer": "true",
-                                        "effects": "hugeArmorPiercing",
-                                        "damage": {
-                                            "armor": 1050,
-                                            "devices": 228
-                                        }
-                                    }
-                                },
-                                "_170mm_PaK_K72_PzGr45": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 925,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        420.0,
-                                        420.0
-                                    ],
-                                    "generic": {
-                                        "id": 91,
-                                        "userString": "#germany_vehicles:_170mm_PaK_K72_PzGr45",
-                                        "icon": "hc_premium",
-                                        "price": 7200,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 170,
-                                        "isTracer": "true",
-                                        "effects": "hugeHollowCharge",
-                                        "damage": {
-                                            "armor": 1050,
-                                            "devices": 228
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_170mm_PaK_K72_SprgG_ausf_46": {
-                                    "defaultPortion": 0.2,
-                                    "speed": 925,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        85.0,
-                                        85.0
-                                    ],
-                                    "generic": {
-                                        "id": 92,
-                                        "userString": "#germany_vehicles:_170mm_PaK_K72_SprgG_ausf_46",
-                                        "icon": "he_modern",
-                                        "price": 1430,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 170,
-                                        "explosionRadius": 4.45,
-                                        "isTracer": "true",
-                                        "effects": "hugeHighExplosive",
-                                        "damage": {
-                                            "armor": 1400,
-                                            "devices": 228
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 4.45,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 700,
-                                                "devices": 115
-                                            }
-                                        }
-                                    }
+                                "id": 90,
+                                "userString": "#germany_vehicles:_170mm_PaK_K72_PzGr43",
+                                "icon": "ap",
+                                "price": 2200,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 170,
+                                "isTracer": "true",
+                                "effects": "hugeArmorPiercing",
+                                "damage": {
+                                    "armor": 1050,
+                                    "devices": 228
                                 }
                             },
-                            "name": "17 cm Pak"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 925,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    420.0,
+                                    420.0
+                                ],
+                                "id": 91,
+                                "userString": "#germany_vehicles:_170mm_PaK_K72_PzGr45",
+                                "icon": "hc_premium",
+                                "price": 7200,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 170,
+                                "isTracer": "true",
+                                "effects": "hugeHollowCharge",
+                                "damage": {
+                                    "armor": 1050,
+                                    "devices": 228
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.2,
+                                "speed": 925,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    85.0,
+                                    85.0
+                                ],
+                                "id": 92,
+                                "userString": "#germany_vehicles:_170mm_PaK_K72_SprgG_ausf_46",
+                                "icon": "he_modern",
+                                "price": 1430,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 170,
+                                "explosionRadius": 4.45,
+                                "isTracer": "true",
+                                "effects": "hugeHighExplosive",
+                                "damage": {
+                                    "armor": 1400,
+                                    "devices": 228
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 4.45,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 700,
+                                        "devices": 115
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -234,7 +182,8 @@
                     0.0
                 ],
                 "track_health": 300,
-                "track_repaired_health": 225
+                "track_repaired_health": 225,
+                "level": 10
             }
         ],
         "engines": [

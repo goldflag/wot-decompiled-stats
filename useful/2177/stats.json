@@ -42,6 +42,7 @@
                 "id": "Turret_1_S17_EMIL_1952_E2",
                 "traverse": 20,
                 "view_range": 380,
+                "level": 9,
                 "guns": [
                     {
                         "name": "10,5 cm TK 105-9",
@@ -61,139 +62,87 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#sweden_vehicles:_105mm_TK_105_9",
-                            "tags": [],
-                            "level": 9,
-                            "price": 165000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_large_mb",
-                            "reloadEffect": "reload_automat_reloading_85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -15.0,
-                                    1.0,
-                                    -15.0
+                        "level": 9,
+                        "weight": 2390,
+                        "shells": [
+                            {
+                                "defaultPortion": 1,
+                                "speed": 1080,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    217.0,
+                                    200.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    15.0,
-                                    1.0,
-                                    15.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35,
-                            "reloadTime": 8.8,
-                            "maxAmmo": 46,
-                            "aimingTime": 2,
-                            "weight": 2390,
-                            "maxHealth": 194,
-                            "maxRegenHealth": 97,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.05,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_105mm_slpprj_m_52": {
-                                    "defaultPortion": 1,
-                                    "speed": 1080,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        217.0,
-                                        200.0
-                                    ],
-                                    "generic": {
-                                        "id": 54,
-                                        "userString": "#sweden_vehicles:_105mm_slpprj_m_52",
-                                        "icon": "ap_cr",
-                                        "price": 690,
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 360,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_slpprj_m_52_B": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1350,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        242.0,
-                                        220.0
-                                    ],
-                                    "generic": {
-                                        "id": 55,
-                                        "userString": "#sweden_vehicles:_105mm_slpprj_m_52_B",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 360,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_sgr_m_52": {
-                                    "defaultPortion": 0,
-                                    "speed": 900,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        53.0,
-                                        53.0
-                                    ],
-                                    "generic": {
-                                        "id": 56,
-                                        "userString": "#sweden_vehicles:_105mm_sgr_m_52",
-                                        "icon": "he_modern",
-                                        "price": 440,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 105,
-                                        "explosionRadius": 1.91,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 460,
-                                            "devices": 150
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.91,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 230,
-                                                "devices": 75
-                                            }
-                                        }
-                                    }
+                                "id": 54,
+                                "userString": "#sweden_vehicles:_105mm_slpprj_m_52",
+                                "icon": "ap_cr",
+                                "price": 690,
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 360,
+                                    "devices": 150
                                 }
                             },
-                            "name": "10,5 cm TK 105-9"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1350,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    242.0,
+                                    220.0
+                                ],
+                                "id": 55,
+                                "userString": "#sweden_vehicles:_105mm_slpprj_m_52_B",
+                                "icon": "ap_cr_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 360,
+                                    "devices": 150
+                                }
+                            },
+                            {
+                                "defaultPortion": 0,
+                                "speed": 900,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    53.0,
+                                    53.0
+                                ],
+                                "id": 56,
+                                "userString": "#sweden_vehicles:_105mm_sgr_m_52",
+                                "icon": "he_modern",
+                                "price": 440,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 105,
+                                "explosionRadius": 1.91,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 460,
+                                    "devices": 150
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.91,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 230,
+                                        "devices": 75
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "12 cm akan L/40",
@@ -213,140 +162,88 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#sweden_vehicles:_120mm_akan_L_40",
-                            "tags": [],
-                            "level": 10,
-                            "price": 320000,
-                            "impulse": 0.64,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.66,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_large_mb",
-                            "reloadEffect": "reload_automat_reloading_115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -12.0,
-                                    1.0,
-                                    -12.0
+                        "level": 10,
+                        "weight": 1600,
+                        "shells": [
+                            {
+                                "defaultPortion": 1.0,
+                                "speed": 1000,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    252.0,
+                                    228.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 26,
-                            "reloadTime": 10,
-                            "maxAmmo": 36,
-                            "aimingTime": 2,
-                            "weight": 1600,
-                            "maxHealth": 210,
-                            "maxRegenHealth": 105,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.3,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 3.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_120mm_slpprj_m_51": {
-                                    "defaultPortion": 1.0,
-                                    "speed": 1000,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        252.0,
-                                        228.0
-                                    ],
-                                    "generic": {
-                                        "id": 58,
-                                        "userString": "#sweden_vehicles:_120mm_slpprj_m_51",
-                                        "icon": "ap_cr",
-                                        "price": 1015,
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeAPCR",
-                                        "damage": {
-                                            "armor": 440,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_120mm_psgr_m_51": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 840,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        300.0,
-                                        300.0
-                                    ],
-                                    "generic": {
-                                        "id": 59,
-                                        "userString": "#sweden_vehicles:_120mm_psgr_m_51",
-                                        "icon": "hc_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeHollowCharge",
-                                        "damage": {
-                                            "armor": 440,
-                                            "devices": 165
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_120mm_sgr_m_51": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 680,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        60.0,
-                                        60.0
-                                    ],
-                                    "generic": {
-                                        "id": 60,
-                                        "userString": "#sweden_vehicles:_120mm_sgr_m_51",
-                                        "icon": "he_modern",
-                                        "price": 870,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 120,
-                                        "explosionRadius": 2.42,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 530,
-                                            "devices": 165
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.42,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 265,
-                                                "devices": 85
-                                            }
-                                        }
-                                    }
+                                "id": 58,
+                                "userString": "#sweden_vehicles:_120mm_slpprj_m_51",
+                                "icon": "ap_cr",
+                                "price": 1015,
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeAPCR",
+                                "damage": {
+                                    "armor": 440,
+                                    "devices": 165
                                 }
                             },
-                            "name": "12 cm akan L/40"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 840,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    300.0,
+                                    300.0
+                                ],
+                                "id": 59,
+                                "userString": "#sweden_vehicles:_120mm_psgr_m_51",
+                                "icon": "hc_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeHollowCharge",
+                                "damage": {
+                                    "armor": 440,
+                                    "devices": 165
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 680,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    60.0,
+                                    60.0
+                                ],
+                                "id": 60,
+                                "userString": "#sweden_vehicles:_120mm_sgr_m_51",
+                                "icon": "he_modern",
+                                "price": 870,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 120,
+                                "explosionRadius": 2.42,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 530,
+                                    "devices": 165
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.42,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 265,
+                                        "devices": 85
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -386,7 +283,8 @@
                     0.0
                 ],
                 "track_health": 240,
-                "track_repaired_health": 180
+                "track_repaired_health": 180,
+                "level": 8
             },
             {
                 "name": "Emil II 1 b",
@@ -406,7 +304,8 @@
                     0.0
                 ],
                 "track_health": 250,
-                "track_repaired_health": 190
+                "track_repaired_health": 190,
+                "level": 9
             }
         ],
         "engines": [

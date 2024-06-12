@@ -45,6 +45,7 @@
                 "id": "Turret_1_G_E",
                 "traverse": 12,
                 "view_range": 310,
+                "level": 10,
                 "guns": [
                     {
                         "name": "21 cm M\u00f6rser 18/2",
@@ -64,144 +65,91 @@
                             "after_shot": 6.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#germany_vehicles:_210mm_Morser_18",
-                            "tags": [],
-                            "level": 10,
-                            "price": 340000,
-                            "notInShop": "true",
-                            "impulse": 0.72,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.48,
-                                "recoilEffect": "huge"
-                            },
-                            "effects": "shot_superhuge",
-                            "reloadEffect": "reload155_170",
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -45.0,
-                                    1.0,
-                                    -45.0
+                        "level": 10,
+                        "weight": 5900,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.5,
+                                "speed": 435,
+                                "gravity": 142,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    53.0,
+                                    53.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    3.0,
-                                    1.0,
-                                    3.0
-                                ]
-                            },
-                            "rotationSpeed": 17.5,
-                            "reloadTime": 37.2571428571429,
-                            "maxAmmo": 15,
-                            "aimingTime": 6.85714285714286,
-                            "weight": 5900,
-                            "maxHealth": 300,
-                            "maxRegenHealth": 150,
-                            "repairCost": 15,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.56,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.5,
-                                "afterShot": 6.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_210mm_Sprg18": {
-                                    "defaultPortion": 0.5,
-                                    "speed": 435,
-                                    "gravity": 142,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        53.0,
-                                        53.0
-                                    ],
-                                    "maxHeight": 417,
-                                    "generic": {
-                                        "id": 62,
-                                        "userString": "#germany_vehicles:_210mm_Sprg18",
-                                        "icon": "he_spg_stun",
-                                        "price": 2080,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "caliber": 210,
-                                        "explosionRadius": 11.4,
-                                        "hasStun": "true",
-                                        "stunDuration": 31,
-                                        "guaranteedStunDuration": 0.4,
-                                        "damageDurationCoeff": 0.6,
-                                        "isTracer": "true",
-                                        "effects": "hugeSH",
-                                        "damage": {
-                                            "armor": 900,
-                                            "devices": 140
-                                        },
-                                        "deviceDamagePossibility": {
-                                            "protectFromIndirectHits": [
-                                                "internal",
-                                                "tankmen"
-                                            ]
-                                        }
-                                    }
+                                "maxHeight": 417,
+                                "id": 62,
+                                "userString": "#germany_vehicles:_210mm_Sprg18",
+                                "icon": "he_spg_stun",
+                                "price": 2080,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "caliber": 210,
+                                "explosionRadius": 11.4,
+                                "hasStun": "true",
+                                "stunDuration": 31,
+                                "guaranteedStunDuration": 0.4,
+                                "damageDurationCoeff": 0.6,
+                                "isTracer": "true",
+                                "effects": "hugeSH",
+                                "damage": {
+                                    "armor": 900,
+                                    "devices": 140
                                 },
-                                "_210mm_Sprg18_Ausf_G": {
-                                    "defaultPortion": 0.3,
-                                    "speed": 465,
-                                    "gravity": 142,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        66.0,
-                                        66.0
-                                    ],
-                                    "maxHeight": 477,
-                                    "generic": {
-                                        "id": 63,
-                                        "userString": "#germany_vehicles:_210mm_Sprg18_Ausf_G",
-                                        "icon": "he_spg",
-                                        "price": 2390,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "caliber": 210,
-                                        "explosionRadius": 6,
-                                        "isTracer": "true",
-                                        "effects": "hugeSF",
-                                        "damage": {
-                                            "armor": 1200,
-                                            "devices": 140
-                                        }
-                                    }
-                                },
-                                "_210mm_Gr.18Be": {
-                                    "defaultPortion": 0.2,
-                                    "speed": 522,
-                                    "gravity": 142,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        372.0,
-                                        350.0
-                                    ],
-                                    "maxHeight": 600,
-                                    "generic": {
-                                        "id": 70,
-                                        "userString": "#germany_vehicles:_210mm_Gr.18Be",
-                                        "icon": "ap",
-                                        "price": 2280,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 210,
-                                        "isTracer": "true",
-                                        "effects": "hugeSA",
-                                        "damage": {
-                                            "armor": 640,
-                                            "devices": 140
-                                        }
-                                    }
+                                "deviceDamagePossibility": {
+                                    "protectFromIndirectHits": [
+                                        "internal",
+                                        "tankmen"
+                                    ]
                                 }
                             },
-                            "name": "21 cm M\u00f6rser 18/2"
-                        }
+                            {
+                                "defaultPortion": 0.3,
+                                "speed": 465,
+                                "gravity": 142,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    66.0,
+                                    66.0
+                                ],
+                                "maxHeight": 477,
+                                "id": 63,
+                                "userString": "#germany_vehicles:_210mm_Sprg18_Ausf_G",
+                                "icon": "he_spg",
+                                "price": 2390,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "caliber": 210,
+                                "explosionRadius": 6,
+                                "isTracer": "true",
+                                "effects": "hugeSF",
+                                "damage": {
+                                    "armor": 1200,
+                                    "devices": 140
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.2,
+                                "speed": 522,
+                                "gravity": 142,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    372.0,
+                                    350.0
+                                ],
+                                "maxHeight": 600,
+                                "id": 70,
+                                "userString": "#germany_vehicles:_210mm_Gr.18Be",
+                                "icon": "ap",
+                                "price": 2280,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 210,
+                                "isTracer": "true",
+                                "effects": "hugeSA",
+                                "damage": {
+                                    "armor": 640,
+                                    "devices": 140
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -237,7 +185,8 @@
                     0.0
                 ],
                 "track_health": 200,
-                "track_repaired_health": 150
+                "track_repaired_health": 150,
+                "level": 10
             }
         ],
         "engines": [

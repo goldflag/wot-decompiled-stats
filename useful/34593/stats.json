@@ -37,6 +37,7 @@
                 "id": "Turret_1_A148_Convertible_Medium_Tank_T3",
                 "traverse": 40,
                 "view_range": 300,
+                "level": 3,
                 "guns": [
                     {
                         "name": "37 mm Browning Semi-Automatic",
@@ -53,140 +54,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_37mm_Browning_Semi_Automatic",
-                            "tags": [],
-                            "level": 3,
-                            "price": 5400,
-                            "notInShop": "true",
-                            "impulse": 0.24,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.26,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 3,
+                        "weight": 84,
+                        "shells": [
+                            {
+                                "defaultPortion": 1.0,
+                                "speed": 782,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    48.0,
+                                    36.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 6.85714285714286,
-                            "maxAmmo": 90,
-                            "aimingTime": 2.05714285714286,
-                            "weight": 84,
-                            "maxHealth": 100,
-                            "maxRegenHealth": 50,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.514285714285714,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_37mm_AP_M74": {
-                                    "defaultPortion": 1.0,
-                                    "speed": 782,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        48.0,
-                                        36.0
-                                    ],
-                                    "generic": {
-                                        "id": 3,
-                                        "userString": "#usa_vehicles:_37mm_AP_M74",
-                                        "icon": "ap",
-                                        "price": 18,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 40,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_APC_M51": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 978,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        70.0,
-                                        61.0
-                                    ],
-                                    "generic": {
-                                        "id": 4,
-                                        "userString": "#usa_vehicles:_37mm_APC_M51",
-                                        "icon": "ap_cr_premium",
-                                        "price": 800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 40,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_HE_M63": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 782,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        19.0,
-                                        19.0
-                                    ],
-                                    "generic": {
-                                        "id": 5,
-                                        "userString": "#usa_vehicles:_37mm_HE_M63",
-                                        "icon": "he_modern",
-                                        "price": 10,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 37,
-                                        "explosionRadius": 0.31,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 50
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.31,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 25,
-                                                "devices": 25
-                                            }
-                                        }
-                                    }
+                                "id": 3,
+                                "userString": "#usa_vehicles:_37mm_AP_M74",
+                                "icon": "ap",
+                                "price": 18,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 40,
+                                    "devices": 50
                                 }
                             },
-                            "name": "37 mm Browning Semi-Automatic"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 978,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    70.0,
+                                    61.0
+                                ],
+                                "id": 4,
+                                "userString": "#usa_vehicles:_37mm_APC_M51",
+                                "icon": "ap_cr_premium",
+                                "price": 800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 40,
+                                    "devices": 50
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 782,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    19.0,
+                                    19.0
+                                ],
+                                "id": 5,
+                                "userString": "#usa_vehicles:_37mm_HE_M63",
+                                "icon": "he_modern",
+                                "price": 10,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 37,
+                                "explosionRadius": 0.31,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 50
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.31,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 25,
+                                        "devices": 25
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -226,7 +174,8 @@
                     0.0
                 ],
                 "track_health": 70,
-                "track_repaired_health": 55
+                "track_repaired_health": 55,
+                "level": 3
             }
         ],
         "engines": [

@@ -43,6 +43,7 @@
                 "id": "Turret_1_Ch04_T34_1",
                 "traverse": 46,
                 "view_range": 360,
+                "level": 6,
                 "guns": [
                     {
                         "name": "85 mm S-53",
@@ -59,139 +60,87 @@
                             "after_shot": null,
                             "while_damaged": null
                         },
-                        "generic": {
-                            "userString": "#china_vehicles:_85mm_S-53",
-                            "tags": [],
-                            "level": 6,
-                            "price": 61530,
-                            "impulse": 0.44,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.3,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -22.0,
-                                    1.0,
-                                    -22.0
+                        "level": 6,
+                        "weight": 1550,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 792,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    126.0,
+                                    110.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    5.0,
-                                    1.0,
-                                    5.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 39.375,
-                            "reloadTime": 5.71428571428571,
-                            "maxAmmo": 59,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 1550,
-                            "maxHealth": 122,
-                            "maxRegenHealth": 61,
-                            "repairCost": 6,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.388571428571429,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_85mm_CJ_365": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 792,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        126.0,
-                                        110.0
-                                    ],
-                                    "generic": {
-                                        "id": 64,
-                                        "userString": "#china_vehicles:_85mm_CJ_365",
-                                        "icon": "ap",
-                                        "price": 109,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 85,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 160,
-                                            "devices": 115
-                                        }
-                                    }
-                                },
-                                "_85mm_367": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 990,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        167.0,
-                                        140.0
-                                    ],
-                                    "generic": {
-                                        "id": 9,
-                                        "userString": "#china_vehicles:_85mm_367",
-                                        "icon": "ap_cr_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 85,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 160,
-                                            "devices": 115
-                                        }
-                                    }
-                                },
-                                "_85mm_SB_365": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 792,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        43.0,
-                                        43.0
-                                    ],
-                                    "generic": {
-                                        "id": 65,
-                                        "userString": "#china_vehicles:_85mm_SB_365",
-                                        "icon": "he_modern",
-                                        "price": 98,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 85,
-                                        "explosionRadius": 1.32,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 280,
-                                            "devices": 115
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.32,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 140,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 64,
+                                "userString": "#china_vehicles:_85mm_CJ_365",
+                                "icon": "ap",
+                                "price": 109,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 85,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 160,
+                                    "devices": 115
                                 }
                             },
-                            "name": "85 mm S-53"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 990,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    167.0,
+                                    140.0
+                                ],
+                                "id": 9,
+                                "userString": "#china_vehicles:_85mm_367",
+                                "icon": "ap_cr_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 85,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 160,
+                                    "devices": 115
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 792,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    43.0,
+                                    43.0
+                                ],
+                                "id": 65,
+                                "userString": "#china_vehicles:_85mm_SB_365",
+                                "icon": "he_modern",
+                                "price": 98,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 85,
+                                "explosionRadius": 1.32,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 280,
+                                    "devices": 115
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.32,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 140,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "85 mm 56-85JT",
@@ -208,139 +157,87 @@
                             "after_shot": null,
                             "while_damaged": null
                         },
-                        "generic": {
-                            "userString": "#china_vehicles:_85mm_Tip_56-85JT",
-                            "tags": [],
-                            "level": 6,
-                            "price": 72000,
-                            "impulse": 0.44,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.3,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -22.0,
-                                    1.0,
-                                    -22.0
+                        "level": 6,
+                        "weight": 1750,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 792,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    144.0,
+                                    125.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    5.0,
-                                    1.0,
-                                    5.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 39.375,
-                            "reloadTime": 5.71428571428571,
-                            "maxAmmo": 59,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 1750,
-                            "maxHealth": 122,
-                            "maxRegenHealth": 61,
-                            "repairCost": 6,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.34,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_85mm_CJ_365": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 792,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        144.0,
-                                        125.0
-                                    ],
-                                    "generic": {
-                                        "id": 64,
-                                        "userString": "#china_vehicles:_85mm_CJ_365",
-                                        "icon": "ap",
-                                        "price": 109,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 85,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 160,
-                                            "devices": 115
-                                        }
-                                    }
-                                },
-                                "_85mm_367": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 990,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        172.0,
-                                        139.0
-                                    ],
-                                    "generic": {
-                                        "id": 9,
-                                        "userString": "#china_vehicles:_85mm_367",
-                                        "icon": "ap_cr_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 85,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 160,
-                                            "devices": 115
-                                        }
-                                    }
-                                },
-                                "_85mm_SB_365": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 792,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        43.0,
-                                        43.0
-                                    ],
-                                    "generic": {
-                                        "id": 65,
-                                        "userString": "#china_vehicles:_85mm_SB_365",
-                                        "icon": "he_modern",
-                                        "price": 98,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 85,
-                                        "explosionRadius": 1.32,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 280,
-                                            "devices": 115
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.32,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 140,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 64,
+                                "userString": "#china_vehicles:_85mm_CJ_365",
+                                "icon": "ap",
+                                "price": 109,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 85,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 160,
+                                    "devices": 115
                                 }
                             },
-                            "name": "85 mm 56-85JT"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 990,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    172.0,
+                                    139.0
+                                ],
+                                "id": 9,
+                                "userString": "#china_vehicles:_85mm_367",
+                                "icon": "ap_cr_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 85,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 160,
+                                    "devices": 115
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 792,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    43.0,
+                                    43.0
+                                ],
+                                "id": 65,
+                                "userString": "#china_vehicles:_85mm_SB_365",
+                                "icon": "he_modern",
+                                "price": 98,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 85,
+                                "explosionRadius": 1.32,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 280,
+                                    "devices": 115
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.32,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 140,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -360,6 +257,7 @@
                 "id": "Turret_2_Ch04_T34_1",
                 "traverse": 44,
                 "view_range": 370,
+                "level": 7,
                 "guns": [
                     {
                         "name": "85 mm S-53",
@@ -376,139 +274,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#china_vehicles:_85mm_S-53",
-                            "tags": [],
-                            "level": 6,
-                            "price": 61530,
-                            "impulse": 0.44,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.3,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -22.0,
-                                    1.0,
-                                    -22.0
+                        "level": 6,
+                        "weight": 1550,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 792,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    126.0,
+                                    110.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    5.0,
-                                    1.0,
-                                    5.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 39.375,
-                            "reloadTime": 5.71428571428571,
-                            "maxAmmo": 59,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 1550,
-                            "maxHealth": 122,
-                            "maxRegenHealth": 61,
-                            "repairCost": 6,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.388571428571429,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_85mm_CJ_365": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 792,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        126.0,
-                                        110.0
-                                    ],
-                                    "generic": {
-                                        "id": 64,
-                                        "userString": "#china_vehicles:_85mm_CJ_365",
-                                        "icon": "ap",
-                                        "price": 109,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 85,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 160,
-                                            "devices": 115
-                                        }
-                                    }
-                                },
-                                "_85mm_367": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 990,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        167.0,
-                                        140.0
-                                    ],
-                                    "generic": {
-                                        "id": 9,
-                                        "userString": "#china_vehicles:_85mm_367",
-                                        "icon": "ap_cr_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 85,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 160,
-                                            "devices": 115
-                                        }
-                                    }
-                                },
-                                "_85mm_SB_365": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 792,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        43.0,
-                                        43.0
-                                    ],
-                                    "generic": {
-                                        "id": 65,
-                                        "userString": "#china_vehicles:_85mm_SB_365",
-                                        "icon": "he_modern",
-                                        "price": 98,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 85,
-                                        "explosionRadius": 1.32,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 280,
-                                            "devices": 115
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.32,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 140,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 64,
+                                "userString": "#china_vehicles:_85mm_CJ_365",
+                                "icon": "ap",
+                                "price": 109,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 85,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 160,
+                                    "devices": 115
                                 }
                             },
-                            "name": "85 mm S-53"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 990,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    167.0,
+                                    140.0
+                                ],
+                                "id": 9,
+                                "userString": "#china_vehicles:_85mm_367",
+                                "icon": "ap_cr_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 85,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 160,
+                                    "devices": 115
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 792,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    43.0,
+                                    43.0
+                                ],
+                                "id": 65,
+                                "userString": "#china_vehicles:_85mm_SB_365",
+                                "icon": "he_modern",
+                                "price": 98,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 85,
+                                "explosionRadius": 1.32,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 280,
+                                    "devices": 115
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.32,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 140,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "85 mm 56-85JT",
@@ -525,139 +371,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#china_vehicles:_85mm_Tip_56-85JT",
-                            "tags": [],
-                            "level": 6,
-                            "price": 72000,
-                            "impulse": 0.44,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.3,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -22.0,
-                                    1.0,
-                                    -22.0
+                        "level": 6,
+                        "weight": 1750,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 792,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    144.0,
+                                    125.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    5.0,
-                                    1.0,
-                                    5.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 39.375,
-                            "reloadTime": 5.71428571428571,
-                            "maxAmmo": 59,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 1750,
-                            "maxHealth": 122,
-                            "maxRegenHealth": 61,
-                            "repairCost": 6,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.34,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_85mm_CJ_365": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 792,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        144.0,
-                                        125.0
-                                    ],
-                                    "generic": {
-                                        "id": 64,
-                                        "userString": "#china_vehicles:_85mm_CJ_365",
-                                        "icon": "ap",
-                                        "price": 109,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 85,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 160,
-                                            "devices": 115
-                                        }
-                                    }
-                                },
-                                "_85mm_367": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 990,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        172.0,
-                                        139.0
-                                    ],
-                                    "generic": {
-                                        "id": 9,
-                                        "userString": "#china_vehicles:_85mm_367",
-                                        "icon": "ap_cr_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 85,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 160,
-                                            "devices": 115
-                                        }
-                                    }
-                                },
-                                "_85mm_SB_365": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 792,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        43.0,
-                                        43.0
-                                    ],
-                                    "generic": {
-                                        "id": 65,
-                                        "userString": "#china_vehicles:_85mm_SB_365",
-                                        "icon": "he_modern",
-                                        "price": 98,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 85,
-                                        "explosionRadius": 1.32,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 280,
-                                            "devices": 115
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.32,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 140,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 64,
+                                "userString": "#china_vehicles:_85mm_CJ_365",
+                                "icon": "ap",
+                                "price": 109,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 85,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 160,
+                                    "devices": 115
                                 }
                             },
-                            "name": "85 mm 56-85JT"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 990,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    172.0,
+                                    139.0
+                                ],
+                                "id": 9,
+                                "userString": "#china_vehicles:_85mm_367",
+                                "icon": "ap_cr_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 85,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 160,
+                                    "devices": 115
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 792,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    43.0,
+                                    43.0
+                                ],
+                                "id": 65,
+                                "userString": "#china_vehicles:_85mm_SB_365",
+                                "icon": "he_modern",
+                                "price": 98,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 85,
+                                "explosionRadius": 1.32,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 280,
+                                    "devices": 115
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.32,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 140,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "100 mm 44-100JT",
@@ -674,139 +468,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#china_vehicles:_100mm_44-100JT",
-                            "tags": [],
-                            "level": 7,
-                            "price": 79000,
-                            "impulse": 0.44,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.5,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_mainext",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 7,
+                        "weight": 2257,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 895,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    175.0,
+                                    155.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    7.0,
-                                    1.0,
-                                    7.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 33.25,
-                            "reloadTime": 8.0,
-                            "maxAmmo": 34,
-                            "aimingTime": 2.85714285714286,
-                            "weight": 2257,
-                            "maxHealth": 160,
-                            "maxRegenHealth": 74,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.388571428571429,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_100mm_UBR-412": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 895,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        175.0,
-                                        155.0
-                                    ],
-                                    "generic": {
-                                        "id": 0,
-                                        "userString": "#china_vehicles:_100mm_UBR-412",
-                                        "icon": "ap",
-                                        "price": 252,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 100,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 250,
-                                            "devices": 135
-                                        }
-                                    }
-                                },
-                                "_100mm_UBR-412P": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1119,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        235.0,
-                                        208.0
-                                    ],
-                                    "generic": {
-                                        "id": 1,
-                                        "userString": "#china_vehicles:_100mm_UBR-412P",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 100,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 250,
-                                            "devices": 135
-                                        }
-                                    }
-                                },
-                                "_100mm_UOF-412": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 895,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        50.0,
-                                        50.0
-                                    ],
-                                    "generic": {
-                                        "id": 2,
-                                        "userString": "#china_vehicles:_100mm_UOF-412",
-                                        "icon": "he_modern",
-                                        "price": 252,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 100,
-                                        "explosionRadius": 1.76,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 330,
-                                            "devices": 135
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.76,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 165,
-                                                "devices": 70
-                                            }
-                                        }
-                                    }
+                                "id": 0,
+                                "userString": "#china_vehicles:_100mm_UBR-412",
+                                "icon": "ap",
+                                "price": 252,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 100,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 250,
+                                    "devices": 135
                                 }
                             },
-                            "name": "100 mm 44-100JT"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1119,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    235.0,
+                                    208.0
+                                ],
+                                "id": 1,
+                                "userString": "#china_vehicles:_100mm_UBR-412P",
+                                "icon": "ap_cr_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 100,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 250,
+                                    "devices": 135
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 895,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    50.0,
+                                    50.0
+                                ],
+                                "id": 2,
+                                "userString": "#china_vehicles:_100mm_UOF-412",
+                                "icon": "he_modern",
+                                "price": 252,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 100,
+                                "explosionRadius": 1.76,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 330,
+                                    "devices": 135
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.76,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 165,
+                                        "devices": 70
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -846,7 +588,8 @@
                     0.0
                 ],
                 "track_health": 130,
-                "track_repaired_health": 100
+                "track_repaired_health": 100,
+                "level": 6
             },
             {
                 "name": "T-34-1 model 2",
@@ -866,7 +609,8 @@
                     0.0
                 ],
                 "track_health": 140,
-                "track_repaired_health": 105
+                "track_repaired_health": 105,
+                "level": 7
             }
         ],
         "engines": [

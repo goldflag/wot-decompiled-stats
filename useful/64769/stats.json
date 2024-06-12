@@ -45,6 +45,7 @@
                 "id": "Turret_2_KV2_W",
                 "traverse": 17,
                 "view_range": 330,
+                "level": 6,
                 "guns": [
                     {
                         "name": "152 mm M-10",
@@ -64,140 +65,87 @@
                             "after_shot": 5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#ussr_vehicles:_152mm_M-10_W",
-                            "tags": [],
-                            "level": 6,
-                            "price": 60000,
-                            "notInShop": "true",
-                            "impulse": 0.62,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.08,
-                                "recoilEffect": "huge"
-                            },
-                            "effects": "shot_huge",
-                            "reloadEffect": "reload115_152",
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -28.0,
-                                    1.0,
-                                    -28.0
+                        "level": 6,
+                        "weight": 2300,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.15,
+                                "speed": 525,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    110.0,
+                                    66.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "rotationSpeed": 23.625,
-                            "reloadTime": 25.3942857142857,
-                            "maxAmmo": 32,
-                            "aimingTime": 3.8,
-                            "weight": 2300,
-                            "maxHealth": 184,
-                            "maxRegenHealth": 92,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.685714285714286,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_152mm_53-G-530": {
-                                    "defaultPortion": 0.15,
-                                    "speed": 525,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        110.0,
-                                        66.0
-                                    ],
-                                    "generic": {
-                                        "id": 62,
-                                        "userString": "#ussr_vehicles:_152mm_53-G-530",
-                                        "icon": "ap",
-                                        "price": 725,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 152,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 700,
-                                            "devices": 203
-                                        }
-                                    }
-                                },
-                                "_152mm_MPB_1915": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 525,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        136.0,
-                                        128.0
-                                    ],
-                                    "generic": {
-                                        "id": 118,
-                                        "userString": "#ussr_vehicles:_152mm_MPB_1915",
-                                        "icon": "ap_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 152,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 700,
-                                            "devices": 203
-                                        }
-                                    }
-                                },
-                                "_152mm_53-OF-530_U": {
-                                    "defaultPortion": 0.85,
-                                    "speed": 525,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        86.0,
-                                        86.0
-                                    ],
-                                    "generic": {
-                                        "id": 224,
-                                        "userString": "#ussr_vehicles:_152mm_53-OF-530",
-                                        "icon": "he_modern",
-                                        "price": 810,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 152,
-                                        "explosionRadius": 3.66,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 910,
-                                            "devices": 203
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 3.66,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 455,
-                                                "devices": 100
-                                            }
-                                        }
-                                    }
+                                "id": 62,
+                                "userString": "#ussr_vehicles:_152mm_53-G-530",
+                                "icon": "ap",
+                                "price": 725,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 152,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 700,
+                                    "devices": 203
                                 }
                             },
-                            "name": "152 mm M-10"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 525,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    136.0,
+                                    128.0
+                                ],
+                                "id": 118,
+                                "userString": "#ussr_vehicles:_152mm_MPB_1915",
+                                "icon": "ap_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 152,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 700,
+                                    "devices": 203
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.85,
+                                "speed": 525,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    86.0,
+                                    86.0
+                                ],
+                                "id": 224,
+                                "userString": "#ussr_vehicles:_152mm_53-OF-530",
+                                "icon": "he_modern",
+                                "price": 810,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 152,
+                                "explosionRadius": 3.66,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 910,
+                                    "devices": 203
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 3.66,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 455,
+                                        "devices": 100
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -237,7 +185,8 @@
                     0.0
                 ],
                 "track_health": 140,
-                "track_repaired_health": 105
+                "track_repaired_health": 105,
+                "level": 6
             }
         ],
         "engines": [

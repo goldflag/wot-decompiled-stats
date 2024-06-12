@@ -43,6 +43,7 @@
                 "id": "SU-152_01",
                 "traverse": 26,
                 "view_range": 330,
+                "level": 7,
                 "guns": [
                     {
                         "name": "152 mm ML-20 mod. 1931/37",
@@ -62,141 +63,88 @@
                             "after_shot": null,
                             "while_damaged": null
                         },
-                        "generic": {
-                            "userString": "#ussr_vehicles:_152mm_ML-20_mod_1937",
-                            "shortUserString": "#ussr_vehicles:_152mm_ML-20_mod_1937_short",
-                            "tags": [],
-                            "level": 6,
-                            "price": 49290,
-                            "impulse": 0.62,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.62,
-                                "recoilEffect": "huge"
-                            },
-                            "effects": "shot_huge",
-                            "reloadEffect": "reload155_170",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -18.0,
-                                    1.0,
-                                    -18.0
+                        "level": 6,
+                        "weight": 2500,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.4,
+                                "speed": 600,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    135.0,
+                                    125.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    6.0,
-                                    1.0,
-                                    6.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 22.75,
-                            "reloadTime": 17.7142857142857,
-                            "maxAmmo": 20,
-                            "aimingTime": 3.42857142857143,
-                            "weight": 2500,
-                            "maxHealth": 184,
-                            "maxRegenHealth": 92,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.502857142857143,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 3.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_152mm_53-G-530": {
-                                    "defaultPortion": 0.4,
-                                    "speed": 600,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        135.0,
-                                        125.0
-                                    ],
-                                    "generic": {
-                                        "id": 62,
-                                        "userString": "#ussr_vehicles:_152mm_53-G-530",
-                                        "icon": "ap",
-                                        "price": 725,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 152,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 700,
-                                            "devices": 203
-                                        }
-                                    }
-                                },
-                                "_152mm_53BP540": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 750,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        250.0,
-                                        250.0
-                                    ],
-                                    "generic": {
-                                        "id": 63,
-                                        "userString": "#ussr_vehicles:_152mm_53BP540",
-                                        "icon": "hc_premium",
-                                        "price": 6000,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 152,
-                                        "isTracer": "true",
-                                        "effects": "largeHollowCharge",
-                                        "damage": {
-                                            "armor": 700,
-                                            "devices": 203
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_152mm_53-OF-530": {
-                                    "defaultPortion": 0.6,
-                                    "speed": 600,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        86.0,
-                                        86.0
-                                    ],
-                                    "generic": {
-                                        "id": 64,
-                                        "userString": "#ussr_vehicles:_152mm_53-OF-530",
-                                        "icon": "he_modern",
-                                        "price": 810,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 152,
-                                        "explosionRadius": 3.66,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 910,
-                                            "devices": 203
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 3.66,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 455,
-                                                "devices": 100
-                                            }
-                                        }
-                                    }
+                                "id": 62,
+                                "userString": "#ussr_vehicles:_152mm_53-G-530",
+                                "icon": "ap",
+                                "price": 725,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 152,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 700,
+                                    "devices": 203
                                 }
                             },
-                            "name": "152 mm ML-20 mod. 1931/37"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 750,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    250.0,
+                                    250.0
+                                ],
+                                "id": 63,
+                                "userString": "#ussr_vehicles:_152mm_53BP540",
+                                "icon": "hc_premium",
+                                "price": 6000,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 152,
+                                "isTracer": "true",
+                                "effects": "largeHollowCharge",
+                                "damage": {
+                                    "armor": 700,
+                                    "devices": 203
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.6,
+                                "speed": 600,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    86.0,
+                                    86.0
+                                ],
+                                "id": 64,
+                                "userString": "#ussr_vehicles:_152mm_53-OF-530",
+                                "icon": "he_modern",
+                                "price": 810,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 152,
+                                "explosionRadius": 3.66,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 910,
+                                    "devices": 203
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 3.66,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 455,
+                                        "devices": 100
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "122 mm A-19 mod. 1937",
@@ -216,140 +164,87 @@
                             "after_shot": null,
                             "while_damaged": null
                         },
-                        "generic": {
-                            "userString": "#ussr_vehicles:_122mm_A-19",
-                            "shortUserString": "#ussr_vehicles:_122mm_A-19_short",
-                            "tags": [],
-                            "level": 7,
-                            "price": 94000,
-                            "impulse": 0.62,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.59,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_large",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 7,
+                        "weight": 2600,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.9,
+                                "speed": 780,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    175.0,
+                                    152.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    6.0,
-                                    1.0,
-                                    6.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 26.25,
-                            "reloadTime": 9.02857142857143,
-                            "maxAmmo": 26,
-                            "aimingTime": 2.85714285714286,
-                            "weight": 2600,
-                            "maxHealth": 174,
-                            "maxRegenHealth": 87,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.434285714285714,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_122mm_UBR-471": {
-                                    "defaultPortion": 0.9,
-                                    "speed": 780,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        175.0,
-                                        152.0
-                                    ],
-                                    "generic": {
-                                        "id": 51,
-                                        "userString": "#ussr_vehicles:_122mm_UBR-471",
-                                        "icon": "ap",
-                                        "price": 1025,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 122,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 390,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_122mm_UBR-471P": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 975,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        217.0,
-                                        204.0
-                                    ],
-                                    "generic": {
-                                        "id": 52,
-                                        "userString": "#ussr_vehicles:_122mm_UBR-471P",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 122,
-                                        "isTracer": "true",
-                                        "effects": "largeAPCR",
-                                        "damage": {
-                                            "armor": 390,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_122mm_UOF-471": {
-                                    "defaultPortion": 0.1,
-                                    "speed": 780,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        61.0,
-                                        61.0
-                                    ],
-                                    "generic": {
-                                        "id": 53,
-                                        "userString": "#ussr_vehicles:_122mm_UOF-471",
-                                        "icon": "he_modern",
-                                        "price": 608,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 122,
-                                        "explosionRadius": 2.49,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 530,
-                                            "devices": 165
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.49,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 265,
-                                                "devices": 85
-                                            }
-                                        }
-                                    }
+                                "id": 51,
+                                "userString": "#ussr_vehicles:_122mm_UBR-471",
+                                "icon": "ap",
+                                "price": 1025,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 122,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 390,
+                                    "devices": 165
                                 }
                             },
-                            "name": "122 mm A-19 mod. 1937"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 975,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    217.0,
+                                    204.0
+                                ],
+                                "id": 52,
+                                "userString": "#ussr_vehicles:_122mm_UBR-471P",
+                                "icon": "ap_cr_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 122,
+                                "isTracer": "true",
+                                "effects": "largeAPCR",
+                                "damage": {
+                                    "armor": 390,
+                                    "devices": 165
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.1,
+                                "speed": 780,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    61.0,
+                                    61.0
+                                ],
+                                "id": 53,
+                                "userString": "#ussr_vehicles:_122mm_UOF-471",
+                                "icon": "he_modern",
+                                "price": 608,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 122,
+                                "explosionRadius": 2.49,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 530,
+                                    "devices": 165
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.49,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 265,
+                                        "devices": 85
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "122 mm D-25S mod. 1944",
@@ -369,140 +264,87 @@
                             "after_shot": null,
                             "while_damaged": null
                         },
-                        "generic": {
-                            "userString": "#ussr_vehicles:_122mm_D-25C_mod1944",
-                            "shortUserString": "#ussr_vehicles:_122mm_D-25C_mod1944_short",
-                            "tags": [],
-                            "level": 8,
-                            "price": 106400,
-                            "impulse": 0.62,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.66,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_large_mb",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -18.0,
-                                    1.0,
-                                    -18.0
+                        "level": 8,
+                        "weight": 2590,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.9,
+                                "speed": 800,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    175.0,
+                                    152.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    6.0,
-                                    1.0,
-                                    6.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 26.25,
-                            "reloadTime": 7.42857142857143,
-                            "maxAmmo": 26,
-                            "aimingTime": 2.85714285714286,
-                            "weight": 2590,
-                            "maxHealth": 192,
-                            "maxRegenHealth": 96,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.411428571428571,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 3.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_122mm_UBR-471": {
-                                    "defaultPortion": 0.9,
-                                    "speed": 800,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        175.0,
-                                        152.0
-                                    ],
-                                    "generic": {
-                                        "id": 51,
-                                        "userString": "#ussr_vehicles:_122mm_UBR-471",
-                                        "icon": "ap",
-                                        "price": 1025,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 122,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 390,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_122mm_UBR-471P": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1000,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        217.0,
-                                        204.0
-                                    ],
-                                    "generic": {
-                                        "id": 52,
-                                        "userString": "#ussr_vehicles:_122mm_UBR-471P",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 122,
-                                        "isTracer": "true",
-                                        "effects": "largeAPCR",
-                                        "damage": {
-                                            "armor": 390,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_122mm_UOF-471": {
-                                    "defaultPortion": 0.1,
-                                    "speed": 800,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        64.0,
-                                        64.0
-                                    ],
-                                    "generic": {
-                                        "id": 53,
-                                        "userString": "#ussr_vehicles:_122mm_UOF-471",
-                                        "icon": "he_modern",
-                                        "price": 608,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 122,
-                                        "explosionRadius": 2.49,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 530,
-                                            "devices": 165
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.49,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 265,
-                                                "devices": 85
-                                            }
-                                        }
-                                    }
+                                "id": 51,
+                                "userString": "#ussr_vehicles:_122mm_UBR-471",
+                                "icon": "ap",
+                                "price": 1025,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 122,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 390,
+                                    "devices": 165
                                 }
                             },
-                            "name": "122 mm D-25S mod. 1944"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1000,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    217.0,
+                                    204.0
+                                ],
+                                "id": 52,
+                                "userString": "#ussr_vehicles:_122mm_UBR-471P",
+                                "icon": "ap_cr_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 122,
+                                "isTracer": "true",
+                                "effects": "largeAPCR",
+                                "damage": {
+                                    "armor": 390,
+                                    "devices": 165
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.1,
+                                "speed": 800,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    64.0,
+                                    64.0
+                                ],
+                                "id": 53,
+                                "userString": "#ussr_vehicles:_122mm_UOF-471",
+                                "icon": "he_modern",
+                                "price": 608,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 122,
+                                "explosionRadius": 2.49,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 530,
+                                    "devices": 165
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.49,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 265,
+                                        "devices": 85
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -538,7 +380,8 @@
                     0.0
                 ],
                 "track_health": 170,
-                "track_repaired_health": 130
+                "track_repaired_health": 130,
+                "level": 7
             },
             {
                 "name": "SU-152M",
@@ -558,7 +401,8 @@
                     0.0
                 ],
                 "track_health": 180,
-                "track_repaired_health": 135
+                "track_repaired_health": 135,
+                "level": 8
             }
         ],
         "engines": [

@@ -42,6 +42,7 @@
                 "id": "Turret_1_GB102_LHMTV",
                 "traverse": 40,
                 "view_range": 370,
+                "level": 7,
                 "guns": [
                     {
                         "name": "75 mm HV L40",
@@ -61,139 +62,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:_75mm_HV_L40",
-                            "tags": [],
-                            "level": 7,
-                            "price": 68000,
-                            "impulse": 0.46,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.65,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_medium_mb",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -17.0,
-                                    1.0,
-                                    -17.0
+                        "level": 7,
+                        "weight": 788,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.9,
+                                "speed": 925,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    180.0,
+                                    144.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35,
-                            "reloadTime": 10,
-                            "maxAmmo": 50,
-                            "aimingTime": 2,
-                            "weight": 788,
-                            "maxHealth": 130,
-                            "maxRegenHealth": 65,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.3,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 3.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_75mm_L40_AP": {
-                                    "defaultPortion": 0.9,
-                                    "speed": 925,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        180.0,
-                                        144.0
-                                    ],
-                                    "generic": {
-                                        "id": 153,
-                                        "userString": "#gb_vehicles:_75mm_L40_AP",
-                                        "icon": "ap",
-                                        "price": 165,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 135,
-                                            "devices": 100
-                                        }
-                                    }
-                                },
-                                "_75mm_L40_APC": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1156,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        220.0,
-                                        200.0
-                                    ],
-                                    "generic": {
-                                        "id": 154,
-                                        "userString": "#gb_vehicles:_75mm_L40_APC",
-                                        "icon": "ap_cr_premium",
-                                        "price": 3200,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumAPCR",
-                                        "damage": {
-                                            "armor": 135,
-                                            "devices": 100
-                                        }
-                                    }
-                                },
-                                "_75mm_L40_HE": {
-                                    "defaultPortion": 0.1,
-                                    "speed": 850,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        75.0,
-                                        75.0
-                                    ],
-                                    "generic": {
-                                        "id": 155,
-                                        "userString": "#gb_vehicles:_75mm_L40_HE",
-                                        "icon": "he_modern",
-                                        "price": 215,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 75,
-                                        "explosionRadius": 1.06,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 175,
-                                            "devices": 100
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.06,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 90,
-                                                "devices": 50
-                                            }
-                                        }
-                                    }
+                                "id": 153,
+                                "userString": "#gb_vehicles:_75mm_L40_AP",
+                                "icon": "ap",
+                                "price": 165,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 135,
+                                    "devices": 100
                                 }
                             },
-                            "name": "75 mm HV L40"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1156,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    220.0,
+                                    200.0
+                                ],
+                                "id": 154,
+                                "userString": "#gb_vehicles:_75mm_L40_APC",
+                                "icon": "ap_cr_premium",
+                                "price": 3200,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumAPCR",
+                                "damage": {
+                                    "armor": 135,
+                                    "devices": 100
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.1,
+                                "speed": 850,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    75.0,
+                                    75.0
+                                ],
+                                "id": 155,
+                                "userString": "#gb_vehicles:_75mm_L40_HE",
+                                "icon": "he_modern",
+                                "price": 215,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 75,
+                                "explosionRadius": 1.06,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 175,
+                                    "devices": 100
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.06,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 90,
+                                        "devices": 50
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -213,6 +162,7 @@
                 "id": "Turret_2_GB102_LHMTV",
                 "traverse": 43,
                 "view_range": 380,
+                "level": 8,
                 "guns": [
                     {
                         "name": "75 mm HV L40",
@@ -232,139 +182,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:_75mm_HV_L40",
-                            "tags": [],
-                            "level": 7,
-                            "price": 68000,
-                            "impulse": 0.46,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.65,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_medium_mb",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -17.0,
-                                    1.0,
-                                    -17.0
+                        "level": 7,
+                        "weight": 788,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.9,
+                                "speed": 925,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    180.0,
+                                    144.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35,
-                            "reloadTime": 10,
-                            "maxAmmo": 50,
-                            "aimingTime": 2,
-                            "weight": 788,
-                            "maxHealth": 130,
-                            "maxRegenHealth": 65,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.3,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 3.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_75mm_L40_AP": {
-                                    "defaultPortion": 0.9,
-                                    "speed": 925,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        180.0,
-                                        144.0
-                                    ],
-                                    "generic": {
-                                        "id": 153,
-                                        "userString": "#gb_vehicles:_75mm_L40_AP",
-                                        "icon": "ap",
-                                        "price": 165,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 135,
-                                            "devices": 100
-                                        }
-                                    }
-                                },
-                                "_75mm_L40_APC": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1156,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        220.0,
-                                        200.0
-                                    ],
-                                    "generic": {
-                                        "id": 154,
-                                        "userString": "#gb_vehicles:_75mm_L40_APC",
-                                        "icon": "ap_cr_premium",
-                                        "price": 3200,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumAPCR",
-                                        "damage": {
-                                            "armor": 135,
-                                            "devices": 100
-                                        }
-                                    }
-                                },
-                                "_75mm_L40_HE": {
-                                    "defaultPortion": 0.1,
-                                    "speed": 850,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        75.0,
-                                        75.0
-                                    ],
-                                    "generic": {
-                                        "id": 155,
-                                        "userString": "#gb_vehicles:_75mm_L40_HE",
-                                        "icon": "he_modern",
-                                        "price": 215,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 75,
-                                        "explosionRadius": 1.06,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 175,
-                                            "devices": 100
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.06,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 90,
-                                                "devices": 50
-                                            }
-                                        }
-                                    }
+                                "id": 153,
+                                "userString": "#gb_vehicles:_75mm_L40_AP",
+                                "icon": "ap",
+                                "price": 165,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 135,
+                                    "devices": 100
                                 }
                             },
-                            "name": "75 mm HV L40"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1156,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    220.0,
+                                    200.0
+                                ],
+                                "id": 154,
+                                "userString": "#gb_vehicles:_75mm_L40_APC",
+                                "icon": "ap_cr_premium",
+                                "price": 3200,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumAPCR",
+                                "damage": {
+                                    "armor": 135,
+                                    "devices": 100
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.1,
+                                "speed": 850,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    75.0,
+                                    75.0
+                                ],
+                                "id": 155,
+                                "userString": "#gb_vehicles:_75mm_L40_HE",
+                                "icon": "he_modern",
+                                "price": 215,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 75,
+                                "explosionRadius": 1.06,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 175,
+                                    "devices": 100
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.06,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 90,
+                                        "devices": 50
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "85 mm HV L40",
@@ -384,139 +282,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:_85mm_HV_L40",
-                            "tags": [],
-                            "level": 8,
-                            "price": 120000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.2,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 8,
+                        "weight": 842,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 1020,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    226.0,
+                                    211.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    12.5,
-                                    1.0,
-                                    12.5
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 40.25,
-                            "reloadTime": 3.25714285714286,
-                            "maxAmmo": 60,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 842,
-                            "maxHealth": 170,
-                            "maxRegenHealth": 85,
-                            "repairCost": 6,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.12,
-                                "afterShot": 3.5,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_L40_AP_Mk1": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 1020,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        226.0,
-                                        211.0
-                                    ],
-                                    "generic": {
-                                        "id": 144,
-                                        "userString": "#gb_vehicles:_L40_AP_Mk1",
-                                        "icon": "ap",
-                                        "price": 560,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 83.4,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 230,
-                                            "devices": 118
-                                        }
-                                    }
-                                },
-                                "_L40_APC_Mk2": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1275,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        258.0,
-                                        248.0
-                                    ],
-                                    "generic": {
-                                        "id": 145,
-                                        "userString": "#gb_vehicles:_L40_APC_Mk2",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 83.4,
-                                        "isTracer": "true",
-                                        "effects": "mediumAPCR",
-                                        "damage": {
-                                            "armor": 230,
-                                            "devices": 118
-                                        }
-                                    }
-                                },
-                                "_L40_HE_Mk3": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 1020,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        42.0,
-                                        42.0
-                                    ],
-                                    "generic": {
-                                        "id": 146,
-                                        "userString": "#gb_vehicles:_L40_HE_Mk3",
-                                        "icon": "he_modern",
-                                        "price": 320,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 83.4,
-                                        "explosionRadius": 1.28,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 280,
-                                            "devices": 118
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.28,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 140,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 144,
+                                "userString": "#gb_vehicles:_L40_AP_Mk1",
+                                "icon": "ap",
+                                "price": 560,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 83.4,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 230,
+                                    "devices": 118
                                 }
                             },
-                            "name": "85 mm HV L40"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1275,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    258.0,
+                                    248.0
+                                ],
+                                "id": 145,
+                                "userString": "#gb_vehicles:_L40_APC_Mk2",
+                                "icon": "ap_cr_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 83.4,
+                                "isTracer": "true",
+                                "effects": "mediumAPCR",
+                                "damage": {
+                                    "armor": 230,
+                                    "devices": 118
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 1020,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    42.0,
+                                    42.0
+                                ],
+                                "id": 146,
+                                "userString": "#gb_vehicles:_L40_HE_Mk3",
+                                "icon": "he_modern",
+                                "price": 320,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 83.4,
+                                "explosionRadius": 1.28,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 280,
+                                    "devices": 118
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.28,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 140,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -556,7 +402,8 @@
                     0.0
                 ],
                 "track_health": 180,
-                "track_repaired_health": 135
+                "track_repaired_health": 135,
+                "level": 7
             },
             {
                 "name": "LHMTV Mk.II",
@@ -576,7 +423,8 @@
                     0.0
                 ],
                 "track_health": 200,
-                "track_repaired_health": 150
+                "track_repaired_health": 150,
+                "level": 8
             }
         ],
         "engines": [

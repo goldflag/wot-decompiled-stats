@@ -43,6 +43,7 @@
                 "id": "Turret_1_R159_SU_130PM",
                 "traverse": 22,
                 "view_range": 360,
+                "level": 8,
                 "guns": [
                     {
                         "name": "130 mm M-65S",
@@ -62,141 +63,88 @@
                             "after_shot": 3.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#ussr_vehicles:_130mm_M_65S",
-                            "tags": [],
-                            "level": 10,
-                            "price": 330000,
-                            "notInShop": "true",
-                            "impulse": 0.62,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.21,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_largeext_mb",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -17.0,
-                                    1.0,
-                                    -17.0
+                        "level": 10,
+                        "weight": 4300,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.9,
+                                "speed": 1030,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    243.0,
+                                    230.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    5.0,
-                                    1.0,
-                                    5.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 30,
-                            "reloadTime": 4.04,
-                            "maxAmmo": 40,
-                            "aimingTime": 4.04,
-                            "weight": 4300,
-                            "maxHealth": 190,
-                            "maxRegenHealth": 95,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_130mm_53_VBR_482S": {
-                                    "defaultPortion": 0.9,
-                                    "speed": 1030,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        243.0,
-                                        230.0
-                                    ],
-                                    "generic": {
-                                        "id": 235,
-                                        "userString": "#ussr_vehicles:_130mm_53_VBR_482S",
-                                        "icon": "ap",
-                                        "price": 1215,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 130,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 520,
-                                            "devices": 180
-                                        }
-                                    }
-                                },
-                                "_130mm_3VBKS": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1030,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        320.0,
-                                        320.0
-                                    ],
-                                    "generic": {
-                                        "id": 236,
-                                        "userString": "#ussr_vehicles:_130mm_3VBKS",
-                                        "icon": "hc_premium",
-                                        "price": 5200,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 130,
-                                        "isTracer": "true",
-                                        "effects": "largeHollowCharge",
-                                        "damage": {
-                                            "armor": 520,
-                                            "devices": 180
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_130mm_53_VOF_482VS": {
-                                    "defaultPortion": 0.1,
-                                    "speed": 930,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        65.0,
-                                        65.0
-                                    ],
-                                    "generic": {
-                                        "id": 237,
-                                        "userString": "#ussr_vehicles:_130mm_53_VOF_482VS",
-                                        "icon": "he_modern",
-                                        "price": 1020,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 130,
-                                        "explosionRadius": 2.78,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 660,
-                                            "devices": 180
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.78,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 330,
-                                                "devices": 90
-                                            }
-                                        }
-                                    }
+                                "id": 235,
+                                "userString": "#ussr_vehicles:_130mm_53_VBR_482S",
+                                "icon": "ap",
+                                "price": 1215,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 130,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 520,
+                                    "devices": 180
                                 }
                             },
-                            "name": "130 mm M-65S"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1030,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    320.0,
+                                    320.0
+                                ],
+                                "id": 236,
+                                "userString": "#ussr_vehicles:_130mm_3VBKS",
+                                "icon": "hc_premium",
+                                "price": 5200,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 130,
+                                "isTracer": "true",
+                                "effects": "largeHollowCharge",
+                                "damage": {
+                                    "armor": 520,
+                                    "devices": 180
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.1,
+                                "speed": 930,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    65.0,
+                                    65.0
+                                ],
+                                "id": 237,
+                                "userString": "#ussr_vehicles:_130mm_53_VOF_482VS",
+                                "icon": "he_modern",
+                                "price": 1020,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 130,
+                                "explosionRadius": 2.78,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 660,
+                                    "devices": 180
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.78,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 330,
+                                        "devices": 90
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -236,7 +184,8 @@
                     0.0
                 ],
                 "track_health": 200,
-                "track_repaired_health": 150
+                "track_repaired_health": 150,
+                "level": 8
             }
         ],
         "engines": [

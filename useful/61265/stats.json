@@ -42,6 +42,7 @@
                 "id": "Turret_1_GB121_GSOR_1010_FB",
                 "traverse": 50,
                 "view_range": 380,
+                "level": 8,
                 "guns": [
                     {
                         "name": "105mm HV Gun Mk.II",
@@ -58,140 +59,87 @@
                             "after_shot": 3,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:_105mm_HV_MK2_Gun",
-                            "tags": [],
-                            "level": 8,
-                            "price": 125000,
-                            "notInShop": "true",
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_large",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 8,
+                        "weight": 3500,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 920,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    218.0,
+                                    205.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35.0,
-                            "reloadTime": 7.5,
-                            "maxAmmo": 72,
-                            "aimingTime": 3,
-                            "weight": 3500,
-                            "maxHealth": 208,
-                            "maxRegenHealth": 104,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.05,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_105mm_HV_AP": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 920,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        218.0,
-                                        205.0
-                                    ],
-                                    "generic": {
-                                        "id": 210,
-                                        "userString": "#gb_vehicles:_105mm_HV_AP",
-                                        "icon": "ap",
-                                        "price": 1200,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 360,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_HV_APDS": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1250,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        252.0,
-                                        241.0
-                                    ],
-                                    "generic": {
-                                        "id": 211,
-                                        "userString": "#gb_vehicles:_105mm_HV_APDS",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 360,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_HV_HE": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 920,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        50.0,
-                                        50.0
-                                    ],
-                                    "generic": {
-                                        "id": 212,
-                                        "userString": "#gb_vehicles:_105mm_HV_HE",
-                                        "icon": "he_modern",
-                                        "price": 950,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 105,
-                                        "explosionRadius": 1.91,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 460,
-                                            "devices": 150
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.91,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 210,
-                                                "devices": 75
-                                            }
-                                        }
-                                    }
+                                "id": 210,
+                                "userString": "#gb_vehicles:_105mm_HV_AP",
+                                "icon": "ap",
+                                "price": 1200,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 360,
+                                    "devices": 150
                                 }
                             },
-                            "name": "105mm HV Gun Mk.II"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1250,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    252.0,
+                                    241.0
+                                ],
+                                "id": 211,
+                                "userString": "#gb_vehicles:_105mm_HV_APDS",
+                                "icon": "ap_cr_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 360,
+                                    "devices": 150
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 920,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    50.0,
+                                    50.0
+                                ],
+                                "id": 212,
+                                "userString": "#gb_vehicles:_105mm_HV_HE",
+                                "icon": "he_modern",
+                                "price": 950,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 105,
+                                "explosionRadius": 1.91,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 460,
+                                    "devices": 150
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.91,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 210,
+                                        "devices": 75
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -231,7 +179,8 @@
                     0.0
                 ],
                 "track_health": 200,
-                "track_repaired_health": 200
+                "track_repaired_health": 200,
+                "level": 8
             }
         ],
         "engines": [

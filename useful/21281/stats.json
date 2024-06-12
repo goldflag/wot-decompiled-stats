@@ -43,6 +43,7 @@
                 "id": "Turret_1_A144_M_VI_Y",
                 "traverse": 28,
                 "view_range": 370,
+                "level": 8,
                 "guns": [
                     {
                         "name": "90 mm Gun T208 (rifled)",
@@ -59,140 +60,88 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_90mm_Gun_T208_rifled",
-                            "tags": [],
-                            "level": 8,
-                            "price": 127000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.38,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main_mb",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 8,
+                        "weight": 1481,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 1250,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    223.0,
+                                    203.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 20,
-                            "reloadTime": 4.04,
-                            "maxAmmo": 60,
-                            "aimingTime": 2.28,
-                            "weight": 1481,
-                            "maxHealth": 170,
-                            "maxRegenHealth": 85,
-                            "repairCost": 7,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.12,
-                                "afterShot": 3.5,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_90mm_APFSDS_T320": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 1250,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        223.0,
-                                        203.0
-                                    ],
-                                    "generic": {
-                                        "id": 184,
-                                        "userString": "#usa_vehicles:_90mm_APFSDS_T320",
-                                        "icon": "ap_cr",
-                                        "price": 455,
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        }
-                                    }
-                                },
-                                "_90mm_HEAT_M431": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 900,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        290.0,
-                                        290.0
-                                    ],
-                                    "generic": {
-                                        "id": 79,
-                                        "userString": "#usa_vehicles:_90mm_HEAT_M431",
-                                        "icon": "hc_premium",
-                                        "price": 4000,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainHollowCharge",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_90mm_HE_T340": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 700,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        45.0,
-                                        45.0
-                                    ],
-                                    "generic": {
-                                        "id": 185,
-                                        "userString": "#usa_vehicles:_90mm_HE_T340",
-                                        "icon": "he_modern",
-                                        "price": 245,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 90,
-                                        "explosionRadius": 1.46,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 122
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.46,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 160,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 184,
+                                "userString": "#usa_vehicles:_90mm_APFSDS_T320",
+                                "icon": "ap_cr",
+                                "price": 455,
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
                                 }
                             },
-                            "name": "90 mm Gun T208 (rifled)"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 900,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    290.0,
+                                    290.0
+                                ],
+                                "id": 79,
+                                "userString": "#usa_vehicles:_90mm_HEAT_M431",
+                                "icon": "hc_premium",
+                                "price": 4000,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainHollowCharge",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 700,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    45.0,
+                                    45.0
+                                ],
+                                "id": 185,
+                                "userString": "#usa_vehicles:_90mm_HE_T340",
+                                "icon": "he_modern",
+                                "price": 245,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 90,
+                                "explosionRadius": 1.46,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 122
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.46,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 160,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "105 mm Gun T254 Y VI",
@@ -212,140 +161,88 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_105mm_Gun_T254_Y_VI",
-                            "tags": [],
-                            "level": 9,
-                            "price": 175000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.12,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_large_mb",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 9,
+                        "weight": 1123,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 1223,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    251.0,
+                                    231.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 20,
-                            "reloadTime": 11,
-                            "maxAmmo": 46,
-                            "aimingTime": 2.3,
-                            "weight": 1123,
-                            "maxHealth": 210,
-                            "maxRegenHealth": 105,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.18,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_105mm_AP_T32": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 1223,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        251.0,
-                                        231.0
-                                    ],
-                                    "generic": {
-                                        "id": 28,
-                                        "userString": "#usa_vehicles:_105mm_AP_T32",
-                                        "icon": "ap",
-                                        "price": 1000,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_HEAT_T_T384E3": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 900,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        315.0,
-                                        315.0
-                                    ],
-                                    "generic": {
-                                        "id": 186,
-                                        "userString": "#usa_vehicles:_105mm_HEAT_T_T384E3",
-                                        "icon": "hc_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainHollowCharge",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 150
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_105mm_HE_M11": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 900,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        53.0,
-                                        53.0
-                                    ],
-                                    "generic": {
-                                        "id": 38,
-                                        "userString": "#usa_vehicles:_105mm_HE_M11",
-                                        "icon": "he_modern",
-                                        "price": 680,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 105,
-                                        "explosionRadius": 1.91,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 420,
-                                            "devices": 150
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.91,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 210,
-                                                "devices": 75
-                                            }
-                                        }
-                                    }
+                                "id": 28,
+                                "userString": "#usa_vehicles:_105mm_AP_T32",
+                                "icon": "ap",
+                                "price": 1000,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 150
                                 }
                             },
-                            "name": "105 mm Gun T254 Y VI"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 900,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    315.0,
+                                    315.0
+                                ],
+                                "id": 186,
+                                "userString": "#usa_vehicles:_105mm_HEAT_T_T384E3",
+                                "icon": "hc_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainHollowCharge",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 150
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 900,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    53.0,
+                                    53.0
+                                ],
+                                "id": 38,
+                                "userString": "#usa_vehicles:_105mm_HE_M11",
+                                "icon": "he_modern",
+                                "price": 680,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 105,
+                                "explosionRadius": 1.91,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 420,
+                                    "devices": 150
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.91,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 210,
+                                        "devices": 75
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -365,6 +262,7 @@
                 "id": "Turret_2_A144_M_VI_Y",
                 "traverse": 30,
                 "view_range": 390,
+                "level": 9,
                 "guns": [
                     {
                         "name": "90 mm Gun T208 (rifled)",
@@ -381,140 +279,88 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_90mm_Gun_T208_rifled",
-                            "tags": [],
-                            "level": 8,
-                            "price": 127000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.38,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main_mb",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 8,
+                        "weight": 1481,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 1250,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    223.0,
+                                    203.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 20,
-                            "reloadTime": 4.04,
-                            "maxAmmo": 60,
-                            "aimingTime": 2.28,
-                            "weight": 1481,
-                            "maxHealth": 170,
-                            "maxRegenHealth": 85,
-                            "repairCost": 7,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.12,
-                                "afterShot": 3.5,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_90mm_APFSDS_T320": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 1250,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        223.0,
-                                        203.0
-                                    ],
-                                    "generic": {
-                                        "id": 184,
-                                        "userString": "#usa_vehicles:_90mm_APFSDS_T320",
-                                        "icon": "ap_cr",
-                                        "price": 455,
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        }
-                                    }
-                                },
-                                "_90mm_HEAT_M431": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 900,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        290.0,
-                                        290.0
-                                    ],
-                                    "generic": {
-                                        "id": 79,
-                                        "userString": "#usa_vehicles:_90mm_HEAT_M431",
-                                        "icon": "hc_premium",
-                                        "price": 4000,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainHollowCharge",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_90mm_HE_T340": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 700,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        45.0,
-                                        45.0
-                                    ],
-                                    "generic": {
-                                        "id": 185,
-                                        "userString": "#usa_vehicles:_90mm_HE_T340",
-                                        "icon": "he_modern",
-                                        "price": 245,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 90,
-                                        "explosionRadius": 1.46,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 122
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.46,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 160,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 184,
+                                "userString": "#usa_vehicles:_90mm_APFSDS_T320",
+                                "icon": "ap_cr",
+                                "price": 455,
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
                                 }
                             },
-                            "name": "90 mm Gun T208 (rifled)"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 900,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    290.0,
+                                    290.0
+                                ],
+                                "id": 79,
+                                "userString": "#usa_vehicles:_90mm_HEAT_M431",
+                                "icon": "hc_premium",
+                                "price": 4000,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainHollowCharge",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 700,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    45.0,
+                                    45.0
+                                ],
+                                "id": 185,
+                                "userString": "#usa_vehicles:_90mm_HE_T340",
+                                "icon": "he_modern",
+                                "price": 245,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 90,
+                                "explosionRadius": 1.46,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 122
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.46,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 160,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "105 mm Gun T254 Y VI",
@@ -534,140 +380,88 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_105mm_Gun_T254_Y_VI",
-                            "tags": [],
-                            "level": 9,
-                            "price": 175000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.12,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_large_mb",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 9,
+                        "weight": 1123,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 1223,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    251.0,
+                                    231.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 20,
-                            "reloadTime": 11,
-                            "maxAmmo": 46,
-                            "aimingTime": 2.3,
-                            "weight": 1123,
-                            "maxHealth": 210,
-                            "maxRegenHealth": 105,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.18,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_105mm_AP_T32": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 1223,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        251.0,
-                                        231.0
-                                    ],
-                                    "generic": {
-                                        "id": 28,
-                                        "userString": "#usa_vehicles:_105mm_AP_T32",
-                                        "icon": "ap",
-                                        "price": 1000,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_HEAT_T_T384E3": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 900,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        315.0,
-                                        315.0
-                                    ],
-                                    "generic": {
-                                        "id": 186,
-                                        "userString": "#usa_vehicles:_105mm_HEAT_T_T384E3",
-                                        "icon": "hc_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainHollowCharge",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 150
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_105mm_HE_M11": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 900,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        53.0,
-                                        53.0
-                                    ],
-                                    "generic": {
-                                        "id": 38,
-                                        "userString": "#usa_vehicles:_105mm_HE_M11",
-                                        "icon": "he_modern",
-                                        "price": 680,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 105,
-                                        "explosionRadius": 1.91,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 420,
-                                            "devices": 150
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.91,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 210,
-                                                "devices": 75
-                                            }
-                                        }
-                                    }
+                                "id": 28,
+                                "userString": "#usa_vehicles:_105mm_AP_T32",
+                                "icon": "ap",
+                                "price": 1000,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 150
                                 }
                             },
-                            "name": "105 mm Gun T254 Y VI"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 900,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    315.0,
+                                    315.0
+                                ],
+                                "id": 186,
+                                "userString": "#usa_vehicles:_105mm_HEAT_T_T384E3",
+                                "icon": "hc_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainHollowCharge",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 150
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 900,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    53.0,
+                                    53.0
+                                ],
+                                "id": 38,
+                                "userString": "#usa_vehicles:_105mm_HE_M11",
+                                "icon": "he_modern",
+                                "price": 680,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 105,
+                                "explosionRadius": 1.91,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 420,
+                                    "devices": 150
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.91,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 210,
+                                        "devices": 75
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "120 mm American British Gun",
@@ -687,140 +481,88 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_120mm_American_British_Gun",
-                            "tags": [],
-                            "level": 9,
-                            "price": 224000,
-                            "impulse": 0.68,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.19,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_large",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 9,
+                        "weight": 1610,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.9,
+                                "speed": 1000,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    243.0,
+                                    223.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 20,
-                            "reloadTime": 10,
-                            "maxAmmo": 22,
-                            "aimingTime": 2,
-                            "weight": 1610,
-                            "maxHealth": 210,
-                            "maxRegenHealth": 105,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_120mm_AP-T_M358": {
-                                    "defaultPortion": 0.9,
-                                    "speed": 1000,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        243.0,
-                                        223.0
-                                    ],
-                                    "generic": {
-                                        "id": 60,
-                                        "userString": "#usa_vehicles:_120mm_AP-T_M358",
-                                        "icon": "ap",
-                                        "price": 1060,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 400,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_120mm_HEAT-T_M469": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1000,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        300.0,
-                                        300.0
-                                    ],
-                                    "generic": {
-                                        "id": 61,
-                                        "userString": "#usa_vehicles:_120mm_HEAT-T_M469",
-                                        "icon": "hc_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeHollowCharge",
-                                        "damage": {
-                                            "armor": 400,
-                                            "devices": 165
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_120mm_HE_Shot": {
-                                    "defaultPortion": 0.1,
-                                    "speed": 900,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        60.0,
-                                        60.0
-                                    ],
-                                    "generic": {
-                                        "id": 59,
-                                        "userString": "#usa_vehicles:_120mm_HE_Shot",
-                                        "icon": "he_modern",
-                                        "price": 900,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 120,
-                                        "explosionRadius": 2.42,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 515,
-                                            "devices": 165
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.42,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 260,
-                                                "devices": 85
-                                            }
-                                        }
-                                    }
+                                "id": 60,
+                                "userString": "#usa_vehicles:_120mm_AP-T_M358",
+                                "icon": "ap",
+                                "price": 1060,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 400,
+                                    "devices": 165
                                 }
                             },
-                            "name": "120 mm American British Gun"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1000,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    300.0,
+                                    300.0
+                                ],
+                                "id": 61,
+                                "userString": "#usa_vehicles:_120mm_HEAT-T_M469",
+                                "icon": "hc_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeHollowCharge",
+                                "damage": {
+                                    "armor": 400,
+                                    "devices": 165
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.1,
+                                "speed": 900,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    60.0,
+                                    60.0
+                                ],
+                                "id": 59,
+                                "userString": "#usa_vehicles:_120mm_HE_Shot",
+                                "icon": "he_modern",
+                                "price": 900,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 120,
+                                "explosionRadius": 2.42,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 515,
+                                    "devices": 165
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.42,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 260,
+                                        "devices": 85
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -860,7 +602,8 @@
                     0.0
                 ],
                 "track_health": null,
-                "track_repaired_health": null
+                "track_repaired_health": null,
+                "level": 8
             },
             {
                 "name": "M-VI-Y B",
@@ -880,7 +623,8 @@
                     0.0
                 ],
                 "track_health": null,
-                "track_repaired_health": null
+                "track_repaired_health": null,
+                "level": 9
             }
         ],
         "engines": [

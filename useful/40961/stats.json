@@ -43,6 +43,7 @@
                 "id": "Turret_1_R201_IT_3",
                 "traverse": 34,
                 "view_range": 320,
+                "level": 4,
                 "guns": [
                     {
                         "name": "76 mm KT-IT",
@@ -59,141 +60,88 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#ussr_vehicles:_76mm_KT-IT",
-                            "tags": [],
-                            "level": 4,
-                            "price": 10450,
-                            "notInShop": "true",
-                            "impulse": 0.44,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.2,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 4,
+                        "weight": 540,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.8,
+                                "speed": 612,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    68.0,
+                                    62.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43,
-                            "reloadTime": 5.5,
-                            "maxAmmo": 70,
-                            "aimingTime": 2.3,
-                            "weight": 540,
-                            "maxHealth": 100,
-                            "maxRegenHealth": 50,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.43,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.15,
-                                "afterShot": 3.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_76mm_UBR-354IT": {
-                                    "defaultPortion": 0.8,
-                                    "speed": 612,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        68.0,
-                                        62.0
-                                    ],
-                                    "generic": {
-                                        "id": 207,
-                                        "userString": "#ussr_vehicles:_76mm_UBR-354IT",
-                                        "icon": "ap",
-                                        "price": 44,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 76,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 105
-                                        }
-                                    }
-                                },
-                                "_76mm_BP-354IT": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 700,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        100.0,
-                                        100.0
-                                    ],
-                                    "generic": {
-                                        "id": 208,
-                                        "userString": "#ussr_vehicles:_76mm_BP-354IT",
-                                        "icon": "hc_premium",
-                                        "price": 2000,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 76,
-                                        "isTracer": "true",
-                                        "effects": "mediumHollowCharge",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 105
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_76mm_UOF-354IT": {
-                                    "defaultPortion": 0.2,
-                                    "speed": 612,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        38.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 209,
-                                        "userString": "#ussr_vehicles:_76mm_UOF-354IT",
-                                        "icon": "he_modern",
-                                        "price": 56,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 76,
-                                        "explosionRadius": 1.09,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 164,
-                                            "devices": 105
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.09,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 80,
-                                                "devices": 55
-                                            }
-                                        }
-                                    }
+                                "id": 207,
+                                "userString": "#ussr_vehicles:_76mm_UBR-354IT",
+                                "icon": "ap",
+                                "price": 44,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 76,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 105
                                 }
                             },
-                            "name": "76 mm KT-IT"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 700,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    100.0,
+                                    100.0
+                                ],
+                                "id": 208,
+                                "userString": "#ussr_vehicles:_76mm_BP-354IT",
+                                "icon": "hc_premium",
+                                "price": 2000,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 76,
+                                "isTracer": "true",
+                                "effects": "mediumHollowCharge",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 105
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.2,
+                                "speed": 612,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    38.0,
+                                    38.0
+                                ],
+                                "id": 209,
+                                "userString": "#ussr_vehicles:_76mm_UOF-354IT",
+                                "icon": "he_modern",
+                                "price": 56,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 76,
+                                "explosionRadius": 1.09,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 164,
+                                    "devices": 105
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.09,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 80,
+                                        "devices": 55
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -233,7 +181,8 @@
                     0.0
                 ],
                 "track_health": 90,
-                "track_repaired_health": 70
+                "track_repaired_health": 70,
+                "level": 4
             }
         ],
         "engines": [

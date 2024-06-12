@@ -43,6 +43,7 @@
                 "id": "Turret_1_GB94_Centurion_Mk5-1_RAAC",
                 "traverse": 36,
                 "view_range": 400,
+                "level": 8,
                 "guns": [
                     {
                         "name": "OQF 20-pdr Gun Type B Barrel",
@@ -59,140 +60,87 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:_20pdr_Gun_Type_B_1",
-                            "tags": [],
-                            "level": 9,
-                            "price": 180000,
-                            "notInShop": "true",
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.2,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 9,
+                        "weight": 1282,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 1020,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    226.0,
+                                    211.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    12.5,
-                                    1.0,
-                                    12.5
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 40.25,
-                            "reloadTime": 3.25714285714286,
-                            "maxAmmo": 65,
-                            "aimingTime": 2.1,
-                            "weight": 1282,
-                            "maxHealth": 190,
-                            "maxRegenHealth": 95,
-                            "repairCost": 6,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.36,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.1,
-                                "afterShot": 3.5,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_20pdr_AP_Mk1": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 1020,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        226.0,
-                                        211.0
-                                    ],
-                                    "generic": {
-                                        "id": 45,
-                                        "userString": "#gb_vehicles:_20pdr_AP_Mk1",
-                                        "icon": "ap",
-                                        "price": 680,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 83.4,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 230,
-                                            "devices": 118
-                                        }
-                                    }
-                                },
-                                "_20pdr_APC_Mk2": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1275,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        258.0,
-                                        248.0
-                                    ],
-                                    "generic": {
-                                        "id": 46,
-                                        "userString": "#gb_vehicles:_20pdr_APC_Mk2",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 83.4,
-                                        "isTracer": "true",
-                                        "effects": "mediumAPCR",
-                                        "damage": {
-                                            "armor": 230,
-                                            "devices": 118
-                                        }
-                                    }
-                                },
-                                "_20pdr_HE_Mk3": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 1020,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        42.0,
-                                        42.0
-                                    ],
-                                    "generic": {
-                                        "id": 47,
-                                        "userString": "#gb_vehicles:_20pdr_HE_Mk3",
-                                        "icon": "he_modern",
-                                        "price": 170,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 83.4,
-                                        "explosionRadius": 1.28,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 280,
-                                            "devices": 118
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.28,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 140,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 45,
+                                "userString": "#gb_vehicles:_20pdr_AP_Mk1",
+                                "icon": "ap",
+                                "price": 680,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 83.4,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 230,
+                                    "devices": 118
                                 }
                             },
-                            "name": "OQF 20-pdr Gun Type B Barrel"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1275,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    258.0,
+                                    248.0
+                                ],
+                                "id": 46,
+                                "userString": "#gb_vehicles:_20pdr_APC_Mk2",
+                                "icon": "ap_cr_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 83.4,
+                                "isTracer": "true",
+                                "effects": "mediumAPCR",
+                                "damage": {
+                                    "armor": 230,
+                                    "devices": 118
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 1020,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    42.0,
+                                    42.0
+                                ],
+                                "id": 47,
+                                "userString": "#gb_vehicles:_20pdr_HE_Mk3",
+                                "icon": "he_modern",
+                                "price": 170,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 83.4,
+                                "explosionRadius": 1.28,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 280,
+                                    "devices": 118
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.28,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 140,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -232,7 +180,8 @@
                     0.0
                 ],
                 "track_health": 200,
-                "track_repaired_health": 150
+                "track_repaired_health": 150,
+                "level": 8
             }
         ],
         "engines": [

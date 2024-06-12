@@ -41,6 +41,7 @@
                 "id": "Valentine_LL",
                 "traverse": 48.13,
                 "view_range": 350,
+                "level": 4,
                 "guns": [
                     {
                         "name": "45 mm 20KL",
@@ -57,140 +58,87 @@
                             "after_shot": null,
                             "while_damaged": null
                         },
-                        "generic": {
-                            "userString": "#ussr_vehicles:_45mm_20KL",
-                            "tags": [],
-                            "level": 2,
-                            "price": 2530,
-                            "notInShop": "true",
-                            "impulse": 0.24,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.32,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 2,
+                        "weight": 250,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 757,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    51.0,
+                                    38.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 2.28571428571429,
-                            "maxAmmo": 84,
-                            "aimingTime": 1.71428571428571,
-                            "weight": 250,
-                            "maxHealth": 68,
-                            "maxRegenHealth": 34,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.411428571428571,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 3.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_45mm_UBR-240A": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 757,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        51.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 13,
-                                        "userString": "#ussr_vehicles:_45mm_UBR-240A",
-                                        "icon": "ap",
-                                        "price": 14,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 45,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 47,
-                                            "devices": 61
-                                        }
-                                    }
-                                },
-                                "_45mm_UBR-240PA": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 956,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        84.0,
-                                        45.0
-                                    ],
-                                    "generic": {
-                                        "id": 14,
-                                        "userString": "#ussr_vehicles:_45mm_UBR-240PA",
-                                        "icon": "ap_cr_premium",
-                                        "price": 800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 45,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 47,
-                                            "devices": 61
-                                        }
-                                    }
-                                },
-                                "_45mm_UOF-240A": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 757,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        23.0,
-                                        23.0
-                                    ],
-                                    "generic": {
-                                        "id": 15,
-                                        "userString": "#ussr_vehicles:_45mm_UOF-240A",
-                                        "icon": "he_modern",
-                                        "price": 14,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 45,
-                                        "explosionRadius": 0.43,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 62,
-                                            "devices": 61
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.43,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 30,
-                                                "devices": 30
-                                            }
-                                        }
-                                    }
+                                "id": 13,
+                                "userString": "#ussr_vehicles:_45mm_UBR-240A",
+                                "icon": "ap",
+                                "price": 14,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 45,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 47,
+                                    "devices": 61
                                 }
                             },
-                            "name": "45 mm 20KL"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 956,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    84.0,
+                                    45.0
+                                ],
+                                "id": 14,
+                                "userString": "#ussr_vehicles:_45mm_UBR-240PA",
+                                "icon": "ap_cr_premium",
+                                "price": 800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 45,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 47,
+                                    "devices": 61
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 757,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    23.0,
+                                    23.0
+                                ],
+                                "id": 15,
+                                "userString": "#ussr_vehicles:_45mm_UOF-240A",
+                                "icon": "he_modern",
+                                "price": 14,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 45,
+                                "explosionRadius": 0.43,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 62,
+                                    "devices": 61
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.43,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 30,
+                                        "devices": 30
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -230,7 +178,8 @@
                     0.0
                 ],
                 "track_health": 100,
-                "track_repaired_health": 75
+                "track_repaired_health": 75,
+                "level": 4
             }
         ],
         "engines": [

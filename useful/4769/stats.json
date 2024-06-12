@@ -43,6 +43,7 @@
                 "id": "Turret_1_It31_CC_67_B",
                 "traverse": 20,
                 "view_range": 350,
+                "level": 7,
                 "guns": [
                     {
                         "name": "Cannone da 105/56",
@@ -62,139 +63,87 @@
                             "after_shot": 4,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#italy_vehicles:_105mm_Cannone_Da_105_56",
-                            "tags": [],
-                            "level": 8,
-                            "price": 94000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_large_mb",
-                            "reloadEffect": "reload_automat_reloading_85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 8,
+                        "weight": 1950,
+                        "shells": [
+                            {
+                                "defaultPortion": 1,
+                                "speed": 903,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    175.0,
+                                    165.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 20,
-                            "reloadTime": 7.5,
-                            "maxAmmo": 60,
-                            "aimingTime": 2,
-                            "weight": 1950,
-                            "maxHealth": 150,
-                            "maxRegenHealth": 75,
-                            "repairCost": 7,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.05,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_105mm_c_p_105_58_AP": {
-                                    "defaultPortion": 1,
-                                    "speed": 903,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        175.0,
-                                        165.0
-                                    ],
-                                    "generic": {
-                                        "id": 62,
-                                        "userString": "#italy_vehicles:_105mm_c_p_105_58_AP",
-                                        "icon": "ap",
-                                        "price": 540,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_c_p_105_58_APCR": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1186,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        212.0,
-                                        183.0
-                                    ],
-                                    "generic": {
-                                        "id": 63,
-                                        "userString": "#italy_vehicles:_105mm_c_p_105_58_APCR",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_HE_M113": {
-                                    "defaultPortion": 0,
-                                    "speed": 827,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        53.0,
-                                        53.0
-                                    ],
-                                    "generic": {
-                                        "id": 52,
-                                        "userString": "#italy_vehicles:_105mm_HE_M113",
-                                        "icon": "he_modern",
-                                        "price": 750,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 105,
-                                        "explosionRadius": 1.91,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 420,
-                                            "devices": 150
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.91,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 210,
-                                                "devices": 75
-                                            }
-                                        }
-                                    }
+                                "id": 62,
+                                "userString": "#italy_vehicles:_105mm_c_p_105_58_AP",
+                                "icon": "ap",
+                                "price": 540,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 150
                                 }
                             },
-                            "name": "Cannone da 105/56"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1186,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    212.0,
+                                    183.0
+                                ],
+                                "id": 63,
+                                "userString": "#italy_vehicles:_105mm_c_p_105_58_APCR",
+                                "icon": "ap_cr_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 150
+                                }
+                            },
+                            {
+                                "defaultPortion": 0,
+                                "speed": 827,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    53.0,
+                                    53.0
+                                ],
+                                "id": 52,
+                                "userString": "#italy_vehicles:_105mm_HE_M113",
+                                "icon": "he_modern",
+                                "price": 750,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 105,
+                                "explosionRadius": 1.91,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 420,
+                                    "devices": 150
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.91,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 210,
+                                        "devices": 75
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "Cannone da 105/58",
@@ -214,139 +163,87 @@
                             "after_shot": 4,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#italy_vehicles:_105mm_Cannone_da_105_58",
-                            "tags": [],
-                            "level": 8,
-                            "price": 98000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_large",
-                            "reloadEffect": "reload_automat_reloading_85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 8,
+                        "weight": 2000,
+                        "shells": [
+                            {
+                                "defaultPortion": 1,
+                                "speed": 903,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    200.0,
+                                    180.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 20,
-                            "reloadTime": 7.5,
-                            "maxAmmo": 60,
-                            "aimingTime": 2,
-                            "weight": 2000,
-                            "maxHealth": 150,
-                            "maxRegenHealth": 75,
-                            "repairCost": 7,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.05,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_105mm_c_p_105_58_AP": {
-                                    "defaultPortion": 1,
-                                    "speed": 903,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        200.0,
-                                        180.0
-                                    ],
-                                    "generic": {
-                                        "id": 62,
-                                        "userString": "#italy_vehicles:_105mm_c_p_105_58_AP",
-                                        "icon": "ap",
-                                        "price": 540,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_c_p_105_58_APCR": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1186,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        230.0,
-                                        210.0
-                                    ],
-                                    "generic": {
-                                        "id": 63,
-                                        "userString": "#italy_vehicles:_105mm_c_p_105_58_APCR",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_HE_M113": {
-                                    "defaultPortion": 0,
-                                    "speed": 827,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        105.0,
-                                        105.0
-                                    ],
-                                    "generic": {
-                                        "id": 52,
-                                        "userString": "#italy_vehicles:_105mm_HE_M113",
-                                        "icon": "he_modern",
-                                        "price": 750,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 105,
-                                        "explosionRadius": 1.91,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 420,
-                                            "devices": 150
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.91,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 210,
-                                                "devices": 75
-                                            }
-                                        }
-                                    }
+                                "id": 62,
+                                "userString": "#italy_vehicles:_105mm_c_p_105_58_AP",
+                                "icon": "ap",
+                                "price": 540,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 150
                                 }
                             },
-                            "name": "Cannone da 105/58"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1186,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    230.0,
+                                    210.0
+                                ],
+                                "id": 63,
+                                "userString": "#italy_vehicles:_105mm_c_p_105_58_APCR",
+                                "icon": "ap_cr_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 150
+                                }
+                            },
+                            {
+                                "defaultPortion": 0,
+                                "speed": 827,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    105.0,
+                                    105.0
+                                ],
+                                "id": 52,
+                                "userString": "#italy_vehicles:_105mm_HE_M113",
+                                "icon": "he_modern",
+                                "price": 750,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 105,
+                                "explosionRadius": 1.91,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 420,
+                                    "devices": 150
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.91,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 210,
+                                        "devices": 75
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "Cannone da 105/73",
@@ -366,139 +263,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#italy_vehicles:_105mm_Cannone_Da_105_73",
-                            "tags": [],
-                            "level": 8,
-                            "price": 105000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_large",
-                            "reloadEffect": "reload_automat_reloading_85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 8,
+                        "weight": 2000,
+                        "shells": [
+                            {
+                                "defaultPortion": 1,
+                                "speed": 1147,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    220.0,
+                                    196.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 20,
-                            "reloadTime": 7.5,
-                            "maxAmmo": 60,
-                            "aimingTime": 2,
-                            "weight": 2000,
-                            "maxHealth": 150,
-                            "maxRegenHealth": 75,
-                            "repairCost": 7,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.05,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_105mm_AP_T_M181": {
-                                    "defaultPortion": 1,
-                                    "speed": 1147,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        220.0,
-                                        196.0
-                                    ],
-                                    "generic": {
-                                        "id": 44,
-                                        "userString": "#italy_vehicles:_105mm_AP_T_M181",
-                                        "icon": "ap",
-                                        "price": 765,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_HVAPDS_T_M279": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1386,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        242.0,
-                                        228.0
-                                    ],
-                                    "generic": {
-                                        "id": 45,
-                                        "userString": "#italy_vehicles:_105mm_HVAPDS_T_M279",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_HE_M393": {
-                                    "defaultPortion": 0,
-                                    "speed": 827,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        105.0,
-                                        105.0
-                                    ],
-                                    "generic": {
-                                        "id": 46,
-                                        "userString": "#italy_vehicles:_105mm_HE_M393",
-                                        "icon": "he_modern",
-                                        "price": 815,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 105,
-                                        "explosionRadius": 1.91,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 420,
-                                            "devices": 150
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.91,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 210,
-                                                "devices": 75
-                                            }
-                                        }
-                                    }
+                                "id": 44,
+                                "userString": "#italy_vehicles:_105mm_AP_T_M181",
+                                "icon": "ap",
+                                "price": 765,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 150
                                 }
                             },
-                            "name": "Cannone da 105/73"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1386,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    242.0,
+                                    228.0
+                                ],
+                                "id": 45,
+                                "userString": "#italy_vehicles:_105mm_HVAPDS_T_M279",
+                                "icon": "ap_cr_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 150
+                                }
+                            },
+                            {
+                                "defaultPortion": 0,
+                                "speed": 827,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    105.0,
+                                    105.0
+                                ],
+                                "id": 46,
+                                "userString": "#italy_vehicles:_105mm_HE_M393",
+                                "icon": "he_modern",
+                                "price": 815,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 105,
+                                "explosionRadius": 1.91,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 420,
+                                    "devices": 150
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.91,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 210,
+                                        "devices": 75
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -518,6 +363,7 @@
                 "id": "Turret_2_It31_CC_67_B",
                 "traverse": 22,
                 "view_range": 360,
+                "level": 8,
                 "guns": [
                     {
                         "name": "Cannone da 105/56",
@@ -537,139 +383,87 @@
                             "after_shot": 4,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#italy_vehicles:_105mm_Cannone_Da_105_56",
-                            "tags": [],
-                            "level": 8,
-                            "price": 94000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_large_mb",
-                            "reloadEffect": "reload_automat_reloading_85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 8,
+                        "weight": 1950,
+                        "shells": [
+                            {
+                                "defaultPortion": 1,
+                                "speed": 903,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    175.0,
+                                    165.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 20,
-                            "reloadTime": 7.5,
-                            "maxAmmo": 60,
-                            "aimingTime": 2,
-                            "weight": 1950,
-                            "maxHealth": 150,
-                            "maxRegenHealth": 75,
-                            "repairCost": 7,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.05,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_105mm_c_p_105_58_AP": {
-                                    "defaultPortion": 1,
-                                    "speed": 903,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        175.0,
-                                        165.0
-                                    ],
-                                    "generic": {
-                                        "id": 62,
-                                        "userString": "#italy_vehicles:_105mm_c_p_105_58_AP",
-                                        "icon": "ap",
-                                        "price": 540,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_c_p_105_58_APCR": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1186,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        212.0,
-                                        183.0
-                                    ],
-                                    "generic": {
-                                        "id": 63,
-                                        "userString": "#italy_vehicles:_105mm_c_p_105_58_APCR",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_HE_M113": {
-                                    "defaultPortion": 0,
-                                    "speed": 827,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        53.0,
-                                        53.0
-                                    ],
-                                    "generic": {
-                                        "id": 52,
-                                        "userString": "#italy_vehicles:_105mm_HE_M113",
-                                        "icon": "he_modern",
-                                        "price": 750,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 105,
-                                        "explosionRadius": 1.91,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 420,
-                                            "devices": 150
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.91,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 210,
-                                                "devices": 75
-                                            }
-                                        }
-                                    }
+                                "id": 62,
+                                "userString": "#italy_vehicles:_105mm_c_p_105_58_AP",
+                                "icon": "ap",
+                                "price": 540,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 150
                                 }
                             },
-                            "name": "Cannone da 105/56"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1186,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    212.0,
+                                    183.0
+                                ],
+                                "id": 63,
+                                "userString": "#italy_vehicles:_105mm_c_p_105_58_APCR",
+                                "icon": "ap_cr_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 150
+                                }
+                            },
+                            {
+                                "defaultPortion": 0,
+                                "speed": 827,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    53.0,
+                                    53.0
+                                ],
+                                "id": 52,
+                                "userString": "#italy_vehicles:_105mm_HE_M113",
+                                "icon": "he_modern",
+                                "price": 750,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 105,
+                                "explosionRadius": 1.91,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 420,
+                                    "devices": 150
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.91,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 210,
+                                        "devices": 75
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "Cannone da 105/58",
@@ -689,139 +483,87 @@
                             "after_shot": 4,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#italy_vehicles:_105mm_Cannone_da_105_58",
-                            "tags": [],
-                            "level": 8,
-                            "price": 98000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_large",
-                            "reloadEffect": "reload_automat_reloading_85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 8,
+                        "weight": 2000,
+                        "shells": [
+                            {
+                                "defaultPortion": 1,
+                                "speed": 903,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    200.0,
+                                    180.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 20,
-                            "reloadTime": 7.5,
-                            "maxAmmo": 60,
-                            "aimingTime": 2,
-                            "weight": 2000,
-                            "maxHealth": 150,
-                            "maxRegenHealth": 75,
-                            "repairCost": 7,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.05,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_105mm_c_p_105_58_AP": {
-                                    "defaultPortion": 1,
-                                    "speed": 903,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        200.0,
-                                        180.0
-                                    ],
-                                    "generic": {
-                                        "id": 62,
-                                        "userString": "#italy_vehicles:_105mm_c_p_105_58_AP",
-                                        "icon": "ap",
-                                        "price": 540,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_c_p_105_58_APCR": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1186,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        230.0,
-                                        210.0
-                                    ],
-                                    "generic": {
-                                        "id": 63,
-                                        "userString": "#italy_vehicles:_105mm_c_p_105_58_APCR",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_HE_M113": {
-                                    "defaultPortion": 0,
-                                    "speed": 827,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        105.0,
-                                        105.0
-                                    ],
-                                    "generic": {
-                                        "id": 52,
-                                        "userString": "#italy_vehicles:_105mm_HE_M113",
-                                        "icon": "he_modern",
-                                        "price": 750,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 105,
-                                        "explosionRadius": 1.91,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 420,
-                                            "devices": 150
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.91,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 210,
-                                                "devices": 75
-                                            }
-                                        }
-                                    }
+                                "id": 62,
+                                "userString": "#italy_vehicles:_105mm_c_p_105_58_AP",
+                                "icon": "ap",
+                                "price": 540,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 150
                                 }
                             },
-                            "name": "Cannone da 105/58"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1186,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    230.0,
+                                    210.0
+                                ],
+                                "id": 63,
+                                "userString": "#italy_vehicles:_105mm_c_p_105_58_APCR",
+                                "icon": "ap_cr_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 150
+                                }
+                            },
+                            {
+                                "defaultPortion": 0,
+                                "speed": 827,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    105.0,
+                                    105.0
+                                ],
+                                "id": 52,
+                                "userString": "#italy_vehicles:_105mm_HE_M113",
+                                "icon": "he_modern",
+                                "price": 750,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 105,
+                                "explosionRadius": 1.91,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 420,
+                                    "devices": 150
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.91,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 210,
+                                        "devices": 75
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "Cannone da 105/73",
@@ -841,139 +583,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#italy_vehicles:_105mm_Cannone_Da_105_73",
-                            "tags": [],
-                            "level": 8,
-                            "price": 105000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_large",
-                            "reloadEffect": "reload_automat_reloading_85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 8,
+                        "weight": 2000,
+                        "shells": [
+                            {
+                                "defaultPortion": 1,
+                                "speed": 1147,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    220.0,
+                                    196.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 20,
-                            "reloadTime": 7.5,
-                            "maxAmmo": 60,
-                            "aimingTime": 2,
-                            "weight": 2000,
-                            "maxHealth": 150,
-                            "maxRegenHealth": 75,
-                            "repairCost": 7,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.05,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_105mm_AP_T_M181": {
-                                    "defaultPortion": 1,
-                                    "speed": 1147,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        220.0,
-                                        196.0
-                                    ],
-                                    "generic": {
-                                        "id": 44,
-                                        "userString": "#italy_vehicles:_105mm_AP_T_M181",
-                                        "icon": "ap",
-                                        "price": 765,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_HVAPDS_T_M279": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1386,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        242.0,
-                                        228.0
-                                    ],
-                                    "generic": {
-                                        "id": 45,
-                                        "userString": "#italy_vehicles:_105mm_HVAPDS_T_M279",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_HE_M393": {
-                                    "defaultPortion": 0,
-                                    "speed": 827,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        105.0,
-                                        105.0
-                                    ],
-                                    "generic": {
-                                        "id": 46,
-                                        "userString": "#italy_vehicles:_105mm_HE_M393",
-                                        "icon": "he_modern",
-                                        "price": 815,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 105,
-                                        "explosionRadius": 1.91,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 420,
-                                            "devices": 150
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.91,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 210,
-                                                "devices": 75
-                                            }
-                                        }
-                                    }
+                                "id": 44,
+                                "userString": "#italy_vehicles:_105mm_AP_T_M181",
+                                "icon": "ap",
+                                "price": 765,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 150
                                 }
                             },
-                            "name": "Cannone da 105/73"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1386,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    242.0,
+                                    228.0
+                                ],
+                                "id": 45,
+                                "userString": "#italy_vehicles:_105mm_HVAPDS_T_M279",
+                                "icon": "ap_cr_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 150
+                                }
+                            },
+                            {
+                                "defaultPortion": 0,
+                                "speed": 827,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    105.0,
+                                    105.0
+                                ],
+                                "id": 46,
+                                "userString": "#italy_vehicles:_105mm_HE_M393",
+                                "icon": "he_modern",
+                                "price": 815,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 105,
+                                "explosionRadius": 1.91,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 420,
+                                    "devices": 150
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.91,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 210,
+                                        "devices": 75
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "Cannone da 120/59",
@@ -993,140 +683,88 @@
                             "after_shot": 4,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#italy_vehicles:_120mm_Cannone_Da_120_59",
-                            "tags": [],
-                            "level": 8,
-                            "price": 130000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_large",
-                            "reloadEffect": "reload_automat_reloading_115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 8,
+                        "weight": 2000,
+                        "shells": [
+                            {
+                                "defaultPortion": 1,
+                                "speed": 1075,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    226.0,
+                                    210.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 20,
-                            "reloadTime": 7.5,
-                            "maxAmmo": 60,
-                            "aimingTime": 2,
-                            "weight": 2000,
-                            "maxHealth": 208,
-                            "maxRegenHealth": 104,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.05,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_120mm_AP_T_M365": {
-                                    "defaultPortion": 1,
-                                    "speed": 1075,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        226.0,
-                                        210.0
-                                    ],
-                                    "generic": {
-                                        "id": 47,
-                                        "userString": "#italy_vehicles:_120mm_AP_T_M365",
-                                        "icon": "ap",
-                                        "price": 970,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 400,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_120mm_HEAT_T_M469": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 902,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        300.0,
-                                        300.0
-                                    ],
-                                    "generic": {
-                                        "id": 48,
-                                        "userString": "#italy_vehicles:_120mm_HEAT_T_M469",
-                                        "icon": "hc_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeHollowCharge",
-                                        "damage": {
-                                            "armor": 400,
-                                            "devices": 165
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_120mm_HE_M356": {
-                                    "defaultPortion": 0,
-                                    "speed": 902,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        120.0,
-                                        120.0
-                                    ],
-                                    "generic": {
-                                        "id": 49,
-                                        "userString": "#italy_vehicles:_120mm_HE_M356",
-                                        "icon": "he_modern",
-                                        "price": 1240,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 120,
-                                        "explosionRadius": 2.42,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 515,
-                                            "devices": 165
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.42,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 260,
-                                                "devices": 85
-                                            }
-                                        }
-                                    }
+                                "id": 47,
+                                "userString": "#italy_vehicles:_120mm_AP_T_M365",
+                                "icon": "ap",
+                                "price": 970,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 400,
+                                    "devices": 165
                                 }
                             },
-                            "name": "Cannone da 120/59"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 902,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    300.0,
+                                    300.0
+                                ],
+                                "id": 48,
+                                "userString": "#italy_vehicles:_120mm_HEAT_T_M469",
+                                "icon": "hc_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeHollowCharge",
+                                "damage": {
+                                    "armor": 400,
+                                    "devices": 165
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0,
+                                "speed": 902,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    120.0,
+                                    120.0
+                                ],
+                                "id": 49,
+                                "userString": "#italy_vehicles:_120mm_HE_M356",
+                                "icon": "he_modern",
+                                "price": 1240,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 120,
+                                "explosionRadius": 2.42,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 515,
+                                    "devices": 165
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.42,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 260,
+                                        "devices": 85
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -1166,7 +804,8 @@
                     0.0
                 ],
                 "track_health": 200,
-                "track_repaired_health": 150
+                "track_repaired_health": 150,
+                "level": 7
             },
             {
                 "name": "CC-67B tipo B",
@@ -1186,7 +825,8 @@
                     0.0
                 ],
                 "track_health": 200,
-                "track_repaired_health": 150
+                "track_repaired_health": 150,
+                "level": 8
             }
         ],
         "engines": [

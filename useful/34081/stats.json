@@ -43,6 +43,7 @@
                 "id": "Turret_1_A149_AMBT",
                 "traverse": 28,
                 "view_range": 380,
+                "level": 8,
                 "guns": [
                     {
                         "name": "105 mm Gun M68P",
@@ -62,140 +63,87 @@
                             "after_shot": 7,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_105mm_Gun_M68_2",
-                            "tags": [],
-                            "level": 9,
-                            "price": 170000,
-                            "notInShop": "true",
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_large",
-                            "reloadEffect": "autoloader_reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 9,
+                        "weight": 2100,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.6,
+                                "speed": 1278,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    215.0,
+                                    184.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35,
-                            "reloadTime": 8,
-                            "maxAmmo": 39,
-                            "aimingTime": 2,
-                            "weight": 2100,
-                            "maxHealth": 208,
-                            "maxRegenHealth": 104,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.05,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_105mm_APCR_M392A2": {
-                                    "defaultPortion": 0.6,
-                                    "speed": 1278,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        215.0,
-                                        184.0
-                                    ],
-                                    "generic": {
-                                        "id": 173,
-                                        "userString": "#usa_vehicles:_105mm_APCR_M392A2",
-                                        "icon": "ap_cr",
-                                        "price": 1005,
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 360,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_APCR_M735": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1492,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        278.0,
-                                        249.0
-                                    ],
-                                    "generic": {
-                                        "id": 174,
-                                        "userString": "#usa_vehicles:_105mm_APCR_M735",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 360,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_HE_M39A1": {
-                                    "defaultPortion": 0.4,
-                                    "speed": 732,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        53.0,
-                                        53.0
-                                    ],
-                                    "generic": {
-                                        "id": 175,
-                                        "userString": "#usa_vehicles:_105mm_HE_M39A1",
-                                        "icon": "he_modern",
-                                        "price": 765,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 105,
-                                        "explosionRadius": 1.91,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 420,
-                                            "devices": 150
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.91,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 220,
-                                                "devices": 75
-                                            }
-                                        }
-                                    }
+                                "id": 173,
+                                "userString": "#usa_vehicles:_105mm_APCR_M392A2",
+                                "icon": "ap_cr",
+                                "price": 1005,
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 360,
+                                    "devices": 150
                                 }
                             },
-                            "name": "105 mm Gun M68P"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1492,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    278.0,
+                                    249.0
+                                ],
+                                "id": 174,
+                                "userString": "#usa_vehicles:_105mm_APCR_M735",
+                                "icon": "ap_cr_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 360,
+                                    "devices": 150
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.4,
+                                "speed": 732,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    53.0,
+                                    53.0
+                                ],
+                                "id": 175,
+                                "userString": "#usa_vehicles:_105mm_HE_M39A1",
+                                "icon": "he_modern",
+                                "price": 765,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 105,
+                                "explosionRadius": 1.91,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 420,
+                                    "devices": 150
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.91,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 220,
+                                        "devices": 75
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -235,7 +183,8 @@
                     0.0
                 ],
                 "track_health": 200,
-                "track_repaired_health": 150
+                "track_repaired_health": 150,
+                "level": 8
             }
         ],
         "engines": [

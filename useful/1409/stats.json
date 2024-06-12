@@ -43,6 +43,7 @@
                 "id": "Turret_1_S07_Strv_74",
                 "traverse": 32,
                 "view_range": 350,
+                "level": 5,
                 "guns": [
                     {
                         "name": "7,5 cm lvkan m/36",
@@ -62,139 +63,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#sweden_vehicles:_75mm_lvkan_m_36",
-                            "tags": [],
-                            "level": 6,
-                            "price": 58200,
-                            "impulse": 0.46,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.2,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -15.0,
-                                    1.0,
-                                    -15.0
+                        "level": 6,
+                        "weight": 1035,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 840,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    120.0,
+                                    107.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    15.0,
-                                    1.0,
-                                    15.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35.0,
-                            "reloadTime": 6,
-                            "maxAmmo": 60,
-                            "aimingTime": 2.3,
-                            "weight": 1035,
-                            "maxHealth": 130,
-                            "maxRegenHealth": 65,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_75mm_slpprj_m_41": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 840,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        120.0,
-                                        107.0
-                                    ],
-                                    "generic": {
-                                        "id": 30,
-                                        "userString": "#sweden_vehicles:_75mm_slpprj_m_41",
-                                        "icon": "ap",
-                                        "price": 115,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 150,
-                                            "devices": 105
-                                        }
-                                    }
-                                },
-                                "_75mm_slpgr_fm_43": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 925,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        148.0,
-                                        128.0
-                                    ],
-                                    "generic": {
-                                        "id": 31,
-                                        "userString": "#sweden_vehicles:_75mm_slpgr_fm_43",
-                                        "icon": "ap_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 150,
-                                            "devices": 105
-                                        }
-                                    }
-                                },
-                                "_75mm_sgr_m_38": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 826,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        38.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 2,
-                                        "userString": "#sweden_vehicles:_75mm_sgr_m_38",
-                                        "icon": "he_modern",
-                                        "price": 90,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 75,
-                                        "explosionRadius": 1.06,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 185,
-                                            "devices": 105
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.06,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 95,
-                                                "devices": 55
-                                            }
-                                        }
-                                    }
+                                "id": 30,
+                                "userString": "#sweden_vehicles:_75mm_slpprj_m_41",
+                                "icon": "ap",
+                                "price": 115,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 150,
+                                    "devices": 105
                                 }
                             },
-                            "name": "7,5 cm lvkan m/36"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 925,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    148.0,
+                                    128.0
+                                ],
+                                "id": 31,
+                                "userString": "#sweden_vehicles:_75mm_slpgr_fm_43",
+                                "icon": "ap_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 150,
+                                    "devices": 105
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 826,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    38.0,
+                                    38.0
+                                ],
+                                "id": 2,
+                                "userString": "#sweden_vehicles:_75mm_sgr_m_38",
+                                "icon": "he_modern",
+                                "price": 90,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 75,
+                                "explosionRadius": 1.06,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 185,
+                                    "devices": 105
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.06,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 95,
+                                        "devices": 55
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "7,5 cm kan strv 74",
@@ -214,139 +163,87 @@
                             "after_shot": 3,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#sweden_vehicles:_75mm_kan_strv_74_R",
-                            "tags": [],
-                            "level": 6,
-                            "price": 63700,
-                            "impulse": 0.46,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.2,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -15.0,
-                                    1.0,
-                                    -15.0
+                        "level": 6,
+                        "weight": 1035,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 925,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    148.0,
+                                    128.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    15.0,
-                                    1.0,
-                                    15.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35.0,
-                            "reloadTime": 6,
-                            "maxAmmo": 60,
-                            "aimingTime": 2.3,
-                            "weight": 1035,
-                            "maxHealth": 130,
-                            "maxRegenHealth": 65,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_75mm_slpgr_m_43": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 925,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        148.0,
-                                        128.0
-                                    ],
-                                    "generic": {
-                                        "id": 0,
-                                        "userString": "#sweden_vehicles:_75mm_slpgr_m_43",
-                                        "icon": "ap",
-                                        "price": 145,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 150,
-                                            "devices": 105
-                                        }
-                                    }
-                                },
-                                "_75mm_slpprj_m_49": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1160,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        200.0,
-                                        175.0
-                                    ],
-                                    "generic": {
-                                        "id": 1,
-                                        "userString": "#sweden_vehicles:_75mm_slpprj_m_49",
-                                        "icon": "ap_cr_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumAPCR",
-                                        "damage": {
-                                            "armor": 150,
-                                            "devices": 105
-                                        }
-                                    }
-                                },
-                                "_75mm_sgr_m_38": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 840,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        38.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 2,
-                                        "userString": "#sweden_vehicles:_75mm_sgr_m_38",
-                                        "icon": "he_modern",
-                                        "price": 90,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 75,
-                                        "explosionRadius": 1.06,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 185,
-                                            "devices": 105
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.06,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 95,
-                                                "devices": 55
-                                            }
-                                        }
-                                    }
+                                "id": 0,
+                                "userString": "#sweden_vehicles:_75mm_slpgr_m_43",
+                                "icon": "ap",
+                                "price": 145,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 150,
+                                    "devices": 105
                                 }
                             },
-                            "name": "7,5 cm kan strv 74"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1160,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    200.0,
+                                    175.0
+                                ],
+                                "id": 1,
+                                "userString": "#sweden_vehicles:_75mm_slpprj_m_49",
+                                "icon": "ap_cr_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumAPCR",
+                                "damage": {
+                                    "armor": 150,
+                                    "devices": 105
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 840,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    38.0,
+                                    38.0
+                                ],
+                                "id": 2,
+                                "userString": "#sweden_vehicles:_75mm_sgr_m_38",
+                                "icon": "he_modern",
+                                "price": 90,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 75,
+                                "explosionRadius": 1.06,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 185,
+                                    "devices": 105
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.06,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 95,
+                                        "devices": 55
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -366,6 +263,7 @@
                 "id": "Turret_2_S07_Strv_74",
                 "traverse": 36,
                 "view_range": 360,
+                "level": 6,
                 "guns": [
                     {
                         "name": "7,5 cm lvkan m/36",
@@ -385,139 +283,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#sweden_vehicles:_75mm_lvkan_m_36",
-                            "tags": [],
-                            "level": 6,
-                            "price": 58200,
-                            "impulse": 0.46,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.2,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -15.0,
-                                    1.0,
-                                    -15.0
+                        "level": 6,
+                        "weight": 1035,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 840,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    120.0,
+                                    107.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    15.0,
-                                    1.0,
-                                    15.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35.0,
-                            "reloadTime": 6,
-                            "maxAmmo": 60,
-                            "aimingTime": 2.3,
-                            "weight": 1035,
-                            "maxHealth": 130,
-                            "maxRegenHealth": 65,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_75mm_slpprj_m_41": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 840,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        120.0,
-                                        107.0
-                                    ],
-                                    "generic": {
-                                        "id": 30,
-                                        "userString": "#sweden_vehicles:_75mm_slpprj_m_41",
-                                        "icon": "ap",
-                                        "price": 115,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 150,
-                                            "devices": 105
-                                        }
-                                    }
-                                },
-                                "_75mm_slpgr_fm_43": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 925,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        148.0,
-                                        128.0
-                                    ],
-                                    "generic": {
-                                        "id": 31,
-                                        "userString": "#sweden_vehicles:_75mm_slpgr_fm_43",
-                                        "icon": "ap_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 150,
-                                            "devices": 105
-                                        }
-                                    }
-                                },
-                                "_75mm_sgr_m_38": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 826,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        38.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 2,
-                                        "userString": "#sweden_vehicles:_75mm_sgr_m_38",
-                                        "icon": "he_modern",
-                                        "price": 90,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 75,
-                                        "explosionRadius": 1.06,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 185,
-                                            "devices": 105
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.06,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 95,
-                                                "devices": 55
-                                            }
-                                        }
-                                    }
+                                "id": 30,
+                                "userString": "#sweden_vehicles:_75mm_slpprj_m_41",
+                                "icon": "ap",
+                                "price": 115,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 150,
+                                    "devices": 105
                                 }
                             },
-                            "name": "7,5 cm lvkan m/36"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 925,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    148.0,
+                                    128.0
+                                ],
+                                "id": 31,
+                                "userString": "#sweden_vehicles:_75mm_slpgr_fm_43",
+                                "icon": "ap_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 150,
+                                    "devices": 105
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 826,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    38.0,
+                                    38.0
+                                ],
+                                "id": 2,
+                                "userString": "#sweden_vehicles:_75mm_sgr_m_38",
+                                "icon": "he_modern",
+                                "price": 90,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 75,
+                                "explosionRadius": 1.06,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 185,
+                                    "devices": 105
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.06,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 95,
+                                        "devices": 55
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "7,5 cm kan strv 74",
@@ -537,139 +383,87 @@
                             "after_shot": 3,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#sweden_vehicles:_75mm_kan_strv_74_R",
-                            "tags": [],
-                            "level": 6,
-                            "price": 63700,
-                            "impulse": 0.46,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.2,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -15.0,
-                                    1.0,
-                                    -15.0
+                        "level": 6,
+                        "weight": 1035,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 925,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    148.0,
+                                    128.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    15.0,
-                                    1.0,
-                                    15.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35.0,
-                            "reloadTime": 6,
-                            "maxAmmo": 60,
-                            "aimingTime": 2.3,
-                            "weight": 1035,
-                            "maxHealth": 130,
-                            "maxRegenHealth": 65,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_75mm_slpgr_m_43": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 925,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        148.0,
-                                        128.0
-                                    ],
-                                    "generic": {
-                                        "id": 0,
-                                        "userString": "#sweden_vehicles:_75mm_slpgr_m_43",
-                                        "icon": "ap",
-                                        "price": 145,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 150,
-                                            "devices": 105
-                                        }
-                                    }
-                                },
-                                "_75mm_slpprj_m_49": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1160,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        200.0,
-                                        175.0
-                                    ],
-                                    "generic": {
-                                        "id": 1,
-                                        "userString": "#sweden_vehicles:_75mm_slpprj_m_49",
-                                        "icon": "ap_cr_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumAPCR",
-                                        "damage": {
-                                            "armor": 150,
-                                            "devices": 105
-                                        }
-                                    }
-                                },
-                                "_75mm_sgr_m_38": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 840,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        38.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 2,
-                                        "userString": "#sweden_vehicles:_75mm_sgr_m_38",
-                                        "icon": "he_modern",
-                                        "price": 90,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 75,
-                                        "explosionRadius": 1.06,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 185,
-                                            "devices": 105
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.06,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 95,
-                                                "devices": 55
-                                            }
-                                        }
-                                    }
+                                "id": 0,
+                                "userString": "#sweden_vehicles:_75mm_slpgr_m_43",
+                                "icon": "ap",
+                                "price": 145,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 150,
+                                    "devices": 105
                                 }
                             },
-                            "name": "7,5 cm kan strv 74"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1160,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    200.0,
+                                    175.0
+                                ],
+                                "id": 1,
+                                "userString": "#sweden_vehicles:_75mm_slpprj_m_49",
+                                "icon": "ap_cr_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumAPCR",
+                                "damage": {
+                                    "armor": 150,
+                                    "devices": 105
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 840,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    38.0,
+                                    38.0
+                                ],
+                                "id": 2,
+                                "userString": "#sweden_vehicles:_75mm_sgr_m_38",
+                                "icon": "he_modern",
+                                "price": 90,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 75,
+                                "explosionRadius": 1.06,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 185,
+                                    "devices": 105
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.06,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 95,
+                                        "devices": 55
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -709,7 +503,8 @@
                     0.0
                 ],
                 "track_health": 110,
-                "track_repaired_health": 85
+                "track_repaired_health": 85,
+                "level": 5
             },
             {
                 "name": "Strv 74",
@@ -729,7 +524,8 @@
                     0.0
                 ],
                 "track_health": 120,
-                "track_repaired_health": 90
+                "track_repaired_health": 90,
+                "level": 6
             }
         ],
         "engines": [

@@ -41,6 +41,7 @@
                 "id": "Turret_1_Tetrarch_LL",
                 "traverse": 41.13,
                 "view_range": 260,
+                "level": 1,
                 "guns": [
                     {
                         "name": "QF 2-pdr Mk. IX-A",
@@ -57,140 +58,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#ussr_vehicles:_2pdr_QFSA",
-                            "tags": [],
-                            "level": 4,
-                            "price": 20150,
-                            "notInShop": "true",
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 4,
+                        "weight": 130,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 792,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    64.0,
+                                    54.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 2.057142857,
-                            "maxAmmo": 100,
-                            "aimingTime": 1.1428571428571,
-                            "weight": 130,
-                            "maxHealth": 70,
-                            "maxRegenHealth": 35,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.3771428571428571,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_2pdr_AP_Mk.1T": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 792,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        64.0,
-                                        54.0
-                                    ],
-                                    "generic": {
-                                        "id": 82,
-                                        "userString": "#ussr_vehicles:_2pdr_AP_Mk.1T",
-                                        "icon": "ap",
-                                        "price": 25,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 40,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 45,
-                                            "devices": 54
-                                        }
-                                    }
-                                },
-                                "_2pdr_APCNR_Mk.1": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 990,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        121.0,
-                                        104.0
-                                    ],
-                                    "generic": {
-                                        "id": 83,
-                                        "userString": "#ussr_vehicles:_2pdr_APCNR_Mk.1",
-                                        "icon": "ap_cr_premium",
-                                        "price": 1200,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 40,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 45,
-                                            "devices": 54
-                                        }
-                                    }
-                                },
-                                "_2pdr_HE_Mk.2": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 792,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        23.0,
-                                        23.0
-                                    ],
-                                    "generic": {
-                                        "id": 84,
-                                        "userString": "#ussr_vehicles:_2pdr_HE_Mk.2",
-                                        "icon": "he_modern",
-                                        "price": 19,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 40,
-                                        "explosionRadius": 0.35,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 60,
-                                            "devices": 54
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.35,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 30,
-                                                "devices": 25
-                                            }
-                                        }
-                                    }
+                                "id": 82,
+                                "userString": "#ussr_vehicles:_2pdr_AP_Mk.1T",
+                                "icon": "ap",
+                                "price": 25,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 40,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 45,
+                                    "devices": 54
                                 }
                             },
-                            "name": "QF 2-pdr Mk. IX-A"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 990,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    121.0,
+                                    104.0
+                                ],
+                                "id": 83,
+                                "userString": "#ussr_vehicles:_2pdr_APCNR_Mk.1",
+                                "icon": "ap_cr_premium",
+                                "price": 1200,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 40,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 45,
+                                    "devices": 54
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 792,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    23.0,
+                                    23.0
+                                ],
+                                "id": 84,
+                                "userString": "#ussr_vehicles:_2pdr_HE_Mk.2",
+                                "icon": "he_modern",
+                                "price": 19,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 40,
+                                "explosionRadius": 0.35,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 60,
+                                    "devices": 54
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.35,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 30,
+                                        "devices": 25
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -230,7 +178,8 @@
                     0.0
                 ],
                 "track_health": 60,
-                "track_repaired_health": 45
+                "track_repaired_health": 45,
+                "level": 2
             }
         ],
         "engines": [

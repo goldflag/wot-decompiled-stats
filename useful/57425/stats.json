@@ -43,6 +43,7 @@
                 "id": "Turret_1_GB97_Chimera",
                 "traverse": 26,
                 "view_range": 380,
+                "level": 8,
                 "guns": [
                     {
                         "name": "QF 5-in. Gun",
@@ -59,140 +60,87 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:_5inch_QF_Gun",
-                            "tags": [],
-                            "level": 8,
-                            "price": 200000,
-                            "notInShop": "true",
-                            "impulse": 0.38,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.65,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_largeext_mb",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -17.0,
-                                    1.0,
-                                    -17.0
+                        "level": 8,
+                        "weight": 2000,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.9,
+                                "speed": 950,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    218.0,
+                                    192.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 21.875,
-                            "reloadTime": 10.0,
-                            "maxAmmo": 36,
-                            "aimingTime": 2.5,
-                            "weight": 2000,
-                            "maxHealth": 190,
-                            "maxRegenHealth": 95,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.36,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 3.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_5inch_AP_Mk_1": {
-                                    "defaultPortion": 0.9,
-                                    "speed": 950,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        218.0,
-                                        192.0
-                                    ],
-                                    "generic": {
-                                        "id": 132,
-                                        "userString": "#gb_vehicles:_5inch_AP_Mk_1",
-                                        "icon": "ap",
-                                        "price": 755,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 127,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 440,
-                                            "devices": 178
-                                        }
-                                    }
-                                },
-                                "_5inch_APDS_Mk_1": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1100,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        252.0,
-                                        228.0
-                                    ],
-                                    "generic": {
-                                        "id": 133,
-                                        "userString": "#gb_vehicles:_5inch_APDS_Mk_1",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 127,
-                                        "isTracer": "true",
-                                        "effects": "largeAPCR",
-                                        "damage": {
-                                            "armor": 440,
-                                            "devices": 178
-                                        }
-                                    }
-                                },
-                                "_5inch_HESH_Mk_1": {
-                                    "defaultPortion": 0.1,
-                                    "speed": 732,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        64.0,
-                                        64.0
-                                    ],
-                                    "generic": {
-                                        "id": 134,
-                                        "userString": "#gb_vehicles:_5inch_HESH_Mk_1",
-                                        "icon": "he_modern",
-                                        "price": 705,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 127,
-                                        "explosionRadius": 2.67,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 530,
-                                            "devices": 178
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.67,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 265,
-                                                "devices": 90
-                                            }
-                                        }
-                                    }
+                                "id": 132,
+                                "userString": "#gb_vehicles:_5inch_AP_Mk_1",
+                                "icon": "ap",
+                                "price": 755,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 127,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 440,
+                                    "devices": 178
                                 }
                             },
-                            "name": "QF 5-in. Gun"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1100,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    252.0,
+                                    228.0
+                                ],
+                                "id": 133,
+                                "userString": "#gb_vehicles:_5inch_APDS_Mk_1",
+                                "icon": "ap_cr_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 127,
+                                "isTracer": "true",
+                                "effects": "largeAPCR",
+                                "damage": {
+                                    "armor": 440,
+                                    "devices": 178
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.1,
+                                "speed": 732,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    64.0,
+                                    64.0
+                                ],
+                                "id": 134,
+                                "userString": "#gb_vehicles:_5inch_HESH_Mk_1",
+                                "icon": "he_modern",
+                                "price": 705,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 127,
+                                "explosionRadius": 2.67,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 530,
+                                    "devices": 178
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.67,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 265,
+                                        "devices": 90
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -232,7 +180,8 @@
                     0.0
                 ],
                 "track_health": 200,
-                "track_repaired_health": 150
+                "track_repaired_health": 150,
+                "level": 8
             }
         ],
         "engines": [

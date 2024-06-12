@@ -45,6 +45,7 @@
                 "id": "Turret_1_GB92_FV217",
                 "traverse": 16,
                 "view_range": 390,
+                "level": 10,
                 "guns": [
                     {
                         "name": "OQF 123 mm Mk. 1",
@@ -64,140 +65,87 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:_123mm_OQF_Mk_1",
-                            "tags": [],
-                            "level": 10,
-                            "price": 320000,
-                            "notInShop": "true",
-                            "impulse": 0.68,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_large",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -15.0,
-                                    1.0,
-                                    -15.0
+                        "level": 10,
+                        "weight": 3175,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.85,
+                                "speed": 1000,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    272.0,
+                                    253.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    11.0,
-                                    1.0,
-                                    11.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 20,
-                            "reloadTime": 10,
-                            "maxAmmo": 35,
-                            "aimingTime": 2,
-                            "weight": 3175,
-                            "maxHealth": 210,
-                            "maxRegenHealth": 105,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_123mm_AP_Mk_1": {
-                                    "defaultPortion": 0.85,
-                                    "speed": 1000,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        272.0,
-                                        253.0
-                                    ],
-                                    "generic": {
-                                        "id": 129,
-                                        "userString": "#gb_vehicles:_123mm_AP_Mk_1",
-                                        "icon": "ap",
-                                        "price": 1210,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 123,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 480,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_123mm_APDS_Mk_2": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1250,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        320.0,
-                                        300.0
-                                    ],
-                                    "generic": {
-                                        "id": 130,
-                                        "userString": "#gb_vehicles:_123mm_APDS_Mk_2",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 123,
-                                        "isTracer": "true",
-                                        "effects": "largeAPCR",
-                                        "damage": {
-                                            "armor": 480,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_123mm_HESH_Mk_1": {
-                                    "defaultPortion": 0.15,
-                                    "speed": 1000,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        130.0,
-                                        130.0
-                                    ],
-                                    "generic": {
-                                        "id": 131,
-                                        "userString": "#gb_vehicles:_123mm_HESH_Mk_1",
-                                        "icon": "he_modern",
-                                        "price": 1060,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 123,
-                                        "explosionRadius": 2.42,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 620,
-                                            "devices": 165
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.42,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 310,
-                                                "devices": 85
-                                            }
-                                        }
-                                    }
+                                "id": 129,
+                                "userString": "#gb_vehicles:_123mm_AP_Mk_1",
+                                "icon": "ap",
+                                "price": 1210,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 123,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 480,
+                                    "devices": 165
                                 }
                             },
-                            "name": "OQF 123 mm Mk. 1"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1250,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    320.0,
+                                    300.0
+                                ],
+                                "id": 130,
+                                "userString": "#gb_vehicles:_123mm_APDS_Mk_2",
+                                "icon": "ap_cr_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 123,
+                                "isTracer": "true",
+                                "effects": "largeAPCR",
+                                "damage": {
+                                    "armor": 480,
+                                    "devices": 165
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.15,
+                                "speed": 1000,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    130.0,
+                                    130.0
+                                ],
+                                "id": 131,
+                                "userString": "#gb_vehicles:_123mm_HESH_Mk_1",
+                                "icon": "he_modern",
+                                "price": 1060,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 123,
+                                "explosionRadius": 2.42,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 620,
+                                    "devices": 165
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.42,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 310,
+                                        "devices": 85
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -237,7 +185,8 @@
                     0.0
                 ],
                 "track_health": 250,
-                "track_repaired_health": 190
+                "track_repaired_health": 190,
+                "level": 10
             }
         ],
         "engines": [

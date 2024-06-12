@@ -45,6 +45,7 @@
                 "id": "Turret_1_J24_Mi_To_130_tons",
                 "traverse": 18,
                 "view_range": 370,
+                "level": 6,
                 "guns": [
                     {
                         "name": "10 cm Cannon Type 92",
@@ -61,139 +62,87 @@
                             "after_shot": 3.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#japan_vehicles:_105mm_Cannon_Type92",
-                            "tags": [],
-                            "level": 7,
-                            "price": 68500,
-                            "impulse": 0.38,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.56,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_large_mb",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -17.0,
-                                    1.0,
-                                    -17.0
+                        "level": 7,
+                        "weight": 1792,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.9,
+                                "speed": 720,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    175.0,
+                                    153.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 21.875,
-                            "reloadTime": 10.2,
-                            "maxAmmo": 42,
-                            "aimingTime": 2.3,
-                            "weight": 1792,
-                            "maxHealth": 180,
-                            "maxRegenHealth": 90,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.36,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 3.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_105mm_APHE_Type95": {
-                                    "defaultPortion": 0.9,
-                                    "speed": 720,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        175.0,
-                                        153.0
-                                    ],
-                                    "generic": {
-                                        "id": 63,
-                                        "userString": "#japan_vehicles:_105mm_APHE_Type95",
-                                        "icon": "ap",
-                                        "price": 250,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 300,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_APHE_Type95_TK": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 720,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        201.0,
-                                        176.0
-                                    ],
-                                    "generic": {
-                                        "id": 64,
-                                        "userString": "#japan_vehicles:_105mm_APHE_Type95_TK",
-                                        "icon": "ap_premium",
-                                        "price": 3600,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 300,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_HE_Type92": {
-                                    "defaultPortion": 0.1,
-                                    "speed": 765,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        53.0,
-                                        53.0
-                                    ],
-                                    "generic": {
-                                        "id": 66,
-                                        "userString": "#japan_vehicles:_105mm_HE_Type92",
-                                        "icon": "he_modern",
-                                        "price": 190,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 105,
-                                        "explosionRadius": 1.91,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 360,
-                                            "devices": 150
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.91,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 180,
-                                                "devices": 75
-                                            }
-                                        }
-                                    }
+                                "id": 63,
+                                "userString": "#japan_vehicles:_105mm_APHE_Type95",
+                                "icon": "ap",
+                                "price": 250,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 300,
+                                    "devices": 150
                                 }
                             },
-                            "name": "10 cm Cannon Type 92"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 720,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    201.0,
+                                    176.0
+                                ],
+                                "id": 64,
+                                "userString": "#japan_vehicles:_105mm_APHE_Type95_TK",
+                                "icon": "ap_premium",
+                                "price": 3600,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 300,
+                                    "devices": 150
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.1,
+                                "speed": 765,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    53.0,
+                                    53.0
+                                ],
+                                "id": 66,
+                                "userString": "#japan_vehicles:_105mm_HE_Type92",
+                                "icon": "he_modern",
+                                "price": 190,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 105,
+                                "explosionRadius": 1.91,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 360,
+                                    "devices": 150
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.91,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 180,
+                                        "devices": 75
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "15 cm Howitzer Type 96",
@@ -210,140 +159,88 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#japan_vehicles:_150mm_Howitzer_Type96",
-                            "tags": [],
-                            "level": 7,
-                            "price": 71200,
-                            "impulse": 0.56,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "huge"
-                            },
-                            "effects": "shot_huge",
-                            "reloadEffect": "reload155_170",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -23.0,
-                                    1.0,
-                                    -23.0
+                        "level": 7,
+                        "weight": 1432,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.25,
+                                "speed": 500,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    121.0,
+                                    109.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    7.0,
-                                    1.0,
-                                    7.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 23.625,
-                            "reloadTime": 18.8571428571429,
-                            "maxAmmo": 18,
-                            "aimingTime": 2.85714285714286,
-                            "weight": 1432,
-                            "maxHealth": 230,
-                            "maxRegenHealth": 115,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.422857142857143,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.12,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_150mm_APHE_Type1": {
-                                    "defaultPortion": 0.25,
-                                    "speed": 500,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        121.0,
-                                        109.0
-                                    ],
-                                    "generic": {
-                                        "id": 60,
-                                        "userString": "#japan_vehicles:_150mm_APHE_Type1",
-                                        "icon": "ap",
-                                        "price": 540,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 149.1,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 700,
-                                            "devices": 203
-                                        }
-                                    }
-                                },
-                                "_150mm_HEAT_Type3": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 500,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        150.0,
-                                        150.0
-                                    ],
-                                    "generic": {
-                                        "id": 67,
-                                        "userString": "#japan_vehicles:_150mm_HEAT_Type3",
-                                        "icon": "hc_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 149.1,
-                                        "isTracer": "true",
-                                        "effects": "largeHollowCharge",
-                                        "damage": {
-                                            "armor": 700,
-                                            "devices": 203
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_150mm_HE_Type96": {
-                                    "defaultPortion": 0.75,
-                                    "speed": 540,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        75.0,
-                                        75.0
-                                    ],
-                                    "generic": {
-                                        "id": 61,
-                                        "userString": "#japan_vehicles:_150mm_HE_Type96",
-                                        "icon": "he_modern",
-                                        "price": 660,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 149.1,
-                                        "explosionRadius": 3.57,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 890,
-                                            "devices": 203
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 3.57,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 445,
-                                                "devices": 100
-                                            }
-                                        }
-                                    }
+                                "id": 60,
+                                "userString": "#japan_vehicles:_150mm_APHE_Type1",
+                                "icon": "ap",
+                                "price": 540,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 149.1,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 700,
+                                    "devices": 203
                                 }
                             },
-                            "name": "15 cm Howitzer Type 96"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 500,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    150.0,
+                                    150.0
+                                ],
+                                "id": 67,
+                                "userString": "#japan_vehicles:_150mm_HEAT_Type3",
+                                "icon": "hc_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 149.1,
+                                "isTracer": "true",
+                                "effects": "largeHollowCharge",
+                                "damage": {
+                                    "armor": 700,
+                                    "devices": 203
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.75,
+                                "speed": 540,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    75.0,
+                                    75.0
+                                ],
+                                "id": 61,
+                                "userString": "#japan_vehicles:_150mm_HE_Type96",
+                                "icon": "he_modern",
+                                "price": 660,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 149.1,
+                                "explosionRadius": 3.57,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 890,
+                                    "devices": 203
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 3.57,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 445,
+                                        "devices": 100
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -383,7 +280,8 @@
                     0.0
                 ],
                 "track_health": 190,
-                "track_repaired_health": 145
+                "track_repaired_health": 145,
+                "level": 5
             },
             {
                 "name": "O-I Kai",
@@ -403,7 +301,8 @@
                     0.0
                 ],
                 "track_health": 210,
-                "track_repaired_health": 160
+                "track_repaired_health": 160,
+                "level": 6
             }
         ],
         "engines": [

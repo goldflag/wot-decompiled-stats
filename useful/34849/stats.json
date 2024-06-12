@@ -43,6 +43,7 @@
                 "id": "Turret_1_A145_TS_54",
                 "traverse": 28,
                 "view_range": 380,
+                "level": 8,
                 "guns": [
                     {
                         "name": "94 mm British DB Gun",
@@ -62,154 +63,101 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_94mm_British_dualgun",
-                            "tags": [],
-                            "level": 8,
-                            "price": 105000,
-                            "notInShop": "true",
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.38,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main_mb",
-                            "reloadEffect": "dualgun_reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -12.0,
-                                    1.0,
-                                    -12.0
+                        "level": 8,
+                        "weight": 2600,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 878,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    218.0,
+                                    208.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35.0,
-                            "reloadTime": 6.85714285714286,
-                            "maxAmmo": 44,
-                            "aimingTime": 1.71428571428571,
-                            "weight": 2600,
-                            "maxHealth": 180,
-                            "maxRegenHealth": 90,
-                            "repairCost": 7,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.354285714285714,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.12,
-                                "afterShot": 3.5,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_94mm_AP_MkI": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 878,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        218.0,
-                                        208.0
-                                    ],
-                                    "generic": {
-                                        "id": 167,
-                                        "userString": "#usa_vehicles:_94mm_AP_MkI",
-                                        "icon": "ap",
-                                        "price": 630,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 94,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 280,
-                                            "devices": 135
-                                        }
-                                    }
-                                },
-                                "_94mm_APCR_MkII": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1098,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        252.0,
-                                        241.0
-                                    ],
-                                    "generic": {
-                                        "id": 168,
-                                        "userString": "#usa_vehicles:_94mm_APCR_MkII",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 94,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 280,
-                                            "devices": 135
-                                        }
-                                    }
-                                },
-                                "_94mm_HE_MkI": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 878,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        47.0,
-                                        47.0
-                                    ],
-                                    "generic": {
-                                        "id": 169,
-                                        "userString": "#usa_vehicles:_94mm_HE_MkI",
-                                        "icon": "he_modern",
-                                        "price": 250,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 94,
-                                        "explosionRadius": 1.58,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 370,
-                                            "devices": 135
-                                        },
-                                        "blastWave": {
-                                            "impactRadius": 0,
-                                            "damage": {
-                                                "armor": 0,
-                                                "devices": 0
-                                            }
-                                        },
-                                        "shellFragments": {
-                                            "impactRadius": 0,
-                                            "damage": {
-                                                "armor": 0,
-                                                "devices": 0
-                                            }
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.58,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 185,
-                                                "devices": 70
-                                            }
-                                        }
-                                    }
+                                "id": 167,
+                                "userString": "#usa_vehicles:_94mm_AP_MkI",
+                                "icon": "ap",
+                                "price": 630,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 94,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 280,
+                                    "devices": 135
                                 }
                             },
-                            "name": "94 mm British DB Gun"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1098,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    252.0,
+                                    241.0
+                                ],
+                                "id": 168,
+                                "userString": "#usa_vehicles:_94mm_APCR_MkII",
+                                "icon": "ap_cr_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 94,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 280,
+                                    "devices": 135
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 878,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    47.0,
+                                    47.0
+                                ],
+                                "id": 169,
+                                "userString": "#usa_vehicles:_94mm_HE_MkI",
+                                "icon": "he_modern",
+                                "price": 250,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 94,
+                                "explosionRadius": 1.58,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 370,
+                                    "devices": 135
+                                },
+                                "blastWave": {
+                                    "impactRadius": 0,
+                                    "damage": {
+                                        "armor": 0,
+                                        "devices": 0
+                                    }
+                                },
+                                "shellFragments": {
+                                    "impactRadius": 0,
+                                    "damage": {
+                                        "armor": 0,
+                                        "devices": 0
+                                    }
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.58,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 185,
+                                        "devices": 70
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -249,7 +197,8 @@
                     0.0
                 ],
                 "track_health": 220,
-                "track_repaired_health": 165
+                "track_repaired_health": 165,
+                "level": 8
             }
         ],
         "engines": [

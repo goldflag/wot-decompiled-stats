@@ -45,6 +45,7 @@
                 "id": "Turret_1_M40M43",
                 "traverse": 10,
                 "view_range": 290,
+                "level": 8,
                 "guns": [
                     {
                         "name": "155 mm Gun M1A1",
@@ -64,143 +65,91 @@
                             "after_shot": 6,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_155mm_Gun_M1A1",
-                            "tags": [],
-                            "level": 7,
-                            "price": 96500,
-                            "impulse": 0.68,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.2,
-                                "recoilEffect": "huge"
-                            },
-                            "effects": "shot_huge",
-                            "reloadEffect": "reload155_170",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -45.0,
-                                    1.0,
-                                    -45.0
+                        "level": 7,
+                        "weight": 4352,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.5,
+                                "speed": 490,
+                                "gravity": 170,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    39.0,
+                                    39.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    4.0,
-                                    1.0,
-                                    4.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 22.75,
-                            "reloadTime": 17.8285714285714,
-                            "maxAmmo": 20,
-                            "aimingTime": 5.71428571428571,
-                            "weight": 4352,
-                            "maxHealth": 230,
-                            "maxRegenHealth": 115,
-                            "repairCost": 11,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.468571428571429,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.44,
-                                "afterShot": 6.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_155mm_HE_M101M4": {
-                                    "defaultPortion": 0.5,
-                                    "speed": 490,
-                                    "gravity": 170,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        39.0,
-                                        39.0
-                                    ],
-                                    "maxHeight": 442,
-                                    "generic": {
-                                        "id": 50,
-                                        "userString": "#usa_vehicles:_155mm_HE_M101M4",
-                                        "icon": "he_spg_stun",
-                                        "price": 1120,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "caliber": 155,
-                                        "explosionRadius": 7.2,
-                                        "hasStun": "true",
-                                        "stunDuration": 23,
-                                        "guaranteedStunDuration": 0.5,
-                                        "damageDurationCoeff": 0.5,
-                                        "isTracer": "true",
-                                        "effects": "hugeSH",
-                                        "damage": {
-                                            "armor": 600,
-                                            "devices": 105
-                                        },
-                                        "deviceDamagePossibility": {
-                                            "protectFromIndirectHits": [
-                                                "internal",
-                                                "tankmen"
-                                            ]
-                                        }
-                                    }
+                                "maxHeight": 442,
+                                "id": 50,
+                                "userString": "#usa_vehicles:_155mm_HE_M101M4",
+                                "icon": "he_spg_stun",
+                                "price": 1120,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "caliber": 155,
+                                "explosionRadius": 7.2,
+                                "hasStun": "true",
+                                "stunDuration": 23,
+                                "guaranteedStunDuration": 0.5,
+                                "damageDurationCoeff": 0.5,
+                                "isTracer": "true",
+                                "effects": "hugeSH",
+                                "damage": {
+                                    "armor": 600,
+                                    "devices": 105
                                 },
-                                "_155mm_HE_M101M6": {
-                                    "defaultPortion": 0.3,
-                                    "speed": 524,
-                                    "gravity": 170,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        49.0,
-                                        49.0
-                                    ],
-                                    "maxHeight": 506,
-                                    "generic": {
-                                        "id": 51,
-                                        "userString": "#usa_vehicles:_155mm_HE_M101M6",
-                                        "icon": "he_spg",
-                                        "price": 1320,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "caliber": 155,
-                                        "explosionRadius": 4,
-                                        "isTracer": "true",
-                                        "effects": "hugeSF",
-                                        "damage": {
-                                            "armor": 750,
-                                            "devices": 105
-                                        }
-                                    }
-                                },
-                                "_155mm_AP_M112_SPG": {
-                                    "defaultPortion": 0.2,
-                                    "speed": 588,
-                                    "gravity": 170,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        218.0,
-                                        205.0
-                                    ],
-                                    "maxHeight": 636,
-                                    "generic": {
-                                        "id": 72,
-                                        "userString": "#usa_vehicles:_155mm_AP_M112_SPG",
-                                        "icon": "ap",
-                                        "price": 1290,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 155,
-                                        "isTracer": "true",
-                                        "effects": "hugeSA",
-                                        "damage": {
-                                            "armor": 420,
-                                            "devices": 100
-                                        }
-                                    }
+                                "deviceDamagePossibility": {
+                                    "protectFromIndirectHits": [
+                                        "internal",
+                                        "tankmen"
+                                    ]
                                 }
                             },
-                            "name": "155 mm Gun M1A1"
-                        }
+                            {
+                                "defaultPortion": 0.3,
+                                "speed": 524,
+                                "gravity": 170,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    49.0,
+                                    49.0
+                                ],
+                                "maxHeight": 506,
+                                "id": 51,
+                                "userString": "#usa_vehicles:_155mm_HE_M101M6",
+                                "icon": "he_spg",
+                                "price": 1320,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "caliber": 155,
+                                "explosionRadius": 4,
+                                "isTracer": "true",
+                                "effects": "hugeSF",
+                                "damage": {
+                                    "armor": 750,
+                                    "devices": 105
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.2,
+                                "speed": 588,
+                                "gravity": 170,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    218.0,
+                                    205.0
+                                ],
+                                "maxHeight": 636,
+                                "id": 72,
+                                "userString": "#usa_vehicles:_155mm_AP_M112_SPG",
+                                "icon": "ap",
+                                "price": 1290,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 155,
+                                "isTracer": "true",
+                                "effects": "hugeSA",
+                                "damage": {
+                                    "armor": 420,
+                                    "devices": 100
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "8-inch Howitzer M1",
@@ -220,143 +169,91 @@
                             "after_shot": 6,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_203mm_Howitzer_M1",
-                            "tags": [],
-                            "level": 8,
-                            "price": 150000,
-                            "impulse": 0.88,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.4,
-                                "recoilEffect": "huge"
-                            },
-                            "effects": "shot_superhuge",
-                            "reloadEffect": "reload155_170",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -45.0,
-                                    1.0,
-                                    -45.0
+                        "level": 8,
+                        "weight": 4645,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.5,
+                                "speed": 440,
+                                "gravity": 145,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    52.0,
+                                    52.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    4.0,
-                                    1.0,
-                                    4.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 17.5,
-                            "reloadTime": 35.4285714285714,
-                            "maxAmmo": 20,
-                            "aimingTime": 6.85714285714286,
-                            "weight": 4645,
-                            "maxHealth": 242,
-                            "maxRegenHealth": 121,
-                            "repairCost": 12,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.54857142857143,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.56,
-                                "afterShot": 6.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_203mm_HE_M106": {
-                                    "defaultPortion": 0.5,
-                                    "speed": 440,
-                                    "gravity": 145,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        52.0,
-                                        52.0
-                                    ],
-                                    "maxHeight": 418,
-                                    "generic": {
-                                        "id": 46,
-                                        "userString": "#usa_vehicles:_203mm_HE_M106",
-                                        "icon": "he_spg_stun",
-                                        "price": 1870,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "caliber": 203,
-                                        "explosionRadius": 10.5,
-                                        "hasStun": "true",
-                                        "stunDuration": 28,
-                                        "guaranteedStunDuration": 0.45,
-                                        "damageDurationCoeff": 0.55,
-                                        "isTracer": "true",
-                                        "effects": "hugeSH",
-                                        "damage": {
-                                            "armor": 900,
-                                            "devices": 130
-                                        },
-                                        "deviceDamagePossibility": {
-                                            "protectFromIndirectHits": [
-                                                "internal",
-                                                "tankmen"
-                                            ]
-                                        }
-                                    }
+                                "maxHeight": 418,
+                                "id": 46,
+                                "userString": "#usa_vehicles:_203mm_HE_M106",
+                                "icon": "he_spg_stun",
+                                "price": 1870,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "caliber": 203,
+                                "explosionRadius": 10.5,
+                                "hasStun": "true",
+                                "stunDuration": 28,
+                                "guaranteedStunDuration": 0.45,
+                                "damageDurationCoeff": 0.55,
+                                "isTracer": "true",
+                                "effects": "hugeSH",
+                                "damage": {
+                                    "armor": 900,
+                                    "devices": 130
                                 },
-                                "_203mm_HE_A1M1": {
-                                    "defaultPortion": 0.3,
-                                    "speed": 471,
-                                    "gravity": 145,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        65.0,
-                                        65.0
-                                    ],
-                                    "maxHeight": 478,
-                                    "generic": {
-                                        "id": 47,
-                                        "userString": "#usa_vehicles:_203mm_HE_A1M1",
-                                        "icon": "he_spg",
-                                        "price": 2310,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "caliber": 203,
-                                        "explosionRadius": 6,
-                                        "isTracer": "true",
-                                        "effects": "hugeSF",
-                                        "damage": {
-                                            "armor": 1100,
-                                            "devices": 130
-                                        }
-                                    }
-                                },
-                                "_203mm_M106_M78": {
-                                    "defaultPortion": 0.2,
-                                    "speed": 528,
-                                    "gravity": 145,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        272.0,
-                                        256.0
-                                    ],
-                                    "maxHeight": 601,
-                                    "generic": {
-                                        "id": 55,
-                                        "userString": "#usa_vehicles:_203mm_M106_M78",
-                                        "icon": "ap",
-                                        "price": 2190,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 203,
-                                        "isTracer": "true",
-                                        "effects": "hugeSA",
-                                        "damage": {
-                                            "armor": 600,
-                                            "devices": 135
-                                        }
-                                    }
+                                "deviceDamagePossibility": {
+                                    "protectFromIndirectHits": [
+                                        "internal",
+                                        "tankmen"
+                                    ]
                                 }
                             },
-                            "name": "8-inch Howitzer M1"
-                        }
+                            {
+                                "defaultPortion": 0.3,
+                                "speed": 471,
+                                "gravity": 145,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    65.0,
+                                    65.0
+                                ],
+                                "maxHeight": 478,
+                                "id": 47,
+                                "userString": "#usa_vehicles:_203mm_HE_A1M1",
+                                "icon": "he_spg",
+                                "price": 2310,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "caliber": 203,
+                                "explosionRadius": 6,
+                                "isTracer": "true",
+                                "effects": "hugeSF",
+                                "damage": {
+                                    "armor": 1100,
+                                    "devices": 130
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.2,
+                                "speed": 528,
+                                "gravity": 145,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    272.0,
+                                    256.0
+                                ],
+                                "maxHeight": 601,
+                                "id": 55,
+                                "userString": "#usa_vehicles:_203mm_M106_M78",
+                                "icon": "ap",
+                                "price": 2190,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 203,
+                                "isTracer": "true",
+                                "effects": "hugeSA",
+                                "damage": {
+                                    "armor": 600,
+                                    "devices": 135
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -392,7 +289,8 @@
                     0.0
                 ],
                 "track_health": 120,
-                "track_repaired_health": 90
+                "track_repaired_health": 90,
+                "level": 7
             },
             {
                 "name": "M43",
@@ -412,7 +310,8 @@
                     0.0
                 ],
                 "track_health": 130,
-                "track_repaired_health": 100
+                "track_repaired_health": 100,
+                "level": 8
             }
         ],
         "engines": [

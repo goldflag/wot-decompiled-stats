@@ -43,6 +43,7 @@
                 "id": "Turret_1_S33_Latt_Stridsfordon_120",
                 "traverse": 16,
                 "view_range": 360,
+                "level": 9,
                 "guns": [
                     {
                         "name": "12 cm Bofors strvkan L/40",
@@ -62,141 +63,88 @@
                             "after_shot": 3,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#sweden_vehicles:_120mm_Bofors_strvkan_L_40",
-                            "tags": [],
-                            "level": 10,
-                            "price": 330000,
-                            "notInShop": "true",
-                            "impulse": 0.64,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.66,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_large_mb",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -12.0,
-                                    1.0,
-                                    -12.0
+                        "level": 10,
+                        "weight": 1600,
+                        "shells": [
+                            {
+                                "defaultPortion": 1.0,
+                                "speed": 1350,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    290.0,
+                                    276.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 20,
-                            "reloadTime": 10,
-                            "maxAmmo": 36,
-                            "aimingTime": 2,
-                            "weight": 1600,
-                            "maxHealth": 210,
-                            "maxRegenHealth": 105,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.3,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 3.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_120mm_slpprj_m_60": {
-                                    "defaultPortion": 1.0,
-                                    "speed": 1350,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        290.0,
-                                        276.0
-                                    ],
-                                    "generic": {
-                                        "id": 90,
-                                        "userString": "#sweden_vehicles:_120mm_slpprj_m_60",
-                                        "icon": "ap_cr",
-                                        "price": 1215,
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeAPCR",
-                                        "damage": {
-                                            "armor": 420,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_120mm_psgr_m_60": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1100,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        330.0,
-                                        330.0
-                                    ],
-                                    "generic": {
-                                        "id": 91,
-                                        "userString": "#sweden_vehicles:_120mm_psgr_m_60",
-                                        "icon": "hc_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeHollowCharge",
-                                        "damage": {
-                                            "armor": 420,
-                                            "devices": 165
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_120mm_sgr_m_60": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1100,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        60.0,
-                                        60.0
-                                    ],
-                                    "generic": {
-                                        "id": 92,
-                                        "userString": "#sweden_vehicles:_120mm_sgr_m_60",
-                                        "icon": "he_modern",
-                                        "price": 795,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 120,
-                                        "explosionRadius": 2.42,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 530,
-                                            "devices": 165
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.42,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 265,
-                                                "devices": 85
-                                            }
-                                        }
-                                    }
+                                "id": 90,
+                                "userString": "#sweden_vehicles:_120mm_slpprj_m_60",
+                                "icon": "ap_cr",
+                                "price": 1215,
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeAPCR",
+                                "damage": {
+                                    "armor": 420,
+                                    "devices": 165
                                 }
                             },
-                            "name": "12 cm Bofors strvkan L/40"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1100,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    330.0,
+                                    330.0
+                                ],
+                                "id": 91,
+                                "userString": "#sweden_vehicles:_120mm_psgr_m_60",
+                                "icon": "hc_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeHollowCharge",
+                                "damage": {
+                                    "armor": 420,
+                                    "devices": 165
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1100,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    60.0,
+                                    60.0
+                                ],
+                                "id": 92,
+                                "userString": "#sweden_vehicles:_120mm_sgr_m_60",
+                                "icon": "he_modern",
+                                "price": 795,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 120,
+                                "explosionRadius": 2.42,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 530,
+                                    "devices": 165
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.42,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 265,
+                                        "devices": 85
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -236,7 +184,8 @@
                     0.0
                 ],
                 "track_health": 240,
-                "track_repaired_health": 180
+                "track_repaired_health": 180,
+                "level": 9
             }
         ],
         "engines": [

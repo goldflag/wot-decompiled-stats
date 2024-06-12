@@ -43,6 +43,7 @@
                 "id": "Turret_2_M41_Bulldog_FL",
                 "traverse": 50,
                 "view_range": 400,
+                "level": 8,
                 "guns": [
                     {
                         "name": null,
@@ -62,141 +63,88 @@
                             "after_shot": null,
                             "while_damaged": null
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_76mm_Gun_M32_late",
-                            "tags": [],
-                            "level": 8,
-                            "price": 96000,
-                            "notInShop": "true",
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.36,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium_mb",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -15.0,
-                                    1.0,
-                                    -15.0
+                        "level": 8,
+                        "weight": 775,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 1219,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    180.0,
+                                    170.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 40.25,
-                            "reloadTime": 3.25714285714286,
-                            "maxAmmo": 75,
-                            "aimingTime": 1.71428571428571,
-                            "weight": 775,
-                            "maxHealth": 130,
-                            "maxRegenHealth": 65,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.388571428571429,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 3.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_76mm_APDS_M331A3": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 1219,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        180.0,
-                                        170.0
-                                    ],
-                                    "generic": {
-                                        "id": 133,
-                                        "userString": "#usa_vehicles:_76mm_APDS_M331A3",
-                                        "icon": "ap_cr",
-                                        "price": 205,
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 76,
-                                        "isTracer": "true",
-                                        "effects": "mediumAPCR",
-                                        "damage": {
-                                            "armor": 170,
-                                            "devices": 105
-                                        }
-                                    }
-                                },
-                                "_76mm_HEAT_M496A1": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 975,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        215.0,
-                                        215.0
-                                    ],
-                                    "generic": {
-                                        "id": 134,
-                                        "userString": "#usa_vehicles:_76mm_HEAT_M496A1",
-                                        "icon": "hc_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 76,
-                                        "isTracer": "true",
-                                        "effects": "mediumHollowCharge",
-                                        "damage": {
-                                            "armor": 170,
-                                            "devices": 105
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_76mm_HE_M352A1": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 975,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        38.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 135,
-                                        "userString": "#usa_vehicles:_76mm_HE_M352A1",
-                                        "icon": "he_modern",
-                                        "price": 135,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 76,
-                                        "explosionRadius": 1.09,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 260,
-                                            "devices": 105
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.09,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 130,
-                                                "devices": 55
-                                            }
-                                        }
-                                    }
+                                "id": 133,
+                                "userString": "#usa_vehicles:_76mm_APDS_M331A3",
+                                "icon": "ap_cr",
+                                "price": 205,
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 76,
+                                "isTracer": "true",
+                                "effects": "mediumAPCR",
+                                "damage": {
+                                    "armor": 170,
+                                    "devices": 105
                                 }
                             },
-                            "name": null
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 975,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    215.0,
+                                    215.0
+                                ],
+                                "id": 134,
+                                "userString": "#usa_vehicles:_76mm_HEAT_M496A1",
+                                "icon": "hc_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 76,
+                                "isTracer": "true",
+                                "effects": "mediumHollowCharge",
+                                "damage": {
+                                    "armor": 170,
+                                    "devices": 105
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 975,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    38.0,
+                                    38.0
+                                ],
+                                "id": 135,
+                                "userString": "#usa_vehicles:_76mm_HE_M352A1",
+                                "icon": "he_modern",
+                                "price": 135,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 76,
+                                "explosionRadius": 1.09,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 260,
+                                    "devices": 105
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.09,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 130,
+                                        "devices": 55
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -236,7 +184,8 @@
                     0.0
                 ],
                 "track_health": 200,
-                "track_repaired_health": 150
+                "track_repaired_health": 150,
+                "level": 8
             }
         ],
         "engines": [

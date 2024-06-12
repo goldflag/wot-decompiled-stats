@@ -43,6 +43,7 @@
                 "id": "Turret_1_Cz08_T_25",
                 "traverse": 32,
                 "view_range": 350,
+                "level": 5,
                 "guns": [
                     {
                         "name": "75 mm \u0160koda A18",
@@ -62,139 +63,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#czech_vehicles:_75mm_Skoda_A18",
-                            "tags": [],
-                            "level": 5,
-                            "price": 37360,
-                            "impulse": 0.38,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.36,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 5,
+                        "weight": 1000,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 900,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    132.0,
+                                    119.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 40,
-                            "reloadTime": 4.04,
-                            "maxAmmo": 60,
-                            "aimingTime": 4.04,
-                            "weight": 1000,
-                            "maxHealth": 120,
-                            "maxRegenHealth": 60,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_75mm_Prurazny_vz_42": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 900,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        132.0,
-                                        119.0
-                                    ],
-                                    "generic": {
-                                        "id": 21,
-                                        "userString": "#czech_vehicles:_75mm_Prurazny_vz_42",
-                                        "icon": "ap",
-                                        "price": 94,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 100
-                                        }
-                                    }
-                                },
-                                "_75mm_Prurazny_vz_42_s_wolf_jadrem": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1090,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        185.0,
-                                        166.0
-                                    ],
-                                    "generic": {
-                                        "id": 22,
-                                        "userString": "#czech_vehicles:_75mm_Prurazny_vz_42_s_wolf_jadrem",
-                                        "icon": "ap_cr_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumAPCR",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 100
-                                        }
-                                    }
-                                },
-                                "_75mm_Narazovy_vz_42": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 680,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        38.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 23,
-                                        "userString": "#czech_vehicles:_75mm_Narazovy_vz_42",
-                                        "icon": "he_modern",
-                                        "price": 65,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 75,
-                                        "explosionRadius": 1.06,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 175,
-                                            "devices": 100
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.06,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 90,
-                                                "devices": 50
-                                            }
-                                        }
-                                    }
+                                "id": 21,
+                                "userString": "#czech_vehicles:_75mm_Prurazny_vz_42",
+                                "icon": "ap",
+                                "price": 94,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 100
                                 }
                             },
-                            "name": "75 mm \u0160koda A18"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1090,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    185.0,
+                                    166.0
+                                ],
+                                "id": 22,
+                                "userString": "#czech_vehicles:_75mm_Prurazny_vz_42_s_wolf_jadrem",
+                                "icon": "ap_cr_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumAPCR",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 100
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 680,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    38.0,
+                                    38.0
+                                ],
+                                "id": 23,
+                                "userString": "#czech_vehicles:_75mm_Narazovy_vz_42",
+                                "icon": "he_modern",
+                                "price": 65,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 75,
+                                "explosionRadius": 1.06,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 175,
+                                    "devices": 100
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.06,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 90,
+                                        "devices": 50
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "75 mm \u0160koda A18 (s automatick\u00fdm nab\u00edjen\u00edm)",
@@ -214,140 +163,87 @@
                             "after_shot": 3,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#czech_vehicles:_75mm_Skoda_A18_s_automatickym_nabijenim",
-                            "shortUserString": "#czech_vehicles:_75mm_Skoda_A18_s_automatickym_nabijenim_short",
-                            "tags": [],
-                            "level": 6,
-                            "price": 58500,
-                            "impulse": 0.38,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.36,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 6,
+                        "weight": 1300,
+                        "shells": [
+                            {
+                                "defaultPortion": 1,
+                                "speed": 900,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    132.0,
+                                    119.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 40,
-                            "reloadTime": 4.04,
-                            "maxAmmo": 60,
-                            "aimingTime": 4.04,
-                            "weight": 1300,
-                            "maxHealth": 130,
-                            "maxRegenHealth": 65,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_75mm_Prurazny_vz_42": {
-                                    "defaultPortion": 1,
-                                    "speed": 900,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        132.0,
-                                        119.0
-                                    ],
-                                    "generic": {
-                                        "id": 21,
-                                        "userString": "#czech_vehicles:_75mm_Prurazny_vz_42",
-                                        "icon": "ap",
-                                        "price": 94,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 100
-                                        }
-                                    }
-                                },
-                                "_75mm_Prurazny_vz_42_s_wolf_jadrem": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1090,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        185.0,
-                                        166.0
-                                    ],
-                                    "generic": {
-                                        "id": 22,
-                                        "userString": "#czech_vehicles:_75mm_Prurazny_vz_42_s_wolf_jadrem",
-                                        "icon": "ap_cr_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumAPCR",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 100
-                                        }
-                                    }
-                                },
-                                "_75mm_Narazovy_vz_42": {
-                                    "defaultPortion": 0,
-                                    "speed": 680,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        38.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 23,
-                                        "userString": "#czech_vehicles:_75mm_Narazovy_vz_42",
-                                        "icon": "he_modern",
-                                        "price": 65,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 75,
-                                        "explosionRadius": 1.06,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 175,
-                                            "devices": 100
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.06,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 90,
-                                                "devices": 50
-                                            }
-                                        }
-                                    }
+                                "id": 21,
+                                "userString": "#czech_vehicles:_75mm_Prurazny_vz_42",
+                                "icon": "ap",
+                                "price": 94,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 100
                                 }
                             },
-                            "name": "75 mm \u0160koda A18 (s automatick\u00fdm nab\u00edjen\u00edm)"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1090,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    185.0,
+                                    166.0
+                                ],
+                                "id": 22,
+                                "userString": "#czech_vehicles:_75mm_Prurazny_vz_42_s_wolf_jadrem",
+                                "icon": "ap_cr_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumAPCR",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 100
+                                }
+                            },
+                            {
+                                "defaultPortion": 0,
+                                "speed": 680,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    38.0,
+                                    38.0
+                                ],
+                                "id": 23,
+                                "userString": "#czech_vehicles:_75mm_Narazovy_vz_42",
+                                "icon": "he_modern",
+                                "price": 65,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 75,
+                                "explosionRadius": 1.06,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 175,
+                                    "devices": 100
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.06,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 90,
+                                        "devices": 50
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -367,6 +263,7 @@
                 "id": "Turret_2_Cz08_T_25",
                 "traverse": 36,
                 "view_range": 360,
+                "level": 6,
                 "guns": [
                     {
                         "name": "75 mm \u0160koda A18",
@@ -386,139 +283,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#czech_vehicles:_75mm_Skoda_A18",
-                            "tags": [],
-                            "level": 5,
-                            "price": 37360,
-                            "impulse": 0.38,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.36,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 5,
+                        "weight": 1000,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 900,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    132.0,
+                                    119.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 40,
-                            "reloadTime": 4.04,
-                            "maxAmmo": 60,
-                            "aimingTime": 4.04,
-                            "weight": 1000,
-                            "maxHealth": 120,
-                            "maxRegenHealth": 60,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_75mm_Prurazny_vz_42": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 900,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        132.0,
-                                        119.0
-                                    ],
-                                    "generic": {
-                                        "id": 21,
-                                        "userString": "#czech_vehicles:_75mm_Prurazny_vz_42",
-                                        "icon": "ap",
-                                        "price": 94,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 100
-                                        }
-                                    }
-                                },
-                                "_75mm_Prurazny_vz_42_s_wolf_jadrem": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1090,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        185.0,
-                                        166.0
-                                    ],
-                                    "generic": {
-                                        "id": 22,
-                                        "userString": "#czech_vehicles:_75mm_Prurazny_vz_42_s_wolf_jadrem",
-                                        "icon": "ap_cr_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumAPCR",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 100
-                                        }
-                                    }
-                                },
-                                "_75mm_Narazovy_vz_42": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 680,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        38.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 23,
-                                        "userString": "#czech_vehicles:_75mm_Narazovy_vz_42",
-                                        "icon": "he_modern",
-                                        "price": 65,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 75,
-                                        "explosionRadius": 1.06,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 175,
-                                            "devices": 100
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.06,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 90,
-                                                "devices": 50
-                                            }
-                                        }
-                                    }
+                                "id": 21,
+                                "userString": "#czech_vehicles:_75mm_Prurazny_vz_42",
+                                "icon": "ap",
+                                "price": 94,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 100
                                 }
                             },
-                            "name": "75 mm \u0160koda A18"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1090,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    185.0,
+                                    166.0
+                                ],
+                                "id": 22,
+                                "userString": "#czech_vehicles:_75mm_Prurazny_vz_42_s_wolf_jadrem",
+                                "icon": "ap_cr_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumAPCR",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 100
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 680,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    38.0,
+                                    38.0
+                                ],
+                                "id": 23,
+                                "userString": "#czech_vehicles:_75mm_Narazovy_vz_42",
+                                "icon": "he_modern",
+                                "price": 65,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 75,
+                                "explosionRadius": 1.06,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 175,
+                                    "devices": 100
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.06,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 90,
+                                        "devices": 50
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "75 mm \u0160koda A18 (s automatick\u00fdm nab\u00edjen\u00edm)",
@@ -538,140 +383,87 @@
                             "after_shot": 3,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#czech_vehicles:_75mm_Skoda_A18_s_automatickym_nabijenim",
-                            "shortUserString": "#czech_vehicles:_75mm_Skoda_A18_s_automatickym_nabijenim_short",
-                            "tags": [],
-                            "level": 6,
-                            "price": 58500,
-                            "impulse": 0.38,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.36,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 6,
+                        "weight": 1300,
+                        "shells": [
+                            {
+                                "defaultPortion": 1,
+                                "speed": 900,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    132.0,
+                                    119.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 40,
-                            "reloadTime": 4.04,
-                            "maxAmmo": 60,
-                            "aimingTime": 4.04,
-                            "weight": 1300,
-                            "maxHealth": 130,
-                            "maxRegenHealth": 65,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_75mm_Prurazny_vz_42": {
-                                    "defaultPortion": 1,
-                                    "speed": 900,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        132.0,
-                                        119.0
-                                    ],
-                                    "generic": {
-                                        "id": 21,
-                                        "userString": "#czech_vehicles:_75mm_Prurazny_vz_42",
-                                        "icon": "ap",
-                                        "price": 94,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 100
-                                        }
-                                    }
-                                },
-                                "_75mm_Prurazny_vz_42_s_wolf_jadrem": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1090,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        185.0,
-                                        166.0
-                                    ],
-                                    "generic": {
-                                        "id": 22,
-                                        "userString": "#czech_vehicles:_75mm_Prurazny_vz_42_s_wolf_jadrem",
-                                        "icon": "ap_cr_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumAPCR",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 100
-                                        }
-                                    }
-                                },
-                                "_75mm_Narazovy_vz_42": {
-                                    "defaultPortion": 0,
-                                    "speed": 680,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        38.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 23,
-                                        "userString": "#czech_vehicles:_75mm_Narazovy_vz_42",
-                                        "icon": "he_modern",
-                                        "price": 65,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 75,
-                                        "explosionRadius": 1.06,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 175,
-                                            "devices": 100
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.06,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 90,
-                                                "devices": 50
-                                            }
-                                        }
-                                    }
+                                "id": 21,
+                                "userString": "#czech_vehicles:_75mm_Prurazny_vz_42",
+                                "icon": "ap",
+                                "price": 94,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 100
                                 }
                             },
-                            "name": "75 mm \u0160koda A18 (s automatick\u00fdm nab\u00edjen\u00edm)"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1090,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    185.0,
+                                    166.0
+                                ],
+                                "id": 22,
+                                "userString": "#czech_vehicles:_75mm_Prurazny_vz_42_s_wolf_jadrem",
+                                "icon": "ap_cr_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumAPCR",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 100
+                                }
+                            },
+                            {
+                                "defaultPortion": 0,
+                                "speed": 680,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    38.0,
+                                    38.0
+                                ],
+                                "id": 23,
+                                "userString": "#czech_vehicles:_75mm_Narazovy_vz_42",
+                                "icon": "he_modern",
+                                "price": 65,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 75,
+                                "explosionRadius": 1.06,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 175,
+                                    "devices": 100
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.06,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 90,
+                                        "devices": 50
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -711,7 +503,8 @@
                     0.0
                 ],
                 "track_health": 110,
-                "track_repaired_health": 85
+                "track_repaired_health": 85,
+                "level": 5
             },
             {
                 "name": "T 25 druh\u00fd model",
@@ -731,7 +524,8 @@
                     0.0
                 ],
                 "track_health": 120,
-                "track_repaired_health": 90
+                "track_repaired_health": 90,
+                "level": 6
             }
         ],
         "engines": [

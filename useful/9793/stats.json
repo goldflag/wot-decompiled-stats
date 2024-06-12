@@ -45,6 +45,7 @@
                 "id": "Turret_1_Somua_Sau_40",
                 "traverse": 44,
                 "view_range": 330,
+                "level": 4,
                 "guns": [
                     {
                         "name": "75 mm APX mle. 1938",
@@ -64,140 +65,88 @@
                             "after_shot": 3,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#france_vehicles:_75mm_APX",
-                            "tags": [],
-                            "level": 3,
-                            "price": 22360,
-                            "impulse": 0.46,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.25,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -17.0,
-                                    1.0,
-                                    -17.0
+                        "level": 3,
+                        "weight": 1020,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.8,
+                                "speed": 570,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    68.0,
+                                    60.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    3.0,
-                                    1.0,
-                                    3.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35.0,
-                            "reloadTime": 2.85714285714286,
-                            "maxAmmo": 90,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 1020,
-                            "maxHealth": 94,
-                            "maxRegenHealth": 47,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.41142857142857,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_75mm_Odr_mle.1910": {
-                                    "defaultPortion": 0.8,
-                                    "speed": 570,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        68.0,
-                                        60.0
-                                    ],
-                                    "generic": {
-                                        "id": 40,
-                                        "userString": "#france_vehicles:_75mm_Odr_mle.1910",
-                                        "icon": "ap",
-                                        "price": 46,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 100
-                                        }
-                                    }
-                                },
-                                "_75mm_OCO_mle._1926": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 456,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        92.0,
-                                        92.0
-                                    ],
-                                    "generic": {
-                                        "id": 41,
-                                        "userString": "#france_vehicles:_75mm_OCO_mle._1926",
-                                        "icon": "hc_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumHollowCharge",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 100
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_75mm_OE_mle_1915": {
-                                    "defaultPortion": 0.2,
-                                    "speed": 570,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        38.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 2,
-                                        "userString": "#france_vehicles:_75mm_OE_mle_1915",
-                                        "icon": "he_modern",
-                                        "price": 38,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 75,
-                                        "explosionRadius": 1.06,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 175,
-                                            "devices": 100
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.06,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 90,
-                                                "devices": 50
-                                            }
-                                        }
-                                    }
+                                "id": 40,
+                                "userString": "#france_vehicles:_75mm_Odr_mle.1910",
+                                "icon": "ap",
+                                "price": 46,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 100
                                 }
                             },
-                            "name": "75 mm APX mle. 1938"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 456,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    92.0,
+                                    92.0
+                                ],
+                                "id": 41,
+                                "userString": "#france_vehicles:_75mm_OCO_mle._1926",
+                                "icon": "hc_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumHollowCharge",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 100
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.2,
+                                "speed": 570,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    38.0,
+                                    38.0
+                                ],
+                                "id": 2,
+                                "userString": "#france_vehicles:_75mm_OE_mle_1915",
+                                "icon": "he_modern",
+                                "price": 38,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 75,
+                                "explosionRadius": 1.06,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 175,
+                                    "devices": 100
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.06,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 90,
+                                        "devices": 50
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "75 mm AC SA44",
@@ -217,139 +166,87 @@
                             "after_shot": 3,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#france_vehicles:_75mm_Long_44_AC",
-                            "tags": [],
-                            "level": 5,
-                            "price": 27000,
-                            "impulse": 0.46,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.36,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -17.0,
-                                    1.0,
-                                    -17.0
+                        "level": 5,
+                        "weight": 1400,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.9,
+                                "speed": 735,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    100.0,
+                                    93.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    6.0,
-                                    1.0,
-                                    6.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35.0,
-                            "reloadTime": 4.28571428571429,
-                            "maxAmmo": 87,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 1400,
-                            "maxHealth": 120,
-                            "maxRegenHealth": 60,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.377142857142857,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_75mm_Prf1926": {
-                                    "defaultPortion": 0.9,
-                                    "speed": 735,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        100.0,
-                                        93.0
-                                    ],
-                                    "generic": {
-                                        "id": 0,
-                                        "userString": "#france_vehicles:_75mm_Prf1926",
-                                        "icon": "ap",
-                                        "price": 70,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumArmorPiercing",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 100
-                                        }
-                                    }
-                                },
-                                "_75mm_FrtPrf1940": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 919,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        129.0,
-                                        110.0
-                                    ],
-                                    "generic": {
-                                        "id": 1,
-                                        "userString": "#france_vehicles:_75mm_FrtPrf1940",
-                                        "icon": "ap_cr_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 75,
-                                        "isTracer": "true",
-                                        "effects": "mediumAPCR",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 100
-                                        }
-                                    }
-                                },
-                                "_75mm_OE_mle_1915": {
-                                    "defaultPortion": 0.1,
-                                    "speed": 735,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        38.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 2,
-                                        "userString": "#france_vehicles:_75mm_OE_mle_1915",
-                                        "icon": "he_modern",
-                                        "price": 38,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 75,
-                                        "explosionRadius": 1.06,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 175,
-                                            "devices": 100
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.06,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 90,
-                                                "devices": 50
-                                            }
-                                        }
-                                    }
+                                "id": 0,
+                                "userString": "#france_vehicles:_75mm_Prf1926",
+                                "icon": "ap",
+                                "price": 70,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumArmorPiercing",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 100
                                 }
                             },
-                            "name": "75 mm AC SA44"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 919,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    129.0,
+                                    110.0
+                                ],
+                                "id": 1,
+                                "userString": "#france_vehicles:_75mm_FrtPrf1940",
+                                "icon": "ap_cr_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 75,
+                                "isTracer": "true",
+                                "effects": "mediumAPCR",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 100
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.1,
+                                "speed": 735,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    38.0,
+                                    38.0
+                                ],
+                                "id": 2,
+                                "userString": "#france_vehicles:_75mm_OE_mle_1915",
+                                "icon": "he_modern",
+                                "price": 38,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 75,
+                                "explosionRadius": 1.06,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 175,
+                                    "devices": 100
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.06,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 90,
+                                        "devices": 50
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "105 mm AC court mle. 1934 S",
@@ -369,118 +266,66 @@
                             "after_shot": 4,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#france_vehicles:Canon_de_105_court_mle_1934S_AC",
-                            "shortUserString": "#france_vehicles:Canon_de_105_court_mle_1934S_AC_short",
-                            "tags": [],
-                            "level": 5,
-                            "price": 40700,
-                            "impulse": 0.46,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_large",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -45.0,
-                                    1.0,
-                                    -45.0
+                        "level": 5,
+                        "weight": 1700,
+                        "shells": [
+                            {
+                                "defaultPortion": 1.0,
+                                "speed": 670,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    53.0,
+                                    53.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    4.0,
-                                    1.0,
-                                    4.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 30.625,
-                            "reloadTime": 10.8571428571429,
-                            "maxAmmo": 24,
-                            "aimingTime": 4.57142857142857,
-                            "weight": 1700,
-                            "maxHealth": 150,
-                            "maxRegenHealth": 75,
-                            "repairCost": 9,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.46857142857143,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.32,
-                                "afterShot": 6.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_105mm_OE_mle_1920": {
-                                    "defaultPortion": 1.0,
-                                    "speed": 670,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        53.0,
-                                        53.0
-                                    ],
-                                    "generic": {
-                                        "id": 45,
-                                        "userString": "#france_vehicles:_105mm_OE_mle_1920",
-                                        "icon": "he_modern",
-                                        "price": 128,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 105,
-                                        "explosionRadius": 1.91,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 410,
-                                            "devices": 150
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.91,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 205,
-                                                "devices": 75
-                                            }
-                                        }
-                                    }
+                                "id": 45,
+                                "userString": "#france_vehicles:_105mm_OE_mle_1920",
+                                "icon": "he_modern",
+                                "price": 128,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 105,
+                                "explosionRadius": 1.91,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 410,
+                                    "devices": 150
                                 },
-                                "_105mm_OCO_mle._1936": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 536,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        104.0,
-                                        104.0
-                                    ],
-                                    "generic": {
-                                        "id": 46,
-                                        "userString": "#france_vehicles:_105mm_OCO_mle._1936",
-                                        "icon": "hc_premium",
-                                        "price": 4000,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainHollowCharge",
-                                        "damage": {
-                                            "armor": 350,
-                                            "devices": 150
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
+                                "armorSpalls": {
+                                    "impactRadius": 1.91,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 205,
+                                        "devices": 75
                                     }
                                 }
                             },
-                            "groundWave": null,
-                            "name": "105 mm AC court mle. 1934 S"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 536,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    104.0,
+                                    104.0
+                                ],
+                                "id": 46,
+                                "userString": "#france_vehicles:_105mm_OCO_mle._1936",
+                                "icon": "hc_premium",
+                                "price": 4000,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainHollowCharge",
+                                "damage": {
+                                    "armor": 350,
+                                    "devices": 150
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -516,7 +361,8 @@
                     0.0
                 ],
                 "track_health": 70,
-                "track_repaired_health": 55
+                "track_repaired_health": 55,
+                "level": 3
             },
             {
                 "name": "Somua SAu 40 bis",
@@ -536,7 +382,8 @@
                     0.0
                 ],
                 "track_health": 80,
-                "track_repaired_health": 60
+                "track_repaired_health": 60,
+                "level": 4
             }
         ],
         "engines": [

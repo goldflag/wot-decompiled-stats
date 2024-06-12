@@ -43,6 +43,7 @@
                 "id": "Turret_1_R126_Object_730_5",
                 "traverse": 18,
                 "view_range": 360,
+                "level": 10,
                 "guns": [
                     {
                         "name": "152 mm M-53",
@@ -62,141 +63,88 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#ussr_vehicles:_152mm_M_53",
-                            "tags": [],
-                            "level": 10,
-                            "price": 300000,
-                            "notInShop": "true",
-                            "impulse": 0.62,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.4,
-                                "recoilEffect": "huge"
-                            },
-                            "effects": "shot_huge_mb",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -15.0,
-                                    1.0,
-                                    -15.0
+                        "level": 10,
+                        "weight": 4370,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.85,
+                                "speed": 950,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    303.0,
+                                    293.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    5.0,
-                                    1.0,
-                                    5.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 24,
-                            "reloadTime": 16.5,
-                            "maxAmmo": 20,
-                            "aimingTime": 4.04,
-                            "weight": 4370,
-                            "maxHealth": 252,
-                            "maxRegenHealth": 126,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_152mm_UBR551M": {
-                                    "defaultPortion": 0.85,
-                                    "speed": 950,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        303.0,
-                                        293.0
-                                    ],
-                                    "generic": {
-                                        "id": 102,
-                                        "userString": "#ussr_vehicles:_152mm_UBR551M",
-                                        "icon": "ap",
-                                        "price": 1650,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 152,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 750,
-                                            "devices": 203
-                                        }
-                                    }
-                                },
-                                "_152mm_UBK551M": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 760,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        395.0,
-                                        395.0
-                                    ],
-                                    "generic": {
-                                        "id": 103,
-                                        "userString": "#ussr_vehicles:_152mm_UBK551M",
-                                        "icon": "hc_premium",
-                                        "price": 6800,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 152,
-                                        "isTracer": "true",
-                                        "effects": "largeHollowCharge",
-                                        "damage": {
-                                            "armor": 750,
-                                            "devices": 203
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_152mm_53-OF-551M": {
-                                    "defaultPortion": 0.15,
-                                    "speed": 760,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        90.0,
-                                        90.0
-                                    ],
-                                    "generic": {
-                                        "id": 104,
-                                        "userString": "#ussr_vehicles:_152mm_53-OF-551M",
-                                        "icon": "he_modern",
-                                        "price": 1120,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 152,
-                                        "explosionRadius": 3.66,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 1100,
-                                            "devices": 203
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 3.66,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 550,
-                                                "devices": 100
-                                            }
-                                        }
-                                    }
+                                "id": 102,
+                                "userString": "#ussr_vehicles:_152mm_UBR551M",
+                                "icon": "ap",
+                                "price": 1650,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 152,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 750,
+                                    "devices": 203
                                 }
                             },
-                            "name": "152 mm M-53"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 760,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    395.0,
+                                    395.0
+                                ],
+                                "id": 103,
+                                "userString": "#ussr_vehicles:_152mm_UBK551M",
+                                "icon": "hc_premium",
+                                "price": 6800,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 152,
+                                "isTracer": "true",
+                                "effects": "largeHollowCharge",
+                                "damage": {
+                                    "armor": 750,
+                                    "devices": 203
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.15,
+                                "speed": 760,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    90.0,
+                                    90.0
+                                ],
+                                "id": 104,
+                                "userString": "#ussr_vehicles:_152mm_53-OF-551M",
+                                "icon": "he_modern",
+                                "price": 1120,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 152,
+                                "explosionRadius": 3.66,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 1100,
+                                    "devices": 203
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 3.66,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 550,
+                                        "devices": 100
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -236,7 +184,8 @@
                     0.0
                 ],
                 "track_health": 250,
-                "track_repaired_health": 190
+                "track_repaired_health": 190,
+                "level": 10
             }
         ],
         "engines": [

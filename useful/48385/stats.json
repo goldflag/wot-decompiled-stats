@@ -43,6 +43,7 @@
                 "id": "Turret_1_R135_T_103",
                 "traverse": 15,
                 "view_range": 380,
+                "level": 8,
                 "guns": [
                     {
                         "name": "130 mm B-13",
@@ -59,140 +60,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#ussr_vehicles:_130mm_B_13",
-                            "tags": [],
-                            "level": 10,
-                            "price": 300000,
-                            "notInShop": "true",
-                            "impulse": 0.62,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.66,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_largeext_mb",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -12.0,
-                                    1.0,
-                                    -12.0
+                        "level": 10,
+                        "weight": 5290,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.9,
+                                "speed": 870,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    258.0,
+                                    250.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    4.0,
-                                    1.0,
-                                    4.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 26.25,
-                            "reloadTime": 13.5,
-                            "maxAmmo": 25,
-                            "aimingTime": 3.0,
-                            "weight": 5290,
-                            "maxHealth": 190,
-                            "maxRegenHealth": 95,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.31,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_130mm_PB-46T": {
-                                    "defaultPortion": 0.9,
-                                    "speed": 870,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        258.0,
-                                        250.0
-                                    ],
-                                    "generic": {
-                                        "id": 182,
-                                        "userString": "#ussr_vehicles:_130mm_PB-46T",
-                                        "icon": "ap",
-                                        "price": 910,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 130,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 440,
-                                            "devices": 180
-                                        }
-                                    }
-                                },
-                                "_130mm_PB-46TA": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 870,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        307.0,
-                                        270.0
-                                    ],
-                                    "generic": {
-                                        "id": 183,
-                                        "userString": "#ussr_vehicles:_130mm_PB-46TA",
-                                        "icon": "ap_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 130,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 440,
-                                            "devices": 180
-                                        }
-                                    }
-                                },
-                                "_130mm_OF-46": {
-                                    "defaultPortion": 0.1,
-                                    "speed": 870,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        65.0,
-                                        65.0
-                                    ],
-                                    "generic": {
-                                        "id": 116,
-                                        "userString": "#ussr_vehicles:_130mm_OF-46",
-                                        "icon": "he_modern",
-                                        "price": 410,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 130,
-                                        "explosionRadius": 2.78,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 580,
-                                            "devices": 180
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.78,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 290,
-                                                "devices": 90
-                                            }
-                                        }
-                                    }
+                                "id": 182,
+                                "userString": "#ussr_vehicles:_130mm_PB-46T",
+                                "icon": "ap",
+                                "price": 910,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 130,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 440,
+                                    "devices": 180
                                 }
                             },
-                            "name": "130 mm B-13"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 870,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    307.0,
+                                    270.0
+                                ],
+                                "id": 183,
+                                "userString": "#ussr_vehicles:_130mm_PB-46TA",
+                                "icon": "ap_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 130,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 440,
+                                    "devices": 180
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.1,
+                                "speed": 870,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    65.0,
+                                    65.0
+                                ],
+                                "id": 116,
+                                "userString": "#ussr_vehicles:_130mm_OF-46",
+                                "icon": "he_modern",
+                                "price": 410,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 130,
+                                "explosionRadius": 2.78,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 580,
+                                    "devices": 180
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.78,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 290,
+                                        "devices": 90
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -232,7 +180,8 @@
                     0.0
                 ],
                 "track_health": 200,
-                "track_repaired_health": 150
+                "track_repaired_health": 150,
+                "level": 8
             }
         ],
         "engines": [

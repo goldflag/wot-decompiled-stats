@@ -43,6 +43,7 @@
                 "id": "Turret_1_AMX_50Fosh_155",
                 "traverse": 26,
                 "view_range": 380,
+                "level": 10,
                 "guns": [
                     {
                         "name": "155 mm AC SA58",
@@ -62,141 +63,88 @@
                             "after_shot": 4,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#france_vehicles:_155mm_SA_58_AC",
-                            "tags": [],
-                            "level": 10,
-                            "price": 375000,
-                            "notInShop": "true",
-                            "impulse": 0.64,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.46,
-                                "recoilEffect": "huge"
-                            },
-                            "effects": "shot_huge_mb",
-                            "reloadEffect": "reload_automat_reloading_155_170",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -18.0,
-                                    1.0,
-                                    -18.0
+                        "level": 10,
+                        "weight": 5000,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.8,
+                                "speed": 826,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    293.0,
+                                    283.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    6.0,
-                                    1.0,
-                                    6.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 26.25,
-                            "reloadTime": 17.14285714285714,
-                            "maxAmmo": 32,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 5000,
-                            "maxHealth": 240,
-                            "maxRegenHealth": 120,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.285714285714286,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 3.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_155mm_AP-T_T368": {
-                                    "defaultPortion": 0.8,
-                                    "speed": 826,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        293.0,
-                                        283.0
-                                    ],
-                                    "generic": {
-                                        "id": 78,
-                                        "userString": "#france_vehicles:_155mm_AP-T_T368",
-                                        "icon": "ap",
-                                        "price": 1560,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 155,
-                                        "isTracer": "true",
-                                        "effects": "hugeArmorPiercing",
-                                        "damage": {
-                                            "armor": 750,
-                                            "devices": 210
-                                        }
-                                    }
-                                },
-                                "_155mm_HEAT_T267": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 826,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        395.0,
-                                        395.0
-                                    ],
-                                    "generic": {
-                                        "id": 79,
-                                        "userString": "#france_vehicles:_155mm_HEAT_T267",
-                                        "icon": "hc_premium",
-                                        "price": 6800,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 155,
-                                        "isTracer": "true",
-                                        "effects": "hugeHollowCharge",
-                                        "damage": {
-                                            "armor": 750,
-                                            "devices": 210
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_155mm_HE_T58": {
-                                    "defaultPortion": 0.2,
-                                    "speed": 826,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        90.0,
-                                        90.0
-                                    ],
-                                    "generic": {
-                                        "id": 80,
-                                        "userString": "#france_vehicles:_155mm_HE_T58",
-                                        "icon": "he_modern",
-                                        "price": 1090,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 155,
-                                        "explosionRadius": 3.78,
-                                        "isTracer": "true",
-                                        "effects": "hugeHighExplosive",
-                                        "damage": {
-                                            "armor": 1100,
-                                            "devices": 210
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 3.78,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 550,
-                                                "devices": 105
-                                            }
-                                        }
-                                    }
+                                "id": 78,
+                                "userString": "#france_vehicles:_155mm_AP-T_T368",
+                                "icon": "ap",
+                                "price": 1560,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 155,
+                                "isTracer": "true",
+                                "effects": "hugeArmorPiercing",
+                                "damage": {
+                                    "armor": 750,
+                                    "devices": 210
                                 }
                             },
-                            "name": "155 mm AC SA58"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 826,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    395.0,
+                                    395.0
+                                ],
+                                "id": 79,
+                                "userString": "#france_vehicles:_155mm_HEAT_T267",
+                                "icon": "hc_premium",
+                                "price": 6800,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 155,
+                                "isTracer": "true",
+                                "effects": "hugeHollowCharge",
+                                "damage": {
+                                    "armor": 750,
+                                    "devices": 210
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.2,
+                                "speed": 826,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    90.0,
+                                    90.0
+                                ],
+                                "id": 80,
+                                "userString": "#france_vehicles:_155mm_HE_T58",
+                                "icon": "he_modern",
+                                "price": 1090,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 155,
+                                "explosionRadius": 3.78,
+                                "isTracer": "true",
+                                "effects": "hugeHighExplosive",
+                                "damage": {
+                                    "armor": 1100,
+                                    "devices": 210
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 3.78,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 550,
+                                        "devices": 105
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -232,7 +180,8 @@
                     0.0
                 ],
                 "track_health": 300,
-                "track_repaired_health": 225
+                "track_repaired_health": 225,
+                "level": 10
             }
         ],
         "engines": [

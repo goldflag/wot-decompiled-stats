@@ -45,6 +45,7 @@
                 "id": "M14",
                 "traverse": 10,
                 "view_range": 260,
+                "level": 5,
                 "guns": [
                     {
                         "name": "155 mm Howitzer M1",
@@ -64,144 +65,92 @@
                             "after_shot": 6.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_155mm_Howitzer_M1",
-                            "tags": [],
-                            "level": 5,
-                            "price": 45000,
-                            "impulse": 0.68,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.16,
-                                "recoilEffect": "huge"
-                            },
-                            "effects": "shot_huge",
-                            "reloadEffect": "reload155_170",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -45.0,
-                                    1.0,
-                                    -45.0
+                        "level": 5,
+                        "weight": 1735,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.5,
+                                "speed": 430,
+                                "gravity": 143,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    38.0,
+                                    38.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    5.0,
-                                    1.0,
-                                    5.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 22.75,
-                            "reloadTime": 17.1428571428571,
-                            "maxAmmo": 22,
-                            "aimingTime": 5.71428571428571,
-                            "weight": 1735,
-                            "maxHealth": 168,
-                            "maxRegenHealth": 84,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.548571428571429,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.28,
-                                "afterShot": 6.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_155mm_HE_M102": {
-                                    "defaultPortion": 0.5,
-                                    "speed": 430,
-                                    "gravity": 143,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        38.0,
-                                        38.0
-                                    ],
-                                    "maxHeight": 405,
-                                    "generic": {
-                                        "id": 36,
-                                        "userString": "#usa_vehicles:_155mm_HE_M102",
-                                        "icon": "he_spg_stun",
-                                        "price": 505,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "caliber": 155,
-                                        "explosionRadius": 6.7,
-                                        "hasStun": "true",
-                                        "stunDuration": 10.4,
-                                        "guaranteedStunDuration": 0.6,
-                                        "damageDurationCoeff": 0.4,
-                                        "isTracer": "true",
-                                        "effects": "hugeSH",
-                                        "damage": {
-                                            "armor": 500,
-                                            "devices": 105
-                                        },
-                                        "deviceDamagePossibility": {
-                                            "protectFromIndirectHits": [
-                                                "internal",
-                                                "tankmen"
-                                            ]
-                                        }
-                                    }
+                                "maxHeight": 405,
+                                "id": 36,
+                                "userString": "#usa_vehicles:_155mm_HE_M102",
+                                "icon": "he_spg_stun",
+                                "price": 505,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "caliber": 155,
+                                "explosionRadius": 6.7,
+                                "hasStun": "true",
+                                "stunDuration": 10.4,
+                                "guaranteedStunDuration": 0.6,
+                                "damageDurationCoeff": 0.4,
+                                "isTracer": "true",
+                                "effects": "hugeSH",
+                                "damage": {
+                                    "armor": 500,
+                                    "devices": 105
                                 },
-                                "_155mm_HE_M107": {
-                                    "defaultPortion": 0.3,
-                                    "speed": 460,
-                                    "gravity": 143,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        48.0,
-                                        48.0
-                                    ],
-                                    "maxHeight": 463,
-                                    "generic": {
-                                        "id": 70,
-                                        "userString": "#usa_vehicles:_155mm_HE_M107",
-                                        "icon": "he_spg",
-                                        "price": 610,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "caliber": 155,
-                                        "explosionRadius": 4,
-                                        "isTracer": "true",
-                                        "effects": "hugeSF",
-                                        "damage": {
-                                            "armor": 600,
-                                            "devices": 105
-                                        }
-                                    }
-                                },
-                                "_155mm_HEAT_M167": {
-                                    "defaultPortion": 0.2,
-                                    "speed": 516,
-                                    "gravity": 143,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        150.0,
-                                        150.0
-                                    ],
-                                    "maxHeight": 582,
-                                    "generic": {
-                                        "id": 37,
-                                        "userString": "#usa_vehicles:_155mm_HEAT_M167",
-                                        "icon": "hc",
-                                        "price": 590,
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 155,
-                                        "isTracer": "true",
-                                        "effects": "hugeSC",
-                                        "damage": {
-                                            "armor": 360,
-                                            "devices": 100
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
+                                "deviceDamagePossibility": {
+                                    "protectFromIndirectHits": [
+                                        "internal",
+                                        "tankmen"
+                                    ]
                                 }
                             },
-                            "name": "155 mm Howitzer M1"
-                        }
+                            {
+                                "defaultPortion": 0.3,
+                                "speed": 460,
+                                "gravity": 143,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    48.0,
+                                    48.0
+                                ],
+                                "maxHeight": 463,
+                                "id": 70,
+                                "userString": "#usa_vehicles:_155mm_HE_M107",
+                                "icon": "he_spg",
+                                "price": 610,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "caliber": 155,
+                                "explosionRadius": 4,
+                                "isTracer": "true",
+                                "effects": "hugeSF",
+                                "damage": {
+                                    "armor": 600,
+                                    "devices": 105
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.2,
+                                "speed": 516,
+                                "gravity": 143,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    150.0,
+                                    150.0
+                                ],
+                                "maxHeight": 582,
+                                "id": 37,
+                                "userString": "#usa_vehicles:_155mm_HEAT_M167",
+                                "icon": "hc",
+                                "price": 590,
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 155,
+                                "isTracer": "true",
+                                "effects": "hugeSC",
+                                "damage": {
+                                    "armor": 360,
+                                    "devices": 100
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -237,7 +186,8 @@
                     0.0
                 ],
                 "track_health": 70,
-                "track_repaired_health": 55
+                "track_repaired_health": 55,
+                "level": 4
             },
             {
                 "name": "T72E1",
@@ -257,7 +207,8 @@
                     0.0
                 ],
                 "track_health": 70,
-                "track_repaired_health": 55
+                "track_repaired_health": 55,
+                "level": 5
             }
         ],
         "engines": [

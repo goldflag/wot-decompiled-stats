@@ -45,6 +45,7 @@
                 "id": "Turret_1_G167_Tiger_Maus_120t",
                 "traverse": 20,
                 "view_range": 400,
+                "level": 9,
                 "guns": [
                     {
                         "name": "12,8 cm Kw.K. L/55 TM",
@@ -61,140 +62,87 @@
                             "after_shot": 3.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#germany_vehicles:_128mm_KwK_L55_TM",
-                            "tags": [],
-                            "level": 10,
-                            "price": 310000,
-                            "notInShop": "true",
-                            "impulse": 0.56,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.46,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_largeext",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -24.0,
-                                    1.0,
-                                    -24.0
+                        "level": 10,
+                        "weight": 3480,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.8,
+                                "speed": 920,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    246.0,
+                                    241.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 26.25,
-                            "reloadTime": 15,
-                            "maxAmmo": 60,
-                            "aimingTime": 2.4,
-                            "weight": 3480,
-                            "maxHealth": 220,
-                            "maxRegenHealth": 110,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.37,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 3.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_128mm_PzGr39_TM": {
-                                    "defaultPortion": 0.8,
-                                    "speed": 920,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        246.0,
-                                        241.0
-                                    ],
-                                    "generic": {
-                                        "id": 363,
-                                        "userString": "#germany_vehicles:_128mm_PzGr39_TM",
-                                        "icon": "ap",
-                                        "price": 1300,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 128,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 530,
-                                            "devices": 180
-                                        }
-                                    }
-                                },
-                                "_128mm_PzGr40_TM": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1150,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        311.0,
-                                        263.0
-                                    ],
-                                    "generic": {
-                                        "id": 364,
-                                        "userString": "#germany_vehicles:_128mm_PzGr40_TM",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 128,
-                                        "isTracer": "true",
-                                        "effects": "largeAPCR",
-                                        "damage": {
-                                            "armor": 530,
-                                            "devices": 180
-                                        }
-                                    }
-                                },
-                                "_128mm_SprG18_TM": {
-                                    "defaultPortion": 0.2,
-                                    "speed": 920,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        65.0,
-                                        65.0
-                                    ],
-                                    "generic": {
-                                        "id": 365,
-                                        "userString": "#germany_vehicles:_128mm_SprG18_TM",
-                                        "icon": "he_modern",
-                                        "price": 1045,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 128,
-                                        "explosionRadius": 2.71,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 670,
-                                            "devices": 180
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.71,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 335,
-                                                "devices": 90
-                                            }
-                                        }
-                                    }
+                                "id": 363,
+                                "userString": "#germany_vehicles:_128mm_PzGr39_TM",
+                                "icon": "ap",
+                                "price": 1300,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 128,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 530,
+                                    "devices": 180
                                 }
                             },
-                            "name": "12,8 cm Kw.K. L/55 TM"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1150,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    311.0,
+                                    263.0
+                                ],
+                                "id": 364,
+                                "userString": "#germany_vehicles:_128mm_PzGr40_TM",
+                                "icon": "ap_cr_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 128,
+                                "isTracer": "true",
+                                "effects": "largeAPCR",
+                                "damage": {
+                                    "armor": 530,
+                                    "devices": 180
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.2,
+                                "speed": 920,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    65.0,
+                                    65.0
+                                ],
+                                "id": 365,
+                                "userString": "#germany_vehicles:_128mm_SprG18_TM",
+                                "icon": "he_modern",
+                                "price": 1045,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 128,
+                                "explosionRadius": 2.71,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 670,
+                                    "devices": 180
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.71,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 335,
+                                        "devices": 90
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -234,7 +182,8 @@
                     0.0
                 ],
                 "track_health": 250,
-                "track_repaired_health": 190
+                "track_repaired_health": 190,
+                "level": 9
             }
         ],
         "engines": [

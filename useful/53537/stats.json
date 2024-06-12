@@ -40,6 +40,7 @@
                 "id": "Turret_1_T1_E6",
                 "traverse": 38,
                 "view_range": 260,
+                "level": 1,
                 "guns": [
                     {
                         "name": "37 mm Semiautomatic Gun M1924A1",
@@ -59,149 +60,87 @@
                             "after_shot": 3,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_37mm_semiautomatic_gun_M1924A1",
-                            "shortUserString": "#usa_vehicles:_37mm_semiautomatic_gun_M1924A1_short",
-                            "tags": [],
-                            "level": 1,
-                            "price": 1900,
-                            "notInShop": "true",
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.3,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 1,
+                        "weight": 65,
+                        "shells": [
+                            {
+                                "defaultPortion": 1.0,
+                                "speed": 600,
+                                "gravity": 9.81,
+                                "maxDistance": 400,
+                                "piercingPower": [
+                                    33.0,
+                                    23.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 6.85714285714286,
-                            "maxAmmo": 90,
-                            "aimingTime": 2.05714285714286,
-                            "weight": 65,
-                            "maxHealth": 54,
-                            "clip": {
-                                "count": 5,
-                                "rate": 120
-                            },
-                            "burst": {
-                                "count": 1,
-                                "rate": 120
-                            },
-                            "maxRegenHealth": 27,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.514285714285714,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_37mm_AP1937": {
-                                    "defaultPortion": 1.0,
-                                    "speed": 600,
-                                    "gravity": 9.81,
-                                    "maxDistance": 400,
-                                    "piercingPower": [
-                                        33.0,
-                                        23.0
-                                    ],
-                                    "generic": {
-                                        "id": 6,
-                                        "userString": "#usa_vehicles:_37mm_AP1937",
-                                        "icon": "ap",
-                                        "price": 0,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 30,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_APCBC1935": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 750,
-                                    "gravity": 9.81,
-                                    "maxDistance": 400,
-                                    "piercingPower": [
-                                        53.0,
-                                        33.0
-                                    ],
-                                    "generic": {
-                                        "id": 7,
-                                        "userString": "#usa_vehicles:_37mm_APCBC1935",
-                                        "icon": "ap_cr_premium",
-                                        "price": 800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 30,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_HE1916": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 600,
-                                    "gravity": 9.81,
-                                    "maxDistance": 400,
-                                    "piercingPower": [
-                                        19.0,
-                                        19.0
-                                    ],
-                                    "generic": {
-                                        "id": 8,
-                                        "userString": "#usa_vehicles:_37mm_HE1916",
-                                        "icon": "he_modern",
-                                        "price": 8,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 37,
-                                        "explosionRadius": 0.31,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 36,
-                                            "devices": 50
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.31,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 20,
-                                                "devices": 25
-                                            }
-                                        }
-                                    }
+                                "id": 6,
+                                "userString": "#usa_vehicles:_37mm_AP1937",
+                                "icon": "ap",
+                                "price": 0,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 30,
+                                    "devices": 50
                                 }
                             },
-                            "name": "37 mm Semiautomatic Gun M1924A1"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 750,
+                                "gravity": 9.81,
+                                "maxDistance": 400,
+                                "piercingPower": [
+                                    53.0,
+                                    33.0
+                                ],
+                                "id": 7,
+                                "userString": "#usa_vehicles:_37mm_APCBC1935",
+                                "icon": "ap_cr_premium",
+                                "price": 800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 30,
+                                    "devices": 50
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 600,
+                                "gravity": 9.81,
+                                "maxDistance": 400,
+                                "piercingPower": [
+                                    19.0,
+                                    19.0
+                                ],
+                                "id": 8,
+                                "userString": "#usa_vehicles:_37mm_HE1916",
+                                "icon": "he_modern",
+                                "price": 8,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 37,
+                                "explosionRadius": 0.31,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 36,
+                                    "devices": 50
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.31,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 20,
+                                        "devices": 25
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -241,7 +180,8 @@
                     0.0
                 ],
                 "track_health": 60,
-                "track_repaired_health": 45
+                "track_repaired_health": 45,
+                "level": 1
             }
         ],
         "engines": [

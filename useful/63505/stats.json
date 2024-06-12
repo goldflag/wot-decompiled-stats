@@ -41,6 +41,7 @@
                 "id": "Turret_1_G117_Toldi_III",
                 "traverse": 30,
                 "view_range": 270,
+                "level": 3,
                 "guns": [
                     {
                         "name": "40 mm 37/42 M. L/45",
@@ -60,140 +61,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#germany_vehicles:_40mm_37_42_M_L45_A",
-                            "tags": [],
-                            "level": 3,
-                            "price": 6000,
-                            "notInShop": "true",
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.3,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 3,
+                        "weight": 136,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 800,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    64.0,
+                                    52.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 4.04,
-                            "maxAmmo": 100,
-                            "aimingTime": 4.04,
-                            "weight": 136,
-                            "maxHealth": 66,
-                            "maxRegenHealth": 33,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_40mm_36_M_Pancelgranat": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 800,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        64.0,
-                                        52.0
-                                    ],
-                                    "generic": {
-                                        "id": 151,
-                                        "userString": "#germany_vehicles:_40mm_36_M_Pancelgranat",
-                                        "icon": "ap",
-                                        "price": 15,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 40,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 45,
-                                            "devices": 54
-                                        }
-                                    }
-                                },
-                                "_40mm_43_M_Magvas_Panceltoro_Granat": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 800,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        80.0,
-                                        65.0
-                                    ],
-                                    "generic": {
-                                        "id": 152,
-                                        "userString": "#germany_vehicles:_40mm_43_M_Magvas_Panceltoro_Granat",
-                                        "icon": "ap_premium",
-                                        "price": 800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 40,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 45,
-                                            "devices": 54
-                                        }
-                                    }
-                                },
-                                "_40mm_39_M_Repeszgranat": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 800,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        20.0,
-                                        20.0
-                                    ],
-                                    "generic": {
-                                        "id": 153,
-                                        "userString": "#germany_vehicles:_40mm_39_M_Repeszgranat",
-                                        "icon": "he_modern",
-                                        "price": 12,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 40,
-                                        "explosionRadius": 0.35,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 60,
-                                            "devices": 54
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.35,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 30,
-                                                "devices": 25
-                                            }
-                                        }
-                                    }
+                                "id": 151,
+                                "userString": "#germany_vehicles:_40mm_36_M_Pancelgranat",
+                                "icon": "ap",
+                                "price": 15,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 40,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 45,
+                                    "devices": 54
                                 }
                             },
-                            "name": "40 mm 37/42 M. L/45"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 800,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    80.0,
+                                    65.0
+                                ],
+                                "id": 152,
+                                "userString": "#germany_vehicles:_40mm_43_M_Magvas_Panceltoro_Granat",
+                                "icon": "ap_premium",
+                                "price": 800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 40,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 45,
+                                    "devices": 54
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 800,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    20.0,
+                                    20.0
+                                ],
+                                "id": 153,
+                                "userString": "#germany_vehicles:_40mm_39_M_Repeszgranat",
+                                "icon": "he_modern",
+                                "price": 12,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 40,
+                                "explosionRadius": 0.35,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 60,
+                                    "devices": 54
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.35,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 30,
+                                        "devices": 25
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -233,7 +181,8 @@
                     -0.090205
                 ],
                 "track_health": 70,
-                "track_repaired_health": 55
+                "track_repaired_health": 55,
+                "level": 3
             }
         ],
         "engines": [

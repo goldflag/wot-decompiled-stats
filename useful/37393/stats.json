@@ -43,6 +43,7 @@
                 "id": "Turret_1_G164_Kpz_Pr_68_P",
                 "traverse": 35,
                 "view_range": 390,
+                "level": 8,
                 "guns": [
                     {
                         "name": "120 mm RhD",
@@ -59,141 +60,88 @@
                             "after_shot": 4,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#germany_vehicles:_120mm_RhD",
-                            "tags": [],
-                            "level": 9,
-                            "price": 220000,
-                            "notInShop": "true",
-                            "impulse": 0.68,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_large_mb",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -15.0,
-                                    1.0,
-                                    -15.0
+                        "level": 9,
+                        "weight": 3340,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 1150,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    230.0,
+                                    210.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    11.0,
-                                    1.0,
-                                    11.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 18,
-                            "reloadTime": 8,
-                            "maxAmmo": 45,
-                            "aimingTime": 2,
-                            "weight": 3340,
-                            "maxHealth": 220,
-                            "maxRegenHealth": 110,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.34,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.1,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_120mm_M820": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 1150,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        230.0,
-                                        210.0
-                                    ],
-                                    "generic": {
-                                        "id": 373,
-                                        "userString": "#germany_vehicles:_120mm_M820",
-                                        "icon": "ap",
-                                        "price": 1060,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 400,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_120mm_M820_HEAT": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 950,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        300.0,
-                                        300.0
-                                    ],
-                                    "generic": {
-                                        "id": 374,
-                                        "userString": "#germany_vehicles:_120mm_M820_HEAT",
-                                        "icon": "hc_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeHollowCharge",
-                                        "damage": {
-                                            "armor": 400,
-                                            "devices": 165
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_120mm_SDRN1": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 950,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        60.0,
-                                        60.0
-                                    ],
-                                    "generic": {
-                                        "id": 375,
-                                        "userString": "#germany_vehicles:_120mm_SDRN1",
-                                        "icon": "he_modern",
-                                        "price": 855,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 120,
-                                        "explosionRadius": 2.42,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 515,
-                                            "devices": 165
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.42,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 260,
-                                                "devices": 85
-                                            }
-                                        }
-                                    }
+                                "id": 373,
+                                "userString": "#germany_vehicles:_120mm_M820",
+                                "icon": "ap",
+                                "price": 1060,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 400,
+                                    "devices": 165
                                 }
                             },
-                            "name": "120 mm RhD"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 950,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    300.0,
+                                    300.0
+                                ],
+                                "id": 374,
+                                "userString": "#germany_vehicles:_120mm_M820_HEAT",
+                                "icon": "hc_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeHollowCharge",
+                                "damage": {
+                                    "armor": 400,
+                                    "devices": 165
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 950,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    60.0,
+                                    60.0
+                                ],
+                                "id": 375,
+                                "userString": "#germany_vehicles:_120mm_SDRN1",
+                                "icon": "he_modern",
+                                "price": 855,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 120,
+                                "explosionRadius": 2.42,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 515,
+                                    "devices": 165
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.42,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 260,
+                                        "devices": 85
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -233,7 +181,8 @@
                     0.0
                 ],
                 "track_health": 210,
-                "track_repaired_health": 160
+                "track_repaired_health": 160,
+                "level": 8
             }
         ],
         "engines": [

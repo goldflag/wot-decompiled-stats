@@ -43,6 +43,7 @@
                 "id": "Turret_1_F115_Lorraine_50t",
                 "traverse": 30,
                 "view_range": 380,
+                "level": 9,
                 "guns": [
                     {
                         "name": "120 mm D. 1203 P",
@@ -62,140 +63,87 @@
                             "after_shot": 4,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#france_vehicles:_120mm_D_1203_P",
-                            "tags": [],
-                            "level": 10,
-                            "price": 330000,
-                            "notInShop": "true",
-                            "impulse": 0.64,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.66,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_large_mb",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -24.0,
-                                    1.0,
-                                    -24.0
+                        "level": 10,
+                        "weight": 3580,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 1067,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    264.0,
+                                    246.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 26.25,
-                            "reloadTime": 10,
-                            "maxAmmo": 36,
-                            "aimingTime": 3,
-                            "weight": 3580,
-                            "maxHealth": 210,
-                            "maxRegenHealth": 105,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.32,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.15,
-                                "afterShot": 4,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_120mm_Prf1951": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 1067,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        264.0,
-                                        246.0
-                                    ],
-                                    "generic": {
-                                        "id": 130,
-                                        "userString": "#france_vehicles:_120mm_Prf1951",
-                                        "icon": "ap",
-                                        "price": 1050,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 400,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_120mm_FrtPrf1951": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1334,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        308.0,
-                                        281.0
-                                    ],
-                                    "generic": {
-                                        "id": 131,
-                                        "userString": "#france_vehicles:_120mm_FrtPrf1951",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeAPCR",
-                                        "damage": {
-                                            "armor": 400,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_120mm_OE_mle_1951": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 1067,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        65.0,
-                                        65.0
-                                    ],
-                                    "generic": {
-                                        "id": 132,
-                                        "userString": "#france_vehicles:_120mm_OE_mle_1951",
-                                        "icon": "he_modern",
-                                        "price": 810,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 120,
-                                        "explosionRadius": 2.42,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 515,
-                                            "devices": 165
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.42,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 260,
-                                                "devices": 85
-                                            }
-                                        }
-                                    }
+                                "id": 130,
+                                "userString": "#france_vehicles:_120mm_Prf1951",
+                                "icon": "ap",
+                                "price": 1050,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 400,
+                                    "devices": 165
                                 }
                             },
-                            "name": "120 mm D. 1203 P"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1334,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    308.0,
+                                    281.0
+                                ],
+                                "id": 131,
+                                "userString": "#france_vehicles:_120mm_FrtPrf1951",
+                                "icon": "ap_cr_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeAPCR",
+                                "damage": {
+                                    "armor": 400,
+                                    "devices": 165
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 1067,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    65.0,
+                                    65.0
+                                ],
+                                "id": 132,
+                                "userString": "#france_vehicles:_120mm_OE_mle_1951",
+                                "icon": "he_modern",
+                                "price": 810,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 120,
+                                "explosionRadius": 2.42,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 515,
+                                    "devices": 165
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.42,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 260,
+                                        "devices": 85
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -235,7 +183,8 @@
                     0.0
                 ],
                 "track_health": 250,
-                "track_repaired_health": 190
+                "track_repaired_health": 190,
+                "level": 9
             }
         ],
         "engines": [

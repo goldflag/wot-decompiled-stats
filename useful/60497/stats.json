@@ -41,6 +41,7 @@
                 "id": "Turret_1_GB106_Cobra",
                 "traverse": 44,
                 "view_range": 370,
+                "level": 9,
                 "guns": [
                     {
                         "name": "120 mm QF gun",
@@ -57,151 +58,98 @@
                             "after_shot": 5.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:_120mm_QF_gun",
-                            "tags": [],
-                            "level": 9,
-                            "price": 300000,
-                            "notInShop": "true",
-                            "impulse": 0.68,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_large",
-                            "reloadEffect": "reload_automat_reloading_115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -15.0,
-                                    1.0,
-                                    -15.0
+                        "level": 9,
+                        "weight": 2850,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.9,
+                                "speed": 793,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    268.0,
+                                    268.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    11.0,
-                                    1.0,
-                                    11.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 26.25,
-                            "reloadTime": 9.9714285714286,
-                            "maxAmmo": 35,
-                            "aimingTime": 2.62857142857143,
-                            "weight": 2850,
-                            "maxHealth": 190,
-                            "maxRegenHealth": 95,
-                            "repairCost": 6,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_47inch_QF": {
-                                    "defaultPortion": 0.9,
-                                    "speed": 793,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        268.0,
-                                        268.0
-                                    ],
-                                    "generic": {
-                                        "id": 173,
-                                        "userString": "#gb_vehicles:_47inch_QF",
-                                        "icon": "hc",
-                                        "price": 1060,
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeHollowCharge",
-                                        "damage": {
-                                            "armor": 360,
-                                            "devices": 165
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
+                                "id": 173,
+                                "userString": "#gb_vehicles:_47inch_QF",
+                                "icon": "hc",
+                                "price": 1060,
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeHollowCharge",
+                                "damage": {
+                                    "armor": 360,
+                                    "devices": 165
                                 },
-                                "_47inch_HESH_MkIIA": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1165,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        210.0,
-                                        210.0
-                                    ],
-                                    "generic": {
-                                        "id": 175,
-                                        "userString": "#gb_vehicles:_47inch_HESH_MkIIA",
-                                        "icon": "he_modern_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 120,
-                                        "explosionRadius": 2.42,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 490,
-                                            "devices": 165
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.42,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 260,
-                                                "devices": 85
-                                            }
-                                        }
-                                    }
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1165,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    210.0,
+                                    210.0
+                                ],
+                                "id": 175,
+                                "userString": "#gb_vehicles:_47inch_HESH_MkIIA",
+                                "icon": "he_modern_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 120,
+                                "explosionRadius": 2.42,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 490,
+                                    "devices": 165
                                 },
-                                "_47inch_HE": {
-                                    "defaultPortion": 0.1,
-                                    "speed": 793,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        120.0,
-                                        120.0
-                                    ],
-                                    "generic": {
-                                        "id": 177,
-                                        "userString": "#gb_vehicles:_47inch_HE",
-                                        "icon": "he_modern",
-                                        "price": 1200,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 120,
-                                        "explosionRadius": 2.42,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 515,
-                                            "devices": 165
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.42,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 260,
-                                                "devices": 85
-                                            }
-                                        }
+                                "armorSpalls": {
+                                    "impactRadius": 2.42,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 260,
+                                        "devices": 85
                                     }
                                 }
                             },
-                            "name": "120 mm QF gun"
-                        }
+                            {
+                                "defaultPortion": 0.1,
+                                "speed": 793,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    120.0,
+                                    120.0
+                                ],
+                                "id": 177,
+                                "userString": "#gb_vehicles:_47inch_HE",
+                                "icon": "he_modern",
+                                "price": 1200,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 120,
+                                "explosionRadius": 2.42,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 515,
+                                    "devices": 165
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.42,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 260,
+                                        "devices": 85
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -241,7 +189,8 @@
                     0.0
                 ],
                 "track_health": 240,
-                "track_repaired_health": 180
+                "track_repaired_health": 180,
+                "level": 9
             }
         ],
         "engines": [

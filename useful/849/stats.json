@@ -43,6 +43,7 @@
                 "id": "Turret_1_GB07_Matilda",
                 "traverse": 34,
                 "view_range": 330,
+                "level": 3,
                 "guns": [
                     {
                         "name": "QF 2-pdr Mk. X",
@@ -59,139 +60,87 @@
                             "after_shot": 3,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:_2pdr_Gun_Mk_X",
-                            "tags": [],
-                            "level": 4,
-                            "price": 6000,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.3,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 4,
+                        "weight": 130,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 792,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    78.0,
+                                    66.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 2.05714285714286,
-                            "maxAmmo": 100,
-                            "aimingTime": 1.14285714285714,
-                            "weight": 130,
-                            "maxHealth": 70,
-                            "maxRegenHealth": 35,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.377142857142857,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_2pdr_AP_Mk.IXBT": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 792,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        78.0,
-                                        66.0
-                                    ],
-                                    "generic": {
-                                        "id": 74,
-                                        "userString": "#gb_vehicles:_2pdr_AP_Mk.IXBT",
-                                        "icon": "ap",
-                                        "price": 30,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 40,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 54
-                                        }
-                                    }
-                                },
-                                "_2pdr_APCNR_Mk.2": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 990,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        121.0,
-                                        104.0
-                                    ],
-                                    "generic": {
-                                        "id": 75,
-                                        "userString": "#gb_vehicles:_2pdr_APCNR_Mk.2",
-                                        "icon": "ap_cr_premium",
-                                        "price": 1200,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 40,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 54
-                                        }
-                                    }
-                                },
-                                "_2pdr_HE_Mk.2": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 792,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        23.0,
-                                        23.0
-                                    ],
-                                    "generic": {
-                                        "id": 6,
-                                        "userString": "#gb_vehicles:_2pdr_HE_Mk.2",
-                                        "icon": "he_modern",
-                                        "price": 15,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 40,
-                                        "explosionRadius": 0.35,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 60,
-                                            "devices": 54
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.35,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 30,
-                                                "devices": 25
-                                            }
-                                        }
-                                    }
+                                "id": 74,
+                                "userString": "#gb_vehicles:_2pdr_AP_Mk.IXBT",
+                                "icon": "ap",
+                                "price": 30,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 40,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 54
                                 }
                             },
-                            "name": "QF 2-pdr Mk. X"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 990,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    121.0,
+                                    104.0
+                                ],
+                                "id": 75,
+                                "userString": "#gb_vehicles:_2pdr_APCNR_Mk.2",
+                                "icon": "ap_cr_premium",
+                                "price": 1200,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 40,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 54
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 792,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    23.0,
+                                    23.0
+                                ],
+                                "id": 6,
+                                "userString": "#gb_vehicles:_2pdr_HE_Mk.2",
+                                "icon": "he_modern",
+                                "price": 15,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 40,
+                                "explosionRadius": 0.35,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 60,
+                                    "devices": 54
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.35,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 30,
+                                        "devices": 25
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "OQF 3-inch Howitzer Mk. I",
@@ -208,116 +157,66 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:_76mm_Howitzer_MkI",
-                            "tags": [],
-                            "level": 4,
-                            "price": 30000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.2,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 4,
+                        "weight": 116,
+                        "shells": [
+                            {
+                                "defaultPortion": 1.0,
+                                "speed": 182,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    38.0,
+                                    38.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 40.25,
-                            "reloadTime": 4.11428571428571,
-                            "maxAmmo": 46,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 116,
-                            "maxHealth": 106,
-                            "maxRegenHealth": 53,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.548571428571429,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_76mm_HE_MkI": {
-                                    "defaultPortion": 1.0,
-                                    "speed": 182,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        38.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 24,
-                                        "userString": "#gb_vehicles:_76mm_HE_MkI",
-                                        "icon": "he_modern",
-                                        "price": 56,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 76,
-                                        "explosionRadius": 1.09,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 175,
-                                            "devices": 105
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.09,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 90,
-                                                "devices": 55
-                                            }
-                                        }
-                                    }
+                                "id": 24,
+                                "userString": "#gb_vehicles:_76mm_HE_MkI",
+                                "icon": "he_modern",
+                                "price": 56,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 76,
+                                "explosionRadius": 1.09,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 175,
+                                    "devices": 105
                                 },
-                                "_76mm_HEAT_MkI": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 182,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        100.0,
-                                        100.0
-                                    ],
-                                    "generic": {
-                                        "id": 25,
-                                        "userString": "#gb_vehicles:_76mm_HEAT_MkI",
-                                        "icon": "hc_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 76,
-                                        "isTracer": "true",
-                                        "effects": "mediumHollowCharge",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 105
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
+                                "armorSpalls": {
+                                    "impactRadius": 1.09,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 90,
+                                        "devices": 55
                                     }
                                 }
                             },
-                            "name": "OQF 3-inch Howitzer Mk. I"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 182,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    100.0,
+                                    100.0
+                                ],
+                                "id": 25,
+                                "userString": "#gb_vehicles:_76mm_HEAT_MkI",
+                                "icon": "hc_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 76,
+                                "isTracer": "true",
+                                "effects": "mediumHollowCharge",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 105
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            }
+                        ]
                     },
                     {
                         "name": "QF 2-pdr Mk. X-B",
@@ -334,105 +233,55 @@
                             "after_shot": 4,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:QF_2pdr_Littlejohn",
-                            "tags": [],
-                            "level": 4,
-                            "price": 28000,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.14,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 4,
+                        "weight": 175,
+                        "shells": [
+                            {
+                                "defaultPortion": 1.0,
+                                "speed": 1341,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    121.0,
+                                    102.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 1.2,
-                            "maxAmmo": 100,
-                            "aimingTime": 1.14285714285714,
-                            "weight": 175,
-                            "maxHealth": 70,
-                            "maxRegenHealth": 35,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.377142857142857,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_2pdr_APSV_Mk.1": {
-                                    "defaultPortion": 1.0,
-                                    "speed": 1341,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        121.0,
-                                        102.0
-                                    ],
-                                    "generic": {
-                                        "id": 76,
-                                        "userString": "#gb_vehicles:_2pdr_APSV_Mk.1",
-                                        "icon": "ap",
-                                        "price": 40,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 40,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 55,
-                                            "devices": 54
-                                        }
-                                    }
-                                },
-                                "_2pdr_APSV_Mk.2": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1341,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        145.0,
-                                        122.0
-                                    ],
-                                    "generic": {
-                                        "id": 77,
-                                        "userString": "#gb_vehicles:_2pdr_APSV_Mk.2",
-                                        "icon": "ap_cr_premium",
-                                        "price": 1600,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 40,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 55,
-                                            "devices": 54
-                                        }
-                                    }
+                                "id": 76,
+                                "userString": "#gb_vehicles:_2pdr_APSV_Mk.1",
+                                "icon": "ap",
+                                "price": 40,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 40,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 55,
+                                    "devices": 54
                                 }
                             },
-                            "name": "QF 2-pdr Mk. X-B"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1341,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    145.0,
+                                    122.0
+                                ],
+                                "id": 77,
+                                "userString": "#gb_vehicles:_2pdr_APSV_Mk.2",
+                                "icon": "ap_cr_premium",
+                                "price": 1600,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 40,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 55,
+                                    "devices": 54
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -452,6 +301,7 @@
                 "id": "Turret_2_GB07_Matilda",
                 "traverse": 34,
                 "view_range": 340,
+                "level": 4,
                 "guns": [
                     {
                         "name": "QF 2-pdr Mk. X",
@@ -468,139 +318,87 @@
                             "after_shot": 3,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:_2pdr_Gun_Mk_X",
-                            "tags": [],
-                            "level": 4,
-                            "price": 6000,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.3,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 4,
+                        "weight": 130,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 792,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    78.0,
+                                    66.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 2.05714285714286,
-                            "maxAmmo": 100,
-                            "aimingTime": 1.14285714285714,
-                            "weight": 130,
-                            "maxHealth": 70,
-                            "maxRegenHealth": 35,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.377142857142857,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_2pdr_AP_Mk.IXBT": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 792,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        78.0,
-                                        66.0
-                                    ],
-                                    "generic": {
-                                        "id": 74,
-                                        "userString": "#gb_vehicles:_2pdr_AP_Mk.IXBT",
-                                        "icon": "ap",
-                                        "price": 30,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 40,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 54
-                                        }
-                                    }
-                                },
-                                "_2pdr_APCNR_Mk.2": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 990,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        121.0,
-                                        104.0
-                                    ],
-                                    "generic": {
-                                        "id": 75,
-                                        "userString": "#gb_vehicles:_2pdr_APCNR_Mk.2",
-                                        "icon": "ap_cr_premium",
-                                        "price": 1200,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 40,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 54
-                                        }
-                                    }
-                                },
-                                "_2pdr_HE_Mk.2": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 792,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        23.0,
-                                        23.0
-                                    ],
-                                    "generic": {
-                                        "id": 6,
-                                        "userString": "#gb_vehicles:_2pdr_HE_Mk.2",
-                                        "icon": "he_modern",
-                                        "price": 15,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 40,
-                                        "explosionRadius": 0.35,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 60,
-                                            "devices": 54
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.35,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 30,
-                                                "devices": 25
-                                            }
-                                        }
-                                    }
+                                "id": 74,
+                                "userString": "#gb_vehicles:_2pdr_AP_Mk.IXBT",
+                                "icon": "ap",
+                                "price": 30,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 40,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 54
                                 }
                             },
-                            "name": "QF 2-pdr Mk. X"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 990,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    121.0,
+                                    104.0
+                                ],
+                                "id": 75,
+                                "userString": "#gb_vehicles:_2pdr_APCNR_Mk.2",
+                                "icon": "ap_cr_premium",
+                                "price": 1200,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 40,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 54
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 792,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    23.0,
+                                    23.0
+                                ],
+                                "id": 6,
+                                "userString": "#gb_vehicles:_2pdr_HE_Mk.2",
+                                "icon": "he_modern",
+                                "price": 15,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 40,
+                                "explosionRadius": 0.35,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 60,
+                                    "devices": 54
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.35,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 30,
+                                        "devices": 25
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "OQF 3-inch Howitzer Mk. I",
@@ -617,116 +415,66 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:_76mm_Howitzer_MkI",
-                            "tags": [],
-                            "level": 4,
-                            "price": 30000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.2,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 4,
+                        "weight": 116,
+                        "shells": [
+                            {
+                                "defaultPortion": 1.0,
+                                "speed": 182,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    38.0,
+                                    38.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 40.25,
-                            "reloadTime": 4.11428571428571,
-                            "maxAmmo": 46,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 116,
-                            "maxHealth": 106,
-                            "maxRegenHealth": 53,
-                            "repairCost": 5,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.548571428571429,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_76mm_HE_MkI": {
-                                    "defaultPortion": 1.0,
-                                    "speed": 182,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        38.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 24,
-                                        "userString": "#gb_vehicles:_76mm_HE_MkI",
-                                        "icon": "he_modern",
-                                        "price": 56,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 76,
-                                        "explosionRadius": 1.09,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 175,
-                                            "devices": 105
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.09,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 90,
-                                                "devices": 55
-                                            }
-                                        }
-                                    }
+                                "id": 24,
+                                "userString": "#gb_vehicles:_76mm_HE_MkI",
+                                "icon": "he_modern",
+                                "price": 56,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 76,
+                                "explosionRadius": 1.09,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 175,
+                                    "devices": 105
                                 },
-                                "_76mm_HEAT_MkI": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 182,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        100.0,
-                                        100.0
-                                    ],
-                                    "generic": {
-                                        "id": 25,
-                                        "userString": "#gb_vehicles:_76mm_HEAT_MkI",
-                                        "icon": "hc_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 76,
-                                        "isTracer": "true",
-                                        "effects": "mediumHollowCharge",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 105
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
+                                "armorSpalls": {
+                                    "impactRadius": 1.09,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 90,
+                                        "devices": 55
                                     }
                                 }
                             },
-                            "name": "OQF 3-inch Howitzer Mk. I"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 182,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    100.0,
+                                    100.0
+                                ],
+                                "id": 25,
+                                "userString": "#gb_vehicles:_76mm_HEAT_MkI",
+                                "icon": "hc_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 76,
+                                "isTracer": "true",
+                                "effects": "mediumHollowCharge",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 105
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            }
+                        ]
                     },
                     {
                         "name": "QF 2-pdr Mk. X-B",
@@ -743,105 +491,55 @@
                             "after_shot": 4,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:QF_2pdr_Littlejohn",
-                            "tags": [],
-                            "level": 4,
-                            "price": 28000,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.14,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 4,
+                        "weight": 175,
+                        "shells": [
+                            {
+                                "defaultPortion": 1.0,
+                                "speed": 1341,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    121.0,
+                                    102.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 1.2,
-                            "maxAmmo": 100,
-                            "aimingTime": 1.14285714285714,
-                            "weight": 175,
-                            "maxHealth": 70,
-                            "maxRegenHealth": 35,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.377142857142857,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_2pdr_APSV_Mk.1": {
-                                    "defaultPortion": 1.0,
-                                    "speed": 1341,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        121.0,
-                                        102.0
-                                    ],
-                                    "generic": {
-                                        "id": 76,
-                                        "userString": "#gb_vehicles:_2pdr_APSV_Mk.1",
-                                        "icon": "ap",
-                                        "price": 40,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 40,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 55,
-                                            "devices": 54
-                                        }
-                                    }
-                                },
-                                "_2pdr_APSV_Mk.2": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1341,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        145.0,
-                                        122.0
-                                    ],
-                                    "generic": {
-                                        "id": 77,
-                                        "userString": "#gb_vehicles:_2pdr_APSV_Mk.2",
-                                        "icon": "ap_cr_premium",
-                                        "price": 1600,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 40,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 55,
-                                            "devices": 54
-                                        }
-                                    }
+                                "id": 76,
+                                "userString": "#gb_vehicles:_2pdr_APSV_Mk.1",
+                                "icon": "ap",
+                                "price": 40,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 40,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 55,
+                                    "devices": 54
                                 }
                             },
-                            "name": "QF 2-pdr Mk. X-B"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1341,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    145.0,
+                                    122.0
+                                ],
+                                "id": 77,
+                                "userString": "#gb_vehicles:_2pdr_APSV_Mk.2",
+                                "icon": "ap_cr_premium",
+                                "price": 1600,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 40,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 55,
+                                    "devices": 54
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -881,7 +579,8 @@
                     0.0
                 ],
                 "track_health": 70,
-                "track_repaired_health": 55
+                "track_repaired_health": 55,
+                "level": 3
             },
             {
                 "name": "Matilda Mk. IIA",
@@ -901,7 +600,8 @@
                     0.0
                 ],
                 "track_health": 80,
-                "track_repaired_health": 60
+                "track_repaired_health": 60,
+                "level": 4
             }
         ],
         "engines": [

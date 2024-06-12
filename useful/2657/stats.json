@@ -43,6 +43,7 @@
                 "id": "Turret_1_STA_1",
                 "traverse": 42,
                 "view_range": 380,
+                "level": 7,
                 "guns": [
                     {
                         "name": "90 mm Gun M3A1",
@@ -59,139 +60,87 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#japan_vehicles:_90mm_Gun_M3A1",
-                            "tags": [],
-                            "level": 7,
-                            "price": 81000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.38,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main_mb",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -17.0,
-                                    1.0,
-                                    -17.0
+                        "level": 7,
+                        "weight": 1077,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 853,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    156.0,
+                                    149.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    6.0,
-                                    1.0,
-                                    6.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35.0,
-                            "reloadTime": 8.16,
-                            "maxAmmo": 52,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 1077,
-                            "maxHealth": 150,
-                            "maxRegenHealth": 75,
-                            "repairCost": 7,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.377142857142857,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.12,
-                                "afterShot": 3.5,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_90mm_AP_M82_late": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 853,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        156.0,
-                                        149.0
-                                    ],
-                                    "generic": {
-                                        "id": 37,
-                                        "userString": "#japan_vehicles:_90mm_AP_M82_late",
-                                        "icon": "ap",
-                                        "price": 270,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        }
-                                    }
-                                },
-                                "_90mm_HVAP_M304": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1066,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        243.0,
-                                        221.0
-                                    ],
-                                    "generic": {
-                                        "id": 38,
-                                        "userString": "#japan_vehicles:_90mm_HVAP_M304",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        }
-                                    }
-                                },
-                                "_90mm_HE_M71": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 853,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        45.0,
-                                        45.0
-                                    ],
-                                    "generic": {
-                                        "id": 39,
-                                        "userString": "#japan_vehicles:_90mm_HE_M71",
-                                        "icon": "he_modern",
-                                        "price": 240,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 90,
-                                        "explosionRadius": 1.46,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 122
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.46,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 160,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 37,
+                                "userString": "#japan_vehicles:_90mm_AP_M82_late",
+                                "icon": "ap",
+                                "price": 270,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
                                 }
                             },
-                            "name": "90 mm Gun M3A1"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1066,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    243.0,
+                                    221.0
+                                ],
+                                "id": 38,
+                                "userString": "#japan_vehicles:_90mm_HVAP_M304",
+                                "icon": "ap_cr_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 853,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    45.0,
+                                    45.0
+                                ],
+                                "id": 39,
+                                "userString": "#japan_vehicles:_90mm_HE_M71",
+                                "icon": "he_modern",
+                                "price": 240,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 90,
+                                "explosionRadius": 1.46,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 122
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.46,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 160,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "90 mm Rifled Gun",
@@ -208,140 +157,88 @@
                             "after_shot": 3.25,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#japan_vehicles:_90mm_Rifled_Gun",
-                            "tags": [],
-                            "level": 8,
-                            "price": 95500,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.38,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main_mb",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -19.0,
-                                    1.0,
-                                    -19.0
+                        "level": 8,
+                        "weight": 1150,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 853,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    212.0,
+                                    190.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    9.0,
-                                    1.0,
-                                    9.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35.0,
-                            "reloadTime": 7.51142857142857,
-                            "maxAmmo": 60,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 1150,
-                            "maxHealth": 170,
-                            "maxRegenHealth": 85,
-                            "repairCost": 7,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.377142857142857,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.12,
-                                "afterShot": 3.5,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_90mm_AP_M318A1": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 853,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        212.0,
-                                        190.0
-                                    ],
-                                    "generic": {
-                                        "id": 40,
-                                        "userString": "#japan_vehicles:_90mm_AP_M318A1",
-                                        "icon": "ap",
-                                        "price": 380,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        }
-                                    }
-                                },
-                                "_90mm_HEAT_Type70": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 853,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        275.0,
-                                        275.0
-                                    ],
-                                    "generic": {
-                                        "id": 41,
-                                        "userString": "#japan_vehicles:_90mm_HEAT_Type70",
-                                        "icon": "hc_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainHollowCharge",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_90mm_HE_M71": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 853,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        45.0,
-                                        45.0
-                                    ],
-                                    "generic": {
-                                        "id": 39,
-                                        "userString": "#japan_vehicles:_90mm_HE_M71",
-                                        "icon": "he_modern",
-                                        "price": 240,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 90,
-                                        "explosionRadius": 1.46,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 122
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.46,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 160,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 40,
+                                "userString": "#japan_vehicles:_90mm_AP_M318A1",
+                                "icon": "ap",
+                                "price": 380,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
                                 }
                             },
-                            "name": "90 mm Rifled Gun"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 853,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    275.0,
+                                    275.0
+                                ],
+                                "id": 41,
+                                "userString": "#japan_vehicles:_90mm_HEAT_Type70",
+                                "icon": "hc_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainHollowCharge",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 853,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    45.0,
+                                    45.0
+                                ],
+                                "id": 39,
+                                "userString": "#japan_vehicles:_90mm_HE_M71",
+                                "icon": "he_modern",
+                                "price": 240,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 90,
+                                "explosionRadius": 1.46,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 122
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.46,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 160,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -361,6 +258,7 @@
                 "id": "Turret_2_STA_1",
                 "traverse": 42,
                 "view_range": 390,
+                "level": 8,
                 "guns": [
                     {
                         "name": "90 mm Gun M3A1",
@@ -377,139 +275,87 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#japan_vehicles:_90mm_Gun_M3A1",
-                            "tags": [],
-                            "level": 7,
-                            "price": 81000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.38,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main_mb",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -17.0,
-                                    1.0,
-                                    -17.0
+                        "level": 7,
+                        "weight": 1077,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 853,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    156.0,
+                                    149.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    6.0,
-                                    1.0,
-                                    6.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35.0,
-                            "reloadTime": 8.16,
-                            "maxAmmo": 52,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 1077,
-                            "maxHealth": 150,
-                            "maxRegenHealth": 75,
-                            "repairCost": 7,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.377142857142857,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.12,
-                                "afterShot": 3.5,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_90mm_AP_M82_late": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 853,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        156.0,
-                                        149.0
-                                    ],
-                                    "generic": {
-                                        "id": 37,
-                                        "userString": "#japan_vehicles:_90mm_AP_M82_late",
-                                        "icon": "ap",
-                                        "price": 270,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        }
-                                    }
-                                },
-                                "_90mm_HVAP_M304": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1066,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        243.0,
-                                        221.0
-                                    ],
-                                    "generic": {
-                                        "id": 38,
-                                        "userString": "#japan_vehicles:_90mm_HVAP_M304",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        }
-                                    }
-                                },
-                                "_90mm_HE_M71": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 853,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        45.0,
-                                        45.0
-                                    ],
-                                    "generic": {
-                                        "id": 39,
-                                        "userString": "#japan_vehicles:_90mm_HE_M71",
-                                        "icon": "he_modern",
-                                        "price": 240,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 90,
-                                        "explosionRadius": 1.46,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 122
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.46,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 160,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 37,
+                                "userString": "#japan_vehicles:_90mm_AP_M82_late",
+                                "icon": "ap",
+                                "price": 270,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
                                 }
                             },
-                            "name": "90 mm Gun M3A1"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1066,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    243.0,
+                                    221.0
+                                ],
+                                "id": 38,
+                                "userString": "#japan_vehicles:_90mm_HVAP_M304",
+                                "icon": "ap_cr_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 853,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    45.0,
+                                    45.0
+                                ],
+                                "id": 39,
+                                "userString": "#japan_vehicles:_90mm_HE_M71",
+                                "icon": "he_modern",
+                                "price": 240,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 90,
+                                "explosionRadius": 1.46,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 122
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.46,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 160,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "90 mm Rifled Gun",
@@ -526,140 +372,88 @@
                             "after_shot": 3.25,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#japan_vehicles:_90mm_Rifled_Gun",
-                            "tags": [],
-                            "level": 8,
-                            "price": 95500,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.38,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main_mb",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -19.0,
-                                    1.0,
-                                    -19.0
+                        "level": 8,
+                        "weight": 1150,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 853,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    212.0,
+                                    190.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    9.0,
-                                    1.0,
-                                    9.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35.0,
-                            "reloadTime": 7.51142857142857,
-                            "maxAmmo": 60,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 1150,
-                            "maxHealth": 170,
-                            "maxRegenHealth": 85,
-                            "repairCost": 7,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.377142857142857,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.12,
-                                "afterShot": 3.5,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_90mm_AP_M318A1": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 853,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        212.0,
-                                        190.0
-                                    ],
-                                    "generic": {
-                                        "id": 40,
-                                        "userString": "#japan_vehicles:_90mm_AP_M318A1",
-                                        "icon": "ap",
-                                        "price": 380,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        }
-                                    }
-                                },
-                                "_90mm_HEAT_Type70": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 853,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        275.0,
-                                        275.0
-                                    ],
-                                    "generic": {
-                                        "id": 41,
-                                        "userString": "#japan_vehicles:_90mm_HEAT_Type70",
-                                        "icon": "hc_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainHollowCharge",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_90mm_HE_M71": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 853,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        45.0,
-                                        45.0
-                                    ],
-                                    "generic": {
-                                        "id": 39,
-                                        "userString": "#japan_vehicles:_90mm_HE_M71",
-                                        "icon": "he_modern",
-                                        "price": 240,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 90,
-                                        "explosionRadius": 1.46,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 122
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.46,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 160,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 40,
+                                "userString": "#japan_vehicles:_90mm_AP_M318A1",
+                                "icon": "ap",
+                                "price": 380,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
                                 }
                             },
-                            "name": "90 mm Rifled Gun"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 853,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    275.0,
+                                    275.0
+                                ],
+                                "id": 41,
+                                "userString": "#japan_vehicles:_90mm_HEAT_Type70",
+                                "icon": "hc_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainHollowCharge",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 853,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    45.0,
+                                    45.0
+                                ],
+                                "id": 39,
+                                "userString": "#japan_vehicles:_90mm_HE_M71",
+                                "icon": "he_modern",
+                                "price": 240,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 90,
+                                "explosionRadius": 1.46,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 122
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.46,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 160,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "90 mm Gun Type 61",
@@ -676,140 +470,88 @@
                             "after_shot": 3,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#japan_vehicles:_90mm_Gun_Type61",
-                            "tags": [],
-                            "level": 9,
-                            "price": 160000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.38,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main_mb",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -19.0,
-                                    1.0,
-                                    -19.0
+                        "level": 9,
+                        "weight": 1150,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 1080,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    219.0,
+                                    206.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    9.0,
-                                    1.0,
-                                    9.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35.0,
-                            "reloadTime": 7.51142857142857,
-                            "maxAmmo": 60,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 1150,
-                            "maxHealth": 170,
-                            "maxRegenHealth": 85,
-                            "repairCost": 7,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.377142857142857,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.12,
-                                "afterShot": 3.5,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_90mm_AP_M318A1": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 1080,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        219.0,
-                                        206.0
-                                    ],
-                                    "generic": {
-                                        "id": 40,
-                                        "userString": "#japan_vehicles:_90mm_AP_M318A1",
-                                        "icon": "ap",
-                                        "price": 380,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        }
-                                    }
-                                },
-                                "_90mm_HEAT_Type70": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 914,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        275.0,
-                                        275.0
-                                    ],
-                                    "generic": {
-                                        "id": 41,
-                                        "userString": "#japan_vehicles:_90mm_HEAT_Type70",
-                                        "icon": "hc_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainHollowCharge",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_90mm_HE_M71": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 914,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        45.0,
-                                        45.0
-                                    ],
-                                    "generic": {
-                                        "id": 39,
-                                        "userString": "#japan_vehicles:_90mm_HE_M71",
-                                        "icon": "he_modern",
-                                        "price": 240,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 90,
-                                        "explosionRadius": 1.46,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 122
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.46,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 160,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 40,
+                                "userString": "#japan_vehicles:_90mm_AP_M318A1",
+                                "icon": "ap",
+                                "price": 380,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
                                 }
                             },
-                            "name": "90 mm Gun Type 61"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 914,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    275.0,
+                                    275.0
+                                ],
+                                "id": 41,
+                                "userString": "#japan_vehicles:_90mm_HEAT_Type70",
+                                "icon": "hc_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainHollowCharge",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 914,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    45.0,
+                                    45.0
+                                ],
+                                "id": 39,
+                                "userString": "#japan_vehicles:_90mm_HE_M71",
+                                "icon": "he_modern",
+                                "price": 240,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 90,
+                                "explosionRadius": 1.46,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 122
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.46,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 160,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -849,7 +591,8 @@
                     0.0
                 ],
                 "track_health": 180,
-                "track_repaired_health": 135
+                "track_repaired_health": 135,
+                "level": 7
             },
             {
                 "name": "STA-3",
@@ -869,7 +612,8 @@
                     0.0
                 ],
                 "track_health": 200,
-                "track_repaired_health": 150
+                "track_repaired_health": 150,
+                "level": 8
             }
         ],
         "engines": [

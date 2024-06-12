@@ -40,6 +40,7 @@
                 "id": "Somuaturm",
                 "traverse": 41,
                 "view_range": 330,
+                "level": 3,
                 "guns": [
                     {
                         "name": "4,7 cm SA 35 L/34",
@@ -56,140 +57,87 @@
                             "after_shot": null,
                             "while_damaged": null
                         },
-                        "generic": {
-                            "userString": "#germany_vehicles:_47mm_SA35_L34",
-                            "tags": [],
-                            "level": 2,
-                            "price": 4100,
-                            "notInShop": "true",
-                            "impulse": 0.22,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.26,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 2,
+                        "weight": 100,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 660,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    55.0,
+                                    49.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 39.375,
-                            "reloadTime": 2.17142857142857,
-                            "maxAmmo": 112,
-                            "aimingTime": 1.14285714285714,
-                            "weight": 100,
-                            "maxHealth": 70,
-                            "maxRegenHealth": 35,
-                            "repairCost": 1,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.388571428571429,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.06,
-                                "afterShot": 2.5,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_47mm_Pzgr39f": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 660,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        55.0,
-                                        49.0
-                                    ],
-                                    "generic": {
-                                        "id": 12,
-                                        "userString": "#germany_vehicles:_47mm_Pzgr39f",
-                                        "icon": "ap",
-                                        "price": 14,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 47,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 52,
-                                            "devices": 64
-                                        }
-                                    }
-                                },
-                                "_47cm_Pzgr40f": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 825,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        90.0,
-                                        51.0
-                                    ],
-                                    "generic": {
-                                        "id": 13,
-                                        "userString": "#germany_vehicles:_47cm_Pzgr40f",
-                                        "icon": "ap_cr_premium",
-                                        "price": 800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 47,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 52,
-                                            "devices": 64
-                                        }
-                                    }
-                                },
-                                "_47mm_Sprg.18f": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 700,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        24.0,
-                                        24.0
-                                    ],
-                                    "generic": {
-                                        "id": 14,
-                                        "userString": "#germany_vehicles:_47mm_Sprg.18f",
-                                        "icon": "he_modern",
-                                        "price": 13,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 47,
-                                        "explosionRadius": 0.47,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 62,
-                                            "devices": 64
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.47,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 30,
-                                                "devices": 30
-                                            }
-                                        }
-                                    }
+                                "id": 12,
+                                "userString": "#germany_vehicles:_47mm_Pzgr39f",
+                                "icon": "ap",
+                                "price": 14,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 47,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 52,
+                                    "devices": 64
                                 }
                             },
-                            "name": "4,7 cm SA 35 L/34"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 825,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    90.0,
+                                    51.0
+                                ],
+                                "id": 13,
+                                "userString": "#germany_vehicles:_47cm_Pzgr40f",
+                                "icon": "ap_cr_premium",
+                                "price": 800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 47,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 52,
+                                    "devices": 64
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 700,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    24.0,
+                                    24.0
+                                ],
+                                "id": 14,
+                                "userString": "#germany_vehicles:_47mm_Sprg.18f",
+                                "icon": "he_modern",
+                                "price": 13,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 47,
+                                "explosionRadius": 0.47,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 62,
+                                    "devices": 64
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.47,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 30,
+                                        "devices": 30
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -229,7 +177,8 @@
                     0.0
                 ],
                 "track_health": 70,
-                "track_repaired_health": 55
+                "track_repaired_health": 55,
+                "level": 3
             }
         ],
         "engines": [

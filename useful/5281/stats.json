@@ -43,6 +43,7 @@
                 "id": "Turret_1_It23_CC_3",
                 "traverse": 18,
                 "view_range": 390,
+                "level": 10,
                 "guns": [
                     {
                         "name": "Cannone da 130/45",
@@ -62,141 +63,88 @@
                             "after_shot": 8,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#italy_vehicles:_130mm_Cannone_da_130_45",
-                            "tags": [],
-                            "level": 10,
-                            "price": 330000,
-                            "notInShop": "true",
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_largeext",
-                            "reloadEffect": "reload_automat_reloading_115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 10,
+                        "weight": 2600,
+                        "shells": [
+                            {
+                                "defaultPortion": 1,
+                                "speed": 1303,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    265.0,
+                                    245.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 20,
-                            "reloadTime": 7.5,
-                            "maxAmmo": 60,
-                            "aimingTime": 2,
-                            "weight": 2600,
-                            "maxHealth": 208,
-                            "maxRegenHealth": 104,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.05,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_130mm_AP_Mark_46": {
-                                    "defaultPortion": 1,
-                                    "speed": 1303,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        265.0,
-                                        245.0
-                                    ],
-                                    "generic": {
-                                        "id": 69,
-                                        "userString": "#italy_vehicles:_130mm_AP_Mark_46",
-                                        "icon": "ap",
-                                        "price": 1670,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 130,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 530,
-                                            "devices": 180
-                                        }
-                                    }
-                                },
-                                "_130mm_HEAT_Mark_71": {
-                                    "defaultPortion": 0,
-                                    "speed": 1256,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        330.0,
-                                        330.0
-                                    ],
-                                    "generic": {
-                                        "id": 70,
-                                        "userString": "#italy_vehicles:_130mm_HEAT_Mark_71",
-                                        "icon": "hc_premium",
-                                        "price": 6000,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 130,
-                                        "isTracer": "true",
-                                        "effects": "largeHollowCharge",
-                                        "damage": {
-                                            "armor": 530,
-                                            "devices": 180
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_130mm_HE_Mark_80": {
-                                    "defaultPortion": 0,
-                                    "speed": 1256,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        130.0,
-                                        130.0
-                                    ],
-                                    "generic": {
-                                        "id": 71,
-                                        "userString": "#italy_vehicles:_130mm_HE_Mark_80",
-                                        "icon": "he_modern",
-                                        "price": 1830,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 130,
-                                        "explosionRadius": 2.78,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 700,
-                                            "devices": 180
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.78,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 350,
-                                                "devices": 90
-                                            }
-                                        }
-                                    }
+                                "id": 69,
+                                "userString": "#italy_vehicles:_130mm_AP_Mark_46",
+                                "icon": "ap",
+                                "price": 1670,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 130,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 530,
+                                    "devices": 180
                                 }
                             },
-                            "name": "Cannone da 130/45"
-                        }
+                            {
+                                "defaultPortion": 0,
+                                "speed": 1256,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    330.0,
+                                    330.0
+                                ],
+                                "id": 70,
+                                "userString": "#italy_vehicles:_130mm_HEAT_Mark_71",
+                                "icon": "hc_premium",
+                                "price": 6000,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 130,
+                                "isTracer": "true",
+                                "effects": "largeHollowCharge",
+                                "damage": {
+                                    "armor": 530,
+                                    "devices": 180
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0,
+                                "speed": 1256,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    130.0,
+                                    130.0
+                                ],
+                                "id": 71,
+                                "userString": "#italy_vehicles:_130mm_HE_Mark_80",
+                                "icon": "he_modern",
+                                "price": 1830,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 130,
+                                "explosionRadius": 2.78,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 700,
+                                    "devices": 180
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.78,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 350,
+                                        "devices": 90
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -236,7 +184,8 @@
                     -0.003005
                 ],
                 "track_health": 250,
-                "track_repaired_health": 190
+                "track_repaired_health": 190,
+                "level": 10
             }
         ],
         "engines": [

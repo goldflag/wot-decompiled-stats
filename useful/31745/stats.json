@@ -43,6 +43,7 @@
                 "id": "Turret_1_R177_ISU_152K_BL10",
                 "traverse": 18,
                 "view_range": 350,
+                "level": 8,
                 "guns": [
                     {
                         "name": "152 mm BL-10A",
@@ -62,140 +63,87 @@
                             "after_shot": 6,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#ussr_vehicles:_152mm_BL-10A",
-                            "tags": [],
-                            "level": 10,
-                            "price": 320000,
-                            "notInShop": "true",
-                            "impulse": 0.62,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.62,
-                                "recoilEffect": "huge"
-                            },
-                            "effects": "shot_huge_mb",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -18.0,
-                                    1.0,
-                                    -18.0
+                        "level": 10,
+                        "weight": 6500,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.85,
+                                "speed": 880,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    286.0,
+                                    276.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    6.0,
-                                    1.0,
-                                    6.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 19.625,
-                            "reloadTime": 17.6,
-                            "maxAmmo": 20,
-                            "aimingTime": 3.42857142857143,
-                            "weight": 6500,
-                            "maxHealth": 230,
-                            "maxRegenHealth": 115,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.411428571428571,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_152mm_UBR551": {
-                                    "defaultPortion": 0.85,
-                                    "speed": 880,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        286.0,
-                                        276.0
-                                    ],
-                                    "generic": {
-                                        "id": 68,
-                                        "userString": "#ussr_vehicles:_152mm_UBR551",
-                                        "icon": "ap",
-                                        "price": 1650,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 152,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 750,
-                                            "devices": 203
-                                        }
-                                    }
-                                },
-                                "_152mm_UBR551P": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1100,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        329.0,
-                                        289.0
-                                    ],
-                                    "generic": {
-                                        "id": 69,
-                                        "userString": "#ussr_vehicles:_152mm_UBR551P",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 152,
-                                        "isTracer": "true",
-                                        "effects": "largeAPCR",
-                                        "damage": {
-                                            "armor": 750,
-                                            "devices": 203
-                                        }
-                                    }
-                                },
-                                "_152mm_53-OF-551": {
-                                    "defaultPortion": 0.15,
-                                    "speed": 880,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        90.0,
-                                        90.0
-                                    ],
-                                    "generic": {
-                                        "id": 65,
-                                        "userString": "#ussr_vehicles:_152mm_53-OF-551",
-                                        "icon": "he_modern",
-                                        "price": 1120,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 152,
-                                        "explosionRadius": 3.66,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 950,
-                                            "devices": 203
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 3.66,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 475,
-                                                "devices": 100
-                                            }
-                                        }
-                                    }
+                                "id": 68,
+                                "userString": "#ussr_vehicles:_152mm_UBR551",
+                                "icon": "ap",
+                                "price": 1650,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 152,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 750,
+                                    "devices": 203
                                 }
                             },
-                            "name": "152 mm BL-10A"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1100,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    329.0,
+                                    289.0
+                                ],
+                                "id": 69,
+                                "userString": "#ussr_vehicles:_152mm_UBR551P",
+                                "icon": "ap_cr_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 152,
+                                "isTracer": "true",
+                                "effects": "largeAPCR",
+                                "damage": {
+                                    "armor": 750,
+                                    "devices": 203
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.15,
+                                "speed": 880,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    90.0,
+                                    90.0
+                                ],
+                                "id": 65,
+                                "userString": "#ussr_vehicles:_152mm_53-OF-551",
+                                "icon": "he_modern",
+                                "price": 1120,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 152,
+                                "explosionRadius": 3.66,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 950,
+                                    "devices": 203
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 3.66,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 475,
+                                        "devices": 100
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -231,7 +179,8 @@
                     0.0
                 ],
                 "track_health": 200,
-                "track_repaired_health": 150
+                "track_repaired_health": 150,
+                "level": 8
             }
         ],
         "engines": [

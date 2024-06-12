@@ -43,6 +43,7 @@
                 "id": "Turret_1_Object_261",
                 "traverse": 12,
                 "view_range": 300,
+                "level": 10,
                 "guns": [
                     {
                         "name": "180 mm B-1-P",
@@ -62,144 +63,91 @@
                             "after_shot": 6.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#ussr_vehicles:_180mm_B-1-P",
-                            "tags": [],
-                            "level": 10,
-                            "price": 235000,
-                            "notInShop": "true",
-                            "impulse": 0.8,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.44,
-                                "recoilEffect": "huge"
-                            },
-                            "effects": "shot_superhuge",
-                            "reloadEffect": "reload155_170",
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -45.0,
-                                    1.0,
-                                    -45.0
+                        "level": 10,
+                        "weight": 17225,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.5,
+                                "speed": 510,
+                                "gravity": 177,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    45.0,
+                                    45.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    3.0,
-                                    1.0,
-                                    3.0
-                                ]
-                            },
-                            "rotationSpeed": 20.0,
-                            "reloadTime": 29.7142857142857,
-                            "maxAmmo": 18,
-                            "aimingTime": 6.28571428571429,
-                            "weight": 17225,
-                            "maxHealth": 280,
-                            "maxRegenHealth": 140,
-                            "repairCost": 12,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.422857142857143,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.42,
-                                "afterShot": 6.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_180mm_F-600D": {
-                                    "defaultPortion": 0.5,
-                                    "speed": 510,
-                                    "gravity": 177,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        45.0,
-                                        45.0
-                                    ],
-                                    "maxHeight": 460,
-                                    "generic": {
-                                        "id": 79,
-                                        "userString": "#ussr_vehicles:_180mm_F-600D",
-                                        "icon": "he_spg_stun",
-                                        "price": 1980,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "caliber": 180,
-                                        "explosionRadius": 9.5,
-                                        "hasStun": "true",
-                                        "stunDuration": 29,
-                                        "guaranteedStunDuration": 0.4,
-                                        "damageDurationCoeff": 0.6,
-                                        "isTracer": "true",
-                                        "effects": "hugeSH",
-                                        "damage": {
-                                            "armor": 800,
-                                            "devices": 120
-                                        },
-                                        "deviceDamagePossibility": {
-                                            "protectFromIndirectHits": [
-                                                "internal",
-                                                "tankmen"
-                                            ]
-                                        }
-                                    }
+                                "maxHeight": 460,
+                                "id": 79,
+                                "userString": "#ussr_vehicles:_180mm_F-600D",
+                                "icon": "he_spg_stun",
+                                "price": 1980,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "caliber": 180,
+                                "explosionRadius": 9.5,
+                                "hasStun": "true",
+                                "stunDuration": 29,
+                                "guaranteedStunDuration": 0.4,
+                                "damageDurationCoeff": 0.6,
+                                "isTracer": "true",
+                                "effects": "hugeSH",
+                                "damage": {
+                                    "armor": 800,
+                                    "devices": 120
                                 },
-                                "_180mm_F-600BM": {
-                                    "defaultPortion": 0.3,
-                                    "speed": 546,
-                                    "gravity": 177,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        56.0,
-                                        56.0
-                                    ],
-                                    "maxHeight": 526,
-                                    "generic": {
-                                        "id": 80,
-                                        "userString": "#ussr_vehicles:_180mm_F-600BM",
-                                        "icon": "he_spg",
-                                        "price": 2260,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "caliber": 180,
-                                        "explosionRadius": 5,
-                                        "isTracer": "true",
-                                        "effects": "hugeSF",
-                                        "damage": {
-                                            "armor": 1000,
-                                            "devices": 120
-                                        }
-                                    }
-                                },
-                                "_180mm_UBR-600": {
-                                    "defaultPortion": 0.2,
-                                    "speed": 612,
-                                    "gravity": 177,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        334.0,
-                                        314.0
-                                    ],
-                                    "maxHeight": 662,
-                                    "generic": {
-                                        "id": 81,
-                                        "userString": "#ussr_vehicles:_180mm_UBR-600",
-                                        "icon": "ap",
-                                        "price": 2140,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 180,
-                                        "isTracer": "true",
-                                        "effects": "hugeSA",
-                                        "damage": {
-                                            "armor": 520,
-                                            "devices": 120
-                                        }
-                                    }
+                                "deviceDamagePossibility": {
+                                    "protectFromIndirectHits": [
+                                        "internal",
+                                        "tankmen"
+                                    ]
                                 }
                             },
-                            "name": "180 mm B-1-P"
-                        }
+                            {
+                                "defaultPortion": 0.3,
+                                "speed": 546,
+                                "gravity": 177,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    56.0,
+                                    56.0
+                                ],
+                                "maxHeight": 526,
+                                "id": 80,
+                                "userString": "#ussr_vehicles:_180mm_F-600BM",
+                                "icon": "he_spg",
+                                "price": 2260,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "caliber": 180,
+                                "explosionRadius": 5,
+                                "isTracer": "true",
+                                "effects": "hugeSF",
+                                "damage": {
+                                    "armor": 1000,
+                                    "devices": 120
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.2,
+                                "speed": 612,
+                                "gravity": 177,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    334.0,
+                                    314.0
+                                ],
+                                "maxHeight": 662,
+                                "id": 81,
+                                "userString": "#ussr_vehicles:_180mm_UBR-600",
+                                "icon": "ap",
+                                "price": 2140,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 180,
+                                "isTracer": "true",
+                                "effects": "hugeSA",
+                                "damage": {
+                                    "armor": 520,
+                                    "devices": 120
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -235,7 +183,8 @@
                     0.0
                 ],
                 "track_health": 180,
-                "track_repaired_health": 135
+                "track_repaired_health": 135,
+                "level": 10
             }
         ],
         "engines": [

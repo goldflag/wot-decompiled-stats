@@ -43,6 +43,7 @@
                 "id": "Turret_1_S06_Ikv_90_Typ_B_Bofors",
                 "traverse": 20,
                 "view_range": 340,
+                "level": 7,
                 "guns": [
                     {
                         "name": "9 cm Bofors L/53",
@@ -62,140 +63,88 @@
                             "after_shot": 4,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#sweden_vehicles:_90mm_Bofors_L_53",
-                            "tags": [],
-                            "level": 7,
-                            "price": 84000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.38,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main_mb",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -17.0,
-                                    1.0,
-                                    -17.0
+                        "level": 7,
+                        "weight": 815,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 960,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    180.0,
+                                    170.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    6.0,
-                                    1.0,
-                                    6.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35.0,
-                            "reloadTime": 8.16,
-                            "maxAmmo": 52,
-                            "aimingTime": 2,
-                            "weight": 815,
-                            "maxHealth": 170,
-                            "maxRegenHealth": 85,
-                            "repairCost": 7,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.12,
-                                "afterShot": 3.5,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_90mm_slpprj_typ_II": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 960,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        180.0,
-                                        170.0
-                                    ],
-                                    "generic": {
-                                        "id": 38,
-                                        "userString": "#sweden_vehicles:_90mm_slpprj_typ_II",
-                                        "icon": "ap",
-                                        "price": 320,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        }
-                                    }
-                                },
-                                "_90mm_slpsgr_typ_I": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 950,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        230.0,
-                                        230.0
-                                    ],
-                                    "generic": {
-                                        "id": 36,
-                                        "userString": "#sweden_vehicles:_90mm_slpsgr_typ_I",
-                                        "icon": "hc_premium",
-                                        "price": 4000,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainHollowCharge",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_90mm_slsgr_m_72": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 950,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        45.0,
-                                        45.0
-                                    ],
-                                    "generic": {
-                                        "id": 37,
-                                        "userString": "#sweden_vehicles:_90mm_slsgr_m_72",
-                                        "icon": "he_modern",
-                                        "price": 195,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 90,
-                                        "explosionRadius": 1.46,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 122
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.46,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 160,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 38,
+                                "userString": "#sweden_vehicles:_90mm_slpprj_typ_II",
+                                "icon": "ap",
+                                "price": 320,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
                                 }
                             },
-                            "name": "9 cm Bofors L/53"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 950,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    230.0,
+                                    230.0
+                                ],
+                                "id": 36,
+                                "userString": "#sweden_vehicles:_90mm_slpsgr_typ_I",
+                                "icon": "hc_premium",
+                                "price": 4000,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainHollowCharge",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 950,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    45.0,
+                                    45.0
+                                ],
+                                "id": 37,
+                                "userString": "#sweden_vehicles:_90mm_slsgr_m_72",
+                                "icon": "he_modern",
+                                "price": 195,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 90,
+                                "explosionRadius": 1.46,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 122
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.46,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 160,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "9 cm kan m/F",
@@ -215,140 +164,88 @@
                             "after_shot": null,
                             "while_damaged": null
                         },
-                        "generic": {
-                            "userString": "#sweden_vehicles:_90mm_kan_m_F",
-                            "tags": [],
-                            "level": 8,
-                            "price": 124000,
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.38,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main_mb",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -19.0,
-                                    1.0,
-                                    -19.0
+                        "level": 8,
+                        "weight": 1030,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 1275,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    210.0,
+                                    195.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    0.0,
-                                    1.0,
-                                    0.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 12,
-                            "reloadTime": 7.5,
-                            "maxAmmo": 64,
-                            "aimingTime": 2.3,
-                            "weight": 1030,
-                            "maxHealth": 170,
-                            "maxRegenHealth": 85,
-                            "repairCost": 7,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.38,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.12,
-                                "afterShot": 3.5,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_90mm_slpprj_m_F": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 1275,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        210.0,
-                                        195.0
-                                    ],
-                                    "generic": {
-                                        "id": 67,
-                                        "userString": "#sweden_vehicles:_90mm_slpprj_m_F",
-                                        "icon": "ap",
-                                        "price": 390,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        }
-                                    }
-                                },
-                                "_90mm_slpsgr_m_F": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 950,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        250.0,
-                                        250.0
-                                    ],
-                                    "generic": {
-                                        "id": 68,
-                                        "userString": "#sweden_vehicles:_90mm_slpsgr_m_F",
-                                        "icon": "hc_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainHollowCharge",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_90mm_sgr_m_F": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 750,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        45.0,
-                                        45.0
-                                    ],
-                                    "generic": {
-                                        "id": 69,
-                                        "userString": "#sweden_vehicles:_90mm_sgr_m_F",
-                                        "icon": "he_modern",
-                                        "price": 210,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 90,
-                                        "explosionRadius": 1.46,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 122
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.46,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 160,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 67,
+                                "userString": "#sweden_vehicles:_90mm_slpprj_m_F",
+                                "icon": "ap",
+                                "price": 390,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
                                 }
                             },
-                            "name": "9 cm kan m/F"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 950,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    250.0,
+                                    250.0
+                                ],
+                                "id": 68,
+                                "userString": "#sweden_vehicles:_90mm_slpsgr_m_F",
+                                "icon": "hc_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainHollowCharge",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 750,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    45.0,
+                                    45.0
+                                ],
+                                "id": 69,
+                                "userString": "#sweden_vehicles:_90mm_sgr_m_F",
+                                "icon": "he_modern",
+                                "price": 210,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 90,
+                                "explosionRadius": 1.46,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 122
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.46,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 160,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -388,7 +285,8 @@
                     0.0
                 ],
                 "track_health": 130,
-                "track_repaired_health": 100
+                "track_repaired_health": 100,
+                "level": 6
             },
             {
                 "name": "Ikv 90 Alt 2",
@@ -408,7 +306,8 @@
                     0.0
                 ],
                 "track_health": 140,
-                "track_repaired_health": 105
+                "track_repaired_health": 105,
+                "level": 7
             }
         ],
         "engines": [

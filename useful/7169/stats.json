@@ -43,6 +43,7 @@
                 "id": "IS-7",
                 "traverse": 25,
                 "view_range": 400,
+                "level": 10,
                 "guns": [
                     {
                         "name": "130 mm S-70",
@@ -59,139 +60,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#ussr_vehicles:_130mm_S-70",
-                            "tags": [],
-                            "level": 10,
-                            "price": 297000,
-                            "impulse": 0.62,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.43,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_largeext_mb",
-                            "reloadEffect": "reload115_152",
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -18.0,
-                                    1.0,
-                                    -18.0
+                        "level": 10,
+                        "weight": 2980,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.9,
+                                "speed": 900,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    250.0,
+                                    240.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    6.0,
-                                    1.0,
-                                    6.0
-                                ]
-                            },
-                            "rotationSpeed": 26.25,
-                            "reloadTime": 15.4285714285714,
-                            "maxAmmo": 28,
-                            "aimingTime": 3.42857142857143,
-                            "weight": 2980,
-                            "maxHealth": 210,
-                            "maxRegenHealth": 105,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_130mm_UBR-482": {
-                                    "defaultPortion": 0.9,
-                                    "speed": 900,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        250.0,
-                                        240.0
-                                    ],
-                                    "generic": {
-                                        "id": 57,
-                                        "userString": "#ussr_vehicles:_130mm_UBR-482",
-                                        "icon": "ap",
-                                        "price": 1118,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 130,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 490,
-                                            "devices": 180
-                                        }
-                                    }
-                                },
-                                "_130mm_UBR-482P": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1125,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        303.0,
-                                        263.0
-                                    ],
-                                    "generic": {
-                                        "id": 58,
-                                        "userString": "#ussr_vehicles:_130mm_UBR-482P",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 130,
-                                        "isTracer": "true",
-                                        "effects": "largeAPCR",
-                                        "damage": {
-                                            "armor": 490,
-                                            "devices": 180
-                                        }
-                                    }
-                                },
-                                "_130mm_UOF-482": {
-                                    "defaultPortion": 0.1,
-                                    "speed": 900,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        68.0,
-                                        68.0
-                                    ],
-                                    "generic": {
-                                        "id": 59,
-                                        "userString": "#ussr_vehicles:_130mm_UOF-482",
-                                        "icon": "he_modern",
-                                        "price": 978,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 130,
-                                        "explosionRadius": 2.78,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 640,
-                                            "devices": 180
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.78,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 320,
-                                                "devices": 90
-                                            }
-                                        }
-                                    }
+                                "id": 57,
+                                "userString": "#ussr_vehicles:_130mm_UBR-482",
+                                "icon": "ap",
+                                "price": 1118,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 130,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 490,
+                                    "devices": 180
                                 }
                             },
-                            "name": "130 mm S-70"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1125,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    303.0,
+                                    263.0
+                                ],
+                                "id": 58,
+                                "userString": "#ussr_vehicles:_130mm_UBR-482P",
+                                "icon": "ap_cr_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 130,
+                                "isTracer": "true",
+                                "effects": "largeAPCR",
+                                "damage": {
+                                    "armor": 490,
+                                    "devices": 180
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.1,
+                                "speed": 900,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    68.0,
+                                    68.0
+                                ],
+                                "id": 59,
+                                "userString": "#ussr_vehicles:_130mm_UOF-482",
+                                "icon": "he_modern",
+                                "price": 978,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 130,
+                                "explosionRadius": 2.78,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 640,
+                                    "devices": 180
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.78,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 320,
+                                        "devices": 90
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -231,7 +180,8 @@
                     0.0
                 ],
                 "track_health": 250,
-                "track_repaired_health": 190
+                "track_repaired_health": 190,
+                "level": 10
             }
         ],
         "engines": [

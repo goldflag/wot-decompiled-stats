@@ -43,6 +43,7 @@
                 "id": "Grille_mod_1",
                 "traverse": 16,
                 "view_range": 260,
+                "level": 5,
                 "guns": [
                     {
                         "name": "15 cm s.I.G. 33 L/11",
@@ -62,144 +63,92 @@
                             "after_shot": 6.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#germany_vehicles:_150mm_sIG33L11",
-                            "tags": [],
-                            "level": 3,
-                            "price": 8880,
-                            "impulse": 0.56,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.68,
-                                "recoilEffect": "huge"
-                            },
-                            "effects": "shot_huge",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -65.0,
-                                    1.0,
-                                    -65.0
+                        "level": 3,
+                        "weight": 760,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.5,
+                                "speed": 275,
+                                "gravity": 125,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    35.0,
+                                    35.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    0.0,
-                                    1.0,
-                                    0.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 23.675,
-                            "reloadTime": 9.14285714285714,
-                            "maxAmmo": 8,
-                            "aimingTime": 5.14285714285714,
-                            "weight": 760,
-                            "maxHealth": 100,
-                            "maxRegenHealth": 50,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.548571428571429,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.32,
-                                "afterShot": 6.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_150mm_Sprg_L": {
-                                    "defaultPortion": 0.5,
-                                    "speed": 275,
-                                    "gravity": 125,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        35.0,
-                                        35.0
-                                    ],
-                                    "maxHeight": 190,
-                                    "generic": {
-                                        "id": 49,
-                                        "userString": "#germany_vehicles:_150mm_Sprg_L",
-                                        "icon": "he_spg_stun",
-                                        "price": 280,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "caliber": 150,
-                                        "explosionRadius": 6.2,
-                                        "hasStun": "true",
-                                        "stunDuration": 6.6,
-                                        "guaranteedStunDuration": 0.6,
-                                        "damageDurationCoeff": 0.4,
-                                        "isTracer": "true",
-                                        "effects": "largeSH",
-                                        "damage": {
-                                            "armor": 350,
-                                            "devices": 102
-                                        },
-                                        "deviceDamagePossibility": {
-                                            "protectFromIndirectHits": [
-                                                "internal",
-                                                "tankmen"
-                                            ]
-                                        }
-                                    }
+                                "maxHeight": 190,
+                                "id": 49,
+                                "userString": "#germany_vehicles:_150mm_Sprg_L",
+                                "icon": "he_spg_stun",
+                                "price": 280,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "caliber": 150,
+                                "explosionRadius": 6.2,
+                                "hasStun": "true",
+                                "stunDuration": 6.6,
+                                "guaranteedStunDuration": 0.6,
+                                "damageDurationCoeff": 0.4,
+                                "isTracer": "true",
+                                "effects": "largeSH",
+                                "damage": {
+                                    "armor": 350,
+                                    "devices": 102
                                 },
-                                "_150mm_Sprg_L.erz": {
-                                    "defaultPortion": 0.3,
-                                    "speed": 294,
-                                    "gravity": 125,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        44.0,
-                                        44.0
-                                    ],
-                                    "maxHeight": 217,
-                                    "generic": {
-                                        "id": 53,
-                                        "userString": "#germany_vehicles:_150mm_Sprg_L.erz",
-                                        "icon": "he_spg",
-                                        "price": 310,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "caliber": 150,
-                                        "explosionRadius": 3,
-                                        "isTracer": "true",
-                                        "effects": "largeSF",
-                                        "damage": {
-                                            "armor": 450,
-                                            "devices": 102
-                                        }
-                                    }
-                                },
-                                "_150mmGr_39H1A_L": {
-                                    "defaultPortion": 0.2,
-                                    "speed": 330,
-                                    "gravity": 125,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        98.0,
-                                        98.0
-                                    ],
-                                    "maxHeight": 273,
-                                    "generic": {
-                                        "id": 50,
-                                        "userString": "#germany_vehicles:_150mmGr_39H1A_L",
-                                        "icon": "hc",
-                                        "price": 305,
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 150,
-                                        "isTracer": "true",
-                                        "effects": "largeSC",
-                                        "damage": {
-                                            "armor": 300,
-                                            "devices": 100
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
+                                "deviceDamagePossibility": {
+                                    "protectFromIndirectHits": [
+                                        "internal",
+                                        "tankmen"
+                                    ]
                                 }
                             },
-                            "name": "15 cm s.I.G. 33 L/11"
-                        }
+                            {
+                                "defaultPortion": 0.3,
+                                "speed": 294,
+                                "gravity": 125,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    44.0,
+                                    44.0
+                                ],
+                                "maxHeight": 217,
+                                "id": 53,
+                                "userString": "#germany_vehicles:_150mm_Sprg_L.erz",
+                                "icon": "he_spg",
+                                "price": 310,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "caliber": 150,
+                                "explosionRadius": 3,
+                                "isTracer": "true",
+                                "effects": "largeSF",
+                                "damage": {
+                                    "armor": 450,
+                                    "devices": 102
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.2,
+                                "speed": 330,
+                                "gravity": 125,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    98.0,
+                                    98.0
+                                ],
+                                "maxHeight": 273,
+                                "id": 50,
+                                "userString": "#germany_vehicles:_150mmGr_39H1A_L",
+                                "icon": "hc",
+                                "price": 305,
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 150,
+                                "isTracer": "true",
+                                "effects": "largeSC",
+                                "damage": {
+                                    "armor": 300,
+                                    "devices": 100
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            }
+                        ]
                     },
                     {
                         "name": "15 cm s.F.H. 13 L/17",
@@ -219,144 +168,92 @@
                             "after_shot": 6.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#germany_vehicles:_150mm_sFH13_L17",
-                            "tags": [],
-                            "level": 5,
-                            "price": 44920,
-                            "impulse": 0.56,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.68,
-                                "recoilEffect": "huge"
-                            },
-                            "effects": "shot_huge",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -45.0,
-                                    1.0,
-                                    -45.0
+                        "level": 5,
+                        "weight": 1200,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.5,
+                                "speed": 355,
+                                "gravity": 150,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    38.0,
+                                    38.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    4.0,
-                                    1.0,
-                                    4.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 23.675,
-                            "reloadTime": 17.1428571428571,
-                            "maxAmmo": 22,
-                            "aimingTime": 5.14285714285714,
-                            "weight": 1200,
-                            "maxHealth": 160,
-                            "maxRegenHealth": 80,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.525714285714286,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.32,
-                                "afterShot": 6.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_150mm_Sprg": {
-                                    "defaultPortion": 0.5,
-                                    "speed": 355,
-                                    "gravity": 150,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        38.0,
-                                        38.0
-                                    ],
-                                    "maxHeight": 263,
-                                    "generic": {
-                                        "id": 47,
-                                        "userString": "#germany_vehicles:_150mm_Sprg",
-                                        "icon": "he_spg_stun",
-                                        "price": 505,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "caliber": 150,
-                                        "explosionRadius": 6.7,
-                                        "hasStun": "true",
-                                        "stunDuration": 10.5,
-                                        "guaranteedStunDuration": 0.6,
-                                        "damageDurationCoeff": 0.4,
-                                        "isTracer": "true",
-                                        "effects": "largeSH",
-                                        "damage": {
-                                            "armor": 480,
-                                            "devices": 102
-                                        },
-                                        "deviceDamagePossibility": {
-                                            "protectFromIndirectHits": [
-                                                "internal",
-                                                "tankmen"
-                                            ]
-                                        }
-                                    }
+                                "maxHeight": 263,
+                                "id": 47,
+                                "userString": "#germany_vehicles:_150mm_Sprg",
+                                "icon": "he_spg_stun",
+                                "price": 505,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "caliber": 150,
+                                "explosionRadius": 6.7,
+                                "hasStun": "true",
+                                "stunDuration": 10.5,
+                                "guaranteedStunDuration": 0.6,
+                                "damageDurationCoeff": 0.4,
+                                "isTracer": "true",
+                                "effects": "largeSH",
+                                "damage": {
+                                    "armor": 480,
+                                    "devices": 102
                                 },
-                                "_150mm_Gr_19_Stg": {
-                                    "defaultPortion": 0.3,
-                                    "speed": 380,
-                                    "gravity": 150,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        48.0,
-                                        48.0
-                                    ],
-                                    "maxHeight": 301,
-                                    "generic": {
-                                        "id": 3,
-                                        "userString": "#germany_vehicles:_150mm_Gr_19_Stg",
-                                        "icon": "he_spg",
-                                        "price": 595,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "caliber": 150,
-                                        "explosionRadius": 4,
-                                        "isTracer": "true",
-                                        "effects": "largeSF",
-                                        "damage": {
-                                            "armor": 580,
-                                            "devices": 102
-                                        }
-                                    }
-                                },
-                                "_150mmGr_39H1A": {
-                                    "defaultPortion": 0.2,
-                                    "speed": 426,
-                                    "gravity": 150,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        154.0,
-                                        154.0
-                                    ],
-                                    "maxHeight": 379,
-                                    "generic": {
-                                        "id": 48,
-                                        "userString": "#germany_vehicles:_150mmGr_39H1A",
-                                        "icon": "hc",
-                                        "price": 540,
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 150,
-                                        "isTracer": "true",
-                                        "effects": "largeSC",
-                                        "damage": {
-                                            "armor": 340,
-                                            "devices": 100
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
+                                "deviceDamagePossibility": {
+                                    "protectFromIndirectHits": [
+                                        "internal",
+                                        "tankmen"
+                                    ]
                                 }
                             },
-                            "name": "15 cm s.F.H. 13 L/17"
-                        }
+                            {
+                                "defaultPortion": 0.3,
+                                "speed": 380,
+                                "gravity": 150,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    48.0,
+                                    48.0
+                                ],
+                                "maxHeight": 301,
+                                "id": 3,
+                                "userString": "#germany_vehicles:_150mm_Gr_19_Stg",
+                                "icon": "he_spg",
+                                "price": 595,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "caliber": 150,
+                                "explosionRadius": 4,
+                                "isTracer": "true",
+                                "effects": "largeSF",
+                                "damage": {
+                                    "armor": 580,
+                                    "devices": 102
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.2,
+                                "speed": 426,
+                                "gravity": 150,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    154.0,
+                                    154.0
+                                ],
+                                "maxHeight": 379,
+                                "id": 48,
+                                "userString": "#germany_vehicles:_150mmGr_39H1A",
+                                "icon": "hc",
+                                "price": 540,
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 150,
+                                "isTracer": "true",
+                                "effects": "largeSC",
+                                "damage": {
+                                    "armor": 340,
+                                    "devices": 100
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -392,7 +289,8 @@
                     0.0
                 ],
                 "track_health": 70,
-                "track_repaired_health": 55
+                "track_repaired_health": 55,
+                "level": 4
             },
             {
                 "name": "Grille verst\u00e4rkteketten",
@@ -412,7 +310,8 @@
                     0.0
                 ],
                 "track_health": 80,
-                "track_repaired_health": 60
+                "track_repaired_health": 60,
+                "level": 5
             }
         ],
         "engines": [

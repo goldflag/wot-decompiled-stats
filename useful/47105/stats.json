@@ -43,6 +43,7 @@
                 "id": "Turret_1_R154_T_34E_1943",
                 "traverse": 36,
                 "view_range": 340,
+                "level": 5,
                 "guns": [
                     {
                         "name": "76 mm F-34 (1943)",
@@ -62,140 +63,87 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#ussr_vehicles:_76mm_F_34_1943",
-                            "tags": [],
-                            "level": 5,
-                            "price": 42000,
-                            "notInShop": "true",
-                            "impulse": 0.44,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.32,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_medium",
-                            "reloadEffect": "reload50_75",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -17.0,
-                                    1.0,
-                                    -17.0
+                        "level": 5,
+                        "weight": 1155,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 950,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    120.0,
+                                    99.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    6.0,
-                                    1.0,
-                                    6.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 39.375,
-                            "reloadTime": 4,
-                            "maxAmmo": 77,
-                            "aimingTime": 2,
-                            "weight": 1155,
-                            "maxHealth": 118,
-                            "maxRegenHealth": 59,
-                            "repairCost": 4,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_76mm_UBR_350P": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 950,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        120.0,
-                                        99.0
-                                    ],
-                                    "generic": {
-                                        "id": 230,
-                                        "userString": "#ussr_vehicles:_76mm_UBR_350P",
-                                        "icon": "ap_cr",
-                                        "price": 90,
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 76,
-                                        "isTracer": "true",
-                                        "effects": "mediumAPCR",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 105
-                                        }
-                                    }
-                                },
-                                "_76mm_UBR_354P": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 950,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        150.0,
-                                        120.0
-                                    ],
-                                    "generic": {
-                                        "id": 231,
-                                        "userString": "#ussr_vehicles:_76mm_UBR_354P",
-                                        "icon": "ap_cr_premium",
-                                        "price": 2800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 76,
-                                        "isTracer": "true",
-                                        "effects": "mediumAPCR",
-                                        "damage": {
-                                            "armor": 110,
-                                            "devices": 105
-                                        }
-                                    }
-                                },
-                                "_76mm_UOF-354": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 640,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        38.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 30,
-                                        "userString": "#ussr_vehicles:_76mm_UOF-354",
-                                        "icon": "he_modern",
-                                        "price": 56,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 76,
-                                        "explosionRadius": 1.09,
-                                        "isTracer": "true",
-                                        "effects": "mediumHighExplosive",
-                                        "damage": {
-                                            "armor": 156,
-                                            "devices": 105
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.09,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 80,
-                                                "devices": 55
-                                            }
-                                        }
-                                    }
+                                "id": 230,
+                                "userString": "#ussr_vehicles:_76mm_UBR_350P",
+                                "icon": "ap_cr",
+                                "price": 90,
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 76,
+                                "isTracer": "true",
+                                "effects": "mediumAPCR",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 105
                                 }
                             },
-                            "name": "76 mm F-34 (1943)"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 950,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    150.0,
+                                    120.0
+                                ],
+                                "id": 231,
+                                "userString": "#ussr_vehicles:_76mm_UBR_354P",
+                                "icon": "ap_cr_premium",
+                                "price": 2800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 76,
+                                "isTracer": "true",
+                                "effects": "mediumAPCR",
+                                "damage": {
+                                    "armor": 110,
+                                    "devices": 105
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 640,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    38.0,
+                                    38.0
+                                ],
+                                "id": 30,
+                                "userString": "#ussr_vehicles:_76mm_UOF-354",
+                                "icon": "he_modern",
+                                "price": 56,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 76,
+                                "explosionRadius": 1.09,
+                                "isTracer": "true",
+                                "effects": "mediumHighExplosive",
+                                "damage": {
+                                    "armor": 156,
+                                    "devices": 105
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.09,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 80,
+                                        "devices": 55
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -235,7 +183,8 @@
                     0.0
                 ],
                 "track_health": 100,
-                "track_repaired_health": 75
+                "track_repaired_health": 75,
+                "level": 5
             }
         ],
         "engines": [

@@ -41,6 +41,7 @@
                 "id": "Turret_1_S15_L_60",
                 "traverse": 44,
                 "view_range": 280,
+                "level": 2,
                 "guns": [
                     {
                         "name": "20 mm akan m/Madsen",
@@ -60,148 +61,87 @@
                             "after_shot": 1.2,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#sweden_vehicles:_20mm_akan_m_Madsen_A",
-                            "tags": [],
-                            "level": 2,
-                            "price": 2400,
-                            "notInShop": "true",
-                            "impulse": 0.08,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.04,
-                                "recoilEffect": "auto"
-                            },
-                            "effects": "shot_auto",
-                            "reloadEffect": "reload12_25",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -30.0,
-                                    1.0,
-                                    -30.0
+                        "level": 2,
+                        "weight": 53,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 805,
+                                "gravity": 9.81,
+                                "maxDistance": 400,
+                                "piercingPower": [
+                                    27.0,
+                                    17.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 40,
-                            "reloadTime": 8,
-                            "maxAmmo": 320,
-                            "aimingTime": 1.7,
-                            "clip": {
-                                "count": 20,
-                                "rate": 350
-                            },
-                            "burst": {
-                                "count": 2,
-                                "rate": 350
-                            },
-                            "weight": 53,
-                            "maxHealth": 50,
-                            "maxRegenHealth": 25,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.238,
-                            "shotDispersionRadius": 0.5,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 1.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_20mm_slpprj_m_Madsen": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 805,
-                                    "gravity": 9.81,
-                                    "maxDistance": 400,
-                                    "piercingPower": [
-                                        27.0,
-                                        17.0
-                                    ],
-                                    "generic": {
-                                        "id": 3,
-                                        "userString": "#sweden_vehicles:_20mm_slpprj_m_Madsen",
-                                        "icon": "ap",
-                                        "price": 2,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 20,
-                                        "isTracer": "true",
-                                        "effects": "autoArmorPiercing",
-                                        "damage": {
-                                            "armor": 12,
-                                            "devices": 27
-                                        }
-                                    }
-                                },
-                                "_20mm_slpprj_m_40_M": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 775,
-                                    "gravity": 9.81,
-                                    "maxDistance": 400,
-                                    "piercingPower": [
-                                        38.0,
-                                        24.0
-                                    ],
-                                    "generic": {
-                                        "id": 4,
-                                        "userString": "#sweden_vehicles:_20mm_slpprj_m_40_M",
-                                        "icon": "ap_premium",
-                                        "price": 400,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 20,
-                                        "isTracer": "true",
-                                        "effects": "autoArmorPiercing",
-                                        "damage": {
-                                            "armor": 12,
-                                            "devices": 27
-                                        }
-                                    }
-                                },
-                                "_20mm_slsgr_m_Madsen": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 890,
-                                    "gravity": 9.81,
-                                    "maxDistance": 400,
-                                    "piercingPower": [
-                                        10.0,
-                                        10.0
-                                    ],
-                                    "generic": {
-                                        "id": 5,
-                                        "userString": "#sweden_vehicles:_20mm_slsgr_m_Madsen",
-                                        "icon": "he_modern",
-                                        "price": 2,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 20,
-                                        "explosionRadius": 0.1,
-                                        "isTracer": "true",
-                                        "effects": "autoHighExplosive",
-                                        "damage": {
-                                            "armor": 16,
-                                            "devices": 27
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.1,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 10,
-                                                "devices": 15
-                                            }
-                                        }
-                                    }
+                                "id": 3,
+                                "userString": "#sweden_vehicles:_20mm_slpprj_m_Madsen",
+                                "icon": "ap",
+                                "price": 2,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 20,
+                                "isTracer": "true",
+                                "effects": "autoArmorPiercing",
+                                "damage": {
+                                    "armor": 12,
+                                    "devices": 27
                                 }
                             },
-                            "name": "20 mm akan m/Madsen"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 775,
+                                "gravity": 9.81,
+                                "maxDistance": 400,
+                                "piercingPower": [
+                                    38.0,
+                                    24.0
+                                ],
+                                "id": 4,
+                                "userString": "#sweden_vehicles:_20mm_slpprj_m_40_M",
+                                "icon": "ap_premium",
+                                "price": 400,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 20,
+                                "isTracer": "true",
+                                "effects": "autoArmorPiercing",
+                                "damage": {
+                                    "armor": 12,
+                                    "devices": 27
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 890,
+                                "gravity": 9.81,
+                                "maxDistance": 400,
+                                "piercingPower": [
+                                    10.0,
+                                    10.0
+                                ],
+                                "id": 5,
+                                "userString": "#sweden_vehicles:_20mm_slsgr_m_Madsen",
+                                "icon": "he_modern",
+                                "price": 2,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 20,
+                                "explosionRadius": 0.1,
+                                "isTracer": "true",
+                                "effects": "autoHighExplosive",
+                                "damage": {
+                                    "armor": 16,
+                                    "devices": 27
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.1,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 10,
+                                        "devices": 15
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -241,7 +181,8 @@
                     0.0
                 ],
                 "track_health": 60,
-                "track_repaired_health": 45
+                "track_repaired_health": 45,
+                "level": 2
             }
         ],
         "engines": [

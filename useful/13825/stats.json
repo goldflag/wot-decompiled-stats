@@ -43,6 +43,7 @@
                 "id": "Turret_1_T62A",
                 "traverse": 48,
                 "view_range": 400,
+                "level": 10,
                 "guns": [
                     {
                         "name": "100 mm U-8TS",
@@ -59,141 +60,88 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#ussr_vehicles:_100mm_D54_TS",
-                            "tags": [],
-                            "level": 10,
-                            "price": 242700,
-                            "notInShop": "true",
-                            "impulse": 0.44,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.25,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_mainext_mb",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 10,
+                        "weight": 2800,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 1535,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    264.0,
+                                    254.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    5.0,
-                                    1.0,
-                                    5.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 33.25,
-                            "reloadTime": 7.14285714285714,
-                            "maxAmmo": 50,
-                            "aimingTime": 2.85714285714286,
-                            "weight": 2800,
-                            "maxHealth": 200,
-                            "maxRegenHealth": 100,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.388571428571429,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_100mm_UBR-412PB": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 1535,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        264.0,
-                                        254.0
-                                    ],
-                                    "generic": {
-                                        "id": 77,
-                                        "userString": "#ussr_vehicles:_100mm_UBR-412PB",
-                                        "icon": "ap_cr",
-                                        "price": 1100,
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 100,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 135
-                                        }
-                                    }
-                                },
-                                "_100mm_3UBK4M": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 900,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        330.0,
-                                        330.0
-                                    ],
-                                    "generic": {
-                                        "id": 101,
-                                        "userString": "#ussr_vehicles:_100mm_3UBK4M",
-                                        "icon": "hc_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 100,
-                                        "isTracer": "true",
-                                        "effects": "mainHollowCharge",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 135
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_100mm_3UOF10": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 900,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        50.0,
-                                        50.0
-                                    ],
-                                    "generic": {
-                                        "id": 100,
-                                        "userString": "#ussr_vehicles:_100mm_3UOF10",
-                                        "icon": "he_modern",
-                                        "price": 1170,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 100,
-                                        "explosionRadius": 1.76,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 420,
-                                            "devices": 135
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.76,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 210,
-                                                "devices": 70
-                                            }
-                                        }
-                                    }
+                                "id": 77,
+                                "userString": "#ussr_vehicles:_100mm_UBR-412PB",
+                                "icon": "ap_cr",
+                                "price": 1100,
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 100,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 135
                                 }
                             },
-                            "name": "100 mm U-8TS"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 900,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    330.0,
+                                    330.0
+                                ],
+                                "id": 101,
+                                "userString": "#ussr_vehicles:_100mm_3UBK4M",
+                                "icon": "hc_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 100,
+                                "isTracer": "true",
+                                "effects": "mainHollowCharge",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 135
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 900,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    50.0,
+                                    50.0
+                                ],
+                                "id": 100,
+                                "userString": "#ussr_vehicles:_100mm_3UOF10",
+                                "icon": "he_modern",
+                                "price": 1170,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 100,
+                                "explosionRadius": 1.76,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 420,
+                                    "devices": 135
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.76,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 210,
+                                        "devices": 70
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -233,7 +181,8 @@
                     0.0
                 ],
                 "track_health": 250,
-                "track_repaired_health": 190
+                "track_repaired_health": 190,
+                "level": 10
             }
         ],
         "engines": [

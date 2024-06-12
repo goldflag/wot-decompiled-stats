@@ -42,6 +42,7 @@
                 "id": "Turret_1_G168_KJpz_T_III",
                 "traverse": 30,
                 "view_range": 370,
+                "level": 9,
                 "guns": [
                     {
                         "name": "120 mm L65 Versuchskanone",
@@ -61,140 +62,87 @@
                             "after_shot": 4,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#germany_vehicles:_120mm_Versuchskanone_L65",
-                            "tags": [],
-                            "level": 10,
-                            "price": 310000,
-                            "notInShop": "true",
-                            "impulse": 0.68,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_large",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -15.0,
-                                    1.0,
-                                    -15.0
+                        "level": 10,
+                        "weight": 3340,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 1210,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    268.0,
+                                    249.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    11.0,
-                                    1.0,
-                                    11.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 18,
-                            "reloadTime": 8,
-                            "maxAmmo": 45,
-                            "aimingTime": 2,
-                            "weight": 3340,
-                            "maxHealth": 210,
-                            "maxRegenHealth": 105,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.34,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.1,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_120mm_VKL65G": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 1210,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        268.0,
-                                        249.0
-                                    ],
-                                    "generic": {
-                                        "id": 379,
-                                        "userString": "#germany_vehicles:_120mm_VKL65G",
-                                        "icon": "ap",
-                                        "price": 1125,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 420,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_120mm_VKL65MG": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1415,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        326.0,
-                                        270.0
-                                    ],
-                                    "generic": {
-                                        "id": 380,
-                                        "userString": "#germany_vehicles:_120mm_VKL65MG",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeAPCR",
-                                        "damage": {
-                                            "armor": 420,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_120mm_SDRN1V": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 980,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        65.0,
-                                        65.0
-                                    ],
-                                    "generic": {
-                                        "id": 381,
-                                        "userString": "#germany_vehicles:_120mm_SDRN1V",
-                                        "icon": "he_modern",
-                                        "price": 990,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 120,
-                                        "explosionRadius": 2.42,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 515,
-                                            "devices": 165
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.42,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 260,
-                                                "devices": 85
-                                            }
-                                        }
-                                    }
+                                "id": 379,
+                                "userString": "#germany_vehicles:_120mm_VKL65G",
+                                "icon": "ap",
+                                "price": 1125,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 420,
+                                    "devices": 165
                                 }
                             },
-                            "name": "120 mm L65 Versuchskanone"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1415,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    326.0,
+                                    270.0
+                                ],
+                                "id": 380,
+                                "userString": "#germany_vehicles:_120mm_VKL65MG",
+                                "icon": "ap_cr_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeAPCR",
+                                "damage": {
+                                    "armor": 420,
+                                    "devices": 165
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 980,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    65.0,
+                                    65.0
+                                ],
+                                "id": 381,
+                                "userString": "#germany_vehicles:_120mm_SDRN1V",
+                                "icon": "he_modern",
+                                "price": 990,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 120,
+                                "explosionRadius": 2.42,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 515,
+                                    "devices": 165
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.42,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 260,
+                                        "devices": 85
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -234,7 +182,8 @@
                     0.0
                 ],
                 "track_health": 220,
-                "track_repaired_health": 160
+                "track_repaired_health": 160,
+                "level": 9
             }
         ],
         "engines": [

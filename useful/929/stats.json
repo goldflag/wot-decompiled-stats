@@ -43,6 +43,7 @@
                 "id": "Turret_1_It03_M15_42",
                 "traverse": 32,
                 "view_range": 310,
+                "level": 2,
                 "guns": [
                     {
                         "name": "Cannone da 47/32",
@@ -62,140 +63,88 @@
                             "after_shot": 4,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#italy_vehicles:Cannone_da_47_32",
-                            "tags": [],
-                            "level": 2,
-                            "price": 3400,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.35,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 2,
+                        "weight": 210,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 630,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    52.0,
+                                    40.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 3,
-                            "maxAmmo": 92,
-                            "aimingTime": 2,
-                            "weight": 210,
-                            "maxHealth": 84,
-                            "maxRegenHealth": 42,
-                            "repairCost": 4,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_47mm_c_p_47_32_mod_39": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 630,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        52.0,
-                                        40.0
-                                    ],
-                                    "generic": {
-                                        "id": 8,
-                                        "userString": "#italy_vehicles:_47mm_c_p_47_32_mod_39",
-                                        "icon": "ap",
-                                        "price": 20,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 47,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 64
-                                        }
-                                    }
-                                },
-                                "_47mm_c_g_47_32_EPS": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 450,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        75.0,
-                                        75.0
-                                    ],
-                                    "generic": {
-                                        "id": 9,
-                                        "userString": "#italy_vehicles:_47mm_c_g_47_32_EPS",
-                                        "icon": "hc_premium",
-                                        "price": 1600,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 47,
-                                        "isTracer": "true",
-                                        "effects": "smallHollowCharge",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 64
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_47mm_c_g_47_32_mod_35": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 250,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        24.0,
-                                        24.0
-                                    ],
-                                    "generic": {
-                                        "id": 10,
-                                        "userString": "#italy_vehicles:_47mm_c_g_47_32_mod_35",
-                                        "icon": "he_modern",
-                                        "price": 16,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 47,
-                                        "explosionRadius": 0.47,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 70,
-                                            "devices": 64
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.47,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 35,
-                                                "devices": 30
-                                            }
-                                        }
-                                    }
+                                "id": 8,
+                                "userString": "#italy_vehicles:_47mm_c_p_47_32_mod_39",
+                                "icon": "ap",
+                                "price": 20,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 47,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 64
                                 }
                             },
-                            "name": "Cannone da 47/32"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 450,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    75.0,
+                                    75.0
+                                ],
+                                "id": 9,
+                                "userString": "#italy_vehicles:_47mm_c_g_47_32_EPS",
+                                "icon": "hc_premium",
+                                "price": 1600,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 47,
+                                "isTracer": "true",
+                                "effects": "smallHollowCharge",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 64
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 250,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    24.0,
+                                    24.0
+                                ],
+                                "id": 10,
+                                "userString": "#italy_vehicles:_47mm_c_g_47_32_mod_35",
+                                "icon": "he_modern",
+                                "price": 16,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 47,
+                                "explosionRadius": 0.47,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 70,
+                                    "devices": 64
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.47,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 35,
+                                        "devices": 30
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "Cannone da 47/40",
@@ -215,140 +164,88 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#italy_vehicles:Cannone_da_47_40",
-                            "tags": [],
-                            "level": 3,
-                            "price": 4650,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.16,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 3,
+                        "weight": 400,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 830,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    70.0,
+                                    57.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 40,
-                            "reloadTime": 4.04,
-                            "maxAmmo": 300,
-                            "aimingTime": 4.04,
-                            "weight": 400,
-                            "maxHealth": 76,
-                            "maxRegenHealth": 38,
-                            "repairCost": 1,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.14,
-                                "afterShot": 4,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_47mm_c_p_47_32_mod_39": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 830,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        70.0,
-                                        57.0
-                                    ],
-                                    "generic": {
-                                        "id": 8,
-                                        "userString": "#italy_vehicles:_47mm_c_p_47_32_mod_39",
-                                        "icon": "ap",
-                                        "price": 20,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 47,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 64
-                                        }
-                                    }
-                                },
-                                "_47mm_c_g_47_32_EPS": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 650,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        95.0,
-                                        95.0
-                                    ],
-                                    "generic": {
-                                        "id": 9,
-                                        "userString": "#italy_vehicles:_47mm_c_g_47_32_EPS",
-                                        "icon": "hc_premium",
-                                        "price": 1600,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 47,
-                                        "isTracer": "true",
-                                        "effects": "smallHollowCharge",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 64
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_47mm_c_g_47_32_EP": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 400,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        45.0,
-                                        45.0
-                                    ],
-                                    "generic": {
-                                        "id": 25,
-                                        "userString": "#italy_vehicles:_47mm_c_g_47_32_EP",
-                                        "icon": "he_modern",
-                                        "price": 30,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 47,
-                                        "explosionRadius": 0.47,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 70,
-                                            "devices": 64
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.47,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 35,
-                                                "devices": 30
-                                            }
-                                        }
-                                    }
+                                "id": 8,
+                                "userString": "#italy_vehicles:_47mm_c_p_47_32_mod_39",
+                                "icon": "ap",
+                                "price": 20,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 47,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 64
                                 }
                             },
-                            "name": "Cannone da 47/40"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 650,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    95.0,
+                                    95.0
+                                ],
+                                "id": 9,
+                                "userString": "#italy_vehicles:_47mm_c_g_47_32_EPS",
+                                "icon": "hc_premium",
+                                "price": 1600,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 47,
+                                "isTracer": "true",
+                                "effects": "smallHollowCharge",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 64
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 400,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    45.0,
+                                    45.0
+                                ],
+                                "id": 25,
+                                "userString": "#italy_vehicles:_47mm_c_g_47_32_EP",
+                                "icon": "he_modern",
+                                "price": 30,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 47,
+                                "explosionRadius": 0.47,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 70,
+                                    "devices": 64
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.47,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 35,
+                                        "devices": 30
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -368,6 +265,7 @@
                 "id": "Turret_2_It03_M15_42",
                 "traverse": 34,
                 "view_range": 320,
+                "level": 3,
                 "guns": [
                     {
                         "name": "Cannone da 47/32",
@@ -387,140 +285,88 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#italy_vehicles:Cannone_da_47_32",
-                            "tags": [],
-                            "level": 2,
-                            "price": 3400,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.35,
-                                "recoilEffect": "medium"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 2,
+                        "weight": 210,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 630,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    52.0,
+                                    40.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 3,
-                            "maxAmmo": 92,
-                            "aimingTime": 2,
-                            "weight": 210,
-                            "maxHealth": 84,
-                            "maxRegenHealth": 42,
-                            "repairCost": 4,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_47mm_c_p_47_32_mod_39": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 630,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        52.0,
-                                        40.0
-                                    ],
-                                    "generic": {
-                                        "id": 8,
-                                        "userString": "#italy_vehicles:_47mm_c_p_47_32_mod_39",
-                                        "icon": "ap",
-                                        "price": 20,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 47,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 64
-                                        }
-                                    }
-                                },
-                                "_47mm_c_g_47_32_EPS": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 450,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        75.0,
-                                        75.0
-                                    ],
-                                    "generic": {
-                                        "id": 9,
-                                        "userString": "#italy_vehicles:_47mm_c_g_47_32_EPS",
-                                        "icon": "hc_premium",
-                                        "price": 1600,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 47,
-                                        "isTracer": "true",
-                                        "effects": "smallHollowCharge",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 64
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_47mm_c_g_47_32_mod_35": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 250,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        24.0,
-                                        24.0
-                                    ],
-                                    "generic": {
-                                        "id": 10,
-                                        "userString": "#italy_vehicles:_47mm_c_g_47_32_mod_35",
-                                        "icon": "he_modern",
-                                        "price": 16,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 47,
-                                        "explosionRadius": 0.47,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 70,
-                                            "devices": 64
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.47,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 35,
-                                                "devices": 30
-                                            }
-                                        }
-                                    }
+                                "id": 8,
+                                "userString": "#italy_vehicles:_47mm_c_p_47_32_mod_39",
+                                "icon": "ap",
+                                "price": 20,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 47,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 64
                                 }
                             },
-                            "name": "Cannone da 47/32"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 450,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    75.0,
+                                    75.0
+                                ],
+                                "id": 9,
+                                "userString": "#italy_vehicles:_47mm_c_g_47_32_EPS",
+                                "icon": "hc_premium",
+                                "price": 1600,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 47,
+                                "isTracer": "true",
+                                "effects": "smallHollowCharge",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 64
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 250,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    24.0,
+                                    24.0
+                                ],
+                                "id": 10,
+                                "userString": "#italy_vehicles:_47mm_c_g_47_32_mod_35",
+                                "icon": "he_modern",
+                                "price": 16,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 47,
+                                "explosionRadius": 0.47,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 70,
+                                    "devices": 64
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.47,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 35,
+                                        "devices": 30
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "Cannone da 47/40",
@@ -540,140 +386,88 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#italy_vehicles:Cannone_da_47_40",
-                            "tags": [],
-                            "level": 3,
-                            "price": 4650,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.16,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 3,
+                        "weight": 400,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 830,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    70.0,
+                                    57.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 40,
-                            "reloadTime": 4.04,
-                            "maxAmmo": 300,
-                            "aimingTime": 4.04,
-                            "weight": 400,
-                            "maxHealth": 76,
-                            "maxRegenHealth": 38,
-                            "repairCost": 1,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.14,
-                                "afterShot": 4,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_47mm_c_p_47_32_mod_39": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 830,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        70.0,
-                                        57.0
-                                    ],
-                                    "generic": {
-                                        "id": 8,
-                                        "userString": "#italy_vehicles:_47mm_c_p_47_32_mod_39",
-                                        "icon": "ap",
-                                        "price": 20,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 47,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 64
-                                        }
-                                    }
-                                },
-                                "_47mm_c_g_47_32_EPS": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 650,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        95.0,
-                                        95.0
-                                    ],
-                                    "generic": {
-                                        "id": 9,
-                                        "userString": "#italy_vehicles:_47mm_c_g_47_32_EPS",
-                                        "icon": "hc_premium",
-                                        "price": 1600,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 47,
-                                        "isTracer": "true",
-                                        "effects": "smallHollowCharge",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 64
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_47mm_c_g_47_32_EP": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 400,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        45.0,
-                                        45.0
-                                    ],
-                                    "generic": {
-                                        "id": 25,
-                                        "userString": "#italy_vehicles:_47mm_c_g_47_32_EP",
-                                        "icon": "he_modern",
-                                        "price": 30,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 47,
-                                        "explosionRadius": 0.47,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 70,
-                                            "devices": 64
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.47,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 35,
-                                                "devices": 30
-                                            }
-                                        }
-                                    }
+                                "id": 8,
+                                "userString": "#italy_vehicles:_47mm_c_p_47_32_mod_39",
+                                "icon": "ap",
+                                "price": 20,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 47,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 64
                                 }
                             },
-                            "name": "Cannone da 47/40"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 650,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    95.0,
+                                    95.0
+                                ],
+                                "id": 9,
+                                "userString": "#italy_vehicles:_47mm_c_g_47_32_EPS",
+                                "icon": "hc_premium",
+                                "price": 1600,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 47,
+                                "isTracer": "true",
+                                "effects": "smallHollowCharge",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 64
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 400,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    45.0,
+                                    45.0
+                                ],
+                                "id": 25,
+                                "userString": "#italy_vehicles:_47mm_c_g_47_32_EP",
+                                "icon": "he_modern",
+                                "price": 30,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 47,
+                                "explosionRadius": 0.47,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 70,
+                                    "devices": 64
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.47,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 35,
+                                        "devices": 30
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -713,7 +507,8 @@
                     0.0
                 ],
                 "track_health": 60,
-                "track_repaired_health": 45
+                "track_repaired_health": 45,
+                "level": 2
             },
             {
                 "name": "M15/42 mod. 43",
@@ -733,7 +528,8 @@
                     0.0
                 ],
                 "track_health": 70,
-                "track_repaired_health": 55
+                "track_repaired_health": 55,
+                "level": 3
             }
         ],
         "engines": [

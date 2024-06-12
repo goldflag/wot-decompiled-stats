@@ -37,6 +37,7 @@
                 "id": "Turret_1_FCM36_20t",
                 "traverse": 24,
                 "view_range": 280,
+                "level": 2,
                 "guns": [
                     {
                         "name": "37 mm APX SA18",
@@ -53,139 +54,87 @@
                             "after_shot": null,
                             "while_damaged": null
                         },
-                        "generic": {
-                            "userString": "#france_vehicles:_37mm_APX_SA18",
-                            "tags": [],
-                            "level": 1,
-                            "price": 0,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.1,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -35.0,
-                                    1.0,
-                                    -35.0
+                        "level": 1,
+                        "weight": 100,
+                        "shells": [
+                            {
+                                "defaultPortion": 1,
+                                "speed": 600,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    29.0,
+                                    22.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    20.0,
-                                    1.0,
-                                    20.0
-                                ]
-                            },
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 2.51428571428571,
-                            "maxAmmo": 237,
-                            "aimingTime": 2.51428571428571,
-                            "weight": 100,
-                            "maxHealth": 54,
-                            "maxRegenHealth": 27,
-                            "repairCost": 1,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.537142857142857,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_37mm_Odr_mle._1935": {
-                                    "defaultPortion": 1,
-                                    "speed": 600,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        29.0,
-                                        22.0
-                                    ],
-                                    "generic": {
-                                        "id": 12,
-                                        "userString": "#france_vehicles:_37mm_Odr_mle._1935",
-                                        "icon": "ap",
-                                        "price": 0,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 30,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_FrtPrf1935": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 750,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        46.0,
-                                        34.0
-                                    ],
-                                    "generic": {
-                                        "id": 13,
-                                        "userString": "#france_vehicles:_37mm_FrtPrf1935",
-                                        "icon": "ap_cr_premium",
-                                        "price": 800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 30,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_OE_mle._1916": {
-                                    "defaultPortion": 0,
-                                    "speed": 600,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        18.0,
-                                        18.0
-                                    ],
-                                    "generic": {
-                                        "id": 14,
-                                        "userString": "#france_vehicles:_37mm_OE_mle._1916",
-                                        "icon": "he_modern",
-                                        "price": 6,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 37,
-                                        "explosionRadius": 0.31,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 36,
-                                            "devices": 50
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.31,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 20,
-                                                "devices": 25
-                                            }
-                                        }
-                                    }
+                                "id": 12,
+                                "userString": "#france_vehicles:_37mm_Odr_mle._1935",
+                                "icon": "ap",
+                                "price": 0,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 30,
+                                    "devices": 50
                                 }
                             },
-                            "name": "37 mm APX SA18"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 750,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    46.0,
+                                    34.0
+                                ],
+                                "id": 13,
+                                "userString": "#france_vehicles:_37mm_FrtPrf1935",
+                                "icon": "ap_cr_premium",
+                                "price": 800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 30,
+                                    "devices": 50
+                                }
+                            },
+                            {
+                                "defaultPortion": 0,
+                                "speed": 600,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    18.0,
+                                    18.0
+                                ],
+                                "id": 14,
+                                "userString": "#france_vehicles:_37mm_OE_mle._1916",
+                                "icon": "he_modern",
+                                "price": 6,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 37,
+                                "explosionRadius": 0.31,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 36,
+                                    "devices": 50
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.31,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 20,
+                                        "devices": 25
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "25 mm Canon Raccourci mle. 1934",
@@ -202,106 +151,55 @@
                             "after_shot": 3,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#france_vehicles:_25mm_Canon_Raccourci_Mle.1934",
-                            "shortUserString": "#france_vehicles:_25mm_Canon_Raccourci_Mle.1934_short",
-                            "tags": [],
-                            "level": 2,
-                            "price": 2320,
-                            "impulse": 0.06,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.12,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 2,
+                        "weight": 71,
+                        "shells": [
+                            {
+                                "defaultPortion": 1.0,
+                                "speed": 950,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    46.0,
+                                    34.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 1.82857142857143,
-                            "maxAmmo": 360,
-                            "aimingTime": 1.25714285714286,
-                            "weight": 71,
-                            "maxHealth": 56,
-                            "maxRegenHealth": 28,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.445714285714286,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.1,
-                                "afterShot": 3,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_25mm_Balle_T.P._mle._1928": {
-                                    "defaultPortion": 1.0,
-                                    "speed": 950,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        46.0,
-                                        34.0
-                                    ],
-                                    "generic": {
-                                        "id": 10,
-                                        "userString": "#france_vehicles:_25mm_Balle_T.P._mle._1928",
-                                        "icon": "ap",
-                                        "price": 5,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 25,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 27,
-                                            "devices": 34
-                                        }
-                                    }
-                                },
-                                "_25mm_Balle_T.P._mle._1934P": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1188,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        68.0,
-                                        35.0
-                                    ],
-                                    "generic": {
-                                        "id": 11,
-                                        "userString": "#france_vehicles:_25mm_Balle_T.P._mle._1934P",
-                                        "icon": "ap_cr_premium",
-                                        "price": 800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 25,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 27,
-                                            "devices": 34
-                                        }
-                                    }
+                                "id": 10,
+                                "userString": "#france_vehicles:_25mm_Balle_T.P._mle._1928",
+                                "icon": "ap",
+                                "price": 5,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 25,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 27,
+                                    "devices": 34
                                 }
                             },
-                            "name": "25 mm Canon Raccourci mle. 1934"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1188,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    68.0,
+                                    35.0
+                                ],
+                                "id": 11,
+                                "userString": "#france_vehicles:_25mm_Balle_T.P._mle._1934P",
+                                "icon": "ap_cr_premium",
+                                "price": 800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 25,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 27,
+                                    "devices": 34
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "37 mm SA38",
@@ -318,139 +216,87 @@
                             "after_shot": null,
                             "while_damaged": null
                         },
-                        "generic": {
-                            "userString": "#france_vehicles:_37mm_SA38",
-                            "tags": [],
-                            "level": 2,
-                            "price": 1890,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.2,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -17.0,
-                                    1.0,
-                                    -17.0
+                        "level": 2,
+                        "weight": 70,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 705,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    34.0,
+                                    27.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    6.0,
-                                    1.0,
-                                    6.0
-                                ]
-                            },
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 2.51428571428571,
-                            "maxAmmo": 100,
-                            "aimingTime": 1.94285714285714,
-                            "weight": 70,
-                            "maxHealth": 60,
-                            "maxRegenHealth": 30,
-                            "repairCost": 1,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.48,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_37mm_Odr_mle._1932": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 705,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        34.0,
-                                        27.0
-                                    ],
-                                    "generic": {
-                                        "id": 19,
-                                        "userString": "#france_vehicles:_37mm_Odr_mle._1932",
-                                        "icon": "ap",
-                                        "price": 14,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 40,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_Odr_mle._1939": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 881,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        67.0,
-                                        36.0
-                                    ],
-                                    "generic": {
-                                        "id": 20,
-                                        "userString": "#france_vehicles:_37mm_Odr_mle._1939",
-                                        "icon": "ap_cr_premium",
-                                        "price": 800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 40,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_Oe_mle._1932": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 705,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        24.0,
-                                        24.0
-                                    ],
-                                    "generic": {
-                                        "id": 21,
-                                        "userString": "#france_vehicles:_37mm_Oe_mle._1932",
-                                        "icon": "he_modern",
-                                        "price": 10,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 37,
-                                        "explosionRadius": 0.31,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 45,
-                                            "devices": 50
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.31,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 25,
-                                                "devices": 25
-                                            }
-                                        }
-                                    }
+                                "id": 19,
+                                "userString": "#france_vehicles:_37mm_Odr_mle._1932",
+                                "icon": "ap",
+                                "price": 14,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 40,
+                                    "devices": 50
                                 }
                             },
-                            "name": "37 mm SA38"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 881,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    67.0,
+                                    36.0
+                                ],
+                                "id": 20,
+                                "userString": "#france_vehicles:_37mm_Odr_mle._1939",
+                                "icon": "ap_cr_premium",
+                                "price": 800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 40,
+                                    "devices": 50
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 705,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    24.0,
+                                    24.0
+                                ],
+                                "id": 21,
+                                "userString": "#france_vehicles:_37mm_Oe_mle._1932",
+                                "icon": "he_modern",
+                                "price": 10,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 37,
+                                "explosionRadius": 0.31,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 45,
+                                    "devices": 50
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.31,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 25,
+                                        "devices": 25
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -490,7 +336,8 @@
                     0.0
                 ],
                 "track_health": 60,
-                "track_repaired_health": 45
+                "track_repaired_health": 45,
+                "level": 1
             },
             {
                 "name": "FCM 36 bis",
@@ -510,7 +357,8 @@
                     0.0
                 ],
                 "track_health": 70,
-                "track_repaired_health": 55
+                "track_repaired_health": 55,
+                "level": 2
             }
         ],
         "engines": [

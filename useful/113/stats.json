@@ -37,6 +37,7 @@
                 "id": "Turret_1_Cz06_Kolohousenka",
                 "traverse": 28,
                 "view_range": 280,
+                "level": 1,
                 "guns": [
                     {
                         "name": "37 mm P\u011bchotn\u00ed d\u011blo \u0160koda L/27",
@@ -56,139 +57,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#czech_vehicles:_37mm_Pechotni_delo_Skoda_L_27",
-                            "tags": [],
-                            "level": 1,
-                            "price": 0,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.1,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -23.0,
-                                    1.0,
-                                    -23.0
+                        "level": 1,
+                        "weight": 175,
+                        "shells": [
+                            {
+                                "defaultPortion": 1,
+                                "speed": 460,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    33.0,
+                                    22.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    20.0,
-                                    1.0,
-                                    20.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 40,
-                            "reloadTime": 2.5,
-                            "maxAmmo": 100,
-                            "aimingTime": 1.9,
-                            "weight": 175,
-                            "maxHealth": 54,
-                            "maxRegenHealth": 27,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.48,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_37mm_Prurazny_vz_18": {
-                                    "defaultPortion": 1,
-                                    "speed": 460,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        33.0,
-                                        22.0
-                                    ],
-                                    "generic": {
-                                        "id": 4,
-                                        "userString": "#czech_vehicles:_37mm_Prurazny_vz_18",
-                                        "icon": "ap",
-                                        "price": 0,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 40,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_Prurazny_vz_28": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 460,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        44.0,
-                                        33.0
-                                    ],
-                                    "generic": {
-                                        "id": 5,
-                                        "userString": "#czech_vehicles:_37mm_Prurazny_vz_28",
-                                        "icon": "ap_premium",
-                                        "price": 800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 40,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_Narazovy_vz_28": {
-                                    "defaultPortion": 0,
-                                    "speed": 460,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        18.0,
-                                        18.0
-                                    ],
-                                    "generic": {
-                                        "id": 6,
-                                        "userString": "#czech_vehicles:_37mm_Narazovy_vz_28",
-                                        "icon": "he_modern",
-                                        "price": 8,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 37,
-                                        "explosionRadius": 0.31,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 45,
-                                            "devices": 50
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.31,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 25,
-                                                "devices": 25
-                                            }
-                                        }
-                                    }
+                                "id": 4,
+                                "userString": "#czech_vehicles:_37mm_Prurazny_vz_18",
+                                "icon": "ap",
+                                "price": 0,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 40,
+                                    "devices": 50
                                 }
                             },
-                            "name": "37 mm P\u011bchotn\u00ed d\u011blo \u0160koda L/27"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 460,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    44.0,
+                                    33.0
+                                ],
+                                "id": 5,
+                                "userString": "#czech_vehicles:_37mm_Prurazny_vz_28",
+                                "icon": "ap_premium",
+                                "price": 800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 40,
+                                    "devices": 50
+                                }
+                            },
+                            {
+                                "defaultPortion": 0,
+                                "speed": 460,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    18.0,
+                                    18.0
+                                ],
+                                "id": 6,
+                                "userString": "#czech_vehicles:_37mm_Narazovy_vz_28",
+                                "icon": "he_modern",
+                                "price": 8,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 37,
+                                "explosionRadius": 0.31,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 45,
+                                    "devices": 50
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.31,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 25,
+                                        "devices": 25
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "47 mm Rychlopaln\u00e9 d\u011blo Vickers L/20",
@@ -208,139 +157,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#czech_vehicles:_47mm_Rychlopalne_delo_Vickers_L_20",
-                            "tags": [],
-                            "level": 2,
-                            "price": 2400,
-                            "impulse": 0.2,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.12,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 2,
+                        "weight": 100,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 488,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    45.0,
+                                    23.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 40,
-                            "reloadTime": 2.28571428571429,
-                            "maxAmmo": 84,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 100,
-                            "maxHealth": 70,
-                            "maxRegenHealth": 35,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.45714285714286,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_47mm_Prurazny": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 488,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        45.0,
-                                        23.0
-                                    ],
-                                    "generic": {
-                                        "id": 11,
-                                        "userString": "#czech_vehicles:_47mm_Prurazny",
-                                        "icon": "ap",
-                                        "price": 15,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 47,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 64
-                                        }
-                                    }
-                                },
-                                "_47mm_Prurazny_s_oc_jadrem": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 610,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        70.0,
-                                        45.0
-                                    ],
-                                    "generic": {
-                                        "id": 12,
-                                        "userString": "#czech_vehicles:_47mm_Prurazny_s_oc_jadrem",
-                                        "icon": "ap_cr_premium",
-                                        "price": 800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 47,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 64
-                                        }
-                                    }
-                                },
-                                "_47mm_Narazovy": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 230,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        23.0,
-                                        23.0
-                                    ],
-                                    "generic": {
-                                        "id": 13,
-                                        "userString": "#czech_vehicles:_47mm_Narazovy",
-                                        "icon": "he_modern",
-                                        "price": 12,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 47,
-                                        "explosionRadius": 0.47,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 65,
-                                            "devices": 64
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.47,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 35,
-                                                "devices": 30
-                                            }
-                                        }
-                                    }
+                                "id": 11,
+                                "userString": "#czech_vehicles:_47mm_Prurazny",
+                                "icon": "ap",
+                                "price": 15,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 47,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 64
                                 }
                             },
-                            "name": "47 mm Rychlopaln\u00e9 d\u011blo Vickers L/20"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 610,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    70.0,
+                                    45.0
+                                ],
+                                "id": 12,
+                                "userString": "#czech_vehicles:_47mm_Prurazny_s_oc_jadrem",
+                                "icon": "ap_cr_premium",
+                                "price": 800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 47,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 64
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 230,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    23.0,
+                                    23.0
+                                ],
+                                "id": 13,
+                                "userString": "#czech_vehicles:_47mm_Narazovy",
+                                "icon": "he_modern",
+                                "price": 12,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 47,
+                                "explosionRadius": 0.47,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 65,
+                                    "devices": 64
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.47,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 35,
+                                        "devices": 30
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -380,7 +277,8 @@
                     0.0
                 ],
                 "track_health": 50,
-                "track_repaired_health": 40
+                "track_repaired_health": 40,
+                "level": 1
             }
         ],
         "engines": [

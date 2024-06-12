@@ -43,6 +43,7 @@
                 "id": "Turret_1_Ch16_WZ_131",
                 "traverse": 48,
                 "view_range": 360,
+                "level": 6,
                 "guns": [
                     {
                         "name": "85 mm 62-85T",
@@ -59,140 +60,88 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#china_vehicles:_85mm_Tip_62-85T",
-                            "tags": [],
-                            "level": 7,
-                            "price": 75000,
-                            "impulse": 0.44,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.3,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -22.0,
-                                    1.0,
-                                    -22.0
+                        "level": 7,
+                        "weight": 1650,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 793,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    145.0,
+                                    135.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    5.0,
-                                    1.0,
-                                    5.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 39.375,
-                            "reloadTime": 5.1,
-                            "maxAmmo": 59,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 1650,
-                            "maxHealth": 134,
-                            "maxRegenHealth": 67,
-                            "repairCost": 6,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.31,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_85mm_UBR": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 793,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        145.0,
-                                        135.0
-                                    ],
-                                    "generic": {
-                                        "id": 3,
-                                        "userString": "#china_vehicles:_85mm_UBR",
-                                        "icon": "ap",
-                                        "price": 170,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 85,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 180,
-                                            "devices": 115
-                                        }
-                                    }
-                                },
-                                "_85mm_HEAT": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 793,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        220.0,
-                                        220.0
-                                    ],
-                                    "generic": {
-                                        "id": 4,
-                                        "userString": "#china_vehicles:_85mm_HEAT",
-                                        "icon": "hc_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 85,
-                                        "isTracer": "true",
-                                        "effects": "mainHollowCharge",
-                                        "damage": {
-                                            "armor": 180,
-                                            "devices": 115
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_85mm_UOF": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 793,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        43.0,
-                                        43.0
-                                    ],
-                                    "generic": {
-                                        "id": 5,
-                                        "userString": "#china_vehicles:_85mm_UOF",
-                                        "icon": "he_modern",
-                                        "price": 130,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 85,
-                                        "explosionRadius": 1.32,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 300,
-                                            "devices": 115
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.32,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 150,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 3,
+                                "userString": "#china_vehicles:_85mm_UBR",
+                                "icon": "ap",
+                                "price": 170,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 85,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 180,
+                                    "devices": 115
                                 }
                             },
-                            "name": "85 mm 62-85T"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 793,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    220.0,
+                                    220.0
+                                ],
+                                "id": 4,
+                                "userString": "#china_vehicles:_85mm_HEAT",
+                                "icon": "hc_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 85,
+                                "isTracer": "true",
+                                "effects": "mainHollowCharge",
+                                "damage": {
+                                    "armor": 180,
+                                    "devices": 115
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 793,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    43.0,
+                                    43.0
+                                ],
+                                "id": 5,
+                                "userString": "#china_vehicles:_85mm_UOF",
+                                "icon": "he_modern",
+                                "price": 130,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 85,
+                                "explosionRadius": 1.32,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 300,
+                                    "devices": 115
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.32,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 150,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -212,6 +161,7 @@
                 "id": "Turret_2_Ch16_WZ_131",
                 "traverse": 48,
                 "view_range": 370,
+                "level": 7,
                 "guns": [
                     {
                         "name": "85 mm 62-85T",
@@ -228,140 +178,88 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#china_vehicles:_85mm_Tip_62-85T",
-                            "tags": [],
-                            "level": 7,
-                            "price": 75000,
-                            "impulse": 0.44,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.3,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -22.0,
-                                    1.0,
-                                    -22.0
+                        "level": 7,
+                        "weight": 1650,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 793,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    145.0,
+                                    135.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    5.0,
-                                    1.0,
-                                    5.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 39.375,
-                            "reloadTime": 5.1,
-                            "maxAmmo": 59,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 1650,
-                            "maxHealth": 134,
-                            "maxRegenHealth": 67,
-                            "repairCost": 6,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.31,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_85mm_UBR": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 793,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        145.0,
-                                        135.0
-                                    ],
-                                    "generic": {
-                                        "id": 3,
-                                        "userString": "#china_vehicles:_85mm_UBR",
-                                        "icon": "ap",
-                                        "price": 170,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 85,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 180,
-                                            "devices": 115
-                                        }
-                                    }
-                                },
-                                "_85mm_HEAT": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 793,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        220.0,
-                                        220.0
-                                    ],
-                                    "generic": {
-                                        "id": 4,
-                                        "userString": "#china_vehicles:_85mm_HEAT",
-                                        "icon": "hc_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 85,
-                                        "isTracer": "true",
-                                        "effects": "mainHollowCharge",
-                                        "damage": {
-                                            "armor": 180,
-                                            "devices": 115
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_85mm_UOF": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 793,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        43.0,
-                                        43.0
-                                    ],
-                                    "generic": {
-                                        "id": 5,
-                                        "userString": "#china_vehicles:_85mm_UOF",
-                                        "icon": "he_modern",
-                                        "price": 130,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 85,
-                                        "explosionRadius": 1.32,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 300,
-                                            "devices": 115
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.32,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 150,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 3,
+                                "userString": "#china_vehicles:_85mm_UBR",
+                                "icon": "ap",
+                                "price": 170,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 85,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 180,
+                                    "devices": 115
                                 }
                             },
-                            "name": "85 mm 62-85T"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 793,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    220.0,
+                                    220.0
+                                ],
+                                "id": 4,
+                                "userString": "#china_vehicles:_85mm_HEAT",
+                                "icon": "hc_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 85,
+                                "isTracer": "true",
+                                "effects": "mainHollowCharge",
+                                "damage": {
+                                    "armor": 180,
+                                    "devices": 115
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 793,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    43.0,
+                                    43.0
+                                ],
+                                "id": 5,
+                                "userString": "#china_vehicles:_85mm_UOF",
+                                "icon": "he_modern",
+                                "price": 130,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 85,
+                                "explosionRadius": 1.32,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 300,
+                                    "devices": 115
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.32,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 150,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "85 mm 64-85T",
@@ -378,140 +276,88 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#china_vehicles:_85mm_Tip_64-85T",
-                            "tags": [],
-                            "level": 8,
-                            "price": 89000,
-                            "impulse": 0.44,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.3,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main_mb",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -22.0,
-                                    1.0,
-                                    -22.0
+                        "level": 8,
+                        "weight": 1700,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 860,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    159.0,
+                                    150.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    5.0,
-                                    1.0,
-                                    5.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 39.375,
-                            "reloadTime": 5.1,
-                            "maxAmmo": 59,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 1700,
-                            "maxHealth": 134,
-                            "maxRegenHealth": 67,
-                            "repairCost": 6,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.31,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_85mm_CB_367G": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 860,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        159.0,
-                                        150.0
-                                    ],
-                                    "generic": {
-                                        "id": 66,
-                                        "userString": "#china_vehicles:_85mm_CB_367G",
-                                        "icon": "ap",
-                                        "price": 240,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 85,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 200,
-                                            "devices": 115
-                                        }
-                                    }
-                                },
-                                "_85mm_Po_367": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 860,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        230.0,
-                                        230.0
-                                    ],
-                                    "generic": {
-                                        "id": 67,
-                                        "userString": "#china_vehicles:_85mm_Po_367",
-                                        "icon": "hc_premium",
-                                        "price": 4000,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 85,
-                                        "isTracer": "true",
-                                        "effects": "mainHollowCharge",
-                                        "damage": {
-                                            "armor": 200,
-                                            "devices": 115
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_85mm_SB_367G": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 860,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        43.0,
-                                        43.0
-                                    ],
-                                    "generic": {
-                                        "id": 68,
-                                        "userString": "#china_vehicles:_85mm_SB_367G",
-                                        "icon": "he_modern",
-                                        "price": 170,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 85,
-                                        "explosionRadius": 1.32,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 115
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.32,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 160,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 66,
+                                "userString": "#china_vehicles:_85mm_CB_367G",
+                                "icon": "ap",
+                                "price": 240,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 85,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 200,
+                                    "devices": 115
                                 }
                             },
-                            "name": "85 mm 64-85T"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 860,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    230.0,
+                                    230.0
+                                ],
+                                "id": 67,
+                                "userString": "#china_vehicles:_85mm_Po_367",
+                                "icon": "hc_premium",
+                                "price": 4000,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 85,
+                                "isTracer": "true",
+                                "effects": "mainHollowCharge",
+                                "damage": {
+                                    "armor": 200,
+                                    "devices": 115
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 860,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    43.0,
+                                    43.0
+                                ],
+                                "id": 68,
+                                "userString": "#china_vehicles:_85mm_SB_367G",
+                                "icon": "he_modern",
+                                "price": 170,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 85,
+                                "explosionRadius": 1.32,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 115
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.32,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 160,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -551,7 +397,8 @@
                     0.0
                 ],
                 "track_health": 130,
-                "track_repaired_health": 100
+                "track_repaired_health": 100,
+                "level": 6
             },
             {
                 "name": "WZ-131 model 2",
@@ -571,7 +418,8 @@
                     0.0
                 ],
                 "track_health": 140,
-                "track_repaired_health": 105
+                "track_repaired_health": 105,
+                "level": 7
             }
         ],
         "engines": [

@@ -42,6 +42,7 @@
                 "id": "Turret_1_F114_Projet_4_1",
                 "traverse": 30,
                 "view_range": 380,
+                "level": 9,
                 "guns": [
                     {
                         "name": "105 mm D. 1504-4-1",
@@ -58,141 +59,88 @@
                             "after_shot": 4.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#france_vehicles:_105mm_D1504_4_1",
-                            "tags": [],
-                            "level": 10,
-                            "price": 300000,
-                            "notInShop": "true",
-                            "impulse": 0.46,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.65,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_large",
-                            "reloadEffect": "reload_automat_reloading_85_107",
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -17.0,
-                                    1.0,
-                                    -17.0
+                        "level": 10,
+                        "weight": 3000,
+                        "shells": [
+                            {
+                                "defaultPortion": 1,
+                                "speed": 1461,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    264.0,
+                                    252.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "rotationSpeed": 21.875,
-                            "reloadTime": 10.2857142857143,
-                            "maxAmmo": 50,
-                            "aimingTime": 2.28571428571429,
-                            "weight": 3000,
-                            "maxHealth": 208,
-                            "maxRegenHealth": 104,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.342857142857143,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 3.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_105mm_APCR_OFL_105E3": {
-                                    "defaultPortion": 1,
-                                    "speed": 1461,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        264.0,
-                                        252.0
-                                    ],
-                                    "generic": {
-                                        "id": 154,
-                                        "userString": "#france_vehicles:_105mm_APCR_OFL_105E3",
-                                        "icon": "ap_cr",
-                                        "price": 1210,
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 390,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_HEAT_OCC_105E3": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1060,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        330.0,
-                                        330.0
-                                    ],
-                                    "generic": {
-                                        "id": 155,
-                                        "userString": "#france_vehicles:_105mm_HEAT_OCC_105E3",
-                                        "icon": "hc_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainHollowCharge",
-                                        "damage": {
-                                            "armor": 390,
-                                            "devices": 150
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_105mm_HE_OE_105E3": {
-                                    "defaultPortion": 0,
-                                    "speed": 1060,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        53.0,
-                                        53.0
-                                    ],
-                                    "generic": {
-                                        "id": 156,
-                                        "userString": "#france_vehicles:_105mm_HE_OE_105E3",
-                                        "icon": "he_modern",
-                                        "price": 820,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 105,
-                                        "explosionRadius": 1.91,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 480,
-                                            "devices": 150
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.91,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 240,
-                                                "devices": 75
-                                            }
-                                        }
-                                    }
+                                "id": 154,
+                                "userString": "#france_vehicles:_105mm_APCR_OFL_105E3",
+                                "icon": "ap_cr",
+                                "price": 1210,
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 390,
+                                    "devices": 150
                                 }
                             },
-                            "name": "105 mm D. 1504-4-1"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1060,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    330.0,
+                                    330.0
+                                ],
+                                "id": 155,
+                                "userString": "#france_vehicles:_105mm_HEAT_OCC_105E3",
+                                "icon": "hc_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainHollowCharge",
+                                "damage": {
+                                    "armor": 390,
+                                    "devices": 150
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0,
+                                "speed": 1060,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    53.0,
+                                    53.0
+                                ],
+                                "id": 156,
+                                "userString": "#france_vehicles:_105mm_HE_OE_105E3",
+                                "icon": "he_modern",
+                                "price": 820,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 105,
+                                "explosionRadius": 1.91,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 480,
+                                    "devices": 150
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.91,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 240,
+                                        "devices": 75
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -232,7 +180,8 @@
                     0.0
                 ],
                 "track_health": 240,
-                "track_repaired_health": 180
+                "track_repaired_health": 180,
+                "level": 9
             }
         ],
         "engines": [

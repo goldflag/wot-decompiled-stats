@@ -43,6 +43,7 @@
                 "id": "Turret_1_GB111_Charlemagne",
                 "traverse": 28,
                 "view_range": 380,
+                "level": 8,
                 "guns": [
                     {
                         "name": "120 mm Low Velocity Gun",
@@ -59,140 +60,87 @@
                             "after_shot": 6.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:_120mm_Gun_LV",
-                            "tags": [],
-                            "level": 9,
-                            "price": 200000,
-                            "notInShop": "true",
-                            "impulse": 0.68,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_large_mb",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -15.0,
-                                    1.0,
-                                    -15.0
+                        "level": 9,
+                        "weight": 1900,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.9,
+                                "speed": 597,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    220.0,
+                                    207.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    11.0,
-                                    1.0,
-                                    11.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 26.25,
-                            "reloadTime": 9.9714285714286,
-                            "maxAmmo": 64,
-                            "aimingTime": 4.04,
-                            "weight": 1900,
-                            "maxHealth": 210,
-                            "maxRegenHealth": 105,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_120mm_AP_L15A11": {
-                                    "defaultPortion": 0.9,
-                                    "speed": 597,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        220.0,
-                                        207.0
-                                    ],
-                                    "generic": {
-                                        "id": 190,
-                                        "userString": "#gb_vehicles:_120mm_AP_L15A11",
-                                        "icon": "ap",
-                                        "price": 890,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 119.38,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 440,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_120mm_AP_L15A1_DU": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 924,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        270.0,
-                                        256.0
-                                    ],
-                                    "generic": {
-                                        "id": 191,
-                                        "userString": "#gb_vehicles:_120mm_AP_L15A1_DU",
-                                        "icon": "ap_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 119.38,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 440,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_120mm_HESH_L30": {
-                                    "defaultPortion": 0.1,
-                                    "speed": 597,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        60.0,
-                                        60.0
-                                    ],
-                                    "generic": {
-                                        "id": 192,
-                                        "userString": "#gb_vehicles:_120mm_HESH_L30",
-                                        "icon": "he_modern",
-                                        "price": 590,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 119.38,
-                                        "explosionRadius": 2.42,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 530,
-                                            "devices": 165
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.42,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 265,
-                                                "devices": 85
-                                            }
-                                        }
-                                    }
+                                "id": 190,
+                                "userString": "#gb_vehicles:_120mm_AP_L15A11",
+                                "icon": "ap",
+                                "price": 890,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 119.38,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 440,
+                                    "devices": 165
                                 }
                             },
-                            "name": "120 mm Low Velocity Gun"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 924,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    270.0,
+                                    256.0
+                                ],
+                                "id": 191,
+                                "userString": "#gb_vehicles:_120mm_AP_L15A1_DU",
+                                "icon": "ap_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 119.38,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 440,
+                                    "devices": 165
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.1,
+                                "speed": 597,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    60.0,
+                                    60.0
+                                ],
+                                "id": 192,
+                                "userString": "#gb_vehicles:_120mm_HESH_L30",
+                                "icon": "he_modern",
+                                "price": 590,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 119.38,
+                                "explosionRadius": 2.42,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 530,
+                                    "devices": 165
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.42,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 265,
+                                        "devices": 85
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -232,7 +180,8 @@
                     0.0
                 ],
                 "track_health": 220,
-                "track_repaired_health": 165
+                "track_repaired_health": 165,
+                "level": 8
             }
         ],
         "engines": [

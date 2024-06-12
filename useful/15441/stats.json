@@ -43,6 +43,7 @@
                 "id": "Turret_1_GB87_Chieftain_T95_turret",
                 "traverse": 36,
                 "view_range": 400,
+                "level": 8,
                 "guns": [
                     {
                         "name": "90 mm Gun T208 (rifled)",
@@ -62,140 +63,87 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:_90mm_Gun_T208_rifled",
-                            "tags": [],
-                            "level": 8,
-                            "price": 121000,
-                            "notInShop": "true",
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.38,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main_mb",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -19.0,
-                                    1.0,
-                                    -19.0
+                        "level": 8,
+                        "weight": 1488,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 1143,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    202.0,
+                                    180.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    9.0,
-                                    1.0,
-                                    9.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35.0,
-                            "reloadTime": 4.04,
-                            "maxAmmo": 60,
-                            "aimingTime": 2.28,
-                            "weight": 1488,
-                            "maxHealth": 170,
-                            "maxRegenHealth": 85,
-                            "repairCost": 7,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.12,
-                                "afterShot": 3.5,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_90mm_AP_M318": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 1143,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        202.0,
-                                        180.0
-                                    ],
-                                    "generic": {
-                                        "id": 119,
-                                        "userString": "#gb_vehicles:_90mm_AP_M318",
-                                        "icon": "ap",
-                                        "price": 350,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        }
-                                    }
-                                },
-                                "_90mm_APFSDS_T320": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1570,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        238.0,
-                                        210.0
-                                    ],
-                                    "generic": {
-                                        "id": 120,
-                                        "userString": "#gb_vehicles:_90mm_APFSDS_T320",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4000,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 90,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 240,
-                                            "devices": 122
-                                        }
-                                    }
-                                },
-                                "_90mm_HE_T340": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 1143,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        45.0,
-                                        45.0
-                                    ],
-                                    "generic": {
-                                        "id": 121,
-                                        "userString": "#gb_vehicles:_90mm_HE_T340",
-                                        "icon": "he_modern",
-                                        "price": 210,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 90,
-                                        "explosionRadius": 1.46,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 122
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.46,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 160,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 119,
+                                "userString": "#gb_vehicles:_90mm_AP_M318",
+                                "icon": "ap",
+                                "price": 350,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
                                 }
                             },
-                            "name": "90 mm Gun T208 (rifled)"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1570,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    238.0,
+                                    210.0
+                                ],
+                                "id": 120,
+                                "userString": "#gb_vehicles:_90mm_APFSDS_T320",
+                                "icon": "ap_cr_premium",
+                                "price": 4000,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 90,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 240,
+                                    "devices": 122
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 1143,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    45.0,
+                                    45.0
+                                ],
+                                "id": 121,
+                                "userString": "#gb_vehicles:_90mm_HE_T340",
+                                "icon": "he_modern",
+                                "price": 210,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 90,
+                                "explosionRadius": 1.46,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 122
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.46,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 160,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -235,7 +183,8 @@
                     0.0
                 ],
                 "track_health": 200,
-                "track_repaired_health": 150
+                "track_repaired_health": 150,
+                "level": 8
             }
         ],
         "engines": [

@@ -43,6 +43,7 @@
                 "id": "Turret_1_R196_Object_452K",
                 "traverse": 25,
                 "view_range": 390,
+                "level": 10,
                 "guns": [
                     {
                         "name": "130 mm M-65K",
@@ -62,141 +63,88 @@
                             "after_shot": 4,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#ussr_vehicles:_130mm_M_65K",
-                            "tags": [],
-                            "level": 10,
-                            "price": 330000,
-                            "notInShop": "true",
-                            "impulse": 0.62,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.66,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_largeext",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -17.0,
-                                    1.0,
-                                    -17.0
+                        "level": 10,
+                        "weight": 4300,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.9,
+                                "speed": 1000,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    260.0,
+                                    240.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    5.0,
-                                    1.0,
-                                    5.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 30,
-                            "reloadTime": 4.04,
-                            "maxAmmo": 40,
-                            "aimingTime": 4.04,
-                            "weight": 4300,
-                            "maxHealth": 190,
-                            "maxRegenHealth": 95,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_130mm_53_BR_482": {
-                                    "defaultPortion": 0.9,
-                                    "speed": 1000,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        260.0,
-                                        240.0
-                                    ],
-                                    "generic": {
-                                        "id": 340,
-                                        "userString": "#ussr_vehicles:_130mm_53_BR_482",
-                                        "icon": "ap",
-                                        "price": 1250,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 130,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 560,
-                                            "devices": 180
-                                        }
-                                    }
-                                },
-                                "_130mm_ZBK60M": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 950,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        320.0,
-                                        320.0
-                                    ],
-                                    "generic": {
-                                        "id": 341,
-                                        "userString": "#ussr_vehicles:_130mm_ZBK60M",
-                                        "icon": "hc_premium",
-                                        "price": 5200,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 130,
-                                        "isTracer": "true",
-                                        "effects": "largeHollowCharge",
-                                        "damage": {
-                                            "armor": 560,
-                                            "devices": 180
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_130mm_53_OF_482M": {
-                                    "defaultPortion": 0.1,
-                                    "speed": 950,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        65.0,
-                                        65.0
-                                    ],
-                                    "generic": {
-                                        "id": 342,
-                                        "userString": "#ussr_vehicles:_130mm_53_OF_482M",
-                                        "icon": "he_modern",
-                                        "price": 990,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 130,
-                                        "explosionRadius": 2.78,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 700,
-                                            "devices": 180
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.78,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 320,
-                                                "devices": 90
-                                            }
-                                        }
-                                    }
+                                "id": 340,
+                                "userString": "#ussr_vehicles:_130mm_53_BR_482",
+                                "icon": "ap",
+                                "price": 1250,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 130,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 560,
+                                    "devices": 180
                                 }
                             },
-                            "name": "130 mm M-65K"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 950,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    320.0,
+                                    320.0
+                                ],
+                                "id": 341,
+                                "userString": "#ussr_vehicles:_130mm_ZBK60M",
+                                "icon": "hc_premium",
+                                "price": 5200,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 130,
+                                "isTracer": "true",
+                                "effects": "largeHollowCharge",
+                                "damage": {
+                                    "armor": 560,
+                                    "devices": 180
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.1,
+                                "speed": 950,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    65.0,
+                                    65.0
+                                ],
+                                "id": 342,
+                                "userString": "#ussr_vehicles:_130mm_53_OF_482M",
+                                "icon": "he_modern",
+                                "price": 990,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 130,
+                                "explosionRadius": 2.78,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 700,
+                                    "devices": 180
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.78,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 320,
+                                        "devices": 90
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -236,7 +184,8 @@
                     0.0
                 ],
                 "track_health": 250,
-                "track_repaired_health": 190
+                "track_repaired_health": 190,
+                "level": 10
             }
         ],
         "engines": [

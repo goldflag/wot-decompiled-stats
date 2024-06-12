@@ -43,6 +43,7 @@
                 "id": "Turret_1_GB128_Nemesis",
                 "traverse": 30,
                 "view_range": 380,
+                "level": 8,
                 "guns": [
                     {
                         "name": "110 mm MV-N60 Gun",
@@ -62,140 +63,87 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:_110mm_MV_Nemesis_Gun",
-                            "tags": [],
-                            "level": 9,
-                            "price": 180000,
-                            "notInShop": "true",
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_large",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -19.0,
-                                    1.0,
-                                    -19.0
+                        "level": 9,
+                        "weight": 1500,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.9,
+                                "speed": 1000,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    225.0,
+                                    211.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    9.0,
-                                    1.0,
-                                    9.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35.0,
-                            "reloadTime": 9,
-                            "maxAmmo": 60,
-                            "aimingTime": 2.1,
-                            "weight": 1500,
-                            "maxHealth": 190,
-                            "maxRegenHealth": 95,
-                            "repairCost": 6,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.36,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.1,
-                                "afterShot": 3.5,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_110mm_MVN_AP": {
-                                    "defaultPortion": 0.9,
-                                    "speed": 1000,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        225.0,
-                                        211.0
-                                    ],
-                                    "generic": {
-                                        "id": 237,
-                                        "userString": "#gb_vehicles:_110mm_MVN_AP",
-                                        "icon": "ap",
-                                        "price": 1065,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 110,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 420,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_110mm_MVN_APDS": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1250,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        280.0,
-                                        262.0
-                                    ],
-                                    "generic": {
-                                        "id": 238,
-                                        "userString": "#gb_vehicles:_110mm_MVN_APDS",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 110,
-                                        "isTracer": "true",
-                                        "effects": "largeAPCR",
-                                        "damage": {
-                                            "armor": 420,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_110mm_MVN_HE": {
-                                    "defaultPortion": 0.1,
-                                    "speed": 950,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        90.0,
-                                        90.0
-                                    ],
-                                    "generic": {
-                                        "id": 239,
-                                        "userString": "#gb_vehicles:_110mm_MVN_HE",
-                                        "icon": "he_modern",
-                                        "price": 630,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 110,
-                                        "explosionRadius": 1.91,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 530,
-                                            "devices": 150
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.91,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 265,
-                                                "devices": 75
-                                            }
-                                        }
-                                    }
+                                "id": 237,
+                                "userString": "#gb_vehicles:_110mm_MVN_AP",
+                                "icon": "ap",
+                                "price": 1065,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 110,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 420,
+                                    "devices": 150
                                 }
                             },
-                            "name": "110 mm MV-N60 Gun"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1250,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    280.0,
+                                    262.0
+                                ],
+                                "id": 238,
+                                "userString": "#gb_vehicles:_110mm_MVN_APDS",
+                                "icon": "ap_cr_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 110,
+                                "isTracer": "true",
+                                "effects": "largeAPCR",
+                                "damage": {
+                                    "armor": 420,
+                                    "devices": 150
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.1,
+                                "speed": 950,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    90.0,
+                                    90.0
+                                ],
+                                "id": 239,
+                                "userString": "#gb_vehicles:_110mm_MVN_HE",
+                                "icon": "he_modern",
+                                "price": 630,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 110,
+                                "explosionRadius": 1.91,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 530,
+                                    "devices": 150
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.91,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 265,
+                                        "devices": 75
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -235,7 +183,8 @@
                     0.0
                 ],
                 "track_health": 200,
-                "track_repaired_health": 150
+                "track_repaired_health": 150,
+                "level": 8
             }
         ],
         "engines": [

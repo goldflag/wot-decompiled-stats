@@ -43,6 +43,7 @@
                 "id": "Turret_1_G162_Project_Kpz_07P_E",
                 "traverse": 36,
                 "view_range": 410,
+                "level": 10,
                 "guns": [
                     {
                         "name": "120 mm Delta 1965",
@@ -62,141 +63,88 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#germany_vehicles:_120mm_Delta_1965",
-                            "tags": [],
-                            "level": 10,
-                            "price": 310000,
-                            "notInShop": "true",
-                            "impulse": 0.68,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.19,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_large_mb",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -15.0,
-                                    1.0,
-                                    -15.0
+                        "level": 10,
+                        "weight": 3050,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.9,
+                                "speed": 1334,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    270.0,
+                                    250.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    11.0,
-                                    1.0,
-                                    11.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 26.25,
-                            "reloadTime": 10.9714285714286,
-                            "maxAmmo": 22,
-                            "aimingTime": 2.62857142857143,
-                            "weight": 3050,
-                            "maxHealth": 210,
-                            "maxRegenHealth": 105,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_120mm_APDS_DM14": {
-                                    "defaultPortion": 0.9,
-                                    "speed": 1334,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        270.0,
-                                        250.0
-                                    ],
-                                    "generic": {
-                                        "id": 360,
-                                        "userString": "#germany_vehicles:_120mm_APDS_DM14",
-                                        "icon": "ap_cr",
-                                        "price": 1110,
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeAPCR",
-                                        "damage": {
-                                            "armor": 410,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_120mm_HEAT_DM12_MZ": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 960,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        320.0,
-                                        320.0
-                                    ],
-                                    "generic": {
-                                        "id": 361,
-                                        "userString": "#germany_vehicles:_120mm_HEAT_DM12_MZ",
-                                        "icon": "hc_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeHollowCharge",
-                                        "damage": {
-                                            "armor": 410,
-                                            "devices": 165
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_120mm_HE_DM10": {
-                                    "defaultPortion": 0.1,
-                                    "speed": 960,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        110.0,
-                                        110.0
-                                    ],
-                                    "generic": {
-                                        "id": 362,
-                                        "userString": "#germany_vehicles:_120mm_HE_DM10",
-                                        "icon": "he_modern",
-                                        "price": 1155,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 120,
-                                        "explosionRadius": 2.42,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 525,
-                                            "devices": 165
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.42,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 260,
-                                                "devices": 85
-                                            }
-                                        }
-                                    }
+                                "id": 360,
+                                "userString": "#germany_vehicles:_120mm_APDS_DM14",
+                                "icon": "ap_cr",
+                                "price": 1110,
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeAPCR",
+                                "damage": {
+                                    "armor": 410,
+                                    "devices": 165
                                 }
                             },
-                            "name": "120 mm Delta 1965"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 960,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    320.0,
+                                    320.0
+                                ],
+                                "id": 361,
+                                "userString": "#germany_vehicles:_120mm_HEAT_DM12_MZ",
+                                "icon": "hc_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeHollowCharge",
+                                "damage": {
+                                    "armor": 410,
+                                    "devices": 165
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.1,
+                                "speed": 960,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    110.0,
+                                    110.0
+                                ],
+                                "id": 362,
+                                "userString": "#germany_vehicles:_120mm_HE_DM10",
+                                "icon": "he_modern",
+                                "price": 1155,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 120,
+                                "explosionRadius": 2.42,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 525,
+                                    "devices": 165
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.42,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 260,
+                                        "devices": 85
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -236,7 +184,8 @@
                     0.0
                 ],
                 "track_health": 300,
-                "track_repaired_health": 225
+                "track_repaired_health": 225,
+                "level": 10
             }
         ],
         "engines": [

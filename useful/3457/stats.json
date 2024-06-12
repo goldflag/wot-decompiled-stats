@@ -43,6 +43,7 @@
                 "id": "Turret_1_S14_Ikv_103",
                 "traverse": 18,
                 "view_range": 340,
+                "level": 5,
                 "guns": [
                     {
                         "name": "10,5 cm kan ikv 102",
@@ -62,140 +63,88 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#sweden_vehicles:_105mm_kan_ikv_102",
-                            "tags": [],
-                            "level": 5,
-                            "price": 38000,
-                            "impulse": 0.38,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.5,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_large_mb",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 5,
+                        "weight": 550,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.65,
+                                "speed": 359,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    102.0,
+                                    93.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    15.0,
-                                    1.0,
-                                    15.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 40.0,
-                            "reloadTime": 8,
-                            "maxAmmo": 42,
-                            "aimingTime": 2,
-                            "weight": 550,
-                            "maxHealth": 150,
-                            "maxRegenHealth": 75,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_105mm_slpgr_m_43": {
-                                    "defaultPortion": 0.65,
-                                    "speed": 359,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        102.0,
-                                        93.0
-                                    ],
-                                    "generic": {
-                                        "id": 45,
-                                        "userString": "#sweden_vehicles:_105mm_slpgr_m_43",
-                                        "icon": "ap",
-                                        "price": 215,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 320,
-                                            "devices": 150
-                                        }
-                                    }
-                                },
-                                "_105mm_slpsgr_m_49": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 418,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        110.0,
-                                        110.0
-                                    ],
-                                    "generic": {
-                                        "id": 46,
-                                        "userString": "#sweden_vehicles:_105mm_slpsgr_m_49",
-                                        "icon": "hc_premium",
-                                        "price": 4000,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainHollowCharge",
-                                        "damage": {
-                                            "armor": 300,
-                                            "devices": 150
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                },
-                                "_105mm_lt_sgr_m_34": {
-                                    "defaultPortion": 0.35,
-                                    "speed": 371,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        53.0,
-                                        53.0
-                                    ],
-                                    "generic": {
-                                        "id": 42,
-                                        "userString": "#sweden_vehicles:_105mm_lt_sgr_m_34",
-                                        "icon": "he_modern",
-                                        "price": 240,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 105,
-                                        "explosionRadius": 1.91,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 370,
-                                            "devices": 150
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.91,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 185,
-                                                "devices": 75
-                                            }
-                                        }
-                                    }
+                                "id": 45,
+                                "userString": "#sweden_vehicles:_105mm_slpgr_m_43",
+                                "icon": "ap",
+                                "price": 215,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 320,
+                                    "devices": 150
                                 }
                             },
-                            "name": "10,5 cm kan ikv 102"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 418,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    110.0,
+                                    110.0
+                                ],
+                                "id": 46,
+                                "userString": "#sweden_vehicles:_105mm_slpsgr_m_49",
+                                "icon": "hc_premium",
+                                "price": 4000,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainHollowCharge",
+                                "damage": {
+                                    "armor": 300,
+                                    "devices": 150
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            },
+                            {
+                                "defaultPortion": 0.35,
+                                "speed": 371,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    53.0,
+                                    53.0
+                                ],
+                                "id": 42,
+                                "userString": "#sweden_vehicles:_105mm_lt_sgr_m_34",
+                                "icon": "he_modern",
+                                "price": 240,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 105,
+                                "explosionRadius": 1.91,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 370,
+                                    "devices": 150
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.91,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 185,
+                                        "devices": 75
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "10,5 cm kan ikv 103",
@@ -215,107 +164,57 @@
                             "after_shot": null,
                             "while_damaged": null
                         },
-                        "generic": {
-                            "userString": "#sweden_vehicles:_105mm_kan_ikv_103",
-                            "tags": [],
-                            "level": 5,
-                            "price": 45700,
-                            "impulse": 0.38,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.5,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_large_mb",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 5,
+                        "weight": 550,
+                        "shells": [
+                            {
+                                "defaultPortion": 1.0,
+                                "speed": 418,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    120.0,
+                                    120.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    15.0,
-                                    1.0,
-                                    15.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 40.0,
-                            "reloadTime": 8,
-                            "maxAmmo": 42,
-                            "aimingTime": 2,
-                            "weight": 550,
-                            "maxHealth": 150,
-                            "maxRegenHealth": 75,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_105mm_slpsgr_m_60": {
-                                    "defaultPortion": 1.0,
-                                    "speed": 418,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        120.0,
-                                        120.0
-                                    ],
-                                    "generic": {
-                                        "id": 47,
-                                        "userString": "#sweden_vehicles:_105mm_slpsgr_m_60",
-                                        "icon": "hc",
-                                        "price": 220,
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainHollowCharge",
-                                        "damage": {
-                                            "armor": 300,
-                                            "devices": 150
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
+                                "id": 47,
+                                "userString": "#sweden_vehicles:_105mm_slpsgr_m_60",
+                                "icon": "hc",
+                                "price": 220,
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainHollowCharge",
+                                "damage": {
+                                    "armor": 300,
+                                    "devices": 150
                                 },
-                                "_105mm_slpsgr_m_65": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 418,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        140.0,
-                                        140.0
-                                    ],
-                                    "generic": {
-                                        "id": 48,
-                                        "userString": "#sweden_vehicles:_105mm_slpsgr_m_65",
-                                        "icon": "hc_premium",
-                                        "price": 4400,
-                                        "improved": "true",
-                                        "kind": "HOLLOW_CHARGE",
-                                        "caliber": 105,
-                                        "isTracer": "true",
-                                        "effects": "mainHollowCharge",
-                                        "damage": {
-                                            "armor": 300,
-                                            "devices": 150
-                                        },
-                                        "piercingPowerLossFactorByDistance": 0.05
-                                    }
-                                }
+                                "piercingPowerLossFactorByDistance": 0.05
                             },
-                            "name": "10,5 cm kan ikv 103"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 418,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    140.0,
+                                    140.0
+                                ],
+                                "id": 48,
+                                "userString": "#sweden_vehicles:_105mm_slpsgr_m_65",
+                                "icon": "hc_premium",
+                                "price": 4400,
+                                "improved": "true",
+                                "kind": "HOLLOW_CHARGE",
+                                "caliber": 105,
+                                "isTracer": "true",
+                                "effects": "mainHollowCharge",
+                                "damage": {
+                                    "armor": 300,
+                                    "devices": 150
+                                },
+                                "piercingPowerLossFactorByDistance": 0.05
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -355,7 +254,8 @@
                     0.0
                 ],
                 "track_health": 90,
-                "track_repaired_health": 70
+                "track_repaired_health": 70,
+                "level": 4
             },
             {
                 "name": "Ikv 103",
@@ -375,7 +275,8 @@
                     0.0
                 ],
                 "track_health": 100,
-                "track_repaired_health": 75
+                "track_repaired_health": 75,
+                "level": 5
             }
         ],
         "engines": [

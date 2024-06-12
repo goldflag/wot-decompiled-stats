@@ -45,6 +45,7 @@
                 "id": "Turret_1_J35_Ho_Ri_3",
                 "traverse": 28,
                 "view_range": 400,
+                "level": 10,
                 "guns": [
                     {
                         "name": "14.9 cm Type 97 Cannon",
@@ -64,140 +65,87 @@
                             "after_shot": 4.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#japan_vehicles:_149mm_Gun_Type_97",
-                            "tags": [],
-                            "level": 10,
-                            "price": 340000,
-                            "notInShop": "true",
-                            "impulse": 0.62,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.4,
-                                "recoilEffect": "huge"
-                            },
-                            "effects": "shot_huge",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -15.0,
-                                    1.0,
-                                    -15.0
+                        "level": 10,
+                        "weight": 5070,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.85,
+                                "speed": 980,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    305.0,
+                                    290.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    5.0,
-                                    1.0,
-                                    5.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 24,
-                            "reloadTime": 15.3,
-                            "maxAmmo": 40,
-                            "aimingTime": 2.5,
-                            "weight": 5070,
-                            "maxHealth": 252,
-                            "maxRegenHealth": 126,
-                            "repairCost": 10,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.34,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.1,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_149mm_Capped_Semi_AP": {
-                                    "defaultPortion": 0.85,
-                                    "speed": 980,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        305.0,
-                                        290.0
-                                    ],
-                                    "generic": {
-                                        "id": 94,
-                                        "userString": "#japan_vehicles:_149mm_Capped_Semi_AP",
-                                        "icon": "ap",
-                                        "price": 2135,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 149,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 700,
-                                            "devices": 203
-                                        }
-                                    }
-                                },
-                                "_149mm_Capped_Semi_AP_Kai": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1150,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        360.0,
-                                        342.0
-                                    ],
-                                    "generic": {
-                                        "id": 95,
-                                        "userString": "#japan_vehicles:_149mm_Capped_Semi_AP_Kai",
-                                        "icon": "ap_premium",
-                                        "price": 6400,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 149,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 700,
-                                            "devices": 203
-                                        }
-                                    }
-                                },
-                                "_149mm_Type_1_HE": {
-                                    "defaultPortion": 0.15,
-                                    "speed": 900,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        90.0,
-                                        90.0
-                                    ],
-                                    "generic": {
-                                        "id": 96,
-                                        "userString": "#japan_vehicles:_149mm_Type_1_HE",
-                                        "icon": "he_modern",
-                                        "price": 1620,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 149,
-                                        "explosionRadius": 3.66,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 900,
-                                            "devices": 203
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 3.66,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 450,
-                                                "devices": 100
-                                            }
-                                        }
-                                    }
+                                "id": 94,
+                                "userString": "#japan_vehicles:_149mm_Capped_Semi_AP",
+                                "icon": "ap",
+                                "price": 2135,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 149,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 700,
+                                    "devices": 203
                                 }
                             },
-                            "name": "14.9 cm Type 97 Cannon"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1150,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    360.0,
+                                    342.0
+                                ],
+                                "id": 95,
+                                "userString": "#japan_vehicles:_149mm_Capped_Semi_AP_Kai",
+                                "icon": "ap_premium",
+                                "price": 6400,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 149,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 700,
+                                    "devices": 203
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.15,
+                                "speed": 900,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    90.0,
+                                    90.0
+                                ],
+                                "id": 96,
+                                "userString": "#japan_vehicles:_149mm_Type_1_HE",
+                                "icon": "he_modern",
+                                "price": 1620,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 149,
+                                "explosionRadius": 3.66,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 900,
+                                    "devices": 203
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 3.66,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 450,
+                                        "devices": 100
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -233,7 +181,8 @@
                     0.0
                 ],
                 "track_health": 250,
-                "track_repaired_health": 190
+                "track_repaired_health": 190,
+                "level": 10
             }
         ],
         "engines": [

@@ -42,6 +42,7 @@
                 "id": "Turret_1_R158_LT_432",
                 "traverse": 48,
                 "view_range": 380,
+                "level": 8,
                 "guns": [
                     {
                         "name": "85 mm D-58",
@@ -61,140 +62,87 @@
                             "after_shot": null,
                             "while_damaged": null
                         },
-                        "generic": {
-                            "userString": "#ussr_vehicles:_85mm_D_58",
-                            "tags": [],
-                            "level": 8,
-                            "price": 94400,
-                            "notInShop": "true",
-                            "impulse": 0.44,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.32,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_main",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -25.0,
-                                    1.0,
-                                    -25.0
+                        "level": 8,
+                        "weight": 1000,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.85,
+                                "speed": 1150,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    176.0,
+                                    158.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    7.0,
-                                    1.0,
-                                    7.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 39.375,
-                            "reloadTime": 5.2,
-                            "maxAmmo": 40,
-                            "aimingTime": 2,
-                            "weight": 1000,
-                            "maxHealth": 134,
-                            "maxRegenHealth": 67,
-                            "repairCost": 6,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.38,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_85mm_UBR_372P_432": {
-                                    "defaultPortion": 0.85,
-                                    "speed": 1150,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        176.0,
-                                        158.0
-                                    ],
-                                    "generic": {
-                                        "id": 232,
-                                        "userString": "#ussr_vehicles:_85mm_UBR_372P_432",
-                                        "icon": "ap_cr",
-                                        "price": 220,
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 85,
-                                        "isTracer": "true",
-                                        "effects": "mainAPCR",
-                                        "damage": {
-                                            "armor": 180,
-                                            "devices": 115
-                                        }
-                                    }
-                                },
-                                "_85mm_UBR_372_432": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1012,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        218.0,
-                                        198.0
-                                    ],
-                                    "generic": {
-                                        "id": 233,
-                                        "userString": "#ussr_vehicles:_85mm_UBR_372_432",
-                                        "icon": "ap_premium",
-                                        "price": 3200,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 85,
-                                        "isTracer": "true",
-                                        "effects": "mainArmorPiercing",
-                                        "damage": {
-                                            "armor": 180,
-                                            "devices": 115
-                                        }
-                                    }
-                                },
-                                "_85mm_UOF_372_432": {
-                                    "defaultPortion": 0.15,
-                                    "speed": 700,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        44.0,
-                                        44.0
-                                    ],
-                                    "generic": {
-                                        "id": 234,
-                                        "userString": "#ussr_vehicles:_85mm_UOF_372_432",
-                                        "icon": "he_modern",
-                                        "price": 145,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 85,
-                                        "explosionRadius": 1.32,
-                                        "isTracer": "true",
-                                        "effects": "mainHighExplosive",
-                                        "damage": {
-                                            "armor": 300,
-                                            "devices": 115
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 1.32,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 150,
-                                                "devices": 60
-                                            }
-                                        }
-                                    }
+                                "id": 232,
+                                "userString": "#ussr_vehicles:_85mm_UBR_372P_432",
+                                "icon": "ap_cr",
+                                "price": 220,
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 85,
+                                "isTracer": "true",
+                                "effects": "mainAPCR",
+                                "damage": {
+                                    "armor": 180,
+                                    "devices": 115
                                 }
                             },
-                            "name": "85 mm D-58"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1012,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    218.0,
+                                    198.0
+                                ],
+                                "id": 233,
+                                "userString": "#ussr_vehicles:_85mm_UBR_372_432",
+                                "icon": "ap_premium",
+                                "price": 3200,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 85,
+                                "isTracer": "true",
+                                "effects": "mainArmorPiercing",
+                                "damage": {
+                                    "armor": 180,
+                                    "devices": 115
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.15,
+                                "speed": 700,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    44.0,
+                                    44.0
+                                ],
+                                "id": 234,
+                                "userString": "#ussr_vehicles:_85mm_UOF_372_432",
+                                "icon": "he_modern",
+                                "price": 145,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 85,
+                                "explosionRadius": 1.32,
+                                "isTracer": "true",
+                                "effects": "mainHighExplosive",
+                                "damage": {
+                                    "armor": 300,
+                                    "devices": 115
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 1.32,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 150,
+                                        "devices": 60
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -234,7 +182,8 @@
                     0.0
                 ],
                 "track_health": 200,
-                "track_repaired_health": 150
+                "track_repaired_health": 150,
+                "level": 8
             }
         ],
         "engines": [

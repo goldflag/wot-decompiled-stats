@@ -43,6 +43,7 @@
                 "id": "Turret_1_A146_TL_7_120",
                 "traverse": 24,
                 "view_range": 370,
+                "level": 9,
                 "guns": [
                     {
                         "name": "120 mm 2B British Gun",
@@ -62,140 +63,87 @@
                             "after_shot": 3,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_120mm_2B_British_gun",
-                            "tags": [],
-                            "level": 10,
-                            "price": 310000,
-                            "notInShop": "true",
-                            "impulse": 0.68,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_large_mb",
-                            "reloadEffect": "reload_automat_reloading_115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -15.0,
-                                    1.0,
-                                    -15.0
+                        "level": 10,
+                        "weight": 1800,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 1060,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    252.0,
+                                    227.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    11.0,
-                                    1.0,
-                                    11.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 18,
-                            "reloadTime": 10,
-                            "maxAmmo": 22,
-                            "aimingTime": 2,
-                            "weight": 1800,
-                            "maxHealth": 210,
-                            "maxRegenHealth": 105,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_120mm_XM152": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 1060,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        252.0,
-                                        227.0
-                                    ],
-                                    "generic": {
-                                        "id": 170,
-                                        "userString": "#usa_vehicles:_120mm_XM152",
-                                        "icon": "ap",
-                                        "price": 1060,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 360,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_120mm_XM252": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1492,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        315.0,
-                                        285.0
-                                    ],
-                                    "generic": {
-                                        "id": 171,
-                                        "userString": "#usa_vehicles:_120mm_XM252",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 120,
-                                        "isTracer": "true",
-                                        "effects": "largeAPCR",
-                                        "damage": {
-                                            "armor": 360,
-                                            "devices": 165
-                                        }
-                                    }
-                                },
-                                "_120mm_XM31": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 1050,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        105.0,
-                                        105.0
-                                    ],
-                                    "generic": {
-                                        "id": 172,
-                                        "userString": "#usa_vehicles:_120mm_XM31",
-                                        "icon": "he_modern",
-                                        "price": 900,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 120,
-                                        "explosionRadius": 2.42,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 460,
-                                            "devices": 165
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.42,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 260,
-                                                "devices": 85
-                                            }
-                                        }
-                                    }
+                                "id": 170,
+                                "userString": "#usa_vehicles:_120mm_XM152",
+                                "icon": "ap",
+                                "price": 1060,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 360,
+                                    "devices": 165
                                 }
                             },
-                            "name": "120 mm 2B British Gun"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1492,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    315.0,
+                                    285.0
+                                ],
+                                "id": 171,
+                                "userString": "#usa_vehicles:_120mm_XM252",
+                                "icon": "ap_cr_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 120,
+                                "isTracer": "true",
+                                "effects": "largeAPCR",
+                                "damage": {
+                                    "armor": 360,
+                                    "devices": 165
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 1050,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    105.0,
+                                    105.0
+                                ],
+                                "id": 172,
+                                "userString": "#usa_vehicles:_120mm_XM31",
+                                "icon": "he_modern",
+                                "price": 900,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 120,
+                                "explosionRadius": 2.42,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 460,
+                                    "devices": 165
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.42,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 260,
+                                        "devices": 85
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -235,7 +183,8 @@
                     0.0
                 ],
                 "track_health": 230,
-                "track_repaired_health": 175
+                "track_repaired_health": 175,
+                "level": 9
             }
         ],
         "engines": [

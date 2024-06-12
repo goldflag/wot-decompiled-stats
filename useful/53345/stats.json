@@ -45,6 +45,7 @@
                 "id": "Turret_1_J31_Type_5_KaRi",
                 "traverse": 22,
                 "view_range": 380,
+                "level": 8,
                 "guns": [
                     {
                         "name": "12.7 cm Gun Type 89A",
@@ -64,140 +65,87 @@
                             "after_shot": 3.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#japan_vehicles:_127mm_Gun_Type_89",
-                            "tags": [],
-                            "level": 9,
-                            "price": 230000,
-                            "notInShop": "true",
-                            "impulse": 0.38,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.65,
-                                "recoilEffect": "large"
-                            },
-                            "effects": "shot_largeext",
-                            "reloadEffect": "reload115_152",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -17.0,
-                                    1.0,
-                                    -17.0
+                        "level": 9,
+                        "weight": 4245,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.75,
+                                "speed": 980,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    252.0,
+                                    239.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    8.0,
-                                    1.0,
-                                    8.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 21.875,
-                            "reloadTime": 10.0,
-                            "maxAmmo": 40,
-                            "aimingTime": 2,
-                            "weight": 4245,
-                            "maxHealth": 190,
-                            "maxRegenHealth": 95,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.36,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 3.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_127mm_Capped_Common_Type_0": {
-                                    "defaultPortion": 0.75,
-                                    "speed": 980,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        252.0,
-                                        239.0
-                                    ],
-                                    "generic": {
-                                        "id": 91,
-                                        "userString": "#japan_vehicles:_127mm_Capped_Common_Type_0",
-                                        "icon": "ap",
-                                        "price": 1160,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 127,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 500,
-                                            "devices": 178
-                                        }
-                                    }
-                                },
-                                "_127mm_Capped_Common_Type_1": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1150,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        298.0,
-                                        280.0
-                                    ],
-                                    "generic": {
-                                        "id": 92,
-                                        "userString": "#japan_vehicles:_127mm_Capped_Common_Type_1",
-                                        "icon": "ap_premium",
-                                        "price": 5200,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 127,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 500,
-                                            "devices": 178
-                                        }
-                                    }
-                                },
-                                "_127mm_Common_Type_1_HE": {
-                                    "defaultPortion": 0.25,
-                                    "speed": 900,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        90.0,
-                                        90.0
-                                    ],
-                                    "generic": {
-                                        "id": 93,
-                                        "userString": "#japan_vehicles:_127mm_Common_Type_1_HE",
-                                        "icon": "he_modern",
-                                        "price": 1280,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 127,
-                                        "explosionRadius": 2.67,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 630,
-                                            "devices": 178
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.67,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 305,
-                                                "devices": 90
-                                            }
-                                        }
-                                    }
+                                "id": 91,
+                                "userString": "#japan_vehicles:_127mm_Capped_Common_Type_0",
+                                "icon": "ap",
+                                "price": 1160,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 127,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 500,
+                                    "devices": 178
                                 }
                             },
-                            "name": "12.7 cm Gun Type 89A"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1150,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    298.0,
+                                    280.0
+                                ],
+                                "id": 92,
+                                "userString": "#japan_vehicles:_127mm_Capped_Common_Type_1",
+                                "icon": "ap_premium",
+                                "price": 5200,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 127,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 500,
+                                    "devices": 178
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.25,
+                                "speed": 900,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    90.0,
+                                    90.0
+                                ],
+                                "id": 93,
+                                "userString": "#japan_vehicles:_127mm_Common_Type_1_HE",
+                                "icon": "he_modern",
+                                "price": 1280,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 127,
+                                "explosionRadius": 2.67,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 630,
+                                    "devices": 178
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.67,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 305,
+                                        "devices": 90
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -237,7 +185,8 @@
                     0.0
                 ],
                 "track_health": 200,
-                "track_repaired_health": 150
+                "track_repaired_health": 150,
+                "level": 8
             }
         ],
         "engines": [

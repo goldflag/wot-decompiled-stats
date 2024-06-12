@@ -43,6 +43,7 @@
                 "id": "Turret_1_Pl07_14TP",
                 "traverse": 35,
                 "view_range": 300,
+                "level": 3,
                 "guns": [
                     {
                         "name": "37 mm Bofors wz. 37",
@@ -62,139 +63,87 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#poland_vehicles:_37mm_Bofors_wz_37",
-                            "tags": [],
-                            "level": 2,
-                            "price": 2200,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.2,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -17.0,
-                                    1.0,
-                                    -17.0
+                        "level": 2,
+                        "weight": 70,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 705,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    34.0,
+                                    27.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    6.0,
-                                    1.0,
-                                    6.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 2.51428571428571,
-                            "maxAmmo": 100,
-                            "aimingTime": 1.94285714285714,
-                            "weight": 70,
-                            "maxHealth": 60,
-                            "maxRegenHealth": 30,
-                            "repairCost": 1,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.48,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_37mm_AP_Bofors": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 705,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        34.0,
-                                        27.0
-                                    ],
-                                    "generic": {
-                                        "id": 48,
-                                        "userString": "#poland_vehicles:_37mm_AP_Bofors",
-                                        "icon": "ap",
-                                        "price": 11,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 40,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_APCR_Bofors": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 881,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        67.0,
-                                        36.0
-                                    ],
-                                    "generic": {
-                                        "id": 49,
-                                        "userString": "#poland_vehicles:_37mm_APCR_Bofors",
-                                        "icon": "ap_cr_premium",
-                                        "price": 800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 40,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_HE_Bofors": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 705,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        24.0,
-                                        24.0
-                                    ],
-                                    "generic": {
-                                        "id": 50,
-                                        "userString": "#poland_vehicles:_37mm_HE_Bofors",
-                                        "icon": "he_modern",
-                                        "price": 10,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 37,
-                                        "explosionRadius": 0.31,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 45,
-                                            "devices": 50
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.31,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 25,
-                                                "devices": 25
-                                            }
-                                        }
-                                    }
+                                "id": 48,
+                                "userString": "#poland_vehicles:_37mm_AP_Bofors",
+                                "icon": "ap",
+                                "price": 11,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 40,
+                                    "devices": 50
                                 }
                             },
-                            "name": "37 mm Bofors wz. 37"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 881,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    67.0,
+                                    36.0
+                                ],
+                                "id": 49,
+                                "userString": "#poland_vehicles:_37mm_APCR_Bofors",
+                                "icon": "ap_cr_premium",
+                                "price": 800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 40,
+                                    "devices": 50
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 705,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    24.0,
+                                    24.0
+                                ],
+                                "id": 50,
+                                "userString": "#poland_vehicles:_37mm_HE_Bofors",
+                                "icon": "he_modern",
+                                "price": 10,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 37,
+                                "explosionRadius": 0.31,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 45,
+                                    "devices": 50
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.31,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 25,
+                                        "devices": 25
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -214,6 +163,7 @@
                 "id": "Turret_2_Pl07_14TP",
                 "traverse": 38,
                 "view_range": 330,
+                "level": 4,
                 "guns": [
                     {
                         "name": "37 mm Bofors wz. 37",
@@ -233,139 +183,87 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#poland_vehicles:_37mm_Bofors_wz_37",
-                            "tags": [],
-                            "level": 2,
-                            "price": 2200,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.2,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -17.0,
-                                    1.0,
-                                    -17.0
+                        "level": 2,
+                        "weight": 70,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 705,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    34.0,
+                                    27.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    6.0,
-                                    1.0,
-                                    6.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 2.51428571428571,
-                            "maxAmmo": 100,
-                            "aimingTime": 1.94285714285714,
-                            "weight": 70,
-                            "maxHealth": 60,
-                            "maxRegenHealth": 30,
-                            "repairCost": 1,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.48,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.16,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_37mm_AP_Bofors": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 705,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        34.0,
-                                        27.0
-                                    ],
-                                    "generic": {
-                                        "id": 48,
-                                        "userString": "#poland_vehicles:_37mm_AP_Bofors",
-                                        "icon": "ap",
-                                        "price": 11,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 40,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_APCR_Bofors": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 881,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        67.0,
-                                        36.0
-                                    ],
-                                    "generic": {
-                                        "id": 49,
-                                        "userString": "#poland_vehicles:_37mm_APCR_Bofors",
-                                        "icon": "ap_cr_premium",
-                                        "price": 800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 37,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 40,
-                                            "devices": 50
-                                        }
-                                    }
-                                },
-                                "_37mm_HE_Bofors": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 705,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        24.0,
-                                        24.0
-                                    ],
-                                    "generic": {
-                                        "id": 50,
-                                        "userString": "#poland_vehicles:_37mm_HE_Bofors",
-                                        "icon": "he_modern",
-                                        "price": 10,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 37,
-                                        "explosionRadius": 0.31,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 45,
-                                            "devices": 50
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.31,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 25,
-                                                "devices": 25
-                                            }
-                                        }
-                                    }
+                                "id": 48,
+                                "userString": "#poland_vehicles:_37mm_AP_Bofors",
+                                "icon": "ap",
+                                "price": 11,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 40,
+                                    "devices": 50
                                 }
                             },
-                            "name": "37 mm Bofors wz. 37"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 881,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    67.0,
+                                    36.0
+                                ],
+                                "id": 49,
+                                "userString": "#poland_vehicles:_37mm_APCR_Bofors",
+                                "icon": "ap_cr_premium",
+                                "price": 800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 37,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 40,
+                                    "devices": 50
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 705,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    24.0,
+                                    24.0
+                                ],
+                                "id": 50,
+                                "userString": "#poland_vehicles:_37mm_HE_Bofors",
+                                "icon": "he_modern",
+                                "price": 10,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 37,
+                                "explosionRadius": 0.31,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 45,
+                                    "devices": 50
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.31,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 25,
+                                        "devices": 25
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "40 mm auto. Boforsa",
@@ -385,147 +283,87 @@
                             "after_shot": 3.5,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#poland_vehicles:_40mm_auto_Boforsa",
-                            "tags": [],
-                            "level": 4,
-                            "price": 22700,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.3,
-                                "recoilEffect": "auto"
-                            },
-                            "effects": "shot_auto",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -30.0,
-                                    1.0,
-                                    -30.0
+                        "level": 4,
+                        "weight": 470,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 829,
+                                "gravity": 9.81,
+                                "maxDistance": 400,
+                                "piercingPower": [
+                                    52.0,
+                                    38.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 43.75,
-                            "reloadTime": 4.04,
-                            "maxAmmo": 120,
-                            "aimingTime": 4.04,
-                            "clip": {
-                                "count": 4,
-                                "rate": 320
-                            },
-                            "burst": {
-                                "count": 2,
-                                "rate": 320
-                            },
-                            "weight": 470,
-                            "maxHealth": 70,
-                            "maxRegenHealth": 35,
-                            "repairCost": 2,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.377142857142857,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.08,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_40mm_pocisk_przeciwpancerny_wz_36": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 829,
-                                    "gravity": 9.81,
-                                    "maxDistance": 400,
-                                    "piercingPower": [
-                                        52.0,
-                                        38.0
-                                    ],
-                                    "generic": {
-                                        "id": 2,
-                                        "userString": "#poland_vehicles:_40mm_pocisk_przeciwpancerny_wz_36",
-                                        "icon": "ap",
-                                        "price": 17,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 40,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 54
-                                        }
-                                    }
-                                },
-                                "_40mm_pocisk_podkalibrowy": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1036,
-                                    "gravity": 9.81,
-                                    "maxDistance": 400,
-                                    "piercingPower": [
-                                        85.0,
-                                        68.0
-                                    ],
-                                    "generic": {
-                                        "id": 3,
-                                        "userString": "#poland_vehicles:_40mm_pocisk_podkalibrowy",
-                                        "icon": "ap_cr_premium",
-                                        "price": 1200,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 40,
-                                        "isTracer": "true",
-                                        "effects": "smallAPCR",
-                                        "damage": {
-                                            "armor": 50,
-                                            "devices": 54
-                                        }
-                                    }
-                                },
-                                "_40mm_pocisk_wybuchowy_wz_36": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 829,
-                                    "gravity": 9.81,
-                                    "maxDistance": 400,
-                                    "piercingPower": [
-                                        23.0,
-                                        23.0
-                                    ],
-                                    "generic": {
-                                        "id": 4,
-                                        "userString": "#poland_vehicles:_40mm_pocisk_wybuchowy_wz_36",
-                                        "icon": "he_modern",
-                                        "price": 15,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 40,
-                                        "explosionRadius": 0.35,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 60,
-                                            "devices": 54
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.35,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 30,
-                                                "devices": 25
-                                            }
-                                        }
-                                    }
+                                "id": 2,
+                                "userString": "#poland_vehicles:_40mm_pocisk_przeciwpancerny_wz_36",
+                                "icon": "ap",
+                                "price": 17,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 40,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 54
                                 }
                             },
-                            "name": "40 mm auto. Boforsa"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1036,
+                                "gravity": 9.81,
+                                "maxDistance": 400,
+                                "piercingPower": [
+                                    85.0,
+                                    68.0
+                                ],
+                                "id": 3,
+                                "userString": "#poland_vehicles:_40mm_pocisk_podkalibrowy",
+                                "icon": "ap_cr_premium",
+                                "price": 1200,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 40,
+                                "isTracer": "true",
+                                "effects": "smallAPCR",
+                                "damage": {
+                                    "armor": 50,
+                                    "devices": 54
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 829,
+                                "gravity": 9.81,
+                                "maxDistance": 400,
+                                "piercingPower": [
+                                    23.0,
+                                    23.0
+                                ],
+                                "id": 4,
+                                "userString": "#poland_vehicles:_40mm_pocisk_wybuchowy_wz_36",
+                                "icon": "he_modern",
+                                "price": 15,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 40,
+                                "explosionRadius": 0.35,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 60,
+                                    "devices": 54
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.35,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 30,
+                                        "devices": 25
+                                    }
+                                }
+                            }
+                        ]
                     },
                     {
                         "name": "47 mm armata wz. 39",
@@ -545,139 +383,87 @@
                             "after_shot": 3,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#poland_vehicles:_47mm_armata_wz_39",
-                            "tags": [],
-                            "level": 4,
-                            "price": 24000,
-                            "impulse": 0.26,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.26,
-                                "recoilEffect": "small"
-                            },
-                            "effects": "shot_small",
-                            "reloadEffect": "reload20_45",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 4,
+                        "weight": 400,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 885,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    62.0,
+                                    52.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 39.375,
-                            "reloadTime": 3.9,
-                            "maxAmmo": 120,
-                            "aimingTime": 2,
-                            "weight": 400,
-                            "maxHealth": 76,
-                            "maxRegenHealth": 38,
-                            "repairCost": 1,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.38,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.1,
-                                "afterShot": 3,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_47mm_slpprj_m_38": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 885,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        62.0,
-                                        52.0
-                                    ],
-                                    "generic": {
-                                        "id": 54,
-                                        "userString": "#poland_vehicles:_47mm_slpprj_m_38",
-                                        "icon": "ap",
-                                        "price": 29,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 47,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 75,
-                                            "devices": 64
-                                        }
-                                    }
-                                },
-                                "_47mm_slpprj_m_39": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1106,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        92.0,
-                                        63.0
-                                    ],
-                                    "generic": {
-                                        "id": 55,
-                                        "userString": "#poland_vehicles:_47mm_slpprj_m_39",
-                                        "icon": "ap_premium",
-                                        "price": 1600,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 47,
-                                        "isTracer": "true",
-                                        "effects": "smallArmorPiercing",
-                                        "damage": {
-                                            "armor": 75,
-                                            "devices": 64
-                                        }
-                                    }
-                                },
-                                "_47mm_sgr_m_38": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 885,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        24.0,
-                                        24.0
-                                    ],
-                                    "generic": {
-                                        "id": 56,
-                                        "userString": "#poland_vehicles:_47mm_sgr_m_38",
-                                        "icon": "he_modern",
-                                        "price": 25,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 47,
-                                        "explosionRadius": 0.47,
-                                        "isTracer": "true",
-                                        "effects": "smallHighExplosive",
-                                        "damage": {
-                                            "armor": 90,
-                                            "devices": 64
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 0.47,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 45,
-                                                "devices": 30
-                                            }
-                                        }
-                                    }
+                                "id": 54,
+                                "userString": "#poland_vehicles:_47mm_slpprj_m_38",
+                                "icon": "ap",
+                                "price": 29,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 47,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 75,
+                                    "devices": 64
                                 }
                             },
-                            "name": "47 mm armata wz. 39"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1106,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    92.0,
+                                    63.0
+                                ],
+                                "id": 55,
+                                "userString": "#poland_vehicles:_47mm_slpprj_m_39",
+                                "icon": "ap_premium",
+                                "price": 1600,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 47,
+                                "isTracer": "true",
+                                "effects": "smallArmorPiercing",
+                                "damage": {
+                                    "armor": 75,
+                                    "devices": 64
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 885,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    24.0,
+                                    24.0
+                                ],
+                                "id": 56,
+                                "userString": "#poland_vehicles:_47mm_sgr_m_38",
+                                "icon": "he_modern",
+                                "price": 25,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 47,
+                                "explosionRadius": 0.47,
+                                "isTracer": "true",
+                                "effects": "smallHighExplosive",
+                                "damage": {
+                                    "armor": 90,
+                                    "devices": 64
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 0.47,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 45,
+                                        "devices": 30
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -717,7 +503,8 @@
                     0.0
                 ],
                 "track_health": 70,
-                "track_repaired_health": 55
+                "track_repaired_health": 55,
+                "level": 3
             },
             {
                 "name": "14TP",
@@ -737,7 +524,8 @@
                     0.0
                 ],
                 "track_health": 80,
-                "track_repaired_health": 60
+                "track_repaired_health": 60,
+                "level": 4
             }
         ],
         "engines": [

@@ -45,6 +45,7 @@
                 "id": "Turret_1_T92",
                 "traverse": 8,
                 "view_range": 310,
+                "level": 10,
                 "guns": [
                     {
                         "name": "240 mm Howitzer M1",
@@ -64,144 +65,91 @@
                             "after_shot": 6.0,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#usa_vehicles:_240mm_Howitzer_M1",
-                            "tags": [],
-                            "level": 10,
-                            "price": 350000,
-                            "notInShop": "true",
-                            "impulse": 0.88,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.3,
-                                "recoilEffect": "huge"
-                            },
-                            "effects": "shot_superhuge",
-                            "reloadEffect": "reload155_170",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -45.0,
-                                    1.0,
-                                    -45.0
+                        "level": 10,
+                        "weight": 11385,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.5,
+                                "speed": 460,
+                                "gravity": 150,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    60.0,
+                                    60.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    0.0,
-                                    1.0,
-                                    0.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 17.5,
-                            "reloadTime": 46.8,
-                            "maxAmmo": 20,
-                            "aimingTime": 7.42857142857143,
-                            "weight": 11385,
-                            "maxHealth": 288,
-                            "maxRegenHealth": 144,
-                            "repairCost": 12,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.617142857142857,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.61,
-                                "afterShot": 6.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_240mm_HE_M146": {
-                                    "defaultPortion": 0.5,
-                                    "speed": 460,
-                                    "gravity": 150,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        60.0,
-                                        60.0
-                                    ],
-                                    "maxHeight": 441,
-                                    "generic": {
-                                        "id": 48,
-                                        "userString": "#usa_vehicles:_240mm_HE_M146",
-                                        "icon": "he_spg_stun",
-                                        "price": 2500,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "caliber": 240,
-                                        "explosionRadius": 12.4,
-                                        "hasStun": "true",
-                                        "stunDuration": 35,
-                                        "guaranteedStunDuration": 0.4,
-                                        "damageDurationCoeff": 0.6,
-                                        "isTracer": "true",
-                                        "effects": "hugeSH",
-                                        "damage": {
-                                            "armor": 1100,
-                                            "devices": 160
-                                        },
-                                        "deviceDamagePossibility": {
-                                            "protectFromIndirectHits": [
-                                                "internal",
-                                                "tankmen"
-                                            ]
-                                        }
-                                    }
+                                "maxHeight": 441,
+                                "id": 48,
+                                "userString": "#usa_vehicles:_240mm_HE_M146",
+                                "icon": "he_spg_stun",
+                                "price": 2500,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "caliber": 240,
+                                "explosionRadius": 12.4,
+                                "hasStun": "true",
+                                "stunDuration": 35,
+                                "guaranteedStunDuration": 0.4,
+                                "damageDurationCoeff": 0.6,
+                                "isTracer": "true",
+                                "effects": "hugeSH",
+                                "damage": {
+                                    "armor": 1100,
+                                    "devices": 160
                                 },
-                                "_240mm_HE_M160": {
-                                    "defaultPortion": 0.3,
-                                    "speed": 492,
-                                    "gravity": 150,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        75.0,
-                                        75.0
-                                    ],
-                                    "maxHeight": 505,
-                                    "generic": {
-                                        "id": 49,
-                                        "userString": "#usa_vehicles:_240mm_HE_M160",
-                                        "icon": "he_spg",
-                                        "price": 2930,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "caliber": 240,
-                                        "explosionRadius": 7,
-                                        "isTracer": "true",
-                                        "effects": "hugeSF",
-                                        "damage": {
-                                            "armor": 1420,
-                                            "devices": 160
-                                        }
-                                    }
-                                },
-                                "_240mm_M114_M78": {
-                                    "defaultPortion": 0.2,
-                                    "speed": 552,
-                                    "gravity": 150,
-                                    "maxDistance": 10000,
-                                    "piercingPower": [
-                                        372.0,
-                                        350.0
-                                    ],
-                                    "maxHeight": 635,
-                                    "generic": {
-                                        "id": 56,
-                                        "userString": "#usa_vehicles:_240mm_M114_M78",
-                                        "icon": "ap",
-                                        "price": 2880,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 240,
-                                        "isTracer": "true",
-                                        "effects": "hugeSA",
-                                        "damage": {
-                                            "armor": 750,
-                                            "devices": 160
-                                        }
-                                    }
+                                "deviceDamagePossibility": {
+                                    "protectFromIndirectHits": [
+                                        "internal",
+                                        "tankmen"
+                                    ]
                                 }
                             },
-                            "name": "240 mm Howitzer M1"
-                        }
+                            {
+                                "defaultPortion": 0.3,
+                                "speed": 492,
+                                "gravity": 150,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    75.0,
+                                    75.0
+                                ],
+                                "maxHeight": 505,
+                                "id": 49,
+                                "userString": "#usa_vehicles:_240mm_HE_M160",
+                                "icon": "he_spg",
+                                "price": 2930,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "caliber": 240,
+                                "explosionRadius": 7,
+                                "isTracer": "true",
+                                "effects": "hugeSF",
+                                "damage": {
+                                    "armor": 1420,
+                                    "devices": 160
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.2,
+                                "speed": 552,
+                                "gravity": 150,
+                                "maxDistance": 10000,
+                                "piercingPower": [
+                                    372.0,
+                                    350.0
+                                ],
+                                "maxHeight": 635,
+                                "id": 56,
+                                "userString": "#usa_vehicles:_240mm_M114_M78",
+                                "icon": "ap",
+                                "price": 2880,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 240,
+                                "isTracer": "true",
+                                "effects": "hugeSA",
+                                "damage": {
+                                    "armor": 750,
+                                    "devices": 160
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -237,7 +185,8 @@
                     0.0
                 ],
                 "track_health": 170,
-                "track_repaired_health": 130
+                "track_repaired_health": 130,
+                "level": 10
             }
         ],
         "engines": [

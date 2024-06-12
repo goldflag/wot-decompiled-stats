@@ -45,6 +45,7 @@
                 "id": "Turret_1_GB99_Turtle_Mk1",
                 "traverse": 20,
                 "view_range": 370,
+                "level": 8,
                 "guns": [
                     {
                         "name": "OQF 55-pdr AT Gun",
@@ -64,140 +65,87 @@
                             "after_shot": 3,
                             "while_damaged": 2.0
                         },
-                        "generic": {
-                            "userString": "#gb_vehicles:OQF_55_pdr_AT_Gun",
-                            "tags": [],
-                            "level": 8,
-                            "price": 125000,
-                            "notInShop": "true",
-                            "impulse": 0.48,
-                            "recoil": {
-                                "lodDist": "MEDIUM",
-                                "amplitude": 0.24,
-                                "recoilEffect": "main"
-                            },
-                            "effects": "shot_large",
-                            "reloadEffect": "reload85_107",
-                            "pitchLimits": {
-                                "minPitch": [
-                                    0.0,
-                                    -20.0,
-                                    1.0,
-                                    -20.0
+                        "level": 8,
+                        "weight": 3500,
+                        "shells": [
+                            {
+                                "defaultPortion": 0.95,
+                                "speed": 1050,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    240.0,
+                                    228.0
                                 ],
-                                "maxPitch": [
-                                    0.0,
-                                    10.0,
-                                    1.0,
-                                    10.0
-                                ]
-                            },
-                            "turretYawLimits": [
-                                -180.0,
-                                180.0
-                            ],
-                            "rotationSpeed": 35.0,
-                            "reloadTime": 7.5,
-                            "maxAmmo": 72,
-                            "aimingTime": 3,
-                            "weight": 3500,
-                            "maxHealth": 208,
-                            "maxRegenHealth": 104,
-                            "repairCost": 8,
-                            "invisibilityFactorAtShot": 0.1,
-                            "shotDispersionRadius": 0.4,
-                            "shotDispersionFactors": {
-                                "turretRotation": 0.05,
-                                "afterShot": 4.0,
-                                "whileGunDamaged": 2.0
-                            },
-                            "shots": {
-                                "_55pdr_APCBC": {
-                                    "defaultPortion": 0.95,
-                                    "speed": 1050,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        240.0,
-                                        228.0
-                                    ],
-                                    "generic": {
-                                        "id": 162,
-                                        "userString": "#gb_vehicles:_55pdr_APCBC",
-                                        "icon": "ap",
-                                        "price": 710,
-                                        "kind": "ARMOR_PIERCING",
-                                        "caliber": 108,
-                                        "isTracer": "true",
-                                        "effects": "largeArmorPiercing",
-                                        "damage": {
-                                            "armor": 330,
-                                            "devices": 135
-                                        }
-                                    }
-                                },
-                                "_55pdr_APDS": {
-                                    "defaultPortion": 0.0,
-                                    "speed": 1200,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        270.0,
-                                        256.0
-                                    ],
-                                    "generic": {
-                                        "id": 163,
-                                        "userString": "#gb_vehicles:_55pdr_APDS",
-                                        "icon": "ap_cr_premium",
-                                        "price": 4800,
-                                        "improved": "true",
-                                        "kind": "ARMOR_PIERCING_CR",
-                                        "caliber": 108,
-                                        "isTracer": "true",
-                                        "effects": "largeAPCR",
-                                        "damage": {
-                                            "armor": 330,
-                                            "devices": 135
-                                        }
-                                    }
-                                },
-                                "_55pdr_HE": {
-                                    "defaultPortion": 0.05,
-                                    "speed": 1050,
-                                    "gravity": 9.81,
-                                    "maxDistance": 720,
-                                    "piercingPower": [
-                                        54.0,
-                                        54.0
-                                    ],
-                                    "generic": {
-                                        "id": 164,
-                                        "userString": "#gb_vehicles:_55pdr_HE",
-                                        "icon": "he_modern",
-                                        "price": 420,
-                                        "kind": "HIGH_EXPLOSIVE",
-                                        "mechanics": "MODERN",
-                                        "caliber": 108,
-                                        "explosionRadius": 2.03,
-                                        "isTracer": "true",
-                                        "effects": "largeHighExplosive",
-                                        "damage": {
-                                            "armor": 430,
-                                            "devices": 135
-                                        },
-                                        "armorSpalls": {
-                                            "impactRadius": 2.03,
-                                            "coneAngle": 90,
-                                            "damage": {
-                                                "armor": 215,
-                                                "devices": 70
-                                            }
-                                        }
-                                    }
+                                "id": 162,
+                                "userString": "#gb_vehicles:_55pdr_APCBC",
+                                "icon": "ap",
+                                "price": 710,
+                                "kind": "ARMOR_PIERCING",
+                                "caliber": 108,
+                                "isTracer": "true",
+                                "effects": "largeArmorPiercing",
+                                "damage": {
+                                    "armor": 330,
+                                    "devices": 135
                                 }
                             },
-                            "name": "OQF 55-pdr AT Gun"
-                        }
+                            {
+                                "defaultPortion": 0.0,
+                                "speed": 1200,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    270.0,
+                                    256.0
+                                ],
+                                "id": 163,
+                                "userString": "#gb_vehicles:_55pdr_APDS",
+                                "icon": "ap_cr_premium",
+                                "price": 4800,
+                                "improved": "true",
+                                "kind": "ARMOR_PIERCING_CR",
+                                "caliber": 108,
+                                "isTracer": "true",
+                                "effects": "largeAPCR",
+                                "damage": {
+                                    "armor": 330,
+                                    "devices": 135
+                                }
+                            },
+                            {
+                                "defaultPortion": 0.05,
+                                "speed": 1050,
+                                "gravity": 9.81,
+                                "maxDistance": 720,
+                                "piercingPower": [
+                                    54.0,
+                                    54.0
+                                ],
+                                "id": 164,
+                                "userString": "#gb_vehicles:_55pdr_HE",
+                                "icon": "he_modern",
+                                "price": 420,
+                                "kind": "HIGH_EXPLOSIVE",
+                                "mechanics": "MODERN",
+                                "caliber": 108,
+                                "explosionRadius": 2.03,
+                                "isTracer": "true",
+                                "effects": "largeHighExplosive",
+                                "damage": {
+                                    "armor": 430,
+                                    "devices": 135
+                                },
+                                "armorSpalls": {
+                                    "impactRadius": 2.03,
+                                    "coneAngle": 90,
+                                    "damage": {
+                                        "armor": 215,
+                                        "devices": 70
+                                    }
+                                }
+                            }
+                        ]
                     }
                 ],
                 "gun_position": [
@@ -237,7 +185,8 @@
                     0.0
                 ],
                 "track_health": 220,
-                "track_repaired_health": 165
+                "track_repaired_health": 165,
+                "level": 8
             }
         ],
         "engines": [
