@@ -121,10 +121,62 @@ nation_to_id = {
     'italy': 10,
 }
 
+
+def get_turret_data(data, tank_nation: str):
+    turrets_arr = []
+    turrets = data.get('turrets0', {})
+    for turret, info in turrets.items():
+        guns_arr = []
+        guns = info.get('guns', {})
+        for gun, gun_info in guns.items():
+
+            gun_entry = {
+                'name': get_msgstr(tank_nation, gun),
+                'id': gun,
+                'max_ammo': gun_info.get('maxAmmo'),
+                'aim_time': gun_info.get('aimingTime'),
+                'accuracy': gun_info.get('shotDispersionRadius'),
+                'reload_time': gun_info.get('reloadTime'),
+                'arc': gun_info.get('turretYawLimits'),
+                'elevation': -min(gun_info.get('pitchLimits', {}).get('minPitch')),
+                'depression': max(gun_info.get('pitchLimits', {}).get('maxPitch')),
+                'dispersion': {
+                    'turret_rotation': gun_info.get('shotDispersionFactors', {}).get('turretRotation'),
+                    'after_shot': gun_info.get('shotDispersionFactors', {}).get('afterShot'),
+                    'while_damaged': gun_info.get('shotDispersionFactors', {}).get('whileGunDamaged'),
+                },
+            }
+            with open(os.path.join("raw", tank_nation, "guns.json")) as f:
+                gun_data = json.load(f)
+                current_gun = gun_data['shared'].get(gun, {})
+                current_gun["name"] = get_msgstr(tank_nation, gun)
+
+                with open(os.path.join("raw", tank_nation, "shells.json")) as f:
+                    shells = json.load(f)
+
+                    for shell_id in current_gun.get('shots', {}).keys():
+                        current_shell = shells.get(shell_id, {})
+                        current_gun["shots"][shell_id]["generic"] = current_shell
+
+                    gun_entry["generic"] = current_gun
+
+            guns_arr.append(gun_entry)
+
+        turrets_arr.append({
+            'name': get_msgstr(tank_nation, turret),
+            'id': turret,
+            'traverse': info.get('rotationSpeed'),
+            'view_range': info.get('circularVisionRadius'),
+            'guns': guns_arr,
+            'gun_position': info.get('gunPosition'),
+            'hp': info.get('maxHealth') + data.get('hull', {}).get('maxHealth'),
+            'armor': [info.get('armor')[info.get('primaryArmor')[0]], info.get('armor')[info.get('primaryArmor')[1]], info.get('armor')[info.get('primaryArmor')[1]]] if info.get('primaryArmor') != None else [],
+        })
+    return turrets_arr
+
 def process_xml_files(source_dir: str, vehicles: dict) -> None:
 
     tank_map = {}
-
     for root, dirs, files in os.walk(source_dir):
         for file in files:
             xml_path = os.path.join(root, file)
@@ -180,54 +232,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
         with open(os.path.join("raw", filename)) as f:
             data = json.load(f)
 
-            turrets_arr = []
-            turrets = data.get('turrets0', {})
-            for turret, info in turrets.items():
-                guns_arr = []
-                guns = info.get('guns', {})
-                for gun, gun_info in guns.items():
-
-                    gun_entry = {
-                        'name': get_msgstr(tank_nation, gun),
-                        'id': gun,
-                        'max_ammo': gun_info.get('maxAmmo'),
-                        'aim_time': gun_info.get('aimingTime'),
-                        'accuracy': gun_info.get('shotDispersionRadius'),
-                        'reload_time': gun_info.get('reloadTime'),
-                        'arc': gun_info.get('turretYawLimits'),
-                        'elevation': -min(gun_info.get('pitchLimits', {}).get('minPitch')),
-                        'depression': max(gun_info.get('pitchLimits', {}).get('maxPitch')),
-                        'dispersion': {
-                            'turret_rotation': gun_info.get('shotDispersionFactors', {}).get('turretRotation'),
-                            'after_shot': gun_info.get('shotDispersionFactors', {}).get('afterShot'),
-                            'while_damaged': gun_info.get('shotDispersionFactors', {}).get('whileGunDamaged'),
-                        },
-                    }
-                    with open(os.path.join("raw", tank_nation, "guns.json")) as f:
-                        gun_data = json.load(f)
-                        current_gun = gun_data['shared'].get(gun, {})
-                        current_gun["name"] = get_msgstr(tank_nation, gun)
-
-                        with open(os.path.join("raw", tank_nation, "shells.json")) as f:
-                            shells = json.load(f)
-
-                            for shell_id in current_gun.get('shots', {}).keys():
-                                current_shell = shells.get(shell_id, {})
-                                current_gun["shots"][shell_id]["generic"] = current_shell
-
-                            gun_entry["generic"] = current_gun
-
-                    guns_arr.append(gun_entry)
-
-                turrets_arr.append({
-                    'name': get_msgstr(tank_nation, turret),
-                    'id': turret,
-                    'traverse': info.get('rotationSpeed'),
-                    'view_range': info.get('circularVisionRadius'),
-                    'guns': guns_arr,
-                    'gun_position': info.get('gunPosition'),
-                    'hp': info.get('maxHealth') + data.get('hull', {}).get('maxHealth')
-                })
+            turrets_arr = get_turret_data(data, tank_nation)
 
             chassis_arr = []
             chassis = data.get('chassis', {})
@@ -289,6 +294,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                     #     current_radio.update({"xp": info.get("unlocks").get("engine").get("cost")})
                     radios_list.append(current_radio)
 
+            hull = data.get('hull', {})
             useful_data = {
                 'name': tank_api_data.get('name'),
                 'nation': tank_nation,
@@ -310,13 +316,15 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                         "fire_penalty": data.get('invisibility', {}).get('firePenalty'),
                     },
                     'turrets': turrets_arr,
-                    'turret_position': data.get('hull', {}).get('turretPositions', {}).get('turret'),
+                    'turret_position': hull.get('turretPositions', {}).get('turret'),
                     'chassis': chassis_arr,
                     'engines': engines_list,
                     'radios': radios_list,
                     'hull': {
-                        'ammo_rack_health': data.get('hull', {}).get('ammoBayHealth'),
-                        'ammo_rack_health_repaired': data.get('hull', {}).get('ammoBayHealth', {}).get('maxRegenHealth'),
+                        'ammo_rack_health': hull.get('ammoBayHealth'),
+                        'ammo_rack_health_repaired': hull.get('ammoBayHealth', {}).get('maxRegenHealth'),
+                        'armor': [hull.get('armor')[hull.get('primaryArmor')[0]], hull.get('armor')[hull.get('primaryArmor')[1]], hull.get('armor')[hull.get('primaryArmor')[1]]] if hull.get('primaryArmor') != None else [],
+
                     }
                 }
             }
