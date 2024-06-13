@@ -143,6 +143,9 @@ def get_turret_data(data, tank_nation: str):
                     'whileDamaged': gun_info.get('shotDispersionFactors', {}).get('whileGunDamaged'),
                 },
             }
+
+
+
             with open(os.path.join("raw", tank_nation, "guns.json")) as f:
                 gun_data = json.load(f)
                 current_gun = gun_data['shared'].get(gun, {})
@@ -243,6 +246,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                     'terrainResistance': chassis_info.get('terrainResistance'),
                     'rotationSpeed': chassis_info.get('rotationSpeed'),
                     'rotatesInPlace': chassis_info.get('rotationIsAroundCenter'),
+                    'dispersion': chassis_info.get('shotDispersionFactors'),
                     'repairTime': chassis_info.get('repairTime'),
                     'hullPosition': chassis_info.get('hullPosition'),
                     'maxHealth': chassis_info.get('maxHealth'),
