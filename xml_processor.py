@@ -5,7 +5,6 @@ from typing import Dict, List, Union
 import requests
 import json
 import sys
-from difflib import SequenceMatcher
 import re
 import polib
 from dotenv import load_dotenv
@@ -40,11 +39,10 @@ def get_msgstr(nation: str, msgid: str) -> str | None:
         print(f'An unexpected error occurred: {e}')
         return None
 
-
-def xml_to_dict(element) -> Dict:
-    if len(element) == 0:
-        return element.text
-    return {child.tag: xml_to_dict(child) for child in element}
+# def xml_to_dict(element) -> Dict:
+#     if len(element) == 0:
+#         return element.text
+#     return {child.tag: xml_to_dict(child) for child in element}
 
 def xml_to_json(xml_file: str) -> Dict:
     # Read the XML content from the file
@@ -62,7 +60,7 @@ def xml_to_json(xml_file: str) -> Dict:
     tree = etree.fromstring(cleaned_xml_content_bytes, parser=parser)
     
     # Convert the XML tree to a dictionary
-    xml_dict = xml_to_dict(tree)
+    xml_dict = xml_to_dict(tree, os.path.basename(xml_file))
     
     return xml_dict
 
@@ -73,7 +71,7 @@ def is_float(value: str) -> bool:
     except ValueError:
         return False
 
-def xml_to_dict(root: etree._Element) -> Dict:
+def xml_to_dict(root: etree._Element, file: str) -> Dict:
     result: Dict[str, Union[str, int, float, List, Dict]] = {}
     for child in root:
         if child.tag == 'tags':
@@ -81,6 +79,8 @@ def xml_to_dict(root: etree._Element) -> Dict:
                 result[child.tag] = [tag.strip() for tag in child.text.split()]
             else:
                 result[child.tag] = []
+        elif child.tag == 'price' and file == 'list.xml' and child.find('gold') is not None:
+            result[child.tag] = { 'gold': int(child.text.strip()) }
         elif len(child) == 0:
             if child.text is not None:
                 text = child.text.strip()
@@ -99,13 +99,8 @@ def xml_to_dict(root: etree._Element) -> Dict:
             else:
                 result[child.tag] = None
         else:
-            result[child.tag] = xml_to_dict(child)
+            result[child.tag] = xml_to_dict(child, file)
     return result
-
-def find_most_similar_name(tank: str, tanks: List[str]) -> str:
-    similarity_scores = [SequenceMatcher(None, tank, s).ratio() for s in tanks]
-    max_index = similarity_scores.index(max(similarity_scores))
-    return tanks[max_index]
 
 nation_to_id = {
     'ussr': 0,
@@ -133,17 +128,17 @@ def get_turret_data(data, tank_nation: str):
             gun_entry = {
                 'name': get_msgstr(tank_nation, gun),
                 'id': gun,
-                'max_ammo': gun_info.get('maxAmmo'),
-                'aim_time': gun_info.get('aimingTime'),
+                'maxAmmo': gun_info.get('maxAmmo'),
+                'aimTime': gun_info.get('aimingTime'),
                 'accuracy': gun_info.get('shotDispersionRadius'),
-                'reload_time': gun_info.get('reloadTime'),
+                'reloadTime': gun_info.get('reloadTime'),
                 'arc': gun_info.get('turretYawLimits'),
                 'elevation': -min(gun_info.get('pitchLimits', {}).get('minPitch')),
                 'depression': max(gun_info.get('pitchLimits', {}).get('maxPitch')),
                 'dispersion': {
-                    'turret_rotation': gun_info.get('shotDispersionFactors', {}).get('turretRotation'),
-                    'after_shot': gun_info.get('shotDispersionFactors', {}).get('afterShot'),
-                    'while_damaged': gun_info.get('shotDispersionFactors', {}).get('whileGunDamaged'),
+                    'turretRotation': gun_info.get('shotDispersionFactors', {}).get('turretRotation'),
+                    'afterShot': gun_info.get('shotDispersionFactors', {}).get('afterShot'),
+                    'whileDamaged': gun_info.get('shotDispersionFactors', {}).get('whileGunDamaged'),
                 },
             }
             with open(os.path.join("raw", tank_nation, "guns.json")) as f:
@@ -168,10 +163,10 @@ def get_turret_data(data, tank_nation: str):
             'name': get_msgstr(tank_nation, turret),
             'id': turret,
             'traverse': info.get('rotationSpeed'),
-            'view_range': info.get('circularVisionRadius'),
+            'viewRange': info.get('circularVisionRadius'),
             'level': info.get('level'),
             'guns': guns_arr,
-            'gun_position': info.get('gunPosition'),
+            'gunPosition': info.get('gunPosition'),
             'hp': info.get('maxHealth') + data.get('hull', {}).get('maxHealth'),
             'armor': [info.get('armor')[info.get('primaryArmor')[0]], info.get('armor')[info.get('primaryArmor')[1]], info.get('armor')[info.get('primaryArmor')[1]]] if info.get('primaryArmor') != None else [],
         })
@@ -242,14 +237,14 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                 chassis_arr.append({
                     'name': get_msgstr(tank_nation, chassis_name),
                     'id': chassis_name,
-                    'max_load': chassis_info.get('maxLoad'),
-                    'terrain_resistance': chassis_info.get('terrainResistance'),
-                    'rotation_speed': chassis_info.get('rotationSpeed'),
-                    'rotates_in_place': chassis_info.get('rotationIsAroundCenter'),
-                    'repair_time': chassis_info.get('repairTime'),
-                    'hull_position': chassis_info.get('hullPosition'),
-                    'health': chassis_info.get('maxHealth'),
-                    'repaired_health': chassis_info.get('maxRegenHealth'),
+                    'maxLoad': chassis_info.get('maxLoad'),
+                    'terrainResistance': chassis_info.get('terrainResistance'),
+                    'rotationSpeed': chassis_info.get('rotationSpeed'),
+                    'rotatesInPlace': chassis_info.get('rotationIsAroundCenter'),
+                    'repairTime': chassis_info.get('repairTime'),
+                    'hullPosition': chassis_info.get('hullPosition'),
+                    'maxHealth': chassis_info.get('maxHealth'),
+                    'maxRegenHealth': chassis_info.get('maxRegenHealth'),
                     'level': chassis_info.get('level'),
                     'armor': chassis_info.get('armor', {}).get('leftTrack')
                 })
@@ -302,31 +297,32 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
             useful_data = {
                 'name': tank_api_data.get('name'),
                 'nation': tank_nation,
-                'short_name': tank_api_data.get('short_name'),
-                'xml_id': tank_name,
+                'shortName': tank_api_data.get('short_name'),
+                'xmlId': tank_name,
                 'id': tank_id,
                 'tier': tank_api_data.get('tier'),
                 'type': tank_api_data.get('type'),
                 'role': data.get('postProgressionTree'),
                 'crew': crew_list,
+                'price': tank_map.get(tank_name, {}).get('price'),
                 'stats': {
-                    'speed_limit': {
+                    'speedLimit': {
                         'forward': data.get('speedLimits', {}).get('forward'),
                         'backward': data.get('speedLimits', {}).get('backward'),
                     },
                     'camo': {
                         "moving": data.get('invisibility', {}).get('moving'),
                         "stationary": data.get('invisibility', {}).get('still'),
-                        "camo_bonus": data.get('invisibility', {}).get('camouflageBonus'),
-                        "fire_penalty": data.get('invisibility', {}).get('firePenalty'),
+                        "camoBonus": data.get('invisibility', {}).get('camouflageBonus'),
+                        "firePenalty": data.get('invisibility', {}).get('firePenalty'),
                     },
                     'turrets': turrets_arr,
-                    'turret_position': hull.get('turretPositions', {}).get('turret'),
+                    'turretPosition': hull.get('turretPositions', {}).get('turret'),
                     'chassis': chassis_arr,
                     'engines': engines_list,
                     'radios': radios_list,
                     'hull': {
-                        'ammo_rack_health': hull.get('ammoBayHealth'),
+                        'ammoRackHealth': hull.get('ammoBayHealth'),
                         'armor': [hull.get('armor')[hull.get('primaryArmor')[0]], hull.get('armor')[hull.get('primaryArmor')[1]], hull.get('armor')[hull.get('primaryArmor')[1]]] if hull.get('primaryArmor') != None else [],
                         'weight': hull.get('weight'),
                     }   
