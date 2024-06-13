@@ -132,6 +132,8 @@ def get_turret_data(data, tank_nation: str):
                 'aimTime': gun_info.get('aimingTime'),
                 'accuracy': gun_info.get('shotDispersionRadius'),
                 'reloadTime': gun_info.get('reloadTime'),
+                'clip': gun_info.get('clip'),
+                'autoreload': gun_info.get('autoreload'),
                 'arc': gun_info.get('turretYawLimits'),
                 'elevation': -min(gun_info.get('pitchLimits', {}).get('minPitch')),
                 'depression': max(gun_info.get('pitchLimits', {}).get('maxPitch')),
