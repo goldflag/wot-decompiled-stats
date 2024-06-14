@@ -116,7 +116,6 @@ nation_to_id = {
     'italy': 10,
 }
 
-
 def get_turret_data(data, tank_nation: str):
     turrets_arr = []
     turrets = data.get('turrets0', {})
@@ -124,7 +123,6 @@ def get_turret_data(data, tank_nation: str):
         guns_arr = []
         guns = info.get('guns', {})
         for gun, gun_info in guns.items():
-
             gun_entry = {
                 'name': get_msgstr(tank_nation, gun),
                 'id': gun,
@@ -143,8 +141,6 @@ def get_turret_data(data, tank_nation: str):
                     'whileDamaged': gun_info.get('shotDispersionFactors', {}).get('whileGunDamaged'),
                 },
             }
-
-
 
             with open(os.path.join("raw", tank_nation, "guns.json")) as f:
                 gun_data = json.load(f)
@@ -173,6 +169,8 @@ def get_turret_data(data, tank_nation: str):
             'guns': guns_arr,
             'gunPosition': info.get('gunPosition'),
             'hp': info.get('maxHealth') + data.get('hull', {}).get('maxHealth'),
+            'weight': info.get('weight'),
+            'viewportHealth': info.get('surveyingDeviceHealth'),
             'armor': [info.get('armor')[info.get('primaryArmor')[0]], info.get('armor')[info.get('primaryArmor')[1]], info.get('armor')[info.get('primaryArmor')[1]]] if info.get('primaryArmor') != None else [],
         })
     return turrets_arr
