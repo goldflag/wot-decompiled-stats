@@ -171,6 +171,7 @@ def get_turret_data(data, tank_nation: str):
             'hp': info.get('maxHealth') + data.get('hull', {}).get('maxHealth'),
             'weight': info.get('weight'),
             'viewportHealth': info.get('surveyingDeviceHealth'),
+            'ringHealth': info.get('turretRotatorHealth'),
             'armor': [info.get('armor')[info.get('primaryArmor')[0]], info.get('armor')[info.get('primaryArmor')[1]], info.get('armor')[info.get('primaryArmor')[1]]] if info.get('primaryArmor') != None else [],
         })
     return turrets_arr
@@ -241,6 +242,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                     'name': get_msgstr(tank_nation, chassis_name),
                     'id': chassis_name,
                     'maxLoad': chassis_info.get('maxLoad'),
+                    'weight': chassis_info.get('weight'),
                     'terrainResistance': chassis_info.get('terrainResistance'),
                     'rotationSpeed': chassis_info.get('rotationSpeed'),
                     'rotatesInPlace': chassis_info.get('rotationIsAroundCenter'),
