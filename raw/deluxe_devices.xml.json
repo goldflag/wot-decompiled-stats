@@ -518,5 +518,44 @@
         },
         "tooltipSection": "equipment",
         "archetype": "improvedSights"
+    },
+    "deluxeAdditionalInvisibilityDevice": {
+        "id": 121,
+        "userString": "#artefacts:deluxeAdditionalInvisibilityDevice/name",
+        "shortDescriptionSpecial": "#artefacts:deluxeAdditionalInvisibilityDevice/short_special",
+        "longDescriptionSpecial": "#artefacts:deluxeAdditionalInvisibilityDevice/long_special",
+        "icon": "additionalInvisibilityDevice",
+        "price": {
+            "crystal": null
+        },
+        "tags": [
+            "additInvisibilityDevice",
+            "deluxe"
+        ],
+        "notInShop": "true",
+        "incompatibleTags": {
+            "installed": "additInvisibilityDevice"
+        },
+        "script": {
+            "weight": 100,
+            "overridableFactors": {
+                "invisibilityBonus": 0.06
+            }
+        },
+        "kpi": {
+            "aggregateMul": {
+                "name": "vehicleCamouflageGroup",
+                "mul": {
+                    "name": "vehicleCamouflage",
+                    "value": 1.06,
+                    "vehicleTypes": [
+                        "heavyTank",
+                        "SPG"
+                    ]
+                }
+            }
+        },
+        "tooltipSection": "equipment",
+        "archetype": "additionalInvisibilityDevice"
     }
 }

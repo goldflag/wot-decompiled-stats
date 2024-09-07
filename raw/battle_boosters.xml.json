@@ -454,7 +454,7 @@
                     "name": "crewSkillRancorous",
                     "value": 1
                 },
-                "add": {
+                "mul": {
                     "name": "crewSkillRancorousDuration",
                     "value": 2
                 }
@@ -478,7 +478,7 @@
         ],
         "script": {
             "skillName": "loader_pedant",
-            "perkLevelMultiplier": 4.0
+            "perkLevelMultiplier": 3.0
         },
         "kpi": {
             "oneOf": {
@@ -488,7 +488,7 @@
                 },
                 "mul": {
                     "name": "vehicleAmmoBayStrength",
-                    "value": 4.0
+                    "value": 3.0
                 }
             }
         },
@@ -506,8 +506,11 @@
         "tags": [
             "notForSale",
             "crewSkillBattleBooster",
+            "notBuyWhenAutoEquip",
+            "hideIfNotInShop",
             "reconnaissance"
         ],
+        "notInShop": "true",
         "script": {
             "skillName": "radioman_lastEffort",
             "durationPerLevel": 0.03,
@@ -654,5 +657,69 @@
                 "value": 1.02
             }
         }
+    },
+    "practicalityBattleBooster": {
+        "id": 205,
+        "userString": "#artefacts:practicalityBattleBooster/name",
+        "description": "#artefacts:crewBattleBooster/descr",
+        "shortDescriptionSpecial": "#artefacts:practicalityBattleBooster/short_special",
+        "longDescriptionSpecial": "#artefacts:practicalityBattleBooster/long_special",
+        "icon": "commander_practical",
+        "price": 20000,
+        "type": "battleBoosters",
+        "tags": [
+            "notForSale",
+            "crewSkillBattleBooster",
+            "armor"
+        ],
+        "script": {
+            "skillName": "commander_practical",
+            "perkLevelMultiplier": 2.0
+        },
+        "kpi": {
+            "oneOf": {
+                "boostSkill": {
+                    "name": "crewSkillPractical",
+                    "value": 1
+                },
+                "mul": {
+                    "name": "crewSkillPractical",
+                    "value": 2.0
+                }
+            }
+        },
+        "tooltipSection": "skills"
+    },
+    "enemyShotPredictorBattleBooster": {
+        "id": 206,
+        "userString": "#artefacts:enemyShotPredictorBattleBooster/name",
+        "description": "#artefacts:crewBattleBooster/descr",
+        "shortDescriptionSpecial": "#artefacts:enemyShotPredictorBattleBooster/short_special",
+        "longDescriptionSpecial": "#artefacts:enemyShotPredictorBattleBooster/long_special",
+        "icon": "commander_enemyShotPredictor",
+        "price": 10000,
+        "type": "battleBoosters",
+        "tags": [
+            "notForSale",
+            "crewSkillBattleBooster",
+            "armor"
+        ],
+        "script": {
+            "skillName": "commander_enemyShotPredictor",
+            "perkLevelMultiplier": 1.5
+        },
+        "kpi": {
+            "oneOf": {
+                "boostSkill": {
+                    "name": "crewSkillStunResistance",
+                    "value": 1
+                },
+                "mul": {
+                    "name": "crewSkillStunResistance",
+                    "value": 1.5
+                }
+            }
+        },
+        "tooltipSection": "skills"
     }
 }

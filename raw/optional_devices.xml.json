@@ -520,6 +520,45 @@
         "tooltipSection": "equipment",
         "archetype": "improvedSights"
     },
+    "deluxeAdditionalInvisibilityDevice": {
+        "id": 121,
+        "userString": "#artefacts:deluxeAdditionalInvisibilityDevice/name",
+        "shortDescriptionSpecial": "#artefacts:deluxeAdditionalInvisibilityDevice/short_special",
+        "longDescriptionSpecial": "#artefacts:deluxeAdditionalInvisibilityDevice/long_special",
+        "icon": "additionalInvisibilityDevice",
+        "price": {
+            "crystal": null
+        },
+        "tags": [
+            "additInvisibilityDevice",
+            "deluxe"
+        ],
+        "notInShop": "true",
+        "incompatibleTags": {
+            "installed": "additInvisibilityDevice"
+        },
+        "script": {
+            "weight": 100,
+            "overridableFactors": {
+                "invisibilityBonus": 0.06
+            }
+        },
+        "kpi": {
+            "aggregateMul": {
+                "name": "vehicleCamouflageGroup",
+                "mul": {
+                    "name": "vehicleCamouflage",
+                    "value": 1.06,
+                    "vehicleTypes": [
+                        "heavyTank",
+                        "SPG"
+                    ]
+                }
+            }
+        },
+        "tooltipSection": "equipment",
+        "archetype": "additionalInvisibilityDevice"
+    },
     "trophyBasicAimDrives": {
         "id": 50,
         "userString": "#artefacts:trophyBasicAimDrives/name",
@@ -3281,7 +3320,9 @@
         "longDescriptionSpecial": "#artefacts:improvedRadioCommunication/long_special",
         "icon": "improvedRadioCommunication",
         "price": 600000,
-        "tags": [],
+        "tags": [
+            "radioCommunication"
+        ],
         "categories": "stealth",
         "vehicleFilter": {
             "include": {
@@ -3635,7 +3676,9 @@
         "longDescriptionSpecial": "#artefacts:commandersView/long_special",
         "icon": "commandersView",
         "price": 600000,
-        "tags": [],
+        "tags": [
+            "commandersView"
+        ],
         "categories": "stealth",
         "vehicleFilter": {
             "include": {
@@ -4174,7 +4217,7 @@
         },
         "kpi": {
             "mul": {
-                "name": "vehPenaltyForDamageEngineAndCombat",
+                "name": "vehPenaltyForDamagedAmmorack",
                 "value": 0.7
             }
         },
@@ -4229,7 +4272,7 @@
         },
         "kpi": {
             "mul": {
-                "name": "vehPenaltyForDamageEngineAndCombat",
+                "name": "vehPenaltyForDamagedAmmorack",
                 "value": 0.6
             }
         },
@@ -4278,7 +4321,7 @@
         },
         "kpi": {
             "mul": {
-                "name": "vehPenaltyForDamageEngineAndCombat",
+                "name": "vehPenaltyForDamagedAmmorack",
                 "value": 0.5
             }
         },
