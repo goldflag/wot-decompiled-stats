@@ -176,6 +176,13 @@ def get_turret_data(data, tank_nation: str):
         })
     return turrets_arr
 
+
+def get_tank_name_from_file(filename: str):
+    isSiegeFile = '_siege_mode' in filename
+    if isSiegeFile:
+        filename = filename.replace('_siege_mode', '')
+    return filename.split('.')[0]
+
 def process_xml_files(source_dir: str, vehicles: dict) -> None:
 
     tank_map = {}
@@ -218,11 +225,11 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
 
 
     for filename in os.listdir("raw"):
-        tank_name = filename.split('.')[0]
+        tank_name = get_tank_name_from_file(filename)
         tank_id = tank_map.get(tank_name, {}).get('id')
         tank_nation = tank_map.get(tank_name, {}).get('nation')
 
-        print(tank_name, tank_id)
+        # print(tank_name, tank_id)
         if tank_id is None:
             continue
 
@@ -233,113 +240,126 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
         with open(os.path.join("raw", filename)) as f:
             data = json.load(f)
 
-            turrets_arr = get_turret_data(data, tank_nation)
+        turrets_arr = get_turret_data(data, tank_nation)
 
-            chassis_arr = []
-            chassis = data.get('chassis', {})
-            for chassis_name, chassis_info in chassis.items():
-                chassis_arr.append({
-                    'name': get_msgstr(tank_nation, chassis_name),
-                    'id': chassis_name,
-                    'maxLoad': chassis_info.get('maxLoad'),
-                    'weight': chassis_info.get('weight'),
-                    'terrainResistance': chassis_info.get('terrainResistance'),
-                    'rotationSpeed': chassis_info.get('rotationSpeed'),
-                    'rotatesInPlace': chassis_info.get('rotationIsAroundCenter'),
-                    'dispersion': chassis_info.get('shotDispersionFactors'),
-                    'repairTime': chassis_info.get('repairTime'),
-                    'hullPosition': chassis_info.get('hullPosition'),
-                    'maxHealth': chassis_info.get('maxHealth'),
-                    'maxRegenHealth': chassis_info.get('maxRegenHealth'),
-                    'level': chassis_info.get('level'),
-                    'armor': chassis_info.get('armor', {}).get('leftTrack')
-                })
+        chassis_arr = []
+        chassis = data.get('chassis', {})
+        for chassis_name, chassis_info in chassis.items():
+            chassis_arr.append({
+                'name': get_msgstr(tank_nation, chassis_name),
+                'id': chassis_name,
+                'maxLoad': chassis_info.get('maxLoad'),
+                'weight': chassis_info.get('weight'),
+                'terrainResistance': chassis_info.get('terrainResistance'),
+                'rotationSpeed': chassis_info.get('rotationSpeed'),
+                'rotatesInPlace': chassis_info.get('rotationIsAroundCenter'),
+                'dispersion': chassis_info.get('shotDispersionFactors'),
+                'repairTime': chassis_info.get('repairTime'),
+                'hullPosition': chassis_info.get('hullPosition'),
+                'maxHealth': chassis_info.get('maxHealth'),
+                'maxRegenHealth': chassis_info.get('maxRegenHealth'),
+                'level': chassis_info.get('level'),
+                'armor': chassis_info.get('armor', {}).get('leftTrack')
+            })
 
 
-            tank_api_data = vehicles.get(tank_id, {})
+        tank_api_data = vehicles.get(tank_id, {})
 
-            if tank_api_data is None:
-                continue
+        if tank_api_data is None:
+            continue
 
-            crew_list = []
-            for primary, secondary in data['crew'].items():
-                if secondary is None:
-                    secondary_list = []
-                # sometimes the secondary roles are a list, sometimes they are a string (processed by xml_to_dict)
-                elif isinstance(secondary, list):
-                    secondary_list = secondary
-                else:
-                    # Split the secondary roles by whitespace and newlines, and filter out empty strings
-                    secondary_list = [role.strip() for role in secondary.split() if role.strip()]
-                
-                crew_member = {
-                    "primary": primary,
-                    "secondary": secondary_list
-                }
-                
-                crew_list.append(crew_member)
+        crew_list = []
+        for primary, secondary in data['crew'].items():
+            if secondary is None:
+                secondary_list = []
+            # sometimes the secondary roles are a list, sometimes they are a string (processed by xml_to_dict)
+            elif isinstance(secondary, list):
+                secondary_list = secondary
+            else:
+                # Split the secondary roles by whitespace and newlines, and filter out empty strings
+                secondary_list = [role.strip() for role in secondary.split() if role.strip()]
+            
+            crew_member = {
+                "primary": primary,
+                "secondary": secondary_list
+            }
+            
+            crew_list.append(crew_member)
 
-            engines_list = []
-            for engine_id, info in data['engines'].items():
-                with open(os.path.join("raw", tank_nation, "engines.json")) as f:
-                    engine_data = json.load(f)
-                    current_engine = engine_data['shared'].get(engine_id, {})
-                    current_engine["name"] = get_msgstr(tank_nation, engine_id)
-                    # if info != "shared":
-                    #     current_engine.update({"xp": info.get("unlocks").get("engine").get("cost")})
-                    engines_list.append(current_engine)
+        engines_list = []
+        for engine_id, info in data['engines'].items():
+            with open(os.path.join("raw", tank_nation, "engines.json")) as f:
+                engine_data = json.load(f)
+                current_engine = engine_data['shared'].get(engine_id, {})
+                current_engine["name"] = get_msgstr(tank_nation, engine_id)
+                # if info != "shared":
+                #     current_engine.update({"xp": info.get("unlocks").get("engine").get("cost")})
+                engines_list.append(current_engine)
 
-            radios_list = []
-            for radio_id, info in data['radios'].items():
-                with open(os.path.join("raw", tank_nation, "radios.json")) as f:
-                    radio_data = json.load(f)
-                    current_radio = radio_data['shared'].get(radio_id, {})
-                    current_radio["name"] = get_msgstr(tank_nation, radio_id)
-                    # if info != "shared":
-                    #     current_radio.update({"xp": info.get("unlocks").get("engine").get("cost")})
-                    radios_list.append(current_radio)
+        radios_list = []
+        for radio_id, info in data['radios'].items():
+            with open(os.path.join("raw", tank_nation, "radios.json")) as f:
+                radio_data = json.load(f)
+                current_radio = radio_data['shared'].get(radio_id, {})
+                current_radio["name"] = get_msgstr(tank_nation, radio_id)
+                # if info != "shared":
+                #     current_radio.update({"xp": info.get("unlocks").get("engine").get("cost")})
+                radios_list.append(current_radio)
 
-            hull = data.get('hull', {})
-            useful_data = {
-                'name': tank_api_data.get('name'),
-                'nation': tank_nation,
-                'shortName': tank_api_data.get('short_name'),
-                'xmlId': tank_name,
-                'id': tank_id,
-                'tier': tank_api_data.get('tier'),
-                'type': tank_api_data.get('type'),
-                'role': data.get('postProgressionTree'),
-                'crew': crew_list,
-                'price': tank_map.get(tank_name, {}).get('price'),
-                'stats': {
-                    'speedLimit': {
-                        'forward': data.get('speedLimits', {}).get('forward'),
-                        'backward': data.get('speedLimits', {}).get('backward'),
-                    },
-                    'camo': {
-                        "moving": data.get('invisibility', {}).get('moving'),
-                        "stationary": data.get('invisibility', {}).get('still'),
-                        "camoBonus": data.get('invisibility', {}).get('camouflageBonus'),
-                        "firePenalty": data.get('invisibility', {}).get('firePenalty'),
-                    },
-                    'turrets': turrets_arr,
-                    'turretPosition': hull.get('turretPositions', {}).get('turret'),
-                    'chassis': chassis_arr,
-                    'engines': engines_list,
-                    'radios': radios_list,
-                    'hull': {
-                        'ammoRackHealth': hull.get('ammoBayHealth'),
-                        'armor': [hull.get('armor')[hull.get('primaryArmor')[0]], hull.get('armor')[hull.get('primaryArmor')[1]], hull.get('armor')[hull.get('primaryArmor')[1]]] if hull.get('primaryArmor') != None else [],
-                        'weight': hull.get('weight'),
-                    }   
-                }
+        hull = data.get('hull', {})
+        useful_data = {
+            'name': tank_api_data.get('name'),
+            'nation': tank_nation,
+            'shortName': tank_api_data.get('short_name'),
+            'xmlId': tank_name,
+            'id': tank_id,
+            'tier': tank_api_data.get('tier'),
+            'type': tank_api_data.get('type'),
+            'role': data.get('postProgressionTree'),
+            'crew': crew_list,
+            'price': tank_map.get(tank_name, {}).get('price'),
+            'stats': {
+                'speedLimit': {
+                    'forward': data.get('speedLimits', {}).get('forward'),
+                    'backward': data.get('speedLimits', {}).get('backward'),
+                },
+                'camo': {
+                    "moving": data.get('invisibility', {}).get('moving'),
+                    "stationary": data.get('invisibility', {}).get('still'),
+                    "camoBonus": data.get('invisibility', {}).get('camouflageBonus'),
+                    "firePenalty": data.get('invisibility', {}).get('firePenalty'),
+                },
+                'turrets': turrets_arr,
+                'turretPosition': hull.get('turretPositions', {}).get('turret'),
+                'chassis': chassis_arr,
+                'engines': engines_list,
+                'radios': radios_list,
+                'hull': {
+                    'ammoRackHealth': hull.get('ammoBayHealth'),
+                    'armor': [hull.get('armor')[hull.get('primaryArmor')[0]], hull.get('armor')[hull.get('primaryArmor')[1]], hull.get('armor')[hull.get('primaryArmor')[1]]] if hull.get('primaryArmor') != None else [],
+                    'weight': hull.get('weight'),
+                },
+            }
+        }
+
+        if "siege_mode" in data:
+            useful_data['stats']['siegeMode'] = {
+                'switchOnTime': data.get('siege_mode', {}).get('switchOnTime'),
+                'switchOffTime': data.get('siege_mode', {}).get('switchOffTime'),
+            }
+        if "rocketAcceleration" in data:
+            useful_data['stats']['rocketAcceleration'] = {
+                'initialCooldown': data.get('rocketAcceleration', {}).get('deployTime'),
+                'cooldown': data.get('rocketAcceleration', {}).get('reloadTime'),
+                'uses': data.get('rocketAcceleration', {}).get('reuseCount'),
+                'duration': data.get('rocketAcceleration', {}).get('duration'),
             }
 
-            useful_output_path = os.path.join("useful", str(tank_id), 'stats.json')
-            os.makedirs(os.path.dirname(useful_output_path), exist_ok=True)
+        useful_output_path = os.path.join("useful", str(tank_id), 'siege-stats.json' if '_siege_mode' in filename  else 'stats.json')
+        os.makedirs(os.path.dirname(useful_output_path), exist_ok=True)
 
-            with open(useful_output_path, 'w') as json_file:
-                json.dump(useful_data, json_file, indent=4)
+        with open(useful_output_path, 'w') as json_file:
+            json.dump(useful_data, json_file, indent=4)
 
 
 def fetch_wg_vehicle_data() -> dict: 
