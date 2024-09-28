@@ -1,106 +1,13 @@
 import os
 import json
 from lxml import etree
-from typing import Dict, List, Union
+from typing import Any, Dict, List, Union
 import requests
 import json
 import sys
-import re
-import polib
+import utils
 from dotenv import load_dotenv
 load_dotenv()
-
-def get_msgstr(nation: str, msgid: str) -> str | None:
-
-    # If the nation is 'uk', change it to 'gb' to match the .po file name
-    if nation == 'uk':
-        nation = 'gb'
-
-    path = os.path.join('wot-src', 'sources', 'res', 'text', 'lc_messages', f'{nation}_vehicles.po')
-    try:
-        # Load the .po file
-        po = polib.pofile(path)
-        
-        # Find the entry with the given msgid
-        entry = po.find(msgid)
-        
-        # If the entry is found, return the msgstr, otherwise return None
-        if entry:
-            return entry.msgstr
-        else:
-            return None
-    except FileNotFoundError:
-        print(f'Error: The file {path} was not found.')
-        return None
-    except IOError as e:
-        print(f'Error: There was a problem reading the file: {e}')
-        return None
-    except Exception as e:
-        print(f'An unexpected error occurred: {e}')
-        return None
-
-# def xml_to_dict(element) -> Dict:
-#     if len(element) == 0:
-#         return element.text
-#     return {child.tag: xml_to_dict(child) for child in element}
-
-def xml_to_json(xml_file: str) -> Dict:
-    # Read the XML content from the file
-    with open(xml_file, 'r', encoding='utf-8') as file:
-        xml_content = file.read()
-    
-    # Remove XML comments using a regular expression
-    cleaned_xml_content = re.sub(r'<!--.*?-->', '', xml_content, flags=re.DOTALL)
-    
-    # Convert cleaned XML content to bytes
-    cleaned_xml_content_bytes = cleaned_xml_content.encode('utf-8')
-    
-    # Parse the cleaned XML content as bytes
-    parser = etree.XMLParser(recover=True)
-    tree = etree.fromstring(cleaned_xml_content_bytes, parser=parser)
-    
-    # Convert the XML tree to a dictionary
-    xml_dict = xml_to_dict(tree, os.path.basename(xml_file))
-    
-    return xml_dict
-
-def is_float(value: str) -> bool:
-    try:
-        float(value)
-        return True
-    except ValueError:
-        return False
-
-def xml_to_dict(root: etree._Element, file: str) -> Dict:
-    result: Dict[str, Union[str, int, float, List, Dict]] = {}
-    for child in root:
-        if child.tag == 'tags':
-            if child.text is not None:
-                result[child.tag] = [tag.strip() for tag in child.text.split()]
-            else:
-                result[child.tag] = []
-        elif child.tag == 'price' and file == 'list.xml' and child.find('gold') is not None:
-            result[child.tag] = { 'gold': int(child.text.strip()) }
-        elif len(child) == 0:
-            if child.text is not None:
-                text = child.text.strip()
-                if text.isdigit():
-                    result[child.tag] = int(text)
-                elif is_float(text):
-                    result[child.tag] = float(text)
-                elif ' ' in text:
-                    values = text.split()
-                    if all(is_float(val) for val in values):
-                        result[child.tag] = [float(val) for val in values]
-                    else:
-                        result[child.tag] = values
-                else:
-                    result[child.tag] = text
-            else:
-                result[child.tag] = None
-        else:
-            result[child.tag] = xml_to_dict(child, file)
-    return result
 
 nation_to_id = {
     'ussr': 0,
@@ -124,7 +31,7 @@ def get_turret_data(data, tank_nation: str):
         guns = info.get('guns', {})
         for gun, gun_info in guns.items():
             gun_entry = {
-                'name': get_msgstr(tank_nation, gun),
+                'name': utils.get_msgstr(tank_nation, gun),
                 'id': gun,
                 'maxAmmo': gun_info.get('maxAmmo'),
                 'aimTime': gun_info.get('aimingTime'),
@@ -145,7 +52,7 @@ def get_turret_data(data, tank_nation: str):
             with open(os.path.join("raw", tank_nation, "guns.json")) as f:
                 gun_data = json.load(f)
                 current_gun = gun_data['shared'].get(gun, {})
-                current_gun["name"] = get_msgstr(tank_nation, gun)
+                current_gun["name"] = utils.get_msgstr(tank_nation, gun)
 
                 with open(os.path.join("raw", tank_nation, "shells.json")) as f:
                     shells = json.load(f)
@@ -161,7 +68,7 @@ def get_turret_data(data, tank_nation: str):
             guns_arr.append(gun_entry)
 
         turrets_arr.append({
-            'name': get_msgstr(tank_nation, turret),
+            'name': utils.get_msgstr(tank_nation, turret),
             'id': turret,
             'traverse': info.get('rotationSpeed'),
             'viewRange': info.get('circularVisionRadius'),
@@ -183,13 +90,85 @@ def get_tank_name_from_file(filename: str):
         filename = filename.replace('_siege_mode', '')
     return filename.split('.')[0]
 
+def add_tank_stats(tank_stats: List[Dict], data: dict[str, Any], tank_api_data: Any) -> None:
+    # try:
+    stats = data.get('stats')
+    gun = stats.get('turrets')[-1].get('guns')[-1]
+    chassis = stats.get('chassis')[-1]
+    engine = stats.get('engines')[-1]
+    radio = stats.get('radios')[-1]
+    shell = gun.get('shells')[0]
+    secondShell = gun.get('shells')[1] if gun.get('shells') and len(gun.get('shells')) > 1 else None
+    thirdShell = gun.get('shells')[2] if gun.get('shells') and len(gun.get('shells')) > 2 else None
+
+    if gun.get('reloadTime') is None:
+        return
+
+    clip = gun.get('clip')
+    intra_reload = 60 / gun.get('clip').get('rate') if clip and clip.get('rate') else None
+    time_to_empty_clip = gun.get('reloadTime') * (gun.get('clip').get('count') - 1) if intra_reload else None
+
+    def getRof():
+        if intra_reload: 
+            if gun.get('autoreload'):
+                return 60 / gun.get('autoreload').get('reloadTime')[0]
+            return 60 / time_to_empty_clip * gun.get('clip').get('count') 
+        return 60 / gun.get('reloadTime')
+
+    alpha_damage = shell.get('damage').get('armor')[0] if isinstance(shell.get('damage').get('armor'), list) else shell.get('damage').get('armor')
+
+    he_alpha_damage = None
+    if thirdShell:
+        he_alpha_damage = thirdShell.get('damage').get('armor')[0] if isinstance(thirdShell.get('damage').get('armor'), list) else thirdShell.get('damage').get('armor') 
+
+
+    weight = data.get('stats').get('hull').get('weight') + stats.get('turrets')[-1].get('weight') + stats.get('chassis')[-1].get('weight') + engine.get('weight') + radio.get('weight') + gun.get('weight')
+
+    tank_stats.append({
+        'tank_id': data.get('id'),
+        'name':  data.get('shortName'),
+        'nation': utils.nation_conv[data.get('nation')],
+        'tier': data.get('tier'),
+        'class': utils.class_conv[data.get('type')],
+        'isPrem': tank_api_data.get('is_premium'),
+        'dpm': getRof() * alpha_damage,
+        'alpha':  alpha_damage,
+        'heAlpha':  he_alpha_damage,
+        'caliber': shell.get('caliber'),
+        'pen1': shell.get('piercingPower')[0],
+        'pen2': secondShell.get('piercingPower')[0] if secondShell else None,
+        'pen3': thirdShell.get('piercingPower')[0] if thirdShell else None,
+        'aimTime': gun.get('aimTime'),
+        'accuracy': gun.get('accuracy'),
+        'maxAmmo': gun.get('maxAmmo'),
+        'potentialDamage': (gun.get('maxAmmo') if gun.get('maxAmmo') else 0) * alpha_damage,
+        'shellVelocity': shell.get('speed'),
+        'gunDepression': gun.get('depression'),
+        'gunElevation': gun.get('elevation'),
+        'turretTraverseDispersion': gun.get('dispersion').get('turretRotation'),
+        'vehicleMovementDispersion': chassis.get('dispersion').get('vehicleMovement'),
+        'vehicleRotationDispersion': chassis.get('dispersion').get('vehicleRotation'),
+        'forwardSpeed': stats.get('speedLimit').get('forward'),
+        'backwardSpeed': stats.get('speedLimit').get('backward'),
+        'weight': weight,
+        'power': engine.get('power'),
+        'traverseSpeed': chassis.get('rotationSpeed'),
+        'turretTraverseSpeed': stats.get('turrets')[-1].get('traverse'),
+        'specificPower': engine.get('power') * 1000 / weight ,
+        'viewRange': stats.get('turrets')[-1].get('viewRange'),
+        'hp': stats.get('turrets')[-1].get('hp'),
+    })
+
+    # except:
+    #     print(f"An exception occurred for {data.get('name')}")
+
 def process_xml_files(source_dir: str, vehicles: dict) -> None:
 
     tank_map = {}
     for root, dirs, files in os.walk(source_dir):
         for file in files:
             xml_path = os.path.join(root, file)
-            json_data = xml_to_json(xml_path)
+            json_data = utils.xml_to_json(xml_path)
             if file.endswith('.xml') and '_' in file:
                 raw_output_path = os.path.join("raw", file + '.json')
                 os.makedirs(os.path.dirname(raw_output_path), exist_ok=True)
@@ -224,12 +203,14 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
         json.dump(tank_map, json_file)
 
 
+    # list of tank stats for /tank-stats page
+    tank_stats = []
     for filename in os.listdir("raw"):
         tank_name = get_tank_name_from_file(filename)
         tank_id = tank_map.get(tank_name, {}).get('id')
         tank_nation = tank_map.get(tank_name, {}).get('nation')
 
-        # print(tank_name, tank_id)
+        print(tank_name, tank_id)
         if tank_id is None:
             continue
 
@@ -246,7 +227,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
         chassis = data.get('chassis', {})
         for chassis_name, chassis_info in chassis.items():
             chassis_arr.append({
-                'name': get_msgstr(tank_nation, chassis_name),
+                'name': utils.get_msgstr(tank_nation, chassis_name),
                 'id': chassis_name,
                 'maxLoad': chassis_info.get('maxLoad'),
                 'weight': chassis_info.get('weight'),
@@ -291,7 +272,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
             with open(os.path.join("raw", tank_nation, "engines.json")) as f:
                 engine_data = json.load(f)
                 current_engine = engine_data['shared'].get(engine_id, {})
-                current_engine["name"] = get_msgstr(tank_nation, engine_id)
+                current_engine["name"] = utils.get_msgstr(tank_nation, engine_id)
                 # if info != "shared":
                 #     current_engine.update({"xp": info.get("unlocks").get("engine").get("cost")})
                 engines_list.append(current_engine)
@@ -301,7 +282,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
             with open(os.path.join("raw", tank_nation, "radios.json")) as f:
                 radio_data = json.load(f)
                 current_radio = radio_data['shared'].get(radio_id, {})
-                current_radio["name"] = get_msgstr(tank_nation, radio_id)
+                current_radio["name"] = utils.get_msgstr(tank_nation, radio_id)
                 # if info != "shared":
                 #     current_radio.update({"xp": info.get("unlocks").get("engine").get("cost")})
                 radios_list.append(current_radio)
@@ -361,12 +342,17 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
         with open(useful_output_path, 'w') as json_file:
             json.dump(useful_data, json_file, indent=4)
 
+        add_tank_stats(tank_stats, useful_data, tank_api_data)
+
+    with open("tank_stats.json", "w") as json_file:
+        json.dump(tank_stats, json_file)
+
 
 def fetch_wg_vehicle_data() -> dict: 
     url = "https://api.worldoftanks.com/wot/encyclopedia/vehicles/"
     params = {
         "application_id": os.getenv('API_KEY'),
-        "fields": "name, short_name, tank_id, nation, tier, type"
+        "fields": "name, short_name, tank_id, nation, tier, type, is_premium"
     }
 
     response = requests.get(url, params=params)
@@ -390,8 +376,10 @@ def fetch_wg_vehicle_data() -> dict:
 
 
 def main() -> None:
+    print("Fetching API data...")
     source_dir = 'wot-src/sources/res/scripts/item_defs/vehicles'
     vehicles = fetch_wg_vehicle_data()
+    print("Processing XML files...")
     process_xml_files(source_dir, vehicles)
 
 if __name__ == '__main__':
