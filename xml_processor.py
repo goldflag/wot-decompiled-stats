@@ -91,7 +91,6 @@ def get_tank_name_from_file(filename: str):
     return filename.split('.')[0]
 
 def add_tank_stats(tank_stats: List[Dict], data: dict[str, Any], tank_api_data: Any) -> None:
-    # try:
     stats = data.get('stats')
     gun = stats.get('turrets')[-1].get('guns')[-1]
     chassis = stats.get('chassis')[-1]
@@ -127,6 +126,8 @@ def add_tank_stats(tank_stats: List[Dict], data: dict[str, Any], tank_api_data: 
     tank_stats.append({
         'tank_id': data.get('id'),
         'name':  data.get('shortName'),
+        'image': tank_api_data.get('images').get('contour_icon'),
+        'bigImage': tank_api_data.get('images').get('big_icon'),
         'nation': utils.nation_conv[data.get('nation')],
         'tier': data.get('tier'),
         'class': utils.class_conv[data.get('type')],
@@ -158,9 +159,6 @@ def add_tank_stats(tank_stats: List[Dict], data: dict[str, Any], tank_api_data: 
         'viewRange': stats.get('turrets')[-1].get('viewRange'),
         'hp': stats.get('turrets')[-1].get('hp'),
     })
-
-    # except:
-    #     print(f"An exception occurred for {data.get('name')}")
 
 def process_xml_files(source_dir: str, vehicles: dict) -> None:
 
@@ -352,7 +350,7 @@ def fetch_wg_vehicle_data() -> dict:
     url = "https://api.worldoftanks.com/wot/encyclopedia/vehicles/"
     params = {
         "application_id": os.getenv('API_KEY'),
-        "fields": "name, short_name, tank_id, nation, tier, type, is_premium"
+        "fields": "name, short_name, tank_id, nation, tier, type, is_premium, images"
     }
 
     response = requests.get(url, params=params)
