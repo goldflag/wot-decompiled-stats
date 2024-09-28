@@ -340,7 +340,9 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
         with open(useful_output_path, 'w') as json_file:
             json.dump(useful_data, json_file, indent=4)
 
-        add_tank_stats(tank_stats, useful_data, tank_api_data)
+        # remove duplicate siege mode tanks
+        if not '_siege_mode' in filename:
+            add_tank_stats(tank_stats, useful_data, tank_api_data)
 
     with open("tank_stats.json", "w") as json_file:
         json.dump(tank_stats, json_file)
