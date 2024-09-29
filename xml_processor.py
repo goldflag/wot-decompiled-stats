@@ -117,7 +117,7 @@ def add_tank_stats(tank_stats: List[Dict], data: dict[str, Any], tank_api_data: 
 
     clip = gun.get('clip')
     intra_reload = 60 / gun.get('clip').get('rate') if clip and clip.get('rate') else None
-    time_to_empty_clip = gun.get('reloadTime') * (gun.get('clip').get('count') - 1) if intra_reload else None
+    time_to_empty_clip = gun.get('reloadTime') + (gun.get('clip').get('count') - 1) * intra_reload if intra_reload else None
 
     def getRof():
         if intra_reload: 
