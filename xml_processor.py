@@ -65,6 +65,18 @@ def get_turret_data(data, tank_nation: str):
                     gun_entry["weight"] = current_gun["weight"]
                     gun_entry["shells"] = list(current_gun["shots"].values())
 
+                    # fill in missing values from the gun data
+                    if gun_entry.get('accuracy') is None:
+                        gun_entry['accuracy'] = current_gun['shotDispersionRadius']
+
+                    if gun_entry.get('aimTime') is None:
+                        gun_entry['aimTime'] = current_gun['aimingTime']
+
+                    if gun_entry.get('dispersion').get('turretRotation') is None:
+                        gun_entry['dispersion']['turretRotation'] = current_gun['shotDispersionFactors']['turretRotation']
+                        gun_entry['dispersion']['afterShot'] = current_gun['shotDispersionFactors']['afterShot']
+                        gun_entry['dispersion']['whileDamaged'] = current_gun['shotDispersionFactors']['whileGunDamaged']
+
             guns_arr.append(gun_entry)
 
         turrets_arr.append({
@@ -344,6 +356,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
         if not '_siege_mode' in filename:
             add_tank_stats(tank_stats, useful_data, tank_api_data)
 
+    tank_stats.sort(key=lambda x: x['dpm'], reverse=True)
     with open("tank_stats.json", "w") as json_file:
         json.dump(tank_stats, json_file)
 
