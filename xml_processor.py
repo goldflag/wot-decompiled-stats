@@ -84,6 +84,9 @@ def get_turret_data(data, tank_nation: str):
                     if gun_entry.get('burst') is None:
                         gun_entry['burst'] = current_gun.get('burst')
 
+                    if gun_entry.get('autoreload') is None:
+                        gun_entry['autoreload'] = current_gun.get('autoreload')
+
             guns_arr.append(gun_entry)
 
         turrets_arr.append({
@@ -140,7 +143,7 @@ def add_tank_stats(tank_stats: List[Dict], data: dict[str, Any], tank_api_data: 
     def getRof():
         if intra_clip_reload: 
             if gun.get('autoreload'):
-                return 60 / gun.get('autoreload').get('reloadTime')[0]
+                return 60 / min(gun.get('autoreload').get('reloadTime'))
             if burst:
                 return 60 / time_to_empty_clip * clip.get('count')
             return 60 / time_to_empty_clip * number_of_shots 
