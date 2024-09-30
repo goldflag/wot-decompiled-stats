@@ -77,6 +77,12 @@ def get_turret_data(data, tank_nation: str):
                         gun_entry['dispersion']['turretRotation'] = current_gun['shotDispersionFactors']['turretRotation']
                         gun_entry['dispersion']['afterShot'] = current_gun['shotDispersionFactors']['afterShot']
                         gun_entry['dispersion']['whileDamaged'] = current_gun['shotDispersionFactors']['whileGunDamaged']
+                    
+                    if gun_entry.get('clip') is None:
+                        gun_entry['clip'] = current_gun.get('clip')
+
+                    if gun_entry.get('burst') is None:
+                        gun_entry['burst'] = current_gun.get('burst')
 
             guns_arr.append(gun_entry)
 
