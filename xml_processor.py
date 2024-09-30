@@ -189,6 +189,7 @@ def add_tank_stats(tank_stats: List[Dict], data: dict[str, Any], tank_api_data: 
         'shellVelocity1': shell.get('speed'),
         'shellVelocity2': secondShell.get('speed') if secondShell else None,
         'shellVelocity3': thirdShell.get('speed') if thirdShell else None,
+        'intraClipReload': intra_clip_reload,
         'aimTime': gun.get('aimTime'),
         'accuracy': gun.get('accuracy'),
         'maxAmmo': gun.get('maxAmmo'),
