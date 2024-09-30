@@ -179,7 +179,7 @@ def add_tank_stats(tank_stats: List[Dict], data: dict[str, Any], tank_api_data: 
         'alpha1': alpha_damage1,
         'alpha2': alpha_damage2,
         'alpha3': alpha_damage3,
-        'reload': gun.get('reloadTime'),
+        'reload': min(gun.get('autoreload').get('reloadTime')) if gun.get('autoreload') else gun.get('reloadTime'),
         'shell1': shell.get('kind'),
         'shell2': secondShell.get('kind') if secondShell else None,
         'shell3': thirdShell.get('kind') if thirdShell else None,
