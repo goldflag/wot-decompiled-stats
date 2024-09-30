@@ -150,14 +150,18 @@ def add_tank_stats(tank_stats: List[Dict], data: dict[str, Any], tank_api_data: 
         return 60 / gun.get('reloadTime')
 
     # take into account Polish TDs with alpha damage dropoff over distance
-    alpha_damage = shell.get('damage').get('armor')[0] if isinstance(shell.get('damage').get('armor'), list) else shell.get('damage').get('armor')
+    alpha_damage1 = shell.get('damage').get('armor')[0] if isinstance(shell.get('damage').get('armor'), list) else shell.get('damage').get('armor')
 
-    he_alpha_damage = None
+    alpha_damage2 = None
+    if secondShell:
+        alpha_damage2 = secondShell.get('damage').get('armor')[0] if isinstance(secondShell.get('damage').get('armor'), list) else secondShell.get('damage').get('armor') 
+    alpha_damage3 = None
     if thirdShell:
-        he_alpha_damage = thirdShell.get('damage').get('armor')[0] if isinstance(thirdShell.get('damage').get('armor'), list) else thirdShell.get('damage').get('armor') 
+        alpha_damage3 = thirdShell.get('damage').get('armor')[0] if isinstance(thirdShell.get('damage').get('armor'), list) else thirdShell.get('damage').get('armor') 
 
 
     weight = data.get('stats').get('hull').get('weight') + stats.get('turrets')[-1].get('weight') + stats.get('chassis')[-1].get('weight') + engine.get('weight') + radio.get('weight') + gun.get('weight')
+    rof = getRof()
 
     tank_stats.append({
         'tank_id': data.get('id'),
@@ -168,19 +172,24 @@ def add_tank_stats(tank_stats: List[Dict], data: dict[str, Any], tank_api_data: 
         'tier': data.get('tier'),
         'class': utils.class_conv[data.get('type')],
         'isPrem': tank_api_data.get('is_premium'),
-        'dpm': getRof() * alpha_damage,
-        'alpha': alpha_damage,
-        'heAlpha': he_alpha_damage,
+        'dpm1': rof * alpha_damage1,
+        'dpm2': rof * alpha_damage2 if alpha_damage2 else None,
+        'dpm3': rof * alpha_damage3 if alpha_damage3 else None,
+        'alpha1': alpha_damage1,
+        'alpha2': alpha_damage2,
+        'alpha3': alpha_damage3,
         'reload': gun.get('reloadTime'),
         'caliber': shell.get('caliber'),
         'pen1': shell.get('piercingPower')[0],
         'pen2': secondShell.get('piercingPower')[0] if secondShell else None,
         'pen3': thirdShell.get('piercingPower')[0] if thirdShell else None,
+        'shellVelocity1': shell.get('speed'),
+        'shellVelocity2': secondShell.get('speed') if secondShell else None,
+        'shellVelocity3': thirdShell.get('speed') if thirdShell else None,
         'aimTime': gun.get('aimTime'),
         'accuracy': gun.get('accuracy'),
         'maxAmmo': gun.get('maxAmmo'),
-        'potentialDamage': (gun.get('maxAmmo') if gun.get('maxAmmo') else 0) * alpha_damage,
-        'shellVelocity': shell.get('speed'),
+        'potentialDamage': (gun.get('maxAmmo') if gun.get('maxAmmo') else 0) * alpha_damage1,
         'gunDepression': gun.get('depression'),
         'gunElevation': gun.get('elevation'),
         'turretTraverseDispersion': gun.get('dispersion').get('turretRotation'),
@@ -382,7 +391,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
         if not '_siege_mode' in filename:
             add_tank_stats(tank_stats, useful_data, tank_api_data)
 
-    tank_stats.sort(key=lambda x: x['dpm'], reverse=True)
+    tank_stats.sort(key=lambda x: x['dpm1'], reverse=True)
     with open("tank_stats.json", "w") as json_file:
         json.dump(tank_stats, json_file)
 
