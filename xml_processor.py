@@ -38,6 +38,7 @@ def get_turret_data(data, tank_nation: str):
                 'accuracy': gun_info.get('shotDispersionRadius'),
                 'reloadTime': gun_info.get('reloadTime'),
                 'clip': gun_info.get('clip'),
+                'burst': gun_info.get('burst'),
                 'autoreload': gun_info.get('autoreload'),
                 'arc': gun_info.get('turretYawLimits'),
                 'elevation': -min(gun_info.get('pitchLimits', {}).get('minPitch')),
@@ -116,16 +117,30 @@ def add_tank_stats(tank_stats: List[Dict], data: dict[str, Any], tank_api_data: 
         return
 
     clip = gun.get('clip')
-    intra_reload = 60 / gun.get('clip').get('rate') if clip and clip.get('rate') else None
-    time_to_empty_clip = gun.get('reloadTime') + (gun.get('clip').get('count') - 1) * intra_reload if intra_reload else None
+    burst = gun.get('burst')
+    intra_clip_reload = 60 / clip.get('rate') if clip and clip.get('rate') else None
+
+    number_of_shots = clip.get('count') if clip else None
+    # factors in autocannons that shoot multiple shots in a burst
+    if burst:
+        number_of_shots = number_of_shots / burst.get('count')
+
+    time_to_empty_clip = gun.get('reloadTime') + (number_of_shots - 1) * intra_clip_reload if intra_clip_reload else None
+    if burst:
+        # add time to empty clip for each burst shot
+        time_to_empty_clip = time_to_empty_clip + number_of_shots * (60 / burst.get('rate')) * (burst.get('count') - 1)
+
 
     def getRof():
-        if intra_reload: 
+        if intra_clip_reload: 
             if gun.get('autoreload'):
                 return 60 / gun.get('autoreload').get('reloadTime')[0]
-            return 60 / time_to_empty_clip * gun.get('clip').get('count') 
+            if burst:
+                return 60 / time_to_empty_clip * clip.get('count')
+            return 60 / time_to_empty_clip * number_of_shots 
         return 60 / gun.get('reloadTime')
 
+    # take into account Polish TDs with alpha damage dropoff over distance
     alpha_damage = shell.get('damage').get('armor')[0] if isinstance(shell.get('damage').get('armor'), list) else shell.get('damage').get('armor')
 
     he_alpha_damage = None
@@ -221,9 +236,10 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
         tank_id = tank_map.get(tank_name, {}).get('id')
         tank_nation = tank_map.get(tank_name, {}).get('nation')
 
-        print(tank_name, tank_id)
         if tank_id is None:
             continue
+
+        print(tank_name, tank_id)
 
         if tank_id not in vehicles:
             print(f"Tank {tank_name} not found in WG API")
