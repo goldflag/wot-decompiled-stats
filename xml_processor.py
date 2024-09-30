@@ -114,7 +114,7 @@ def get_tank_name_from_file(filename: str):
 
 def add_tank_stats(tank_stats: List[Dict], data: dict[str, Any], tank_api_data: Any) -> None:
     stats = data.get('stats')
-    gun = stats.get('turrets')[-1].get('guns')[-1]
+    gun = sorted(stats.get('turrets')[-1].get('guns'), key=lambda x: x['level'])[-1]
     chassis = stats.get('chassis')[-1]
     engine = stats.get('engines')[-1]
     radio = stats.get('radios')[-1]
