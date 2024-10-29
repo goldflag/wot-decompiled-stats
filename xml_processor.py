@@ -283,9 +283,8 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                 'id': chassis_name,
                 'maxLoad': chassis_info.get('maxLoad'),
                 'weight': chassis_info.get('weight'),
-                'terrainResistance': chassis_info.get('terrainResistance'),
                 # https://www.reddit.com/r/WorldofTanks/comments/o7c1io/hidden_mobility_stats_why_obj_277_is_faster_than/
-                'realTerrainResistance': [
+                'terrainResistance': [
                     chassisPhysics['firm']['rollingFriction'] / 0.0805,
                     chassisPhysics['medium']['rollingFriction'] / 0.0805,
                     chassisPhysics['soft']['rollingFriction'] / 0.0805,
