@@ -322,6 +322,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                 engine_data = json.load(f)
                 current_engine = engine_data['shared'].get(engine_id, {})
                 current_engine["name"] = utils.get_msgstr(tank_nation, engine_id)
+                current_engine["realPower"] = data['physics']['detailed']['engines'][engine_id]['smplEnginePower']
                 # if info != "shared":
                 #     current_engine.update({"xp": info.get("unlocks").get("engine").get("cost")})
                 engines_list.append(current_engine)
