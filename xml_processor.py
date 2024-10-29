@@ -336,6 +336,12 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                 #     current_radio.update({"xp": info.get("unlocks").get("engine").get("cost")})
                 radios_list.append(current_radio)
 
+        fuel_tank = None
+        for fuel_tank_id, info in data['fuelTanks'].items():
+            with open(os.path.join("raw", tank_nation, "fuelTanks.json")) as f:
+                fuel_tank_data = json.load(f)
+                fuel_tank = fuel_tank_data['shared'].get(fuel_tank_id, {})
+
         hull = data.get('hull', {})
         useful_data = {
             'name': tank_api_data.get('name'),
@@ -364,6 +370,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                 'chassis': chassis_arr,
                 'engines': engines_list,
                 'radios': radios_list,
+                'fuelTank': fuel_tank,
                 'hull': {
                     'ammoRackHealth': hull.get('ammoBayHealth'),
                     'armor': [hull.get('armor')[hull.get('primaryArmor')[0]], hull.get('armor')[hull.get('primaryArmor')[1]], hull.get('armor')[hull.get('primaryArmor')[1]]] if hull.get('primaryArmor') != None else [],
