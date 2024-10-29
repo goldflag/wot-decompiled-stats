@@ -275,12 +275,21 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
         chassis_arr = []
         chassis = data.get('chassis', {})
         for chassis_name, chassis_info in chassis.items():
+
+            chassisPhysics = data['physics']['detailed']['chassis'][chassis_name]['grounds']
+
             chassis_arr.append({
                 'name': utils.get_msgstr(tank_nation, chassis_name),
                 'id': chassis_name,
                 'maxLoad': chassis_info.get('maxLoad'),
                 'weight': chassis_info.get('weight'),
                 'terrainResistance': chassis_info.get('terrainResistance'),
+                # https://www.reddit.com/r/WorldofTanks/comments/o7c1io/hidden_mobility_stats_why_obj_277_is_faster_than/
+                'realTerrainResistance': [
+                    chassisPhysics['firm']['rollingFriction'] / 0.0805,
+                    chassisPhysics['medium']['rollingFriction'] / 0.0805,
+                    chassisPhysics['soft']['rollingFriction'] / 0.0805,
+                ],
                 'rotationSpeed': chassis_info.get('rotationSpeed'),
                 'rotatesInPlace': chassis_info.get('rotationIsAroundCenter'),
                 'dispersion': chassis_info.get('shotDispersionFactors'),
