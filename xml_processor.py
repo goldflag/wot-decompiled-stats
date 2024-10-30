@@ -43,6 +43,7 @@ def get_turret_data(data, tank_nation: str):
                 'arc': gun_info.get('turretYawLimits'),
                 'elevation': -min(gun_info.get('pitchLimits', {}).get('minPitch')),
                 'depression': max(gun_info.get('pitchLimits', {}).get('maxPitch')),
+                'gunArc': gun_info.get('turretYawLimits'),
                 'dispersion': {
                     'turretRotation': gun_info.get('shotDispersionFactors', {}).get('turretRotation'),
                     'afterShot': gun_info.get('shotDispersionFactors', {}).get('afterShot'),
