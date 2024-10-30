@@ -280,6 +280,8 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
 
             chassisPhysics = data['physics']['detailed']['chassis'][chassis_name]['grounds']
 
+            trackArmor = chassis_info.get('armor', {}).get('leftTrack')
+
             chassis_arr.append({
                 'name': utils.get_msgstr(tank_nation, chassis_name),
                 'id': chassis_name,
@@ -299,7 +301,8 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                 'maxHealth': chassis_info.get('maxHealth'),
                 'maxRegenHealth': chassis_info.get('maxRegenHealth'),
                 'level': chassis_info.get('level'),
-                'armor': chassis_info.get('armor', {}).get('leftTrack')
+                'armor': trackArmor or chassis_info.get('wheels', {}).get('wheel', {}).get('armor', {}).get('wheel', 0),
+                'wheeled': False if trackArmor else True,
             })
 
 
