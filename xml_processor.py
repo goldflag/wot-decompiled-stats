@@ -103,6 +103,7 @@ def get_turret_data(data, tank_nation: str):
             'viewportHealth': info.get('surveyingDeviceHealth'),
             'ringHealth': info.get('turretRotatorHealth'),
             'armor': [info.get('armor')[info.get('primaryArmor')[0]], info.get('armor')[info.get('primaryArmor')[1]], info.get('armor')[info.get('primaryArmor')[1]]] if info.get('primaryArmor') != None else [],
+            'openTop': info.get('ceilless') == 'true'
         })
     return turrets_arr
 
