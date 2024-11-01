@@ -369,6 +369,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
             'role': data.get('postProgressionTree'),
             'crew': crew_list,
             'price': tank_map.get(tank_name, {}).get('price'),
+            'tags': tank_map.get(tank_name, {}).get('tags'),
             'stats': {
                 'speedLimit': {
                     'forward': data.get('speedLimits', {}).get('forward'),
