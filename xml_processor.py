@@ -60,9 +60,11 @@ def get_turret_data(data, tank_nation: str):
                 with open(os.path.join("raw", tank_nation, "shells.json")) as f:
                     shells = json.load(f)
 
+
                     for shell_id in current_gun.get('shots', {}).keys():
                         current_shell = shells.get(shell_id, {})
-                        current_shell["image"] = shells["icons"][current_shell.get("icon")][0].rsplit('.png', 1)[0] 
+                        current_shell["image"] = shells["icons"][current_shell.get("icon")][0].rsplit('.png', 1)[0]
+                        current_shell["name"] = utils.get_msgstr(tank_nation, shell_id)
                         current_gun["shots"][shell_id].update(current_shell)
 
                     gun_entry["level"] = current_gun["level"]
