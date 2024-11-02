@@ -62,6 +62,7 @@ def get_turret_data(data, tank_nation: str):
 
                     for shell_id in current_gun.get('shots', {}).keys():
                         current_shell = shells.get(shell_id, {})
+                        current_shell["image"] = shells["icons"][current_shell.get("icon")][0].rsplit('.png', 1)[0] 
                         current_gun["shots"][shell_id].update(current_shell)
 
                     gun_entry["level"] = current_gun["level"]
