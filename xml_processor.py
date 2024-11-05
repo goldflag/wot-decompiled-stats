@@ -100,6 +100,17 @@ def get_turret_data(data, tank_nation: str):
 
             guns_arr.append(gun_entry)
 
+
+        turret_armor = [info.get('armor')[info.get('primaryArmor')[0]], info.get('armor')[info.get('primaryArmor')[1]], info.get('armor')[info.get('primaryArmor')[2]]] if info.get('primaryArmor') != None else []
+
+        if len(turret_armor) == 3:
+            if not isinstance(turret_armor[0] , (int, float, complex)):
+                turret_armor[0] = 0
+            if not isinstance(turret_armor[1] , (int, float, complex)):
+                turret_armor[1] = 0
+            if not isinstance(turret_armor[2] , (int, float, complex)):
+                turret_armor[2] = 0
+            
         turrets_arr.append({
             'name': utils.get_msgstr(tank_nation, turret),
             'id': turret,
@@ -112,7 +123,7 @@ def get_turret_data(data, tank_nation: str):
             'weight': info.get('weight'),
             'viewportHealth': info.get('surveyingDeviceHealth'),
             'ringHealth': info.get('turretRotatorHealth'),
-            'armor': [info.get('armor')[info.get('primaryArmor')[0]], info.get('armor')[info.get('primaryArmor')[1]], info.get('armor')[info.get('primaryArmor')[1]]] if info.get('primaryArmor') != None else [],
+            'armor': turret_armor,
             'openTop': info.get('ceilless') == 'true'
         })
     return turrets_arr
