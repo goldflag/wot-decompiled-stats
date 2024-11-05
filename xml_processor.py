@@ -72,6 +72,12 @@ def get_turret_data(data, tank_nation: str):
                     gun_entry["shells"] = list(current_gun["shots"].values())
 
                     # fill in missing values from the gun data
+                    if gun_entry.get('reloadTime') is None:
+                        gun_entry['reloadTime'] = current_gun['reloadTime']
+
+                    if gun_entry.get('maxAmmo') is None:
+                        gun_entry['maxAmmo'] = current_gun['maxAmmo']
+
                     if gun_entry.get('accuracy') is None:
                         gun_entry['accuracy'] = current_gun['shotDispersionRadius']
 
