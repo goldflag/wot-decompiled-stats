@@ -1,6 +1,5 @@
 import os
 import json
-from lxml import etree
 from typing import Any, Dict, List, Union
 import requests
 import json
@@ -419,6 +418,11 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
             useful_data['stats']['siegeMode'] = {
                 'switchOnTime': data.get('siege_mode', {}).get('switchOnTime'),
                 'switchOffTime': data.get('siege_mode', {}).get('switchOffTime'),
+            }
+        if "hull_aiming" in data:
+            useful_data['stats']['hydropneumatic'] = {
+                'depression': data.get('hull_aiming', {}).get('pitch', {}).get('wheelsCorrectionAngles', {}).get('pitchMin'),
+                'elevation': data.get('hull_aiming', {}).get('pitch', {}).get('wheelsCorrectionAngles', {}).get('pitchMax'),
             }
         if "rocketAcceleration" in data:
             useful_data['stats']['rocketAcceleration'] = {
