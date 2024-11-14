@@ -298,7 +298,15 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
         chassis = data.get('chassis', {})
         for chassis_name, chassis_info in chassis.items():
 
-            chassisPhysics = data['physics']['detailed']['chassis'][chassis_name]['grounds']
+
+            chassis_data = data['physics']['detailed']['chassis'][chassis_name]
+            axle_steering_lock_angles = chassis_data.get('axleSteeringLockAngles')
+            if axle_steering_lock_angles and isinstance(axle_steering_lock_angles, list):
+                wheelAngle = -axle_steering_lock_angles[0]
+            else:
+                wheelAngle = None 
+
+            chassisPhysics = chassis_data['grounds']
 
             trackArmor = chassis_info.get('armor', {}).get('leftTrack')
 
@@ -323,6 +331,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                 'level': chassis_info.get('level'),
                 'armor': trackArmor or chassis_info.get('wheels', {}).get('wheel', {}).get('armor', {}).get('wheel', 0),
                 'wheeled': False if trackArmor else True,
+                'wheelAngle': wheelAngle
             })
 
 
