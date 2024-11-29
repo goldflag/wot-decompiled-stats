@@ -482,13 +482,13 @@ def fetch_models(id: int):
     if str(id) not in model_mapping.mapping:
         # print(f"Model not found for tank ID: {id}")
         return  # Exit the function early
-    output_path = Path("useful") / str(id) / "armor.model"
+    output_path = Path("useful") / str(id) / "armor.json"
 
     if output_path.exists():
         print(f"Model for tank ID {id} already exists at {output_path}")
         return  # Exit the function if the file already exists
 
-    time.sleep(1)
+    time.sleep(0.5)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     
     url = f"https://gamemodels3d.com/games/worldoftanks/data/current/{nationmap.get(model_mapping.mapping[str(id)][0])}/{model_mapping.mapping[str(id)]}/armor/vehicle.model"
