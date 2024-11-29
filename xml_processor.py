@@ -301,7 +301,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
             continue
 
         fetch_models(tank_id)
-        continue
+        # continue
 
         with open(raw_dir / filename) as f:
             data = json.load(f)
@@ -488,7 +488,7 @@ def fetch_models(id: int):
         print(f"Model for tank ID {id} already exists at {output_path}")
         return  # Exit the function if the file already exists
 
-    time.sleep(0.5)
+    time.sleep(0.8)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     
     url = f"https://gamemodels3d.com/games/worldoftanks/data/current/{nationmap.get(model_mapping.mapping[str(id)][0])}/{model_mapping.mapping[str(id)]}/armor/vehicle.model"
