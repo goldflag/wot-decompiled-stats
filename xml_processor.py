@@ -1,5 +1,8 @@
+import gzip
+import shutil
 import os
 import json
+import time
 from typing import Any, Dict, List, Union
 import requests
 import json
@@ -292,6 +295,14 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
             print(f"Tank {tank_name} not found in WG API")
             continue
 
+        tank_api_data = vehicles.get(tank_id, {})
+
+        if tank_api_data is None:
+            continue
+
+        fetch_models(tank_id)
+        continue
+
         with open(raw_dir / filename) as f:
             data = json.load(f)
 
@@ -337,11 +348,6 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                 'wheelAngle': wheelAngle
             })
 
-
-        tank_api_data = vehicles.get(tank_id, {})
-
-        if tank_api_data is None:
-            continue
 
         crew_list = []
         for primary, secondary in data['crew'].items():
@@ -456,6 +462,49 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
     tank_stats.sort(key=lambda x: x['dpm1'], reverse=True)
     with open(Path("tank_stats.json"), "w") as json_file:
         json.dump(tank_stats, json_file)
+
+
+nationmap = {
+    'r': 'ussr',
+    'g': 'germany',
+    'z': 'czech',
+    'f': 'france',
+    'j': 'japan',
+    'p': 'poland',
+    's': 'sweden',
+    'b': 'uk',
+    'c': 'china',
+    'i': 'italy',
+    'a': 'usa'
+}
+
+def fetch_models(id: int):
+    if str(id) not in model_mapping.mapping:
+        # print(f"Model not found for tank ID: {id}")
+        return  # Exit the function early
+    output_path = Path("useful") / str(id) / "armor.model"
+
+    if output_path.exists():
+        print(f"Model for tank ID {id} already exists at {output_path}")
+        return  # Exit the function if the file already exists
+
+    time.sleep(1)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    url = f"https://gamemodels3d.com/games/worldoftanks/data/current/{nationmap.get(model_mapping.mapping[str(id)][0])}/{model_mapping.mapping[str(id)]}/armor/vehicle.model"
+
+    print("Fetching model for tank ID:", id)
+    response = requests.get(url, stream=True)
+
+    if response.status_code == 200:
+
+        with gzip.open(response.raw, 'rb') as f_in:
+            with open(output_path, 'wb') as f_out:
+                shutil.copyfileobj(f_in, f_out)
+        
+        print(f"Model saved to {output_path}")
+    else:
+        print("Request failed with status code:", response.status_code)
 
 
 def fetch_wg_vehicle_data() -> dict: 
