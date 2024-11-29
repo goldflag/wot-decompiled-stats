@@ -5,6 +5,8 @@ import requests
 import json
 import sys
 import utils
+import model_mapping
+from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -51,14 +53,13 @@ def get_turret_data(data, tank_nation: str):
                 },
             }
 
-            with open(os.path.join("raw", tank_nation, "guns.json")) as f:
+            with open(Path("raw") / tank_nation / "guns.json") as f:
                 gun_data = json.load(f)
                 current_gun = gun_data['shared'].get(gun, {})
                 current_gun["name"] = utils.get_msgstr(tank_nation, gun)
 
-                with open(os.path.join("raw", tank_nation, "shells.json")) as f:
+                with open(Path("raw") / tank_nation / "shells.json") as f:
                     shells = json.load(f)
-
 
                     for shell_id in current_gun.get('shots', {}).keys():
                         current_shell = shells.get(shell_id, {})
@@ -99,7 +100,6 @@ def get_turret_data(data, tank_nation: str):
 
             guns_arr.append(gun_entry)
 
-
         turret_armor = [info.get('armor')[info.get('primaryArmor')[0]], info.get('armor')[info.get('primaryArmor')[1]], info.get('armor')[info.get('primaryArmor')[2]]] if info.get('primaryArmor') != None else []
 
         if len(turret_armor) == 3:
@@ -126,7 +126,6 @@ def get_turret_data(data, tank_nation: str):
             'openTop': info.get('ceilless') == 'true'
         })
     return turrets_arr
-
 
 def get_tank_name_from_file(filename: str):
     isSiegeFile = '_siege_mode' in filename
@@ -233,21 +232,24 @@ def add_tank_stats(tank_stats: List[Dict], data: dict[str, Any], tank_api_data: 
     })
 
 def process_xml_files(source_dir: str, vehicles: dict) -> None:
-
     tank_map = {}
-    for root, dirs, files in os.walk(source_dir):
+    source_path = Path(source_dir)
+    
+    for root, dirs, files in os.walk(source_path):
+        root_path = Path(root)
         for file in files:
-            xml_path = os.path.join(root, file)
-            json_data = utils.xml_to_json(xml_path)
+            xml_path = root_path / file
+            json_data = utils.xml_to_json(str(xml_path))
+            
             if file.endswith('.xml') and '_' in file:
-                raw_output_path = os.path.join("raw", file + '.json')
-                os.makedirs(os.path.dirname(raw_output_path), exist_ok=True)
-
+                raw_output_path = Path("raw") / (file + '.json')
+                raw_output_path.parent.mkdir(parents=True, exist_ok=True)
+                
                 with open(raw_output_path, 'w') as json_file:
                     json.dump(json_data, json_file, indent=4)
 
             if file == 'list.xml':
-                nation_from_path = root.split('/')[-1].split('\\')[-1]
+                nation_from_path = root_path.parts[-1]
                 nation_id = nation_to_id.get(nation_from_path)
                 for name, value in json_data.items():
                     if isinstance(value, dict):
@@ -257,25 +259,26 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                             'price': value.get('price'),
                             'tags': value.get('tags'),
                             'tier': value.get('level'),
-                            'nation': nation_from_path
+                            'nation': nation_from_path,
+                            'name': vehicles.get(id, {}).get('name') 
                         }
+
             if file in ['guns.xml', 'turrets.xml', 'chassis.xml', 'engines.xml', 'radios.xml', 'shells.xml', 'fuelTanks.xml']:
-                nation_from_path = root.split('/')[-1].split('\\')[-2]
-
-                raw_output_path = os.path.join("raw", nation_from_path, file[:-4] + '.json')
-                os.makedirs(os.path.dirname(raw_output_path), exist_ok=True)
-
+                nation_from_path = root_path.parts[-2]
+                raw_output_path = Path("raw") / nation_from_path / (file[:-4] + '.json')
+                raw_output_path.parent.mkdir(parents=True, exist_ok=True)
+                
                 with open(raw_output_path, 'w') as json_file:
                     json.dump(json_data, json_file, indent=4)
         
-    file_path = "tank_map.json"
-    with open(file_path, "w") as json_file:
+    with open(Path("tank_map.json"), "w") as json_file:
         json.dump(tank_map, json_file)
 
 
     # list of tank stats for /tank-stats page
     tank_stats = []
-    for filename in os.listdir("raw"):
+    raw_dir = Path("raw")
+    for filename in os.listdir(raw_dir):
         tank_name = get_tank_name_from_file(filename)
         tank_id = tank_map.get(tank_name, {}).get('id')
         tank_nation = tank_map.get(tank_name, {}).get('nation')
@@ -289,7 +292,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
             print(f"Tank {tank_name} not found in WG API")
             continue
 
-        with open(os.path.join("raw", filename)) as f:
+        with open(raw_dir / filename) as f:
             data = json.load(f)
 
         turrets_arr = get_turret_data(data, tank_nation)
@@ -441,18 +444,17 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
                 'duration': data.get('rocketAcceleration', {}).get('duration'),
             }
 
-        useful_output_path = os.path.join("useful", str(tank_id), 'siege-stats.json' if '_siege_mode' in filename  else 'stats.json')
-        os.makedirs(os.path.dirname(useful_output_path), exist_ok=True)
+        useful_output_path = Path("useful") / str(tank_id) / ('siege-stats.json' if '_siege_mode' in filename else 'stats.json')
+        useful_output_path.parent.mkdir(parents=True, exist_ok=True)
 
         with open(useful_output_path, 'w') as json_file:
             json.dump(useful_data, json_file, indent=4)
 
-        # remove duplicate siege mode tanks
         if not '_siege_mode' in filename:
             add_tank_stats(tank_stats, useful_data, tank_api_data)
 
     tank_stats.sort(key=lambda x: x['dpm1'], reverse=True)
-    with open("tank_stats.json", "w") as json_file:
+    with open(Path("tank_stats.json"), "w") as json_file:
         json.dump(tank_stats, json_file)
 
 
@@ -485,10 +487,10 @@ def fetch_wg_vehicle_data() -> dict:
 
 def main() -> None:
     print("Fetching API data...")
-    source_dir = 'wot-src/sources/res/scripts/item_defs/vehicles'
+    source_dir = Path('wot-src/sources/res/scripts/item_defs/vehicles')
     vehicles = fetch_wg_vehicle_data()
     print("Processing XML files...")
-    process_xml_files(source_dir, vehicles)
+    process_xml_files(str(source_dir), vehicles)
 
 if __name__ == '__main__':
     main()
