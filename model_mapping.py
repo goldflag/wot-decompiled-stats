@@ -148,7 +148,8 @@ mapping = {
     "64017": "g250",  # leKpz M 41 90 mm
     "64273": "g251",  # Panzer 58 Mutz
     "65297": "g255",  # Löwe FL
-    "65553": "g256",   # Straussler V–4/40
+    "65553": "g256",  # Straussler V–4/40
+    "29201": "g114",  # Pz.Kpfw. 38 (K)
 
     # USSR 
     "1": "r0",           # T-34
@@ -317,7 +318,11 @@ mapping = {
     "63233": "r247",     # KV-4 Kreslavskiy
     "64001": "r250",     # Udarniy
     "64769": "r253",     # KV-2 (R)
-    "65537": "r256",      # Object 701
+    "65537": "r256",     # Object 701
+    "65793": "r257",     # Object Kust
+    "66305": "r259",     # Object 265T
+    "66561": "r260",     # SU-100I
+
 
     # USA 
     "33": "a0",      # T14
@@ -399,6 +404,7 @@ mapping = {
     "35105": "a137", # ASTRON Rex 105 mm
     "35361": "a138", # T110E5 CL
     "35617": "a139", # ARMT
+    "42017": "a164", # XM57
     "43553": "a170", # M-IV-Y
     "53281": "a208", # AAT60
     "53537": "a209", # T1E6
@@ -435,6 +441,10 @@ mapping = {
     "63265": "a247", # T32 FL
     "64033": "a248", # M41 Walker Bulldog FL
     "65569": "a256", # Stinger
+    "32289": "a126", # T3E2 Medium Tank
+    "65825": "a157", # M3A3 Stuart
+
+
 
     # France
     "577": "f2",    # Renault FT
@@ -523,7 +533,11 @@ mapping = {
     "7233": "f28",   # Lorraine 155 mle. 50
     "7489": "f29",   # Lorraine 155 mle. 51
     "14401": "f56",  # Bat.-Châtillon 155 55
-    "11841": "f46",   # Bat.-Châtillon 155 58
+    "11841": "f46",  # Bat.-Châtillon 155 58
+    "65857": "f257", # AMR P.103
+    "32577": "f127", # Char Murat
+    "32833": "f128", # ERAC 105 Proto
+
 
     # UK
     "5201": "b20",    # Cruiser Mk. I
@@ -567,6 +581,7 @@ mapping = {
     "20561": "b80",   # FSV Scheme A
     "56913": "b222",  # Centurion Mk. 5/1 RAAC
     "5969": "b23",    # Centurion Mk. I
+    "22609": "b88",    # Centurion Mk. IA
     "15441": "b60",   # Chieftain/T95
     "57425": "b224",  # Chimera
     "55633": "b217",  # FV4202
@@ -593,6 +608,7 @@ mapping = {
     "51537": "b201",  # Caliban
     "52049": "b203",  # Charlemagne
     "62289": "b243",  # Crusher
+    "63825": "b249",  # FV226 Contradictious
     "60753": "b237",  # Gonsalo
     "64081": "b250",  # Nergal
     "4433": "b17",    # Conqueror
@@ -632,7 +648,7 @@ mapping = {
     "11345": "b44",   # Crusader 5.5-in. SP
     "12113": "b47",   # FV207
     "11601": "b45",   # FV3805
-    "12369": "b48",    # Conqueror Gun Carriage
+    "12369": "b48",   # Conqueror Gun Carriage
 
     # China
     '49': 'c0',      # Type 59
@@ -699,7 +715,9 @@ mapping = {
     '64817': 'c253', # Type 64
     '65073': 'c254', # WZ-111 Alpine Tiger
     '65329': 'c255', # 122 TM
-    '65841': 'c257',  # Type 59 First Warrior
+    '65585': 'c256', # DZT-159
+    '65841': 'c257', # Type 59 First Warrior
+    
 
     # Japan
     '353': 'j1',    # Chi-Ni
@@ -742,6 +760,8 @@ mapping = {
     '52321': 'j204', # Heavy Tank No. VI
     '53345': 'j208', # Type 5 Ka-Ri
     '53601': 'j209',  # Type 63
+    '54881': 'j214',  # Type 1 Ho-Ni II
+
 
     # Poland 
     "1169": "p4",    # 4TP
@@ -804,9 +824,10 @@ mapping = {
     "51825": "z202", # Škoda T 27
     "52081": "z203", # Vz. 55 Gothic Warrior
     "53105": "z207", # Vz. 58 Medvěd
+    "53361": "z208", # Vz. 68 Squall
     "60273": "z235", # Šotek
     "60529": "z236", # ShPTK-TVP 100
-    "60785": "z237",  # TT-130M
+    "60785": "z237", # TT-130M
 
     # Italy
     "161": "i0",    # Fiat 3000
@@ -839,6 +860,9 @@ mapping = {
     "52129": "i203", # Mars
     "52385": "i204", # M16/43 Sahariano
     "52897": "i206",  # Stone Sentinel
+    "53153": "i207",  # Toro
+    "53409": "i208",  # Prototipo 6
+
 
     # Sweden
     "129": "s0",      # Strv fm/21

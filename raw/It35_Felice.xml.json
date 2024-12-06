@@ -7,7 +7,7 @@
         "loader": null
     },
     "speedLimits": {
-        "forward": 35,
+        "forward": 45,
         "backward": 15
     },
     "supplySlots": [
@@ -69,35 +69,30 @@
     },
     "hull": {
         "armor": {
-            "armor_1": 120,
+            "armor_1": 110,
             "armor_2": 80,
             "armor_3": 70,
             "armor_4": 30,
-            "armor_5": 25,
+            "armor_5": 30,
             "armor_6": 20,
             "armor_7": 40,
             "armor_8": 0,
             "armor_9": 30,
-            "armor_10": 200,
-            "armor_11": 200,
-            "armor_12": 75,
+            "armor_10": 190,
+            "armor_11": 180,
+            "armor_12": 125,
             "armor_13": 50,
             "armor_14": 30,
             "armor_15": 25,
-            "armor_17": 35,
-            "armor_18": 30,
-            "armor_19": 30,
-            "armor_20": 20,
-            "armor_21": 25,
-            "armor_22": 20,
-            "armor_23": 25,
-            "armor_24": 100,
-            "armor_25": 50,
-            "armor_26": 30,
-            "armor_27": 80,
-            "armor_28": {
+            "armor_16": 25,
+            "armor_17": 25,
+            "armor_18": {
                 "vehicleDamageFactor": 0
-            }
+            },
+            "armor_19": 190,
+            "armor_20": 120,
+            "armor_21": 55,
+            "armor_22": 150
         },
         "primaryArmor": [
             "armor_1",
@@ -114,7 +109,14 @@
         "models": {
             "undamaged": "vehicles/italy/It35_Felice/normal/lod0/Hull.model",
             "destroyed": "vehicles/italy/It35_Felice/crash/lod0/Hull.model",
-            "exploded": "vehicles/italy/It35_Felice/crash/lod0/Hull.model"
+            "exploded": "vehicles/italy/It35_Felice/crash/lod0/Hull.model",
+            "sets": {
+                "It35_Felice_RL_3DSt": {
+                    "undamaged": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/normal/lod0/Hull.model",
+                    "destroyed": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/crash/lod0/Hull.model",
+                    "exploded": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/crash/lod0/Hull.model"
+                }
+            }
         },
         "swinging": {
             "lodDist": "FAR",
@@ -157,30 +159,20 @@
         },
         "customizationSlots": {
             "slot": {
-                "slotType": "projectionDecal",
-                "slotId": 15073,
-                "tags": [
-                    "formfactor_rect1x6",
-                    "direction_right_to_left"
-                ],
+                "slotType": "attachment",
+                "slotId": 18000,
                 "position": [
-                    -1.556,
-                    0.983972,
-                    1.94694
-                ],
-                "rotation": [
-                    1.559796,
-                    1.569045,
+                    0.0,
+                    0.0,
                     0.0
                 ],
-                "scale": [
-                    3.129405,
-                    0.221596,
-                    3.129419
+                "rotation": [
+                    0.0,
+                    0.0,
+                    0.0
                 ],
-                "showOn": 16,
-                "clipAngle": 0.922448,
-                "anchorShift": 0.00645
+                "compatibleModels": "It35_Felice_RL_3DSt",
+                "hiddenForUser": "true"
             }
         },
         "customization": {
@@ -221,10 +213,10 @@
             ],
             "brakeForce": 60000,
             "rotationIsAroundCenter": "True",
-            "rotationSpeed": 30,
+            "rotationSpeed": 40,
             "shotDispersionFactors": {
-                "vehicleMovement": 0.18,
-                "vehicleRotation": 0.18
+                "vehicleMovement": 0.24,
+                "vehicleRotation": 0.24
             },
             "bulkHealthFactor": 3.0,
             "maxHealth": 240,
@@ -233,7 +225,14 @@
             "models": {
                 "undamaged": "vehicles/italy/It35_Felice/normal/lod0/Chassis.model",
                 "destroyed": "vehicles/italy/It35_Felice/crash/lod0/Chassis.model",
-                "exploded": "vehicles/italy/It35_Felice/crash/lod0/Chassis.model"
+                "exploded": "vehicles/italy/It35_Felice/crash/lod0/Chassis.model",
+                "sets": {
+                    "It35_Felice_RL_3DSt": {
+                        "undamaged": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/normal/lod0/Chassis.model",
+                        "destroyed": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/crash/lod0/Chassis.model",
+                        "exploded": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/crash/lod0/Chassis.model"
+                    }
+                }
             },
             "traces": {
                 "lodDist": "MEDIUM",
@@ -270,6 +269,7 @@
                                 }
                             },
                             "hullCollider": {
+                                "modelsSet": "It35_Felice_RL_3DSt",
                                 "boxCollider": {
                                     "row0": [
                                         0.3,
@@ -278,18 +278,18 @@
                                     ],
                                     "row1": [
                                         0.0,
-                                        0.742356,
-                                        -0.0
+                                        0.369288,
+                                        0.593211
                                     ],
                                     "row2": [
                                         0.0,
-                                        -0.0,
-                                        7.583916
+                                        -1.007439,
+                                        0.627154
                                     ],
                                     "row3": [
-                                        1.688534,
-                                        1.031417,
-                                        -0.068773
+                                        1.68913,
+                                        1.093466,
+                                        -3.796313
                                     ]
                                 }
                             }
@@ -427,6 +427,14 @@
                     "atlas": {
                         "UTiles": 1,
                         "VTiles": 1
+                    },
+                    "modelSets": {
+                        "It35_Felice_RL_3DSt": {
+                            "segmentModelLeft": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/track/segment_01.model",
+                            "segmentModelRight": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/track/segment_01.model",
+                            "segment2ModelLeft": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/track/segment_02.model",
+                            "segment2ModelRight": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/track/segment_02.model"
+                        }
                     }
                 },
                 "lodDist": "SPLINE_TRACK"
@@ -445,6 +453,12 @@
                     "secSegment": {
                         "model": "vehicles/italy/It35_Felice/track/segment_02.model",
                         "length": 0.075231
+                    },
+                    "modelSets": {
+                        "It35_Felice_RL_3DSt": {
+                            "mainSegmentModel": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/track/segment_01.model",
+                            "secSegmentModel": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/track/segment_02.model"
+                        }
                     },
                     "springsLength": {
                         "backwardMovement": {
@@ -753,6 +767,12 @@
                     "secSegment": {
                         "model": "vehicles/italy/It35_Felice/track/segment_02.model",
                         "length": 0.074883
+                    },
+                    "modelSets": {
+                        "It35_Felice_RL_3DSt": {
+                            "mainSegmentModel": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/track/segment_01.model",
+                            "secSegmentModel": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/track/segment_02.model"
+                        }
                     },
                     "springsLength": {
                         "backwardMovement": {
@@ -1065,29 +1085,32 @@
                 "armor_3": 70,
                 "armor_4": 40,
                 "armor_5": 30,
-                "armor_6": 250,
-                "armor_7": 95,
+                "armor_6": 20,
+                "armor_7": 85,
                 "armor_8": 0,
                 "armor_9": 45,
-                "armor_10": 30,
+                "armor_10": 220,
                 "armor_11": 40,
                 "armor_12": 35,
-                "armor_13": 200,
+                "armor_13": 180,
                 "armor_14": 60,
                 "armor_15": 20,
-                "armor_16": 190,
-                "armor_17": 140,
+                "armor_16": 165,
+                "armor_17": 100,
                 "armor_18": 140,
-                "armor_19": 200,
-                "armor_20": 200,
-                "armor_22": 40,
+                "armor_19": 170,
+                "armor_20": 150,
+                "armor_21": 25,
+                "armor_22": 50,
                 "armor_23": 35,
-                "armor_24": 40,
-                "armor_25": 70,
-                "armor_26": 40,
-                "armor_27": 70,
-                "armor_29": 80,
-                "armor_30": 150
+                "armor_24": 115,
+                "armor_25": 95,
+                "armor_26": 50,
+                "armor_27": 80,
+                "armor_29": 90,
+                "armor_30": 150,
+                "armor_31": 40,
+                "armor_32": 140
             },
             "primaryArmor": [
                 "armor_1",
@@ -1096,28 +1119,28 @@
             ],
             "weight": 15000,
             "maxHealth": 320,
-            "rotationSpeed": 28,
+            "rotationSpeed": 33,
             "turretRotatorHealth": {
                 "maxHealth": 150,
                 "maxRegenHealth": 75,
                 "repairCost": 1.0
             },
-            "circularVisionRadius": 390,
+            "circularVisionRadius": 380,
             "surveyingDeviceHealth": {
                 "maxHealth": 110,
                 "maxRegenHealth": 55,
                 "repairCost": 1.0
             },
             "guns": {
-                "_127mm_Cannone_Da_127F": {
+                "_127mm_Cannone_Da_127_51": {
                     "shotDispersionRadius": 0.42,
-                    "reloadTime": 13.4,
+                    "reloadTime": 14.8,
                     "shotDispersionFactors": {
                         "turretRotation": 0.04,
                         "afterShot": 4,
                         "whileGunDamaged": 2.0
                     },
-                    "aimingTime": 2.7,
+                    "aimingTime": 2.5,
                     "maxAmmo": 40,
                     "pitchLimits": {
                         "minPitch": [
@@ -1129,10 +1152,14 @@
                         "maxPitch": [
                             0.0,
                             8.0,
+                            0.4,
+                            8.0,
                             0.41667,
                             3.0,
                             0.58333,
                             3.0,
+                            0.6,
+                            8.0,
                             1.0,
                             8.0
                         ]
@@ -1144,19 +1171,20 @@
                     "customizationSlots": {
                         "slot": {
                             "slotType": "insigniaOnGun",
-                            "slotId": 49000,
+                            "slotId": 49001,
+                            "compatibleModels": "It35_Felice_RL_3DSt",
                             "rayStart": [
                                 0.0,
-                                -0.004,
-                                5.29
+                                0.0,
+                                1.89
                             ],
                             "rayEnd": [
                                 0.0,
-                                -0.004,
-                                5.89
+                                0.0,
+                                2.49
                             ],
                             "rayUp": [
-                                0.100704,
+                                0.14,
                                 0.0,
                                 0.0
                             ],
@@ -1172,7 +1200,14 @@
                     "models": {
                         "undamaged": "vehicles/italy/It35_Felice/normal/lod0/Gun_03.model",
                         "destroyed": "vehicles/italy/It35_Felice/crash/lod0/Gun_03.model",
-                        "exploded": "vehicles/italy/It35_Felice/crash/lod0/Gun_03.model"
+                        "exploded": "vehicles/italy/It35_Felice/crash/lod0/Gun_03.model",
+                        "sets": {
+                            "It35_Felice_RL_3DSt": {
+                                "undamaged": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/normal/lod0/Gun_03.model",
+                                "destroyed": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/crash/lod0/Gun_03.model",
+                                "exploded": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/crash/lod0/Gun_03.model"
+                            }
+                        }
                     },
                     "hitTester": {
                         "collisionModelServer": "vehicles/italy/It35_Felice/collision/Gun_03.model",
@@ -1194,7 +1229,14 @@
             "models": {
                 "undamaged": "vehicles/italy/It35_Felice/normal/lod0/Turret_01.model",
                 "destroyed": "vehicles/italy/It35_Felice/crash/lod0/Turret_01.model",
-                "exploded": "vehicles/italy/It35_Felice/crash/lod0/Turret_01.model"
+                "exploded": "vehicles/italy/It35_Felice/crash/lod0/Turret_01.model",
+                "sets": {
+                    "It35_Felice_RL_3DSt": {
+                        "undamaged": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/normal/lod0/Turret_01.model",
+                        "destroyed": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/crash/lod0/Turret_01.model",
+                        "exploded": "vehicles/italy/It35_Felice/_skins/It35_Felice_RL_3DSt/crash/lod0/Turret_01.model"
+                    }
+                }
             },
             "hitTester": {
                 "collisionModelServer": "vehicles/italy/It35_Felice/collision/Turret_01.model",
@@ -1286,8 +1328,8 @@
         "detailed": {
             "engines": {
                 "AVDS_1790_2D": {
-                    "smplEnginePower": 810,
-                    "smplFwMaxSpeed": 35
+                    "smplEnginePower": 900,
+                    "smplFwMaxSpeed": 45
                 }
             },
             "chassis": {
