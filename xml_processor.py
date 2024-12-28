@@ -106,6 +106,9 @@ def get_turret_data(data, tank_nation: str):
                     if gun_entry.get('autoreload') is None:
                         gun_entry['autoreload'] = current_gun.get('autoreload')
 
+                    if gun_entry.get('dualAccuracy') is None:
+                        gun_entry['dualAccuracy'] = current_gun.get('dualAccuracy')
+
             guns_arr.append(gun_entry)
 
         turret_armor = [info.get('armor')[info.get('primaryArmor')[0]], info.get('armor')[info.get('primaryArmor')[1]], info.get('armor')[info.get('primaryArmor')[2]]] if info.get('primaryArmor') != None else []
@@ -281,7 +284,6 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
         
     with open(Path("tank_map.json"), "w") as json_file:
         json.dump(tank_map, json_file)
-
 
     # list of tank stats for /tank-stats page
     tank_stats = []
