@@ -666,7 +666,8 @@ mapping = {
     "11345": "b44",   # Crusader 5.5-in. SP
     "12113": "b47",   # FV207
     "11601": "b45",   # FV3805
-    "12369": "b48",   # Conqueror Gun Carriage
+    "12369": "b48",   # Conqueror Gun Carriage,
+    "21585": "b84",   # GSOR the tank
 
     # China
     '49': 'c0',      # Type 59
