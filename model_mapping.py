@@ -86,6 +86,7 @@ mapping = {
     "27409": "g107",  # Tiger II Kuromorimine
     "27665": "g108",  # BT-42 Jatkosota HS
     "27921": "g109",  # Pz.Kpfw. IV Ausf. F2
+    # "27921": "g117",  # Kpz. 3 GST Turm
     "33041": "g129",  # KJPZ TIII Jäger
     "37393": "g146",  # Mittlerer Kpz. Pr. 68 (P)
     "37649": "g147",  # E 77
@@ -635,6 +636,10 @@ mapping = {
     "6225": "b24",    # FV215b
     "15697": "b61",   # Super Conqueror
     "57937": "b226",  # T95/FV4201 Chieftain
+    "21841": "b85",   # Canopener
+    "23377": "b91",   # Contender
+    "23121": "b90",   # Conceiver
+    "22865": "b89",   # Chopper
     "8273": "b32",    # Universal Carrier 2-pdr
     "9041": "b35",    # Alecto
     "8017": "b31",    # Valentine AT
