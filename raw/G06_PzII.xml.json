@@ -186,9 +186,9 @@
         }
     },
     "chassis": {
-        "PzII_ketten_Ausf_A": {
-            "userString": "#germany_vehicles:PzII_ketten_Ausf_A",
-            "shortUserString": "#germany_vehicles:PzII_ketten_Ausf_A_short",
+        "Chassis_G06_PzII": {
+            "userString": "#germany_vehicles:Chassis_G06_PzII",
+            "shortUserString": "#germany_vehicles:Chassis_G06_PzII_short",
             "tags": [],
             "level": 1,
             "price": 300,
@@ -212,8 +212,8 @@
             "rotationIsAroundCenter": "false",
             "rotationSpeed": 35,
             "shotDispersionFactors": {
-                "vehicleMovement": 0.31,
-                "vehicleRotation": 0.31
+                "vehicleMovement": 0.3,
+                "vehicleRotation": 0.3
             },
             "bulkHealthFactor": 3.0,
             "maxHealth": 50,
@@ -441,7 +441,6 @@
                         "length": 0.088013
                     },
                     "collisionHull": {
-                        "bottom": null,
                         "top": {
                             "part": {
                                 "xStart": -2.27197,
@@ -661,7 +660,6 @@
                         "length": 0.088089
                     },
                     "collisionHull": {
-                        "bottom": null,
                         "top": {
                             "part": {
                                 "xStart": -2.27197,
@@ -860,9 +858,9 @@
             },
             "repairTime": 6.85714293
         },
-        "PzII_ketten_Ausf_B": {
-            "userString": "#germany_vehicles:PzII_ketten_Ausf_B",
-            "shortUserString": "#germany_vehicles:PzII_ketten_Ausf_B_short",
+        "Chassis_G06_PzII_2": {
+            "userString": "#germany_vehicles:Chassis_G06_PzII_2",
+            "shortUserString": "#germany_vehicles:Chassis_G06_PzII_2_short",
             "tags": [],
             "level": 2,
             "price": 600,
@@ -1110,7 +1108,6 @@
                         "length": 0.088013
                     },
                     "collisionHull": {
-                        "bottom": null,
                         "top": {
                             "part": {
                                 "xStart": -2.27197,
@@ -1330,7 +1327,6 @@
                         "length": 0.088089
                     },
                     "collisionHull": {
-                        "bottom": null,
                         "top": {
                             "part": {
                                 "xStart": -2.27197,
@@ -1531,9 +1527,9 @@
         }
     },
     "turrets0": {
-        "PzII_Standartturm": {
-            "userString": "#germany_vehicles:PzII_Standartturm",
-            "shortUserString": "#germany_vehicles:PzII_Standartturm_short",
+        "Turret_1_G06_PzII": {
+            "userString": "#germany_vehicles:Turret_1_G06_PzII",
+            "shortUserString": "#germany_vehicles:Turret_1_G06_PzII_short",
             "tags": [
                 "cannotDetach"
             ],
@@ -1572,19 +1568,19 @@
                 "repairCost": 2.0
             },
             "guns": {
-                "_20mm_KwK_30": {
+                "_20mm_Kw_K_38_Ausf_F": {
                     "maxAmmo": 520,
-                    "shotDispersionRadius": 0.59,
-                    "reloadTime": 4.3,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.1,
-                        "afterShot": 1.4,
-                        "whileGunDamaged": 2.0
-                    },
                     "unlocks": {
                         "gun": {
-                            "cost": 35
+                            "cost": 350
                         }
+                    },
+                    "shotDispersionRadius": 0.45,
+                    "reloadTime": 4.2,
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.1,
+                        "afterShot": 1.3,
+                        "whileGunDamaged": 2.0
                     },
                     "armor": {
                         "armor_1": {
@@ -1595,7 +1591,7 @@
                         },
                         "gun": 10
                     },
-                    "aimingTime": 1.7,
+                    "aimingTime": 1.8,
                     "invisibilityFactorAtShot": 0.238,
                     "pitchLimits": {
                         "minPitch": [
@@ -1611,6 +1607,18 @@
                             10.0
                         ]
                     },
+                    "clip": {
+                        "count": 10,
+                        "rate": 450
+                    },
+                    "burst": {
+                        "count": 2,
+                        "rate": 450
+                    },
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
                     "models": {
                         "undamaged": "vehicles/german/G06_PzII/normal/lod0/Gun_01.model",
                         "destroyed": "vehicles/german/G06_PzII/crash/lod0/Gun_01.model",
@@ -1653,6 +1661,7 @@
                         0.003806,
                         0.0
                     ],
+                    "edgeByVisualModel": "false",
                     "camouflage": {
                         "tiling": [
                             0.4,
@@ -1670,24 +1679,11 @@
                         ]
                     }
                 },
-                "_20mm_KwK_38_L55": {
-                    "maxAmmo": 520,
-                    "reloadTime": 4.3,
-                    "aimingTime": 1.6,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.1,
-                        "afterShot": 1.3,
-                        "whileGunDamaged": 2.0
-                    },
+                "_37mm_Kw_K_D_T_4804": {
+                    "maxAmmo": 200,
                     "unlocks": {
                         "turret": {
                             "cost": 320
-                        },
-                        "gun": {
-                            "cost": 160
-                        },
-                        "vehicle": {
-                            "cost": 1680
                         }
                     },
                     "armor": {
@@ -1697,10 +1693,15 @@
                         "armor_2": {
                             "vehicleDamageFactor": 0
                         },
+                        "armor_3": {
+                            "vehicleDamageFactor": 0
+                        },
                         "gun": 10
                     },
-                    "shotDispersionRadius": 0.57,
-                    "invisibilityFactorAtShot": 0.238,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
                     "pitchLimits": {
                         "minPitch": [
                             0.0,
@@ -1715,122 +1716,28 @@
                             10.0
                         ]
                     },
-                    "models": {
-                        "undamaged": "vehicles/german/G06_PzII/normal/lod0/Gun_01.model",
-                        "destroyed": "vehicles/german/G06_PzII/crash/lod0/Gun_01.model",
-                        "exploded": "vehicles/german/G06_PzII/crash/lod0/Gun_01.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/german/G06_PzII/collision/Gun_01.model",
-                        "collisionModelClient": "vehicles/german/G06_PzII/collision_client/Gun_01.model"
-                    },
-                    "effects": "shot_auto",
-                    "reloadEffect": "reload20_45",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "camouflage",
-                            "slotId": 42000,
-                            "anchorPosition": [
-                                -0.404925,
-                                0.001903,
-                                0.503692
-                            ],
-                            "anchorDirection": [
-                                0.0,
-                                0.0,
-                                1.0
-                            ],
-                            "applyTo": 4096
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "shotOffset": [
-                        -0.403034,
-                        0.003806,
-                        0.0
-                    ],
-                    "camouflage": {
-                        "tiling": [
-                            0.4,
-                            0.2,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            113.945,
-                            117.141
-                        ],
-                        "aoTextureSize": [
-                            256.0,
-                            256.0
-                        ]
-                    }
-                },
-                "_20mm_Flak_38_L112": {
-                    "maxAmmo": 520,
+                    "invisibilityFactorAtShot": 0.3,
+                    "shotDispersionRadius": 0.43,
+                    "reloadTime": 2.7,
                     "shotDispersionFactors": {
-                        "turretRotation": 0.1,
-                        "afterShot": 1.3,
+                        "turretRotation": 0.14,
+                        "afterShot": 3,
                         "whileGunDamaged": 2.0
                     },
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 10
-                    },
-                    "shotDispersionRadius": 0.45,
-                    "reloadTime": 4.3,
-                    "invisibilityFactorAtShot": 0.224,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            10.0,
-                            1.0,
-                            10.0
-                        ]
-                    },
-                    "models": {
-                        "undamaged": "vehicles/german/G06_PzII/normal/lod0/Gun_02.model",
-                        "destroyed": "vehicles/german/G06_PzII/crash/lod0/Gun_02.model",
-                        "exploded": "vehicles/german/G06_PzII/crash/lod0/Gun_02.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/german/G06_PzII/collision/Gun_02.model",
-                        "collisionModelClient": "vehicles/german/G06_PzII/collision_client/Gun_02.model"
-                    },
-                    "effects": "shot_auto",
-                    "reloadEffect": "reload20_45",
+                    "aimingTime": 2.1,
                     "customizationSlots": {
                         "slot": {
                             "slotType": "camouflage",
                             "slotId": 42000,
                             "anchorPosition": [
-                                -0.401328,
-                                0.011928,
-                                1.10447
+                                -0.105001,
+                                0.004033,
+                                0.7497
                             ],
                             "anchorDirection": [
                                 -0.0,
-                                0.0,
-                                1.0
+                                1.000074,
+                                0.0
                             ],
                             "applyTo": 4096
                         }
@@ -1843,118 +1750,25 @@
                             ],
                             "camouflage": "GUN"
                         }
-                    },
-                    "shotOffset": [
-                        -0.399707,
-                        0.003543,
-                        0.0
-                    ],
-                    "camouflage": {
-                        "tiling": [
-                            0.37,
-                            0.2,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            110.408,
-                            122.484
-                        ],
-                        "aoTextureSize": [
-                            256.0,
-                            256.0
-                        ]
-                    }
-                },
-                "_20mm_Solothurn_S_18_1000": {
-                    "maxAmmo": 1040,
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 10
-                    },
-                    "reloadTime": 1.6,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.08,
-                        "afterShot": 1.3,
-                        "whileGunDamaged": 2.0
-                    },
-                    "shotDispersionRadius": 0.42,
-                    "invisibilityFactorAtShot": 0.224,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            10.0,
-                            1.0,
-                            10.0
-                        ]
                     },
                     "models": {
-                        "undamaged": "vehicles/german/G06_PzII/normal/lod0/Gun_08.model",
-                        "destroyed": "vehicles/german/G06_PzII/crash/lod0/Gun_08.model",
-                        "exploded": "vehicles/german/G06_PzII/crash/lod0/Gun_08.model"
+                        "undamaged": "vehicles/german/G06_PzII/normal/lod0/Gun_03.model",
+                        "destroyed": "vehicles/german/G06_PzII/crash/lod0/Gun_03.model",
+                        "exploded": "vehicles/german/G06_PzII/crash/lod0/Gun_03.model"
                     },
                     "hitTester": {
-                        "collisionModelServer": "vehicles/german/G06_PzII/collision/Gun_08.model",
-                        "collisionModelClient": "vehicles/german/G06_PzII/collision_client/Gun_08.model"
+                        "collisionModelServer": "vehicles/german/G06_PzII/collision/Gun_03.model",
+                        "collisionModelClient": "vehicles/german/G06_PzII/collision_client/Gun_03.model"
                     },
-                    "effects": "shot_small",
-                    "reloadEffect": "reload20_45",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "camouflage",
-                            "slotId": 42000,
-                            "anchorPosition": [
-                                -0.405094,
-                                0.029657,
-                                0.576392
-                            ],
-                            "anchorDirection": [
-                                -0.0,
-                                0.0,
-                                1.0
-                            ],
-                            "applyTo": 4096
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "shotOffset": [
-                        -0.409237,
-                        0.003543,
-                        0.0
-                    ],
+                    "edgeByVisualModel": "false",
                     "camouflage": {
-                        "tiling": [
-                            0.4,
-                            0.2,
-                            0.0,
-                            0.0
-                        ],
                         "density": [
-                            110.408,
-                            122.484
+                            248.598419,
+                            243.721619
                         ],
                         "aoTextureSize": [
-                            256.0,
-                            256.0
+                            512.0,
+                            512.0
                         ]
                     }
                 }
@@ -2045,14 +1859,19 @@
                 ]
             }
         },
-        "PzII_Luchsturm": {
-            "userString": "#germany_vehicles:PzII_Luchsturm",
-            "shortUserString": "#germany_vehicles:PzII_Luchsturm_short",
+        "Turret_2_G06_PzII": {
+            "userString": "#germany_vehicles:Turret_2_G06_PzII",
+            "shortUserString": "#germany_vehicles:Turret_2_G06_PzII_short",
             "tags": [
                 "cannotDetach"
             ],
             "level": 3,
             "price": 1700,
+            "unlocks": {
+                "vehicle": {
+                    "cost": 1680
+                }
+            },
             "armor": {
                 "armor_1": 30,
                 "armor_2": 20,
@@ -2089,9 +1908,9 @@
                 "repairCost": 2.0
             },
             "guns": {
-                "_20mm_KwK_30": {
+                "_20mm_Kw_K_38_Ausf_F": {
                     "maxAmmo": 640,
-                    "shotDispersionRadius": 0.59,
+                    "shotDispersionRadius": 0.45,
                     "reloadTime": 3.9,
                     "armor": {
                         "armor_1": {
@@ -2104,7 +1923,7 @@
                     },
                     "shotDispersionFactors": {
                         "turretRotation": 0.08,
-                        "afterShot": 1.4,
+                        "afterShot": 1.3,
                         "whileGunDamaged": 2.0
                     },
                     "aimingTime": 1.7,
@@ -2123,6 +1942,18 @@
                             10.0
                         ]
                     },
+                    "clip": {
+                        "count": 10,
+                        "rate": 450
+                    },
+                    "burst": {
+                        "count": 2,
+                        "rate": 450
+                    },
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
                     "models": {
                         "undamaged": "vehicles/german/G06_PzII/normal/lod0/Gun_07.model",
                         "destroyed": "vehicles/german/G06_PzII/crash/lod0/Gun_07.model",
@@ -2160,6 +1991,7 @@
                             "camouflage": "GUN"
                         }
                     },
+                    "edgeByVisualModel": "false",
                     "camouflage": {
                         "tiling": [
                             0.4,
@@ -2177,10 +2009,8 @@
                         ]
                     }
                 },
-                "_20mm_KwK_38_L55": {
-                    "maxAmmo": 640,
-                    "reloadTime": 3.9,
-                    "aimingTime": 1.6,
+                "_37mm_Kw_K_D_T_4804": {
+                    "maxAmmo": 200,
                     "armor": {
                         "armor_1": {
                             "vehicleDamageFactor": 0
@@ -2188,15 +2018,15 @@
                         "armor_2": {
                             "vehicleDamageFactor": 0
                         },
+                        "armor_3": {
+                            "vehicleDamageFactor": 0
+                        },
                         "gun": 10
                     },
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.08,
-                        "afterShot": 1.3,
-                        "whileGunDamaged": 2.0
-                    },
-                    "shotDispersionRadius": 0.57,
-                    "invisibilityFactorAtShot": 0.238,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
                     "pitchLimits": {
                         "minPitch": [
                             0.0,
@@ -2211,30 +2041,28 @@
                             10.0
                         ]
                     },
-                    "models": {
-                        "undamaged": "vehicles/german/G06_PzII/normal/lod0/Gun_07.model",
-                        "destroyed": "vehicles/german/G06_PzII/crash/lod0/Gun_07.model",
-                        "exploded": "vehicles/german/G06_PzII/crash/lod0/Gun_07.model"
+                    "shotDispersionRadius": 0.42,
+                    "reloadTime": 2.4,
+                    "aimingTime": 1.9,
+                    "invisibilityFactorAtShot": 0.3,
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.12,
+                        "afterShot": 3,
+                        "whileGunDamaged": 2.0
                     },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/german/G06_PzII/collision/Gun_07.model",
-                        "collisionModelClient": "vehicles/german/G06_PzII/collision_client/Gun_07.model"
-                    },
-                    "effects": "shot_auto",
-                    "reloadEffect": "reload20_45",
                     "customizationSlots": {
                         "slot": {
                             "slotType": "camouflage",
                             "slotId": 42000,
                             "anchorPosition": [
-                                -0.413818,
-                                0.014794,
-                                0.501741
+                                -0.105001,
+                                0.004033,
+                                0.7497
                             ],
                             "anchorDirection": [
                                 -0.0,
-                                0.0,
-                                1.0
+                                1.000074,
+                                0.0
                             ],
                             "applyTo": 4096
                         }
@@ -2247,195 +2075,25 @@
                             ],
                             "camouflage": "GUN"
                         }
-                    },
-                    "camouflage": {
-                        "tiling": [
-                            0.4,
-                            0.2,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            113.945,
-                            117.141
-                        ],
-                        "aoTextureSize": [
-                            256.0,
-                            256.0
-                        ]
-                    }
-                },
-                "_20mm_Flak_38_L112": {
-                    "maxAmmo": 640,
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 10
-                    },
-                    "reloadTime": 3.9,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.08,
-                        "afterShot": 1.3,
-                        "whileGunDamaged": 2.0
-                    },
-                    "shotDispersionRadius": 0.45,
-                    "invisibilityFactorAtShot": 0.224,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            10.0,
-                            1.0,
-                            10.0
-                        ]
                     },
                     "models": {
-                        "undamaged": "vehicles/german/G06_PzII/normal/lod0/Gun_06.model",
-                        "destroyed": "vehicles/german/G06_PzII/crash/lod0/Gun_06.model",
-                        "exploded": "vehicles/german/G06_PzII/crash/lod0/Gun_06.model"
+                        "undamaged": "vehicles/german/G06_PzII/normal/lod0/Gun_03.model",
+                        "destroyed": "vehicles/german/G06_PzII/crash/lod0/Gun_03.model",
+                        "exploded": "vehicles/german/G06_PzII/crash/lod0/Gun_03.model"
                     },
                     "hitTester": {
-                        "collisionModelServer": "vehicles/german/G06_PzII/collision/Gun_06.model",
-                        "collisionModelClient": "vehicles/german/G06_PzII/collision_client/Gun_06.model"
+                        "collisionModelServer": "vehicles/german/G06_PzII/collision/Gun_03.model",
+                        "collisionModelClient": "vehicles/german/G06_PzII/collision_client/Gun_03.model"
                     },
-                    "effects": "shot_auto",
-                    "reloadEffect": "reload20_45",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "camouflage",
-                            "slotId": 42000,
-                            "anchorPosition": [
-                                -0.413328,
-                                0.001771,
-                                1.10338
-                            ],
-                            "anchorDirection": [
-                                0.0,
-                                0.0,
-                                1.0
-                            ],
-                            "applyTo": 4096
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
+                    "edgeByVisualModel": "false",
                     "camouflage": {
-                        "tiling": [
-                            0.4,
-                            0.2,
-                            0.0,
-                            0.0
-                        ],
                         "density": [
-                            110.408,
-                            122.484
+                            248.598419,
+                            243.721619
                         ],
                         "aoTextureSize": [
-                            256.0,
-                            256.0
-                        ]
-                    }
-                },
-                "_20mm_Solothurn_S_18_1000": {
-                    "maxAmmo": 1040,
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 10
-                    },
-                    "reloadTime": 1.5,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.08,
-                        "afterShot": 1.3,
-                        "whileGunDamaged": 2.0
-                    },
-                    "shotDispersionRadius": 0.38,
-                    "invisibilityFactorAtShot": 0.224,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            10.0,
-                            1.0,
-                            10.0
-                        ]
-                    },
-                    "models": {
-                        "undamaged": "vehicles/german/G06_PzII/normal/lod0/Gun_09.model",
-                        "destroyed": "vehicles/german/G06_PzII/crash/lod0/Gun_09.model",
-                        "exploded": "vehicles/german/G06_PzII/crash/lod0/Gun_09.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/german/G06_PzII/collision/Gun_09.model",
-                        "collisionModelClient": "vehicles/german/G06_PzII/collision_client/Gun_09.model"
-                    },
-                    "effects": "shot_small",
-                    "reloadEffect": "reload20_45",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "camouflage",
-                            "slotId": 42000,
-                            "anchorPosition": [
-                                -0.415528,
-                                0.027657,
-                                0.614782
-                            ],
-                            "anchorDirection": [
-                                -0.0,
-                                0.0,
-                                1.0
-                            ],
-                            "applyTo": 4096
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "camouflage": {
-                        "tiling": [
-                            0.4,
-                            0.2,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            110.408,
-                            122.484
-                        ],
-                        "aoTextureSize": [
-                            256.0,
-                            256.0
+                            512.0,
+                            512.0
                         ]
                     }
                 }
@@ -2528,20 +2186,14 @@
         }
     },
     "engines": {
-        "Maybach_HL57TR": {
+        "Maybach_HL_57_TRM": {
             "unlocks": {
                 "engine": {
                     "cost": 180
                 }
             }
         },
-        "Maybach_HL62TRM": {
-            "unlocks": {
-                "vehicle": {
-                    "cost": 1500
-                }
-            }
-        }
+        "Maybach_HL_62_TRM": "shared"
     },
     "fuelTanks": {
         "Small": "shared"
@@ -2552,17 +2204,17 @@
     "physics": {
         "detailed": {
             "engines": {
-                "Maybach_HL57TR": {
-                    "smplEnginePower": 137.4465,
+                "Maybach_HL_57_TRM": {
+                    "smplEnginePower": 145,
                     "smplFwMaxSpeed": 40
                 },
-                "Maybach_HL62TRM": {
+                "Maybach_HL_62_TRM": {
                     "smplEnginePower": 169.165,
                     "smplFwMaxSpeed": 40
                 }
             },
             "chassis": {
-                "PzII_ketten_Ausf_A": {
+                "Chassis_G06_PzII": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.23345
@@ -2575,7 +2227,7 @@
                         }
                     }
                 },
-                "PzII_ketten_Ausf_B": {
+                "Chassis_G06_PzII_2": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.18515

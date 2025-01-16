@@ -8,48 +8,57 @@
             "0",
             "0"
         ],
-        "price": {
-            "gold": null
-        },
+        "price": 0,
         "notInShop": "true",
         "tags": [
             "notForSale",
-            "avatar",
-            "trigger",
             "poiEquipment"
         ],
         "type": "battleAbilities",
-        "code": "artillery",
+        "messagePostfix": "artillery",
         "soundNotification": "comp_7_ability_ready",
         "script": {
-            "shortDescription": "#artefacts:poi_artillery_aoe/shortDescr",
-            "longDescription": "#artefacts:poi_artillery_aoe/longDescr",
-            "shortFilterAlert": null,
-            "longFilterAlert": null,
-            "cooldownTime": 0,
-            "cooldownFactors": null,
-            "sharedCooldownTime": 0,
-            "consumeAmmo": "true",
-            "disableAllyDamage": "true",
-            "cooldownTimeRespawnFactor": 1,
-            "minApplyRadius": 20,
-            "maxApplyRadius": 300,
-            "requireAssists": "true",
-            "delay": 3,
+            "visualScript": {
+                "server": {
+                    "plan": "PointsOfInterest/abilities/artillery_server"
+                }
+            },
+            "delay": {
+                "exports": [
+                    "vse",
+                    "tooltip"
+                ]
+            },
+            "radius": {
+                "exports": [
+                    "vse",
+                    "tooltip"
+                ]
+            },
+            "damage": {
+                "exports": [
+                    "vse",
+                    "tooltip"
+                ]
+            },
+            "stunDuration": {
+                "exports": [
+                    "vse",
+                    "tooltip"
+                ]
+            },
+            "fraction": {
+                "exports": [
+                    "vse",
+                    "tooltip"
+                ]
+            },
+            "areaShow": "always",
             "duration": 1.0,
-            "maxCount": 1,
-            "shotsNumber": 1,
-            "explodeDestructible": "true",
-            "areaRadius": 25,
             "areaVisual": "content/Interface/TargetPoint/circle_shot_area.visual",
             "areaUsedPrefab": "content/CGFPrefabs/Battle/Consumables/shot_area.prefab",
-            "areaVisibleToEnemies": "false",
             "areaColor": "0xFF25FF25",
-            "areaShow": "before",
-            "noOwner": "false",
-            "attackerType": "ARTILLERY_EQ",
-            "shotSoundPreDelay": 1,
-            "wwsoundShot": "eb_ability_artillery_firing",
+            "requireAssists": "true",
             "effects": {
                 "action": {
                     "shotEffects": "epicArtilleryStrike",
@@ -57,17 +66,6 @@
                     "repeatCount": 15,
                     "repeatDelay": 0,
                     "repeatDelayDeviationPercent": 0
-                }
-            },
-            "actions": {
-                "action": {
-                    "type": "StunVehicleAndSendResults",
-                    "applyTo": "all",
-                    "args": {
-                        "shellCompactDescr": 88858,
-                        "sendAttackResults": "True",
-                        "ignoreStunResistanceDuration": "False"
-                    }
                 }
             }
         }
