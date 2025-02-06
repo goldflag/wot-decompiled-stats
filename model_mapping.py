@@ -462,7 +462,8 @@ mapping = {
     "63265": "a247",     # T32 FL
     "64033": "a250",     # M41 Walker Bulldog FL
     "65569": "a256",     # Stinger
-    "65825": "a257",      # M3A3 Stuart
+    "65825": "a257",     # M3A3 Stuart
+    "66849": "a261",     # Rambo
 
 
     # France
@@ -556,7 +557,8 @@ mapping = {
     "65857": "f257", # AMR P.103
     "32577": "f127", # Char Murat
     "32833": "f128", # ERAC 105 Proto
-
+    "65601": "f256", # SFAC 105
+    # "65873": "f260", # VCS 6X6 TS 90
 
     # UK
     "5201": "b20",    # Cruiser Mk. I
