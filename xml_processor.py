@@ -310,7 +310,6 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
             continue
 
         fetch_models(tank_id)
-        continue
 
         with open(raw_dir / filename) as f:
             data = json.load(f)
