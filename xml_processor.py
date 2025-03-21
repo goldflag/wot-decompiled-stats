@@ -8,9 +8,10 @@ import requests
 import json
 import sys
 import utils
-import model_mapping
 from pathlib import Path
 from dotenv import load_dotenv
+from bs4 import BeautifulSoup
+
 load_dotenv()
 
 nation_to_id = {
@@ -309,7 +310,7 @@ def process_xml_files(source_dir: str, vehicles: dict) -> None:
             continue
 
         fetch_models(tank_id)
-        # continue
+        continue
 
         with open(raw_dir / filename) as f:
             data = json.load(f)
@@ -487,9 +488,23 @@ nationmap = {
 }
 
 def fetch_models(id: int):
-    if str(id) not in model_mapping.mapping:
+    # Load the tank_id_to_code mapping
+    mapping_path = Path("sitedata") / "tank_id_to_code.json"
+    
+    if not mapping_path.exists():
+        print(f"Mapping file not found at {mapping_path}")
+        return
+    
+    with open(mapping_path, 'r', encoding='utf-8') as f:
+        tank_id_to_code = json.load(f)
+    
+    # Convert id to string for dictionary lookup
+    id_str = str(id)
+    
+    if id_str not in tank_id_to_code:
         # print(f"Model not found for tank ID: {id}")
         return  # Exit the function early
+    
     output_path = Path("useful") / str(id) / "armor.json"
 
     if output_path.exists():
@@ -499,7 +514,12 @@ def fetch_models(id: int):
     time.sleep(0.8)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     
-    url = f"https://gamemodels3d.com/games/worldoftanks/data/current/{nationmap.get(model_mapping.mapping[str(id)][0])}/{model_mapping.mapping[str(id)]}/armor/vehicle.model"
+    # Get the vehicle code from our mapping
+    vehicle_code = tank_id_to_code[id_str]
+    # Get the first character of the vehicle code for the nation
+    nation_code = vehicle_code[0]
+    
+    url = f"https://gamemodels3d.com/games/worldoftanks/data/current/{nationmap.get(nation_code)}/{vehicle_code}/armor/vehicle.model"
 
     print("Fetching model for tank ID:", id)
     response = requests.get(url, stream=True)
@@ -514,6 +534,72 @@ def fetch_models(id: int):
     else:
         print("Request failed with status code:", response.status_code)
 
+def download_files(vehicles: dict): 
+    """
+    Downloads the HTML files for each country from gamemodels3d.com,
+    parses them to extract vehicle information, and creates a mapping
+    between tank_id and vehicle code.
+    
+    Args:
+        vehicles: Dictionary of tank data from WG API, keyed by tank_id
+        
+    Returns:
+        Path to the output directory
+    """
+    # Create a directory to store the output files if it doesn't exist
+    output_dir = Path("sitedata")
+    output_dir.mkdir(exist_ok=True)
+    
+    # Get the list of countries from the nationmap values
+    countries = set(nationmap.values())
+    
+    # Dictionary to store the mapping between tank_id and vehicle code
+    tank_id_to_code = {}
+    
+    for country in countries:
+        url = f"https://gamemodels3d.com/games/worldoftanks/vehicles/{country}"
+        
+        print(f"Downloading and parsing data for {country} from {url}")
+        try:
+            response = requests.get(url)
+            
+            if response.status_code == 200:
+                # Parse HTML
+                soup = BeautifulSoup(response.content, 'html.parser')
+                
+                # Find all vehicle links
+                vehicle_links = soup.select('a.button_vehicle')
+                
+                # Extract vehicle code and name
+                vehicle_tuples = []
+                for link in vehicle_links:
+                    href = link.get('href')
+                    title = link.get('title')
+                    if href and title:
+                        vehicle_tuples.append([href, title])
+                
+                # Match vehicle names with WG API data to create mapping
+                for tank_id, tank_info in vehicles.items():
+                    tank_name = tank_info.get("name", "")
+                    for code, name in vehicle_tuples:
+                        # Check if the names match (case-insensitive)
+                        if name.lower() == tank_name.lower():
+                            tank_id_to_code[tank_id] = code
+                            break
+                
+                print(f"Processed {len(vehicle_tuples)} vehicles for {country}")
+            else:
+                print(f"Request failed for {country} with status code: {response.status_code}")
+        except Exception as e:
+            print(f"Error processing {country}: {str(e)}")
+    
+    # Save the tank_id to vehicle code mapping
+    mapping_path = output_dir / "tank_id_to_code.json"
+    with open(mapping_path, 'w', encoding='utf-8') as f_out:
+        json.dump(tank_id_to_code, f_out, ensure_ascii=False, indent=2)
+    
+    print(f"Created mapping for {len(tank_id_to_code)} tanks, saved to {mapping_path}")
+    return output_dir
 
 def fetch_wg_vehicle_data() -> dict: 
     url = "https://api.worldoftanks.com/wot/encyclopedia/vehicles/"
@@ -544,9 +630,10 @@ def fetch_wg_vehicle_data() -> dict:
 
 def main() -> None:
     print("Fetching API data...")
-    source_dir = Path('wot-src/sources/res/scripts/item_defs/vehicles')
     vehicles = fetch_wg_vehicle_data()
+    download_files(vehicles)
     print("Processing XML files...")
+    source_dir = Path('wot-src/sources/res/scripts/item_defs/vehicles')
     process_xml_files(str(source_dir), vehicles)
 
 if __name__ == '__main__':
