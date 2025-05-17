@@ -157,7 +157,7 @@
         "_75mm_KwK_40_L48D": 279,
         "_40mm_37M": 280,
         "_110mm_MGK": 283,
-        "_120mm_Kan_L60": 284,
+        "_120mm_Kan_L_60": 284,
         "_88mm_Kw_K_36_L_56_Typ_101": 286,
         "_88mm_Kw_K_43_L_71_Typ_101": 287,
         "_88mm_Kw_K_36_L_56_Typ_100": 288,
@@ -175,6 +175,18 @@
         "_105mm_Kw_K_L_68_Ausf_E": 300,
         "_75mm_Kw_K_40_L_43_T_3001": 301,
         "_128mm_K44_2_L61_P": 302,
+        "_12_8_cm_Pak_44_L_55_JT": 304,
+        "_8_8_cm_Pak_43_L_71_F": 305,
+        "_12_8_cm_Pak_44_L_55_F": 306,
+        "_8_8_cm_Pak_43_L_71_JP": 307,
+        "_10_5_cm_Pak_L_52_JP": 308,
+        "_7_5_cm_Pak_42_L_70_IV": 309,
+        "_8_8_cm_Pak_L_56_IV": 310,
+        "_7_5_cm_Pak_42_L_70_G": 311,
+        "_7_5_cm_Pak_39_L_48_G": 312,
+        "_7_5_cm_Stu_K_40_L_43_B": 313,
+        "_7_5_cm_Pak_39_L_48_B": 314,
+        "_10_5_cm_Stu_H_42_L_28_B": 315,
         "_105mm_StuH42_L28Pz_SH": 338,
         "_105mm_KwK45_L52_SH": 339,
         "_128mm_L50_SH": 340,
@@ -189,7 +201,7 @@
         "_128mm_KwK44_L55_7x7": 402,
         "_128mm_PaK44_2_L61_FL": 501,
         "_105mm_KwK45_L52_ausf_B_FL": 502,
-        "_128mm_PaK44_L55_FL": 504,
+        "_12_8_cm_Pak_44_L_55_F_FL": 504,
         "_105mm_KwK46_L68_N_FL": 505,
         "_88mm_KwK_43_L71A_IGR": 60001,
         "_88mm_KwK_43_L71_IGR": 60002,
@@ -220,7 +232,15 @@
         "Gun_1_G00_Pillbox_Gun_15cm_SM24": 65101,
         "Gun_1_G00_Pillbox_Gun_10cm_SM24": 65102,
         "Gun_1_G00_Pillbox_Gun_7_5cm_SM24": 65103,
-        "_20mm_KwK_38_L55_StoryMode": 64040
+        "_20mm_KwK_38_L55_StoryMode": 64040,
+        "_50mm_KwK_39_L60_StoryModeStealth": 64041,
+        "_88mm_KwK_36_L56_StoryModeStealth": 64042,
+        "_150mm_sFH13_L17_StoryModeStealth": 64043,
+        "_20mm_KwK_38_L55_StoryModeStealth": 64044,
+        "_75mm_KwK_40_L48_StoryModeStealth": 64045,
+        "_88mm_PaK_43_L71_StoryModeStealth": 64046,
+        "_88mm_PaK_43_L71_StoryModeStealth_1": 64047,
+        "_75mm_KwK45_L100_StoryModeStealth": 64048
     },
     "shared": {
         "_7.92mm_Mauser_EW_141": {
@@ -3384,6 +3404,7 @@
             "tags": [],
             "level": 4,
             "price": 10450,
+            "notInShop": "true",
             "impulse": 0.38,
             "recoil": {
                 "lodDist": "MEDIUM",
@@ -4064,6 +4085,85 @@
                     ]
                 },
                 "_75mm_Sprg.18": {
+                    "defaultPortion": 0.1,
+                    "speed": 740,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        38.0,
+                        38.0
+                    ]
+                }
+            }
+        },
+        "_7_5_cm_Stu_K_40_L_43_B": {
+            "userString": "#germany_vehicles:_7_5_cm_Stu_K_40_L_43_B",
+            "tags": [],
+            "level": 4,
+            "price": 25000,
+            "impulse": 0.38,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.36,
+                "recoilEffect": "medium"
+            },
+            "effects": "shot_medium_mb",
+            "reloadEffect": "reload50_75",
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -17.0,
+                    1.0,
+                    -17.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    6.0,
+                    1.0,
+                    6.0
+                ]
+            },
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "rotationSpeed": 41.125,
+            "reloadTime": 3.88571428571429,
+            "maxAmmo": 87,
+            "aimingTime": 1.71428571428571,
+            "weight": 1437,
+            "maxHealth": 110,
+            "maxRegenHealth": 55,
+            "repairCost": 5,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.39,
+            "shotDispersionFactors": {
+                "turretRotation": 0.08,
+                "afterShot": 3.0,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_75mm_Pzgr_39_B": {
+                    "defaultPortion": 0.9,
+                    "speed": 740,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        103.0,
+                        89.0
+                    ]
+                },
+                "_75mm_Pzgr_40_B": {
+                    "defaultPortion": 0.0,
+                    "speed": 925,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        139.0,
+                        117.0
+                    ]
+                },
+                "_75mm_Sprg_18_B": {
                     "defaultPortion": 0.1,
                     "speed": 740,
                     "gravity": 9.81,
@@ -4950,6 +5050,165 @@
                 }
             }
         },
+        "_7_5_cm_Pak_39_L_48_B": {
+            "userString": "#germany_vehicles:_7_5_cm_Pak_39_L_48_B",
+            "tags": [],
+            "level": 5,
+            "price": 27380,
+            "impulse": 0.38,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.36,
+                "recoilEffect": "medium"
+            },
+            "effects": "shot_medium_mb",
+            "reloadEffect": "reload50_75",
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -17.0,
+                    1.0,
+                    -17.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    6.0,
+                    1.0,
+                    6.0
+                ]
+            },
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "rotationSpeed": 35.0,
+            "reloadTime": 3.86285714285714,
+            "maxAmmo": 87,
+            "aimingTime": 1.71428571428571,
+            "weight": 1520,
+            "maxHealth": 120,
+            "maxRegenHealth": 60,
+            "repairCost": 5,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.37,
+            "shotDispersionFactors": {
+                "turretRotation": 0.08,
+                "afterShot": 3.0,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_75mm_Pzgr_39_E": {
+                    "defaultPortion": 0.95,
+                    "speed": 790,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        110.0,
+                        94.0
+                    ]
+                },
+                "_75mm_Pzgr_40_E": {
+                    "defaultPortion": 0.0,
+                    "speed": 988,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        158.0,
+                        130.0
+                    ]
+                },
+                "_75mm_Sprgr_18_E": {
+                    "defaultPortion": 0.05,
+                    "speed": 790,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        38.0,
+                        38.0
+                    ]
+                }
+            }
+        },
+        "_7_5_cm_Pak_39_L_48_G": {
+            "userString": "#germany_vehicles:_7_5_cm_Pak_39_L_48_G",
+            "shortUserString": "#germany_vehicles:_7_5_cm_Pak_39_L_48_G_short",
+            "tags": [],
+            "level": 5,
+            "price": 27380,
+            "impulse": 0.38,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.36,
+                "recoilEffect": "medium"
+            },
+            "effects": "shot_medium_mb",
+            "reloadEffect": "reload50_75",
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -17.0,
+                    1.0,
+                    -17.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    6.0,
+                    1.0,
+                    6.0
+                ]
+            },
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "rotationSpeed": 35.0,
+            "reloadTime": 3.86285714285714,
+            "maxAmmo": 87,
+            "aimingTime": 1.71428571428571,
+            "weight": 1520,
+            "maxHealth": 120,
+            "maxRegenHealth": 60,
+            "repairCost": 5,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.37,
+            "shotDispersionFactors": {
+                "turretRotation": 0.08,
+                "afterShot": 3.0,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_75mm_Pzgr_39_G": {
+                    "defaultPortion": 0.95,
+                    "speed": 790,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        132.0,
+                        117.0
+                    ]
+                },
+                "_75mm_Pzgr_40_G": {
+                    "defaultPortion": 0.0,
+                    "speed": 988,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        167.0,
+                        142.0
+                    ]
+                },
+                "_75mm_Sprgr_18_G": {
+                    "defaultPortion": 0.05,
+                    "speed": 790,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        38.0,
+                        38.0
+                    ]
+                }
+            }
+        },
         "_75mm_StuK_40_L48A": {
             "userString": "#germany_vehicles:_75mm_StuK_40_L48A",
             "tags": [],
@@ -5732,6 +5991,165 @@
                     ]
                 },
                 "_75mm_Sprg.18L": {
+                    "defaultPortion": 0.05,
+                    "speed": 925,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        38.0,
+                        38.0
+                    ]
+                }
+            }
+        },
+        "_7_5_cm_Pak_42_L_70_G": {
+            "userString": "#germany_vehicles:_7_5_cm_Pak_42_L_70_G",
+            "shortUserString": "#germany_vehicles:_7_5_cm_Pak_42_L_70_G_short",
+            "tags": [],
+            "level": 6,
+            "price": 53000,
+            "impulse": 0.38,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.48,
+                "recoilEffect": "medium"
+            },
+            "effects": "shot_medium_mb",
+            "reloadEffect": "reload50_75",
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -15.0,
+                    1.0,
+                    -15.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    5.0,
+                    1.0,
+                    5.0
+                ]
+            },
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "rotationSpeed": 35.0,
+            "reloadTime": 3.88571428571429,
+            "maxAmmo": 60,
+            "aimingTime": 1.71428571428571,
+            "weight": 1740,
+            "maxHealth": 130,
+            "maxRegenHealth": 65,
+            "repairCost": 5,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.331428571428571,
+            "shotDispersionFactors": {
+                "turretRotation": 0.08,
+                "afterShot": 3.0,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_75mm_Pzgr_39L_G": {
+                    "defaultPortion": 0.95,
+                    "speed": 925,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        150.0,
+                        132.0
+                    ]
+                },
+                "_75mm_Pzgr_40L_G": {
+                    "defaultPortion": 0.0,
+                    "speed": 1156,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        194.0,
+                        174.0
+                    ]
+                },
+                "_75mm_Sprgr_18L_G": {
+                    "defaultPortion": 0.05,
+                    "speed": 925,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        38.0,
+                        38.0
+                    ]
+                }
+            }
+        },
+        "_7_5_cm_Pak_42_L_70_IV": {
+            "userString": "#germany_vehicles:_7_5_cm_Pak_42_L_70_IV",
+            "tags": [],
+            "level": 6,
+            "price": 53000,
+            "impulse": 0.38,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.48,
+                "recoilEffect": "medium"
+            },
+            "effects": "shot_medium_mb",
+            "reloadEffect": "reload50_75",
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -15.0,
+                    1.0,
+                    -15.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    5.0,
+                    1.0,
+                    5.0
+                ]
+            },
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "rotationSpeed": 35.0,
+            "reloadTime": 3.88571428571429,
+            "maxAmmo": 60,
+            "aimingTime": 1.71428571428571,
+            "weight": 1740,
+            "maxHealth": 130,
+            "maxRegenHealth": 65,
+            "repairCost": 5,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.331428571428571,
+            "shotDispersionFactors": {
+                "turretRotation": 0.08,
+                "afterShot": 3.0,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_75mm_Pzgr_39L_IV": {
+                    "defaultPortion": 0.95,
+                    "speed": 925,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        150.0,
+                        132.0
+                    ]
+                },
+                "_75mm_Pzgr_40L_IV": {
+                    "defaultPortion": 0.0,
+                    "speed": 1156,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        194.0,
+                        174.0
+                    ]
+                },
+                "_75mm_Sprgr_18L_IV": {
                     "defaultPortion": 0.05,
                     "speed": 925,
                     "gravity": 9.81,
@@ -6655,6 +7073,85 @@
                 }
             }
         },
+        "_8_8_cm_Pak_L_56_IV": {
+            "userString": "#germany_vehicles:_8_8_cm_Pak_L_56_IV",
+            "tags": [],
+            "level": 7,
+            "price": 66000,
+            "impulse": 0.38,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.38,
+                "recoilEffect": "main"
+            },
+            "effects": "shot_main",
+            "reloadEffect": "reload85_107",
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -15.0,
+                    1.0,
+                    -15.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    5.0,
+                    1.0,
+                    5.0
+                ]
+            },
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "rotationSpeed": 35.0,
+            "reloadTime": 5.86285714285714,
+            "maxAmmo": 50,
+            "aimingTime": 1.71428571428571,
+            "weight": 2050,
+            "maxHealth": 150,
+            "maxRegenHealth": 75,
+            "repairCost": 7,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.354285714285714,
+            "shotDispersionFactors": {
+                "turretRotation": 0.08,
+                "afterShot": 3.0,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_88mm_Pzgr_39_IV": {
+                    "defaultPortion": 0.95,
+                    "speed": 890,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        160.0,
+                        145.0
+                    ]
+                },
+                "_88mm_Pzgr_40_IV": {
+                    "defaultPortion": 0.0,
+                    "speed": 1080,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        198.0,
+                        178.0
+                    ]
+                },
+                "_88mm_Sprgr_18_IV": {
+                    "defaultPortion": 0.05,
+                    "speed": 890,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        44.0,
+                        44.0
+                    ]
+                }
+            }
+        },
         "_88mm_Flak_41_L74": {
             "userString": "#germany_vehicles:_88mm_Flak_41_L74",
             "tags": [],
@@ -7039,6 +7536,164 @@
                     ]
                 },
                 "_88mm_Sprg.43": {
+                    "defaultPortion": 0.05,
+                    "speed": 1000,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        44.0,
+                        44.0
+                    ]
+                }
+            }
+        },
+        "_8_8_cm_Pak_43_L_71_JP": {
+            "userString": "#germany_vehicles:_8_8_cm_Pak_43_L_71_JP",
+            "tags": [],
+            "level": 8,
+            "price": 112180,
+            "impulse": 0.38,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.4,
+                "recoilEffect": "main"
+            },
+            "effects": "shot_main_mb",
+            "reloadEffect": "reload85_107",
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -14.0,
+                    1.0,
+                    -14.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    8.0,
+                    1.0,
+                    8.0
+                ]
+            },
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "rotationSpeed": 30.625,
+            "reloadTime": 6.05714285714286,
+            "maxAmmo": 57,
+            "aimingTime": 2.4,
+            "weight": 2562,
+            "maxHealth": 170,
+            "maxRegenHealth": 85,
+            "repairCost": 7,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.32,
+            "shotDispersionFactors": {
+                "turretRotation": 0.08,
+                "afterShot": 3.0,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_88mm_Pzgr_39_43_JP": {
+                    "defaultPortion": 0.95,
+                    "speed": 1000,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        203.0,
+                        185.0
+                    ]
+                },
+                "_88mm_Pzgr_40_43_JP": {
+                    "defaultPortion": 0.0,
+                    "speed": 1250,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        237.0,
+                        217.0
+                    ]
+                },
+                "_88mm_Sprgr_43_JP": {
+                    "defaultPortion": 0.05,
+                    "speed": 1000,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        44.0,
+                        44.0
+                    ]
+                }
+            }
+        },
+        "_8_8_cm_Pak_43_L_71_F": {
+            "userString": "#germany_vehicles:_8_8_cm_Pak_43_L_71_F",
+            "tags": [],
+            "level": 8,
+            "price": 112180,
+            "impulse": 0.38,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.4,
+                "recoilEffect": "main"
+            },
+            "effects": "shot_main_mb",
+            "reloadEffect": "reload85_107",
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -14.0,
+                    1.0,
+                    -14.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    8.0,
+                    1.0,
+                    8.0
+                ]
+            },
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "rotationSpeed": 30.625,
+            "reloadTime": 6.05714285714286,
+            "maxAmmo": 57,
+            "aimingTime": 2.4,
+            "weight": 2562,
+            "maxHealth": 170,
+            "maxRegenHealth": 85,
+            "repairCost": 7,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.32,
+            "shotDispersionFactors": {
+                "turretRotation": 0.08,
+                "afterShot": 3.0,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_88mm_Pzgr_39_43_F": {
+                    "defaultPortion": 0.95,
+                    "speed": 1000,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        232.0,
+                        218.0
+                    ]
+                },
+                "_88mm_Pzgr_40_43_F": {
+                    "defaultPortion": 0.0,
+                    "speed": 1250,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        272.0,
+                        248.0
+                    ]
+                },
+                "_88mm_Sprgr_43_F": {
                     "defaultPortion": 0.05,
                     "speed": 1000,
                     "gravity": 9.81,
@@ -8964,6 +9619,85 @@
                 }
             }
         },
+        "_10_5_cm_Stu_H_42_L_28_B": {
+            "userString": "#germany_vehicles:_10_5_cm_Stu_H_42_L_28_B",
+            "tags": [],
+            "level": 5,
+            "price": 28000,
+            "impulse": 0.38,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.65,
+                "recoilEffect": "main"
+            },
+            "effects": "shot_large_mb",
+            "reloadEffect": "reload85_107",
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -17.0,
+                    1.0,
+                    -17.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    6.0,
+                    1.0,
+                    6.0
+                ]
+            },
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "rotationSpeed": 35.0,
+            "reloadTime": 7.2,
+            "maxAmmo": 42,
+            "aimingTime": 1.71428571428571,
+            "weight": 2100,
+            "maxHealth": 150,
+            "maxRegenHealth": 75,
+            "repairCost": 8,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.525714285714286,
+            "shotDispersionFactors": {
+                "turretRotation": 0.08,
+                "afterShot": 3.0,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_105mm_Gr_39_H1_A_A": {
+                    "defaultPortion": 0.5,
+                    "speed": 376,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        92.0,
+                        92.0
+                    ]
+                },
+                "_105mm_Gr_39_H1_A_B": {
+                    "defaultPortion": 0.0,
+                    "speed": 376,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        104.0,
+                        104.0
+                    ]
+                },
+                "_105mm_Sprgr_K_B": {
+                    "defaultPortion": 0.5,
+                    "speed": 470,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        53.0,
+                        53.0
+                    ]
+                }
+            }
+        },
         "_105mm_K18_L52": {
             "userString": "#germany_vehicles:_105mm_K18_L52",
             "tags": [],
@@ -9032,6 +9766,85 @@
                     ]
                 },
                 "_105mm_Sprg_L": {
+                    "defaultPortion": 0.1,
+                    "speed": 950,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        60.0,
+                        60.0
+                    ]
+                }
+            }
+        },
+        "_10_5_cm_Pak_L_52_JP": {
+            "userString": "#germany_vehicles:_10_5_cm_Pak_L_52_JP",
+            "tags": [],
+            "level": 8,
+            "price": 116490,
+            "impulse": 0.38,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.3,
+                "recoilEffect": "main"
+            },
+            "effects": "shot_large_mb",
+            "reloadEffect": "reload85_107",
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -17.0,
+                    1.0,
+                    -17.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    8.0,
+                    1.0,
+                    8.0
+                ]
+            },
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "rotationSpeed": 21.875,
+            "reloadTime": 7.40571428571429,
+            "maxAmmo": 42,
+            "aimingTime": 2.28571428571429,
+            "weight": 3000,
+            "maxHealth": 180,
+            "maxRegenHealth": 90,
+            "repairCost": 8,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.342857142857143,
+            "shotDispersionFactors": {
+                "turretRotation": 0.08,
+                "afterShot": 3.0,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_105mm_Pzgr_39L_JP": {
+                    "defaultPortion": 0.9,
+                    "speed": 950,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        208.0,
+                        188.0
+                    ]
+                },
+                "_105mm_Pzgr_40_JP": {
+                    "defaultPortion": 0.0,
+                    "speed": 1188,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        252.0,
+                        238.0
+                    ]
+                },
+                "_105mm_Sprgr_L_JP": {
                     "defaultPortion": 0.1,
                     "speed": 950,
                     "gravity": 9.81,
@@ -11321,8 +12134,8 @@
                 }
             }
         },
-        "_120mm_Kan_L60": {
-            "userString": "#germany_vehicles:_120mm_Kan_L60",
+        "_120mm_Kan_L_60": {
+            "userString": "#germany_vehicles:_120mm_Kan_L_60",
             "tags": [],
             "level": 8,
             "price": 100000,
@@ -11379,7 +12192,7 @@
                         230.0
                     ]
                 },
-                "_120mm_M820_HEATK": {
+                "_120mm_HEATK": {
                     "defaultPortion": 0.0,
                     "speed": 950,
                     "gravity": 9.81,
@@ -12412,7 +13225,7 @@
                 "whileGunDamaged": 2.0
             },
             "shots": {
-                "_128mm_PzGr39L": {
+                "_128mm_Pzgr_39L_JT": {
                     "defaultPortion": 0.9,
                     "speed": 1200,
                     "gravity": 9.81,
@@ -12422,7 +13235,7 @@
                         261.0
                     ]
                 },
-                "_128mm_PzGr43": {
+                "_128mm_Pzgr_43_JT": {
                     "defaultPortion": 0.0,
                     "speed": 1500,
                     "gravity": 9.81,
@@ -12432,7 +13245,7 @@
                         295.0
                     ]
                 },
-                "_128mm_SprG19": {
+                "_128mm_Sprgr_19_JT": {
                     "defaultPortion": 0.1,
                     "speed": 1200,
                     "gravity": 9.81,
@@ -12492,7 +13305,7 @@
                 "whileGunDamaged": 2.0
             },
             "shots": {
-                "_128mm_PzGr39L": {
+                "_128mm_Pzgr_39L_JT": {
                     "defaultPortion": 0.9,
                     "speed": 1200,
                     "gravity": 9.81,
@@ -12502,7 +13315,7 @@
                         261.0
                     ]
                 },
-                "_128mm_PzGr43": {
+                "_128mm_Pzgr_43_JT": {
                     "defaultPortion": 0.0,
                     "speed": 1500,
                     "gravity": 9.81,
@@ -12512,7 +13325,7 @@
                         295.0
                     ]
                 },
-                "_128mm_SprG19": {
+                "_128mm_Sprgr_19_JT": {
                     "defaultPortion": 0.1,
                     "speed": 1200,
                     "gravity": 9.81,
@@ -12752,6 +13565,164 @@
                 }
             }
         },
+        "_12_8_cm_Pak_44_L_55_F": {
+            "userString": "#germany_vehicles:_12_8_cm_Pak_44_L_55_F",
+            "tags": [],
+            "level": 10,
+            "price": 310000,
+            "impulse": 0.56,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.66,
+                "recoilEffect": "large"
+            },
+            "effects": "shot_largeext",
+            "reloadEffect": "reload115_152",
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -24.0,
+                    1.0,
+                    -24.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    8.0,
+                    1.0,
+                    8.0
+                ]
+            },
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "rotationSpeed": 26.25,
+            "reloadTime": 11.84,
+            "maxAmmo": 62,
+            "aimingTime": 2.28571428571429,
+            "weight": 3480,
+            "maxHealth": 220,
+            "maxRegenHealth": 110,
+            "repairCost": 10,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.354285714285714,
+            "shotDispersionFactors": {
+                "turretRotation": 0.08,
+                "afterShot": 3.0,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_128mm_Pzgr_39_F": {
+                    "defaultPortion": 0.9,
+                    "speed": 920,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        246.0,
+                        241.0
+                    ]
+                },
+                "_128mm_Pzgr_40_F": {
+                    "defaultPortion": 0.0,
+                    "speed": 1150,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        311.0,
+                        263.0
+                    ]
+                },
+                "_128mm_Sprgr_18_F": {
+                    "defaultPortion": 0.1,
+                    "speed": 920,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        65.0,
+                        65.0
+                    ]
+                }
+            }
+        },
+        "_12_8_cm_Pak_44_L_55_JT": {
+            "userString": "#germany_vehicles:_12_8_cm_Pak_44_L_55_JT",
+            "tags": [],
+            "level": 10,
+            "price": 310000,
+            "impulse": 0.56,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.66,
+                "recoilEffect": "large"
+            },
+            "effects": "shot_largeext",
+            "reloadEffect": "reload115_152",
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -24.0,
+                    1.0,
+                    -24.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    8.0,
+                    1.0,
+                    8.0
+                ]
+            },
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "rotationSpeed": 26.25,
+            "reloadTime": 11.84,
+            "maxAmmo": 62,
+            "aimingTime": 2.28571428571429,
+            "weight": 3480,
+            "maxHealth": 220,
+            "maxRegenHealth": 110,
+            "repairCost": 10,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.354285714285714,
+            "shotDispersionFactors": {
+                "turretRotation": 0.08,
+                "afterShot": 3.0,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_128mm_Pzgr_39_JT": {
+                    "defaultPortion": 0.9,
+                    "speed": 920,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        246.0,
+                        241.0
+                    ]
+                },
+                "_128mm_Pzgr_40_JT": {
+                    "defaultPortion": 0.0,
+                    "speed": 1150,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        311.0,
+                        263.0
+                    ]
+                },
+                "_128mm_Sprgr_18_JT": {
+                    "defaultPortion": 0.1,
+                    "speed": 920,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        65.0,
+                        65.0
+                    ]
+                }
+            }
+        },
         "_128mm_PaK44_L55A": {
             "userString": "#germany_vehicles:_128mm_PaK44_L55A",
             "tags": [],
@@ -12832,8 +13803,8 @@
                 }
             }
         },
-        "_128mm_PaK44_L55_FL": {
-            "userString": "#germany_vehicles:_128mm_PaK44_L55",
+        "_12_8_cm_Pak_44_L_55_F_FL": {
+            "userString": "#germany_vehicles:_12_8_cm_Pak_44_L_55_F",
             "tags": [],
             "level": 10,
             "price": 310000,
@@ -12880,7 +13851,7 @@
                 "whileGunDamaged": 2.0
             },
             "shots": {
-                "_128mm_PzGr39": {
+                "_128mm_Pzgr_39_F": {
                     "defaultPortion": 0.9,
                     "speed": 920,
                     "gravity": 9.81,
@@ -12890,7 +13861,7 @@
                         241.0
                     ]
                 },
-                "_128mm_PzGr40": {
+                "_128mm_Pzgr_40_F": {
                     "defaultPortion": 0.0,
                     "speed": 1150,
                     "gravity": 9.81,
@@ -12900,7 +13871,7 @@
                         263.0
                     ]
                 },
-                "_128mm_SprG18": {
+                "_128mm_Sprgr_18_F": {
                     "defaultPortion": 0.1,
                     "speed": 920,
                     "gravity": 9.81,
@@ -17208,6 +18179,495 @@
                     "piercingPower": [
                         60.0,
                         35.0
+                    ]
+                }
+            },
+            "notInShop": "True"
+        },
+        "_50mm_KwK_39_L60_StoryModeStealth": {
+            "userString": "#germany_vehicles:_50mm_KwK_39_L60",
+            "tags": [],
+            "level": 4,
+            "price": 13970,
+            "impulse": 0.22,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.42,
+                "recoilEffect": "medium"
+            },
+            "effects": "shot_medium_mb",
+            "reloadEffect": "reload50_75",
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -17.0,
+                    1.0,
+                    -17.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    6.0,
+                    1.0,
+                    6.0
+                ]
+            },
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "rotationSpeed": 41.125,
+            "reloadTime": 4.28571428571429,
+            "maxAmmo": 120,
+            "aimingTime": 2.28571428571429,
+            "weight": 700,
+            "maxHealth": 90,
+            "maxRegenHealth": 45,
+            "repairCost": 3,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.32,
+            "shotDispersionFactors": {
+                "turretRotation": 0.08,
+                "afterShot": 2.5,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_50mm_Pzgr39_StoryModeStealth": {
+                    "defaultPortion": 1.0,
+                    "speed": 835,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        110.0,
+                        94.0
+                    ]
+                }
+            },
+            "notInShop": "True"
+        },
+        "_88mm_KwK_36_L56_StoryModeStealth": {
+            "userString": "#germany_vehicles:_88mm_KwK_36_L56",
+            "tags": [],
+            "level": 7,
+            "price": 66000,
+            "impulse": 0.38,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.38,
+                "recoilEffect": "main"
+            },
+            "effects": "shot_main_mb",
+            "reloadEffect": "reload85_107",
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -17.0,
+                    1.0,
+                    -17.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    6.0,
+                    1.0,
+                    6.0
+                ]
+            },
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "rotationSpeed": 35.0,
+            "reloadTime": 6.85714285714286,
+            "maxAmmo": 92,
+            "aimingTime": 2.28571428571429,
+            "weight": 2050,
+            "maxHealth": 150,
+            "maxRegenHealth": 75,
+            "repairCost": 7,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.377142857142857,
+            "shotDispersionFactors": {
+                "turretRotation": 0.16,
+                "afterShot": 4.0,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_88mm_Pzgr39_StoryModeStealth": {
+                    "defaultPortion": 1.0,
+                    "speed": 773,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        145.0,
+                        129.0
+                    ]
+                }
+            },
+            "notInShop": "True"
+        },
+        "_150mm_sFH13_L17_StoryModeStealth": {
+            "userString": "#germany_vehicles:_150mm_sFH13_L17",
+            "tags": [],
+            "level": 5,
+            "price": 44920,
+            "impulse": 0.56,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.68,
+                "recoilEffect": "huge"
+            },
+            "effects": "shot_huge",
+            "reloadEffect": "reload115_152",
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -45.0,
+                    1.0,
+                    -45.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    4.0,
+                    1.0,
+                    4.0
+                ]
+            },
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "rotationSpeed": 23.675,
+            "reloadTime": 17.1428571428571,
+            "maxAmmo": 22,
+            "aimingTime": 5.14285714285714,
+            "weight": 1200,
+            "maxHealth": 160,
+            "maxRegenHealth": 80,
+            "repairCost": 10,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.525714285714286,
+            "shotDispersionFactors": {
+                "turretRotation": 0.32,
+                "afterShot": 6.0,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_150mm_Sprg_StoryModeStealth": {
+                    "defaultPortion": 1.0,
+                    "speed": 355,
+                    "gravity": 150,
+                    "maxDistance": 10000,
+                    "piercingPower": [
+                        38.0,
+                        38.0
+                    ],
+                    "maxHeight": 263
+                }
+            },
+            "notInShop": "True"
+        },
+        "_20mm_KwK_38_L55_StoryModeStealth": {
+            "userString": "#germany_vehicles:_20mm_KwK_38_L55",
+            "tags": [],
+            "level": 1,
+            "price": 1920,
+            "impulse": 0.06,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.4,
+                "recoilEffect": "auto"
+            },
+            "effects": "shot_auto",
+            "reloadEffect": "reload12_25",
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -20.0,
+                    1.0,
+                    -20.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    10.0,
+                    1.0,
+                    10.0
+                ]
+            },
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "rotationSpeed": 43.75,
+            "reloadTime": 1.48571428571429,
+            "maxAmmo": 620,
+            "aimingTime": 1.37142857142857,
+            "clip": {
+                "count": 10,
+                "rate": 450
+            },
+            "burst": {
+                "count": 2,
+                "rate": 450
+            },
+            "weight": 70,
+            "maxHealth": 40,
+            "maxRegenHealth": 20,
+            "repairCost": 1,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.571428571428571,
+            "shotDispersionFactors": {
+                "turretRotation": 0.08,
+                "afterShot": 1.2,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_20mm_Pzgr39_StoryModeStealth": {
+                    "defaultPortion": 1.0,
+                    "speed": 780,
+                    "gravity": 9.81,
+                    "maxDistance": 400,
+                    "piercingPower": [
+                        28.0,
+                        16.0
+                    ]
+                }
+            },
+            "notInShop": "True"
+        },
+        "_75mm_KwK_40_L48_StoryModeStealth": {
+            "userString": "#germany_vehicles:_75mm_KwK_40_L48",
+            "tags": [],
+            "level": 5,
+            "price": 27380,
+            "impulse": 0.38,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.36,
+                "recoilEffect": "medium"
+            },
+            "effects": "shot_medium_mb",
+            "reloadEffect": "reload50_75",
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -17.0,
+                    1.0,
+                    -17.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    6.0,
+                    1.0,
+                    6.0
+                ]
+            },
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "rotationSpeed": 35.0,
+            "reloadTime": 4.28571428571429,
+            "maxAmmo": 87,
+            "aimingTime": 2.28571428571429,
+            "weight": 1520,
+            "maxHealth": 120,
+            "maxRegenHealth": 60,
+            "repairCost": 5,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.32,
+            "shotDispersionFactors": {
+                "turretRotation": 0.16,
+                "afterShot": 4.0,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_75mm_Pzgr39_StoryModeStealth": {
+                    "defaultPortion": 1.0,
+                    "speed": 790,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        110.0,
+                        94.0
+                    ]
+                }
+            },
+            "notInShop": "True"
+        },
+        "_88mm_PaK_43_L71_StoryModeStealth": {
+            "userString": "#germany_vehicles:_88mm_PaK_43_L71",
+            "tags": [],
+            "level": 8,
+            "price": 112180,
+            "impulse": 0.38,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.4,
+                "recoilEffect": "main"
+            },
+            "effects": "shot_main_mb",
+            "reloadEffect": "reload85_107",
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -14.0,
+                    1.0,
+                    -14.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    8.0,
+                    1.0,
+                    8.0
+                ]
+            },
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "rotationSpeed": 30.625,
+            "reloadTime": 6.05714285714286,
+            "maxAmmo": 57,
+            "aimingTime": 2.4,
+            "weight": 2562,
+            "maxHealth": 170,
+            "maxRegenHealth": 85,
+            "repairCost": 7,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.32,
+            "shotDispersionFactors": {
+                "turretRotation": 0.08,
+                "afterShot": 3.0,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_88mm_Pzgr39_43_StoryModeStealth": {
+                    "defaultPortion": 1.0,
+                    "speed": 1000,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        203.0,
+                        185.0
+                    ]
+                }
+            },
+            "notInShop": "True"
+        },
+        "_88mm_PaK_43_L71_StoryModeStealth_1": {
+            "userString": "#germany_vehicles:_88mm_PaK_43_L71",
+            "tags": [],
+            "level": 8,
+            "price": 112180,
+            "impulse": 0.38,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.4,
+                "recoilEffect": "main"
+            },
+            "effects": "shot_main_mb",
+            "reloadEffect": "reload85_107",
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -14.0,
+                    1.0,
+                    -14.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    8.0,
+                    1.0,
+                    8.0
+                ]
+            },
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "rotationSpeed": 30.625,
+            "reloadTime": 6.05714285714286,
+            "maxAmmo": 57,
+            "aimingTime": 2.4,
+            "weight": 2562,
+            "maxHealth": 170,
+            "maxRegenHealth": 85,
+            "repairCost": 7,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.32,
+            "shotDispersionFactors": {
+                "turretRotation": 0.08,
+                "afterShot": 3.0,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_88mm_Pzgr39_43_StoryModeStealth_1": {
+                    "defaultPortion": 1.0,
+                    "speed": 1000,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        203.0,
+                        185.0
+                    ]
+                }
+            },
+            "notInShop": "True"
+        },
+        "_75mm_KwK45_L100_StoryModeStealth": {
+            "userString": "#germany_vehicles:_75mm_KwK45_L100",
+            "tags": [],
+            "level": 8,
+            "price": 128570,
+            "impulse": 0.38,
+            "recoil": {
+                "lodDist": "MEDIUM",
+                "amplitude": 0.4,
+                "recoilEffect": "medium"
+            },
+            "effects": "shot_medium",
+            "reloadEffect": "reload50_75",
+            "turretYawLimits": [
+                -180.0,
+                180.0
+            ],
+            "pitchLimits": {
+                "minPitch": [
+                    0.0,
+                    -17.0,
+                    1.0,
+                    -17.0
+                ],
+                "maxPitch": [
+                    0.0,
+                    6.0,
+                    1.0,
+                    6.0
+                ]
+            },
+            "rotationSpeed": 35.0,
+            "reloadTime": 4.45714285714286,
+            "maxAmmo": 55,
+            "aimingTime": 2.28571428571429,
+            "weight": 2100,
+            "maxHealth": 140,
+            "maxRegenHealth": 70,
+            "repairCost": 5,
+            "invisibilityFactorAtShot": 0.1,
+            "shotDispersionRadius": 0.297142857142857,
+            "shotDispersionFactors": {
+                "turretRotation": 0.16,
+                "afterShot": 4.0,
+                "whileGunDamaged": 2.0
+            },
+            "shots": {
+                "_75mm_Pzgr39L_StoryModeStealth": {
+                    "defaultPortion": 1.0,
+                    "speed": 945,
+                    "gravity": 9.81,
+                    "maxDistance": 720,
+                    "piercingPower": [
+                        198.0,
+                        184.0
                     ]
                 }
             },
