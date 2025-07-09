@@ -6,7 +6,7 @@
     "id": 33825,
     "tier": 10,
     "type": "heavyTank",
-    "role": "role_HT_support",
+    "role": "role_HT_universal",
     "crew": [
         {
             "primary": "commander",
@@ -16,23 +16,28 @@
         },
         {
             "primary": "gunner",
-            "secondary": [
-                "loader"
-            ]
+            "secondary": []
         },
         {
             "primary": "driver",
             "secondary": []
+        },
+        {
+            "primary": "loader",
+            "secondary": []
         }
     ],
     "price": {
-        "gold": 22500
+        "gold": 100
     },
     "tags": [
         "heavyTank",
-        "role_HT_support",
+        "role_HT_universal",
         "HD",
+        "secret",
+        "testTank",
         "improvedVentilation_class1_user",
+        "tankRammer_class1_user",
         "aimingStabilizer_class1_user",
         "extraHealthReserve_class1_user",
         "antifragmentationLining_heavy_user",
@@ -41,7 +46,7 @@
     ],
     "stats": {
         "speedLimit": {
-            "forward": 50,
+            "forward": 40,
             "backward": 15
         },
         "camo": {
@@ -54,25 +59,19 @@
             {
                 "name": "MBT-B",
                 "id": "Turret_1_A150_MBT_B",
-                "traverse": 40,
-                "viewRange": 400,
+                "traverse": 32,
+                "viewRange": 420,
                 "level": 10,
                 "guns": [
                     {
-                        "name": "120 mm MPP Gun RHD",
-                        "id": "_120mm_MPP_Gun_RHD",
-                        "maxAmmo": 60,
-                        "aimTime": 2.7,
-                        "accuracy": 0.35,
-                        "reloadTime": 45,
-                        "clip": {
-                            "count": 6,
-                            "rate": 17.14
-                        },
-                        "burst": {
-                            "count": 2,
-                            "rate": 120
-                        },
+                        "name": "120 mm RHD",
+                        "id": "_120mm_RHD",
+                        "maxAmmo": 45,
+                        "aimTime": 2.3,
+                        "accuracy": 0.34,
+                        "reloadTime": 10,
+                        "clip": null,
+                        "burst": null,
                         "autoreload": null,
                         "dualGun": null,
                         "twinGun": null,
@@ -109,79 +108,79 @@
                             180.0
                         ],
                         "dispersion": {
-                            "turretRotation": 0.06,
-                            "afterShot": 3.5,
+                            "turretRotation": 0.08,
+                            "afterShot": 4.0,
                             "whileDamaged": 2.0
                         },
                         "level": 10,
-                        "weight": 2340,
+                        "weight": 3340,
                         "shells": [
                             {
                                 "defaultPortion": 0.95,
-                                "speed": 960,
+                                "speed": 1200,
                                 "gravity": 9.81,
                                 "maxDistance": 720,
                                 "piercingPower": [
-                                    260.0,
-                                    242.0
+                                    265.0,
+                                    252.0
                                 ],
                                 "id": 176,
-                                "userString": "#usa_vehicles:_120mm_AP_T_M360",
+                                "userString": "#usa_vehicles:_120mm_M820",
                                 "icon": "ap",
-                                "price": 1040,
+                                "price": 1115,
                                 "kind": "ARMOR_PIERCING",
                                 "caliber": 120,
                                 "isTracer": "true",
                                 "effects": "largeArmorPiercing",
                                 "damage": {
-                                    "armor": 400,
+                                    "armor": 420,
                                     "devices": 165
                                 },
                                 "normalizationAngle": 5,
                                 "ricochetAngle": 70,
                                 "image": "ARMOR_PIERCING",
-                                "name": "AP-T M360"
+                                "name": "M820 AP-T"
                             },
                             {
                                 "defaultPortion": 0.0,
-                                "speed": 1130,
+                                "speed": 1000,
                                 "gravity": 9.81,
                                 "maxDistance": 720,
                                 "piercingPower": [
-                                    305.0,
-                                    265.0
+                                    330.0,
+                                    330.0
                                 ],
                                 "id": 177,
-                                "userString": "#usa_vehicles:_120mm_APCR_T70",
-                                "icon": "ap_cr_premium",
+                                "userString": "#usa_vehicles:_120mm_M820_HEAT",
+                                "icon": "hc_premium",
                                 "price": 4800,
                                 "improved": "true",
-                                "kind": "ARMOR_PIERCING_CR",
+                                "kind": "HOLLOW_CHARGE",
                                 "caliber": 120,
                                 "isTracer": "true",
-                                "effects": "largeAPCR",
+                                "effects": "largeHollowCharge",
                                 "damage": {
-                                    "armor": 400,
+                                    "armor": 420,
                                     "devices": 165
                                 },
-                                "normalizationAngle": 2,
-                                "ricochetAngle": 70,
-                                "image": "ARMOR_PIERCING_CR_PREMIUM",
-                                "name": "APCR T70"
+                                "ricochetAngle": 85,
+                                "piercingPowerLossFactorByDistance": 0.05,
+                                "image": "HOLLOW_CHARGE_PREMIUM",
+                                "name": "M820 HEAT"
                             },
                             {
                                 "defaultPortion": 0.05,
-                                "speed": 960,
+                                "speed": 900,
                                 "gravity": 9.81,
                                 "maxDistance": 720,
                                 "piercingPower": [
-                                    60.0,
-                                    60.0
+                                    90.0,
+                                    90.0
                                 ],
                                 "id": 178,
-                                "userString": "#usa_vehicles:_120mm_HE_M400",
+                                "userString": "#usa_vehicles:_120mm_SDRN1",
                                 "icon": "he_modern",
-                                "price": 618,
+                                "price": 1290,
                                 "kind": "HIGH_EXPLOSIVE",
                                 "mechanics": "MODERN",
                                 "caliber": 120,
@@ -201,7 +200,7 @@
                                     }
                                 },
                                 "image": "HIGH_EXPLOSIVE_MODERN",
-                                "name": "HE M400"
+                                "name": "SDRN1 HE"
                             }
                         ],
                         "dualAccuracy": null
@@ -212,22 +211,22 @@
                     0.337651,
                     1.10727
                 ],
-                "hp": 2000,
-                "weight": 10000,
+                "hp": 2200,
+                "weight": 17000,
                 "viewportHealth": {
                     "maxHealth": 120,
                     "maxRegenHealth": 60,
-                    "repairCost": 2
+                    "repairCost": 1.0
                 },
                 "ringHealth": {
-                    "maxHealth": 185,
-                    "maxRegenHealth": 93,
-                    "repairCost": 10
+                    "maxHealth": 170,
+                    "maxRegenHealth": 85,
+                    "repairCost": 1.0
                 },
                 "armor": [
-                    200,
-                    90,
-                    40
+                    350,
+                    150,
+                    45
                 ],
                 "openTop": false,
                 "pitch": null
@@ -242,27 +241,27 @@
             {
                 "name": "MBT-B",
                 "id": "Chassis_A150_MBT_B",
-                "maxLoad": 48000,
-                "weight": 9000,
+                "maxLoad": 64000,
+                "weight": 11000,
                 "terrainResistance": [
                     1.2,
                     1.3,
                     2.4
                 ],
-                "rotationSpeed": 40,
+                "rotationSpeed": 38,
                 "rotatesInPlace": "true",
                 "dispersion": {
-                    "vehicleMovement": 0.25,
-                    "vehicleRotation": 0.25
+                    "vehicleMovement": 0.14,
+                    "vehicleRotation": 0.14
                 },
-                "repairTime": 6.71999979,
+                "repairTime": 6.85714293,
                 "hullPosition": [
                     0.0,
                     0.862886,
                     0.0
                 ],
                 "maxHealth": 250,
-                "maxRegenHealth": 188,
+                "maxRegenHealth": 190,
                 "level": 10,
                 "armor": 20,
                 "wheeled": false,
@@ -271,40 +270,40 @@
         ],
         "engines": [
             {
-                "userString": "#usa_vehicles:Continental_AVCR_1100_3",
+                "userString": "#usa_vehicles:Continental_AVCR",
                 "tags": [
                     "gasoline"
                 ],
                 "level": 10,
-                "price": 120000,
+                "price": 100000,
                 "notInShop": "true",
-                "wwsoundPC": "eng_Ford_GAA_pc",
-                "wwsoundNPC": "eng_Ford_GAA_npc",
-                "power": 740,
+                "wwsoundPC": "eng_ContinentalR_pc",
+                "wwsoundNPC": "eng_ContinentalR_npc",
+                "power": 1000,
                 "weight": 1200,
-                "maxHealth": 345,
-                "maxRegenHealth": 173,
-                "repairCost": 10,
+                "maxHealth": 260,
+                "maxRegenHealth": 130,
+                "repairCost": 5,
                 "fireStartingChance": 0.2,
-                "rpm_min": 510,
-                "rpm_max": 2632,
-                "name": "Continental AVCR-1100-3",
-                "realPower": 740
+                "rpm_min": 460,
+                "rpm_max": 2125,
+                "name": "Continental AVCR",
+                "realPower": 1000
             }
         ],
         "radios": [
             {
-                "userString": "#usa_vehicles:AN_VRC_3B",
+                "userString": "#usa_vehicles:AN_VRC-3",
                 "tags": [],
                 "level": 10,
                 "notInShop": "true",
-                "price": 55000,
+                "price": 51600,
                 "weight": 160,
-                "distance": 750,
-                "maxHealth": 230,
-                "maxRegenHealth": 115,
+                "distance": 745,
+                "maxHealth": 250,
+                "maxRegenHealth": 75,
                 "repairCost": 3.5,
-                "name": "AN/VRC-3B"
+                "name": "AN/VRC-3"
             }
         ],
         "fuelTank": {
@@ -317,16 +316,16 @@
         },
         "hull": {
             "ammoRackHealth": {
-                "maxHealth": 250,
-                "maxRegenHealth": 188,
-                "repairCost": 10
+                "maxHealth": 260,
+                "maxRegenHealth": 180,
+                "repairCost": 1.0
             },
             "armor": [
-                105,
-                30,
-                30
+                200,
+                90,
+                90
             ],
-            "weight": 22000
+            "weight": 27000
         }
     }
 }

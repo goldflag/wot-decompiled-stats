@@ -87,7 +87,7 @@
         },
         "variants": {
             "hull2": {
-                "turret0": "Turret_2_R43_T-70",
+                "turret0": "Turret_2_T-70",
                 "turretPositions": {
                     "turret": [
                         -0.259156,
@@ -202,8 +202,8 @@
         }
     },
     "chassis": {
-        "Chassis_R43_T-70": {
-            "userString": "#ussr_vehicles:Chassis_R43_T-70",
+        "Chassis_T-70": {
+            "userString": "#ussr_vehicles:Chassis_T-70",
             "tags": [],
             "level": 2,
             "price": 600,
@@ -225,7 +225,7 @@
             ],
             "brakeForce": 9500,
             "rotationIsAroundCenter": "false",
-            "rotationSpeed": 60,
+            "rotationSpeed": 48,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.28,
                 "vehicleRotation": 0.28
@@ -233,7 +233,7 @@
             "bulkHealthFactor": 3.0,
             "maxHealth": 60,
             "maxRegenHealth": 45,
-            "repairCost": 4,
+            "repairCost": 2.5,
             "models": {
                 "undamaged": "vehicles/russian/R43_T70/normal/lod0/Chassis.model",
                 "destroyed": "vehicles/russian/R43_T70/crash/lod0/Chassis.model",
@@ -855,13 +855,18 @@
                     "camouflage": null
                 }
             },
-            "repairTime": 6.66666651
+            "repairTime": 5.71428585
         },
-        "Chassis_R43_T-70_2": {
-            "userString": "#ussr_vehicles:Chassis_R43_T-70_2",
+        "Chassis_T-70_2": {
+            "userString": "#ussr_vehicles:Chassis_T-70_2",
             "tags": [],
             "level": 3,
             "price": 1730,
+            "unlocks": {
+                "vehicle": {
+                    "cost": 3900
+                }
+            },
             "armor": {
                 "leftTrack": 10,
                 "rightTrack": 10
@@ -875,15 +880,15 @@
             ],
             "brakeForce": 11000,
             "rotationIsAroundCenter": "false",
-            "rotationSpeed": 65,
+            "rotationSpeed": 52,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.26,
                 "vehicleRotation": 0.26
             },
             "bulkHealthFactor": 3.0,
-            "maxHealth": 75,
-            "maxRegenHealth": 56,
-            "repairCost": 4,
+            "maxHealth": 70,
+            "maxRegenHealth": 55,
+            "repairCost": 2.5,
             "models": {
                 "undamaged": "vehicles/russian/R43_T70/normal/lod0/Chassis.model",
                 "destroyed": "vehicles/russian/R43_T70/crash/lod0/Chassis.model",
@@ -1505,12 +1510,12 @@
                     "camouflage": null
                 }
             },
-            "repairTime": 6.75555563
+            "repairTime": 5.71428585
         }
     },
     "turrets0": {
-        "Turret_1_R43_T-70": {
-            "userString": "#ussr_vehicles:Turret_1_R43_T-70",
+        "Turret_1_T-70": {
+            "userString": "#ussr_vehicles:Turret_1_T-70",
             "tags": [],
             "level": 2,
             "price": 920,
@@ -1550,7 +1555,7 @@
                 "repairCost": 1.0
             },
             "guns": {
-                "_45mm_20K_T_70": {
+                "_45mm_20K": {
                     "pitchLimits": {
                         "minPitch": [
                             0.0,
@@ -1566,6 +1571,11 @@
                         ]
                     },
                     "maxAmmo": 180,
+                    "unlocks": {
+                        "gun": {
+                            "cost": 160
+                        }
+                    },
                     "armor": {
                         "armor_1": {
                             "vehicleDamageFactor": 0
@@ -1578,9 +1588,9 @@
                         },
                         "gun": 10
                     },
-                    "shotDispersionRadius": 0.4,
+                    "shotDispersionRadius": 0.46,
                     "reloadTime": 2.4,
-                    "aimingTime": 2.2,
+                    "aimingTime": 2.3,
                     "invisibilityFactorAtShot": 0.29,
                     "models": {
                         "undamaged": "vehicles/russian/R43_T70/normal/lod0/Gun_01.model",
@@ -1644,6 +1654,107 @@
                         "density": [
                             102.121,
                             104.787
+                        ],
+                        "aoTextureSize": [
+                            256.0,
+                            256.0
+                        ]
+                    }
+                },
+                "_37mm_ZiS-19": {
+                    "pitchLimits": {
+                        "minPitch": [
+                            0.0,
+                            -25.0,
+                            1.0,
+                            -25.0
+                        ],
+                        "maxPitch": [
+                            0.0,
+                            6.0,
+                            1.0,
+                            6.0
+                        ]
+                    },
+                    "maxAmmo": 300,
+                    "armor": {
+                        "armor_1": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_2": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_3": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "gun": 10
+                    },
+                    "shotDispersionRadius": 0.39,
+                    "reloadTime": 2.4,
+                    "aimingTime": 2.3,
+                    "invisibilityFactorAtShot": 0.3,
+                    "models": {
+                        "undamaged": "vehicles/russian/R43_T70/normal/lod0/Gun_02.model",
+                        "destroyed": "vehicles/russian/R43_T70/crash/lod0/Gun_02.model",
+                        "exploded": "vehicles/russian/R43_T70/crash/lod0/Gun_02.model"
+                    },
+                    "hitTester": {
+                        "collisionModelServer": "vehicles/russian/R43_T70/collision/Gun_02.model",
+                        "collisionModelClient": "vehicles/russian/R43_T70/collision_client/Gun_02.model"
+                    },
+                    "effects": "shot_small",
+                    "reloadEffect": "reload20_45",
+                    "customizationSlots": {
+                        "slot": {
+                            "slotType": "projectionDecal",
+                            "slotId": 45001,
+                            "tags": [
+                                "formfactor_rect1x3"
+                            ],
+                            "position": [
+                                -0.302752,
+                                1.83168,
+                                0.627138
+                            ],
+                            "rotation": [
+                                0.835495,
+                                -0.001748,
+                                3.14158
+                            ],
+                            "scale": [
+                                0.780732,
+                                0.393448,
+                                0.78073
+                            ],
+                            "showOn": 4096,
+                            "clipAngle": 0.949469,
+                            "anchorShift": 0.060711
+                        }
+                    },
+                    "customization": {
+                        "customizableVehicleAreas": {
+                            "paint": [
+                                "GUN",
+                                "GUN_2"
+                            ],
+                            "camouflage": "GUN"
+                        }
+                    },
+                    "shotOffset": [
+                        -0.171777,
+                        0.034375,
+                        0.0
+                    ],
+                    "camouflage": {
+                        "tiling": [
+                            0.9,
+                            0.9,
+                            0.0,
+                            0.0
+                        ],
+                        "density": [
+                            98.4295,
+                            113.201
                         ],
                         "aoTextureSize": [
                             256.0,
@@ -1738,8 +1849,8 @@
                 ]
             }
         },
-        "Turret_2_R43_T-70": {
-            "userString": "#ussr_vehicles:Turret_2_R43_T-70",
+        "Turret_2_T-70": {
+            "userString": "#ussr_vehicles:Turret_2_T-70",
             "tags": [],
             "level": 3,
             "price": 1750,
@@ -1779,7 +1890,7 @@
             },
             "invisibilityFactor": 0.936,
             "guns": {
-                "_45mm_20K_T_70": {
+                "_45mm_20K": {
                     "pitchLimits": {
                         "minPitch": [
                             0.0,
@@ -1807,7 +1918,7 @@
                         },
                         "gun": 10
                     },
-                    "shotDispersionRadius": 0.38,
+                    "shotDispersionRadius": 0.46,
                     "reloadTime": 2.3,
                     "aimingTime": 2.1,
                     "shotDispersionFactors": {
@@ -1885,12 +1996,113 @@
                         ]
                     }
                 },
-                "_45mm_VT_42_T_70": {
-                    "unlocks": {
-                        "vehicle": {
-                            "cost": 3900
+                "_37mm_ZiS-19": {
+                    "pitchLimits": {
+                        "minPitch": [
+                            0.0,
+                            -25.0,
+                            1.0,
+                            -25.0
+                        ],
+                        "maxPitch": [
+                            0.0,
+                            6.0,
+                            1.0,
+                            6.0
+                        ]
+                    },
+                    "maxAmmo": 300,
+                    "armor": {
+                        "armor_1": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_2": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_3": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "gun": 10
+                    },
+                    "shotDispersionRadius": 0.39,
+                    "reloadTime": 2.3,
+                    "aimingTime": 2.1,
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.14,
+                        "afterShot": 4.0,
+                        "whileGunDamaged": 2.0
+                    },
+                    "invisibilityFactorAtShot": 0.3,
+                    "models": {
+                        "undamaged": "vehicles/russian/R43_T70/normal/lod0/Gun_04.model",
+                        "destroyed": "vehicles/russian/R43_T70/crash/lod0/Gun_04.model",
+                        "exploded": "vehicles/russian/R43_T70/crash/lod0/Gun_04.model"
+                    },
+                    "hitTester": {
+                        "collisionModelServer": "vehicles/russian/R43_T70/collision/Gun_04.model",
+                        "collisionModelClient": "vehicles/russian/R43_T70/collision_client/Gun_04.model"
+                    },
+                    "effects": "shot_small",
+                    "reloadEffect": "reload20_45",
+                    "customizationSlots": {
+                        "slot": {
+                            "slotType": "projectionDecal",
+                            "slotId": 45000,
+                            "tags": [
+                                "formfactor_rect1x2"
+                            ],
+                            "position": [
+                                -0.263634,
+                                1.71305,
+                                0.797197
+                            ],
+                            "rotation": [
+                                1.31912,
+                                -0.002362,
+                                3.14094
+                            ],
+                            "scale": [
+                                0.812234,
+                                0.409323,
+                                0.812236
+                            ],
+                            "showOn": 4096,
+                            "clipAngle": 0.621325,
+                            "anchorShift": 0.17583
                         }
                     },
+                    "customization": {
+                        "customizableVehicleAreas": {
+                            "paint": [
+                                "GUN",
+                                "GUN_2"
+                            ],
+                            "camouflage": "GUN"
+                        }
+                    },
+                    "shotOffset": [
+                        -0.328361,
+                        0.027111,
+                        0.0
+                    ],
+                    "camouflage": {
+                        "tiling": [
+                            0.9,
+                            0.9,
+                            0.0,
+                            0.0
+                        ],
+                        "density": [
+                            98.4295,
+                            113.201
+                        ],
+                        "aoTextureSize": [
+                            256.0,
+                            256.0
+                        ]
+                    }
+                },
+                "_45mm_VT-42": {
                     "pitchLimits": {
                         "minPitch": [
                             0.0,
@@ -2085,14 +2297,14 @@
         }
     },
     "engines": {
-        "GAZ_203_T_70": {
+        "GAZ-203": {
             "unlocks": {
                 "engine": {
                     "cost": 240
                 }
             }
         },
-        "M_80_T_70": "shared"
+        "M-80": "shared"
     },
     "fuelTanks": {
         "Medium": "shared"
@@ -2110,17 +2322,17 @@
     "physics": {
         "detailed": {
             "engines": {
-                "GAZ_203_T_70": {
-                    "smplEnginePower": 160,
+                "GAZ-203": {
+                    "smplEnginePower": 148.0194,
                     "smplFwMaxSpeed": 45
                 },
-                "M_80_T_70": {
-                    "smplEnginePower": 185,
+                "M-80": {
+                    "smplEnginePower": 179.7378,
                     "smplFwMaxSpeed": 45
                 }
             },
             "chassis": {
-                "Chassis_R43_T-70": {
+                "Chassis_T-70": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.18515
@@ -2131,10 +2343,9 @@
                         "firm": {
                             "rollingFriction": 0.0966
                         }
-                    },
-                    "axleCount": 5
+                    }
                 },
-                "Chassis_R43_T-70_2": {
+                "Chassis_T-70_2": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.16905
@@ -2145,8 +2356,7 @@
                         "firm": {
                             "rollingFriction": 0.08855
                         }
-                    },
-                    "axleCount": 5
+                    }
                 }
             }
         }

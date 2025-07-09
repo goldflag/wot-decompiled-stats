@@ -25,10 +25,10 @@
         "backward": 12
     },
     "invisibility": {
-        "moving": 0.058,
-        "still": 0.116,
+        "moving": 0.055,
+        "still": 0.109,
         "camouflageBonus": 0.02,
-        "firePenalty": 0.174
+        "firePenalty": 0.164
     },
     "optDevsOverrides": {
         "camouflageNet": {
@@ -83,13 +83,27 @@
             "armor_4"
         ],
         "weight": 25350,
-        "maxHealth": 1200,
+        "maxHealth": 1120,
         "ammoBayHealth": {
             "maxHealth": 200,
             "maxRegenHealth": 135,
             "repairCost": 1.0
         },
-        "variants": null,
+        "variants": {
+            "hull2": {
+                "turret0": "PzVI_Porsche_Turm",
+                "turretPositions": {
+                    "turret": [
+                        0.001037,
+                        0.742058,
+                        -0.166892
+                    ]
+                },
+                "turretHardPoints": {
+                    "hardPoint": "HP_turretJoint_2"
+                }
+            }
+        },
         "models": {
             "undamaged": "vehicles/german/G04_PzVI_Tiger_I/normal/lod0/Hull.model",
             "destroyed": "vehicles/german/G04_PzVI_Tiger_I/crash/lod0/Hull.model",
@@ -133,12 +147,12 @@
         "turretPositions": {
             "turret": [
                 0.001037,
-                0.742058,
-                -0.166892
+                0.772058,
+                -0.166712
             ]
         },
         "turretHardPoints": {
-            "hardPoint": "HP_turretJoint_2"
+            "hardPoint": "HP_turretJoint_1"
         },
         "hitTester": {
             "collisionModelServer": "vehicles/german/G04_PzVI_Tiger_I/collision/Hull.model",
@@ -191,8 +205,8 @@
         }
     },
     "chassis": {
-        "Chassis_G04_PzVI_Tiger_I": {
-            "userString": "#germany_vehicles:Chassis_G04_PzVI_Tiger_I",
+        "PzVI_Standardketten": {
+            "userString": "#germany_vehicles:PzVI_Standardketten",
             "tags": [],
             "level": 6,
             "price": 15000,
@@ -206,7 +220,7 @@
                 "rightTrack": 40
             },
             "weight": 19000,
-            "maxLoad": 58000,
+            "maxLoad": 57000,
             "terrainResistance": [
                 1.3,
                 1.5,
@@ -837,8 +851,8 @@
             },
             "repairTime": 8
         },
-        "Chassis_G04_PzVI_Tiger_I_2": {
-            "userString": "#germany_vehicles:Chassis_G04_PzVI_Tiger_I_2",
+        "PzVI_Vetstaerktketten": {
+            "userString": "#germany_vehicles:PzVI_Vetstaerktketten",
             "tags": [],
             "level": 7,
             "price": 21600,
@@ -1482,9 +1496,485 @@
         }
     },
     "turrets0": {
-        "Turret_2_G04_PzVI_Tiger_I": {
-            "userString": "#germany_vehicles:Turret_2_G04_PzVI_Tiger_I",
-            "shortUserString": "#germany_vehicles:Turret_2_G04_PzVI_Tiger_I_short",
+        "PzVI_Anfangsturm": {
+            "userString": "#germany_vehicles:PzVI_Anfangsturm",
+            "shortUserString": "#germany_vehicles:PzVI_Anfangsturm_short",
+            "tags": [],
+            "level": 7,
+            "price": 15820,
+            "armor": {
+                "armor_1": 100,
+                "armor_2": 100,
+                "armor_3": 80,
+                "armor_4": 80,
+                "armor_5": 25,
+                "armor_6": 25,
+                "armor_7": 50,
+                "armor_8": 0,
+                "armor_9": 60,
+                "armor_10": 80,
+                "armor_11": 80,
+                "armor_12": 80,
+                "armor_14": 25,
+                "armor_16": 100
+            },
+            "primaryArmor": [
+                "armor_1",
+                "armor_3",
+                "armor_4"
+            ],
+            "weight": 8250,
+            "maxHealth": 280,
+            "rotationSpeed": 24,
+            "turretRotatorHealth": {
+                "maxHealth": 140,
+                "maxRegenHealth": 70,
+                "repairCost": 1.0
+            },
+            "circularVisionRadius": 370,
+            "surveyingDeviceHealth": {
+                "maxHealth": 90,
+                "maxRegenHealth": 45,
+                "repairCost": 2.0
+            },
+            "guns": {
+                "_75mm_KwK_L70": {
+                    "maxAmmo": 130,
+                    "unlocks": {
+                        "gun": {
+                            "cost": 3800
+                        }
+                    },
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.12,
+                        "afterShot": 4.0,
+                        "whileGunDamaged": 2.0
+                    },
+                    "armor": {
+                        "armor_1": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_2": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_4": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "gun": 20
+                    },
+                    "shotDispersionRadius": 0.35,
+                    "reloadTime": 4,
+                    "aimingTime": 2.3,
+                    "invisibilityFactorAtShot": 0.234,
+                    "pitchLimits": {
+                        "minPitch": [
+                            0.0,
+                            -15.0,
+                            1.0,
+                            -15.0
+                        ],
+                        "maxPitch": [
+                            0.0,
+                            8.0,
+                            0.40856,
+                            8.0,
+                            0.472222,
+                            6.0,
+                            0.527778,
+                            6.0,
+                            0.59144,
+                            8.0,
+                            1.0,
+                            8.0
+                        ]
+                    },
+                    "models": {
+                        "undamaged": "vehicles/german/G04_PzVI_Tiger_I/normal/lod0/Gun_01.model",
+                        "destroyed": "vehicles/german/G04_PzVI_Tiger_I/crash/lod0/Gun_01.model",
+                        "exploded": "vehicles/german/G04_PzVI_Tiger_I/crash/lod0/Gun_01.model",
+                        "sets": {
+                            "G04_PzVI_Tiger_I_E_3DSt": {
+                                "undamaged": "vehicles/german/G04_PzVI_Tiger_I/_skins/G04_PzVI_Tiger_I_E_3DSt/normal/lod0/Gun_01.model",
+                                "destroyed": "vehicles/german/G04_PzVI_Tiger_I/_skins/G04_PzVI_Tiger_I_E_3DSt/crash/lod0/Gun_01.model",
+                                "exploded": "vehicles/german/G04_PzVI_Tiger_I/_skins/G04_PzVI_Tiger_I_E_3DSt/crash/lod0/Gun_01.model"
+                            }
+                        }
+                    },
+                    "hitTester": {
+                        "collisionModelServer": "vehicles/german/G04_PzVI_Tiger_I/collision/Gun_01.model",
+                        "collisionModelClient": "vehicles/german/G04_PzVI_Tiger_I/collision_client/Gun_01.model"
+                    },
+                    "effects": "shot_medium_mb",
+                    "reloadEffect": "reload50_75",
+                    "customizationSlots": {
+                        "slot": {
+                            "slotType": "insigniaOnGun",
+                            "slotId": 49000,
+                            "rayStart": [
+                                0.001002,
+                                0.023551,
+                                3.63604
+                            ],
+                            "rayEnd": [
+                                0.001002,
+                                0.023551,
+                                4.13904
+                            ],
+                            "rayUp": [
+                                0.075,
+                                0.0,
+                                0.0
+                            ],
+                            "size": 0.503
+                        }
+                    },
+                    "customization": {
+                        "customizableVehicleAreas": {
+                            "paint": [
+                                "GUN",
+                                "GUN_2"
+                            ],
+                            "camouflage": "GUN"
+                        }
+                    },
+                    "camouflage": {
+                        "tiling": [
+                            0.6,
+                            0.6,
+                            0.0,
+                            0.0
+                        ],
+                        "density": [
+                            91.425,
+                            93.1735
+                        ],
+                        "aoTextureSize": [
+                            512.0,
+                            512.0
+                        ]
+                    }
+                },
+                "_88mm_KwK_36_L56": {
+                    "maxAmmo": 92,
+                    "unlocks": {
+                        "turret": {
+                            "cost": 11130
+                        }
+                    },
+                    "reloadTime": 6.3,
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.12,
+                        "afterShot": 4.0,
+                        "whileGunDamaged": 2.0
+                    },
+                    "armor": {
+                        "armor_1": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_2": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_4": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "gun": 35
+                    },
+                    "shotDispersionRadius": 0.38,
+                    "aimingTime": 2.3,
+                    "invisibilityFactorAtShot": 0.238,
+                    "pitchLimits": {
+                        "minPitch": [
+                            0.0,
+                            -15.0,
+                            1.0,
+                            -15.0
+                        ],
+                        "maxPitch": [
+                            0.0,
+                            8.0,
+                            0.40856,
+                            8.0,
+                            0.472222,
+                            5.0,
+                            0.527778,
+                            5.0,
+                            0.59144,
+                            8.0,
+                            1.0,
+                            8.0
+                        ]
+                    },
+                    "models": {
+                        "undamaged": "vehicles/german/G04_PzVI_Tiger_I/normal/lod0/Gun_07.model",
+                        "destroyed": "vehicles/german/G04_PzVI_Tiger_I/crash/lod0/Gun_07.model",
+                        "exploded": "vehicles/german/G04_PzVI_Tiger_I/crash/lod0/Gun_07.model",
+                        "sets": {
+                            "G04_PzVI_Tiger_I_E_3DSt": {
+                                "undamaged": "vehicles/german/G04_PzVI_Tiger_I/_skins/G04_PzVI_Tiger_I_E_3DSt/normal/lod0/Gun_07.model",
+                                "destroyed": "vehicles/german/G04_PzVI_Tiger_I/_skins/G04_PzVI_Tiger_I_E_3DSt/crash/lod0/Gun_07.model",
+                                "exploded": "vehicles/german/G04_PzVI_Tiger_I/_skins/G04_PzVI_Tiger_I_E_3DSt/crash/lod0/Gun_07.model"
+                            }
+                        }
+                    },
+                    "hitTester": {
+                        "collisionModelServer": "vehicles/german/G04_PzVI_Tiger_I/collision/Gun_07.model",
+                        "collisionModelClient": "vehicles/german/G04_PzVI_Tiger_I/collision_client/Gun_07.model"
+                    },
+                    "effects": "shot_main_mb",
+                    "reloadEffect": "reload85_107",
+                    "customizationSlots": {
+                        "slot": {
+                            "slotType": "insigniaOnGun",
+                            "slotId": 49000,
+                            "rayStart": [
+                                3.7e-05,
+                                0.022151,
+                                3.17958
+                            ],
+                            "rayEnd": [
+                                3.7e-05,
+                                0.022151,
+                                3.68258
+                            ],
+                            "rayUp": [
+                                0.069,
+                                0.0,
+                                0.0
+                            ],
+                            "size": 0.503
+                        }
+                    },
+                    "customization": {
+                        "customizableVehicleAreas": {
+                            "paint": [
+                                "GUN",
+                                "GUN_2"
+                            ],
+                            "camouflage": "GUN"
+                        }
+                    },
+                    "camouflage": {
+                        "tiling": [
+                            0.505,
+                            0.505,
+                            0.0,
+                            0.0
+                        ],
+                        "density": [
+                            95.595,
+                            94.9889
+                        ],
+                        "aoTextureSize": [
+                            512.0,
+                            512.0
+                        ]
+                    }
+                },
+                "_105mm_StuH42_L28Pz": {
+                    "maxAmmo": 70,
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.12,
+                        "afterShot": 4.0,
+                        "whileGunDamaged": 2.0
+                    },
+                    "armor": {
+                        "armor_1": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_2": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_4": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "gun": 40
+                    },
+                    "shotDispersionRadius": 0.55,
+                    "aimingTime": 2.3,
+                    "invisibilityFactorAtShot": 0.209,
+                    "pitchLimits": {
+                        "minPitch": [
+                            0.0,
+                            -15.0,
+                            1.0,
+                            -15.0
+                        ],
+                        "maxPitch": [
+                            0.0,
+                            8.0,
+                            0.40856,
+                            8.0,
+                            0.472222,
+                            4.0,
+                            0.527778,
+                            4.0,
+                            0.59144,
+                            8.0,
+                            1.0,
+                            8.0
+                        ]
+                    },
+                    "models": {
+                        "undamaged": "vehicles/german/G04_PzVI_Tiger_I/normal/lod0/Gun_03.model",
+                        "destroyed": "vehicles/german/G04_PzVI_Tiger_I/crash/lod0/Gun_03.model",
+                        "exploded": "vehicles/german/G04_PzVI_Tiger_I/crash/lod0/Gun_03.model",
+                        "sets": {
+                            "G04_PzVI_Tiger_I_E_3DSt": {
+                                "undamaged": "vehicles/german/G04_PzVI_Tiger_I/_skins/G04_PzVI_Tiger_I_E_3DSt/normal/lod0/Gun_03.model",
+                                "destroyed": "vehicles/german/G04_PzVI_Tiger_I/_skins/G04_PzVI_Tiger_I_E_3DSt/crash/lod0/Gun_03.model",
+                                "exploded": "vehicles/german/G04_PzVI_Tiger_I/_skins/G04_PzVI_Tiger_I_E_3DSt/crash/lod0/Gun_03.model"
+                            }
+                        }
+                    },
+                    "hitTester": {
+                        "collisionModelServer": "vehicles/german/G04_PzVI_Tiger_I/collision/Gun_03.model",
+                        "collisionModelClient": "vehicles/german/G04_PzVI_Tiger_I/collision_client/Gun_03.model"
+                    },
+                    "effects": "shot_large_mb",
+                    "reloadEffect": "reload85_107",
+                    "customizationSlots": {
+                        "slot": {
+                            "slotType": "insigniaOnGun",
+                            "slotId": 49000,
+                            "rayStart": [
+                                1e-06,
+                                0.021321,
+                                1.47768
+                            ],
+                            "rayEnd": [
+                                1e-06,
+                                0.021321,
+                                1.98068
+                            ],
+                            "rayUp": [
+                                0.098,
+                                0.0,
+                                0.0
+                            ],
+                            "size": 0.503
+                        }
+                    },
+                    "customization": {
+                        "customizableVehicleAreas": {
+                            "paint": [
+                                "GUN",
+                                "GUN_2"
+                            ],
+                            "camouflage": "GUN"
+                        }
+                    },
+                    "camouflage": {
+                        "tiling": [
+                            0.49,
+                            0.49,
+                            0.0,
+                            0.0
+                        ],
+                        "density": [
+                            92.6424,
+                            92.6443
+                        ],
+                        "aoTextureSize": [
+                            512.0,
+                            512.0
+                        ]
+                    }
+                }
+            },
+            "models": {
+                "undamaged": "vehicles/german/G04_PzVI_Tiger_I/normal/lod0/Turret_01.model",
+                "destroyed": "vehicles/german/G04_PzVI_Tiger_I/crash/lod0/Turret_01.model",
+                "exploded": "vehicles/german/G04_PzVI_Tiger_I/crash/lod0/Turret_01.model",
+                "sets": {
+                    "G04_PzVI_Tiger_I_E_3DSt": {
+                        "undamaged": "vehicles/german/G04_PzVI_Tiger_I/_skins/G04_PzVI_Tiger_I_E_3DSt/normal/lod0/Turret_01.model",
+                        "destroyed": "vehicles/german/G04_PzVI_Tiger_I/_skins/G04_PzVI_Tiger_I_E_3DSt/crash/lod0/Turret_01.model",
+                        "exploded": "vehicles/german/G04_PzVI_Tiger_I/_skins/G04_PzVI_Tiger_I_E_3DSt/crash/lod0/Turret_01.model"
+                    }
+                }
+            },
+            "hitTester": {
+                "collisionModelServer": "vehicles/german/G04_PzVI_Tiger_I/collision/Turret_01.model",
+                "collisionModelClient": "vehicles/german/G04_PzVI_Tiger_I/collision_client/Turret_01.model"
+            },
+            "gunPosition": [
+                -0.001039,
+                0.447133,
+                0.883142
+            ],
+            "physicsShape": [
+                0.922,
+                0.006,
+                1.001,
+                0.0,
+                0.639,
+                0.035,
+                0.878,
+                0.691,
+                0.309,
+                0.5,
+                0.218,
+                0.5,
+                0.149,
+                0.547,
+                0.05
+            ],
+            "wwturretRotatorSoundManual": "tur_mech_trav",
+            "customizationSlots": {
+                "slot": {
+                    "slotType": "projectionDecal",
+                    "slotId": 35032,
+                    "tags": [
+                        "formfactor_square",
+                        "direction_left_to_right"
+                    ],
+                    "compatibleModels": "G04_PzVI_Tiger_I_E_3DSt",
+                    "position": [
+                        0.794073,
+                        2.417706,
+                        -0.446852
+                    ],
+                    "rotation": [
+                        1.963771,
+                        -1.300972,
+                        0.147312
+                    ],
+                    "scale": [
+                        0.560571,
+                        0.560572,
+                        0.560572
+                    ],
+                    "showOn": 256,
+                    "clipAngle": 1.410591,
+                    "anchorShift": 0.0893
+                }
+            },
+            "customization": {
+                "customizableVehicleAreas": {
+                    "paint": "TURRET",
+                    "camouflage": "TURRET"
+                }
+            },
+            "camouflage": {
+                "tiling": [
+                    0.6,
+                    0.6,
+                    0.0,
+                    0.0
+                ],
+                "density": [
+                    104.473,
+                    104.614
+                ],
+                "aoTextureSize": [
+                    512.0,
+                    512.0
+                ]
+            }
+        },
+        "PzVI_Porsche_Turm": {
+            "userString": "#germany_vehicles:PzVI_Porsche_Turm",
+            "shortUserString": "#germany_vehicles:PzVI_Porsche_Turm_short",
             "tags": [],
             "level": 8,
             "price": 33220,
@@ -1511,7 +2001,7 @@
                 "armor_4"
             ],
             "weight": 8950,
-            "maxHealth": 300,
+            "maxHealth": 380,
             "rotationSpeed": 18,
             "turretRotatorHealth": {
                 "maxHealth": 140,
@@ -1524,10 +2014,262 @@
                 "maxRegenHealth": 45,
                 "repairCost": 2.0
             },
+            "invisibilityFactor": 1.064,
             "guns": {
-                "_88mm_Kw_K_36_L_56_Ausf_E": {
+                "_75mm_KwK_L70": {
+                    "maxAmmo": 130,
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.1,
+                        "afterShot": 4.0,
+                        "whileGunDamaged": 2.0
+                    },
+                    "armor": {
+                        "armor_1": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_2": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_3": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_4": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_5": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_6": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_7": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_8": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "gun": 20
+                    },
+                    "shotDispersionRadius": 0.35,
+                    "reloadTime": 4,
+                    "aimingTime": 2.3,
+                    "invisibilityFactorAtShot": 0.234,
+                    "pitchLimits": {
+                        "minPitch": [
+                            0.0,
+                            -15.0,
+                            1.0,
+                            -15.0
+                        ],
+                        "maxPitch": [
+                            0.0,
+                            8.0,
+                            0.40856,
+                            8.0,
+                            0.472222,
+                            4.0,
+                            0.527778,
+                            4.0,
+                            0.59144,
+                            8.0,
+                            1.0,
+                            8.0
+                        ]
+                    },
+                    "models": {
+                        "undamaged": "vehicles/german/G04_PzVI_Tiger_I/normal/lod0/Gun_02.model",
+                        "destroyed": "vehicles/german/G04_PzVI_Tiger_I/crash/lod0/Gun_02.model",
+                        "exploded": "vehicles/german/G04_PzVI_Tiger_I/crash/lod0/Gun_02.model",
+                        "sets": {
+                            "G04_PzVI_Tiger_I_E_3DSt": {
+                                "undamaged": "vehicles/german/G04_PzVI_Tiger_I/_skins/G04_PzVI_Tiger_I_E_3DSt/normal/lod0/Gun_02.model",
+                                "destroyed": "vehicles/german/G04_PzVI_Tiger_I/_skins/G04_PzVI_Tiger_I_E_3DSt/crash/lod0/Gun_02.model",
+                                "exploded": "vehicles/german/G04_PzVI_Tiger_I/_skins/G04_PzVI_Tiger_I_E_3DSt/crash/lod0/Gun_02.model"
+                            }
+                        }
+                    },
+                    "hitTester": {
+                        "collisionModelServer": "vehicles/german/G04_PzVI_Tiger_I/collision/Gun_02.model",
+                        "collisionModelClient": "vehicles/german/G04_PzVI_Tiger_I/collision_client/Gun_02.model"
+                    },
+                    "effects": "shot_medium_mb",
+                    "reloadEffect": "reload50_75",
+                    "customizationSlots": {
+                        "slot": {
+                            "slotType": "insigniaOnGun",
+                            "slotId": 49000,
+                            "rayStart": [
+                                1e-06,
+                                0.011551,
+                                3.65696
+                            ],
+                            "rayEnd": [
+                                1e-06,
+                                0.011551,
+                                4.15996
+                            ],
+                            "rayUp": [
+                                0.073,
+                                0.0,
+                                0.0
+                            ],
+                            "size": 0.503
+                        }
+                    },
+                    "customization": {
+                        "customizableVehicleAreas": {
+                            "paint": [
+                                "GUN",
+                                "GUN_2"
+                            ],
+                            "camouflage": "GUN"
+                        }
+                    },
+                    "camouflage": {
+                        "tiling": [
+                            0.6,
+                            0.6,
+                            0.0,
+                            0.0
+                        ],
+                        "density": [
+                            91.425,
+                            93.1735
+                        ],
+                        "aoTextureSize": [
+                            512.0,
+                            512.0
+                        ]
+                    }
+                },
+                "_105mm_StuH42_L28Pz": {
+                    "maxAmmo": 70,
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.1,
+                        "afterShot": 4.0,
+                        "whileGunDamaged": 2.0
+                    },
+                    "armor": {
+                        "armor_1": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_2": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_3": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_4": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_5": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_6": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_7": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "armor_8": {
+                            "vehicleDamageFactor": 0
+                        },
+                        "gun": 40
+                    },
+                    "shotDispersionRadius": 0.55,
+                    "aimingTime": 2.3,
+                    "invisibilityFactorAtShot": 0.209,
+                    "pitchLimits": {
+                        "minPitch": [
+                            0.0,
+                            -15.0,
+                            1.0,
+                            -15.0
+                        ],
+                        "maxPitch": [
+                            0.0,
+                            8.0,
+                            0.394671,
+                            8.0,
+                            0.458333,
+                            2.0,
+                            0.541667,
+                            2.0,
+                            0.605329,
+                            8.0,
+                            1.0,
+                            8.0
+                        ]
+                    },
+                    "models": {
+                        "undamaged": "vehicles/german/G04_PzVI_Tiger_I/normal/lod0/Gun_04.model",
+                        "destroyed": "vehicles/german/G04_PzVI_Tiger_I/crash/lod0/Gun_04.model",
+                        "exploded": "vehicles/german/G04_PzVI_Tiger_I/crash/lod0/Gun_04.model",
+                        "sets": {
+                            "G04_PzVI_Tiger_I_E_3DSt": {
+                                "undamaged": "vehicles/german/G04_PzVI_Tiger_I/_skins/G04_PzVI_Tiger_I_E_3DSt/normal/lod0/Gun_04.model",
+                                "destroyed": "vehicles/german/G04_PzVI_Tiger_I/_skins/G04_PzVI_Tiger_I_E_3DSt/crash/lod0/Gun_04.model",
+                                "exploded": "vehicles/german/G04_PzVI_Tiger_I/_skins/G04_PzVI_Tiger_I_E_3DSt/crash/lod0/Gun_04.model"
+                            }
+                        }
+                    },
+                    "hitTester": {
+                        "collisionModelServer": "vehicles/german/G04_PzVI_Tiger_I/collision/Gun_04.model",
+                        "collisionModelClient": "vehicles/german/G04_PzVI_Tiger_I/collision_client/Gun_04.model"
+                    },
+                    "effects": "shot_large_mb",
+                    "reloadEffect": "reload85_107",
+                    "customizationSlots": {
+                        "slot": {
+                            "slotType": "insigniaOnGun",
+                            "slotId": 49000,
+                            "rayStart": [
+                                -0.008853,
+                                0.012346,
+                                1.14383
+                            ],
+                            "rayEnd": [
+                                -0.008853,
+                                0.012346,
+                                1.64683
+                            ],
+                            "rayUp": [
+                                0.098,
+                                0.0,
+                                0.0
+                            ],
+                            "size": 0.503
+                        }
+                    },
+                    "customization": {
+                        "customizableVehicleAreas": {
+                            "paint": [
+                                "GUN",
+                                "GUN_2"
+                            ],
+                            "camouflage": "GUN"
+                        }
+                    },
+                    "camouflage": {
+                        "tiling": [
+                            0.6,
+                            0.6,
+                            0.0,
+                            0.0
+                        ],
+                        "density": [
+                            92.6424,
+                            92.6443
+                        ],
+                        "aoTextureSize": [
+                            512.0,
+                            512.0
+                        ]
+                    }
+                },
+                "_88mm_KwK_36_L56": {
                     "maxAmmo": 92,
-                    "reloadTime": 5.9,
+                    "reloadTime": 5.5,
                     "shotDispersionFactors": {
                         "turretRotation": 0.1,
                         "afterShot": 4.0,
@@ -1889,6 +2631,20 @@
         "Large": "shared"
     },
     "radios": {
+        "FuG5": {
+            "unlocks": {
+                "radio": {
+                    "cost": 1360
+                }
+            }
+        },
+        "FuG7": {
+            "unlocks": {
+                "radio": {
+                    "cost": 7200
+                }
+            }
+        },
         "FuG12": "shared"
     },
     "physics": {
@@ -1904,7 +2660,7 @@
                 }
             },
             "chassis": {
-                "Chassis_G04_PzVI_Tiger_I": {
+                "PzVI_Standardketten": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.24955
@@ -1917,7 +2673,7 @@
                         }
                     }
                 },
-                "Chassis_G04_PzVI_Tiger_I_2": {
+                "PzVI_Vetstaerktketten": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.23345
