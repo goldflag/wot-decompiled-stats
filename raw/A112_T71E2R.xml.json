@@ -20,7 +20,7 @@
     ],
     "postProgressionTree": "role_LT_universal",
     "speedLimits": {
-        "forward": 64,
+        "forward": 65,
         "backward": 25
     },
     "invisibility": {
@@ -78,7 +78,7 @@
             "armor_4"
         ],
         "weight": 7965,
-        "maxHealth": 672,
+        "maxHealth": 760,
         "ammoBayHealth": {
             "maxHealth": 200,
             "maxRegenHealth": 135,
@@ -198,18 +198,17 @@
                 "rightTrack": 20
             },
             "weight": 4500,
-            "maxLoad": 19000,
             "terrainResistance": [
+                0.7,
                 0.8,
-                0.9,
-                1.7
+                1.5
             ],
             "brakeForce": 17000,
             "rotationIsAroundCenter": "true",
             "rotationSpeed": 60,
             "shotDispersionFactors": {
-                "vehicleMovement": 0.16,
-                "vehicleRotation": 0.16
+                "vehicleMovement": 0.14,
+                "vehicleRotation": 0.14
             },
             "bulkHealthFactor": 3.0,
             "maxHealth": 130,
@@ -785,7 +784,6 @@
                 "rightTrack": 20
             },
             "weight": 4500,
-            "maxLoad": 20000,
             "terrainResistance": [
                 0.7,
                 0.8,
@@ -795,8 +793,8 @@
             "rotationIsAroundCenter": "true",
             "rotationSpeed": 65,
             "shotDispersionFactors": {
-                "vehicleMovement": 0.14,
-                "vehicleRotation": 0.14
+                "vehicleMovement": 0.12,
+                "vehicleRotation": 0.12
             },
             "bulkHealthFactor": 3.0,
             "maxHealth": 140,
@@ -1387,7 +1385,7 @@
                 "armor_3"
             ],
             "weight": 3000,
-            "maxHealth": 168,
+            "maxHealth": 190,
             "rotationSpeed": 46,
             "turretRotatorHealth": {
                 "maxHealth": 130,
@@ -1401,7 +1399,7 @@
                 "repairCost": 1.0
             },
             "guns": {
-                "_76mm_Gun_M1A2L": {
+                "_76mm_Gun_M1A2_CMCD": {
                     "maxAmmo": 60,
                     "unlocks": {
                         "gun": {
@@ -1450,9 +1448,14 @@
                         ]
                     },
                     "invisibilityFactorAtShot": 0.247,
-                    "shotDispersionRadius": 0.38,
-                    "reloadTime": 4.3,
-                    "aimingTime": 2,
+                    "shotDispersionRadius": 0.36,
+                    "reloadTime": 4.2,
+                    "aimingTime": 1.9,
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.08,
+                        "whileGunDamaged": 2.0,
+                        "afterShot": 3.5
+                    },
                     "models": {
                         "undamaged": "vehicles/american/A112_T71E2/normal/lod0/Gun_02.model",
                         "destroyed": "vehicles/american/A112_T71E2/crash/lod0/Gun_02.model",
@@ -1512,7 +1515,7 @@
                         ]
                     }
                 },
-                "_76mm_Gun_T185E": {
+                "_76mm_Gun_T185_CMCD": {
                     "maxAmmo": 60,
                     "unlocks": {
                         "vehicle": {
@@ -1561,11 +1564,11 @@
                         ]
                     },
                     "invisibilityFactorAtShot": 0.234,
-                    "shotDispersionRadius": 0.38,
-                    "reloadTime": 4.5,
-                    "aimingTime": 1.9,
+                    "shotDispersionRadius": 0.36,
+                    "reloadTime": 4.3,
+                    "aimingTime": 1.8,
                     "shotDispersionFactors": {
-                        "turretRotation": 0.1,
+                        "turretRotation": 0.08,
                         "afterShot": 3.0,
                         "whileGunDamaged": 2.0
                     },
@@ -1717,38 +1720,31 @@
         }
     },
     "engines": {
-        "Continental_AOI-628-1": {
+        "Continental_AOI_628_1_CMCD": {
             "unlocks": {
                 "engine": {
                     "cost": 10000
                 }
             }
         },
-        "Continental_AOI-628-2": "shared"
+        "Continental_AOI_628_2_CMCD": "shared"
     },
     "fuelTanks": {
         "Average": "shared"
     },
     "radios": {
-        "AN-GRC-3": {
-            "unlocks": {
-                "radio": {
-                    "cost": 9000
-                }
-            }
-        },
         "AN-ARC-27": "shared"
     },
     "physics": {
         "detailed": {
             "engines": {
-                "Continental_AOI-628-1": {
-                    "smplEnginePower": 350,
-                    "smplFwMaxSpeed": 64
+                "Continental_AOI_628_1_CMCD": {
+                    "smplEnginePower": 410,
+                    "smplFwMaxSpeed": 65
                 },
-                "Continental_AOI-628-2": {
-                    "smplEnginePower": 420,
-                    "smplFwMaxSpeed": 64
+                "Continental_AOI_628_2_CMCD": {
+                    "smplEnginePower": 450,
+                    "smplFwMaxSpeed": 65
                 }
             },
             "chassis": {

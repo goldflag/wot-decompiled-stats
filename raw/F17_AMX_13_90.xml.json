@@ -23,7 +23,7 @@
         4.0
     ],
     "speedLimits": {
-        "forward": 64,
+        "forward": 68,
         "backward": 23
     },
     "invisibility": {
@@ -84,7 +84,7 @@
             "armor_4"
         ],
         "weight": 7475,
-        "maxHealth": 960,
+        "maxHealth": 1120,
         "ammoBayHealth": {
             "maxHealth": 200,
             "maxRegenHealth": 135,
@@ -192,8 +192,8 @@
         }
     },
     "chassis": {
-        "Chassis_AMX_13_90": {
-            "userString": "#france_vehicles:Chassis_AMX_13_90",
+        "Chassis_F17_AMX_13_90": {
+            "userString": "#france_vehicles:Chassis_F17_AMX_13_90",
             "tags": [],
             "level": 8,
             "price": 18500,
@@ -207,11 +207,10 @@
                 "rightTrack": 20
             },
             "weight": 1400,
-            "maxLoad": 15610,
             "terrainResistance": [
+                0.8,
                 0.9,
-                1.0,
-                1.6
+                1.4
             ],
             "brakeForce": 35500,
             "rotationIsAroundCenter": "false",
@@ -885,8 +884,8 @@
             },
             "repairTime": 4.57142878
         },
-        "Chassis_AMX_13_90_2": {
-            "userString": "#france_vehicles:Chassis_AMX_13_90_2",
+        "Chassis_F17_AMX_13_90_2": {
+            "userString": "#france_vehicles:Chassis_F17_AMX_13_90_2",
             "tags": [],
             "level": 9,
             "price": 52000,
@@ -895,7 +894,6 @@
                 "rightTrack": 20
             },
             "weight": 1400,
-            "maxLoad": 17840,
             "terrainResistance": [
                 0.8,
                 0.9,
@@ -1575,9 +1573,11 @@
         }
     },
     "turrets0": {
-        "Turret_1_AMX_13_90": {
-            "userString": "#france_vehicles:Turret_1_AMX_13_90",
-            "tags": [],
+        "Turret_1_F17_AMX_13_90": {
+            "userString": "#france_vehicles:Turret_1_F17_AMX_13_90",
+            "tags": [
+                "oscillating"
+            ],
             "level": 9,
             "price": 50000,
             "notInShop": "true",
@@ -1598,7 +1598,7 @@
                 "armor_4"
             ],
             "weight": 2670,
-            "maxHealth": 240,
+            "maxHealth": 280,
             "rotationSpeed": 46,
             "turretRotatorHealth": {
                 "maxHealth": 150,
@@ -1623,21 +1623,13 @@
                         "minPitch": [
                             0.0,
                             -12.0,
-                            0.194444,
+                            0.25,
                             -12.0,
-                            0.202778,
-                            -9.0,
-                            0.213889,
-                            -9.0,
-                            0.222222,
+                            0.31944,
                             -7.0,
-                            0.777778,
+                            0.68056,
                             -7.0,
-                            0.786111,
-                            -9.0,
-                            0.797222,
-                            -9.0,
-                            0.805556,
+                            0.75,
                             -12.0,
                             1.0,
                             -12.0
@@ -1669,11 +1661,11 @@
                     },
                     "shotDispersionFactors": {
                         "turretRotation": 0.12,
-                        "afterShot": 4.0,
+                        "afterShot": 3,
                         "whileGunDamaged": 2.0
                     },
                     "shotDispersionRadius": 0.36,
-                    "aimingTime": 2.3,
+                    "aimingTime": 2,
                     "models": {
                         "undamaged": "vehicles/french/F17_AMX_13_90/normal/lod0/Gun_01.model",
                         "destroyed": "vehicles/french/F17_AMX_13_90/crash/lod0/Gun_01.model",
@@ -1752,21 +1744,13 @@
                         "minPitch": [
                             0.0,
                             -12.0,
-                            0.194444,
+                            0.25,
                             -12.0,
-                            0.202778,
-                            -9.0,
-                            0.213889,
-                            -9.0,
-                            0.222222,
+                            0.31944,
                             -7.0,
-                            0.777778,
+                            0.68056,
                             -7.0,
-                            0.786111,
-                            -9.0,
-                            0.797222,
-                            -9.0,
-                            0.805556,
+                            0.75,
                             -12.0,
                             1.0,
                             -12.0
@@ -1795,7 +1779,7 @@
                         "armor_9": 40,
                         "gun": 35
                     },
-                    "reloadTime": 23,
+                    "reloadTime": 22,
                     "invisibilityFactorAtShot": 0.238,
                     "shotDispersionFactors": {
                         "turretRotation": 0.12,
@@ -1804,9 +1788,9 @@
                     },
                     "clip": {
                         "count": 4,
-                        "rate": 27.2
+                        "rate": 24
                     },
-                    "aimingTime": 2.7,
+                    "aimingTime": 2.5,
                     "shotDispersionRadius": 0.38,
                     "models": {
                         "undamaged": "vehicles/french/F17_AMX_13_90/normal/lod0/Gun_02.model",
@@ -1985,48 +1969,41 @@
                 }
             }
         },
-        "Detroit_Diesel_6V53T-S": "shared"
+        "Detroit_Diesel_6V53T_S": "shared"
     },
     "fuelTanks": {
         "Large": "shared"
     },
     "radios": {
-        "SCR_508": {
-            "unlocks": {
-                "radio": {
-                    "cost": 9000
-                }
-            }
-        },
         "SCR_528": "shared"
     },
     "physics": {
         "detailed": {
             "engines": {
                 "Detroit_Diesel_6V53T": {
-                    "smplEnginePower": 400,
-                    "smplFwMaxSpeed": 64
+                    "smplEnginePower": 430,
+                    "smplFwMaxSpeed": 68
                 },
-                "Detroit_Diesel_6V53T-S": {
+                "Detroit_Diesel_6V53T_S": {
                     "smplEnginePower": 470,
-                    "smplFwMaxSpeed": 64
+                    "smplFwMaxSpeed": 68
                 }
             },
             "chassis": {
-                "Chassis_AMX_13_90": {
+                "Chassis_F17_AMX_13_90": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.1288
+                            "rollingFriction": 0.1127
                         },
                         "medium": {
-                            "rollingFriction": 0.0805
+                            "rollingFriction": 0.07245
                         },
                         "firm": {
-                            "rollingFriction": 0.07245
+                            "rollingFriction": 0.0644
                         }
                     }
                 },
-                "Chassis_AMX_13_90_2": {
+                "Chassis_F17_AMX_13_90_2": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.1127

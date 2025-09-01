@@ -194,8 +194,8 @@
         }
     },
     "chassis": {
-        "Chassis_BDR_G1B": {
-            "userString": "#france_vehicles:Chassis_BDR_G1B",
+        "Chassis_F05_BDR_G1B": {
+            "userString": "#france_vehicles:Chassis_F05_BDR_G1B",
             "tags": [],
             "level": 4,
             "price": 4050,
@@ -209,15 +209,14 @@
                 "rightTrack": 20
             },
             "weight": 8000,
-            "maxLoad": 34000,
             "terrainResistance": [
+                1.3,
                 1.4,
-                1.5,
-                2.7
+                2.3
             ],
             "brakeForce": 37500,
             "rotationIsAroundCenter": "false",
-            "rotationSpeed": 22,
+            "rotationSpeed": 30,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.3,
                 "vehicleRotation": 0.3
@@ -958,8 +957,8 @@
             },
             "repairTime": 6.85714293
         },
-        "Chassis_BDR_G1B_2": {
-            "userString": "#france_vehicles:Chassis_BDR_G1B_2",
+        "Chassis_F05_BDR_G1B_2": {
+            "userString": "#france_vehicles:Chassis_F05_BDR_G1B_2",
             "tags": [],
             "level": 5,
             "price": 10550,
@@ -968,7 +967,6 @@
                 "rightTrack": 20
             },
             "weight": 8000,
-            "maxLoad": 40000,
             "terrainResistance": [
                 1.3,
                 1.4,
@@ -976,7 +974,7 @@
             ],
             "brakeForce": 37500,
             "rotationIsAroundCenter": "false",
-            "rotationSpeed": 24,
+            "rotationSpeed": 34,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.28,
                 "vehicleRotation": 0.28
@@ -1720,11 +1718,16 @@
         }
     },
     "turrets0": {
-        "Turret_1_BDR_G1B": {
-            "userString": "#france_vehicles:Turret_1_BDR_G1B",
+        "Turret_1_F05_BDR_G1B": {
+            "userString": "#france_vehicles:Turret_1_F05_BDR_G1B",
             "tags": [],
             "level": 4,
             "price": 4920,
+            "unlocks": {
+                "turret": {
+                    "cost": 2430
+                }
+            },
             "armor": {
                 "armor_1": 60,
                 "armor_2": 30,
@@ -1751,117 +1754,15 @@
                 "maxRegenHealth": 60,
                 "repairCost": 1.0
             },
-            "circularVisionRadius": 300,
+            "circularVisionRadius": 320,
             "surveyingDeviceHealth": {
                 "maxHealth": 70,
                 "maxRegenHealth": 35,
                 "repairCost": 1.0
             },
             "guns": {
-                "_75mm_SA32": {
+                "_75mm_SA44_BDR": {
                     "maxAmmo": 110,
-                    "unlocks": {
-                        "gun": {
-                            "cost": 2700
-                        }
-                    },
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_4": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 20
-                    },
-                    "shotDispersionRadius": 0.46,
-                    "invisibilityFactorAtShot": 0.26,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -14.0,
-                            1.0,
-                            -14.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            5.0,
-                            1.0,
-                            5.0
-                        ]
-                    },
-                    "reloadTime": 4.2,
-                    "aimingTime": 2.3,
-                    "models": {
-                        "undamaged": "vehicles/french/F05_BDR_G1B/normal/lod0/Gun_01.model",
-                        "destroyed": "vehicles/french/F05_BDR_G1B/crash/lod0/Gun_01.model",
-                        "exploded": "vehicles/french/F05_BDR_G1B/crash/lod0/Gun_01.model",
-                        "sets": {
-                            "WH": {
-                                "undamaged": "vehicles/french/F05_BDR_G1B/_skins/WH/normal/lod0/Gun_01.model",
-                                "destroyed": "vehicles/french/F05_BDR_G1B/_skins/WH/crash/lod0/Gun_01.model",
-                                "exploded": "vehicles/french/F05_BDR_G1B/_skins/WH/crash/lod0/Gun_01.model"
-                            }
-                        }
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/french/F05_BDR_G1B/collision/Gun_01.model",
-                        "collisionModelClient": "vehicles/french/F05_BDR_G1B/collision_client/Gun_01.model"
-                    },
-                    "effects": "shot_medium",
-                    "reloadEffect": "reload50_75",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                0.0,
-                                -0.044126,
-                                1.09435
-                            ],
-                            "rayEnd": [
-                                0.0,
-                                -0.044126,
-                                1.60335
-                            ],
-                            "rayUp": [
-                                0.067,
-                                0.06,
-                                4.0
-                            ],
-                            "size": 0.509
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "camouflage": {
-                        "density": [
-                            100.313,
-                            101.293
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            256.0
-                        ]
-                    }
-                },
-                "_75mm_Long_44": {
-                    "maxAmmo": 110,
-                    "unlocks": {
-                        "turret": {
-                            "cost": 2430
-                        }
-                    },
                     "armor": {
                         "armor_1": {
                             "vehicleDamageFactor": 0
@@ -1889,9 +1790,18 @@
                             5.0
                         ]
                     },
-                    "shotDispersionRadius": 0.43,
-                    "reloadTime": 4.2,
-                    "aimingTime": 2.3,
+                    "shotDispersionRadius": 0.35,
+                    "reloadTime": 3.6,
+                    "aimingTime": 2,
+                    "shotDispersionFactors": {
+                        "afterShot": 4.0,
+                        "whileGunDamaged": 2.0,
+                        "turretRotation": 0.12
+                    },
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
                     "models": {
                         "undamaged": "vehicles/french/F05_BDR_G1B/normal/lod0/Gun_02.model",
                         "destroyed": "vehicles/french/F05_BDR_G1B/crash/lod0/Gun_02.model",
@@ -2040,17 +1950,14 @@
                 ]
             }
         },
-        "Turret_2_BDR_G1B": {
-            "userString": "#france_vehicles:Turret_2_BDR_G1B",
+        "Turret_2_F05_BDR_G1B": {
+            "userString": "#france_vehicles:Turret_2_F05_BDR_G1B",
             "tags": [],
             "level": 5,
             "price": 10400,
             "unlocks": {
                 "gun": {
                     "cost": 9300
-                },
-                "vehicle": {
-                    "cost": 33000
                 }
             },
             "armor": {
@@ -2078,7 +1985,7 @@
                 "maxRegenHealth": 60,
                 "repairCost": 1.0
             },
-            "circularVisionRadius": 320,
+            "circularVisionRadius": 330,
             "surveyingDeviceHealth": {
                 "maxHealth": 70,
                 "maxRegenHealth": 35,
@@ -2086,7 +1993,7 @@
             },
             "invisibilityFactor": 1.102,
             "guns": {
-                "_75mm_SA32": {
+                "_75mm_SA44_BDR": {
                     "maxAmmo": 110,
                     "armor": {
                         "armor_1": {
@@ -2103,10 +2010,9 @@
                         },
                         "gun": 20
                     },
-                    "shotDispersionRadius": 0.46,
-                    "reloadTime": 3.8,
+                    "reloadTime": 3.6,
                     "shotDispersionFactors": {
-                        "turretRotation": 0.14,
+                        "turretRotation": 0.1,
                         "afterShot": 4.0,
                         "whileGunDamaged": 2.0
                     },
@@ -2125,107 +2031,12 @@
                             8.0
                         ]
                     },
-                    "aimingTime": 2.3,
-                    "models": {
-                        "undamaged": "vehicles/french/F05_BDR_G1B/normal/lod0/Gun_03.model",
-                        "destroyed": "vehicles/french/F05_BDR_G1B/crash/lod0/Gun_03.model",
-                        "exploded": "vehicles/french/F05_BDR_G1B/crash/lod0/Gun_03.model",
-                        "sets": {
-                            "WH": {
-                                "undamaged": "vehicles/french/F05_BDR_G1B/_skins/WH/normal/lod0/Gun_03.model",
-                                "destroyed": "vehicles/french/F05_BDR_G1B/_skins/WH/crash/lod0/Gun_03.model",
-                                "exploded": "vehicles/french/F05_BDR_G1B/_skins/WH/crash/lod0/Gun_03.model"
-                            }
-                        }
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/french/F05_BDR_G1B/collision/Gun_03.model",
-                        "collisionModelClient": "vehicles/french/F05_BDR_G1B/collision_client/Gun_03.model"
-                    },
-                    "effects": "shot_medium",
-                    "reloadEffect": "reload50_75",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                -0.00047,
-                                -0.000147,
-                                1.25698
-                            ],
-                            "rayEnd": [
-                                -0.00047,
-                                -0.000147,
-                                1.56398
-                            ],
-                            "rayUp": [
-                                0.075,
-                                0.075,
-                                4.0
-                            ],
-                            "size": 0.307
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "camouflage": {
-                        "density": [
-                            100.313,
-                            101.293
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            256.0
-                        ]
-                    }
-                },
-                "_75mm_Long_44": {
-                    "maxAmmo": 110,
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_4": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 20
-                    },
-                    "reloadTime": 3.8,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.14,
-                        "afterShot": 4.0,
-                        "whileGunDamaged": 2.0
-                    },
-                    "invisibilityFactorAtShot": 0.26,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -17.0,
-                            1.0,
-                            -17.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            8.0,
-                            1.0,
-                            8.0
-                        ]
-                    },
-                    "shotDispersionRadius": 0.43,
-                    "aimingTime": 2.3,
+                    "shotDispersionRadius": 0.35,
+                    "aimingTime": 2,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
                     "models": {
                         "undamaged": "vehicles/french/F05_BDR_G1B/normal/lod0/Gun_04.model",
                         "destroyed": "vehicles/french/F05_BDR_G1B/crash/lod0/Gun_04.model",
@@ -2286,8 +2097,13 @@
                         ]
                     }
                 },
-                "_90mm_canon_DCA_30": {
+                "_90mm_DCA_30_BDR": {
                     "maxAmmo": 60,
+                    "unlocks": {
+                        "vehicle": {
+                            "cost": 33000
+                        }
+                    },
                     "armor": {
                         "armor_1": {
                             "vehicleDamageFactor": 0
@@ -2301,7 +2117,7 @@
                         "gun": 30
                     },
                     "shotDispersionRadius": 0.38,
-                    "reloadTime": 10,
+                    "reloadTime": 10.4,
                     "shotDispersionFactors": {
                         "turretRotation": 0.13,
                         "afterShot": 4,
@@ -2323,6 +2139,10 @@
                         ]
                     },
                     "aimingTime": 2.7,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
                     "models": {
                         "undamaged": "vehicles/french/F05_BDR_G1B/normal/lod0/Gun_05.model",
                         "destroyed": "vehicles/french/F05_BDR_G1B/crash/lod0/Gun_05.model",
@@ -2479,62 +2299,48 @@
         }
     },
     "engines": {
-        "Renault_T12": {
+        "Renault_T12_BDR": {
             "unlocks": {
                 "engine": {
                     "cost": 1950
                 }
             }
         },
-        "Renault_T14": "shared"
+        "Renault_T14_BDR": "shared"
     },
     "fuelTanks": {
         "Average": "shared"
     },
     "radios": {
-        "ER_51": {
-            "unlocks": {
-                "radio": {
-                    "cost": 610
-                }
-            }
-        },
-        "ER_53": {
-            "unlocks": {
-                "radio": {
-                    "cost": 7300
-                }
-            }
-        },
         "ER_55": "shared"
     },
     "physics": {
         "detailed": {
             "engines": {
-                "Renault_T12": {
-                    "smplEnginePower": 370.0484,
+                "Renault_T12_BDR": {
+                    "smplEnginePower": 440,
                     "smplFwMaxSpeed": 30
                 },
-                "Renault_T14": {
-                    "smplEnginePower": 475.7765,
+                "Renault_T14_BDR": {
+                    "smplEnginePower": 500,
                     "smplFwMaxSpeed": 30
                 }
             },
             "chassis": {
-                "Chassis_BDR_G1B": {
+                "Chassis_F05_BDR_G1B": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.21735
+                            "rollingFriction": 0.18515
                         },
                         "medium": {
-                            "rollingFriction": 0.12075
+                            "rollingFriction": 0.1127
                         },
                         "firm": {
-                            "rollingFriction": 0.1127
+                            "rollingFriction": 0.10465
                         }
                     }
                 },
-                "Chassis_BDR_G1B_2": {
+                "Chassis_F05_BDR_G1B_2": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.18515

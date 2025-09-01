@@ -76,7 +76,7 @@
             "armor_4"
         ],
         "weight": 7600,
-        "maxHealth": 340,
+        "maxHealth": 344,
         "ammoBayHealth": {
             "maxHealth": 100,
             "maxRegenHealth": 70,
@@ -176,8 +176,8 @@
         }
     },
     "chassis": {
-        "Chassis_Chi_Ha": {
-            "userString": "#japan_vehicles:Chassis_Chi_Ha",
+        "Chassis_J07_Chi_Ha": {
+            "userString": "#japan_vehicles:Chassis_J07_Chi_Ha",
             "tags": [],
             "level": 2,
             "price": 900,
@@ -191,11 +191,10 @@
                 "rightTrack": 15
             },
             "weight": 5000,
-            "maxLoad": 15900,
             "terrainResistance": [
+                1.0,
                 1.1,
-                1.2,
-                2.1
+                1.9
             ],
             "brakeForce": 16000,
             "rotationIsAroundCenter": "false",
@@ -828,8 +827,8 @@
             },
             "repairTime": 4.57142878
         },
-        "Chassis_Chi_Ha_2": {
-            "userString": "#japan_vehicles:Chassis_Chi_Ha_2",
+        "Chassis_J07_Chi_Ha_2": {
+            "userString": "#japan_vehicles:Chassis_J07_Chi_Ha_2",
             "tags": [],
             "level": 3,
             "price": 1750,
@@ -838,7 +837,6 @@
                 "rightTrack": 15
             },
             "weight": 5000,
-            "maxLoad": 18000,
             "terrainResistance": [
                 1.0,
                 1.1,
@@ -1477,8 +1475,8 @@
         }
     },
     "turrets0": {
-        "Turret_1_Chi_Ha": {
-            "userString": "#japan_vehicles:Turret_1_Chi_Ha",
+        "Turret_1_J07_Chi_Ha": {
+            "userString": "#japan_vehicles:Turret_1_J07_Chi_Ha",
             "tags": [],
             "level": 2,
             "price": 1000,
@@ -1508,7 +1506,7 @@
                 "armor_4"
             ],
             "weight": 1300,
-            "maxHealth": 65,
+            "maxHealth": 66,
             "rotationSpeed": 33,
             "turretRotatorHealth": {
                 "maxHealth": 70,
@@ -1522,13 +1520,8 @@
                 "repairCost": 1.0
             },
             "guns": {
-                "_57mm_Gun_Type97": {
+                "_57mm_Gun_Type_97_Shin": {
                     "maxAmmo": 185,
-                    "unlocks": {
-                        "gun": {
-                            "cost": 230
-                        }
-                    },
                     "armor": {
                         "armor_1": {
                             "vehicleDamageFactor": 0
@@ -1553,14 +1546,18 @@
                         ]
                     },
                     "shotDispersionRadius": 0.46,
-                    "reloadTime": 3,
+                    "reloadTime": 4.5,
                     "shotDispersionFactors": {
-                        "turretRotation": 0.1,
+                        "turretRotation": 0.14,
                         "afterShot": 4.0,
                         "whileGunDamaged": 2.0
                     },
-                    "aimingTime": 1.9,
+                    "aimingTime": 2.5,
                     "invisibilityFactorAtShot": 0.28,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
                     "models": {
                         "undamaged": "vehicles/japan/J07_Chi_Ha/normal/lod0/Gun_01.model",
                         "destroyed": "vehicles/japan/J07_Chi_Ha/crash/lod0/Gun_01.model",
@@ -1608,189 +1605,6 @@
                         "density": [
                             198.647,
                             210.296
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_37mm_Type_100": {
-                    "maxAmmo": 185,
-                    "unlocks": {
-                        "gun": {
-                            "cost": 550
-                        }
-                    },
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 10
-                    },
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            9.0,
-                            1.0,
-                            9.0
-                        ]
-                    },
-                    "shotDispersionRadius": 0.41,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.1,
-                        "afterShot": 3,
-                        "whileGunDamaged": 2.0
-                    },
-                    "invisibilityFactorAtShot": 0.3,
-                    "models": {
-                        "undamaged": "vehicles/japan/J07_Chi_Ha/normal/lod0/Gun_02.model",
-                        "destroyed": "vehicles/japan/J07_Chi_Ha/crash/lod0/Gun_02.model",
-                        "exploded": "vehicles/japan/J07_Chi_Ha/crash/lod0/Gun_02.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/japan/J07_Chi_Ha/collision/Gun_02.model",
-                        "collisionModelClient": "vehicles/japan/J07_Chi_Ha/collision_client/Gun_02.model"
-                    },
-                    "effects": "shot_small",
-                    "reloadEffect": "reload20_45",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "camouflage",
-                            "slotId": 42000,
-                            "anchorPosition": [
-                                -0.020333,
-                                0.034204,
-                                0.571855
-                            ],
-                            "anchorDirection": [
-                                0.0,
-                                -0.0,
-                                1.0
-                            ],
-                            "applyTo": 4096
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "camouflage": {
-                        "tiling": [
-                            0.34,
-                            0.34,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            203.051,
-                            206.314
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_37mm_Type1": {
-                    "maxAmmo": 165,
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 10
-                    },
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            9.0,
-                            1.0,
-                            9.0
-                        ]
-                    },
-                    "shotDispersionRadius": 0.42,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.1,
-                        "afterShot": 3,
-                        "whileGunDamaged": 2.0
-                    },
-                    "invisibilityFactorAtShot": 0.3,
-                    "models": {
-                        "undamaged": "vehicles/japan/J07_Chi_Ha/normal/lod0/Gun_03.model",
-                        "destroyed": "vehicles/japan/J07_Chi_Ha/crash/lod0/Gun_03.model",
-                        "exploded": "vehicles/japan/J07_Chi_Ha/crash/lod0/Gun_03.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/japan/J07_Chi_Ha/collision/Gun_03.model",
-                        "collisionModelClient": "vehicles/japan/J07_Chi_Ha/collision_client/Gun_03.model"
-                    },
-                    "effects": "shot_small",
-                    "reloadEffect": "reload20_45",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "camouflage",
-                            "slotId": 42000,
-                            "anchorPosition": [
-                                -0.01903,
-                                0.030036,
-                                0.587703
-                            ],
-                            "anchorDirection": [
-                                -0.0,
-                                0.0,
-                                1.0
-                            ],
-                            "applyTo": 4096
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "camouflage": {
-                        "tiling": [
-                            0.355,
-                            0.355,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            203.051,
-                            206.314
                         ],
                         "aoTextureSize": [
                             512.0,
@@ -1885,8 +1699,8 @@
                 ]
             }
         },
-        "Turret_2_Chi_Ha": {
-            "userString": "#japan_vehicles:Turret_2_Chi_Ha",
+        "Turret_2_J07_Chi_Ha": {
+            "userString": "#japan_vehicles:Turret_2_J07_Chi_Ha",
             "tags": [],
             "level": 3,
             "price": 2100,
@@ -1917,7 +1731,7 @@
                 "armor_4"
             ],
             "weight": 1839,
-            "maxHealth": 85,
+            "maxHealth": 86,
             "rotationSpeed": 36,
             "turretRotatorHealth": {
                 "maxHealth": 70,
@@ -1932,7 +1746,7 @@
             },
             "invisibilityFactor": 0.968,
             "guns": {
-                "_57mm_Gun_Type97": {
+                "_57mm_Gun_Type_97_Shin": {
                     "maxAmmo": 185,
                     "armor": {
                         "armor_1": {
@@ -1942,10 +1756,16 @@
                             "vehicleDamageFactor": 0
                         },
                         "armor_4": {
-                            "vehicleDamageFactor": 0
+                            "vehicleDamageFactor": 0,
+                            "tags": [
+                                "screen"
+                            ]
                         },
                         "armor_5": {
-                            "vehicleDamageFactor": 0
+                            "vehicleDamageFactor": 0,
+                            "tags": [
+                                "screen"
+                            ]
                         },
                         "gun": 10
                     },
@@ -1959,16 +1779,39 @@
                         "maxPitch": [
                             0.0,
                             15.0,
-                            0.611111,
+                            0.43056,
+                            15.0,
+                            0.44722,
+                            9.0,
+                            0.475,
+                            9.0,
+                            0.48889,
+                            14.0,
+                            0.54444,
+                            14.0,
+                            0.55833,
+                            9.0,
+                            0.60556,
+                            9.0,
+                            0.62222,
                             15.0,
                             1.0,
                             15.0
                         ]
                     },
-                    "shotDispersionRadius": 0.46,
-                    "reloadTime": 3,
-                    "aimingTime": 1.8,
+                    "shotDispersionRadius": 0.45,
+                    "reloadTime": 4.1,
+                    "aimingTime": 2.4,
                     "invisibilityFactorAtShot": 0.28,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.14,
+                        "whileGunDamaged": 2.0,
+                        "afterShot": 4.0
+                    },
                     "models": {
                         "undamaged": "vehicles/japan/J07_Chi_Ha/normal/lod0/Gun_04.model",
                         "destroyed": "vehicles/japan/J07_Chi_Ha/crash/lod0/Gun_04.model",
@@ -2023,191 +1866,7 @@
                         ]
                     }
                 },
-                "_37mm_Type_100": {
-                    "maxAmmo": 185,
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 10
-                    },
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            15.0,
-                            0.611111,
-                            15.0,
-                            1.0,
-                            15.0
-                        ]
-                    },
-                    "shotDispersionRadius": 0.41,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.08,
-                        "afterShot": 2.5,
-                        "whileGunDamaged": 2.0
-                    },
-                    "invisibilityFactorAtShot": 0.3,
-                    "aimingTime": 1.5,
-                    "models": {
-                        "undamaged": "vehicles/japan/J07_Chi_Ha/normal/lod0/Gun_05.model",
-                        "destroyed": "vehicles/japan/J07_Chi_Ha/crash/lod0/Gun_05.model",
-                        "exploded": "vehicles/japan/J07_Chi_Ha/crash/lod0/Gun_05.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/japan/J07_Chi_Ha/collision/Gun_05.model",
-                        "collisionModelClient": "vehicles/japan/J07_Chi_Ha/collision_client/Gun_05.model"
-                    },
-                    "effects": "shot_small",
-                    "reloadEffect": "reload20_45",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "camouflage",
-                            "slotId": 42000,
-                            "anchorPosition": [
-                                0.017118,
-                                0.031585,
-                                0.559576
-                            ],
-                            "anchorDirection": [
-                                -0.0,
-                                0.0,
-                                1.0
-                            ],
-                            "applyTo": 4096
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "camouflage": {
-                        "tiling": [
-                            0.31,
-                            0.31,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            203.051,
-                            206.314
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_37mm_Type1": {
-                    "maxAmmo": 165,
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 10
-                    },
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            15.0,
-                            0.541667,
-                            15.0,
-                            1.0,
-                            15.0
-                        ]
-                    },
-                    "shotDispersionRadius": 0.37,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.08,
-                        "afterShot": 3,
-                        "whileGunDamaged": 2.0
-                    },
-                    "invisibilityFactorAtShot": 0.3,
-                    "aimingTime": 1.5,
-                    "models": {
-                        "undamaged": "vehicles/japan/J07_Chi_Ha/normal/lod0/Gun_06.model",
-                        "destroyed": "vehicles/japan/J07_Chi_Ha/crash/lod0/Gun_06.model",
-                        "exploded": "vehicles/japan/J07_Chi_Ha/crash/lod0/Gun_06.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/japan/J07_Chi_Ha/collision/Gun_06.model",
-                        "collisionModelClient": "vehicles/japan/J07_Chi_Ha/collision_client/Gun_06.model"
-                    },
-                    "effects": "shot_small",
-                    "reloadEffect": "reload20_45",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "camouflage",
-                            "slotId": 42000,
-                            "anchorPosition": [
-                                0.017223,
-                                0.032839,
-                                0.563466
-                            ],
-                            "anchorDirection": [
-                                -0.0,
-                                0.0,
-                                1.0
-                            ],
-                            "applyTo": 4096
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "camouflage": {
-                        "tiling": [
-                            0.34,
-                            0.34,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            203.051,
-                            206.314
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_47mm_Gun_Type1": {
+                "_47mm_Gun_Type_1_Shin": {
                     "maxAmmo": 160,
                     "unlocks": {
                         "vehicle": {
@@ -2236,23 +1895,21 @@
                         "maxPitch": [
                             0.0,
                             15.0,
-                            0.388889,
+                            0.43056,
                             15.0,
-                            0.402778,
-                            13.0,
-                            0.444444,
-                            13.0,
-                            0.458333,
-                            13.0,
-                            0.541667,
-                            13.0,
-                            0.555556,
-                            13.0,
-                            0.597222,
-                            13.0,
-                            0.611111,
-                            13.0,
-                            0.629198,
+                            0.44722,
+                            9.0,
+                            0.475,
+                            9.0,
+                            0.48889,
+                            14.0,
+                            0.54444,
+                            14.0,
+                            0.55833,
+                            9.0,
+                            0.60556,
+                            9.0,
+                            0.62222,
                             15.0,
                             1.0,
                             15.0
@@ -2262,6 +1919,15 @@
                     "reloadTime": 3,
                     "aimingTime": 2.3,
                     "invisibilityFactorAtShot": 0.29,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.13,
+                        "whileGunDamaged": 2.0,
+                        "afterShot": 3
+                    },
                     "models": {
                         "undamaged": "vehicles/japan/J07_Chi_Ha/normal/lod0/Gun_07.model",
                         "destroyed": "vehicles/japan/J07_Chi_Ha/crash/lod0/Gun_07.model",
@@ -2405,73 +2071,48 @@
         }
     },
     "engines": {
-        "_Type97": {
-            "unlocks": {
-                "engine": {
-                    "cost": 700
-                }
-            }
-        },
-        "_Type100_W": {
+        "Type_100_Suirei_V_12_Shin": {
             "unlocks": {
                 "engine": {
                     "cost": 850
                 }
             }
         },
-        "_Type100_A": "shared"
+        "Type_100_Kuurei_V_12_Shin": "shared"
     },
     "fuelTanks": {
         "Medium": "shared"
     },
     "radios": {
-        "_Type94_Hei": {
-            "unlocks": {
-                "radio": {
-                    "cost": 1400
-                }
-            }
-        },
-        "_Type96_Bo": {
-            "unlocks": {
-                "radio": {
-                    "cost": 4000
-                }
-            }
-        },
         "_Type3_Otsu": "shared"
     },
     "physics": {
         "detailed": {
             "engines": {
-                "_Type97": {
-                    "smplEnginePower": 200,
+                "Type_100_Suirei_V_12_Shin": {
+                    "smplEnginePower": 245,
                     "smplFwMaxSpeed": 45
                 },
-                "_Type100_W": {
-                    "smplEnginePower": 220,
-                    "smplFwMaxSpeed": 45
-                },
-                "_Type100_A": {
+                "Type_100_Kuurei_V_12_Shin": {
                     "smplEnginePower": 270,
                     "smplFwMaxSpeed": 45
                 }
             },
             "chassis": {
-                "Chassis_Chi_Ha": {
+                "Chassis_J07_Chi_Ha": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.16905
+                            "rollingFriction": 0.15295
                         },
                         "medium": {
-                            "rollingFriction": 0.0966
+                            "rollingFriction": 0.08855
                         },
                         "firm": {
-                            "rollingFriction": 0.08855
+                            "rollingFriction": 0.0805
                         }
                     }
                 },
-                "Chassis_Chi_Ha_2": {
+                "Chassis_J07_Chi_Ha_2": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.15295

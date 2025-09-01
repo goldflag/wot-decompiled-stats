@@ -20,7 +20,7 @@
         8.0
     ],
     "speedLimits": {
-        "forward": 35.4,
+        "forward": 35,
         "backward": 14
     },
     "invisibility": {
@@ -187,8 +187,8 @@
         }
     },
     "chassis": {
-        "HVSST31": {
-            "userString": "#usa_vehicles:HVSST31",
+        "Chassis_A09_T1_hvy": {
+            "userString": "#usa_vehicles:Chassis_A09_T1_hvy",
             "tags": [],
             "level": 4,
             "price": 4050,
@@ -202,18 +202,17 @@
                 "rightTrack": 20
             },
             "weight": 10600,
-            "maxLoad": 57880,
             "terrainResistance": [
                 1.1,
-                1.7,
-                3.1
+                1.4,
+                2.1
             ],
             "brakeForce": 37500,
             "rotationIsAroundCenter": "false",
-            "rotationSpeed": 20,
+            "rotationSpeed": 32,
             "shotDispersionFactors": {
-                "vehicleMovement": 0.26,
-                "vehicleRotation": 0.26
+                "vehicleMovement": 0.24,
+                "vehicleRotation": 0.24
             },
             "bulkHealthFactor": 3.0,
             "maxHealth": 130,
@@ -1076,8 +1075,8 @@
             },
             "repairTime": 6.85714293
         },
-        "HVSST35": {
-            "userString": "#usa_vehicles:HVSST35",
+        "Chassis_A09_T1_hvy_2": {
+            "userString": "#usa_vehicles:Chassis_A09_T1_hvy_2",
             "tags": [],
             "level": 5,
             "price": 9600,
@@ -1086,7 +1085,6 @@
                 "rightTrack": 20
             },
             "weight": 10600,
-            "maxLoad": 61500,
             "terrainResistance": [
                 1.1,
                 1.4,
@@ -1094,10 +1092,10 @@
             ],
             "brakeForce": 37500,
             "rotationIsAroundCenter": "false",
-            "rotationSpeed": 25,
+            "rotationSpeed": 36,
             "shotDispersionFactors": {
-                "vehicleMovement": 0.24,
-                "vehicleRotation": 0.24
+                "vehicleMovement": 0.22,
+                "vehicleRotation": 0.22
             },
             "bulkHealthFactor": 3.0,
             "maxHealth": 140,
@@ -1962,11 +1960,16 @@
         }
     },
     "turrets0": {
-        "T1D5": {
-            "userString": "#usa_vehicles:T1D5",
+        "Turret_1_A09_T1_hvy": {
+            "userString": "#usa_vehicles:Turret_1_A09_T1_hvy",
             "tags": [],
             "level": 4,
             "price": 4300,
+            "unlocks": {
+                "turret": {
+                    "cost": 2650
+                }
+            },
             "armor": {
                 "armor_1": 101.6,
                 "armor_2": 63.5,
@@ -1993,14 +1996,14 @@
                 "maxRegenHealth": 60,
                 "repairCost": 1.0
             },
-            "circularVisionRadius": 320,
+            "circularVisionRadius": 340,
             "surveyingDeviceHealth": {
                 "maxHealth": 70,
                 "maxRegenHealth": 35,
                 "repairCost": 1.0
             },
             "guns": {
-                "_75mm_Gun_M7_L50": {
+                "_3_inch_Gun_M7_T1": {
                     "maxAmmo": 90,
                     "pitchLimits": {
                         "minPitch": [
@@ -2024,18 +2027,22 @@
                             10.0
                         ]
                     },
-                    "unlocks": {
-                        "turret": {
-                            "cost": 2650
-                        }
-                    },
                     "armor": {
                         "gun": 20
                     },
-                    "shotDispersionRadius": 0.46,
-                    "reloadTime": 4.3,
+                    "shotDispersionRadius": 0.41,
+                    "reloadTime": 3.7,
                     "aimingTime": 2,
                     "invisibilityFactorAtShot": 0.26,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
+                    "shotDispersionFactors": {
+                        "whileGunDamaged": 2.0,
+                        "turretRotation": 0.12,
+                        "afterShot": 4.0
+                    },
                     "effects": "shot_medium",
                     "reloadEffect": "reload50_75",
                     "models": {
@@ -2182,8 +2189,8 @@
                 ]
             }
         },
-        "T1D6": {
-            "userString": "#usa_vehicles:T1D6",
+        "Turret_2_A09_T1_hvy": {
+            "userString": "#usa_vehicles:Turret_2_A09_T1_hvy",
             "tags": [],
             "level": 5,
             "price": 11300,
@@ -2239,7 +2246,7 @@
             },
             "invisibilityFactor": 0.959,
             "guns": {
-                "_75mm_Gun_M7_L50": {
+                "_3_inch_Gun_M7_T1": {
                     "maxAmmo": 90,
                     "pitchLimits": {
                         "minPitch": [
@@ -2266,10 +2273,19 @@
                     "armor": {
                         "gun": 20
                     },
-                    "shotDispersionRadius": 0.46,
-                    "reloadTime": 4.3,
+                    "shotDispersionRadius": 0.4,
+                    "reloadTime": 3.7,
                     "aimingTime": 2,
                     "invisibilityFactorAtShot": 0.26,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
+                    "shotDispersionFactors": {
+                        "whileGunDamaged": 2.0,
+                        "turretRotation": 0.12,
+                        "afterShot": 4.0
+                    },
                     "effects": "shot_medium",
                     "reloadEffect": "reload50_75",
                     "models": {
@@ -2329,7 +2345,7 @@
                         ]
                     }
                 },
-                "_76mm_Gun_M1A1": {
+                "_76mm_Gun_M1A1_T1": {
                     "unlocks": {
                         "vehicle": {
                             "cost": 28550
@@ -2370,6 +2386,10 @@
                     "shotDispersionRadius": 0.43,
                     "aimingTime": 2,
                     "invisibilityFactorAtShot": 0.26,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
                     "models": {
                         "undamaged": "vehicles/american/A09_T1_hvy/normal/lod0/Gun_04.model",
                         "destroyed": "vehicles/american/A09_T1_hvy/crash/lod0/Gun_04.model",
@@ -2518,69 +2538,48 @@
         }
     },
     "engines": {
-        "Wright_G200_m_795C9GC1": {
-            "unlocks": {
-                "engine": {
-                    "cost": 5300
-                }
-            }
-        },
-        "Wright_G2X_m_781C9GC1": {
+        "Wright_G_200_Model_795C9GC1_T1": {
             "unlocks": {
                 "engine": {
                     "cost": 15100
-                },
-                "vehicle": {
-                    "cost": 27850
                 }
             }
         },
-        "Wright_G200_m_781C9GC1": "shared"
+        "Wright_G_200_Model_781C9GC1_T1": "shared"
     },
     "fuelTanks": {
         "Average": "shared"
     },
     "radios": {
-        "SCR_508": {
-            "unlocks": {
-                "radio": {
-                    "cost": 3800
-                }
-            }
-        },
         "SCR_538": "shared"
     },
     "physics": {
         "detailed": {
             "engines": {
-                "Wright_G200_m_795C9GC1": {
-                    "smplEnginePower": 740.0968,
-                    "smplFwMaxSpeed": 35.4
+                "Wright_G_200_Model_795C9GC1_T1": {
+                    "smplEnginePower": 800,
+                    "smplFwMaxSpeed": 35
                 },
-                "Wright_G2X_m_781C9GC1": {
-                    "smplEnginePower": 872.257,
-                    "smplFwMaxSpeed": 35.4
-                },
-                "Wright_G200_m_781C9GC1": {
-                    "smplEnginePower": 1014.99,
-                    "smplFwMaxSpeed": 35.4
+                "Wright_G_200_Model_781C9GC1_T1": {
+                    "smplEnginePower": 900,
+                    "smplFwMaxSpeed": 35
                 }
             },
             "chassis": {
-                "HVSST31": {
+                "Chassis_A09_T1_hvy": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.24955
+                            "rollingFriction": 0.16905
                         },
                         "medium": {
-                            "rollingFriction": 0.13685
+                            "rollingFriction": 0.1127
                         },
                         "firm": {
                             "rollingFriction": 0.08855
                         }
                     }
                 },
-                "HVSST35": {
+                "Chassis_A09_T1_hvy_2": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.16905

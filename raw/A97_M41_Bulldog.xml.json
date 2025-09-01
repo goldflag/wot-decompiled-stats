@@ -90,7 +90,7 @@
             "armor_10"
         ],
         "weight": 10533,
-        "maxHealth": 760,
+        "maxHealth": 960,
         "ammoBayHealth": {
             "maxHealth": 220,
             "maxRegenHealth": 150,
@@ -195,8 +195,8 @@
         }
     },
     "chassis": {
-        "Chassis_M41_Bulldog": {
-            "userString": "#usa_vehicles:Chassis_M41_Bulldog",
+        "Chassis_A97_M41_Bulldog": {
+            "userString": "#usa_vehicles:Chassis_A97_M41_Bulldog",
             "tags": [],
             "level": 7,
             "price": 21000,
@@ -210,15 +210,14 @@
                 "rightTrack": 20
             },
             "weight": 6000,
-            "maxLoad": 23650,
             "terrainResistance": [
+                0.5,
                 0.6,
-                0.7,
-                1.2
+                1.1
             ],
             "brakeForce": 24000,
             "rotationIsAroundCenter": "true",
-            "rotationSpeed": 54,
+            "rotationSpeed": 62,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.14,
                 "vehicleRotation": 0.14
@@ -858,8 +857,8 @@
             },
             "repairTime": 5.71428585
         },
-        "Chassis_M41_Bulldog_2": {
-            "userString": "#usa_vehicles:Chassis_M41_Bulldog_2",
+        "Chassis_A97_M41_Bulldog_2": {
+            "userString": "#usa_vehicles:Chassis_A97_M41_Bulldog_2",
             "tags": [],
             "level": 8,
             "price": 33500,
@@ -868,7 +867,6 @@
                 "rightTrack": 20
             },
             "weight": 6000,
-            "maxLoad": 26000,
             "terrainResistance": [
                 0.5,
                 0.6,
@@ -876,7 +874,7 @@
             ],
             "brakeForce": 28000,
             "rotationIsAroundCenter": "true",
-            "rotationSpeed": 56,
+            "rotationSpeed": 65,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.12,
                 "vehicleRotation": 0.12
@@ -1518,8 +1516,8 @@
         }
     },
     "turrets0": {
-        "Turret_1_M41_Bulldog": {
-            "userString": "#usa_vehicles:Turret_1_M41_Bulldog",
+        "Turret_1_A97_M41_Bulldog": {
+            "userString": "#usa_vehicles:Turret_1_A97_M41_Bulldog",
             "tags": [],
             "level": 7,
             "price": 21750,
@@ -1546,14 +1544,14 @@
                 "armor_4"
             ],
             "weight": 4750,
-            "maxHealth": 190,
+            "maxHealth": 180,
             "rotationSpeed": 48,
             "turretRotatorHealth": {
                 "maxHealth": 140,
                 "maxRegenHealth": 70,
                 "repairCost": 1.0
             },
-            "circularVisionRadius": 380,
+            "circularVisionRadius": 390,
             "surveyingDeviceHealth": {
                 "maxHealth": 100,
                 "maxRegenHealth": 50,
@@ -1601,9 +1599,14 @@
                         180.0
                     ],
                     "invisibilityFactorAtShot": 0.234,
-                    "shotDispersionRadius": 0.4,
-                    "reloadTime": 5.3,
-                    "aimingTime": 2.1,
+                    "shotDispersionRadius": 0.36,
+                    "reloadTime": 4.7,
+                    "aimingTime": 1.8,
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.08,
+                        "whileGunDamaged": 2.0,
+                        "afterShot": 3.0
+                    },
                     "models": {
                         "undamaged": "vehicles/american/A97_M41_Bulldog/normal/lod0/Gun_02.model",
                         "destroyed": "vehicles/american/A97_M41_Bulldog/crash/lod0/Gun_02.model",
@@ -1751,8 +1754,8 @@
                 ]
             }
         },
-        "Turret_2_M41_Bulldog": {
-            "userString": "#usa_vehicles:Turret_2_M41_Bulldog",
+        "Turret_2_A97_M41_Bulldog": {
+            "userString": "#usa_vehicles:Turret_2_A97_M41_Bulldog",
             "tags": [],
             "level": 8,
             "price": 34050,
@@ -1834,9 +1837,14 @@
                         180.0
                     ],
                     "invisibilityFactorAtShot": 0.234,
-                    "shotDispersionRadius": 0.4,
-                    "reloadTime": 5.3,
-                    "aimingTime": 1.9,
+                    "shotDispersionRadius": 0.36,
+                    "reloadTime": 4.6,
+                    "aimingTime": 1.8,
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.07,
+                        "whileGunDamaged": 2.0,
+                        "afterShot": 3.0
+                    },
                     "models": {
                         "undamaged": "vehicles/american/A97_M41_Bulldog/normal/lod0/Gun_04.model",
                         "destroyed": "vehicles/american/A97_M41_Bulldog/crash/lod0/Gun_04.model",
@@ -1899,6 +1907,11 @@
                 },
                 "_76mm_Gun_M32_late": {
                     "maxAmmo": 65,
+                    "unlocks": {
+                        "vehicle": {
+                            "cost": 177000
+                        }
+                    },
                     "armor": {
                         "armor_1": {
                             "vehicleDamageFactor": 0
@@ -1936,6 +1949,11 @@
                     "shotDispersionRadius": 0.35,
                     "reloadTime": 4.5,
                     "aimingTime": 1.7,
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.06,
+                        "whileGunDamaged": 2.0,
+                        "afterShot": 3.0
+                    },
                     "models": {
                         "undamaged": "vehicles/american/A97_M41_Bulldog/normal/lod0/Gun_05.model",
                         "destroyed": "vehicles/american/A97_M41_Bulldog/crash/lod0/Gun_05.model",
@@ -2085,61 +2103,48 @@
         }
     },
     "engines": {
-        "Continental_AOS-895-3A": {
+        "Continental_AOS_895_3A": {
             "unlocks": {
                 "engine": {
                     "cost": 18800
                 }
             }
         },
-        "Continental_AOSI-895-5A": {
-            "unlocks": {
-                "vehicle": {
-                    "cost": 177000
-                }
-            }
-        }
+        "Continental_AOSI_895_5A_M41": "shared"
     },
     "fuelTanks": {
         "Heavy": "shared"
     },
     "radios": {
-        "AN-GRC-3": {
-            "unlocks": {
-                "radio": {
-                    "cost": 9000
-                }
-            }
-        },
         "AN-ARC-27": "shared"
     },
     "physics": {
         "detailed": {
             "engines": {
-                "Continental_AOS-895-3A": {
-                    "smplEnginePower": 600,
+                "Continental_AOS_895_3A": {
+                    "smplEnginePower": 730,
                     "smplFwMaxSpeed": 68
                 },
-                "Continental_AOSI-895-5A": {
+                "Continental_AOSI_895_5A_M41": {
                     "smplEnginePower": 800,
                     "smplFwMaxSpeed": 68
                 }
             },
             "chassis": {
-                "Chassis_M41_Bulldog": {
+                "Chassis_A97_M41_Bulldog": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.0966
+                            "rollingFriction": 0.08855
                         },
                         "medium": {
-                            "rollingFriction": 0.05635
+                            "rollingFriction": 0.0483
                         },
                         "firm": {
-                            "rollingFriction": 0.0483
+                            "rollingFriction": 0.04025
                         }
                     }
                 },
-                "Chassis_M41_Bulldog_2": {
+                "Chassis_A97_M41_Bulldog_2": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.08855

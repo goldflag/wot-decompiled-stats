@@ -87,7 +87,7 @@
             "armor_4"
         ],
         "weight": 14900,
-        "maxHealth": 672,
+        "maxHealth": 760,
         "ammoBayHealth": {
             "maxHealth": 180,
             "maxRegenHealth": 120,
@@ -207,11 +207,10 @@
                 "rightTrack": 20
             },
             "weight": 6500,
-            "maxLoad": 28000,
             "terrainResistance": [
+                0.9,
                 1.0,
-                1.2,
-                2.0
+                1.8
             ],
             "brakeForce": 28000,
             "rotationIsAroundCenter": "false",
@@ -905,7 +904,6 @@
                 "rightTrack": 20
             },
             "weight": 6500,
-            "maxLoad": 29500,
             "terrainResistance": [
                 0.9,
                 1.0,
@@ -1598,8 +1596,13 @@
         "Turret_1_GB21_Cromwell": {
             "userString": "#gb_vehicles:Turret_1_GB21_Cromwell",
             "tags": [],
-            "level": 6,
+            "level": 5,
             "price": 12500,
+            "unlocks": {
+                "turret": {
+                    "cost": 4200
+                }
+            },
             "armor": {
                 "armor_1": 76.2,
                 "armor_2": 76.2,
@@ -1619,7 +1622,7 @@
                 "armor_4"
             ],
             "weight": 5000,
-            "maxHealth": 128,
+            "maxHealth": 140,
             "rotationSpeed": 48,
             "turretRotatorHealth": {
                 "maxHealth": 120,
@@ -1633,121 +1636,8 @@
                 "repairCost": 1.0
             },
             "guns": {
-                "QF_6_pounder_Mk_III": {
+                "QF_6_pdr_Gun_Mk_V_A27M": {
                     "maxAmmo": 130,
-                    "unlocks": {
-                        "gun": {
-                            "cost": 3700
-                        }
-                    },
-                    "armor": {
-                        "gun": 10
-                    },
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            13.0,
-                            0.380783,
-                            13.0,
-                            0.444444,
-                            0.0,
-                            0.555556,
-                            0.0,
-                            0.619218,
-                            13.0,
-                            1.0,
-                            13.0
-                        ]
-                    },
-                    "shotDispersionRadius": 0.41,
-                    "reloadTime": 2.3,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.1,
-                        "afterShot": 4.0,
-                        "whileGunDamaged": 2.0
-                    },
-                    "aimingTime": 1.9,
-                    "invisibilityFactorAtShot": 0.28,
-                    "models": {
-                        "undamaged": "vehicles/british/GB21_Cromwell/normal/lod0/Gun_01.model",
-                        "destroyed": "vehicles/british/GB21_Cromwell/crash/lod0/Gun_01.model",
-                        "exploded": "vehicles/british/GB21_Cromwell/crash/lod0/Gun_01.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/british/GB21_Cromwell/collision/Gun_01.model",
-                        "collisionModelClient": "vehicles/british/GB21_Cromwell/collision_client/Gun_01.model"
-                    },
-                    "effects": "shot_medium",
-                    "reloadEffect": "reload50_75",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                0.073767,
-                                -0.018736,
-                                0.858437
-                            ],
-                            "rayEnd": [
-                                0.073767,
-                                -0.018736,
-                                1.137437
-                            ],
-                            "rayUp": [
-                                0.05,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.279
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "shotOffset": [
-                        0.073767,
-                        -0.018736,
-                        0.0
-                    ],
-                    "camouflage": {
-                        "tiling": [
-                            0.88,
-                            0.88,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            119.643,
-                            123.478
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "QF_6_pounder_Mk_V": {
-                    "maxAmmo": 130,
-                    "unlocks": {
-                        "turret": {
-                            "cost": 4200
-                        },
-                        "gun": {
-                            "cost": 2300
-                        }
-                    },
                     "armor": {
                         "gun": 10
                     },
@@ -1776,12 +1666,16 @@
                     "shotDispersionRadius": 0.39,
                     "reloadTime": 2.3,
                     "shotDispersionFactors": {
-                        "turretRotation": 0.1,
-                        "afterShot": 4.0,
+                        "turretRotation": 0.08,
+                        "afterShot": 3,
                         "whileGunDamaged": 2.0
                     },
-                    "aimingTime": 1.9,
+                    "aimingTime": 1.7,
                     "invisibilityFactorAtShot": 0.266,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
                     "models": {
                         "undamaged": "vehicles/british/GB21_Cromwell/normal/lod0/Gun_02.model",
                         "destroyed": "vehicles/british/GB21_Cromwell/crash/lod0/Gun_02.model",
@@ -1839,106 +1733,6 @@
                         "density": [
                             119.269,
                             123.198
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_3.7inch_Howitzer": {
-                    "maxAmmo": 48,
-                    "armor": {
-                        "gun": 40
-                    },
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            10.0,
-                            0.380783,
-                            10.0,
-                            0.444444,
-                            0.0,
-                            0.555556,
-                            0.0,
-                            0.619218,
-                            10.0,
-                            1.0,
-                            10.0
-                        ]
-                    },
-                    "shotDispersionRadius": 0.53,
-                    "reloadTime": 7,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.14,
-                        "afterShot": 4.0,
-                        "whileGunDamaged": 2.0
-                    },
-                    "aimingTime": 2.3,
-                    "invisibilityFactorAtShot": 0.25,
-                    "models": {
-                        "undamaged": "vehicles/british/GB21_Cromwell/normal/lod0/Gun_06.model",
-                        "destroyed": "vehicles/british/GB21_Cromwell/crash/lod0/Gun_06.model",
-                        "exploded": "vehicles/british/GB21_Cromwell/crash/lod0/Gun_06.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/british/GB21_Cromwell/collision/Gun_06.model",
-                        "collisionModelClient": "vehicles/british/GB21_Cromwell/collision_client/Gun_06.model"
-                    },
-                    "effects": "shot_main",
-                    "reloadEffect": "reload85_107",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                0.073569,
-                                -0.018852,
-                                0.567407
-                            ],
-                            "rayEnd": [
-                                0.073569,
-                                -0.018852,
-                                0.846407
-                            ],
-                            "rayUp": [
-                                0.077,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.279
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "shotOffset": [
-                        0.073767,
-                        -0.007597,
-                        0.0
-                    ],
-                    "camouflage": {
-                        "tiling": [
-                            0.655,
-                            0.655,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            114.474,
-                            120.617
                         ],
                         "aoTextureSize": [
                             512.0,
@@ -2061,7 +1855,7 @@
                 "armor_4"
             ],
             "weight": 5000,
-            "maxHealth": 168,
+            "maxHealth": 190,
             "rotationSpeed": 48,
             "turretRotatorHealth": {
                 "maxHealth": 120,
@@ -2075,102 +1869,7 @@
                 "repairCost": 1.0
             },
             "guns": {
-                "QF_6_pounder_Mk_III": {
-                    "maxAmmo": 130,
-                    "armor": {
-                        "gun": 10
-                    },
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            13.0,
-                            0.380783,
-                            13.0,
-                            0.444444,
-                            0.0,
-                            0.555556,
-                            0.0,
-                            0.619218,
-                            13.0,
-                            1.0,
-                            13.0
-                        ]
-                    },
-                    "shotDispersionRadius": 0.41,
-                    "reloadTime": 2.3,
-                    "aimingTime": 1.9,
-                    "invisibilityFactorAtShot": 0.28,
-                    "models": {
-                        "undamaged": "vehicles/british/GB21_Cromwell/normal/lod0/Gun_04.model",
-                        "destroyed": "vehicles/british/GB21_Cromwell/crash/lod0/Gun_04.model",
-                        "exploded": "vehicles/british/GB21_Cromwell/crash/lod0/Gun_04.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/british/GB21_Cromwell/collision/Gun_04.model",
-                        "collisionModelClient": "vehicles/british/GB21_Cromwell/collision_client/Gun_04.model"
-                    },
-                    "effects": "shot_medium",
-                    "reloadEffect": "reload50_75",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                0.073767,
-                                -0.018736,
-                                0.760919
-                            ],
-                            "rayEnd": [
-                                0.073767,
-                                -0.018736,
-                                1.045919
-                            ],
-                            "rayUp": [
-                                0.05,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.285
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "shotOffset": [
-                        0.073767,
-                        -0.018736,
-                        0.0
-                    ],
-                    "camouflage": {
-                        "tiling": [
-                            0.76,
-                            0.76,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            119.643,
-                            123.478
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "QF_6_pounder_Mk_V": {
+                "QF_6_pdr_Gun_Mk_V_A27M": {
                     "maxAmmo": 130,
                     "armor": {
                         "gun": 10
@@ -2199,8 +1898,17 @@
                     },
                     "shotDispersionRadius": 0.39,
                     "reloadTime": 2.3,
-                    "aimingTime": 1.9,
+                    "aimingTime": 1.7,
                     "invisibilityFactorAtShot": 0.266,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
+                    "shotDispersionFactors": {
+                        "whileGunDamaged": 2.0,
+                        "turretRotation": 0.08,
+                        "afterShot": 3
+                    },
                     "models": {
                         "undamaged": "vehicles/british/GB21_Cromwell/normal/lod0/Gun_05.model",
                         "destroyed": "vehicles/british/GB21_Cromwell/crash/lod0/Gun_05.model",
@@ -2265,106 +1973,11 @@
                         ]
                     }
                 },
-                "_3.7inch_Howitzer": {
-                    "maxAmmo": 48,
-                    "armor": {
-                        "gun": 40
-                    },
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            10.0,
-                            0.380783,
-                            10.0,
-                            0.444444,
-                            0.0,
-                            0.555556,
-                            0.0,
-                            0.619218,
-                            10.0,
-                            1.0,
-                            10.0
-                        ]
-                    },
-                    "shotDispersionRadius": 0.53,
-                    "reloadTime": 7,
-                    "aimingTime": 2.3,
-                    "invisibilityFactorAtShot": 0.25,
-                    "models": {
-                        "undamaged": "vehicles/british/GB21_Cromwell/normal/lod0/Gun_06.model",
-                        "destroyed": "vehicles/british/GB21_Cromwell/crash/lod0/Gun_06.model",
-                        "exploded": "vehicles/british/GB21_Cromwell/crash/lod0/Gun_06.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/british/GB21_Cromwell/collision/Gun_06.model",
-                        "collisionModelClient": "vehicles/british/GB21_Cromwell/collision_client/Gun_06.model"
-                    },
-                    "effects": "shot_main",
-                    "reloadEffect": "reload85_107",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                0.073569,
-                                -0.017852,
-                                0.548182
-                            ],
-                            "rayEnd": [
-                                0.073569,
-                                -0.017852,
-                                0.827182
-                            ],
-                            "rayUp": [
-                                0.077,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.279
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "shotOffset": [
-                        0.073767,
-                        -0.007597,
-                        0.0
-                    ],
-                    "camouflage": {
-                        "tiling": [
-                            0.73,
-                            0.73,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            114.474,
-                            120.617
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_75mm_Gun_Mk_V": {
+                "_75mm_Gun_Mk_V_A27M": {
                     "maxAmmo": 75,
                     "unlocks": {
-                        "gun": {
-                            "cost": 5000
+                        "vehicle": {
+                            "cost": 58000
                         }
                     },
                     "armor": {
@@ -2392,15 +2005,15 @@
                             13.0
                         ]
                     },
-                    "shotDispersionRadius": 0.41,
-                    "reloadTime": 3,
+                    "shotDispersionRadius": 0.36,
+                    "reloadTime": 3.9,
+                    "aimingTime": 2.3,
+                    "invisibilityFactorAtShot": 0.247,
                     "shotDispersionFactors": {
-                        "turretRotation": 0.1,
+                        "turretRotation": 0.14,
                         "afterShot": 4.0,
                         "whileGunDamaged": 2.0
                     },
-                    "aimingTime": 1.9,
-                    "invisibilityFactorAtShot": 0.247,
                     "models": {
                         "undamaged": "vehicles/british/GB21_Cromwell/normal/lod0/Gun_07.model",
                         "destroyed": "vehicles/british/GB21_Cromwell/crash/lod0/Gun_07.model",
@@ -2458,111 +2071,6 @@
                         "density": [
                             118.267,
                             126.063
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_75mm_Gun_Vickers_HV": {
-                    "maxAmmo": 75,
-                    "unlocks": {
-                        "vehicle": {
-                            "cost": 58000
-                        }
-                    },
-                    "armor": {
-                        "gun": 20
-                    },
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -15.0,
-                            1.0,
-                            -15.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            8.0,
-                            0.380783,
-                            8.0,
-                            0.444444,
-                            -2.0,
-                            0.555556,
-                            -2.0,
-                            0.619218,
-                            8.0,
-                            1.0,
-                            8.0
-                        ]
-                    },
-                    "shotDispersionRadius": 0.36,
-                    "reloadTime": 3.9,
-                    "aimingTime": 2.3,
-                    "invisibilityFactorAtShot": 0.247,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.14,
-                        "afterShot": 4.0,
-                        "whileGunDamaged": 2.0
-                    },
-                    "models": {
-                        "undamaged": "vehicles/british/GB21_Cromwell/normal/lod0/Gun_08.model",
-                        "destroyed": "vehicles/british/GB21_Cromwell/crash/lod0/Gun_08.model",
-                        "exploded": "vehicles/british/GB21_Cromwell/crash/lod0/Gun_08.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/british/GB21_Cromwell/collision/Gun_08.model",
-                        "collisionModelClient": "vehicles/british/GB21_Cromwell/collision_client/Gun_08.model"
-                    },
-                    "effects": "shot_medium_mb",
-                    "reloadEffect": "reload50_75",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                0.07377,
-                                -0.019613,
-                                1.67725
-                            ],
-                            "rayEnd": [
-                                0.07377,
-                                -0.019613,
-                                2.12025
-                            ],
-                            "rayUp": [
-                                0.055,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.443
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "shotOffset": [
-                        0.07377,
-                        -0.019914,
-                        0.0
-                    ],
-                    "camouflage": {
-                        "tiling": [
-                            0.82,
-                            0.82,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            118.322,
-                            124.644
                         ],
                         "aoTextureSize": [
                             512.0,
@@ -2659,55 +2167,30 @@
         }
     },
     "engines": {
-        "Nuffield_liberty_MKV": {
-            "unlocks": {
-                "engine": {
-                    "cost": 1500
-                }
-            }
-        },
-        "Rolls_Royse_Meteor": {
+        "Rolls_Royce_Meteor_A27M": {
             "unlocks": {
                 "engine": {
                     "cost": 1900
                 }
             }
         },
-        "Rolls_Royse_Meteor_MkIV": "shared"
+        "Rolls_Royce_Meteor_Mk_IVB_A27M": "shared"
     },
     "fuelTanks": {
         "Average": "shared"
     },
     "radios": {
-        "N19Mk1": {
-            "unlocks": {
-                "radio": {
-                    "cost": 3600
-                }
-            }
-        },
-        "N19Mk2": {
-            "unlocks": {
-                "radio": {
-                    "cost": 4000
-                }
-            }
-        },
         "N19Mk3": "shared"
     },
     "physics": {
         "detailed": {
             "engines": {
-                "Nuffield_liberty_MKV": {
-                    "smplEnginePower": 433.4853,
+                "Rolls_Royce_Meteor_A27M": {
+                    "smplEnginePower": 650,
                     "smplFwMaxSpeed": 64
                 },
-                "Rolls_Royse_Meteor": {
-                    "smplEnginePower": 634.3687,
-                    "smplFwMaxSpeed": 64
-                },
-                "Rolls_Royse_Meteor_MkIV": {
-                    "smplEnginePower": 687.2327,
+                "Rolls_Royce_Meteor_Mk_IVB_A27M": {
+                    "smplEnginePower": 700,
                     "smplFwMaxSpeed": 64
                 }
             },
@@ -2715,13 +2198,13 @@
                 "Chassis_GB21_Cromwell": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.161
+                            "rollingFriction": 0.1449
                         },
                         "medium": {
-                            "rollingFriction": 0.0966
+                            "rollingFriction": 0.0805
                         },
                         "firm": {
-                            "rollingFriction": 0.0805
+                            "rollingFriction": 0.07245
                         }
                     }
                 },

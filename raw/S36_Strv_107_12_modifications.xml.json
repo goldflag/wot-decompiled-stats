@@ -1,0 +1,421 @@
+{
+    "s36_node1": {
+        "id": 11401,
+        "imgName": "invisibilityWhenShooting",
+        "locName": "invisibilityWhenShooting",
+        "categories": "concealment",
+        "modifiers": {
+            "mul": {
+                "name": "descrAttrs/gun/invisibilityFactorAtShot",
+                "value": 1.1
+            }
+        },
+        "kpi": {
+            "mul": {
+                "name": "vehicleInvisibilityAfterShot",
+                "value": 1.1
+            }
+        }
+    },
+    "s36_node2": {
+        "id": 11402,
+        "imgName": "gunStabilizationFromHullMovement",
+        "locName": "gunStabilizationFromHullMovement",
+        "categories": "firepower",
+        "modifiers": {
+            "mul": {
+                "name": "descrAttrs/chassis/shotDispersionFactors/0",
+                "value": 0.9
+            }
+        },
+        "kpi": {
+            "mul": {
+                "name": "vehicleGunShotDispersionChassisMovement",
+                "value": 0.9
+            }
+        }
+    },
+    "s36_node4": {
+        "id": 11404,
+        "imgName": "gunDispersion",
+        "locName": "gunDispersion",
+        "categories": "firepower",
+        "modifiers": {
+            "add": {
+                "name": "descrAttrs/gun/shotDispersionRadius",
+                "value": -0.01
+            }
+        },
+        "kpi": {
+            "add": {
+                "name": "vehicleGunShotFullDispersion",
+                "value": -0.01
+            }
+        }
+    },
+    "s36_node5": {
+        "id": 11405,
+        "imgName": "damagedGunDispersion",
+        "locName": "damagedGunDispersion",
+        "categories": "firepower",
+        "modifiers": {
+            "mul": {
+                "name": "miscAttrs/gun/shotDispersionFactors/whileGunDamaged",
+                "value": 0.8
+            }
+        },
+        "kpi": {
+            "mul": {
+                "name": "vehicleGunShotDispersionWhileGunDamaged",
+                "value": 0.8
+            }
+        }
+    },
+    "s36_node6": {
+        "id": 11406,
+        "imgName": "additionalShellAmmoCapacity",
+        "locName": "additionalShellAmmoCapacity",
+        "categories": "firepower",
+        "modifiers": {
+            "add": {
+                "name": "descrAttrs/gun/maxAmmo",
+                "value": 10
+            }
+        },
+        "kpi": {
+            "add": {
+                "name": "additionalShellAmmoCapacity",
+                "value": 10
+            }
+        }
+    },
+    "s36_node7": {
+        "id": 11407,
+        "imgName": "specialShellPenetration",
+        "locName": "specialShellPenetration",
+        "categories": "firepower",
+        "modifiers": {
+            "add": {
+                "name": "descrAttrs/shot1/piercingPower",
+                "value": 5
+            }
+        },
+        "kpi": {
+            "add": {
+                "name": "specialShellPenetration",
+                "value": 5
+            }
+        }
+    },
+    "s36_node8": {
+        "id": 11408,
+        "imgName": "shellModuleDamage",
+        "locName": "shellModuleDamage",
+        "categories": "firepower",
+        "modifiers": {
+            "mul": {
+                "name": "descrAttrs/shell2/deviceDamage",
+                "value": 1.1
+            }
+        },
+        "kpi": {
+            "mul": {
+                "name": "shellModuleDamage",
+                "value": 1.1
+            }
+        }
+    },
+    "s36_node9": {
+        "id": 11409,
+        "imgName": "s36_mechanic_0",
+        "locName": "s36_mechanic_0",
+        "categories": "mechanics",
+        "modifiers": {
+            "mul": {
+                "name": "dynAttrs/hull_aiming/pitch/wheelsCorrectionSpeedFactor",
+                "value": 1.1,
+                "filter": "pillboxSiegeMode"
+            }
+        },
+        "kpi": {
+            "mul": {
+                "name": "value",
+                "value": 1.1
+            }
+        }
+    },
+    "s36_node10": {
+        "id": 11410,
+        "imgName": "hullElevationSpeed",
+        "locName": "hullElevationSpeed",
+        "categories": "firepower",
+        "modifiers": {
+            "mul": {
+                "name": "descrAttrs/hullAimingParamsPitch/wheelsCorrectionSpeed",
+                "value": 1.1
+            }
+        },
+        "kpi": {
+            "mul": {
+                "name": "hullElevationSpeed",
+                "value": 1.1
+            }
+        }
+    },
+    "s36_node11": {
+        "id": 11411,
+        "imgName": "standardShellPenetration",
+        "locName": "standardShellPenetration",
+        "categories": "firepower",
+        "modifiers": {
+            "add": {
+                "name": "descrAttrs/shot0/piercingPower",
+                "value": 5
+            }
+        },
+        "kpi": {
+            "add": {
+                "name": "standardShellPenetration",
+                "value": 5
+            }
+        }
+    },
+    "s36_node13": {
+        "id": 11413,
+        "imgName": "s36_mechanic_1",
+        "locName": "s36_mechanic_1",
+        "categories": "mechanics",
+        "modifiers": {
+            "add": {
+                "name": "miscAttrs/pillboxSiegeMode/switchPillboxToSiegeTime",
+                "value": -1.0
+            }
+        },
+        "kpi": {
+            "add": {
+                "name": "value",
+                "value": -1.0
+            }
+        }
+    },
+    "s36_node14": {
+        "id": 11414,
+        "imgName": "driveModeReverseSpeed",
+        "locName": "driveModeReverseSpeed",
+        "categories": "mobility",
+        "modifiers": {
+            "add": {
+                "filter": "default",
+                "name": "descrAttrs/engine/maxSpeedBack",
+                "value": 2
+            }
+        },
+        "kpi": {
+            "add": {
+                "name": "vehicleBackwardMaxSpeed",
+                "value": 2
+            }
+        }
+    },
+    "s36_node15": {
+        "id": 11415,
+        "imgName": "driveModeForwardSpeed",
+        "locName": "driveModeForwardSpeed",
+        "categories": "mobility",
+        "modifiers": {
+            "add": {
+                "filter": "default",
+                "name": "descrAttrs/engine/maxSpeedForward",
+                "value": 2
+            }
+        },
+        "kpi": {
+            "add": {
+                "name": "vehicleForwardMaxSpeed",
+                "value": 2
+            }
+        }
+    },
+    "s36_node16": {
+        "id": 11416,
+        "imgName": "engineHP",
+        "locName": "engineHP",
+        "categories": "survivability",
+        "modifiers": {
+            "mul": {
+                "name": "miscAttrs/engineHealthFactor",
+                "value": 1.2
+            }
+        },
+        "kpi": {
+            "mul": {
+                "name": "engineHP",
+                "value": 1.2
+            }
+        }
+    },
+    "s36_node17": {
+        "id": 11417,
+        "imgName": "hitPoints",
+        "locName": "hitPoints",
+        "categories": "survivability",
+        "modifiers": {
+            "add": {
+                "name": "descrAttrs/hull/maxHealth",
+                "value": 50
+            }
+        },
+        "kpi": {
+            "add": {
+                "name": "vehicleStrength",
+                "value": 50
+            }
+        }
+    },
+    "s36_node18": {
+        "id": 11418,
+        "imgName": "hullTraverseSpeed",
+        "locName": "hullTraverseSpeed",
+        "categories": "mobility",
+        "modifiers": {
+            "add": {
+                "name": "descrAttrs/chassis/rotationSpeedDegrees",
+                "value": 2
+            }
+        },
+        "kpi": {
+            "add": {
+                "name": "vehicleAllGroundRotationSpeed",
+                "value": 2
+            }
+        }
+    },
+    "s36_node19": {
+        "id": 11419,
+        "imgName": "s36_mechanic_2",
+        "locName": "s36_mechanic_2",
+        "categories": "mechanics",
+        "modifiers": {
+            "mul": {
+                "name": "dynAttrs/multShotDispersionFactor",
+                "value": 0.9,
+                "filter": "pillboxSiegeMode"
+            }
+        },
+        "kpi": {
+            "mul": {
+                "name": "value",
+                "value": 0.9
+            }
+        }
+    },
+    "s36_node20": {
+        "id": 11420,
+        "imgName": "chassisHP",
+        "locName": "chassisHP",
+        "categories": "survivability",
+        "modifiers": {
+            "mul": {
+                "name": "miscAttrs/chassisHealthFactor",
+                "value": 1.2
+            }
+        },
+        "kpi": {
+            "mul": {
+                "name": "vehicleChassisStrength",
+                "value": 1.2
+            }
+        }
+    },
+    "s36_node21": {
+        "id": 11421,
+        "imgName": "enginePower",
+        "locName": "enginePower",
+        "categories": "mobility",
+        "modifiers": {
+            "add": {
+                "name": "descrAttrs/engine/power",
+                "value": 50
+            }
+        },
+        "kpi": {
+            "add": {
+                "name": "vehicleEnginePower",
+                "value": 50
+            }
+        }
+    },
+    "s36_node23": {
+        "id": 11423,
+        "imgName": "viewRange",
+        "locName": "viewRange",
+        "categories": "spotting",
+        "modifiers": {
+            "add": {
+                "name": "descrAttrs/turret/circularVisionRadius",
+                "value": 10
+            }
+        },
+        "kpi": {
+            "add": {
+                "name": "vehicleCircularVisionRadius",
+                "value": 10
+            }
+        }
+    },
+    "s36_node24": {
+        "id": 11424,
+        "imgName": "s36_mechanic_3",
+        "locName": "s36_mechanic_3",
+        "categories": "mechanics",
+        "modifiers": {
+            "mul": {
+                "name": "dynAttrs/gun/reloadTime",
+                "value": 0.95,
+                "filter": "pillboxSiegeMode"
+            }
+        },
+        "kpi": {
+            "mul": {
+                "name": "value",
+                "value": 0.95
+            }
+        }
+    },
+    "s36_node25": {
+        "id": 11425,
+        "imgName": "enginePower",
+        "locName": "enginePower",
+        "categories": "mobility",
+        "modifiers": {
+            "add": {
+                "name": "descrAttrs/engine/power",
+                "value": 50
+            }
+        },
+        "kpi": {
+            "add": {
+                "name": "vehicleEnginePower",
+                "value": 50
+            }
+        }
+    },
+    "s36_node26": {
+        "id": 11426,
+        "imgName": "gunStabilizationFromHullRotation",
+        "locName": "gunStabilizationFromHullRotation",
+        "categories": "firepower",
+        "modifiers": {
+            "mul": {
+                "name": "descrAttrs/chassis/shotDispersionFactors/1",
+                "value": 0.9
+            }
+        },
+        "kpi": {
+            "mul": {
+                "name": "vehicleGunShotDispersionChassisRotation",
+                "value": 0.9
+            }
+        }
+    }
+}

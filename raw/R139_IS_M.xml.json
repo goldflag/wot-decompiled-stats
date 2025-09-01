@@ -28,7 +28,7 @@
         "backward": 12
     },
     "invisibility": {
-        "moving": 0.055,
+        "moving": 0.056,
         "still": 0.111,
         "camouflageBonus": 0.02,
         "firePenalty": 0.167
@@ -82,7 +82,7 @@
             "armor_4"
         ],
         "weight": 27065,
-        "maxHealth": 1160,
+        "maxHealth": 1320,
         "ammoBayHealth": {
             "maxHealth": 200,
             "maxRegenHealth": 135,
@@ -202,7 +202,6 @@
                 "rightTrack": 20
             },
             "weight": 11000,
-            "maxLoad": 56000,
             "terrainResistance": [
                 1.1,
                 1.7,
@@ -840,7 +839,6 @@
                 "rightTrack": 20
             },
             "weight": 11000,
-            "maxLoad": 60000,
             "terrainResistance": [
                 1.1,
                 1.7,
@@ -1476,15 +1474,15 @@
             "level": 7,
             "price": 22000,
             "armor": {
-                "armor_1": 100,
-                "armor_2": 90,
+                "armor_1": 160,
+                "armor_2": 130,
                 "armor_3": 100,
                 "armor_4": 100,
                 "armor_5": 30,
                 "armor_6": 45,
                 "armor_7": 60,
                 "armor_8": 0,
-                "armor_9": 90
+                "armor_9": 120
             },
             "primaryArmor": [
                 "armor_1",
@@ -1506,7 +1504,7 @@
                 "repairCost": 1.0
             },
             "guns": {
-                "_122-mm_D-25T_with_wedges_shutter": {
+                "_122mm_D_25T_IS_M": {
                     "maxAmmo": 30,
                     "unlocks": {
                         "gun": {
@@ -1546,10 +1544,15 @@
                             5.0
                         ]
                     },
-                    "reloadTime": 13.3,
-                    "aimingTime": 3.4,
+                    "reloadTime": 12.3,
+                    "aimingTime": 3,
                     "invisibilityFactorAtShot": 0.18,
-                    "shotDispersionRadius": 0.45,
+                    "shotDispersionRadius": 0.43,
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.1,
+                        "whileGunDamaged": 2.0,
+                        "afterShot": 4.0
+                    },
                     "models": {
                         "undamaged": "vehicles/russian/R139_IS_M/normal/lod0/Gun_01.model",
                         "destroyed": "vehicles/russian/R139_IS_M/crash/lod0/Gun_01.model",
@@ -1649,8 +1652,8 @@
                             5.0
                         ]
                     },
-                    "reloadTime": 13.3,
-                    "aimingTime": 3.4,
+                    "reloadTime": 12,
+                    "aimingTime": 2.9,
                     "invisibilityFactorAtShot": 0.18,
                     "shotDispersionFactors": {
                         "turretRotation": 0.08,
@@ -1835,7 +1838,7 @@
                 "armor_4"
             ],
             "weight": 12500,
-            "maxHealth": 340,
+            "maxHealth": 330,
             "rotationSpeed": 32,
             "turretRotatorHealth": {
                 "maxHealth": 150,
@@ -1849,7 +1852,7 @@
                 "repairCost": 1.0
             },
             "guns": {
-                "_122-mm_D-25T_with_wedges_shutter": {
+                "_122mm_D_25T_IS_M": {
                     "maxAmmo": 30,
                     "armor": {
                         "armor_1": {
@@ -1890,10 +1893,15 @@
                             5.0
                         ]
                     },
-                    "reloadTime": 13.3,
-                    "aimingTime": 3.4,
+                    "reloadTime": 12.3,
+                    "aimingTime": 3,
                     "invisibilityFactorAtShot": 0.18,
-                    "shotDispersionRadius": 0.44,
+                    "shotDispersionRadius": 0.43,
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.1,
+                        "whileGunDamaged": 2.0,
+                        "afterShot": 4.0
+                    },
                     "models": {
                         "undamaged": "vehicles/russian/R139_IS_M/normal/lod0/Gun_04.model",
                         "destroyed": "vehicles/russian/R139_IS_M/crash/lod0/Gun_04.model",
@@ -1995,7 +2003,7 @@
                         ]
                     },
                     "reloadTime": 11.7,
-                    "aimingTime": 3,
+                    "aimingTime": 2.8,
                     "invisibilityFactorAtShot": 0.18,
                     "shotDispersionFactors": {
                         "turretRotation": 0.08,
@@ -2165,20 +2173,13 @@
         "Heavy": "shared"
     },
     "radios": {
-        "_10RK": {
-            "unlocks": {
-                "radio": {
-                    "cost": 5600
-                }
-            }
-        },
         "_12RT": "shared"
     },
     "physics": {
         "detailed": {
             "engines": {
                 "M_40_650": {
-                    "smplEnginePower": 650,
+                    "smplEnginePower": 680,
                     "smplFwMaxSpeed": 35
                 },
                 "M_40_750": {

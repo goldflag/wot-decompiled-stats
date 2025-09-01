@@ -13,7 +13,7 @@
         8.0
     ],
     "speedLimits": {
-        "forward": 34,
+        "forward": 40,
         "backward": 15
     },
     "invisibility": {
@@ -204,18 +204,17 @@
                 "rightTrack": 10
             },
             "weight": 3200,
-            "maxLoad": 11000,
             "terrainResistance": [
-                1.1,
-                1.4,
-                2.2
+                1.0,
+                1.2,
+                2.0
             ],
             "brakeForce": 10500,
             "rotationIsAroundCenter": "false",
-            "rotationSpeed": 40,
+            "rotationSpeed": 47,
             "shotDispersionFactors": {
-                "vehicleMovement": 0.36,
-                "vehicleRotation": 0.36
+                "vehicleMovement": 0.3,
+                "vehicleRotation": 0.3
             },
             "bulkHealthFactor": 3.0,
             "maxHealth": 50,
@@ -952,7 +951,6 @@
                 "rightTrack": 10
             },
             "weight": 3200,
-            "maxLoad": 13000,
             "terrainResistance": [
                 1.0,
                 1.2,
@@ -960,10 +958,10 @@
             ],
             "brakeForce": 10500,
             "rotationIsAroundCenter": "false",
-            "rotationSpeed": 45,
+            "rotationSpeed": 52,
             "shotDispersionFactors": {
-                "vehicleMovement": 0.34,
-                "vehicleRotation": 0.34
+                "vehicleMovement": 0.28,
+                "vehicleRotation": 0.28
             },
             "bulkHealthFactor": 3.0,
             "maxHealth": 60,
@@ -1697,11 +1695,6 @@
             "tags": [],
             "level": 1,
             "price": 300,
-            "unlocks": {
-                "turret": {
-                    "cost": 130
-                }
-            },
             "armor": {
                 "armor_1": 25,
                 "armor_2": 20,
@@ -1710,7 +1703,10 @@
                 "armor_5": 8,
                 "armor_6": 8,
                 "armor_7": {
-                    "vehicleDamageFactor": 0
+                    "vehicleDamageFactor": 0,
+                    "tags": [
+                        "gunMask"
+                    ]
                 },
                 "armor_8": 0,
                 "armor_9": 20,
@@ -1726,13 +1722,13 @@
             ],
             "weight": 1000,
             "maxHealth": 52,
-            "rotationSpeed": 26,
+            "rotationSpeed": 28,
             "turretRotatorHealth": {
                 "maxHealth": 60,
                 "maxRegenHealth": 30,
                 "repairCost": 1.0
             },
-            "circularVisionRadius": 290,
+            "circularVisionRadius": 300,
             "surveyingDeviceHealth": {
                 "maxHealth": 40,
                 "maxRegenHealth": 20,
@@ -1786,8 +1782,14 @@
                         ]
                     },
                     "invisibilityFactorAtShot": 0.24,
-                    "reloadTime": 3.2,
-                    "aimingTime": 1.9,
+                    "reloadTime": 2.7,
+                    "aimingTime": 1.8,
+                    "shotDispersionRadius": 0.4,
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.12,
+                        "whileGunDamaged": 2.0,
+                        "afterShot": 4.0
+                    },
                     "models": {
                         "undamaged": "vehicles/czech/Cz03_LT_vz35/normal/lod0/Gun_01.model",
                         "destroyed": "vehicles/czech/Cz03_LT_vz35/crash/lod0/Gun_01.model",
@@ -1844,6 +1846,11 @@
                 },
                 "_37mm_Skoda_A8": {
                     "maxAmmo": 150,
+                    "unlocks": {
+                        "turret": {
+                            "cost": 130
+                        }
+                    },
                     "armor": {
                         "armor_1": {
                             "vehicleDamageFactor": 0
@@ -1879,8 +1886,13 @@
                     },
                     "invisibilityFactorAtShot": 0.255,
                     "shotDispersionRadius": 0.38,
-                    "reloadTime": 3,
+                    "reloadTime": 2.5,
                     "aimingTime": 1.7,
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.12,
+                        "whileGunDamaged": 2.0,
+                        "afterShot": 4.0
+                    },
                     "models": {
                         "undamaged": "vehicles/czech/Cz03_LT_vz35/normal/lod0/Gun_02.model",
                         "destroyed": "vehicles/czech/Cz03_LT_vz35/crash/lod0/Gun_02.model",
@@ -2040,7 +2052,10 @@
                 "armor_5": 8,
                 "armor_6": 8,
                 "armor_7": {
-                    "vehicleDamageFactor": 0
+                    "vehicleDamageFactor": 0,
+                    "tags": [
+                        "gunMask"
+                    ]
                 },
                 "armor_8": 0,
                 "armor_9": 20,
@@ -2111,13 +2126,14 @@
                         ]
                     },
                     "invisibilityFactorAtShot": 0.24,
-                    "reloadTime": 2.8,
+                    "reloadTime": 2.6,
                     "shotDispersionFactors": {
-                        "turretRotation": 0.12,
+                        "turretRotation": 0.11,
                         "afterShot": 4.0,
                         "whileGunDamaged": 2.0
                     },
-                    "aimingTime": 1.9,
+                    "aimingTime": 1.8,
+                    "shotDispersionRadius": 0.4,
                     "models": {
                         "undamaged": "vehicles/czech/Cz03_LT_vz35/normal/lod0/Gun_01.model",
                         "destroyed": "vehicles/czech/Cz03_LT_vz35/crash/lod0/Gun_01.model",
@@ -2209,9 +2225,9 @@
                     },
                     "invisibilityFactorAtShot": 0.255,
                     "shotDispersionRadius": 0.38,
-                    "reloadTime": 2.6,
+                    "reloadTime": 2.4,
                     "shotDispersionFactors": {
-                        "turretRotation": 0.12,
+                        "turretRotation": 0.11,
                         "afterShot": 4.0,
                         "whileGunDamaged": 2.0
                     },
@@ -2388,25 +2404,25 @@
         "detailed": {
             "engines": {
                 "Skoda_T_11_0": {
-                    "smplEnginePower": 126.8737,
-                    "smplFwMaxSpeed": 34
+                    "smplEnginePower": 180,
+                    "smplFwMaxSpeed": 40
                 },
                 "Skoda_T_11_2": {
-                    "smplEnginePower": 142.733,
-                    "smplFwMaxSpeed": 34
+                    "smplEnginePower": 200,
+                    "smplFwMaxSpeed": 40
                 }
             },
             "chassis": {
                 "Chassis_Cz03_LT_vz35": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.1771
+                            "rollingFriction": 0.161
                         },
                         "medium": {
-                            "rollingFriction": 0.1127
+                            "rollingFriction": 0.0966
                         },
                         "firm": {
-                            "rollingFriction": 0.08855
+                            "rollingFriction": 0.0805
                         }
                     }
                 },

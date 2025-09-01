@@ -89,9 +89,9 @@
         "weight": 6583,
         "maxHealth": 240,
         "ammoBayHealth": {
-            "maxHealth": 90,
-            "maxRegenHealth": 45,
-            "repairCost": 1.0
+            "maxHealth": 150,
+            "maxRegenHealth": 113,
+            "repairCost": 5
         },
         "models": {
             "undamaged": "vehicles/american/A18_M41/normal/lod0/Hull.model",
@@ -192,8 +192,8 @@
         }
     },
     "chassis": {
-        "T72": {
-            "userString": "#usa_vehicles:T72",
+        "Chassis_A18_M41": {
+            "userString": "#usa_vehicles:Chassis_A18_M41",
             "tags": [],
             "level": 4,
             "price": 4300,
@@ -207,7 +207,6 @@
                 "rightTrack": 20
             },
             "weight": 10000,
-            "maxLoad": 19300,
             "terrainResistance": [
                 1.3,
                 1.5,
@@ -1032,8 +1031,8 @@
             },
             "repairTime": 8.39999962
         },
-        "T72E1": {
-            "userString": "#usa_vehicles:T72E1",
+        "Chassis_A18_M41_2": {
+            "userString": "#usa_vehicles:Chassis_A18_M41_2",
             "tags": [],
             "level": 5,
             "price": 8700,
@@ -1042,7 +1041,6 @@
                 "rightTrack": 20
             },
             "weight": 10000,
-            "maxLoad": 21000,
             "terrainResistance": [
                 1.3,
                 1.5,
@@ -1056,9 +1054,9 @@
                 "vehicleRotation": 0.48
             },
             "bulkHealthFactor": 3.0,
-            "maxHealth": 70,
-            "maxRegenHealth": 55,
-            "repairCost": 0.5,
+            "maxHealth": 115,
+            "maxRegenHealth": 86,
+            "repairCost": 4,
             "models": {
                 "undamaged": "vehicles/american/A18_M41/normal/lod0/Chassis.model",
                 "destroyed": "vehicles/american/A18_M41/crash/lod0/Chassis.model",
@@ -1865,15 +1863,16 @@
                     "camouflage": null
                 }
             },
-            "repairTime": 8.39999962
+            "repairTime": 6.72463751
         }
     },
     "turrets0": {
-        "M14": {
+        "Turret_1_A18_M41": {
             "ceilless": "true",
-            "userString": "#usa_vehicles:T51D1",
+            "userString": "#usa_vehicles:Turret_1_A18_M41",
             "tags": [
-                "cannotDetach"
+                "cannotDetach",
+                "turretless"
             ],
             "level": 5,
             "price": 200,
@@ -1897,7 +1896,7 @@
                 "repairCost": 1.0
             },
             "guns": {
-                "_155mm_Howitzer_M1": {
+                "_155mm_Howitzer_M1_M41": {
                     "reloadTime": 29,
                     "maxAmmo": 27,
                     "pitchLimits": {
@@ -2063,52 +2062,41 @@
         }
     },
     "engines": {
-        "Continental_W-670": {
+        "Continental_W_670_M41": {
             "unlocks": {
                 "engine": {
                     "cost": 820
                 }
             }
         },
-        "Twin_Cadillac_series_44T4": "shared"
+        "Twin_Cadillac_Series_44T4_M41": {
+            "unlocks": {
+                "vehicle": {
+                    "cost": 33800
+                }
+            }
+        }
     },
     "fuelTanks": {
         "Medium": "shared"
     },
     "radios": {
-        "SCR_510": {
-            "unlocks": {
-                "radio": {
-                    "cost": 1480
-                }
-            }
-        },
-        "SCR_610": {
-            "unlocks": {
-                "radio": {
-                    "cost": 9000
-                },
-                "vehicle": {
-                    "cost": 33800
-                }
-            }
-        },
         "SCR_619": "shared"
     },
     "physics": {
         "detailed": {
             "engines": {
-                "Continental_W-670": {
+                "Continental_W_670_M41": {
                     "smplEnginePower": 277.0077,
                     "smplFwMaxSpeed": 56.3
                 },
-                "Twin_Cadillac_series_44T4": {
+                "Twin_Cadillac_Series_44T4_M41": {
                     "smplEnginePower": 312.9552,
                     "smplFwMaxSpeed": 56.3
                 }
             },
             "chassis": {
-                "T72": {
+                "Chassis_A18_M41": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.20125
@@ -2121,7 +2109,7 @@
                         }
                     }
                 },
-                "T72E1": {
+                "Chassis_A18_M41_2": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.20125

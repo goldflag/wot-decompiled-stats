@@ -17,11 +17,11 @@
         8.0
     ],
     "speedLimits": {
-        "forward": 50,
+        "forward": 35,
         "backward": 20
     },
     "invisibility": {
-        "moving": 0.189,
+        "moving": 0.252,
         "still": 0.252,
         "camouflageBonus": 0.03,
         "firePenalty": 0.378
@@ -191,8 +191,8 @@
         }
     },
     "chassis": {
-        "Chassis_AMX40": {
-            "userString": "#france_vehicles:Chassis_AMX40",
+        "Chassis_F14_AMX40": {
+            "userString": "#france_vehicles:Chassis_F14_AMX40",
             "tags": [],
             "level": 3,
             "price": 1750,
@@ -206,18 +206,17 @@
                 "rightTrack": 10
             },
             "weight": 4200,
-            "maxLoad": 20230,
             "terrainResistance": [
+                1.4,
                 1.5,
-                1.6,
-                2.7
+                2.5
             ],
             "brakeForce": 45500,
             "rotationIsAroundCenter": "false",
-            "rotationSpeed": 28,
+            "rotationSpeed": 37,
             "shotDispersionFactors": {
-                "vehicleMovement": 0.32,
-                "vehicleRotation": 0.32
+                "vehicleMovement": 0.24,
+                "vehicleRotation": 0.24
             },
             "bulkHealthFactor": 3.0,
             "maxHealth": 70,
@@ -805,8 +804,8 @@
             },
             "repairTime": 9.14285755
         },
-        "Chassis_AMX40_2": {
-            "userString": "#france_vehicles:Chassis_AMX40_2",
+        "Chassis_F14_AMX40_2": {
+            "userString": "#france_vehicles:Chassis_F14_AMX40_2",
             "tags": [],
             "level": 4,
             "price": 4750,
@@ -815,7 +814,6 @@
                 "rightTrack": 10
             },
             "weight": 4200,
-            "maxLoad": 25230,
             "terrainResistance": [
                 1.4,
                 1.5,
@@ -823,10 +821,10 @@
             ],
             "brakeForce": 45500,
             "rotationIsAroundCenter": "false",
-            "rotationSpeed": 30,
+            "rotationSpeed": 40,
             "shotDispersionFactors": {
-                "vehicleMovement": 0.3,
-                "vehicleRotation": 0.3
+                "vehicleMovement": 0.2,
+                "vehicleRotation": 0.2
             },
             "bulkHealthFactor": 3.0,
             "maxHealth": 80,
@@ -1416,11 +1414,16 @@
         }
     },
     "turrets0": {
-        "Turret_1_AMX40": {
-            "userString": "#france_vehicles:Turret_1_AMX40",
+        "Turret_1_F14_AMX40": {
+            "userString": "#france_vehicles:Turret_1_F14_AMX40",
             "tags": [],
             "level": 3,
             "price": 1850,
+            "unlocks": {
+                "turret": {
+                    "cost": 1100
+                }
+            },
             "armor": {
                 "armor_1": 70,
                 "armor_2": 70,
@@ -1445,113 +1448,15 @@
                 "maxRegenHealth": 40,
                 "repairCost": 1.0
             },
-            "circularVisionRadius": 320,
+            "circularVisionRadius": 330,
             "surveyingDeviceHealth": {
                 "maxHealth": 60,
                 "maxRegenHealth": 30,
                 "repairCost": 1.0
             },
             "guns": {
-                "_47mm_SA34": {
-                    "maxAmmo": 310,
-                    "unlocks": {
-                        "gun": {
-                            "cost": 265
-                        }
-                    },
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_4": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 10
-                    },
-                    "reloadTime": 2.3,
-                    "aimingTime": 1.7,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.14,
-                        "afterShot": 3.5,
-                        "whileGunDamaged": 2.0
-                    },
-                    "shotDispersionRadius": 0.53,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            10.0,
-                            1.0,
-                            10.0
-                        ]
-                    },
-                    "invisibilityFactorAtShot": 0.29,
-                    "models": {
-                        "undamaged": "vehicles/french/F14_AMX40/normal/lod0/Gun_01.model",
-                        "destroyed": "vehicles/french/F14_AMX40/crash/lod0/Gun_01.model",
-                        "exploded": "vehicles/french/F14_AMX40/crash/lod0/Gun_01.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/french/F14_AMX40/collision/Gun_01.model",
-                        "collisionModelClient": "vehicles/french/F14_AMX40/collision_client/Gun_01.model"
-                    },
-                    "effects": "shot_small",
-                    "reloadEffect": "reload20_45",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "camouflage",
-                            "slotId": 42000,
-                            "anchorPosition": [
-                                -0.0007,
-                                0.004576,
-                                0.696
-                            ],
-                            "anchorDirection": [
-                                -0.0,
-                                0.0,
-                                1.0
-                            ],
-                            "applyTo": 4096
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "camouflage": {
-                        "density": [
-                            114.509,
-                            115.564
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_47mm_SA35": {
+                "_47mm_SA35_40": {
                     "maxAmmo": 275,
-                    "unlocks": {
-                        "turret": {
-                            "cost": 1100
-                        }
-                    },
                     "armor": {
                         "armor_2": {
                             "vehicleDamageFactor": 0
@@ -1565,11 +1470,11 @@
                         "gun": 10
                     },
                     "shotDispersionFactors": {
-                        "turretRotation": 0.14,
+                        "turretRotation": 0.12,
                         "afterShot": 3.5,
                         "whileGunDamaged": 2.0
                     },
-                    "shotDispersionRadius": 0.47,
+                    "shotDispersionRadius": 0.4,
                     "reloadTime": 2.3,
                     "aimingTime": 1.7,
                     "pitchLimits": {
@@ -1724,8 +1629,8 @@
                 ]
             }
         },
-        "Turret_2_AMX40": {
-            "userString": "#france_vehicles:Turret_2_AMX40",
+        "Turret_2_F14_AMX40": {
+            "userString": "#france_vehicles:Turret_2_F14_AMX40",
             "tags": [],
             "level": 4,
             "price": 4700,
@@ -1769,103 +1674,7 @@
             },
             "invisibilityFactor": 0.918,
             "guns": {
-                "_47mm_SA34": {
-                    "maxAmmo": 310,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            9.0,
-                            0.353005,
-                            9.0,
-                            0.416667,
-                            7.0,
-                            0.583333,
-                            7.0,
-                            0.646995,
-                            9.0,
-                            1.0,
-                            9.0
-                        ]
-                    },
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_4": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 10
-                    },
-                    "reloadTime": 2.3,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.12,
-                        "afterShot": 3.5,
-                        "whileGunDamaged": 2.0
-                    },
-                    "aimingTime": 1.7,
-                    "shotDispersionRadius": 0.53,
-                    "invisibilityFactorAtShot": 0.29,
-                    "models": {
-                        "undamaged": "vehicles/french/F14_AMX40/normal/lod0/Gun_03.model",
-                        "destroyed": "vehicles/french/F14_AMX40/crash/lod0/Gun_03.model",
-                        "exploded": "vehicles/french/F14_AMX40/crash/lod0/Gun_03.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/french/F14_AMX40/collision/Gun_03.model",
-                        "collisionModelClient": "vehicles/french/F14_AMX40/collision_client/Gun_03.model"
-                    },
-                    "effects": "shot_small",
-                    "reloadEffect": "reload20_45",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "camouflage",
-                            "slotId": 42000,
-                            "anchorPosition": [
-                                -3e-06,
-                                -0.041715,
-                                0.440226
-                            ],
-                            "anchorDirection": [
-                                -0.0,
-                                4e-05,
-                                1.0
-                            ],
-                            "applyTo": 4096
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "camouflage": {
-                        "density": [
-                            114.509,
-                            115.564
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_47mm_SA35": {
+                "_47mm_SA35_40": {
                     "maxAmmo": 275,
                     "pitchLimits": {
                         "minPitch": [
@@ -1877,14 +1686,6 @@
                         "maxPitch": [
                             0.0,
                             9.0,
-                            0.353005,
-                            9.0,
-                            0.416667,
-                            7.0,
-                            0.583333,
-                            7.0,
-                            0.646995,
-                            9.0,
                             1.0,
                             9.0
                         ]
@@ -1909,9 +1710,9 @@
                         "afterShot": 3.5,
                         "whileGunDamaged": 2.0
                     },
-                    "shotDispersionRadius": 0.47,
+                    "shotDispersionRadius": 0.4,
                     "reloadTime": 2.3,
-                    "aimingTime": 1.7,
+                    "aimingTime": 1.6,
                     "invisibilityFactorAtShot": 0.29,
                     "models": {
                         "undamaged": "vehicles/french/F14_AMX40/normal/lod0/Gun_04.model",
@@ -1961,7 +1762,7 @@
                         ]
                     }
                 },
-                "_75mm_SA32": {
+                "_75mm_SA32_40": {
                     "maxAmmo": 105,
                     "unlocks": {
                         "vehicle": {
@@ -2001,11 +1802,11 @@
                         ]
                     },
                     "shotDispersionFactors": {
-                        "turretRotation": 0.2,
+                        "turretRotation": 0.14,
                         "afterShot": 4.0,
                         "whileGunDamaged": 2.0
                     },
-                    "aimingTime": 2.5,
+                    "aimingTime": 2.3,
                     "models": {
                         "undamaged": "vehicles/french/F14_AMX40/normal/lod0/Gun_05.model",
                         "destroyed": "vehicles/french/F14_AMX40/crash/lod0/Gun_05.model",
@@ -2156,42 +1957,35 @@
         "Medium": "shared"
     },
     "radios": {
-        "ER_52": {
-            "unlocks": {
-                "radio": {
-                    "cost": 610
-                }
-            }
-        },
         "ER_53": "shared"
     },
     "physics": {
         "detailed": {
             "engines": {
                 "Aster": {
-                    "smplEnginePower": 158.5922,
-                    "smplFwMaxSpeed": 50
+                    "smplEnginePower": 250,
+                    "smplFwMaxSpeed": 35
                 },
                 "Somua_LM": {
-                    "smplEnginePower": 200.8834,
-                    "smplFwMaxSpeed": 50
+                    "smplEnginePower": 280,
+                    "smplFwMaxSpeed": 35
                 }
             },
             "chassis": {
-                "Chassis_AMX40": {
+                "Chassis_F14_AMX40": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.21735
+                            "rollingFriction": 0.20125
                         },
                         "medium": {
-                            "rollingFriction": 0.1288
+                            "rollingFriction": 0.12075
                         },
                         "firm": {
-                            "rollingFriction": 0.12075
+                            "rollingFriction": 0.1127
                         }
                     }
                 },
-                "Chassis_AMX40_2": {
+                "Chassis_F14_AMX40_2": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.20125

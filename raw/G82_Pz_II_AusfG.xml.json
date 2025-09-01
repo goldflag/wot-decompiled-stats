@@ -73,7 +73,7 @@
             "armor_4"
         ],
         "weight": 5980,
-        "maxHealth": 340,
+        "maxHealth": 344,
         "ammoBayHealth": {
             "maxHealth": 100,
             "maxRegenHealth": 70,
@@ -175,8 +175,8 @@
         }
     },
     "chassis": {
-        "Chassis_Pz_II_AusfG": {
-            "userString": "#germany_vehicles:Chassis_Pz_II_AusfG",
+        "Chassis_G82_Pz_II_AusfG": {
+            "userString": "#germany_vehicles:Chassis_G82_Pz_II_AusfG",
             "tags": [],
             "level": 2,
             "price": 660,
@@ -190,15 +190,14 @@
                 "rightTrack": 15
             },
             "weight": 2700,
-            "maxLoad": 10700,
             "terrainResistance": [
+                1.1,
                 1.2,
-                1.3,
-                2.5
+                2.3
             ],
             "brakeForce": 10500,
             "rotationIsAroundCenter": "true",
-            "rotationSpeed": 40,
+            "rotationSpeed": 50,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.24,
                 "vehicleRotation": 0.24
@@ -821,8 +820,8 @@
             },
             "repairTime": 5.71428585
         },
-        "Chassis_Pz_II_AusfG_2": {
-            "userString": "#germany_vehicles:Chassis_Pz_II_AusfG_2",
+        "Chassis_G82_Pz_II_AusfG_2": {
+            "userString": "#germany_vehicles:Chassis_G82_Pz_II_AusfG_2",
             "tags": [],
             "level": 3,
             "price": 2160,
@@ -831,7 +830,6 @@
                 "rightTrack": 15
             },
             "weight": 2700,
-            "maxLoad": 13000,
             "terrainResistance": [
                 1.1,
                 1.2,
@@ -839,7 +837,7 @@
             ],
             "brakeForce": 11500,
             "rotationIsAroundCenter": "true",
-            "rotationSpeed": 44,
+            "rotationSpeed": 55,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.22,
                 "vehicleRotation": 0.22
@@ -1464,13 +1462,18 @@
         }
     },
     "turrets0": {
-        "Turret_1_Pz_II_AusfG": {
-            "userString": "#germany_vehicles:Turret_1_Pz_II_AusfG",
+        "Turret_1_G82_Pz_II_AusfG": {
+            "userString": "#germany_vehicles:Turret_1_G82_Pz_II_AusfG",
             "tags": [
                 "cannotDetach"
             ],
             "level": 2,
             "price": 720,
+            "unlocks": {
+                "turret": {
+                    "cost": 380
+                }
+            },
             "armor": {
                 "armor_1": 14.5,
                 "armor_2": 14.5,
@@ -1488,36 +1491,31 @@
                 "armor_4"
             ],
             "weight": 900,
-            "maxHealth": 65,
+            "maxHealth": 66,
             "rotationSpeed": 44,
             "turretRotatorHealth": {
                 "maxHealth": 70,
                 "maxRegenHealth": 35,
                 "repairCost": 1.0
             },
-            "circularVisionRadius": 310,
+            "circularVisionRadius": 320,
             "surveyingDeviceHealth": {
                 "maxHealth": 50,
                 "maxRegenHealth": 25,
                 "repairCost": 1.0
             },
             "guns": {
-                "_20mm_KwK_38_L55": {
+                "_20mm_Kw_K_38_II_G": {
                     "maxAmmo": 640,
-                    "unlocks": {
-                        "gun": {
-                            "cost": 160
-                        }
-                    },
                     "armor": {
                         "armor_1": {
                             "vehicleDamageFactor": 0
                         },
                         "gun": 10
                     },
-                    "shotDispersionRadius": 0.57,
-                    "reloadTime": 3.9,
-                    "aimingTime": 1.6,
+                    "shotDispersionRadius": 0.45,
+                    "reloadTime": 5.7,
+                    "aimingTime": 1.9,
                     "invisibilityFactorAtShot": 0.28,
                     "pitchLimits": {
                         "minPitch": [
@@ -1532,6 +1530,23 @@
                             1.0,
                             10.0
                         ]
+                    },
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
+                    "shotDispersionFactors": {
+                        "whileGunDamaged": 2.0,
+                        "afterShot": 2,
+                        "turretRotation": 0.14
+                    },
+                    "clip": {
+                        "rate": 360,
+                        "count": 8
+                    },
+                    "burst": {
+                        "rate": 360,
+                        "count": 2
                     },
                     "models": {
                         "undamaged": "vehicles/german/G82_Pz_II_AusfG/normal/lod0/Gun_01.model",
@@ -1592,102 +1607,6 @@
                         "density": [
                             257.518,
                             257.668
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_20mm_Flak_38_L112": {
-                    "maxAmmo": 640,
-                    "unlocks": {
-                        "turret": {
-                            "cost": 380
-                        }
-                    },
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 10
-                    },
-                    "shotDispersionRadius": 0.45,
-                    "reloadTime": 3.9,
-                    "invisibilityFactorAtShot": 0.266,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            10.0,
-                            1.0,
-                            10.0
-                        ]
-                    },
-                    "models": {
-                        "undamaged": "vehicles/german/G82_Pz_II_AusfG/normal/lod0/Gun_02.model",
-                        "destroyed": "vehicles/german/G82_Pz_II_AusfG/crash/lod0/Gun_02.model",
-                        "exploded": "vehicles/german/G82_Pz_II_AusfG/crash/lod0/Gun_02.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/german/G82_Pz_II_AusfG/collision/Gun_02.model",
-                        "collisionModelClient": "vehicles/german/G82_Pz_II_AusfG/collision_client/Gun_02.model"
-                    },
-                    "effects": "shot_auto",
-                    "reloadEffect": "reload20_45",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "projectionDecal",
-                            "slotId": 45003,
-                            "tags": [
-                                "formfactor_square"
-                            ],
-                            "position": [
-                                0.002246,
-                                1.6513,
-                                0.522495
-                            ],
-                            "rotation": [
-                                1.24971,
-                                4e-06,
-                                3.14159
-                            ],
-                            "scale": [
-                                0.418455,
-                                0.19016,
-                                0.418455
-                            ],
-                            "showOn": 4352,
-                            "clipAngle": 0.896092,
-                            "anchorShift": 0.063206
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": "GUN_2",
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "shotOffset": [
-                        -0.236512,
-                        -0.007763,
-                        0.0
-                    ],
-                    "camouflage": {
-                        "tiling": [
-                            0.715,
-                            0.715,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            256.41,
-                            255.819
                         ],
                         "aoTextureSize": [
                             512.0,
@@ -1782,17 +1701,14 @@
                 ]
             }
         },
-        "Turret_2_Pz_II_AusfG": {
-            "userString": "#germany_vehicles:Turret_2_Pz_II_AusfG",
+        "Turret_2_G82_Pz_II_AusfG": {
+            "userString": "#germany_vehicles:Turret_2_G82_Pz_II_AusfG",
             "tags": [],
             "level": 3,
             "price": 1900,
             "unlocks": {
                 "gun": {
                     "cost": 3150
-                },
-                "vehicle": {
-                    "cost": 4400
                 }
             },
             "armor": {
@@ -1812,7 +1728,7 @@
                 "armor_4"
             ],
             "weight": 950,
-            "maxHealth": 85,
+            "maxHealth": 86,
             "rotationSpeed": 42,
             "turretRotatorHealth": {
                 "maxHealth": 70,
@@ -1827,7 +1743,7 @@
             },
             "invisibilityFactor": 1.005,
             "guns": {
-                "_20mm_KwK_38_L55": {
+                "_20mm_Kw_K_38_II_G": {
                     "maxAmmo": 800,
                     "armor": {
                         "armor_2": {
@@ -1844,9 +1760,9 @@
                         },
                         "gun": 10
                     },
-                    "shotDispersionRadius": 0.57,
-                    "reloadTime": 3.5,
-                    "aimingTime": 1.5,
+                    "shotDispersionRadius": 0.45,
+                    "reloadTime": 5.7,
+                    "aimingTime": 1.8,
                     "invisibilityFactorAtShot": 0.28,
                     "pitchLimits": {
                         "minPitch": [
@@ -1861,6 +1777,23 @@
                             1.0,
                             10.0
                         ]
+                    },
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
+                    "shotDispersionFactors": {
+                        "whileGunDamaged": 2.0,
+                        "afterShot": 2,
+                        "turretRotation": 0.14
+                    },
+                    "clip": {
+                        "rate": 360,
+                        "count": 8
+                    },
+                    "burst": {
+                        "rate": 360,
+                        "count": 2
                     },
                     "models": {
                         "undamaged": "vehicles/german/G82_Pz_II_AusfG/normal/lod0/Gun_03.model",
@@ -1928,109 +1861,13 @@
                         ]
                     }
                 },
-                "_20mm_Flak_38_L112": {
-                    "maxAmmo": 800,
-                    "armor": {
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_4": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_5": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 10
-                    },
-                    "shotDispersionRadius": 0.45,
-                    "reloadTime": 3.5,
-                    "aimingTime": 1.5,
-                    "invisibilityFactorAtShot": 0.266,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            10.0,
-                            1.0,
-                            10.0
-                        ]
-                    },
-                    "models": {
-                        "undamaged": "vehicles/german/G82_Pz_II_AusfG/normal/lod0/Gun_04.model",
-                        "destroyed": "vehicles/german/G82_Pz_II_AusfG/crash/lod0/Gun_04.model",
-                        "exploded": "vehicles/german/G82_Pz_II_AusfG/crash/lod0/Gun_04.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/german/G82_Pz_II_AusfG/collision/Gun_04.model",
-                        "collisionModelClient": "vehicles/german/G82_Pz_II_AusfG/collision_client/Gun_04.model"
-                    },
-                    "effects": "shot_auto",
-                    "reloadEffect": "reload20_45",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "projectionDecal",
-                            "slotId": 45002,
-                            "tags": [
-                                "formfactor_square"
-                            ],
-                            "position": [
-                                0.002246,
-                                1.63566,
-                                0.586675
-                            ],
-                            "rotation": [
-                                1.5316,
-                                3.14155,
-                                2.9e-05
-                            ],
-                            "scale": [
-                                0.344651,
-                                0.156621,
-                                0.344651
-                            ],
-                            "showOn": 4096,
-                            "clipAngle": 0.896092,
-                            "anchorShift": 0.063205
+                "_30mm_M_K_103_II_G": {
+                    "maxAmmo": 320,
+                    "unlocks": {
+                        "vehicle": {
+                            "cost": 4400
                         }
                     },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": "GUN_2",
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "shotOffset": [
-                        -0.243,
-                        0.0,
-                        0.0
-                    ],
-                    "camouflage": {
-                        "tiling": [
-                            0.67,
-                            0.67,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            256.41,
-                            255.819
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_30mm_MK103": {
-                    "maxAmmo": 318,
                     "armor": {
                         "armor_2": {
                             "vehicleDamageFactor": 0
@@ -2050,12 +1887,12 @@
                     "reloadTime": 15,
                     "shotDispersionFactors": {
                         "turretRotation": 0.2,
-                        "afterShot": 2.6,
+                        "afterShot": 3,
                         "whileGunDamaged": 2.0
                     },
                     "aimingTime": 2.3,
                     "clip": {
-                        "count": 6,
+                        "count": 8,
                         "rate": 360
                     },
                     "burst": {
@@ -2077,6 +1914,10 @@
                         ]
                     },
                     "invisibilityFactorAtShot": 0.21,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
                     "models": {
                         "undamaged": "vehicles/german/G82_Pz_II_AusfG/normal/lod0/Gun_05.model",
                         "destroyed": "vehicles/german/G82_Pz_II_AusfG/crash/lod0/Gun_05.model",
@@ -2228,62 +2069,48 @@
         }
     },
     "engines": {
-        "Maybach_HL_45P": {
+        "Maybach_HL_45_P_II_G": {
             "unlocks": {
                 "engine": {
                     "cost": 700
                 }
             }
         },
-        "Maybach_HL66P": "shared"
+        "Maybach_HL_66_P_II_G": "shared"
     },
     "fuelTanks": {
         "Medium": "shared"
     },
     "radios": {
-        "FuG5": {
-            "unlocks": {
-                "radio": {
-                    "cost": 1360
-                }
-            }
-        },
-        "FuG7": {
-            "unlocks": {
-                "radio": {
-                    "cost": 4500
-                }
-            }
-        },
         "FuG_Spr.A": "shared"
     },
     "physics": {
         "detailed": {
             "engines": {
-                "Maybach_HL_45P": {
-                    "smplEnginePower": 158.5922,
+                "Maybach_HL_45_P_II_G": {
+                    "smplEnginePower": 200,
                     "smplFwMaxSpeed": 65
                 },
-                "Maybach_HL66P": {
-                    "smplEnginePower": 190.3106,
+                "Maybach_HL_66_P_II_G": {
+                    "smplEnginePower": 220,
                     "smplFwMaxSpeed": 65
                 }
             },
             "chassis": {
-                "Chassis_Pz_II_AusfG": {
+                "Chassis_G82_Pz_II_AusfG": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.20125
+                            "rollingFriction": 0.18515
                         },
                         "medium": {
-                            "rollingFriction": 0.10465
+                            "rollingFriction": 0.0966
                         },
                         "firm": {
-                            "rollingFriction": 0.0966
+                            "rollingFriction": 0.08855
                         }
                     }
                 },
-                "Chassis_Pz_II_AusfG_2": {
+                "Chassis_G82_Pz_II_AusfG_2": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.18515
