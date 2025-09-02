@@ -105,7 +105,7 @@
             "armor_4"
         ],
         "weight": 2750,
-        "maxHealth": 196,
+        "maxHealth": 200,
         "ammoBayHealth": {
             "maxHealth": 65,
             "maxRegenHealth": 45,
@@ -208,8 +208,8 @@
         }
     },
     "chassis": {
-        "Chassis_RenaultFT2": {
-            "userString": "#france_vehicles:Chassis_RenaultFT2",
+        "Chassis_F01_RenaultFT": {
+            "userString": "#france_vehicles:Chassis_F01_RenaultFT",
             "tags": [],
             "level": 1,
             "price": 0,
@@ -219,7 +219,6 @@
                 "rightTrack": 5
             },
             "weight": 1200,
-            "maxLoad": 6800,
             "terrainResistance": [
                 0.8,
                 0.9,
@@ -229,8 +228,8 @@
             "rotationIsAroundCenter": "false",
             "rotationSpeed": 60,
             "shotDispersionFactors": {
-                "vehicleMovement": 0.38,
-                "vehicleRotation": 0.38
+                "vehicleMovement": 0.33,
+                "vehicleRotation": 0.33
             },
             "bulkHealthFactor": 3.0,
             "maxHealth": 50,
@@ -735,8 +734,8 @@
         }
     },
     "turrets0": {
-        "Turret_2_RenaultFT": {
-            "userString": "#france_vehicles:Turret_2_RenaultFT",
+        "Turret_1_F01_RenaultFT": {
+            "userString": "#france_vehicles:Turret_1_F01_RenaultFT",
             "tags": [],
             "level": 1,
             "price": 0,
@@ -765,21 +764,21 @@
                 "armor_4"
             ],
             "weight": 200,
-            "maxHealth": 49,
+            "maxHealth": 50,
             "rotationSpeed": 34,
             "turretRotatorHealth": {
                 "maxHealth": 50,
                 "maxRegenHealth": 25,
                 "repairCost": 1.0
             },
-            "circularVisionRadius": 280,
+            "circularVisionRadius": 300,
             "surveyingDeviceHealth": {
                 "maxHealth": 30,
                 "maxRegenHealth": 15,
                 "repairCost": 1.0
             },
             "guns": {
-                "_37mm_APX_SA18": {
+                "_37mm_APX_SA18_FT": {
                     "unlocks": {
                         "gun": {
                             "cost": 30
@@ -794,23 +793,23 @@
                         ],
                         "maxPitch": [
                             0.0,
-                            2.0,
+                            10.0,
                             0.40856,
-                            2.0,
+                            10.0,
                             0.472222,
                             0.0,
                             0.527778,
                             0.0,
                             0.59144,
-                            2.0,
+                            10.0,
                             1.0,
-                            2.0
+                            10.0
                         ]
                     },
                     "aimingTime": 2,
                     "shotDispersionFactors": {
-                        "turretRotation": 0.14,
-                        "afterShot": 4.0,
+                        "turretRotation": 0.1,
+                        "afterShot": 3.5,
                         "whileGunDamaged": 2.0
                     },
                     "maxAmmo": 545,
@@ -823,8 +822,8 @@
                             "chanceToHitByExplosion": 0
                         }
                     },
-                    "shotDispersionRadius": 0.54,
-                    "reloadTime": 2.5,
+                    "shotDispersionRadius": 0.42,
+                    "reloadTime": 2.2,
                     "invisibilityFactorAtShot": 0.255,
                     "models": {
                         "undamaged": "vehicles/french/F01_RenaultFT/normal/lod0/Gun_03.model",
@@ -887,7 +886,7 @@
                         ]
                     }
                 },
-                "_13.2mm_Hotchkiss_mle._1930": {
+                "_13mm_Hotchkiss_mle_1930_FT": {
                     "unlocks": {
                         "vehicle": {
                             "cost": 280
@@ -921,7 +920,10 @@
                             "vehicleDamageFactor": 0
                         },
                         "armor_2": {
-                            "vehicleDamageFactor": 0
+                            "vehicleDamageFactor": 0,
+                            "tags": [
+                                "screen"
+                            ]
                         },
                         "gun": {
                             "chanceToHitByProjectile": 0,
@@ -933,9 +935,9 @@
                         "afterShot": 1.2,
                         "whileGunDamaged": 2.0
                     },
-                    "aimingTime": 2,
+                    "aimingTime": 1.6,
                     "reloadTime": 5.8,
-                    "shotDispersionRadius": 0.58,
+                    "shotDispersionRadius": 0.52,
                     "invisibilityFactorAtShot": 0.238,
                     "models": {
                         "undamaged": "vehicles/french/F01_RenaultFT/normal/lod0/Gun_04.model",
@@ -1080,7 +1082,7 @@
         }
     },
     "engines": {
-        "Renault": "shared"
+        "Renault_FT": "shared"
     },
     "fuelTanks": {
         "Small": "shared"
@@ -1091,13 +1093,13 @@
     "physics": {
         "detailed": {
             "engines": {
-                "Renault": {
-                    "smplEnginePower": 41.23396,
+                "Renault_FT": {
+                    "smplEnginePower": 50,
                     "smplFwMaxSpeed": 21
                 }
             },
             "chassis": {
-                "Chassis_RenaultFT2": {
+                "Chassis_F01_RenaultFT": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.1449

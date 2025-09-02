@@ -87,7 +87,7 @@
             "armor_4"
         ],
         "weight": 17332,
-        "maxHealth": 1080,
+        "maxHealth": 1200,
         "ammoBayHealth": {
             "maxHealth": 220,
             "maxRegenHealth": 150,
@@ -192,8 +192,8 @@
         }
     },
     "chassis": {
-        "Chassis_T69": {
-            "userString": "#usa_vehicles:Chassis_T69",
+        "Chassis_A90_T69": {
+            "userString": "#usa_vehicles:Chassis_A90_T69",
             "tags": [],
             "level": 7,
             "price": 16300,
@@ -207,15 +207,14 @@
                 "rightTrack": 20
             },
             "weight": 8000,
-            "maxLoad": 34540,
             "terrainResistance": [
+                1.1,
                 1.2,
-                1.4,
-                2.3
+                2.1
             ],
             "brakeForce": 31500,
             "rotationIsAroundCenter": "true",
-            "rotationSpeed": 38,
+            "rotationSpeed": 48,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.22,
                 "vehicleRotation": 0.22
@@ -790,8 +789,8 @@
             },
             "repairTime": 5.71428585
         },
-        "Chassis_T69_2": {
-            "userString": "#usa_vehicles:Chassis_T69_2",
+        "Chassis_A90_T69_2": {
+            "userString": "#usa_vehicles:Chassis_A90_T69_2",
             "tags": [],
             "level": 8,
             "price": 33000,
@@ -800,7 +799,6 @@
                 "rightTrack": 20
             },
             "weight": 8000,
-            "maxLoad": 36560,
             "terrainResistance": [
                 1.1,
                 1.2,
@@ -808,7 +806,7 @@
             ],
             "brakeForce": 35000,
             "rotationIsAroundCenter": "true",
-            "rotationSpeed": 42,
+            "rotationSpeed": 53,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.2,
                 "vehicleRotation": 0.2
@@ -1388,9 +1386,11 @@
         }
     },
     "turrets0": {
-        "Turret_1_T69": {
-            "userString": "#usa_vehicles:Turret_1_T69",
-            "tags": [],
+        "Turret_1_A90_T69": {
+            "userString": "#usa_vehicles:Turret_1_A90_T69",
+            "tags": [
+                "oscillating"
+            ],
             "level": 8,
             "price": 46000,
             "armor": {
@@ -1411,7 +1411,7 @@
                 "armor_16"
             ],
             "weight": 7000,
-            "maxHealth": 270,
+            "maxHealth": 300,
             "rotationSpeed": 38,
             "turretRotatorHealth": {
                 "maxHealth": 140,
@@ -1447,22 +1447,25 @@
                         "armor_13": 127,
                         "armor_14": 101.6,
                         "armor_15": {
-                            "vehicleDamageFactor": 0
+                            "vehicleDamageFactor": 0,
+                            "tags": [
+                                "screen"
+                            ]
                         },
                         "armor_16": 101.6,
                         "gun": 20
                     },
-                    "shotDispersionRadius": 0.38,
-                    "reloadTime": 16,
+                    "shotDispersionRadius": 0.36,
+                    "reloadTime": 15,
                     "shotDispersionFactors": {
                         "turretRotation": 0.12,
                         "afterShot": 3.5,
                         "whileGunDamaged": 2.0
                     },
-                    "aimingTime": 2.3,
+                    "aimingTime": 2,
                     "clip": {
-                        "count": 5,
-                        "rate": 33
+                        "count": 4,
+                        "rate": 30
                     },
                     "pitchLimits": {
                         "minPitch": [
@@ -1539,7 +1542,7 @@
                         ]
                     }
                 },
-                "_90mm_Gun_T178": {
+                "_90mm_Gun_T178_T69": {
                     "maxAmmo": 40,
                     "unlocks": {
                         "vehicle": {
@@ -1561,7 +1564,10 @@
                         "armor_13": 127,
                         "armor_14": 101.6,
                         "armor_15": {
-                            "vehicleDamageFactor": 0
+                            "vehicleDamageFactor": 0,
+                            "tags": [
+                                "screen"
+                            ]
                         },
                         "armor_16": 101.6,
                         "gun": 35
@@ -1739,66 +1745,48 @@
         }
     },
     "engines": {
-        "Wright_Continental_R-975C4": {
-            "unlocks": {
-                "engine": {
-                    "cost": 9500
-                }
-            }
-        },
-        "Continental_AOS-895-3": {
+        "Continental_AOS_895_3": {
             "unlocks": {
                 "engine": {
                     "cost": 18000
                 }
             }
         },
-        "Continental_AOSI-895-5": "shared"
+        "Continental_AOSI_895_5": "shared"
     },
     "fuelTanks": {
         "Heavy": "shared"
     },
     "radios": {
-        "SCR_610": {
-            "unlocks": {
-                "radio": {
-                    "cost": 9000
-                }
-            }
-        },
         "SCR_619": "shared"
     },
     "physics": {
         "detailed": {
             "engines": {
-                "Wright_Continental_R-975C4": {
-                    "smplEnginePower": 486.3493,
+                "Continental_AOS_895_3": {
+                    "smplEnginePower": 550,
                     "smplFwMaxSpeed": 51.5
                 },
-                "Continental_AOS-895-3": {
-                    "smplEnginePower": 528.6406,
-                    "smplFwMaxSpeed": 51.5
-                },
-                "Continental_AOSI-895-5": {
-                    "smplEnginePower": 581.5046,
+                "Continental_AOSI_895_5": {
+                    "smplEnginePower": 600,
                     "smplFwMaxSpeed": 51.5
                 }
             },
             "chassis": {
-                "Chassis_T69": {
+                "Chassis_A90_T69": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.18515
+                            "rollingFriction": 0.16905
                         },
                         "medium": {
-                            "rollingFriction": 0.1127
+                            "rollingFriction": 0.0966
                         },
                         "firm": {
-                            "rollingFriction": 0.0966
+                            "rollingFriction": 0.08855
                         }
                     }
                 },
-                "Chassis_T69_2": {
+                "Chassis_A90_T69_2": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.16905
@@ -1816,7 +1804,7 @@
     },
     "clientAdjustmentFactors": {
         "guns": {
-            "_90mm_Gun_T178": {
+            "_90mm_Gun_T178_T69": {
                 "delta": 1.1093117
             }
         },

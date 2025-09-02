@@ -86,7 +86,7 @@
             "armor_4"
         ],
         "weight": 32000,
-        "maxHealth": 856,
+        "maxHealth": 880,
         "ammoBayHealth": {
             "maxHealth": 200,
             "maxRegenHealth": 135,
@@ -190,8 +190,8 @@
         }
     },
     "chassis": {
-        "HVS1": {
-            "userString": "#usa_vehicles:HVS1",
+        "Chassis_A10_M6": {
+            "userString": "#usa_vehicles:Chassis_A10_M6",
             "tags": [],
             "level": 5,
             "price": 9700,
@@ -205,18 +205,17 @@
                 "rightTrack": 20
             },
             "weight": 15000,
-            "maxLoad": 57600,
             "terrainResistance": [
                 1.1,
-                1.7,
-                2.9
+                1.4,
+                2.3
             ],
             "brakeForce": 45500,
             "rotationIsAroundCenter": "false",
-            "rotationSpeed": 21,
+            "rotationSpeed": 30,
             "shotDispersionFactors": {
-                "vehicleMovement": 0.23,
-                "vehicleRotation": 0.23
+                "vehicleMovement": 0.22,
+                "vehicleRotation": 0.22
             },
             "bulkHealthFactor": 3.0,
             "maxHealth": 130,
@@ -1111,8 +1110,8 @@
             },
             "repairTime": 6.53061247
         },
-        "HVS2": {
-            "userString": "#usa_vehicles:HVS2",
+        "Chassis_A10_M6_2": {
+            "userString": "#usa_vehicles:Chassis_A10_M6_2",
             "tags": [],
             "level": 6,
             "price": 15900,
@@ -1121,7 +1120,6 @@
                 "rightTrack": 20
             },
             "weight": 15000,
-            "maxLoad": 61000,
             "terrainResistance": [
                 1.1,
                 1.4,
@@ -1129,10 +1127,10 @@
             ],
             "brakeForce": 43500,
             "rotationIsAroundCenter": "false",
-            "rotationSpeed": 25,
+            "rotationSpeed": 32,
             "shotDispersionFactors": {
-                "vehicleMovement": 0.21,
-                "vehicleRotation": 0.21
+                "vehicleMovement": 0.2,
+                "vehicleRotation": 0.2
             },
             "bulkHealthFactor": 3.0,
             "maxHealth": 140,
@@ -2029,11 +2027,16 @@
         }
     },
     "turrets0": {
-        "M6D1": {
-            "userString": "#usa_vehicles:M6D1",
+        "Turret_1_A10_M6": {
+            "userString": "#usa_vehicles:Turret_1_A10_M6",
             "tags": [],
             "level": 5,
             "price": 10000,
+            "unlocks": {
+                "turret": {
+                    "cost": 5380
+                }
+            },
             "armor": {
                 "armor_1": 101.6,
                 "armor_2": 82.5,
@@ -2050,22 +2053,22 @@
                 "armor_4"
             ],
             "weight": 8000,
-            "maxHealth": 144,
+            "maxHealth": 160,
             "rotationSpeed": 25,
             "turretRotatorHealth": {
                 "maxHealth": 130,
                 "maxRegenHealth": 65,
                 "repairCost": 1.0
             },
-            "circularVisionRadius": 330,
+            "circularVisionRadius": 350,
             "surveyingDeviceHealth": {
                 "maxHealth": 80,
                 "maxRegenHealth": 40,
                 "repairCost": 1.0
             },
             "guns": {
-                "_75mm_Gun_M7_L50": {
-                    "maxAmmo": 90,
+                "_3_inch_Gun_M7": {
+                    "maxAmmo": 75,
                     "pitchLimits": {
                         "minPitch": [
                             0.0,
@@ -2088,18 +2091,22 @@
                             10.0
                         ]
                     },
-                    "unlocks": {
-                        "gun": {
-                            "cost": 4600
-                        }
-                    },
                     "armor": {
                         "gun": 20
                     },
-                    "shotDispersionRadius": 0.46,
-                    "reloadTime": 4.3,
-                    "aimingTime": 2,
+                    "shotDispersionRadius": 0.36,
+                    "reloadTime": 3.3,
+                    "aimingTime": 1.8,
                     "invisibilityFactorAtShot": 0.26,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
+                    "shotDispersionFactors": {
+                        "afterShot": 4.0,
+                        "turretRotation": 0.1,
+                        "whileGunDamaged": 2.0
+                    },
                     "models": {
                         "undamaged": "vehicles/american/A10_M6/normal/lod0/Gun_02.model",
                         "destroyed": "vehicles/american/A10_M6/crash/lod0/Gun_02.model",
@@ -2152,198 +2159,6 @@
                         "density": [
                             92.6147,
                             105.727
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            256.0
-                        ]
-                    }
-                },
-                "_76mm_Gun_M1A1": {
-                    "maxAmmo": 90,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -30.0,
-                            1.0,
-                            -30.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            10.0,
-                            0.366894,
-                            10.0,
-                            0.430556,
-                            5.0,
-                            0.569444,
-                            5.0,
-                            0.633106,
-                            10.0,
-                            1.0,
-                            10.0
-                        ]
-                    },
-                    "reloadTime": 3.6,
-                    "unlocks": {
-                        "gun": {
-                            "cost": 5800
-                        }
-                    },
-                    "armor": {
-                        "gun": 20
-                    },
-                    "shotDispersionRadius": 0.43,
-                    "aimingTime": 2,
-                    "invisibilityFactorAtShot": 0.26,
-                    "models": {
-                        "undamaged": "vehicles/american/A10_M6/normal/lod0/Gun_03.model",
-                        "destroyed": "vehicles/american/A10_M6/crash/lod0/Gun_03.model",
-                        "exploded": "vehicles/american/A10_M6/crash/lod0/Gun_03.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/american/A10_M6/collision/Gun_03.model",
-                        "collisionModelClient": "vehicles/american/A10_M6/collision_client/Gun_03.model"
-                    },
-                    "effects": "shot_medium",
-                    "reloadEffect": "reload50_75",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                -0.058267,
-                                0.003582,
-                                1.79723
-                            ],
-                            "rayEnd": [
-                                -0.058267,
-                                0.003582,
-                                2.24723
-                            ],
-                            "rayUp": [
-                                0.081,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.45
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "camouflage": {
-                        "tiling": [
-                            0.715,
-                            0.28,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            88.9251,
-                            107.713
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            256.0
-                        ]
-                    }
-                },
-                "_76mm_Gun_M1A2": {
-                    "maxAmmo": 75,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -30.0,
-                            1.0,
-                            -30.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            10.0,
-                            0.366894,
-                            10.0,
-                            0.430556,
-                            5.0,
-                            0.569444,
-                            5.0,
-                            0.633106,
-                            10.0,
-                            1.0,
-                            10.0
-                        ]
-                    },
-                    "reloadTime": 3.6,
-                    "unlocks": {
-                        "turret": {
-                            "cost": 5380
-                        },
-                        "vehicle": {
-                            "cost": 42070
-                        }
-                    },
-                    "armor": {
-                        "gun": 20
-                    },
-                    "aimingTime": 2,
-                    "invisibilityFactorAtShot": 0.247,
-                    "models": {
-                        "undamaged": "vehicles/american/A10_M6/normal/lod0/Gun_04.model",
-                        "destroyed": "vehicles/american/A10_M6/crash/lod0/Gun_04.model",
-                        "exploded": "vehicles/american/A10_M6/crash/lod0/Gun_04.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/american/A10_M6/collision/Gun_04.model",
-                        "collisionModelClient": "vehicles/american/A10_M6/collision_client/Gun_04.model"
-                    },
-                    "effects": "shot_medium_mb",
-                    "reloadEffect": "reload50_75",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                -0.060654,
-                                0.011742,
-                                1.82154
-                            ],
-                            "rayEnd": [
-                                -0.060654,
-                                0.011742,
-                                2.27154
-                            ],
-                            "rayUp": [
-                                0.067,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.45
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "camouflage": {
-                        "tiling": [
-                            0.625,
-                            0.37,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            93.38,
-                            104.307
                         ],
                         "aoTextureSize": [
                             512.0,
@@ -2437,8 +2252,8 @@
                 ]
             }
         },
-        "M6D2": {
-            "userString": "#usa_vehicles:M6D2",
+        "Turret_2_A10_M6": {
+            "userString": "#usa_vehicles:Turret_2_A10_M6",
             "tags": [],
             "level": 6,
             "price": 18250,
@@ -2469,7 +2284,7 @@
                 "armor_4"
             ],
             "weight": 8400,
-            "maxHealth": 214,
+            "maxHealth": 220,
             "rotationSpeed": 28,
             "turretRotatorHealth": {
                 "maxHealth": 130,
@@ -2483,8 +2298,8 @@
                 "repairCost": 1.0
             },
             "guns": {
-                "_75mm_Gun_M7_L50": {
-                    "maxAmmo": 90,
+                "_3_inch_Gun_M7": {
+                    "maxAmmo": 75,
                     "pitchLimits": {
                         "minPitch": [
                             0.0,
@@ -2510,10 +2325,19 @@
                     "armor": {
                         "gun": 20
                     },
-                    "shotDispersionRadius": 0.46,
-                    "reloadTime": 4.3,
-                    "aimingTime": 2,
+                    "shotDispersionRadius": 0.36,
+                    "reloadTime": 3.3,
+                    "aimingTime": 1.7,
                     "invisibilityFactorAtShot": 0.26,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
+                    "shotDispersionFactors": {
+                        "afterShot": 4.0,
+                        "turretRotation": 0.1,
+                        "whileGunDamaged": 2.0
+                    },
                     "models": {
                         "undamaged": "vehicles/american/A10_M6/normal/lod0/Gun_06.model",
                         "destroyed": "vehicles/american/A10_M6/crash/lod0/Gun_06.model",
@@ -2573,187 +2397,13 @@
                         ]
                     }
                 },
-                "_76mm_Gun_M1A1": {
-                    "maxAmmo": 90,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -30.0,
-                            1.0,
-                            -30.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            10.0,
-                            0.366894,
-                            10.0,
-                            0.430556,
-                            5.0,
-                            0.569444,
-                            5.0,
-                            0.633106,
-                            10.0,
-                            1.0,
-                            10.0
-                        ]
-                    },
-                    "reloadTime": 3.6,
-                    "armor": {
-                        "gun": 20
-                    },
-                    "shotDispersionRadius": 0.43,
-                    "aimingTime": 2,
-                    "invisibilityFactorAtShot": 0.26,
-                    "models": {
-                        "undamaged": "vehicles/american/A10_M6/normal/lod0/Gun_07.model",
-                        "destroyed": "vehicles/american/A10_M6/crash/lod0/Gun_07.model",
-                        "exploded": "vehicles/american/A10_M6/crash/lod0/Gun_07.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/american/A10_M6/collision/Gun_07.model",
-                        "collisionModelClient": "vehicles/american/A10_M6/collision_client/Gun_07.model"
-                    },
-                    "effects": "shot_medium",
-                    "reloadEffect": "reload50_75",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                -0.058267,
-                                0.003582,
-                                1.79723
-                            ],
-                            "rayEnd": [
-                                -0.058267,
-                                0.003582,
-                                2.24723
-                            ],
-                            "rayUp": [
-                                0.081,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.45
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "camouflage": {
-                        "tiling": [
-                            0.865,
-                            0.505,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            88.9251,
-                            107.713
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            256.0
-                        ]
-                    }
-                },
-                "_76mm_Gun_M1A2": {
-                    "maxAmmo": 75,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -30.0,
-                            1.0,
-                            -30.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            10.0,
-                            0.366894,
-                            10.0,
-                            0.430556,
-                            5.0,
-                            0.569444,
-                            5.0,
-                            0.633106,
-                            10.0,
-                            1.0,
-                            10.0
-                        ]
-                    },
-                    "reloadTime": 3.6,
-                    "armor": {
-                        "gun": 20
-                    },
-                    "aimingTime": 2,
-                    "invisibilityFactorAtShot": 0.247,
-                    "models": {
-                        "undamaged": "vehicles/american/A10_M6/normal/lod0/Gun_08.model",
-                        "destroyed": "vehicles/american/A10_M6/crash/lod0/Gun_08.model",
-                        "exploded": "vehicles/american/A10_M6/crash/lod0/Gun_08.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/american/A10_M6/collision/Gun_08.model",
-                        "collisionModelClient": "vehicles/american/A10_M6/collision_client/Gun_08.model"
-                    },
-                    "effects": "shot_medium_mb",
-                    "reloadEffect": "reload50_75",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                -0.060654,
-                                0.011742,
-                                1.82154
-                            ],
-                            "rayEnd": [
-                                -0.060654,
-                                0.011742,
-                                2.27154
-                            ],
-                            "rayUp": [
-                                0.067,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.45
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "camouflage": {
-                        "tiling": [
-                            0.895,
-                            0.265,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            93.38,
-                            104.307
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            256.0
-                        ]
-                    }
-                },
-                "_90mm_Gun_M3": {
+                "_90mm_Gun_M3_M6": {
                     "maxAmmo": 52,
+                    "unlocks": {
+                        "vehicle": {
+                            "cost": 42070
+                        }
+                    },
                     "pitchLimits": {
                         "minPitch": [
                             0.0,
@@ -2776,13 +2426,22 @@
                             10.0
                         ]
                     },
-                    "reloadTime": 7,
+                    "reloadTime": 8,
                     "invisibilityFactorAtShot": 0.25,
                     "armor": {
                         "gun": 35
                     },
-                    "shotDispersionRadius": 0.38,
-                    "aimingTime": 2,
+                    "shotDispersionRadius": 0.4,
+                    "aimingTime": 2.2,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
+                    "shotDispersionFactors": {
+                        "whileGunDamaged": 2.0,
+                        "turretRotation": 0.14,
+                        "afterShot": 3.5
+                    },
                     "models": {
                         "undamaged": "vehicles/american/A10_M6/normal/lod0/Gun_09.model",
                         "destroyed": "vehicles/american/A10_M6/crash/lod0/Gun_09.model",
@@ -2930,55 +2589,48 @@
         }
     },
     "engines": {
-        "Wright_G2X_m_781C9GC1": {
+        "Wright_G_200_Model_795C9GC1_M6": {
             "unlocks": {
                 "engine": {
                     "cost": 15100
                 }
             }
         },
-        "Wright_G200_m_781C9GC1": "shared"
+        "Wright_G_200_Model_781C9GC1_M6": "shared"
     },
     "fuelTanks": {
         "Average": "shared"
     },
     "radios": {
-        "SCR_508": {
-            "unlocks": {
-                "radio": {
-                    "cost": 3800
-                }
-            }
-        },
         "SCR_538": "shared"
     },
     "physics": {
         "detailed": {
             "engines": {
-                "Wright_G2X_m_781C9GC1": {
-                    "smplEnginePower": 872.257,
+                "Wright_G_200_Model_795C9GC1_M6": {
+                    "smplEnginePower": 800,
                     "smplFwMaxSpeed": 35
                 },
-                "Wright_G200_m_781C9GC1": {
-                    "smplEnginePower": 1014.99,
+                "Wright_G_200_Model_781C9GC1_M6": {
+                    "smplEnginePower": 900,
                     "smplFwMaxSpeed": 35
                 }
             },
             "chassis": {
-                "HVS1": {
+                "Chassis_A10_M6": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.23345
+                            "rollingFriction": 0.18515
                         },
                         "medium": {
-                            "rollingFriction": 0.13685
+                            "rollingFriction": 0.1127
                         },
                         "firm": {
                             "rollingFriction": 0.08855
                         }
                     }
                 },
-                "HVS2": {
+                "Chassis_A10_M6_2": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.18515

@@ -76,7 +76,7 @@
             "armor_4"
         ],
         "weight": 7600,
-        "maxHealth": 340,
+        "maxHealth": 344,
         "ammoBayHealth": {
             "maxHealth": 100,
             "maxRegenHealth": 70,
@@ -197,17 +197,16 @@
                 "rightTrack": 15
             },
             "weight": 5000,
-            "maxLoad": 15900,
             "terrainResistance": [
+                1.0,
                 1.1,
-                1.2,
-                2.1
+                1.9
             ],
             "brakeForce": 16000,
             "rotationIsAroundCenter": "false",
             "rotationSpeed": 30,
             "shotDispersionFactors": {
-                "vehicleMovement": 0.26,
+                "vehicleMovement": 0.22,
                 "vehicleRotation": 0.26
             },
             "bulkHealthFactor": 3.0,
@@ -900,7 +899,6 @@
                 "rightTrack": 15
             },
             "weight": 5000,
-            "maxLoad": 18000,
             "terrainResistance": [
                 1.0,
                 1.1,
@@ -910,7 +908,7 @@
             "rotationIsAroundCenter": "false",
             "rotationSpeed": 32,
             "shotDispersionFactors": {
-                "vehicleMovement": 0.24,
+                "vehicleMovement": 0.2,
                 "vehicleRotation": 0.24
             },
             "bulkHealthFactor": 3.0,
@@ -1600,6 +1598,11 @@
             "tags": [],
             "level": 2,
             "price": 840,
+            "unlocks": {
+                "turret": {
+                    "cost": 350
+                }
+            },
             "armor": {
                 "armor_1": 35,
                 "armor_2": 25,
@@ -1621,113 +1624,20 @@
                 "armor_4"
             ],
             "weight": 1300,
-            "maxHealth": 65,
+            "maxHealth": 66,
             "rotationSpeed": 30,
             "turretRotatorHealth": {
                 "maxHealth": 70,
                 "maxRegenHealth": 35,
                 "repairCost": 1.0
             },
-            "circularVisionRadius": 310,
+            "circularVisionRadius": 320,
             "surveyingDeviceHealth": {
                 "maxHealth": 50,
                 "maxRegenHealth": 25,
                 "repairCost": 1.0
             },
             "guns": {
-                "_57mm_Gun_Type_97": {
-                    "maxAmmo": 210,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            9.0,
-                            1.0,
-                            9.0
-                        ]
-                    },
-                    "unlocks": {
-                        "gun": {
-                            "cost": 125
-                        }
-                    },
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 10
-                    },
-                    "shotDispersionRadius": 0.46,
-                    "reloadTime": 3,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.1,
-                        "afterShot": 4.0,
-                        "whileGunDamaged": 2.0
-                    },
-                    "aimingTime": 1.9,
-                    "invisibilityFactorAtShot": 0.28,
-                    "models": {
-                        "undamaged": "vehicles/chinese/Ch08_Type97_Chi_Ha/normal/lod0/Gun_01.model",
-                        "destroyed": "vehicles/chinese/Ch08_Type97_Chi_Ha/crash/lod0/Gun_01.model",
-                        "exploded": "vehicles/chinese/Ch08_Type97_Chi_Ha/crash/lod0/Gun_01.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/chinese/Ch08_Type97_Chi_Ha/collision/Gun_01.model",
-                        "collisionModelClient": "vehicles/chinese/Ch08_Type97_Chi_Ha/collision_client/Gun_01.model"
-                    },
-                    "effects": "shot_medium",
-                    "reloadEffect": "reload50_75",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "camouflage",
-                            "slotId": 42000,
-                            "anchorPosition": [
-                                0.03821,
-                                0.021033,
-                                0.360473
-                            ],
-                            "anchorDirection": [
-                                0.0,
-                                0.0,
-                                1.0
-                            ],
-                            "applyTo": 4096
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "camouflage": {
-                        "tiling": [
-                            0.43,
-                            0.43,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            153.37,
-                            154.61
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            256.0
-                        ]
-                    }
-                },
                 "_45mm_20K": {
                     "maxAmmo": 240,
                     "pitchLimits": {
@@ -1744,11 +1654,6 @@
                             9.0
                         ]
                     },
-                    "unlocks": {
-                        "turret": {
-                            "cost": 350
-                        }
-                    },
                     "armor": {
                         "armor_1": {
                             "vehicleDamageFactor": 0
@@ -1758,8 +1663,8 @@
                         },
                         "gun": 10
                     },
-                    "shotDispersionRadius": 0.43,
-                    "reloadTime": 2.3,
+                    "shotDispersionRadius": 0.38,
+                    "reloadTime": 2,
                     "shotDispersionFactors": {
                         "turretRotation": 0.1,
                         "afterShot": 3.5,
@@ -1767,6 +1672,10 @@
                     },
                     "aimingTime": 1.7,
                     "invisibilityFactorAtShot": 0.29,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
                     "models": {
                         "undamaged": "vehicles/chinese/Ch08_Type97_Chi_Ha/normal/lod0/Gun_02.model",
                         "destroyed": "vehicles/chinese/Ch08_Type97_Chi_Ha/crash/lod0/Gun_02.model",
@@ -1939,7 +1848,7 @@
                 "armor_4"
             ],
             "weight": 1839,
-            "maxHealth": 85,
+            "maxHealth": 86,
             "rotationSpeed": 30,
             "turretRotatorHealth": {
                 "maxHealth": 70,
@@ -1954,102 +1863,6 @@
             },
             "invisibilityFactor": 0.968,
             "guns": {
-                "_57mm_Gun_Type_97": {
-                    "maxAmmo": 210,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            15.0,
-                            0.388889,
-                            15.0,
-                            0.402778,
-                            9.0,
-                            0.444444,
-                            9.0,
-                            0.458333,
-                            15.0,
-                            0.541667,
-                            15.0,
-                            0.555556,
-                            9.0,
-                            0.597222,
-                            9.0,
-                            0.611111,
-                            15.0,
-                            1.0,
-                            15.0
-                        ]
-                    },
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 10
-                    },
-                    "shotDispersionRadius": 0.46,
-                    "reloadTime": 3,
-                    "aimingTime": 1.8,
-                    "invisibilityFactorAtShot": 0.28,
-                    "models": {
-                        "undamaged": "vehicles/chinese/Ch08_Type97_Chi_Ha/normal/lod0/Gun_03.model",
-                        "destroyed": "vehicles/chinese/Ch08_Type97_Chi_Ha/crash/lod0/Gun_03.model",
-                        "exploded": "vehicles/chinese/Ch08_Type97_Chi_Ha/crash/lod0/Gun_03.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/chinese/Ch08_Type97_Chi_Ha/collision/Gun_03.model",
-                        "collisionModelClient": "vehicles/chinese/Ch08_Type97_Chi_Ha/collision_client/Gun_03.model"
-                    },
-                    "effects": "shot_medium",
-                    "reloadEffect": "reload50_75",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "camouflage",
-                            "slotId": 42000,
-                            "anchorPosition": [
-                                0.03821,
-                                0.021033,
-                                0.360473
-                            ],
-                            "anchorDirection": [
-                                0.0,
-                                0.0,
-                                1.0
-                            ],
-                            "applyTo": 4096
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "camouflage": {
-                        "tiling": [
-                            0.25,
-                            0.25,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            153.37,
-                            154.61
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            256.0
-                        ]
-                    }
-                },
                 "_45mm_20K": {
                     "maxAmmo": 240,
                     "pitchLimits": {
@@ -2062,21 +1875,21 @@
                         "maxPitch": [
                             0.0,
                             15.0,
-                            0.388889,
+                            0.425,
                             15.0,
-                            0.402778,
+                            0.44167,
                             9.0,
-                            0.444444,
+                            0.46944,
                             9.0,
-                            0.458333,
+                            0.48333,
                             14.0,
-                            0.541667,
+                            0.53889,
                             14.0,
-                            0.555556,
+                            0.55278,
                             9.0,
-                            0.597222,
+                            0.59444,
                             9.0,
-                            0.611111,
+                            0.61111,
                             15.0,
                             1.0,
                             15.0
@@ -2091,8 +1904,8 @@
                         },
                         "gun": 10
                     },
-                    "shotDispersionRadius": 0.42,
-                    "reloadTime": 2.3,
+                    "shotDispersionRadius": 0.38,
+                    "reloadTime": 2,
                     "shotDispersionFactors": {
                         "turretRotation": 0.08,
                         "afterShot": 3.5,
@@ -2100,6 +1913,10 @@
                     },
                     "aimingTime": 1.7,
                     "invisibilityFactorAtShot": 0.29,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
                     "models": {
                         "undamaged": "vehicles/chinese/Ch08_Type97_Chi_Ha/normal/lod0/Gun_04.model",
                         "destroyed": "vehicles/chinese/Ch08_Type97_Chi_Ha/crash/lod0/Gun_04.model",
@@ -2171,21 +1988,21 @@
                         "maxPitch": [
                             0.0,
                             15.0,
-                            0.388889,
+                            0.425,
                             15.0,
-                            0.402778,
+                            0.44167,
                             9.0,
-                            0.444444,
+                            0.46944,
                             9.0,
-                            0.458333,
-                            13.0,
-                            0.541667,
-                            13.0,
-                            0.555556,
+                            0.48333,
+                            14.0,
+                            0.53889,
+                            14.0,
+                            0.55278,
                             9.0,
-                            0.597222,
+                            0.59444,
                             9.0,
-                            0.611111,
+                            0.61111,
                             15.0,
                             1.0,
                             15.0
@@ -2203,7 +2020,16 @@
                     "reloadTime": 3,
                     "aimingTime": 2.3,
                     "invisibilityFactorAtShot": 0.276,
-                    "shotDispersionRadius": 0.44,
+                    "shotDispersionRadius": 0.42,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
+                    "shotDispersionFactors": {
+                        "whileGunDamaged": 2.0,
+                        "afterShot": 4.0,
+                        "turretRotation": 0.14
+                    },
                     "models": {
                         "undamaged": "vehicles/chinese/Ch08_Type97_Chi_Ha/normal/lod0/Gun_05.model",
                         "destroyed": "vehicles/chinese/Ch08_Type97_Chi_Ha/crash/lod0/Gun_05.model",
@@ -2346,13 +2172,6 @@
         }
     },
     "engines": {
-        "_Type97": {
-            "unlocks": {
-                "engine": {
-                    "cost": 350
-                }
-            }
-        },
         "_Type100_W": {
             "unlocks": {
                 "engine": {
@@ -2366,28 +2185,17 @@
         "Medium": "shared"
     },
     "radios": {
-        "_Type94_Hei": {
-            "unlocks": {
-                "radio": {
-                    "cost": 1400
-                }
-            }
-        },
         "_Type96_Bo": "shared"
     },
     "physics": {
         "detailed": {
             "engines": {
-                "_Type97": {
-                    "smplEnginePower": 179.7378,
-                    "smplFwMaxSpeed": 40
-                },
                 "_Type100_W": {
-                    "smplEnginePower": 211.4562,
+                    "smplEnginePower": 260,
                     "smplFwMaxSpeed": 40
                 },
                 "_Type100_A": {
-                    "smplEnginePower": 253.7475,
+                    "smplEnginePower": 280,
                     "smplFwMaxSpeed": 40
                 }
             },
@@ -2395,13 +2203,13 @@
                 "Chassis_Ch08_Type97_Chi_Ha": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.16905
+                            "rollingFriction": 0.15295
                         },
                         "medium": {
-                            "rollingFriction": 0.0966
+                            "rollingFriction": 0.08855
                         },
                         "firm": {
-                            "rollingFriction": 0.08855
+                            "rollingFriction": 0.0805
                         }
                     }
                 },

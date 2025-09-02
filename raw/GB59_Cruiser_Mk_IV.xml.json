@@ -22,7 +22,7 @@
         "backward": 20
     },
     "invisibility": {
-        "moving": 0.203,
+        "moving": 0.27,
         "still": 0.27,
         "camouflageBonus": 0.03,
         "firePenalty": 0.405
@@ -194,15 +194,14 @@
                 "rightTrack": 10
             },
             "weight": 4500,
-            "maxLoad": 15000,
             "terrainResistance": [
-                1.1,
-                1.4,
-                2.0
+                1.0,
+                1.2,
+                1.8
             ],
             "brakeForce": 12500,
             "rotationIsAroundCenter": "false",
-            "rotationSpeed": 35,
+            "rotationSpeed": 45,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.25,
                 "vehicleRotation": 0.25
@@ -906,17 +905,11 @@
             "tags": [],
             "level": 4,
             "price": 3800,
-            "unlocks": {
-                "vehicle": {
-                    "cost": 12300
-                }
-            },
             "armor": {
                 "leftTrack": 10,
                 "rightTrack": 10
             },
             "weight": 4500,
-            "maxLoad": 17100,
             "terrainResistance": [
                 1.0,
                 1.2,
@@ -924,7 +917,7 @@
             ],
             "brakeForce": 14000,
             "rotationIsAroundCenter": "false",
-            "rotationSpeed": 38,
+            "rotationSpeed": 47,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.24,
                 "vehicleRotation": 0.24
@@ -1671,7 +1664,7 @@
                 "repairCost": 2.0
             },
             "guns": {
-                "_2pdr_Gun_Mk_IX": {
+                "QF_2_Pr_Mk_IX_IV": {
                     "maxAmmo": 240,
                     "pitchLimits": {
                         "minPitch": [
@@ -1695,11 +1688,6 @@
                             15.0
                         ]
                     },
-                    "unlocks": {
-                        "gun": {
-                            "cost": 1000
-                        }
-                    },
                     "armor": {
                         "armor_2": {
                             "vehicleDamageFactor": 0
@@ -1707,14 +1695,18 @@
                         "gun": 10
                     },
                     "shotDispersionRadius": 0.36,
-                    "reloadTime": 2.2,
+                    "reloadTime": 2.3,
                     "shotDispersionFactors": {
-                        "turretRotation": 0.1,
-                        "afterShot": 4.0,
+                        "turretRotation": 0.08,
+                        "afterShot": 3,
                         "whileGunDamaged": 2.0
                     },
                     "aimingTime": 1.9,
                     "invisibilityFactorAtShot": 0.3,
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
                     "models": {
                         "undamaged": "vehicles/british/GB59_Cruiser_Mk_IV/normal/lod0/Gun_01.model",
                         "destroyed": "vehicles/british/GB59_Cruiser_Mk_IV/crash/lod0/Gun_01.model",
@@ -1762,107 +1754,6 @@
                         "density": [
                             172.637,
                             210.499
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_40mm_Pom_Pom": {
-                    "maxAmmo": 360,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            15.0,
-                            0.366894,
-                            15.0,
-                            0.430556,
-                            5.0,
-                            0.569444,
-                            5.0,
-                            0.633106,
-                            15.0,
-                            1.0,
-                            15.0
-                        ]
-                    },
-                    "armor": {
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 10
-                    },
-                    "shotDispersionRadius": 0.43,
-                    "reloadTime": 5.5,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.12,
-                        "afterShot": 2.8,
-                        "whileGunDamaged": 2.0
-                    },
-                    "aimingTime": 1.9,
-                    "invisibilityFactorAtShot": 0.24,
-                    "clip": {
-                        "count": 4,
-                        "rate": 120
-                    },
-                    "burst": {
-                        "count": 2,
-                        "rate": 120
-                    },
-                    "models": {
-                        "undamaged": "vehicles/british/GB59_Cruiser_Mk_IV/normal/lod0/Gun_02.model",
-                        "destroyed": "vehicles/british/GB59_Cruiser_Mk_IV/crash/lod0/Gun_02.model",
-                        "exploded": "vehicles/british/GB59_Cruiser_Mk_IV/crash/lod0/Gun_02.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/british/GB59_Cruiser_Mk_IV/collision/Gun_02.model",
-                        "collisionModelClient": "vehicles/british/GB59_Cruiser_Mk_IV/collision_client/Gun_02.model"
-                    },
-                    "effects": "shot_small",
-                    "reloadEffect": "reload20_45",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "camouflage",
-                            "slotId": 42000,
-                            "anchorPosition": [
-                                0.067816,
-                                -0.015716,
-                                1.3068
-                            ],
-                            "anchorDirection": [
-                                0.0,
-                                0.0,
-                                1.0
-                            ],
-                            "applyTo": 4096
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "camouflage": {
-                        "tiling": [
-                            0.43,
-                            0.25,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            179.094,
-                            190.543
                         ],
                         "aoTextureSize": [
                             512.0,
@@ -2000,7 +1891,7 @@
                 "repairCost": 2.0
             },
             "guns": {
-                "_2pdr_Gun_Mk_IX": {
+                "QF_2_Pr_Mk_IX_IV": {
                     "maxAmmo": 240,
                     "pitchLimits": {
                         "minPitch": [
@@ -2031,9 +1922,18 @@
                         "gun": 10
                     },
                     "shotDispersionRadius": 0.36,
-                    "reloadTime": 2.2,
+                    "reloadTime": 2.3,
                     "aimingTime": 1.7,
                     "invisibilityFactorAtShot": 0.3,
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.08,
+                        "whileGunDamaged": 2.0,
+                        "afterShot": 3
+                    },
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
                     "models": {
                         "undamaged": "vehicles/british/GB59_Cruiser_Mk_IV/normal/lod0/Gun_03.model",
                         "destroyed": "vehicles/british/GB59_Cruiser_Mk_IV/crash/lod0/Gun_03.model",
@@ -2088,112 +1988,11 @@
                         ]
                     }
                 },
-                "_40mm_Pom_Pom": {
-                    "maxAmmo": 360,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            15.0,
-                            0.366894,
-                            15.0,
-                            0.430556,
-                            5.0,
-                            0.569444,
-                            5.0,
-                            0.633106,
-                            15.0,
-                            1.0,
-                            15.0
-                        ]
-                    },
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 10
-                    },
-                    "shotDispersionRadius": 0.43,
-                    "reloadTime": 5.5,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.1,
-                        "afterShot": 2.5,
-                        "whileGunDamaged": 2.0
-                    },
-                    "aimingTime": 1.9,
-                    "invisibilityFactorAtShot": 0.24,
-                    "clip": {
-                        "count": 4,
-                        "rate": 120
-                    },
-                    "burst": {
-                        "count": 2,
-                        "rate": 120
-                    },
-                    "models": {
-                        "undamaged": "vehicles/british/GB59_Cruiser_Mk_IV/normal/lod0/Gun_04.model",
-                        "destroyed": "vehicles/british/GB59_Cruiser_Mk_IV/crash/lod0/Gun_04.model",
-                        "exploded": "vehicles/british/GB59_Cruiser_Mk_IV/crash/lod0/Gun_04.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/british/GB59_Cruiser_Mk_IV/collision/Gun_04.model",
-                        "collisionModelClient": "vehicles/british/GB59_Cruiser_Mk_IV/collision_client/Gun_04.model"
-                    },
-                    "effects": "shot_small",
-                    "reloadEffect": "reload20_45",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "camouflage",
-                            "slotId": 42000,
-                            "anchorPosition": [
-                                -0.014967,
-                                -0.007803,
-                                1.29281
-                            ],
-                            "anchorDirection": [
-                                -0.0,
-                                0.0,
-                                1.0
-                            ],
-                            "applyTo": 4096
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "camouflage": {
-                        "tiling": [
-                            0.445,
-                            0.34,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            179.094,
-                            190.543
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_40mm_Bofors_MkI": {
+                "QF_40mm_Mk_VI_Bofors_IV": {
                     "maxAmmo": 240,
                     "unlocks": {
                         "vehicle": {
-                            "cost": 10200
+                            "cost": 12300
                         }
                     },
                     "pitchLimits": {
@@ -2391,44 +2190,23 @@
                 }
             }
         },
-        "Nuffield_liberty_MKIV": "shared"
+        "Nuffield_Liberty_Mk_III_IV": "shared"
     },
     "fuelTanks": {
         "Small": "shared"
     },
     "radios": {
-        "N11": {
-            "unlocks": {
-                "radio": {
-                    "cost": 610
-                }
-            }
-        },
-        "N9": {
-            "unlocks": {
-                "radio": {
-                    "cost": 1480
-                }
-            }
-        },
-        "N19Mk1": {
-            "unlocks": {
-                "radio": {
-                    "cost": 3600
-                }
-            }
-        },
         "N19Mk2": "shared"
     },
     "physics": {
         "detailed": {
             "engines": {
                 "Nuffield_liberty_MKII": {
-                    "smplEnginePower": 359.4756,
+                    "smplEnginePower": 370,
                     "smplFwMaxSpeed": 48
                 },
-                "Nuffield_liberty_MKIV": {
-                    "smplEnginePower": 417.626,
+                "Nuffield_Liberty_Mk_III_IV": {
+                    "smplEnginePower": 425,
                     "smplFwMaxSpeed": 48
                 }
             },
@@ -2436,13 +2214,13 @@
                 "Chassis_GB59_Cruiser_Mk_IV": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.161
+                            "rollingFriction": 0.1449
                         },
                         "medium": {
-                            "rollingFriction": 0.1127
+                            "rollingFriction": 0.0966
                         },
                         "firm": {
-                            "rollingFriction": 0.08855
+                            "rollingFriction": 0.0805
                         }
                     }
                 },

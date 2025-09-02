@@ -22,7 +22,7 @@
     "postProgressionTree": "role_HT_assault",
     "speedLimits": {
         "forward": 32,
-        "backward": 10
+        "backward": 11
     },
     "invisibility": {
         "moving": 0.053,
@@ -83,7 +83,7 @@
             "armor_4"
         ],
         "weight": 38000,
-        "maxHealth": 1040,
+        "maxHealth": 1160,
         "ammoBayHealth": {
             "maxHealth": 180,
             "maxRegenHealth": 120,
@@ -182,8 +182,8 @@
         }
     },
     "chassis": {
-        "KV-3": {
-            "userString": "#ussr_vehicles:KV-3",
+        "Chassis_R39_KV-3": {
+            "userString": "#ussr_vehicles:Chassis_R39_KV-3",
             "tags": [],
             "level": 6,
             "price": 10720,
@@ -197,15 +197,14 @@
                 "rightTrack": 20
             },
             "weight": 14200,
-            "maxLoad": 68250,
             "terrainResistance": [
-                1.2,
-                1.7,
-                2.6
+                1.1,
+                1.4,
+                2.3
             ],
             "brakeForce": 45500,
             "rotationIsAroundCenter": "false",
-            "rotationSpeed": 16,
+            "rotationSpeed": 22,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.25,
                 "vehicleRotation": 0.25
@@ -849,8 +848,8 @@
             },
             "repairTime": 6.85714293
         },
-        "KV-3bis": {
-            "userString": "#ussr_vehicles:KV-3bis",
+        "Chassis_R39_KV-3_2": {
+            "userString": "#ussr_vehicles:Chassis_R39_KV-3_2",
             "tags": [],
             "level": 7,
             "price": 18200,
@@ -859,7 +858,6 @@
                 "rightTrack": 20
             },
             "weight": 14200,
-            "maxLoad": 71800,
             "terrainResistance": [
                 1.1,
                 1.4,
@@ -867,7 +865,7 @@
             ],
             "brakeForce": 45500,
             "rotationIsAroundCenter": "false",
-            "rotationSpeed": 18,
+            "rotationSpeed": 25,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.23,
                 "vehicleRotation": 0.23
@@ -1513,11 +1511,16 @@
         }
     },
     "turrets0": {
-        "KV-220_mod": {
-            "userString": "#ussr_vehicles:KV-220_mod",
+        "Turret_1_R39_KV-3": {
+            "userString": "#ussr_vehicles:Turret_1_R39_KV-3",
             "tags": [],
             "level": 6,
             "price": 10630,
+            "unlocks": {
+                "turret": {
+                    "cost": 7120
+                }
+            },
             "armor": {
                 "armor_1": 100,
                 "armor_2": 75,
@@ -1536,7 +1539,7 @@
                 "armor_4"
             ],
             "weight": 10000,
-            "maxHealth": 260,
+            "maxHealth": 220,
             "rotationSpeed": 24,
             "turretRotatorHealth": {
                 "maxHealth": 140,
@@ -1550,116 +1553,7 @@
                 "repairCost": 1.0
             },
             "guns": {
-                "_85mm_F-30": {
-                    "reloadTime": 5.1,
-                    "maxAmmo": 110,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            7.0,
-                            1.0,
-                            7.0
-                        ]
-                    },
-                    "unlocks": {
-                        "gun": {
-                            "cost": 4350
-                        }
-                    },
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_4": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 30
-                    },
-                    "shotDispersionRadius": 0.42,
-                    "aimingTime": 3.4,
-                    "invisibilityFactorAtShot": 0.25,
-                    "models": {
-                        "undamaged": "vehicles/russian/R39_KV-3/normal/lod0/Gun_01.model",
-                        "destroyed": "vehicles/russian/R39_KV-3/crash/lod0/Gun_01.model",
-                        "exploded": "vehicles/russian/R39_KV-3/crash/lod0/Gun_01.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/russian/R39_KV-3/collision/Gun_01.model",
-                        "collisionModelClient": "vehicles/russian/R39_KV-3/collision_client/Gun_01.model"
-                    },
-                    "effects": "shot_main",
-                    "reloadEffect": "reload85_107",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                -0.002009,
-                                0.01987,
-                                1.04548
-                            ],
-                            "rayEnd": [
-                                -0.002009,
-                                0.01987,
-                                1.52148
-                            ],
-                            "rayUp": [
-                                0.076,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.476
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "shotOffset": [
-                        -0.002683,
-                        0.019762,
-                        0.0
-                    ],
-                    "camouflage": {
-                        "tiling": [
-                            0.58,
-                            0.58,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            99.91,
-                            99.6552
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_107mm_ZiS-6": {
-                    "unlocks": {
-                        "turret": {
-                            "cost": 7120
-                        },
-                        "vehicle": {
-                            "cost": 53000
-                        }
-                    },
+                "_107mm_ZiS_6_KV_3": {
                     "maxAmmo": 61,
                     "pitchLimits": {
                         "minPitch": [
@@ -1687,10 +1581,19 @@
                         },
                         "gun": 40
                     },
-                    "shotDispersionRadius": 0.45,
+                    "shotDispersionRadius": 0.38,
                     "reloadTime": 9.7,
-                    "aimingTime": 3.4,
+                    "aimingTime": 2.5,
                     "invisibilityFactorAtShot": 0.22,
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.12,
+                        "whileGunDamaged": 2.0,
+                        "afterShot": 4.0
+                    },
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
+                    ],
                     "models": {
                         "undamaged": "vehicles/russian/R39_KV-3/normal/lod0/Gun_04.model",
                         "destroyed": "vehicles/russian/R39_KV-3/crash/lod0/Gun_04.model",
@@ -1748,102 +1651,6 @@
                         "density": [
                             114.214,
                             103.421
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_85mm_S-31": {
-                    "reloadTime": 5.1,
-                    "maxAmmo": 91,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            7.0,
-                            1.0,
-                            7.0
-                        ]
-                    },
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_4": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 40
-                    },
-                    "shotDispersionRadius": 0.42,
-                    "aimingTime": 3.4,
-                    "invisibilityFactorAtShot": 0.25,
-                    "models": {
-                        "undamaged": "vehicles/russian/R39_KV-3/normal/lod0/Gun_11.model",
-                        "destroyed": "vehicles/russian/R39_KV-3/crash/lod0/Gun_11.model",
-                        "exploded": "vehicles/russian/R39_KV-3/crash/lod0/Gun_11.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/russian/R39_KV-3/collision/Gun_11.model",
-                        "collisionModelClient": "vehicles/russian/R39_KV-3/collision_client/Gun_11.model"
-                    },
-                    "effects": "shot_main",
-                    "reloadEffect": "reload85_107",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                -0.002112,
-                                0.11243,
-                                1.09
-                            ],
-                            "rayEnd": [
-                                -0.002112,
-                                0.11243,
-                                1.64
-                            ],
-                            "rayUp": [
-                                0.08,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.55
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "shotOffset": [
-                        -0.002683,
-                        0.112339,
-                        0.0
-                    ],
-                    "camouflage": {
-                        "tiling": [
-                            0.64,
-                            0.64,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            97.7423,
-                            99.3736
                         ],
                         "aoTextureSize": [
                             512.0,
@@ -1937,14 +1744,14 @@
                 ]
             }
         },
-        "KV-3": {
-            "userString": "#ussr_vehicles:KV-3",
+        "Turret_2_R39_KV-3": {
+            "userString": "#ussr_vehicles:Turret_2_R39_KV-3",
             "tags": [],
             "level": 7,
             "price": 21930,
             "unlocks": {
                 "gun": {
-                    "cost": 17000
+                    "cost": 19000
                 }
             },
             "armor": {
@@ -1971,7 +1778,7 @@
                 "armor_4"
             ],
             "weight": 12300,
-            "maxHealth": 360,
+            "maxHealth": 290,
             "rotationSpeed": 22,
             "turretRotatorHealth": {
                 "maxHealth": 140,
@@ -1986,109 +1793,8 @@
             },
             "invisibilityFactor": 0.971,
             "guns": {
-                "_85mm_F-30": {
-                    "reloadTime": 5.1,
-                    "maxAmmo": 95,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -24.0,
-                            1.0,
-                            -24.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            7.0,
-                            1.0,
-                            7.0
-                        ]
-                    },
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_4": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 30
-                    },
-                    "shotDispersionRadius": 0.42,
-                    "aimingTime": 3.4,
-                    "invisibilityFactorAtShot": 0.25,
-                    "models": {
-                        "undamaged": "vehicles/russian/R39_KV-3/normal/lod0/Gun_05.model",
-                        "destroyed": "vehicles/russian/R39_KV-3/crash/lod0/Gun_05.model",
-                        "exploded": "vehicles/russian/R39_KV-3/crash/lod0/Gun_05.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/russian/R39_KV-3/collision/Gun_05.model",
-                        "collisionModelClient": "vehicles/russian/R39_KV-3/collision_client/Gun_05.model"
-                    },
-                    "effects": "shot_main",
-                    "reloadEffect": "reload85_107",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                -0.002009,
-                                0.07461,
-                                1.17008
-                            ],
-                            "rayEnd": [
-                                -0.002009,
-                                0.07461,
-                                1.67008
-                            ],
-                            "rayUp": [
-                                0.077,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.5
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "shotOffset": [
-                        -0.002683,
-                        0.074503,
-                        0.0
-                    ],
-                    "camouflage": {
-                        "tiling": [
-                            0.655,
-                            0.655,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            99.91,
-                            99.6552
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_100mm_D10T": {
-                    "maxAmmo": 47,
-                    "unlocks": {
-                        "vehicle": {
-                            "cost": 51300
-                        }
-                    },
+                "_107mm_ZiS_6_KV_3": {
+                    "maxAmmo": 61,
                     "pitchLimits": {
                         "minPitch": [
                             0.0,
@@ -2115,106 +1821,19 @@
                         },
                         "gun": 40
                     },
-                    "shotDispersionRadius": 0.42,
-                    "reloadTime": 9.3,
-                    "aimingTime": 2.9,
+                    "shotDispersionRadius": 0.38,
+                    "reloadTime": 9.5,
+                    "aimingTime": 2.5,
                     "invisibilityFactorAtShot": 0.22,
-                    "models": {
-                        "undamaged": "vehicles/russian/R39_KV-3/normal/lod0/Gun_07.model",
-                        "destroyed": "vehicles/russian/R39_KV-3/crash/lod0/Gun_07.model",
-                        "exploded": "vehicles/russian/R39_KV-3/crash/lod0/Gun_07.model"
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.12,
+                        "whileGunDamaged": 2.0,
+                        "afterShot": 4.0
                     },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/russian/R39_KV-3/collision/Gun_07.model",
-                        "collisionModelClient": "vehicles/russian/R39_KV-3/collision_client/Gun_07.model"
-                    },
-                    "effects": "shot_mainext",
-                    "reloadEffect": "reload85_107",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                -0.002128,
-                                0.075066,
-                                1.49379
-                            ],
-                            "rayEnd": [
-                                -0.002128,
-                                0.075066,
-                                2.07379
-                            ],
-                            "rayUp": [
-                                0.08,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.58
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "shotOffset": [
-                        -0.002683,
-                        0.074978,
-                        0.0
+                    "turretYawLimits": [
+                        -180.0,
+                        180.0
                     ],
-                    "camouflage": {
-                        "tiling": [
-                            0.67,
-                            0.67,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            92.3424,
-                            113.315
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_107mm_ZiS-6": {
-                    "maxAmmo": 55,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -24.0,
-                            1.0,
-                            -24.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            7.0,
-                            1.0,
-                            7.0
-                        ]
-                    },
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_4": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 40
-                    },
-                    "shotDispersionRadius": 0.45,
-                    "reloadTime": 9.7,
-                    "aimingTime": 3.4,
-                    "invisibilityFactorAtShot": 0.22,
                     "models": {
                         "undamaged": "vehicles/russian/R39_KV-3/normal/lod0/Gun_08.model",
                         "destroyed": "vehicles/russian/R39_KV-3/crash/lod0/Gun_08.model",
@@ -2279,214 +1898,13 @@
                         ]
                     }
                 },
-                "_85mm_S-31": {
-                    "reloadTime": 5.1,
-                    "maxAmmo": 79,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -24.0,
-                            1.0,
-                            -24.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            7.0,
-                            1.0,
-                            7.0
-                        ]
-                    },
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_4": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_5": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_6": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 40
-                    },
-                    "shotDispersionRadius": 0.42,
-                    "aimingTime": 3.4,
-                    "invisibilityFactorAtShot": 0.25,
-                    "models": {
-                        "undamaged": "vehicles/russian/R39_KV-3/normal/lod0/Gun_12.model",
-                        "destroyed": "vehicles/russian/R39_KV-3/crash/lod0/Gun_12.model",
-                        "exploded": "vehicles/russian/R39_KV-3/crash/lod0/Gun_12.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/russian/R39_KV-3/collision/Gun_12.model",
-                        "collisionModelClient": "vehicles/russian/R39_KV-3/collision_client/Gun_12.model"
-                    },
-                    "effects": "shot_main",
-                    "reloadEffect": "reload85_107",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                -0.002112,
-                                0.141175,
-                                1.26
-                            ],
-                            "rayEnd": [
-                                -0.002112,
-                                0.141175,
-                                1.81
-                            ],
-                            "rayUp": [
-                                0.078,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.55
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "shotOffset": [
-                        -0.002683,
-                        0.141084,
-                        0.0
-                    ],
-                    "camouflage": {
-                        "tiling": [
-                            0.61,
-                            0.61,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            97.7423,
-                            99.3736
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_122-mm_D-25T_with_a_piston_shutter": {
+                "_122mm_D_25T_KV_3": {
                     "maxAmmo": 38,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -24.0,
-                            1.0,
-                            -24.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            7.0,
-                            1.0,
-                            7.0
-                        ]
-                    },
                     "unlocks": {
-                        "gun": {
-                            "cost": 19000
+                        "vehicle": {
+                            "cost": 51300
                         }
                     },
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_4": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 50
-                    },
-                    "shotDispersionRadius": 0.46,
-                    "reloadTime": 14.7,
-                    "aimingTime": 3.4,
-                    "invisibilityFactorAtShot": 0.19,
-                    "models": {
-                        "undamaged": "vehicles/russian/R39_KV-3/normal/lod0/Gun_09.model",
-                        "destroyed": "vehicles/russian/R39_KV-3/crash/lod0/Gun_09.model",
-                        "exploded": "vehicles/russian/R39_KV-3/crash/lod0/Gun_09.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/russian/R39_KV-3/collision/Gun_09.model",
-                        "collisionModelClient": "vehicles/russian/R39_KV-3/collision_client/Gun_09.model"
-                    },
-                    "effects": "shot_large_mb",
-                    "reloadEffect": "reload115_152",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                -0.002075,
-                                0.074085,
-                                1.23134
-                            ],
-                            "rayEnd": [
-                                -0.002075,
-                                0.074085,
-                                1.81134
-                            ],
-                            "rayUp": [
-                                0.103,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.58
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "shotOffset": [
-                        -0.002161,
-                        0.001318,
-                        0.0
-                    ],
-                    "camouflage": {
-                        "tiling": [
-                            0.805,
-                            0.805,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            96.4103,
-                            96.1779
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_122-mm_D-25T_with_wedges_shutter": {
-                    "maxAmmo": 38,
                     "pitchLimits": {
                         "minPitch": [
                             0.0,
@@ -2670,80 +2088,48 @@
         }
     },
     "engines": {
-        "V-5": {
-            "unlocks": {
-                "engine": {
-                    "cost": 11000
-                }
-            }
-        },
-        "V-2IS": {
+        "V_2IS_KV_3": {
             "unlocks": {
                 "engine": {
                     "cost": 12000
                 }
             }
         },
-        "V-2SN": "shared"
+        "V_2SN": "shared"
     },
     "fuelTanks": {
         "Heavy": "shared"
     },
     "radios": {
-        "_10R": {
-            "unlocks": {
-                "radio": {
-                    "cost": 3100
-                }
-            }
-        },
-        "_10RK": {
-            "unlocks": {
-                "radio": {
-                    "cost": 5600
-                }
-            }
-        },
-        "_12RT": {
-            "unlocks": {
-                "radio": {
-                    "cost": 8700
-                }
-            }
-        },
         "R113": "shared"
     },
     "physics": {
         "detailed": {
             "engines": {
-                "V-5": {
-                    "smplEnginePower": 634.3687,
+                "V_2IS_KV_3": {
+                    "smplEnginePower": 750,
                     "smplFwMaxSpeed": 32
                 },
-                "V-2IS": {
-                    "smplEnginePower": 634.3687,
-                    "smplFwMaxSpeed": 32
-                },
-                "V-2SN": {
-                    "smplEnginePower": 792.9609,
+                "V_2SN": {
+                    "smplEnginePower": 820,
                     "smplFwMaxSpeed": 32
                 }
             },
             "chassis": {
-                "KV-3": {
+                "Chassis_R39_KV-3": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.2093
+                            "rollingFriction": 0.18515
                         },
                         "medium": {
-                            "rollingFriction": 0.13685
+                            "rollingFriction": 0.1127
                         },
                         "firm": {
-                            "rollingFriction": 0.0966
+                            "rollingFriction": 0.08855
                         }
                     }
                 },
-                "KV-3bis": {
+                "Chassis_R39_KV-3_2": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.18515

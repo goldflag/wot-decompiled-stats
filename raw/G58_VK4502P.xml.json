@@ -84,7 +84,7 @@
             "armor_4"
         ],
         "weight": 36400,
-        "maxHealth": 1480,
+        "maxHealth": 1640,
         "ammoBayHealth": {
             "maxHealth": 240,
             "maxRegenHealth": 160,
@@ -92,7 +92,7 @@
         },
         "variants": {
             "hull2": {
-                "turret0": "VK4502P_Eliteturm",
+                "turret0": "Turret_2_G58_VK4502P",
                 "turretPositions": {
                     "turret": [
                         0.0,
@@ -201,9 +201,9 @@
         }
     },
     "chassis": {
-        "VK4502P_Standardketten": {
-            "userString": "#germany_vehicles:VK4502P_Standardketten",
-            "shortUserString": "#germany_vehicles:VK4502P_Standardketten_short",
+        "Chassis_G58_VK4502P": {
+            "userString": "#germany_vehicles:Chassis_G58_VK4502P",
+            "shortUserString": "#germany_vehicles:Chassis_G58_VK4502P_short",
             "tags": [],
             "level": 8,
             "price": 31500,
@@ -217,18 +217,17 @@
                 "rightTrack": 25
             },
             "weight": 19000,
-            "maxLoad": 75500,
             "terrainResistance": [
                 1.1,
-                2.0,
-                3.4
+                1.7,
+                2.5
             ],
             "brakeForce": 36500,
             "rotationIsAroundCenter": "true",
-            "rotationSpeed": 17,
+            "rotationSpeed": 26,
             "shotDispersionFactors": {
-                "vehicleMovement": 0.22,
-                "vehicleRotation": 0.22
+                "vehicleMovement": 0.21,
+                "vehicleRotation": 0.21
             },
             "bulkHealthFactor": 3.0,
             "maxHealth": 240,
@@ -950,9 +949,9 @@
             },
             "repairTime": 6.85714293
         },
-        "VK4502P_Vetstaerktketten": {
-            "userString": "#germany_vehicles:VK4502P_Vetstaerktketten",
-            "shortUserString": "#germany_vehicles:VK4502P_Vetstaerktketten_short",
+        "Chassis_G58_VK4502P_2": {
+            "userString": "#germany_vehicles:Chassis_G58_VK4502P_2",
+            "shortUserString": "#germany_vehicles:Chassis_G58_VK4502P_2_short",
             "tags": [],
             "level": 9,
             "price": 60000,
@@ -961,7 +960,6 @@
                 "rightTrack": 25
             },
             "weight": 19000,
-            "maxLoad": 81400,
             "terrainResistance": [
                 1.1,
                 1.7,
@@ -969,7 +967,7 @@
             ],
             "brakeForce": 36500,
             "rotationIsAroundCenter": "true",
-            "rotationSpeed": 20,
+            "rotationSpeed": 30,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.21,
                 "vehicleRotation": 0.21
@@ -1696,9 +1694,9 @@
         }
     },
     "turrets0": {
-        "VK4502P_Standardturm": {
-            "userString": "#germany_vehicles:VK4502P_Standardturm",
-            "shortUserString": "#germany_vehicles:VK4502P_Standardturm_short",
+        "Turret_1_G58_VK4502P": {
+            "userString": "#germany_vehicles:Turret_1_G58_VK4502P",
+            "shortUserString": "#germany_vehicles:Turret_1_G58_VK4502P_short",
             "tags": [],
             "level": 8,
             "price": 31500,
@@ -1726,7 +1724,7 @@
                 "armor_4"
             ],
             "weight": 13500,
-            "maxHealth": 370,
+            "maxHealth": 300,
             "rotationSpeed": 26,
             "turretRotatorHealth": {
                 "maxHealth": 150,
@@ -1740,8 +1738,8 @@
                 "repairCost": 2.0
             },
             "guns": {
-                "_88mm_KwK_43_L71": {
-                    "maxAmmo": 92,
+                "_105mm_Kw_K_L_68": {
+                    "maxAmmo": 42,
                     "pitchLimits": {
                         "minPitch": [
                             0.0,
@@ -1752,19 +1750,22 @@
                         "maxPitch": [
                             0.0,
                             5.0,
+                            0.0555556,
+                            5.0,
+                            0.0694444,
+                            7.0,
+                            0.930556,
+                            7.0,
+                            0.944444,
+                            5.0,
                             1.0,
                             5.0
                         ]
                     },
-                    "unlocks": {
-                        "gun": {
-                            "cost": 16800
-                        }
-                    },
-                    "reloadTime": 7.7,
+                    "reloadTime": 8.7,
                     "shotDispersionFactors": {
-                        "turretRotation": 0.1,
-                        "afterShot": 4.0,
+                        "turretRotation": 0.08,
+                        "afterShot": 3,
                         "whileGunDamaged": 2.0
                     },
                     "armor": {
@@ -1782,237 +1783,8 @@
                         },
                         "gun": 40
                     },
-                    "shotDispersionRadius": 0.34,
-                    "aimingTime": 2.9,
-                    "invisibilityFactorAtShot": 0.225,
-                    "models": {
-                        "undamaged": "vehicles/german/G58_VK4502P/normal/lod0/Gun_01.model",
-                        "destroyed": "vehicles/german/G58_VK4502P/crash/lod0/Gun_01.model",
-                        "exploded": "vehicles/german/G58_VK4502P/crash/lod0/Gun_01.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/german/G58_VK4502P/collision/Gun_01.model",
-                        "collisionModelClient": "vehicles/german/G58_VK4502P/collision_client/Gun_01.model"
-                    },
-                    "effects": "shot_main_mb",
-                    "reloadEffect": "reload85_107",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                0.043646,
-                                -0.064381,
-                                4.20031
-                            ],
-                            "rayEnd": [
-                                0.043646,
-                                -0.064381,
-                                4.66031
-                            ],
-                            "rayUp": [
-                                0.074,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.46
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "shotOffset": [
-                        0.04425,
-                        -0.060552,
-                        -0.203
-                    ],
-                    "camouflage": {
-                        "tiling": [
-                            1.1,
-                            1.1,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            89.4905,
-                            92.3526
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_105mm_KwK45_L52": {
-                    "maxAmmo": 56,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -17.0,
-                            1.0,
-                            -17.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            4.0,
-                            0.0555556,
-                            4.0,
-                            0.0694444,
-                            6.0,
-                            0.930556,
-                            6.0,
-                            0.944444,
-                            4.0,
-                            1.0,
-                            4.0
-                        ]
-                    },
-                    "unlocks": {
-                        "gun": {
-                            "cost": 46000
-                        }
-                    },
-                    "reloadTime": 10.1,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.1,
-                        "afterShot": 4.0,
-                        "whileGunDamaged": 2.0
-                    },
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_5": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 40
-                    },
-                    "shotDispersionRadius": 0.37,
-                    "aimingTime": 2.3,
-                    "invisibilityFactorAtShot": 0.209,
-                    "models": {
-                        "undamaged": "vehicles/german/G58_VK4502P/normal/lod0/Gun_02.model",
-                        "destroyed": "vehicles/german/G58_VK4502P/crash/lod0/Gun_02.model",
-                        "exploded": "vehicles/german/G58_VK4502P/crash/lod0/Gun_02.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/german/G58_VK4502P/collision/Gun_02.model",
-                        "collisionModelClient": "vehicles/german/G58_VK4502P/collision_client/Gun_02.model"
-                    },
-                    "effects": "shot_large_mb",
-                    "reloadEffect": "reload85_107",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                0.043642,
-                                -0.064416,
-                                3.89241
-                            ],
-                            "rayEnd": [
-                                0.043642,
-                                -0.064416,
-                                4.35241
-                            ],
-                            "rayUp": [
-                                0.084,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.46
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "shotOffset": [
-                        0.04425,
-                        -0.060552,
-                        -0.203
-                    ],
-                    "camouflage": {
-                        "tiling": [
-                            1.12,
-                            1.12,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            92.3553,
-                            88.5365
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_105mm_KwK46_L68": {
-                    "maxAmmo": 42,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -17.0,
-                            1.0,
-                            -17.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            4.0,
-                            0.0555556,
-                            4.0,
-                            0.0694444,
-                            7.0,
-                            0.930556,
-                            7.0,
-                            0.944444,
-                            4.0,
-                            1.0,
-                            4.0
-                        ]
-                    },
-                    "reloadTime": 10.3,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.1,
-                        "afterShot": 4.0,
-                        "whileGunDamaged": 2.0
-                    },
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_5": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 40
-                    },
-                    "shotDispersionRadius": 0.34,
-                    "aimingTime": 2.3,
+                    "shotDispersionRadius": 0.31,
+                    "aimingTime": 2,
                     "invisibilityFactorAtShot": 0.198,
                     "models": {
                         "undamaged": "vehicles/german/G58_VK4502P/normal/lod0/Gun_03.model",
@@ -2151,9 +1923,9 @@
                 ]
             }
         },
-        "VK4502P_Eliteturm": {
-            "userString": "#germany_vehicles:VK4502P_Eliteturm",
-            "shortUserString": "#germany_vehicles:VK4502P_Eliteturm_short",
+        "Turret_2_G58_VK4502P": {
+            "userString": "#germany_vehicles:Turret_2_G58_VK4502P",
+            "shortUserString": "#germany_vehicles:Turret_2_G58_VK4502P_short",
             "tags": [],
             "level": 9,
             "price": 48000,
@@ -2180,7 +1952,7 @@
                 "armor_4"
             ],
             "weight": 18520,
-            "maxHealth": 470,
+            "maxHealth": 410,
             "rotationSpeed": 18,
             "turretRotatorHealth": {
                 "maxHealth": 150,
@@ -2195,8 +1967,8 @@
             },
             "invisibilityFactor": 0.952,
             "guns": {
-                "_88mm_KwK_43_L71": {
-                    "maxAmmo": 92,
+                "_105mm_Kw_K_L_68": {
+                    "maxAmmo": 42,
                     "pitchLimits": {
                         "minPitch": [
                             0.0,
@@ -2206,232 +1978,13 @@
                         ],
                         "maxPitch": [
                             0.0,
-                            5.0,
-                            1.0,
-                            5.0
-                        ]
-                    },
-                    "reloadTime": 7.3,
-                    "shotDispersionFactors": {
-                        "turretRotation": 0.08,
-                        "afterShot": 4.0,
-                        "whileGunDamaged": 2.0
-                    },
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_4": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 40
-                    },
-                    "shotDispersionRadius": 0.34,
-                    "aimingTime": 2.9,
-                    "invisibilityFactorAtShot": 0.225,
-                    "models": {
-                        "undamaged": "vehicles/german/G58_VK4502P/normal/lod0/Gun_04.model",
-                        "destroyed": "vehicles/german/G58_VK4502P/crash/lod0/Gun_04.model",
-                        "exploded": "vehicles/german/G58_VK4502P/crash/lod0/Gun_04.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/german/G58_VK4502P/collision/Gun_04.model",
-                        "collisionModelClient": "vehicles/german/G58_VK4502P/collision_client/Gun_04.model"
-                    },
-                    "effects": "shot_main_mb",
-                    "reloadEffect": "reload85_107",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                1e-06,
-                                -0.070905,
-                                3.9867
-                            ],
-                            "rayEnd": [
-                                1e-06,
-                                -0.070905,
-                                4.4467
-                            ],
-                            "rayUp": [
-                                0.077,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.46
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "shotOffset": [
-                        0.0,
-                        -0.068664,
-                        -0.299892
-                    ],
-                    "camouflage": {
-                        "tiling": [
-                            1.1,
-                            1.1,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            89.4905,
-                            92.3526
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_105mm_KwK45_L52": {
-                    "maxAmmo": 56,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -17.0,
-                            1.0,
-                            -17.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            5.0,
-                            0.0555556,
-                            5.0,
-                            0.0694444,
-                            6.0,
-                            0.930556,
-                            6.0,
-                            0.944444,
-                            5.0,
-                            1.0,
-                            5.0
-                        ]
-                    },
-                    "invisibilityFactorAtShot": 0.22,
-                    "reloadTime": 8.9,
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_4": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 40
-                    },
-                    "shotDispersionRadius": 0.37,
-                    "aimingTime": 2.3,
-                    "effects": "shot_large_mb",
-                    "reloadEffect": "reload85_107",
-                    "models": {
-                        "undamaged": "vehicles/german/G58_VK4502P/normal/lod0/Gun_05.model",
-                        "destroyed": "vehicles/german/G58_VK4502P/crash/lod0/Gun_05.model",
-                        "exploded": "vehicles/german/G58_VK4502P/crash/lod0/Gun_05.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/german/G58_VK4502P/collision/Gun_05.model",
-                        "collisionModelClient": "vehicles/german/G58_VK4502P/collision_client/Gun_05.model"
-                    },
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                1e-06,
-                                -0.070905,
-                                3.67415
-                            ],
-                            "rayEnd": [
-                                1e-06,
-                                -0.070905,
-                                4.13415
-                            ],
-                            "rayUp": [
-                                0.084,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.46
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "shotOffset": [
-                        0.0,
-                        -0.068664,
-                        -0.3
-                    ],
-                    "camouflage": {
-                        "tiling": [
-                            1.1,
-                            1.1,
-                            0.0,
-                            0.0
-                        ],
-                        "density": [
-                            92.3553,
-                            88.5365
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_105mm_KwK46_L68": {
-                    "maxAmmo": 42,
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -17.0,
-                            1.0,
-                            -17.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            5.0,
-                            0.0555556,
-                            5.0,
-                            0.0694444,
                             7.0,
-                            0.930556,
-                            7.0,
-                            0.944444,
-                            5.0,
                             1.0,
-                            5.0
+                            7.0
                         ]
                     },
                     "invisibilityFactorAtShot": 0.209,
-                    "reloadTime": 9.1,
+                    "reloadTime": 8.6,
                     "armor": {
                         "armor_1": {
                             "vehicleDamageFactor": 0
@@ -2444,8 +1997,8 @@
                         },
                         "gun": 40
                     },
-                    "shotDispersionRadius": 0.34,
-                    "aimingTime": 2.3,
+                    "shotDispersionRadius": 0.3,
+                    "aimingTime": 2,
                     "effects": "shot_large",
                     "reloadEffect": "reload85_107",
                     "models": {
@@ -2510,7 +2063,7 @@
                         ]
                     }
                 },
-                "_128mm_KwK44_L55": {
+                "_128mm_Kw_K_44_L_55_180B": {
                     "maxAmmo": 36,
                     "pitchLimits": {
                         "minPitch": [
@@ -2521,9 +2074,9 @@
                         ],
                         "maxPitch": [
                             0.0,
-                            5.0,
+                            7.0,
                             1.0,
-                            5.0
+                            7.0
                         ]
                     },
                     "invisibilityFactorAtShot": 0.153,
@@ -2694,66 +2247,48 @@
         }
     },
     "engines": {
-        "Porsche_Typ_100_1": {
-            "unlocks": {
-                "engine": {
-                    "cost": 12000
-                }
-            }
-        },
-        "Porsche_Typ_100_3": {
+        "Porsche_Deutz_Typ_180_1B": {
             "unlocks": {
                 "engine": {
                     "cost": 31000
                 }
             }
         },
-        "Porsche_Deutz_Typ180_2": "shared"
+        "Porsche_Deutz_Typ_180_2B": "shared"
     },
     "fuelTanks": {
         "Large": "shared"
     },
     "radios": {
-        "FuG7": {
-            "unlocks": {
-                "radio": {
-                    "cost": 7200
-                }
-            }
-        },
         "FuG12": "shared"
     },
     "physics": {
         "detailed": {
             "engines": {
-                "Porsche_Typ_100_1": {
-                    "smplEnginePower": 634.3687,
+                "Porsche_Deutz_Typ_180_1B": {
+                    "smplEnginePower": 870,
                     "smplFwMaxSpeed": 30
                 },
-                "Porsche_Typ_100_3": {
-                    "smplEnginePower": 708.3784,
-                    "smplFwMaxSpeed": 30
-                },
-                "Porsche_Deutz_Typ180_2": {
-                    "smplEnginePower": 888.1161,
+                "Porsche_Deutz_Typ_180_2B": {
+                    "smplEnginePower": 920,
                     "smplFwMaxSpeed": 30
                 }
             },
             "chassis": {
-                "VK4502P_Standardketten": {
+                "Chassis_G58_VK4502P": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.2737
+                            "rollingFriction": 0.20125
                         },
                         "medium": {
-                            "rollingFriction": 0.161
+                            "rollingFriction": 0.13685
                         },
                         "firm": {
                             "rollingFriction": 0.08855
                         }
                     }
                 },
-                "VK4502P_Vetstaerktketten": {
+                "Chassis_G58_VK4502P_2": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.20125
@@ -2771,7 +2306,7 @@
     },
     "clientAdjustmentFactors": {
         "guns": {
-            "_128mm_KwK44_L55": {
+            "_128mm_Kw_K_44_L_55_180B": {
                 "delta": 1.16901408
             }
         },

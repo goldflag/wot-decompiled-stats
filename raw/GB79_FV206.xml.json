@@ -28,7 +28,7 @@
         "backward": 10
     },
     "invisibility": {
-        "moving": 0.067,
+        "moving": 0.068,
         "still": 0.135,
         "camouflageBonus": 0.02,
         "firePenalty": 0.203
@@ -97,9 +97,9 @@
         "weight": 31906,
         "maxHealth": 344,
         "ammoBayHealth": {
-            "maxHealth": 134,
-            "maxRegenHealth": 67,
-            "repairCost": 1.0
+            "maxHealth": 210,
+            "maxRegenHealth": 158,
+            "repairCost": 8
         },
         "models": {
             "undamaged": "vehicles/british/GB79_FV206/normal/lod0/Hull.model",
@@ -208,15 +208,14 @@
                 "rightTrack": 25
             },
             "weight": 20000,
-            "maxLoad": 56000,
             "terrainResistance": [
-                1.4,
-                1.6,
-                2.7
+                1.3,
+                1.5,
+                2.5
             ],
             "brakeForce": 54000,
             "rotationIsAroundCenter": "true",
-            "rotationSpeed": 18,
+            "rotationSpeed": 22,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.34,
                 "vehicleRotation": 0.34
@@ -883,7 +882,6 @@
                 "rightTrack": 25
             },
             "weight": 20000,
-            "maxLoad": 63000,
             "terrainResistance": [
                 1.3,
                 1.5,
@@ -891,14 +889,14 @@
             ],
             "brakeForce": 60000,
             "rotationIsAroundCenter": "true",
-            "rotationSpeed": 20,
+            "rotationSpeed": 25,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.3,
                 "vehicleRotation": 0.3
             },
             "bulkHealthFactor": 3.0,
-            "maxHealth": 140,
-            "maxRegenHealth": 105,
+            "maxHealth": 220,
+            "maxRegenHealth": 165,
             "repairCost": 5.0,
             "models": {
                 "undamaged": "vehicles/british/GB79_FV206/normal/lod0/Chassis.model",
@@ -1546,31 +1544,40 @@
                     "camouflage": null
                 }
             },
-            "repairTime": 7.30434799
+            "repairTime": 6.66666651
         }
     },
     "turrets0": {
         "Turret_1_GB79_FV206": {
             "userString": "#gb_vehicles:Turret_1_GB79_FV206",
             "tags": [
-                "cannotDetach"
+                "cannotDetach",
+                "turretless"
             ],
             "level": 8,
             "price": 100,
             "notInShop": "true",
             "armor": {
-                "armor_1": 50.8,
+                "armor_1": {
+                    "tags": [
+                        "hull"
+                    ]
+                },
                 "armor_2": 50.8,
-                "armor_4": 17,
+                "armor_4": {
+                    "tags": [
+                        "hull"
+                    ]
+                },
                 "armor_8": 0
             },
             "weight": 100,
             "maxHealth": 86,
             "rotationSpeed": 16,
             "turretRotatorHealth": {
-                "maxHealth": 100,
-                "maxRegenHealth": 50,
-                "repairCost": 1.0
+                "maxHealth": 155,
+                "maxRegenHealth": 78,
+                "repairCost": 8
             },
             "circularVisionRadius": 265,
             "surveyingDeviceHealth": {
@@ -1579,7 +1586,7 @@
                 "repairCost": 1.0
             },
             "guns": {
-                "_5.5inch_SPG_Gun": {
+                "B_L_5_5_in_Gun_207": {
                     "maxAmmo": 48,
                     "unlocks": {
                         "gun": {
@@ -1676,7 +1683,7 @@
                         ]
                     }
                 },
-                "_6inch_SPG_Gun": {
+                "Q_F_6_in_Gun_Mk_V": {
                     "maxAmmo": 48,
                     "unlocks": {
                         "vehicle": {
@@ -1701,13 +1708,13 @@
                         ]
                     },
                     "shotDispersionRadius": 0.65,
-                    "reloadTime": 30,
+                    "reloadTime": 28.6,
                     "shotDispersionFactors": {
-                        "turretRotation": 0.44,
+                        "turretRotation": 0.42,
                         "afterShot": 5,
                         "whileGunDamaged": 2.0
                     },
-                    "aimingTime": 4.5,
+                    "aimingTime": 4,
                     "invisibilityFactorAtShot": 0.143,
                     "turretYawLimits": [
                         -22.0,
@@ -1848,43 +1855,29 @@
         }
     },
     "engines": {
-        "Rolls_Royse_Meteor_MkIV": {
+        "Rolls_Royce_Meteor_Mk_IVB_207": {
             "unlocks": {
                 "engine": {
                     "cost": 31000
                 }
             }
         },
-        "Rolls_Royse_Meteor_MkIVC": "shared"
+        "Rolls_Royce_Meteor_Mk_IVC_207": "shared"
     },
     "fuelTanks": {
         "Average": "shared"
     },
     "radios": {
-        "N19Mk3": {
-            "unlocks": {
-                "radio": {
-                    "cost": 4500
-                }
-            }
-        },
-        "N22": {
-            "unlocks": {
-                "radio": {
-                    "cost": 9000
-                }
-            }
-        },
         "C42": "shared"
     },
     "physics": {
         "detailed": {
             "engines": {
-                "Rolls_Royse_Meteor_MkIV": {
+                "Rolls_Royce_Meteor_Mk_IVB_207": {
                     "smplEnginePower": 687.2327,
                     "smplFwMaxSpeed": 29
                 },
-                "Rolls_Royse_Meteor_MkIVC": {
+                "Rolls_Royce_Meteor_Mk_IVC_207": {
                     "smplEnginePower": 792.9609,
                     "smplFwMaxSpeed": 29
                 }
@@ -1893,13 +1886,13 @@
                 "Chassis_GB79_FV206": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.21735
+                            "rollingFriction": 0.20125
                         },
                         "medium": {
-                            "rollingFriction": 0.1288
+                            "rollingFriction": 0.12075
                         },
                         "firm": {
-                            "rollingFriction": 0.1127
+                            "rollingFriction": 0.10465
                         }
                     }
                 },

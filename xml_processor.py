@@ -165,11 +165,11 @@ def add_tank_stats(tank_stats: List[Dict], data: dict[str, Any], tank_api_data: 
 
     number_of_shots = clip.get('count') if clip else None
     # factors in autocannons that shoot multiple shots in a burst
-    if burst:
+    if burst and clip:
         number_of_shots = number_of_shots / burst.get('count')
 
     time_to_empty_clip = gun.get('reloadTime') + (number_of_shots - 1) * intra_clip_reload if intra_clip_reload else None
-    if burst:
+    if burst and clip:
         # add time to empty clip for each burst shot
         time_to_empty_clip = time_to_empty_clip + number_of_shots * (60 / burst.get('rate')) * (burst.get('count') - 1)
 
@@ -178,7 +178,7 @@ def add_tank_stats(tank_stats: List[Dict], data: dict[str, Any], tank_api_data: 
         if intra_clip_reload: 
             if gun.get('autoreload'):
                 return 60 / min(gun.get('autoreload').get('reloadTime'))
-            if burst:
+            if burst and clip:
                 return 60 / time_to_empty_clip * clip.get('count')
             return 60 / time_to_empty_clip * number_of_shots 
         return 60 / gun.get('reloadTime')
@@ -601,7 +601,7 @@ def download_files(vehicles: dict):
     return output_dir
 
 def fetch_wg_vehicle_data() -> dict: 
-    url = "https://api.worldoftanks.com/wot/encyclopedia/vehicles/"
+    url = "https://api.worldoftanks.asia/wot/encyclopedia/vehicles/"
     params = {
         "application_id": os.getenv('API_KEY'),
         "fields": "name, short_name, tank_id, nation, tier, type, is_premium, images"

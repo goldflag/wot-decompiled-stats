@@ -58,6 +58,7 @@
         }
     },
     "repairCost": 7.5,
+    "crewXpFactor": 1.0,
     "camouflage": {
         "priceFactor": 1.6,
         "density": [
@@ -83,7 +84,7 @@
             "armor_4"
         ],
         "weight": 28840,
-        "maxHealth": 1280,
+        "maxHealth": 1360,
         "ammoBayHealth": {
             "maxHealth": 250,
             "maxRegenHealth": 200,
@@ -203,7 +204,6 @@
                 "rightTrack": 25
             },
             "weight": 13000,
-            "maxLoad": 63000,
             "terrainResistance": [
                 1.6,
                 1.8,
@@ -211,7 +211,7 @@
             ],
             "brakeForce": 65000,
             "rotationIsAroundCenter": "false",
-            "rotationSpeed": 25,
+            "rotationSpeed": 28,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.2,
                 "vehicleRotation": 0.2
@@ -834,7 +834,6 @@
                 "rightTrack": 25
             },
             "weight": 13000,
-            "maxLoad": 72000,
             "terrainResistance": [
                 1.6,
                 1.8,
@@ -842,7 +841,7 @@
             ],
             "brakeForce": 65000,
             "rotationIsAroundCenter": "false",
-            "rotationSpeed": 26,
+            "rotationSpeed": 30,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.18,
                 "vehicleRotation": 0.18
@@ -1462,6 +1461,11 @@
             "tags": [],
             "level": 7,
             "price": 20000,
+            "unlocks": {
+                "turret": {
+                    "cost": 15000
+                }
+            },
             "armor": {
                 "armor_1": 250,
                 "armor_2": 200,
@@ -1484,146 +1488,22 @@
                 "armor_4"
             ],
             "weight": 16000,
-            "maxHealth": 290,
+            "maxHealth": 260,
             "rotationSpeed": 23,
             "turretRotatorHealth": {
                 "maxHealth": 120,
                 "maxRegenHealth": 60,
                 "repairCost": 1.0
             },
-            "circularVisionRadius": 350,
+            "circularVisionRadius": 370,
             "surveyingDeviceHealth": {
                 "maxHealth": 110,
                 "maxRegenHealth": 55,
                 "repairCost": 1.0
             },
             "guns": {
-                "_90mm_canon_DCA_45": {
-                    "maxAmmo": 72,
-                    "unlocks": {
-                        "gun": {
-                            "cost": 34500
-                        }
-                    },
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_4": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_5": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_6": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 35
-                    },
-                    "turretYawLimits": [
-                        -180.0,
-                        180.0
-                    ],
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -20.0,
-                            1.0,
-                            -20.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            10.0,
-                            0.416667,
-                            10.0,
-                            0.425,
-                            5.6,
-                            0.458333,
-                            5.6,
-                            0.463889,
-                            8.0,
-                            0.536111,
-                            8.0,
-                            0.541667,
-                            5.6,
-                            0.575,
-                            5.6,
-                            0.583333,
-                            10.0,
-                            1.0,
-                            10.0
-                        ]
-                    },
-                    "invisibilityFactorAtShot": 0.225,
-                    "shotDispersionRadius": 0.38,
-                    "reloadTime": 7.2,
-                    "aimingTime": 2.5,
-                    "models": {
-                        "undamaged": "vehicles/french/F81_Char_de_65t/normal/lod0/Gun_01.model",
-                        "destroyed": "vehicles/french/F81_Char_de_65t/crash/lod0/Gun_01.model",
-                        "exploded": "vehicles/french/F81_Char_de_65t/crash/lod0/Gun_01.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/french/F81_Char_de_65t/collision/Gun_01.model",
-                        "collisionModelClient": "vehicles/french/F81_Char_de_65t/collision_client/Gun_01.model"
-                    },
-                    "effects": "shot_main_mb",
-                    "reloadEffect": "reload85_107",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                -8.2e-05,
-                                0.005104,
-                                3.71846
-                            ],
-                            "rayEnd": [
-                                -8.2e-05,
-                                0.005104,
-                                4.31846
-                            ],
-                            "rayUp": [
-                                0.093,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.6
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "camouflage": {
-                        "density": [
-                            103.522,
-                            105.186
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_100mm_SA_47": {
+                "_100mm_SA47_65": {
                     "maxAmmo": 60,
-                    "unlocks": {
-                        "turret": {
-                            "cost": 15000
-                        }
-                    },
                     "armor": {
                         "armor_1": {
                             "vehicleDamageFactor": 0
@@ -1681,10 +1561,10 @@
                     },
                     "invisibilityFactorAtShot": 0.198,
                     "shotDispersionRadius": 0.34,
-                    "reloadTime": 9.8,
-                    "aimingTime": 3.2,
+                    "reloadTime": 9,
+                    "aimingTime": 2.3,
                     "shotDispersionFactors": {
-                        "turretRotation": 0.13,
+                        "turretRotation": 0.1,
                         "afterShot": 3.0,
                         "whileGunDamaged": 2.0
                     },
@@ -1829,9 +1709,6 @@
             "unlocks": {
                 "gun": {
                     "cost": 46000
-                },
-                "vehicle": {
-                    "cost": 151700
                 }
             },
             "armor": {
@@ -1856,7 +1733,7 @@
                 "armor_4"
             ],
             "weight": 18000,
-            "maxHealth": 320,
+            "maxHealth": 340,
             "rotationSpeed": 26,
             "turretRotatorHealth": {
                 "maxHealth": 120,
@@ -1870,130 +1747,7 @@
                 "repairCost": 1.0
             },
             "guns": {
-                "_90mm_canon_DCA_45": {
-                    "maxAmmo": 72,
-                    "armor": {
-                        "armor_1": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_2": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_3": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_4": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_5": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_6": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_7": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_8": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "armor_9": {
-                            "vehicleDamageFactor": 0
-                        },
-                        "gun": 35
-                    },
-                    "turretYawLimits": [
-                        -180.0,
-                        180.0
-                    ],
-                    "pitchLimits": {
-                        "minPitch": [
-                            0.0,
-                            -13.0,
-                            1.0,
-                            -13.0
-                        ],
-                        "maxPitch": [
-                            0.0,
-                            8.0,
-                            0.416667,
-                            8.0,
-                            0.425,
-                            5.4,
-                            0.458333,
-                            5.4,
-                            0.466667,
-                            7.0,
-                            0.533333,
-                            7.0,
-                            0.541667,
-                            5.4,
-                            0.575,
-                            5.4,
-                            0.583333,
-                            8.0,
-                            1.0,
-                            8.0
-                        ]
-                    },
-                    "invisibilityFactorAtShot": 0.225,
-                    "shotDispersionRadius": 0.38,
-                    "reloadTime": 6.8,
-                    "aimingTime": 2.3,
-                    "models": {
-                        "undamaged": "vehicles/french/F81_Char_de_65t/normal/lod0/Gun_03.model",
-                        "destroyed": "vehicles/french/F81_Char_de_65t/crash/lod0/Gun_03.model",
-                        "exploded": "vehicles/french/F81_Char_de_65t/crash/lod0/Gun_03.model"
-                    },
-                    "hitTester": {
-                        "collisionModelServer": "vehicles/french/F81_Char_de_65t/collision/Gun_03.model",
-                        "collisionModelClient": "vehicles/french/F81_Char_de_65t/collision_client/Gun_03.model"
-                    },
-                    "effects": "shot_main_mb",
-                    "reloadEffect": "reload85_107",
-                    "customizationSlots": {
-                        "slot": {
-                            "slotType": "insigniaOnGun",
-                            "slotId": 49000,
-                            "rayStart": [
-                                -8.2e-05,
-                                0.005103,
-                                4.02983
-                            ],
-                            "rayEnd": [
-                                -8.2e-05,
-                                0.005103,
-                                4.62983
-                            ],
-                            "rayUp": [
-                                0.092,
-                                0.0,
-                                0.0
-                            ],
-                            "size": 0.6
-                        }
-                    },
-                    "customization": {
-                        "customizableVehicleAreas": {
-                            "paint": [
-                                "GUN",
-                                "GUN_2"
-                            ],
-                            "camouflage": "GUN"
-                        }
-                    },
-                    "camouflage": {
-                        "density": [
-                            103.522,
-                            105.186
-                        ],
-                        "aoTextureSize": [
-                            512.0,
-                            512.0
-                        ]
-                    }
-                },
-                "_100mm_SA_47": {
+                "_100mm_SA47_65": {
                     "maxAmmo": 60,
                     "armor": {
                         "armor_1": {
@@ -2060,10 +1814,10 @@
                         ]
                     },
                     "invisibilityFactorAtShot": 0.198,
-                    "reloadTime": 9.3,
-                    "aimingTime": 3,
+                    "reloadTime": 8.5,
+                    "aimingTime": 2,
                     "shotDispersionFactors": {
-                        "turretRotation": 0.13,
+                        "turretRotation": 0.08,
                         "afterShot": 3.0,
                         "whileGunDamaged": 2.0
                     },
@@ -2123,6 +1877,11 @@
                 },
                 "_120mm_D_1203": {
                     "maxAmmo": 40,
+                    "unlocks": {
+                        "vehicle": {
+                            "cost": 151700
+                        }
+                    },
                     "armor": {
                         "armor_1": {
                             "vehicleDamageFactor": 0
@@ -2188,10 +1947,10 @@
                         ]
                     },
                     "shotDispersionRadius": 0.36,
-                    "reloadTime": 12,
-                    "aimingTime": 2.5,
+                    "reloadTime": 12.9,
+                    "aimingTime": 2.3,
                     "shotDispersionFactors": {
-                        "turretRotation": 0.14,
+                        "turretRotation": 0.12,
                         "afterShot": 3.0,
                         "whileGunDamaged": 2.0
                     },
@@ -2332,50 +2091,31 @@
         }
     },
     "engines": {
-        "Maybach_HL_230P45": {
-            "unlocks": {
-                "engine": {
-                    "cost": 24700
-                }
-            }
-        },
-        "Maybach_HL_295": {
+        "Maybach_HL_295_65": {
             "unlocks": {
                 "engine": {
                     "cost": 27000
                 }
             }
         },
-        "Maybach_HL_295_a_injection_d_essence": "shared"
+        "Maybach_HL_295_a_injection_d_essence_65": "shared"
     },
     "fuelTanks": {
         "Large": "shared"
     },
     "radios": {
-        "SCR_508": {
-            "unlocks": {
-                "radio": {
-                    "cost": 9000
-                }
-            }
-        },
         "SCR_528": "shared"
     },
     "clientAdjustmentFactors": null,
-    "crewXpFactor": 1.0,
     "physics": {
         "detailed": {
             "engines": {
-                "Maybach_HL_230P45": {
-                    "smplEnginePower": 800,
+                "Maybach_HL_295_65": {
+                    "smplEnginePower": 1000,
                     "smplFwMaxSpeed": 35
                 },
-                "Maybach_HL_295": {
-                    "smplEnginePower": 900,
-                    "smplFwMaxSpeed": 35
-                },
-                "Maybach_HL_295_a_injection_d_essence": {
-                    "smplEnginePower": 1050,
+                "Maybach_HL_295_a_injection_d_essence_65": {
+                    "smplEnginePower": 1200,
                     "smplFwMaxSpeed": 35
                 }
             },
@@ -2383,28 +2123,30 @@
                 "Chassis_F81_Char_de_65t": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.251563
+                            "rollingFriction": 0.20125
                         },
                         "medium": {
-                            "rollingFriction": 0.181125
+                            "rollingFriction": 0.1449
                         },
                         "firm": {
-                            "rollingFriction": 0.161
+                            "rollingFriction": 0.1288
                         }
-                    }
+                    },
+                    "axleCount": 5
                 },
                 "Chassis_F81_Char_de_65t_2": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.251563
+                            "rollingFriction": 0.20125
                         },
                         "medium": {
-                            "rollingFriction": 0.181125
+                            "rollingFriction": 0.1449
                         },
                         "firm": {
-                            "rollingFriction": 0.161
+                            "rollingFriction": 0.1288
                         }
-                    }
+                    },
+                    "axleCount": 5
                 }
             }
         }

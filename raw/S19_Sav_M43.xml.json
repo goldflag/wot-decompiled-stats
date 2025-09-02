@@ -18,7 +18,7 @@
         8.0
     ],
     "speedLimits": {
-        "forward": 43,
+        "forward": 45,
         "backward": 20
     },
     "invisibility": {
@@ -78,7 +78,7 @@
             "armor_4"
         ],
         "weight": 7831,
-        "maxHealth": 332,
+        "maxHealth": 344,
         "ammoBayHealth": {
             "maxHealth": 140,
             "maxRegenHealth": 90,
@@ -199,15 +199,14 @@
                 "rightTrack": 10
             },
             "weight": 3200,
-            "maxLoad": 12500,
             "terrainResistance": [
+                1.1,
                 1.3,
-                1.7,
-                2.5
+                2.3
             ],
             "brakeForce": 12000,
             "rotationIsAroundCenter": "true",
-            "rotationSpeed": 30,
+            "rotationSpeed": 35,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.24,
                 "vehicleRotation": 0.24
@@ -840,7 +839,6 @@
                 "rightTrack": 10
             },
             "weight": 3200,
-            "maxLoad": 14000,
             "terrainResistance": [
                 1.1,
                 1.3,
@@ -848,7 +846,7 @@
             ],
             "brakeForce": 12000,
             "rotationIsAroundCenter": "true",
-            "rotationSpeed": 32,
+            "rotationSpeed": 38,
             "shotDispersionFactors": {
                 "vehicleMovement": 0.22,
                 "vehicleRotation": 0.22
@@ -1490,7 +1488,7 @@
                 "armor_1"
             ],
             "weight": 100,
-            "maxHealth": 83,
+            "maxHealth": 86,
             "rotationSpeed": 40,
             "turretRotatorHealth": {
                 "maxHealth": 100,
@@ -1535,7 +1533,14 @@
                         ]
                     },
                     "invisibilityFactorAtShot": 0.26,
-                    "reloadTime": 4.2,
+                    "reloadTime": 5.2,
+                    "aimingTime": 2,
+                    "shotDispersionRadius": 0.4,
+                    "shotDispersionFactors": {
+                        "whileGunDamaged": 2.0,
+                        "turretRotation": 0.12,
+                        "afterShot": 4.0
+                    },
                     "models": {
                         "undamaged": "vehicles/sweden/S19_Sav_M43/normal/lod0/Gun_01.model",
                         "destroyed": "vehicles/sweden/S19_Sav_M43/crash/lod0/Gun_01.model",
@@ -1602,6 +1607,9 @@
                 "_75mm_kan_m_41_ikv_L_50_neglkrut": {
                     "maxAmmo": 90,
                     "unlocks": {
+                        "vehicle": {
+                            "cost": 10830
+                        },
                         "gun": {
                             "cost": 3800
                         }
@@ -1631,8 +1639,13 @@
                     },
                     "invisibilityFactorAtShot": 0.26,
                     "shotDispersionRadius": 0.38,
-                    "reloadTime": 4.4,
+                    "reloadTime": 4.9,
                     "aimingTime": 1.9,
+                    "shotDispersionFactors": {
+                        "whileGunDamaged": 2.0,
+                        "turretRotation": 0.12,
+                        "afterShot": 4.0
+                    },
                     "models": {
                         "undamaged": "vehicles/sweden/S19_Sav_M43/normal/lod0/Gun_04.model",
                         "destroyed": "vehicles/sweden/S19_Sav_M43/crash/lod0/Gun_04.model",
@@ -1688,11 +1701,6 @@
                 },
                 "_105mm_kan_m_44_sav": {
                     "maxAmmo": 60,
-                    "unlocks": {
-                        "vehicle": {
-                            "cost": 10830
-                        }
-                    },
                     "armor": {
                         "armor_1": 50,
                         "armor_4": 0,
@@ -1717,9 +1725,9 @@
                         ]
                     },
                     "invisibilityFactorAtShot": 0.209,
-                    "shotDispersionRadius": 0.56,
+                    "shotDispersionRadius": 0.5,
                     "reloadTime": 9.8,
-                    "aimingTime": 3.5,
+                    "aimingTime": 3,
                     "shotDispersionFactors": {
                         "turretRotation": 0.22,
                         "afterShot": 5,
@@ -1820,33 +1828,19 @@
         }
     },
     "engines": {
-        "Scania_Vabis_1664": {
+        "Scania_Vabis_1664_Sav": {
             "unlocks": {
                 "engine": {
                     "cost": 160
                 }
             }
         },
-        "Scania_Vabis_L_603": "shared"
+        "Scania_Vabis_L_603_Sav": "shared"
     },
     "fuelTanks": {
         "Average": "shared"
     },
     "radios": {
-        "_25_W_Sv_1_m_39": {
-            "unlocks": {
-                "radio": {
-                    "cost": 350
-                }
-            }
-        },
-        "_25_W_Sv_1_m_39_42": {
-            "unlocks": {
-                "radio": {
-                    "cost": 3200
-                }
-            }
-        },
         "Ra_100": "shared"
     },
     "clientAdjustmentFactors": {
@@ -1859,10 +1853,10 @@
             }
         },
         "engines": {
-            "Scania_Vabis_1664": {
+            "Scania_Vabis_1664_Sav": {
                 "bravo": 37.53347
             },
-            "Scania_Vabis_L_603": {
+            "Scania_Vabis_L_603_Sav": {
                 "bravo": 42.81989
             }
         }
@@ -1870,26 +1864,26 @@
     "physics": {
         "detailed": {
             "engines": {
-                "Scania_Vabis_1664": {
-                    "smplEnginePower": 150,
-                    "smplFwMaxSpeed": 43
+                "Scania_Vabis_1664_Sav": {
+                    "smplEnginePower": 180,
+                    "smplFwMaxSpeed": 45
                 },
-                "Scania_Vabis_L_603": {
-                    "smplEnginePower": 170,
-                    "smplFwMaxSpeed": 43
+                "Scania_Vabis_L_603_Sav": {
+                    "smplEnginePower": 200,
+                    "smplFwMaxSpeed": 45
                 }
             },
             "chassis": {
                 "Chassis_S19_Sav_M43": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.251563
+                            "rollingFriction": 0.231438
                         },
                         "medium": {
-                            "rollingFriction": 0.171063
+                            "rollingFriction": 0.130813
                         },
                         "firm": {
-                            "rollingFriction": 0.130813
+                            "rollingFriction": 0.110688
                         }
                     }
                 },

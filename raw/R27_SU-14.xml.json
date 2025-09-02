@@ -28,7 +28,7 @@
         "backward": 8
     },
     "invisibility": {
-        "moving": 0.03,
+        "moving": 0.031,
         "still": 0.061,
         "camouflageBonus": 0.02,
         "firePenalty": 0.092
@@ -99,9 +99,9 @@
         "weight": 42210,
         "maxHealth": 328,
         "ammoBayHealth": {
-            "maxHealth": 100,
-            "maxRegenHealth": 50,
-            "repairCost": 1.0
+            "maxHealth": 210,
+            "maxRegenHealth": 158,
+            "repairCost": 8
         },
         "models": {
             "undamaged": "vehicles/russian/R27_SU-14/normal/lod0/Hull.model",
@@ -189,8 +189,8 @@
         }
     },
     "chassis": {
-        "SU-14": {
-            "userString": "#ussr_vehicles:SU-14",
+        "Chassis_R27_SU-14": {
+            "userString": "#ussr_vehicles:Chassis_R27_SU-14",
             "tags": [],
             "level": 7,
             "price": 20000,
@@ -204,11 +204,10 @@
                 "rightTrack": 20
             },
             "weight": 15000,
-            "maxLoad": 64000,
             "terrainResistance": [
-                1.5,
-                1.7,
-                2.9
+                1.4,
+                1.6,
+                2.7
             ],
             "brakeForce": 58000,
             "rotationIsAroundCenter": "true",
@@ -954,8 +953,8 @@
             },
             "repairTime": 8.66666698
         },
-        "SU-14Bis": {
-            "userString": "#ussr_vehicles:SU-14Bis",
+        "Chassis_R27_SU-14_2": {
+            "userString": "#ussr_vehicles:Chassis_R27_SU-14_2",
             "tags": [],
             "level": 8,
             "price": 27310,
@@ -964,7 +963,6 @@
                 "rightTrack": 20
             },
             "weight": 15000,
-            "maxLoad": 66000,
             "terrainResistance": [
                 1.4,
                 1.6,
@@ -978,8 +976,8 @@
                 "vehicleRotation": 0.22
             },
             "bulkHealthFactor": 3.0,
-            "maxHealth": 140,
-            "maxRegenHealth": 105,
+            "maxHealth": 220,
+            "maxRegenHealth": 165,
             "repairCost": 5.0,
             "models": {
                 "undamaged": "vehicles/russian/R27_SU-14/normal/lod0/Chassis.model",
@@ -1712,12 +1710,12 @@
                     "camouflage": null
                 }
             },
-            "repairTime": 7.30434799
+            "repairTime": 6.66666651
         }
     },
     "turrets0": {
-        "SU-14_1": {
-            "userString": "#ussr_vehicles:SU-14_1",
+        "Turret_1_R27_SU-14": {
+            "userString": "#ussr_vehicles:Turret_1_R27_SU-14",
             "tags": [
                 "cannotDetach"
             ],
@@ -1731,9 +1729,9 @@
             "maxHealth": 82,
             "rotationSpeed": 12,
             "turretRotatorHealth": {
-                "maxHealth": 100,
-                "maxRegenHealth": 50,
-                "repairCost": 1.0
+                "maxHealth": 155,
+                "maxRegenHealth": 78,
+                "repairCost": 8
             },
             "circularVisionRadius": 260,
             "surveyingDeviceHealth": {
@@ -1742,7 +1740,7 @@
                 "repairCost": 1.0
             },
             "guns": {
-                "_152mm_BR-2": {
+                "_152mm_BR_2_SU_14": {
                     "maxAmmo": 32,
                     "reloadTime": 27,
                     "pitchLimits": {
@@ -1763,9 +1761,6 @@
                     "unlocks": {
                         "gun": {
                             "cost": 64000
-                        },
-                        "vehicle": {
-                            "cost": 217500
                         }
                     },
                     "shotDispersionFactors": {
@@ -1847,8 +1842,13 @@
                         ]
                     }
                 },
-                "_203mm_B-4": {
+                "_203mm_B_4_SU_14": {
                     "maxAmmo": 16,
+                    "unlocks": {
+                        "vehicle": {
+                            "cost": 217500
+                        }
+                    },
                     "reloadTime": 44,
                     "pitchLimits": {
                         "minPitch": [
@@ -1986,55 +1986,48 @@
         }
     },
     "engines": {
-        "M-17F": {
+        "M_17T_SU_14": {
             "unlocks": {
                 "engine": {
                     "cost": 10000
                 }
             }
         },
-        "M-17F_R": "shared"
+        "M_17F_SU_14": "shared"
     },
     "fuelTanks": {
         "Average": "shared"
     },
     "radios": {
-        "_10R": {
-            "unlocks": {
-                "radio": {
-                    "cost": 5600
-                }
-            }
-        },
         "_12RT": "shared"
     },
     "physics": {
         "detailed": {
             "engines": {
-                "M-17F": {
+                "M_17T_SU_14": {
                     "smplEnginePower": 528.6406,
                     "smplFwMaxSpeed": 30
                 },
-                "M-17F_R": {
+                "M_17F_SU_14": {
                     "smplEnginePower": 740.0968,
                     "smplFwMaxSpeed": 30
                 }
             },
             "chassis": {
-                "SU-14": {
+                "Chassis_R27_SU-14": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.23345
+                            "rollingFriction": 0.21735
                         },
                         "medium": {
-                            "rollingFriction": 0.13685
+                            "rollingFriction": 0.1288
                         },
                         "firm": {
-                            "rollingFriction": 0.12075
+                            "rollingFriction": 0.1127
                         }
                     }
                 },
-                "SU-14Bis": {
+                "Chassis_R27_SU-14_2": {
                     "grounds": {
                         "soft": {
                             "rollingFriction": 0.21735
@@ -2052,7 +2045,7 @@
     },
     "clientAdjustmentFactors": {
         "guns": {
-            "_203mm_B-4": {
+            "_203mm_B_4_SU_14": {
                 "delta": 1.025
             }
         },

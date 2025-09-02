@@ -27,7 +27,7 @@
         "backward": 16
     },
     "invisibility": {
-        "moving": 0.057,
+        "moving": 0.058,
         "still": 0.115,
         "camouflageBonus": 0.02,
         "firePenalty": 0.173
@@ -85,7 +85,7 @@
             "armor_4"
         ],
         "weight": 9948,
-        "maxHealth": 1120,
+        "maxHealth": 1240,
         "ammoBayHealth": {
             "maxHealth": 240,
             "maxRegenHealth": 160,
@@ -200,11 +200,10 @@
                 "rightTrack": 30
             },
             "weight": 6360,
-            "maxLoad": 29000,
             "terrainResistance": [
+                1.2,
                 1.3,
-                1.4,
-                2.3
+                2.1
             ],
             "brakeForce": 29000,
             "rotationIsAroundCenter": "false",
@@ -849,7 +848,6 @@
                 "rightTrack": 30
             },
             "weight": 6360,
-            "maxLoad": 32000,
             "terrainResistance": [
                 1.2,
                 1.3,
@@ -1492,7 +1490,9 @@
     "turrets0": {
         "Turret_1_S18_EMIL_1951_E1": {
             "userString": "#sweden_vehicles:Turret_1_S18_EMIL_1951_E1",
-            "tags": [],
+            "tags": [
+                "oscillating"
+            ],
             "level": 8,
             "price": 30000,
             "notInShop": "true",
@@ -1518,7 +1518,7 @@
                 "armor_4"
             ],
             "weight": 9000,
-            "maxHealth": 280,
+            "maxHealth": 310,
             "rotationSpeed": 20,
             "turretRotatorHealth": {
                 "maxHealth": 140,
@@ -1540,8 +1540,16 @@
                         }
                     },
                     "armor": {
-                        "armor_1": 250,
-                        "armor_2": 50,
+                        "armor_1": {
+                            "tags": [
+                                "gun"
+                            ]
+                        },
+                        "armor_2": {
+                            "tags": [
+                                "gun"
+                            ]
+                        },
                         "armor_3": 30,
                         "armor_4": 30,
                         "armor_5": 18,
@@ -1564,13 +1572,21 @@
                         "maxPitch": [
                             0.0,
                             12.0,
-                            0.402778,
+                            0.42222,
                             12.0,
-                            0.436111,
+                            0.44444,
                             9.5,
-                            0.563889,
+                            0.46667,
                             9.5,
-                            0.597222,
+                            0.47778,
+                            11.5,
+                            0.52222,
+                            11.5,
+                            0.53333,
+                            9.5,
+                            0.55556,
+                            9.5,
+                            0.57778,
                             12.0,
                             1.0,
                             12.0
@@ -1581,9 +1597,14 @@
                         "count": 3,
                         "rate": 20
                     },
-                    "shotDispersionRadius": 0.39,
+                    "shotDispersionRadius": 0.37,
                     "reloadTime": 22.7,
-                    "aimingTime": 3.2,
+                    "aimingTime": 3,
+                    "shotDispersionFactors": {
+                        "turretRotation": 0.16,
+                        "whileGunDamaged": 2.0,
+                        "afterShot": 3.5
+                    },
                     "models": {
                         "undamaged": "vehicles/sweden/S18_EMIL_1951_E1/normal/lod0/Gun_01.model",
                         "destroyed": "vehicles/sweden/S18_EMIL_1951_E1/crash/lod0/Gun_01.model",
@@ -1652,8 +1673,16 @@
                         }
                     },
                     "armor": {
-                        "armor_1": 250,
-                        "armor_2": 50,
+                        "armor_1": {
+                            "tags": [
+                                "gun"
+                            ]
+                        },
+                        "armor_2": {
+                            "tags": [
+                                "gun"
+                            ]
+                        },
                         "armor_3": 30,
                         "armor_4": 30,
                         "armor_5": 18,
@@ -1676,13 +1705,21 @@
                         "maxPitch": [
                             0.0,
                             12.0,
-                            0.402778,
+                            0.42222,
                             12.0,
-                            0.436111,
+                            0.44444,
                             9.5,
-                            0.563889,
+                            0.46667,
                             9.5,
-                            0.597222,
+                            0.47778,
+                            11.5,
+                            0.52222,
+                            11.5,
+                            0.53333,
+                            9.5,
+                            0.55556,
+                            9.5,
+                            0.57778,
                             12.0,
                             1.0,
                             12.0
@@ -1698,7 +1735,7 @@
                     "aimingTime": 3.2,
                     "shotDispersionFactors": {
                         "turretRotation": 0.16,
-                        "afterShot": 4.0,
+                        "afterShot": 3.5,
                         "whileGunDamaged": 2.0
                     },
                     "models": {
@@ -1856,13 +1893,6 @@
         "Heavy": "shared"
     },
     "radios": {
-        "Ra_400": {
-            "unlocks": {
-                "radio": {
-                    "cost": 9400
-                }
-            }
-        },
         "Ra_421": "shared"
     },
     "clientAdjustmentFactors": {
@@ -1899,13 +1929,13 @@
                 "Chassis_S18_EMIL_1951_E1": {
                     "grounds": {
                         "soft": {
-                            "rollingFriction": 0.231438
+                            "rollingFriction": 0.211313
                         },
                         "medium": {
-                            "rollingFriction": 0.140875
+                            "rollingFriction": 0.130813
                         },
                         "firm": {
-                            "rollingFriction": 0.130813
+                            "rollingFriction": 0.12075
                         }
                     },
                     "axleCount": 5
