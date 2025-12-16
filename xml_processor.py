@@ -204,6 +204,7 @@ def add_tank_stats(tank_stats: List[Dict], data: dict[str, Any], tank_api_data: 
         'bigImage': tank_api_data.get('images').get('big_icon'),
         'nation': utils.nation_conv[data.get('nation')],
         'tier': data.get('tier'),
+        'role': data.get('role').rsplit('_', 1)[-1] if data.get('role') else None,
         'class': utils.class_conv[data.get('type')],
         'isPrem': tank_api_data.get('is_premium'),
         'caliber': shell.get('caliber'),
