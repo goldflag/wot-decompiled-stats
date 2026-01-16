@@ -409,7 +409,6 @@
             "rotationMechanism",
             "deluxe"
         ],
-        "notInShop": "true",
         "incompatibleTags": {
             "installed": "rotationMechanism"
         },
@@ -554,6 +553,89 @@
         },
         "tooltipSection": "equipment",
         "archetype": "additionalInvisibilityDevice"
+    },
+    "deluxeStereoscope": {
+        "id": 122,
+        "userString": "#artefacts:deluxeStereoscope/name",
+        "shortDescriptionSpecial": "#artefacts:deluxeStereoscope/short_special",
+        "longDescriptionSpecial": "#artefacts:deluxeStereoscope/long_special",
+        "icon": "stereoscope",
+        "price": {
+            "crystal": null
+        },
+        "tags": [
+            "stereoscope",
+            "deluxe",
+            "reconnaissance"
+        ],
+        "notInShop": "true",
+        "incompatibleTags": {
+            "installed": "stereoscope"
+        },
+        "vehicleFilter": {
+            "exclude": {
+                "vehicle": {
+                    "mandatoryTags": [
+                        "wheeledVehicle",
+                        "lightTank"
+                    ]
+                }
+            }
+        },
+        "script": {
+            "weight": 50,
+            "activateWhenStillSec": 1.5,
+            "circularVisionRadius": 1.275
+        },
+        "kpi": {
+            "mul": {
+                "name": "vehicleStillCircularVisionRadiusDeluxe",
+                "value": 1.275
+            }
+        },
+        "tooltipSection": "equipment",
+        "archetype": "stereoscope"
+    },
+    "deluxeCamouflageNet": {
+        "id": 123,
+        "userString": "#artefacts:deluxeCamouflageNet/name",
+        "shortDescriptionSpecial": "#artefacts:deluxeCamouflageNet/short_special",
+        "longDescriptionSpecial": "#artefacts:deluxeCamouflageNet/long_special",
+        "icon": "camouflageNet",
+        "price": {
+            "crystal": null
+        },
+        "tags": [
+            "camouflageNet",
+            "camouflage",
+            "deluxe"
+        ],
+        "notInShop": "true",
+        "incompatibleTags": {
+            "installed": "camouflageNet"
+        },
+        "script": {
+            "weight": 50,
+            "activateWhenStillSec": 1.5,
+            "overridableFactors": {
+                "invisibilityBonus": 0.175
+            }
+        },
+        "kpi": {
+            "aggregateMul": {
+                "name": "vehicleStillCamouflageGroupDeluxe",
+                "mul": {
+                    "name": "vehicleStillCamouflageDeluxe",
+                    "value": 1.075,
+                    "vehicleTypes": [
+                        "heavyTank",
+                        "SPG"
+                    ]
+                }
+            }
+        },
+        "tooltipSection": "equipment",
+        "archetype": "camouflageNet"
     },
     "trophyBasicAimDrives": {
         "id": 50,
